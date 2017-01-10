@@ -1,0 +1,1798 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.isibang.ac.in/mod/ns#"
+     xml:base="http://www.isibang.ac.in/mod/ns"
+     xmlns:mod="http://www.isibang.ac.in/mod/ns#"
+     xmlns:void="http://rdfs.org/ns/void#"
+     xmlns:pod="https://project-open-data.cio.gov/v1.1/schema/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:dcmi="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.isibang.ac.in/mod/ns#">
+        <owl:versionInfo>version: 1.0 (revison: 0.1) </owl:versionInfo>
+        <rdfs:label xml:lang="en">MOD: Metadata for Ontology Description and publication</rdfs:label>
+        <dc:creator xml:lang="en">Biswanath Dutta (DRTC, Indian Statistical Institute, Bangalore, India) and Durgesh Nandini (Durgapur, India) </dc:creator>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributer -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/contributer">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment xml:lang="en">An agent who has contributed in making an ontology. </rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/format -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/format">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/mod/ns#FileFormat"/>
+        <rdfs:comment xml:lang="en">The file format of an ontological resource. </rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/subject -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/subject">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/mod/ns#Domain"/>
+        <rdfs:comment xml:lang="en">The subject or the topic of an ontology. </rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/type -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/type">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyType"/>
+        <rdfs:comment>The nature or genre of the resource.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/license">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/mod/ns#License"/>
+        <rdfs:comment xml:lang="en">A license under which an ontology is published. </rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#endorsedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.isibang.ac.in/mod/ns#endorsedBy">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment xml:lang="en">An ontology endorsed by an agent. </rdfs:comment>
+        <rdfs:label>endorsed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#evaluatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.isibang.ac.in/mod/ns#evaluatedBy">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Evaluation"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment xml:lang="en">An ontology which has been evaluated by an agent.</rdfs:comment>
+        <rdfs:label xml:lang="en">evaluated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#evaluationBasedOnCriteria -->
+
+    <owl:ObjectProperty rdf:about="http://www.isibang.ac.in/mod/ns#evaluationBasedOnCriteria">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Evaluation"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/mod/ns#EvaluationCriteria"/>
+        <rdfs:comment xml:lang="en">This property makes a relationship between an evaluation and the evaluation criteria(s)/aspect(s) considered to judge the quality of an ontology.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#evaluationMethod -->
+
+    <owl:ObjectProperty rdf:about="http://www.isibang.ac.in/mod/ns#evaluationMethod">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Evaluation"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/mod/ns#EvaluationMethod"/>
+        <rdfs:comment xml:lang="en">The method that is followed in evaluating an ontology. This property makes a relationship between an ontology and the methodology followed in evaluating the ontology.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#formalityLevel -->
+
+    <owl:ObjectProperty rdf:about="http://www.isibang.ac.in/mod/ns#formalityLevel">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/mod/ns#LevelOfFormality"/>
+        <rdfs:comment xml:lang="en">The level of formality of an ontology. </rdfs:comment>
+        <rdfs:label>formality level</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#hasEvaluation -->
+
+    <owl:ObjectProperty rdf:about="http://www.isibang.ac.in/mod/ns#hasEvaluation">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/mod/ns#Evaluation"/>
+        <rdfs:comment xml:lang="en">This property makes a relationship between an ontology and its evaluation result.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#knowledgeRepresentationFormalism -->
+
+    <owl:ObjectProperty rdf:about="http://www.isibang.ac.in/mod/ns#knowledgeRepresentationFormalism">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/mod/ns#KnowledgeRepresentationFormalism"/>
+        <rdfs:comment xml:lang="en">A knowledge representation formalism (e.g., description logics, first order logic) followed to create an ontology. </rdfs:comment>
+        <rdfs:label xml:lang="en">knowledge representation formalism</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#methodologyUsed -->
+
+    <owl:ObjectProperty rdf:about="http://www.isibang.ac.in/mod/ns#methodologyUsed">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignMethodology"/>
+        <rdfs:comment xml:lang="en">A methodolgy follwoing which an ontology is created. </rdfs:comment>
+        <rdfs:label>methodology used</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#module -->
+
+    <owl:ObjectProperty rdf:about="http://www.isibang.ac.in/mod/ns#module">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:comment xml:lang="en">The part(s) of an ontology, may refer to the same ontology or may refer to a different ontology(ies).</rdfs:comment>
+        <rdfs:label>module</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#ontologyInUse -->
+
+    <owl:ObjectProperty rdf:about="http://www.isibang.ac.in/mod/ns#ontologyInUse">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <rdfs:comment xml:lang="en">An ontology that is used in a project. </rdfs:comment>
+        <rdfs:label>ontology in use</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#ontologyLanguage -->
+
+    <owl:ObjectProperty rdf:about="http://www.isibang.ac.in/mod/ns#ontologyLanguage">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignLanguage"/>
+        <rdfs:comment xml:lang="en">A language that is used to create an ontology. </rdfs:comment>
+        <rdfs:label>ontology design language</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#sourceOntology -->
+
+    <owl:ObjectProperty rdf:about="http://www.isibang.ac.in/mod/ns#sourceOntology">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:comment xml:lang="en">The ontology(ies) referred to while creating the present ontology.</rdfs:comment>
+        <rdfs:label>source ontology</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#sponseredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.isibang.ac.in/mod/ns#sponseredBy">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <rdfs:comment xml:lang="en">An ontology that is sponsored by and developed under a project. </rdfs:comment>
+        <rdfs:label>sponsered by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#syntax -->
+
+    <owl:ObjectProperty rdf:about="http://www.isibang.ac.in/mod/ns#syntax">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/mod/ns#OntologySyntax"/>
+        <rdfs:comment xml:lang="en">The syntax followed in the creation of an ontology. </rdfs:comment>
+        <rdfs:label>syntax </rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#toolUsed -->
+
+    <owl:ObjectProperty rdf:about="http://www.isibang.ac.in/mod/ns#toolUsed">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignTool"/>
+        <rdfs:comment xml:lang="en">The tool used for the creation of an ontology. </rdfs:comment>
+        <rdfs:label>tool used</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://project-open-data.cio.gov/v1.1/schema/contactPoint -->
+
+    <owl:ObjectProperty rdf:about="https://project-open-data.cio.gov/v1.1/schema/contactPoint">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment xml:lang="en">The person who can be contacted to enquire about an ontology.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/description">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human-readable description with sufficient information to enable a user to quickly understand whether the ontology is of interest. The description can include, for instance, the purpose of the ontology, the scope, the area of applications of the ontology, the history, etc.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/identifier">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">An unambiguous reference to the resource within a given context.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/language -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/language">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The natural language of an ontology. </rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/rights">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Information about rights held in and over an ontology. 
+Typically, rights include statements about the property rights associated with an ontology, including the intellectual property rights. 
+This property can also serve to provide an explanation for the values, such as {read, download} of the data property “accessibility” of an ontology. The property “rights” should also provide instructions on how to access an ontology in case the value of the property “accessibility” is “read.”</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Acronym -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/mod/ns#Acronym">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>A word formed from the initial letters of the several words in the name and pronounced as one word.</rdfs:comment>
+        <rdfs:label>Acronym</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#accessibility -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/mod/ns#accessibility">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The degree to which an ontology is avilable. For instance, an ontology may be available to read, or to download. </rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#address -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/mod/ns#address">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The address of an agent. </rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#competencyQuestion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/mod/ns#competencyQuestion">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A set of questions made to build an ontology at the design time. </rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#country -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/mod/ns#country">
+        <rdfs:subPropertyOf rdf:resource="http://www.isibang.ac.in/mod/ns#address"/>
+        <rdfs:comment xml:lang="en">The country name. </rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#creationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/mod/ns#creationDate">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The releasing date of a resource.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#deprecated -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/mod/ns#deprecated">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">This data property is used to discourage the use of any classes and/or properties of an ontology or a particular version of an ontology.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#document -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/mod/ns#document">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">A link to the documentation page on a thing. </rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#evaluationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/mod/ns#evaluationDate">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Evaluation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The evaluation date of an ontology.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#homepage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/mod/ns#homepage">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">Link to the homepage of a thing. </rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#individuals -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/mod/ns#individuals">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment xml:lang="en">The total number of individuals in an ontology. </rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#keyword -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/mod/ns#keyword">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">A keyword(s) is used to describe the content of an ontology. Keywords are basically uncontrolled and author defined words. Multiple entries in a keywords list are typically delimited by commas. </rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#noOfClasses -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/mod/ns#noOfClasses">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">The total number of classes in an ontology. </rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#noOfProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/mod/ns#noOfProperties">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">The total number of properties in an ontology. </rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#numberOfAxioms -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/mod/ns#numberOfAxioms">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment xml:lang="en">The total number of axioms in an ontology. </rdfs:comment>
+        <rdfs:label xml:lang="en">number of axioms</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#obsolete -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/mod/ns#obsolete">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The classes and properties of an ontology that are no longer in use.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#pin -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/mod/ns#pin">
+        <rdfs:subPropertyOf rdf:resource="http://www.isibang.ac.in/mod/ns#address"/>
+        <rdfs:comment xml:lang="en">A pin code. </rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#size -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/mod/ns#size">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">The size of an ontology file.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#state -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/mod/ns#state">
+        <rdfs:subPropertyOf rdf:resource="http://www.isibang.ac.in/mod/ns#address"/>
+        <rdfs:comment xml:lang="en">The state or the province name. </rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#status -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/mod/ns#status">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The status of an released ontology (i.e. whether completed or an intermediated version,  authorized or not, etc.) </rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#street -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/mod/ns#street">
+        <rdfs:subPropertyOf rdf:resource="http://www.isibang.ac.in/mod/ns#address"/>
+        <rdfs:comment xml:lang="en">The street address. </rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#usedInApplication -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/mod/ns#usedInApplication">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Provide information on the application(s) where an ontology is used. URIs can be provided pointing to the application(s), or link to the pages where the applications are described.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#version -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/mod/ns#version">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">The version of the released ontology. </rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#vocabularyUsed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/mod/ns#vocabularyUsed">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A vocabulary(ies) that is used and/or referred to create the current ontology. </rdfs:comment>
+        <rdfs:label xml:lang="en">vocabulary used </rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The alternative name for the specified thing.</rdfs:comment>
+        <rdfs:label>Alt Label</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/firstName -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/firstName">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The first name of a person.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/lastName -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/lastName">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The last name of a person.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/mbox -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/mbox">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The email address of an agent. </rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The name for some thing. </rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/phone -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/phone">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+        <rdfs:comment> A phone, specified using fully qualified telelephone number.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Domain -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/mod/ns#Domain">
+        <rdfs:comment xml:lang="en">An area of knowledge or a flield of study that an ontology deals with. For example, Gene ontology, Movie onotology, Fishery ontology and Food ontology. </rdfs:comment>
+        <rdfs:label>Domain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Evaluation -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/mod/ns#Evaluation">
+        <rdfs:comment xml:lang="en">The results of evaluating an ontology. An ontology can have more than one evaluations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#EvaluationCriteria -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/mod/ns#EvaluationCriteria">
+        <rdfs:comment xml:lang="en">The evaluation criterias, essentially the various aspects that are used in validating the quality of an ontology. These aspects may include for example, accuracy, adaptability, accessibility, clarity, completeness, computational efficiency, conciseness, informativeness, uniqueness, relevancy, reliability, usefulness and organizational fitness.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#EvaluationMethod -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/mod/ns#EvaluationMethod">
+        <rdfs:comment xml:lang="en">The methodology that is followed in evaluating an ontology, e.g., application based approach, assessment by human, data driven approach and golden standard.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#FileFormat -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/mod/ns#FileFormat">
+        <rdfs:comment xml:lang="en">A file format of an ontology. For example .rdf, .owl, .xml, etc.  </rdfs:comment>
+        <rdfs:label>File Format</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#KnowledgeRepresentationFormalism -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/mod/ns#KnowledgeRepresentationFormalism">
+        <rdfs:comment xml:lang="en">A representation formalism that is followed to describe knowledge in an ontology. Example includes description logics, first order logic, etc. </rdfs:comment>
+        <rdfs:label>Knowledge Representation Formalism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#LevelOfFormality -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/mod/ns#LevelOfFormality">
+        <rdfs:comment xml:lang="en">The degree or level of formality of an ontology. The level of formality varies from Rigorously formal, Semiformal, Informal, and Semiinformal. </rdfs:comment>
+        <rdfs:label>Level Of Formality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#License -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/mod/ns#License">
+        <rdfs:comment xml:lang="en">A legal document giving official permission to do something with an ontology. Example includes Apache license, Creative Commons Attribution License, GNU General Public License and GPL. </rdfs:comment>
+        <rdfs:label>License</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Ontology -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/mod/ns#Ontology">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/elements/1.1/type"/>
+                <owl:someValuesFrom rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.isibang.ac.in/mod/ns#hasEvaluation"/>
+                <owl:someValuesFrom rdf:resource="http://www.isibang.ac.in/mod/ns#Evaluation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.isibang.ac.in/mod/ns#knowledgeRepresentationFormalism"/>
+                <owl:someValuesFrom rdf:resource="http://www.isibang.ac.in/mod/ns#KnowledgeRepresentationFormalism"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.isibang.ac.in/mod/ns#syntax"/>
+                <owl:someValuesFrom rdf:resource="http://www.isibang.ac.in/mod/ns#OntologySyntax"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.isibang.ac.in/mod/ns#formalityLevel"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.isibang.ac.in/mod/ns#LevelOfFormality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A rigorous and exhaustive organization of some knowledge domain that is usually hierarchical and contains all the relevant entities and their relations. 
+According to Studer et al., (1998), it is &quot;a formal, explicit specification of a shared conceptualization.&quot; </rdfs:comment>
+        <rdfs:label>Ontology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#OntologyDesignLanguage -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/mod/ns#OntologyDesignLanguage">
+        <rdfs:comment xml:lang="en">A knowledge representation language using which an ontology is written. For example, RDFS, OWL, Ontolingua and Loom. </rdfs:comment>
+        <rdfs:label>Ontology Design Language</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#OntologyDesignMethodology -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/mod/ns#OntologyDesignMethodology">
+        <rdfs:comment xml:lang="en">A method(s) by which an ontology is created. Example includes Methontology, Tove, Cyc and YAMO. </rdfs:comment>
+        <rdfs:label>Ontology Design Methodology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#OntologyDesignTool -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/mod/ns#OntologyDesignTool">
+        <rdfs:comment xml:lang="en">A tool that is used to create an ontology. Example includes Protege, OntoEdit, TopBraid, etc. </rdfs:comment>
+        <rdfs:label>Ontology Design Tool</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#OntologySyntax -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/mod/ns#OntologySyntax">
+        <rdfs:comment xml:lang="en">A syntax that is used to implement an ontology. Example includes RDF/XML, Notation3, n-triples, RDFa and Turtle. </rdfs:comment>
+        <rdfs:label>Ontology Syntax</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#OntologyType -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/mod/ns#OntologyType">
+        <rdfs:comment xml:lang="en">The kind of an ontology. Example includes Upper ontology, Domain Ontology, Application Ontology and Task ontology. </rdfs:comment>
+        <rdfs:label>Ontology Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
+        <rdfs:comment xml:lang="en">A resource that acts or has the power to act. Example of Agents include person and organization. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organisation -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organisation">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment xml:lang="en">An agent corresponding to social institutions such as companies, associations, etc., that has a collective goal. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment xml:lang="en">A human being (alive, dead, undead, real or imaginary). </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Project -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Project">
+        <rdfs:comment xml:lang="en">Any piece of work that is undertaken or attempted. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Accuracy -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#Accuracy">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#EvaluationCriteria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Adaptability -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#Adaptability">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#EvaluationCriteria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Apache -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#Apache">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#License"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#ApplicationBasedApproach -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#ApplicationBasedApproach">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#EvaluationMethod"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+
+According to the [REF: Survey paper] using the &quot;Application based&quot; approach assesses the ontologies at the following aspects/lavels: (1) Lexical, vocabulary, concept, data; (2) Hierarchy, taxonomy; (3) Other semantic relations; (4) Context, application. </rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#ApplicationOntology -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#ApplicationOntology">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyType"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.isibang.ac.in/mod/ns#ApplicationOntology"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyType"/>
+        <rdfs:comment>An application ontology is an ontology engineered for a specific use or application focus and whose scope is specified through testable use cases. The application ontology will often use or reference canonical ontologies to construct ontological classes and relationships between classes. Application ontologies are used when modeling cross-domain experiments in biology, for data annotation or visualization and for producing data driven views across reference ontologies for specific user groups.</rdfs:comment>
+        <rdfs:label>
+            <rdf:Description rdf:nodeID="_:genid7"/>
+        </rdfs:label>
+        <rdfs:label>Application Ontology</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#AssessmentByHumanApproach -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#AssessmentByHumanApproach">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#EvaluationMethod"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+
+According to the [REF: Survey paper] &quot;Assessment by human&quot;  approach assesses the ontologies at the following aspects/lavels: (1) Lexical, vocabulary, concept, data; (2) Hierarchy, taxonomy; (3) Other semantic relations; (4) Context, application; (5) Syntactic; (6) Structure, architecture, design. </rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Clarity -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#Clarity">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#EvaluationCriteria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Completeness -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#Completeness">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#EvaluationCriteria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#ComputationalEfficiency -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#ComputationalEfficiency">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#EvaluationCriteria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Conciseness -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#Conciseness">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#EvaluationCriteria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Consistency -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#Consistency">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#EvaluationCriteria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#CoreReferenceOntology -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#CoreReferenceOntology">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyType"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.isibang.ac.in/mod/ns#CoreReferenceOntology"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyType"/>
+        <rdfs:comment> This type of ontology is linked to a domain but it integrates different viewpoints related to spe- cific group of users. This type of ontology is the result of the integration of several domain ontologies. A core reference ontology is often built to catch the central concepts and relations of the domain.
+ Example: Hydrontology
+</rdfs:comment>
+        <rdfs:label>
+            <rdf:Description rdf:nodeID="_:genid9"/>
+        </rdfs:label>
+        <rdfs:label>Core Reference Ontologies</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#CreativeCommons -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#CreativeCommons">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#License"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.isibang.ac.in/mod/ns#CreativeCommons"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.isibang.ac.in/mod/ns#License"/>
+        <rdfs:comment>
+            <rdf:Description rdf:nodeID="_:genid11"/>
+        </rdfs:comment>
+        <rdfs:comment>A Creative Commons (CC) license is one of several public copyright licenses that enable the free distribution of an otherwise copyrighted work.</rdfs:comment>
+        <rdfs:label>Creative Commons</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Cyc -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#Cyc">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignMethodology"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.isibang.ac.in/mod/ns#Cyc"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignMethodology"/>
+        <rdfs:label>
+            <rdf:Description rdf:nodeID="_:genid13"/>
+        </rdfs:label>
+        <rdfs:label>Cyc</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#DAML -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#DAML">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignLanguage"/>
+        <rdfs:label xml:lang="en">DarpaAgentMarkupLanguage </rdfs:label>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.isibang.ac.in/mod/ns#DAML"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignLanguage"/>
+        <rdfs:label>Darpa Agent Markup Language</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#DUET -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#DUET">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignTool"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.isibang.ac.in/mod/ns#DUET"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignTool"/>
+        <rdfs:label>DUET</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#DataDrivenApproach -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#DataDrivenApproach">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#EvaluationMethod"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+
+According to the [REF: Survey paper] using the &quot;Data driven&quot; approach assesses the ontologies at the following aspects/levels: 
+(1) Lexical, vocabulary, concept, data; (2) Hierarchy, taxonomy; (3) Other semantic relations. </rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#DescriptionLogics -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#DescriptionLogics">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#KnowledgeRepresentationFormalism"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.isibang.ac.in/mod/ns#DescriptionLogics"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.isibang.ac.in/mod/ns#KnowledgeRepresentationFormalism"/>
+        <rdfs:comment>
+            <rdf:Description rdf:nodeID="_:genid17"/>
+        </rdfs:comment>
+        <rdfs:comment>DL is used in artificial intelligence for formal reasoning on the concepts of an application domain (known as terminological knowledge). It is of particular importance in providing a logical formalism for ontologies and the Semantic Web. </rdfs:comment>
+        <rdfs:label>Description Logic</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#DomainOntology -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#DomainOntology">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyType"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.isibang.ac.in/mod/ns#DomainOntology"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyType"/>
+        <rdfs:comment>Domain ontology is only applicable to a domain with a specific view point. That is to say that this viewpoint defines how a group of users conceptualize and visualize some specific phenomenon. This domain ontology could be linked to a specific application: electric network management system for example.
+ </rdfs:comment>
+        <rdfs:label>
+            <rdf:Description rdf:nodeID="_:genid19"/>
+        </rdfs:label>
+        <rdfs:label>Domain Ontology</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Evaluation1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#Evaluation1">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#Evaluation"/>
+        <evaluationBasedOnCriteria rdf:resource="http://www.isibang.ac.in/mod/ns#Accuracy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#FirstOrderLogic -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#FirstOrderLogic">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#KnowledgeRepresentationFormalism"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.isibang.ac.in/mod/ns#FirstOrderLogic"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.isibang.ac.in/mod/ns#KnowledgeRepresentationFormalism"/>
+        <rdfs:comment>The ultimate knowledge representation formalism in terms of expressive power and compactness is First Order Logic (FOL). It was used by mathematicians to define general propositions about the world.</rdfs:comment>
+        <rdfs:label>
+            <rdf:Description rdf:nodeID="_:genid21"/>
+        </rdfs:label>
+        <rdfs:label>First Order Logic</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Formal -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#Formal">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#LevelOfFormality"/>
+        <rdfs:comment>All the terms are defined formally, with established theorems and proofs.</rdfs:comment>
+        <rdfs:label>Formal</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Frame -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#Frame">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#KnowledgeRepresentationFormalism"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.isibang.ac.in/mod/ns#Frame"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.isibang.ac.in/mod/ns#KnowledgeRepresentationFormalism"/>
+        <rdfs:comment> F-logic combines the advantages of conceptual modeling with object-oriented, frame-based languages and offers a declarative, compact and simple syntax, as well as the well-defined semantics of a logic-based language. Features include, among others, object identity, complex objects, inheritance, polymorphism, query methods, encapsulation.</rdfs:comment>
+        <rdfs:label>
+            <rdf:Description rdf:nodeID="_:genid23"/>
+        </rdfs:label>
+        <rdfs:label>Frame</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#GNUFreeDocumentationLicense -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#GNUFreeDocumentationLicense">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#License"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#GNUGeneralPublicLicense -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#GNUGeneralPublicLicense">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#License"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#GeneralOntology -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#GeneralOntology">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyType"/>
+        <rdfs:label xml:lang="en">General Ontology</rdfs:label>
+        <rdfs:label xml:lang="en">Top-Level Ontology</rdfs:label>
+        <rdfs:label xml:lang="en">Upper Level Ontology</rdfs:label>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.isibang.ac.in/mod/ns#GeneralOntology"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyType"/>
+        <rdfs:comment>General ontologies are not dedicated to a specific domain or fields. They contain general knowledge of a huge area.
+ Example: OpenCyc Ontology
+</rdfs:comment>
+        <rdfs:label>
+            <rdf:Description rdf:nodeID="_:genid25"/>
+        </rdfs:label>
+        <rdfs:label> General Ontologies
+</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#GoldenStandardApproach -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#GoldenStandardApproach">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#EvaluationMethod"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+
+According to the [REF: Survey paper] &quot;Golden standard&quot; approach assesses the ontologies at the following aspects/levels: 
+(1) Lexical, vocabulary, concept, data; (2) Hierarchy, taxonomy; (3) Other semantic relations; (4) Syntactic. </rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#GrungerAndFoxMethodology -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#GrungerAndFoxMethodology">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignMethodology"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.isibang.ac.in/mod/ns#GrungerAndFoxMethodology"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignMethodology"/>
+        <rdfs:comment>
+            <rdf:Description rdf:nodeID="_:genid27"/>
+        </rdfs:comment>
+        <rdfs:comment>Gr€uuninger and Fox propose a methodology that is inspired on the development of knowledge - based systems usingfirst order logic.They propose first to identify intuitively the main scenarios (possible applications in which the ontology will be used). Then, a set of natural language questions, called competency questions, are used to determine the scope of the ontology. These questions and their answers are used both to extract the main concepts and their properties, relations and axioms on the ontology. </rdfs:comment>
+        <rdfs:label>Griinger and Fox methodology</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Informal -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#Informal">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#LevelOfFormality"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#InformationOntology -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#InformationOntology">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#KACTUS -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#KACTUS">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignMethodology"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.isibang.ac.in/mod/ns#KACTUS"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignMethodology"/>
+        <rdfs:comment>
+            <rdf:Description rdf:nodeID="_:genid29"/>
+        </rdfs:comment>
+        <rdfs:comment>The ontology is built on the basis of an application KB, by means of a process of abstraction (that is, following a bottom-up strategy).</rdfs:comment>
+        <rdfs:label>KACTUS</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#KIF -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#KIF">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignLanguage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#LGPL -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#LGPL">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#License"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Loom -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#Loom">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignLanguage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Methontology -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#Methontology">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignMethodology"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.isibang.ac.in/mod/ns#Methontology"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignMethodology"/>
+        <rdfs:comment>
+            <rdf:Description rdf:nodeID="_:genid31"/>
+        </rdfs:comment>
+        <rdfs:comment>Methontology is the most mature approach, and is recommended by FIPAfor the ontology construction task. The METHONTOLOGY frame-
+work enables the construction of ontologies at the knowledge level. It includes: the identification of the ontology development process, a life cycle based on evolving prototypes, and particular techniques to carry out each activity.</rdfs:comment>
+        <rdfs:label>Methontology</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#N-Triples -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#N-Triples">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologySyntax"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Notation3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#Notation3">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologySyntax"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.isibang.ac.in/mod/ns#Notation3"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.isibang.ac.in/mod/ns#OntologySyntax"/>
+        <rdfs:comment>Notation3, or N3 as it is more commonly known, is a shorthand non-XML serialization of Resource Description Framework models, designed with human-readability in mind: N3 is much more compact and readable than XML RDF notation.</rdfs:comment>
+        <rdfs:label>
+            <rdf:Description rdf:nodeID="_:genid33"/>
+        </rdfs:label>
+        <rdfs:label>Notation 3</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#OCML -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#OCML">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignLanguage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#OIL -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#OIL">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignLanguage"/>
+        <rdfs:label xml:lang="en">Ontology Interchange Language </rdfs:label>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.isibang.ac.in/mod/ns#OIL"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignLanguage"/>
+        <rdfs:label>
+            <rdf:Description rdf:nodeID="_:genid35"/>
+        </rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#OILEd -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#OILEd">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignTool"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#OWL -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#OWL">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignLanguage"/>
+        <rdfs:label>Web Ontology Language</rdfs:label>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.isibang.ac.in/mod/ns#OWL"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignLanguage"/>
+        <rdfs:label>
+            <rdf:Description rdf:nodeID="_:genid37"/>
+        </rdfs:label>
+        <rdfs:label>Web Ontology Language</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#On-To-Knowledge -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#On-To-Knowledge">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignMethodology"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.isibang.ac.in/mod/ns#On-To-Knowledge"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignMethodology"/>
+        <rdfs:comment>
+            <rdf:Description rdf:nodeID="_:genid39"/>
+        </rdfs:comment>
+        <rdfs:label>On - To - Knowledge</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#OntoEdit -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#OntoEdit">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignTool"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#OntoEditProfessional -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#OntoEditProfessional">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignTool"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Ontobroker -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#Ontobroker">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignTool"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Ontolingua -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#Ontolingua">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignLanguage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#OntolinguaServer -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#OntolinguaServer">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignTool"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Ontosaurus -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#Ontosaurus">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignTool"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#OrganizationalFitness -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#OrganizationalFitness">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#EvaluationCriteria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#ProcessOntology -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#ProcessOntology">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyType"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.isibang.ac.in/mod/ns#ProcessOntology"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyType"/>
+        <rdfs:label>
+            <rdf:Description rdf:nodeID="_:genid41"/>
+        </rdfs:label>
+        <rdfs:label>A process ontology is a description of the components and their relationships that make up a process. A formal process ontology is an ontology in the knowledge domain of processes.</rdfs:label>
+        <rdfs:label>Process Ontology</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#PropositionalLogics -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#PropositionalLogics">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#KnowledgeRepresentationFormalism"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.isibang.ac.in/mod/ns#PropositionalLogics"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.isibang.ac.in/mod/ns#KnowledgeRepresentationFormalism"/>
+        <rdfs:label>
+            <rdf:Description rdf:nodeID="_:genid43"/>
+        </rdfs:label>
+        <rdfs:label>Propositional Logic</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Protege -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#Protege">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignTool"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#RDFS -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#RDFS">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignLanguage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#RDFa -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#RDFa">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologySyntax"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Semi-formal -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#Semi-formal">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#LevelOfFormality"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.isibang.ac.in/mod/ns#Semi-formal"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.isibang.ac.in/mod/ns#LevelOfFormality"/>
+        <rdfs:comment>A glossary, also known as a vocabulary, or clavis, is an alphabetical list of terms in a particular domain of knowledge with the definitions for those terms. 
+In a general sense, a glossary contains explanations of concepts relevant to a certain field of study or action.</rdfs:comment>
+        <rdfs:label>
+            <rdf:Description rdf:nodeID="_:genid45"/>
+        </rdfs:label>
+        <rdfs:label>Glossary</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Semi-informal -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#Semi-informal">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#LevelOfFormality"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.isibang.ac.in/mod/ns#Semi-informal"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.isibang.ac.in/mod/ns#LevelOfFormality"/>
+        <rdfs:comment>It refers to a classification of things or concepts, as well as to the principles underlying such a classification. Taxonomy is different from meronomy which is dealing with the classification of parts of a whole</rdfs:comment>
+        <rdfs:label>
+            <rdf:Description rdf:nodeID="_:genid47"/>
+        </rdfs:label>
+        <rdfs:label>Taxonomy</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Sensus -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#Sensus">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignMethodology"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.isibang.ac.in/mod/ns#Sensus"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignMethodology"/>
+        <rdfs:comment>
+            <rdf:Description rdf:nodeID="_:genid49"/>
+        </rdfs:comment>
+        <rdfs:comment>This approach promotes sharability of knowledge, since the same base ontology is used to develop ontologies in particular domains. The method based on Sensus is a top-down approach for deriving domain specific ontologies from huge ontologies.The authors propose to identify a set of ‘‘seed’&apos; terms that are relevant to a particular domain. These terms are linked manually to a broad-coverage ontology.</rdfs:comment>
+        <rdfs:label>Sensus</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#ServiceOntology -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#ServiceOntology">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#TaskOntology -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#TaskOntology">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyType"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.isibang.ac.in/mod/ns#TaskOntology"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyType"/>
+        <rdfs:comment>Task Ontology is a specification or detailed description of elements and relationships of tasks to explain how tasks can exist and be used in a specific field or environment.</rdfs:comment>
+        <rdfs:label>
+            <rdf:Description rdf:nodeID="_:genid51"/>
+        </rdfs:label>
+        <rdfs:label>Task Ontology</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Topbraid -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#Topbraid">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignTool"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Tove -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#Tove">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignMethodology"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.isibang.ac.in/mod/ns#Tove"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignMethodology"/>
+        <rdfs:label>
+            <rdf:Description rdf:nodeID="_:genid53"/>
+        </rdfs:label>
+        <rdfs:label>Tove</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#Turtle -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#Turtle">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologySyntax"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#UscholdAndKingsMethod -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#UscholdAndKingsMethod">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignMethodology"/>
+        <rdfs:label xml:lang="en">Uschold And King&apos;s Method </rdfs:label>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.isibang.ac.in/mod/ns#UscholdAndKingsMethod"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignMethodology"/>
+        <rdfs:comment>The Uschold and King’s method proposes four activities: (1) to identify the purpose of the ontology, (2) to build it,  (3) to evaluate it, and (4) to document it.</rdfs:comment>
+        <rdfs:label>Uschold and King&apos;s method</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#WebODE -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#WebODE">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignTool"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#WebOnto -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#WebOnto">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignTool"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#XOL -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#XOL">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignLanguage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#YAMO -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#YAMO">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologyDesignMethodology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#sumo -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#sumo">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#Ontology"/>
+        <hasEvaluation rdf:resource="http://www.isibang.ac.in/mod/ns#Evaluation1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#.GAF -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#.GAF">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#FileFormat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#.OWL -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#.OWL">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#FileFormat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#.RDF -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#.RDF">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#FileFormat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#.RDFS -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#.RDFS">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#FileFormat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#.XML -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#.XML">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#FileFormat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#RDF/XML -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#RDF/XML">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#OntologySyntax"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.isibang.ac.in/mod/ns#RDF/XML"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.isibang.ac.in/mod/ns#OntologySyntax"/>
+        <rdfs:comment>RDF/XML is a syntax,[1] defined by the W3C[2] , to express (i.e. serialize) an RDF graph as an XML document.</rdfs:comment>
+        <rdfs:label>RDF / XML</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.isibang.ac.in/mod/ns#RadLex® -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/mod/ns#RadLex®">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/mod/ns#License"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.isibang.ac.in/mod/ns#RadLex®"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.isibang.ac.in/mod/ns#License"/>
+        <rdfs:comment>
+            <rdf:Description rdf:nodeID="_:genid57"/>
+        </rdfs:comment>
+        <rdfs:comment>RadLex® is a reference ontology for the domai
+n of radiology and is an active, curated
+ontology.This License permits public access to the Release Version of RadLex® and makes it
+possible for Licensees to use it for clinical, research, educational and commercial
+activities without charge. </rdfs:comment>
+        <rdfs:label>RadLex®</rdfs:label>
+    </owl:Axiom>
+    <rdf:Description>
+        <methodologyUsed rdf:resource="http://www.isibang.ac.in/mod/ns#Sensus"/>
+    </rdf:Description>
+    <rdf:Description>
+        <methodologyUsed rdf:resource="http://www.isibang.ac.in/mod/ns#UscholdAndKingsMethod"/>
+    </rdf:Description>
+    <rdf:Description>
+        <formalityLevel rdf:resource="http://www.isibang.ac.in/mod/ns#Formal"/>
+    </rdf:Description>
+    <rdf:Description>
+        <formalityLevel rdf:resource="http://www.isibang.ac.in/mod/ns#Formal"/>
+    </rdf:Description>
+    <rdf:Description>
+        <ontologyLanguage rdf:resource="http://www.isibang.ac.in/mod/ns#DAML"/>
+    </rdf:Description>
+    <rdf:Description>
+        <ontologyLanguage rdf:resource="http://www.isibang.ac.in/mod/ns#OWL"/>
+    </rdf:Description>
+    <rdf:Description>
+        <Acronym>QuDEx</Acronym>
+    </rdf:Description>
+    <rdf:Description>
+        <Acronym>ABCD</Acronym>
+    </rdf:Description>
+    <rdf:Description>
+        <Acronym>DDI</Acronym>
+    </rdf:Description>
+    <rdf:Description>
+        <Acronym>OAI - ORE</Acronym>
+    </rdf:Description>
+    <rdf:Description>
+        <Acronym>SDMX</Acronym>
+    </rdf:Description>
+    <rdf:Description>
+        <Acronym>DIF</Acronym>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <rdfs:comment xml:lang="en">The creator of an ontology. </rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
