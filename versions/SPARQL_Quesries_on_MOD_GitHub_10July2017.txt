@@ -1,0 +1,144 @@
+
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX mod: <http://www.isibang.ac.in/ns/mod#>
+PREFIX dct: <http://purl.org/dc/terms/> 
+PREFIX omv: <http://omv.ontoware.org/2005/05/ontology#> 
+PREFIX doap: <http://usefulinc.com/ns/doap/> 
+PREFIX pav: <http://purl.org/pav/> 
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX sd: <http://www.w3.org/ns/sparql-service-description#> 
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
+PREFIX vann: <http://purl.org/vocab/vann/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+
+
+
+#List the existing ontologies along with their subject, wherever available. 
+
+SELECT DISTINCT ?Ontology ?Subject
+	WHERE {?Ontology a mod:Ontology .
+     
+        OPTIONAL {?Ontology dct:subject ?Subject} 
+              } 
+
+
+#List all the MOD defined properties and their corresponding domain and range restrictions. 
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX owl: <http://www.w3.org/2002/07/owl#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX mod: <http://www.isibang.ac.in/ns/mod#> PREFIX dct: <http://purl.org/dc/terms/> PREFIX omv: <http://omv.ontoware.org/2005/05/ontology#> 
+SELECT DISTINCT ?x ?y ?z
+	WHERE {
+                 ?x ?p ?c .
+                  ?x rdfs:domain ?y.
+                  ?x rdfs:range ?z .    
+               }
+        ORDER by ?x
+
+
+#List the existing ontologies with their properties and the corresponding values. 
+
+SELECT DISTINCT ?Ontology ?property ?value
+	WHERE { ?Ontology a mod:Ontology .
+                ?Ontology ?property ?value . 
+               } 
+
+
+
+#Display the properties and the corresponding values for AGROVOC Ontology. 
+
+SELECT DISTINCT ?property ?value
+       WHERE {<http://aims.fao.org/aos/agrovoc> ?property ?value
+
+              } 
+
+
+Display the ontology names along with the total number of projects where they are in use. 
+
+SELECT ?x (COUNT(*) AS ?UseInNoProjects) 
+	WHERE { ?x a mod:Ontology; mod:ontologyInUse ?Project .
+               } 
+        
+        GROUP BY ?x
+
+
+
+#Display the title and the creator (wherever available) of the ontologies endorsed by the RDA Wheat Data Interoperability Group (RDA WDI) and National Science Foundation (NSF). 
+
+SELECT DISTINCT ?Ontology ?Author
+       WHERE { 
+               {?x a mod:Ontology; omv:endorsedBy <https://www.rd-alliance.org/groups/wheat-data-interoperability-wg.html> . 
+                ?x dct:title ?Ontology .} 
+         UNION
+               {?x a mod:Ontology; omv:endorsedBy <http://dbpedia.org/resource/Category:National_Science_Foundation> . 
+                ?x dct:title ?Ontology .}
+         OPTIONAL {?x dct:creator ?Author .} 
+       } 
+
+
+
+
+#Display the ontology metrics for AGROVOC Ontology. 
+
+SELECT DISTINCT ?noOfClasses ?noOfIndividuals ?noOfProperties  
+       WHERE { <http://aims.fao.org/aos/agrovoc> omv:numberOfClasses ?noOfClasses; 
+                   omv:numberOfIndividuals ?noOfIndividuals ; 
+                   omv:numberOfProperties ?noOfProperties . 
+              }  
+
+
+
+#Display the ontology metrices for all the existing ontology in the KB. 
+
+SELECT DISTINCT ?y  ?TOT_Axiom ?TOT_Classes ?TOT_Properties ?TOT_Individuals 
+       WHERE { ?x a mod:Ontology .
+                       ?x dct:title ?y . 
+             OPTIONAL {?x omv:numberOfClasses ?TOT_Classes .}
+             OPTIONAL {?x omv:numberOfProperties ?TOT_Properties .} 
+             OPTIONAL {?x omv:numberOfIndividuals ?TOT_Individuals . }
+             OPTIONAL {?x omv:numberOfAxioms ?TOT_Axiom . } 
+      
+              } 
+
+
+
+#Display the ontology metrics for AGROVOC and Gene Ontology. 
+
+SELECT DISTINCT ?c ?n ?e  
+       WHERE {
+               { <http://aims.fao.org/aos/agrovoc> omv:numberOfClasses ?c; 
+                 omv:numberOfIndividuals ?n ; 
+                 omv:numberOfProperties ?e . }
+         UNION 
+                { <http://www.geneontology.org/> omv:numberOfClasses ?c; 
+                  omv:numberOfIndividuals ?n ; 
+                  omv:numberOfProperties ?e . 
+                 }
+              } 
+
+
+
+
+#Display the ontology language used for designing the ontologies who's name starts with "Me". 
+
+SELECT DISTINCT ?x ?y
+	WHERE { ?x a mod:Ontology .
+                ?x omv:hasOntologyLanguage ?y . 
+                ?x rdfs:label ?z .
+    FILTER regex(?z, "^^Me", "i")                
+                 } 
+
+
+
+#Display the ontologies that are in use in various projects. Also return the contact address for those projects. 
+
+SELECT DISTINCT ?Ontology ?Project ?EmailAddress
+	WHERE { ?Ontology a mod:Ontology; mod:ontologyInUse ?Project .
+                ?Project doap:mailing-list ?EmailAddress .
+               } 
+        ORDER BY ?Ontology 
+
+
+
