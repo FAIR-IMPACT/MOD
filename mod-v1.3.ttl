@@ -1,0 +1,1361 @@
+@prefix : <http://www.isibang.ac.in/ns/mod#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mod: <http://www.isibang.ac.in/ns/mod#> .
+@prefix omv: <http://omv.ontoware.org/2005/05/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://www.isibang.ac.in/ns/mod> .
+
+<http://www.isibang.ac.in/ns/mod> rdf:type owl:Ontology ;
+                                   owl:versionIRI <http://www.isibang.ac.in/ns/mod/1.3> ;
+                                   dcterms:creator [ foaf:homepage <http://www.lirmm.fr/~jonquet/> ;
+                                                     foaf:name "Clement Jonquet" ;
+                                                     rdf:type foaf:Agent ;
+                                                     foaf:mbox <mailto:jonquet@lirmm.fr>
+                                                   ] ,
+                                                   [ foaf:mbox <mailto:bisu@drtc.isibang.ac.in> ;
+                                                     foaf:name "Biswanth Dutta" ;
+                                                     rdf:type foaf:Agent
+                                                   ] ;
+                                   rdfs:label "MOD: Métadonnées pour l'ontologie Description et publication"@fr ;
+                                   rdfs:comment """This ontology is an OWL ontology to capture metadata information for ontologies. It is a follow-up of the OMV2 ontology (http://omv2.sourceforge.net).
+
+This project is related to the work done by Clement Jonquet and others on a new ontology metadata model implemented within AgroPortal (https://github.com/agroportal), see the documentation here: https://github.com/agroportal/documentation/tree/master/metadata."""@en ;
+                                   owl:priorVersion <http://www.isibang.ac.in/ns/mod/1.2> ;
+                                   rdfs:seeAlso <https://github.com/sifrproject/MOD-Ontology> ;
+                                   rdfs:label "MOD: Metadata for Ontology Description and publication"@en ;
+                                   owl:versionInfo "Including more MOD metadata for this ontology, merging ontology individuals into one - Nick"^^xsd:string ;
+                                   rdfs:seeAlso <https://github.com/AGLDWG/MOD-Ontology> ,
+                                                <https://hal.archives-ouvertes.fr/lirmm-01397388> ;
+                                   dcterms:contributor [ foaf:homepage <http://people.csiro.au/Nicholas-Car> ;
+                                                         foaf:mbox <mailto:nicholas.car@csiro.au> ;
+                                                         rdf:type foaf:Agent ;
+                                                         foaf:name "Nicholas Car"
+                                                       ] ;
+                                   rdfs:seeAlso <http://dcpapers.dublincore.org/pubs/article/view/3758> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#anyUri
+xsd:anyUri rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://omv.ontoware.org/2005/05/ontology#conformsToKnowledgeRepresentationParadigm
+omv:conformsToKnowledgeRepresentationParadigm rdf:type owl:ObjectProperty ;
+                                              rdfs:domain mod:Ontology ;
+                                              rdfs:range omv:KnowledgeRepresentationParadigm ;
+                                              rdfs:comment "Information about the paradigm model used to create the ontology."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#endorsedBy
+omv:endorsedBy rdf:type owl:ObjectProperty ;
+               rdfs:domain mod:Ontology ;
+               rdfs:range foaf:Agent ;
+               rdfs:comment "The parties that have expressed support or approval to this ontology."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#hasFormalityLevel
+omv:hasFormalityLevel rdf:type owl:ObjectProperty ;
+                      rdfs:domain mod:Ontology ;
+                      rdfs:range omv:FormalityLevel ;
+                      rdfs:comment "Level of formality of the ontology."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#hasOntologyLanguage
+omv:hasOntologyLanguage rdf:type owl:ObjectProperty ;
+                        rdfs:domain mod:Ontology ;
+                        rdfs:range omv:OntologyLanguage ;
+                        rdfs:comment "The ontology language."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#hasOntologySyntax
+omv:hasOntologySyntax rdf:type owl:ObjectProperty ;
+                      rdfs:domain mod:Ontology ;
+                      rdfs:range omv:OntologySyntax .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#usedOntologyEngineeringMethodology
+omv:usedOntologyEngineeringMethodology rdf:type owl:ObjectProperty ;
+                                       rdfs:domain mod:Ontology ;
+                                       rdfs:range omv:OntologyEngineeringMethodology ;
+                                       rdfs:comment "Information about the method model used to create the ontology."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#usedOntologyEngineeringTool
+omv:usedOntologyEngineeringTool rdf:type owl:ObjectProperty ;
+                                rdfs:domain mod:Ontology ;
+                                rdfs:range omv:OntologyEngineeringTool ;
+                                rdfs:comment "Information about the tool used to create the ontology."@en .
+
+
+###  http://purl.org/dc/elements/1.1/contributor
+dc:contributor rdf:type owl:ObjectProperty ;
+               rdfs:domain mod:Ontology ;
+               rdfs:range foaf:Agent ;
+               rdfs:comment "An entity responsible for making contributions to the resource."@en .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:ObjectProperty ;
+           rdfs:domain mod:Ontology ;
+           rdfs:comment "An entity primarily responsible for making the resource."@en .
+
+
+###  http://purl.org/dc/elements/1.1/format
+dc:format rdf:type owl:ObjectProperty ;
+          rdfs:domain mod:Ontology ;
+          rdfs:range dcterms:FileFormat ;
+          rdfs:comment "The file format, physical medium, or dimensions of the resource."@en .
+
+
+###  http://purl.org/dc/elements/1.1/publisher
+dc:publisher rdf:type owl:ObjectProperty ;
+             rdfs:domain mod:Ontology ;
+             rdfs:range foaf:Organization ;
+             rdfs:comment "An entity responsible for making the resource available."@en .
+
+
+###  http://purl.org/dc/elements/1.1/type
+dc:type rdf:type owl:ObjectProperty ;
+        rdfs:domain mod:Ontology ;
+        rdfs:range omv:OntologyType ;
+        rdfs:comment "The nature or genre of the resource."@en .
+
+
+###  http://purl.org/dc/terms/accessRights
+dcterms:accessRights rdf:type owl:ObjectProperty ;
+                     rdfs:domain mod:Ontology ;
+                     rdfs:range dcterms:RightsStatement ;
+                     rdfs:comment "Information about who can access the resource or an indication of its security status."@en .
+
+
+###  http://purl.org/dc/terms/accrualMethod
+dcterms:accrualMethod rdf:type owl:ObjectProperty ;
+                      rdfs:domain mod:Ontology ;
+                      rdfs:range dcterms:MethodOfAccrual ;
+                      rdfs:comment "The method by which items are added to a collection."@en .
+
+
+###  http://purl.org/dc/terms/accrualPeriodicity
+dcterms:accrualPeriodicity rdf:type owl:ObjectProperty ;
+                           rdfs:domain mod:Ontology ;
+                           rdfs:range dcterms:Frequency ;
+                           rdfs:comment "The frequency with which items are added to a collection."@en .
+
+
+###  http://purl.org/dc/terms/accrualPolicy
+dcterms:accrualPolicy rdf:type owl:ObjectProperty ;
+                      rdfs:domain mod:Ontology ;
+                      rdfs:range dcterms:Policy ;
+                      rdfs:comment "The policy governing the addition of items to a collection."@en .
+
+
+###  http://purl.org/dc/terms/audience
+dcterms:audience rdf:type owl:ObjectProperty ;
+                 rdfs:domain mod:Ontology ;
+                 rdfs:range foaf:Agent ;
+                 rdfs:comment "Public visé ou recommandé pour la ressource."@fr ,
+                              "a class of entity for whom the resource is intended or useful."@en .
+
+
+###  http://purl.org/dc/terms/hasPart
+dcterms:hasPart rdf:type owl:ObjectProperty ;
+                owl:inverseOf dcterms:isPartOf ;
+                rdfs:comment "A related resource that is included either physically or logically in the described resource."@en .
+
+
+###  http://purl.org/dc/terms/hasVersion
+dcterms:hasVersion rdf:type owl:ObjectProperty ;
+                   rdfs:domain mod:Ontology ;
+                   rdfs:range mod:Ontology ;
+                   rdfs:comment "a related resource that is a version, edition, or adaptation of the described resource."@en .
+
+
+###  http://purl.org/dc/terms/isPartOf
+dcterms:isPartOf rdf:type owl:ObjectProperty ;
+                 rdfs:domain mod:Ontology ;
+                 rdfs:range mod:Ontology ;
+                 rdfs:comment "A related resource in which the described resource is physically or logically included."@en .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:ObjectProperty ;
+                rdfs:domain mod:Ontology ;
+                rdfs:range dcterms:LicenseDocument .
+
+
+###  http://purl.org/dc/terms/rightsHolder
+dcterms:rightsHolder rdf:type owl:ObjectProperty ;
+                     rdfs:domain mod:Ontology ;
+                     rdfs:range foaf:Agent ;
+                     rdfs:comment "A person or organization owning or managing rights over the resource."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#contactPoint
+mod:contactPoint rdf:type owl:ObjectProperty ;
+                 rdfs:domain mod:Ontology ;
+                 rdfs:range foaf:Person ;
+                 rdfs:comment "The person who can be contacted to enquire about an ontology."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#evaluatedBy
+mod:evaluatedBy rdf:type owl:ObjectProperty ;
+                rdfs:domain mod:OntologyEvaluation ;
+                rdfs:range foaf:Agent ;
+                rdfs:comment "An agent that have participated in an evaluation."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#evaluation
+mod:evaluation rdf:type owl:ObjectProperty ;
+               rdfs:domain mod:Ontology ;
+               rdfs:range mod:OntologyEvaluation ;
+               rdfs:comment "An evaluation that has been achieved for an ontology."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#evaluationBasedOnCriteria
+mod:evaluationBasedOnCriteria rdf:type owl:ObjectProperty ;
+                              rdfs:domain mod:OntologyEvaluation ;
+                              rdfs:range mod:EvaluationCriteria ;
+                              rdfs:comment "This property makes a relationship between an evaluation and the evaluation criteria(s)/aspect(s) considered to judge the quality of an ontology."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#evaluationMethod
+mod:evaluationMethod rdf:type owl:ObjectProperty ;
+                     rdfs:domain mod:OntologyEvaluation ;
+                     rdfs:range mod:EvaluationMethod ;
+                     rdfs:comment "The method that is followed in evaluating an ontology. This property makes a relationship between an ontology and the methodology followed in evaluating the ontology."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#ontologyInUse
+mod:ontologyInUse rdf:type owl:ObjectProperty ;
+                  rdfs:domain mod:Ontology ;
+                  rdfs:range foaf:Project ;
+                  rdfs:comment "An ontology that is used in a project."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#ontologyRelatedTo
+mod:ontologyRelatedTo rdf:type owl:ObjectProperty ;
+                      rdfs:domain mod:Ontology ;
+                      rdfs:range mod:Ontology ;
+                      rdfs:comment "An ontology is related to another ontology."@en .
+
+
+###  http://www.w3.org/2002/07/owl#backwardCompatibleWith
+owl:backwardCompatibleWith rdf:type owl:ObjectProperty ;
+                           rdfs:domain mod:Ontology ;
+                           rdfs:range mod:Ontology ;
+                           rdfs:comment "This identifies the specified ontology as a prior version of the containing ontology, and further indicates that it is backward compatible with it."@en .
+
+
+###  http://www.w3.org/2002/07/owl#incompatibleWith
+owl:incompatibleWith rdf:type owl:ObjectProperty ;
+                     rdfs:domain mod:Ontology ;
+                     rdfs:range mod:Ontology ;
+                     rdfs:comment "This indicates that the containing ontology is a later version of the referenced ontology, but is not backward compatible with it."@en .
+
+
+###  http://www.w3.org/2002/07/owl#priorVersion
+owl:priorVersion rdf:type owl:ObjectProperty ;
+                 rdfs:domain mod:Ontology ;
+                 rdfs:range mod:Ontology .
+
+
+###  http://www.w3.org/ns/prov#generalizationOf
+prov:generalizationOf rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf mod:ontologyRelatedTo ;
+                      owl:inverseOf prov:specializationOf .
+
+
+###  http://www.w3.org/ns/prov#specializationOf
+prov:specializationOf rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf mod:ontologyRelatedTo ;
+                      rdfs:comment "An entity that is a specialization of another shares all aspects of the latter, and additionally presents more specific aspects of the same thing as the latter."@en .
+
+
+###  http://www.w3.org/ns/prov#wasGeneratedBy
+prov:wasGeneratedBy rdf:type owl:ObjectProperty ;
+                    rdfs:domain mod:Ontology ;
+                    rdfs:range prov:Activity ;
+                    rdfs:comment "Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation."@en .
+
+
+###  http://www.w3.org/ns/prov#wasinvalidatedBy
+prov:wasinvalidatedBy rdf:type owl:ObjectProperty ;
+                      rdfs:domain mod:Ontology ;
+                      rdfs:range prov:Activity ;
+                      rdfs:comment "Invalidation is the start of the destruction, cessation, or expiry of an existing entity by an activity. The entity is no longer available for use (or further invalidation) after invalidation. Any generation or usage of an entity precedes its invalidation."@en .
+
+
+###  http://xmlns.com/foaf/0.1/depiction
+foaf:depiction rdf:type owl:ObjectProperty ;
+               rdfs:domain mod:Ontology ;
+               rdfs:range foaf:Image ;
+               rdfs:comment "A depiction of some thing, say, an UML diagram of an ontology."@en .
+
+
+###  http://xmlns.com/foaf/0.1/fundedBy
+foaf:fundedBy rdf:type owl:ObjectProperty ;
+              rdfs:domain mod:Ontology ;
+              rdfs:range foaf:Agent ;
+              rdfs:comment "An organization funding a project or person."@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://omv.ontoware.org/2005/05/ontology#OntologyTask
+omv:OntologyTask rdf:type owl:DatatypeProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#acronym
+omv:acronym rdf:type owl:DatatypeProperty ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( omv:KnowledgeRepresentationParadigm
+                                        omv:OntologyEngineeringMethodology
+                                        dcterms:MethodOfAccrual
+                                        dcterms:Policy
+                                        dcterms:RightsStatement
+                                        mod:EvaluationMethod
+                                        mod:Ontology
+                                        foaf:Organization
+                                      )
+                        ] ;
+            rdfs:range xsd:string ;
+            rdfs:comment "A short name by which an ontology is formally known."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#designedForOntologyTask
+omv:designedForOntologyTask rdf:type owl:DatatypeProperty ;
+                            rdfs:domain mod:Ontology ;
+                            rdfs:range xsd:string ;
+                            rdfs:comment "The purpose for which the ontology was originally designed."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#keyClasses
+omv:keyClasses rdf:type owl:DatatypeProperty ;
+               rdfs:domain mod:Ontology ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Representative classes in the ontology."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#keywords
+omv:keywords rdf:type owl:DatatypeProperty ;
+             rdfs:domain mod:Ontology ;
+             rdfs:range xsd:string ;
+             rdfs:comment "List of keywords related to an ontology."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#knownUsage
+omv:knownUsage rdf:type owl:DatatypeProperty ;
+               rdfs:comment "The applications where the ontology is being used."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#notes
+omv:notes rdf:type owl:DatatypeProperty ;
+          rdfs:comment "Additional information about the ontology that is not included somewhere else (e.g. information that you do not want to include in the documentation)."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#numberOfAxioms
+omv:numberOfAxioms rdf:type owl:DatatypeProperty ;
+                   rdfs:comment "Number of axioms in the ontology."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#numberOfClasses
+omv:numberOfClasses rdf:type owl:DatatypeProperty ;
+                    rdfs:domain mod:Ontology ;
+                    rdfs:range xsd:nonNegativeInteger ;
+                    rdfs:comment "Number of classes in the ontology."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#numberOfIndividuals
+omv:numberOfIndividuals rdf:type owl:DatatypeProperty ;
+                        rdfs:domain mod:Ontology ;
+                        rdfs:range xsd:nonNegativeInteger ;
+                        rdfs:comment "Number of individuals in the ontology."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#numberOfProperties
+omv:numberOfProperties rdf:type owl:DatatypeProperty ;
+                       rdfs:domain mod:Ontology ;
+                       rdfs:range xsd:nonNegativeInteger ;
+                       rdfs:comment "Number of properties in the ontology."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#resourceLocator
+omv:resourceLocator rdf:type owl:DatatypeProperty ;
+                    rdfs:domain mod:Ontology ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "The location where the ontology can be found. It should be accessible via a URL. It can be the same as the value for URI property."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#status
+omv:status rdf:type owl:DatatypeProperty ;
+           rdfs:domain mod:Ontology ;
+           rdfs:range xsd:string ;
+           rdfs:comment "The tracking information for the contents of the ontology."@en .
+
+
+###  http://purl.org/dc/elements/1.1/coverage
+dc:coverage rdf:type owl:DatatypeProperty ;
+            rdfs:domain mod:Ontology ;
+            rdfs:range xsd:string ;
+            rdfs:comment "The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant."@en .
+
+
+###  http://purl.org/dc/elements/1.1/date
+dc:date rdf:type owl:DatatypeProperty ;
+        rdfs:domain mod:Ontology ;
+        rdfs:range xsd:string .
+
+
+###  http://purl.org/dc/elements/1.1/identifier
+dc:identifier rdf:type owl:DatatypeProperty ;
+              rdfs:domain mod:Ontology ;
+              rdfs:range xsd:string ;
+              rdfs:comment "An unambiguous reference to the resource within a given context."@en .
+
+
+###  http://purl.org/dc/elements/1.1/language
+dc:language rdf:type owl:DatatypeProperty ;
+            rdfs:domain mod:Ontology ;
+            rdfs:range xsd:string ;
+            rdfs:comment """The language of the resource.
+E.g., English, French, Italian"""@en .
+
+
+###  http://purl.org/dc/elements/1.1/source
+dc:source rdf:type owl:DatatypeProperty ;
+          rdfs:domain mod:Ontology ;
+          rdfs:range xsd:string ;
+          rdfs:comment "A related resource from which the described resource is derived."@en .
+
+
+###  http://purl.org/dc/elements/1.1/subject
+dc:subject rdf:type owl:DatatypeProperty ;
+           rdfs:domain mod:Ontology ;
+           rdfs:range xsd:string ;
+           rdfs:comment "The topic of the resource."@en .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:DatatypeProperty ;
+         rdfs:domain owl:Thing ;
+         rdfs:range xsd:string ;
+         rdfs:comment "A name given to the resource."@en .
+
+
+###  http://purl.org/dc/terms/abstract
+dcterms:abstract rdf:type owl:DatatypeProperty ;
+                 rdfs:domain mod:Ontology ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "A summary of the resource."@en .
+
+
+###  http://purl.org/dc/terms/bibliographicCitation
+dcterms:bibliographicCitation rdf:type owl:DatatypeProperty ;
+                              rdfs:domain mod:Ontology ;
+                              rdfs:range xsd:string ;
+                              rdfs:comment "A bibliographic reference for the resource."@en .
+
+
+###  http://purl.org/dc/terms/created
+dcterms:created rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf dc:date ;
+                rdfs:comment "Date of creation of the resource."@en .
+
+
+###  http://purl.org/dc/terms/dateSubmitted
+dcterms:dateSubmitted rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf dc:date ;
+                      rdfs:comment "date of submission of the resource."@en .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:DatatypeProperty ;
+                    rdfs:domain owl:Thing ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "An account of the resource."@en .
+
+
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf dc:date ;
+                 rdfs:comment "Date on which the resource was changed."@en .
+
+
+###  http://purl.org/dc/terms/valid
+dcterms:valid rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf dc:date ;
+              rdfs:comment "Date (often a range) of validity of a resource."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#address
+mod:address rdf:type owl:DatatypeProperty ;
+            rdfs:domain foaf:Agent ;
+            rdfs:range xsd:string ;
+            rdfs:comment "An address of an agent."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#byteSize
+mod:byteSize rdf:type owl:DatatypeProperty ;
+             rdfs:domain mod:Ontology ;
+             rdfs:range xsd:nonNegativeInteger ;
+             rdfs:comment "The byte size of an ontology."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#city
+mod:city rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf mod:address ;
+         rdfs:comment "A city name."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#competencyQuestion
+mod:competencyQuestion rdf:type owl:DatatypeProperty ;
+                       rdfs:domain mod:Ontology ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "A set of questions made to build an ontology at the design time."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#numberOfDataProperties
+mod:numberOfDataProperties rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf omv:numberOfProperties ;
+                           rdfs:comment "The total number of data properties in an ontology."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#numberOfLabels
+mod:numberOfLabels rdf:type owl:DatatypeProperty ;
+                   rdfs:domain mod:Ontology ;
+                   rdfs:range xsd:nonNegativeInteger ;
+                   rdfs:comment "Number of defined labels for any resources in the ontology (classes, properties, etc)."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#numberOfObjectProperties
+mod:numberOfObjectProperties rdf:type owl:DatatypeProperty ;
+                             rdfs:subPropertyOf omv:numberOfProperties ;
+                             rdfs:comment "The total number of object properties in an ontology."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#postalCode
+mod:postalCode rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf mod:address ;
+               rdfs:comment "A postal code."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#primaryTopic
+mod:primaryTopic rdf:type owl:DatatypeProperty ;
+                 rdfs:domain mod:Ontology ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "The primary topic of an ontology. This will be useful for merging the ontolgies."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#rootClasses
+mod:rootClasses rdf:type owl:DatatypeProperty ;
+                rdfs:domain mod:Ontology ;
+                rdfs:range xsd:string ;
+                rdfs:comment """This property is to provide the root class(es) of an ontology. This is automatically populated by taking the direct subclasses of owl:Thing
+If the ontology is also defined as a unique skos:ConceptScheme, then this property should become equivalent of skos:hasTopConcept."""@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#sampleQueries
+mod:sampleQueries rdf:type owl:DatatypeProperty ;
+                  rdfs:domain mod:Ontology ;
+                  rdfs:range xsd:anyURI ;
+                  rdfs:comment "A set of queries (may be SPARQL, DL Queries) that are provided along with an ontology."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#state
+mod:state rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf mod:address ;
+          rdfs:comment "A state or a province."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#streetAddress
+mod:streetAddress rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf mod:address ;
+                  rdfs:comment "A street address. It can consists of flat/building number, building name, etc."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#vocabularyUsed
+mod:vocabularyUsed rdf:type owl:DatatypeProperty ;
+                   rdfs:domain mod:Ontology ;
+                   rdfs:range xsd:anyURI ;
+                   rdfs:comment "MOD: A vocabulary(ies) that is used and/or referred to create the current ontology."@en .
+
+
+###  http://www.w3.org/2002/07/owl#deprecated
+owl:deprecated rdf:type owl:DatatypeProperty ;
+               rdfs:domain mod:Ontology ;
+               rdfs:range xsd:boolean ;
+               rdfs:comment "An annotation with the owl:deprecated annotation property and the value equal to \"true\"^^xsd:boolean can be used to specify that an IRI is deprecated."@en .
+
+
+###  http://www.w3.org/2002/07/owl#imports
+owl:imports rdf:type owl:DatatypeProperty ;
+            rdfs:domain mod:Ontology ;
+            rdfs:range xsd:anyURI ;
+            rdfs:comment "References another OWL ontology containing definitions, whose meaning is considered to be part of the meaning of the importing ontology."@en .
+
+
+###  http://www.w3.org/2002/07/owl#versionIRI
+owl:versionIRI rdf:type owl:DatatypeProperty ;
+               rdfs:domain mod:Ontology ;
+               rdfs:range xsd:anyURI ;
+               rdfs:comment "The property that identifies the version IRI of an ontology."@en .
+
+
+###  http://www.w3.org/2002/07/owl#versionInfo
+owl:versionInfo rdf:type owl:DatatypeProperty ;
+                rdfs:domain mod:Ontology ;
+                rdfs:range xsd:string .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:DatatypeProperty ;
+              rdfs:domain owl:Thing ;
+              rdfs:range xsd:string ;
+              rdfs:comment "The preferred and alternative labels are useful when generating or creating human-readable representations of a knowledge organization system."@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#hiddenLabel
+skos:hiddenLabel rdf:type owl:DatatypeProperty ;
+                 rdfs:domain owl:Thing ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "The hidden labels are useful when a user is interacting with a knowledge organization system via a text-based search function. The user may, for example, enter mis-spelled words when trying to find a relevant concept. If the mis-spelled query can be matched against a hidden label, the user will be able to find the relevant concept, but the hidden label won't otherwise be visible to the user (so further mistakes aren't encouraged)."@en .
+
+
+###  http://www.w3.org/ns/sparql-service-description#endpoint
+<http://www.w3.org/ns/sparql-service-description#endpoint> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:domain mod:Ontology ;
+                                                           rdfs:range xsd:anyURI .
+
+
+###  http://xmlns.com/foaf/0.1/firstName
+foaf:firstName rdf:type owl:DatatypeProperty ;
+               rdfs:domain foaf:Person ;
+               rdfs:range xsd:string .
+
+
+###  http://xmlns.com/foaf/0.1/homepage
+foaf:homepage rdf:type owl:DatatypeProperty ;
+              rdfs:domain owl:Thing ;
+              rdfs:range xsd:anyURI .
+
+
+###  http://xmlns.com/foaf/0.1/lastName
+foaf:lastName rdf:type owl:DatatypeProperty ;
+              rdfs:domain foaf:Agent ;
+              rdfs:range xsd:string .
+
+
+###  http://xmlns.com/foaf/0.1/logo
+foaf:logo rdf:type owl:DatatypeProperty ;
+          rdfs:domain mod:Ontology ;
+          rdfs:range xsd:anyURI ;
+          rdfs:comment "A logo representing some thing."@en .
+
+
+###  http://xmlns.com/foaf/0.1/mbox
+foaf:mbox rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf mod:address .
+
+
+###  http://xmlns.com/foaf/0.1/page
+foaf:page rdf:type owl:DatatypeProperty ;
+          rdfs:domain owl:Thing ;
+          rdfs:range xsd:anyURI ;
+          rdfs:comment "A page or document about this thing."@en .
+
+
+###  http://xmlns.com/foaf/0.1/phone
+foaf:phone rdf:type owl:DatatypeProperty ;
+           rdfs:domain foaf:Agent ;
+           rdfs:range xsd:anyURI ;
+           rdfs:comment """The phone of something is a phone, typically identified using the telephone URI scheme: http://www.w3.org/Addressing/schemes.html#tel
+
+[Source: FOAF specification http://xmlns.com/foaf/spec/#term_phone]"""@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://omv.ontoware.org/2005/05/ontology#FormalityLevel
+omv:FormalityLevel rdf:type owl:Class ;
+                   rdfs:comment "The level of formality of an ontology."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#KnowledgeRepresentationParadigm
+omv:KnowledgeRepresentationParadigm rdf:type owl:Class ;
+                                    rdfs:comment "Information about a knowledge representation paradigm a particular language adheres to."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology
+omv:OntologyEngineeringMethodology rdf:type owl:Class ;
+                                   rdfs:comment "Information about the ontology engineering methodology."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringTool
+omv:OntologyEngineeringTool rdf:type owl:Class ;
+                            rdfs:comment "A tool used to create the ontology."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#OntologyLanguage
+omv:OntologyLanguage rdf:type owl:Class ;
+                     rdfs:comment "Information about the language in which the ontology is implemented."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#OntologySyntax
+omv:OntologySyntax rdf:type owl:Class .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#OntologyType
+omv:OntologyType rdf:type owl:Class ;
+                 rdfs:comment """This class subsumes types of ontologies according to well-known classifications in the
+Ontology Engineering literature."""@en .
+
+
+###  http://purl.org/dc/terms/FileFormat
+dcterms:FileFormat rdf:type owl:Class ;
+                   rdfs:comment "A digital resource format."@en .
+
+
+###  http://purl.org/dc/terms/Frequency
+dcterms:Frequency rdf:type owl:Class ;
+                  rdfs:comment "A rate at which something recurs."@en .
+
+
+###  http://purl.org/dc/terms/LicenseDocument
+dcterms:LicenseDocument rdf:type owl:Class ;
+                        rdfs:subClassOf dcterms:RightsStatement .
+
+
+###  http://purl.org/dc/terms/MethodOfAccrual
+dcterms:MethodOfAccrual rdf:type owl:Class ;
+                        rdfs:comment "A method by which resources are added to a collection."@en .
+
+
+###  http://purl.org/dc/terms/Policy
+dcterms:Policy rdf:type owl:Class ;
+               rdfs:comment "A plan or course of action by an authority, intended to influence and determine decisions, actions, and other matters."@en .
+
+
+###  http://purl.org/dc/terms/RightsStatement
+dcterms:RightsStatement rdf:type owl:Class ;
+                        rdfs:comment "A statement about the intellectual property rights (IPR) held in or over a Resource, a legal document giving official permission to do something with a resource, or a statement about access rights."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#EvaluationCriteria
+mod:EvaluationCriteria rdf:type owl:Class ;
+                       rdfs:comment "The evaluation criterias, essentially the various aspects that are used in validating the quality of an ontology. These aspects may include for example, accuracy, adaptability, accessibility, clarity, completeness, computational efficiency, conciseness, informativeness, uniqueness, relevancy, reliability, usefulness and organizational fitness."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#EvaluationMethod
+mod:EvaluationMethod rdf:type owl:Class ;
+                     rdfs:comment "A methodology that is being followed in evaluating an ontology, e.g., application based approach, assessment by human, data driven approach and golden standard."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#Ontology
+mod:Ontology rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:conformsToKnowledgeRepresentationParadigm ;
+                               owl:allValuesFrom omv:KnowledgeRepresentationParadigm
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:endorsedBy ;
+                               owl:allValuesFrom foaf:Agent
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:hasFormalityLevel ;
+                               owl:allValuesFrom omv:FormalityLevel
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:hasOntologyLanguage ;
+                               owl:allValuesFrom omv:OntologyLanguage
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:hasOntologySyntax ;
+                               owl:allValuesFrom omv:OntologySyntax
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:usedOntologyEngineeringMethodology ;
+                               owl:allValuesFrom omv:OntologyEngineeringMethodology
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:usedOntologyEngineeringTool ;
+                               owl:allValuesFrom omv:OntologyEngineeringTool
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dc:creator ;
+                               owl:allValuesFrom foaf:Agent
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dc:format ;
+                               owl:allValuesFrom dcterms:FileFormat
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dc:type ;
+                               owl:allValuesFrom omv:OntologyType
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dcterms:accessRights ;
+                               owl:allValuesFrom dcterms:RightsStatement
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dcterms:audience ;
+                               owl:allValuesFrom foaf:Agent
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dcterms:hasVersion ;
+                               owl:allValuesFrom mod:Ontology
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dcterms:isPartOf ;
+                               owl:allValuesFrom mod:Ontology
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dcterms:license ;
+                               owl:allValuesFrom dcterms:LicenseDocument
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty mod:contactPoint ;
+                               owl:allValuesFrom foaf:Person
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty mod:evaluation ;
+                               owl:allValuesFrom mod:OntologyEvaluation
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty mod:ontologyRelatedTo ;
+                               owl:allValuesFrom mod:Ontology
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty owl:backwardCompatibleWith ;
+                               owl:allValuesFrom mod:Ontology
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty owl:incompatibleWith ;
+                               owl:allValuesFrom mod:Ontology
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty prov:wasGeneratedBy ;
+                               owl:allValuesFrom prov:Activity
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty prov:wasinvalidatedBy ;
+                               owl:allValuesFrom prov:Activity
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty foaf:depiction ;
+                               owl:allValuesFrom foaf:Image
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dc:creator ;
+                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:hasFormalityLevel ;
+                               owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:hasOntologySyntax ;
+                               owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dc:format ;
+                               owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dc:type ;
+                               owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dcterms:hasVersion ;
+                               owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:designedForOntologyTask ;
+                               owl:allValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:keyClasses ;
+                               owl:allValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:keywords ;
+                               owl:allValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:resourceLocator ;
+                               owl:allValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dc:identifier ;
+                               owl:allValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dc:language ;
+                               owl:allValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dc:subject ;
+                               owl:allValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dcterms:created ;
+                               owl:allValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dcterms:dateSubmitted ;
+                               owl:allValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dcterms:description ;
+                               owl:allValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dcterms:modified ;
+                               owl:allValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty mod:competencyQuestion ;
+                               owl:allValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty mod:primaryTopic ;
+                               owl:allValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dc:subject ;
+                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dc:title ;
+                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty mod:primaryTopic ;
+                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty mod:rootClasses ;
+                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:resourceLocator ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:keyClasses ;
+                               owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:keywords ;
+                               owl:maxCardinality "4"^^xsd:nonNegativeInteger
+                             ] .
+
+
+###  http://www.isibang.ac.in/ns/mod#OntologyEvaluation
+mod:OntologyEvaluation rdf:type owl:Class ;
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty mod:evaluatedBy ;
+                                         owl:allValuesFrom foaf:Agent
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty mod:evaluationBasedOnCriteria ;
+                                         owl:allValuesFrom mod:EvaluationCriteria
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty mod:evaluationMethod ;
+                                         owl:allValuesFrom mod:EvaluationMethod
+                                       ] ;
+                       rdfs:comment "The results of evaluating an ontology. An ontology can have more than one evaluations."@en .
+
+
+###  http://www.w3.org/ns/prov#Activity
+prov:Activity rdf:type owl:Class ;
+              rdfs:comment "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities."@en .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+foaf:Agent rdf:type owl:Class ;
+           rdfs:comment "An agent (eg. person, group, software or physical artifact)."@en .
+
+
+###  http://xmlns.com/foaf/0.1/Image
+foaf:Image rdf:type owl:Class ;
+           rdfs:comment "An image."@en .
+
+
+###  http://xmlns.com/foaf/0.1/Organization
+foaf:Organization rdf:type owl:Class ;
+                  rdfs:subClassOf foaf:Agent ;
+                  rdfs:comment "An organization."@en .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+foaf:Person rdf:type owl:Class ;
+            rdfs:subClassOf foaf:Agent ;
+            rdfs:comment "A person."@en .
+
+
+###  http://xmlns.com/foaf/0.1/Project
+foaf:Project rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty dc:title ;
+                               owl:allValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dcterms:description ;
+                               owl:allValuesFrom xsd:string
+                             ] ;
+             rdfs:comment "A project (a collective endeavour of some kind)."@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.isibang.ac.in/ns/mod
+<http://www.isibang.ac.in/ns/mod> rdf:type owl:NamedIndividual ,
+                                           mod:Ontology ;
+                                  omv:conformsToKnowledgeRepresentationParadigm mod:DescriptionLogic ;
+                                  omv:hasFormalityLevel mod:Formal ;
+                                  omv:hasOntologySyntax <http://www.isibang.ac.in/ns/mod#RDF/XML> ;
+                                  omv:usedOntologyEngineeringTool mod:Protege ;
+                                  omv:acronym "MOD"^^xsd:string ;
+                                  omv:designedForOntologyTask "To describe the vocabularies, e.g., ontology, classification, metadata, etc."^^xsd:string ;
+                                  omv:keyClasses "Ontology, FormalityLevel, FileFormat, RightsStatement, Project, Agent, FormalityLevel, KnowledgeRepresentationParadigm, OntologyEngineeringMethodology, OntologyEngineeringTool, OntologyLanguage, OntologyType"^^xsd:string ;
+                                  omv:keywords "ontology metadata, ontology"^^xsd:string ;
+                                  dc:identifier "http://www.isibang.ac.in/ns/mod"^^xsd:string ;
+                                  dc:language "English"^^xsd:string ;
+                                  dc:subject "Ontology metadata"^^xsd:string ;
+                                  mod:primaryTopic "Metadata vocabulary for ontology description"^^xsd:string .
+
+
+###  http://www.isibang.ac.in/ns/mod#
+mod: rdf:type owl:NamedIndividual ,
+              omv:OntologyLanguage .
+
+
+###  http://www.isibang.ac.in/ns/mod#Accessibility
+mod:Accessibility rdf:type owl:NamedIndividual ,
+                           mod:EvaluationCriteria .
+
+
+###  http://www.isibang.ac.in/ns/mod#Accuracy
+mod:Accuracy rdf:type owl:NamedIndividual ,
+                      mod:EvaluationCriteria .
+
+
+###  http://www.isibang.ac.in/ns/mod#Adaptability
+mod:Adaptability rdf:type owl:NamedIndividual ,
+                          mod:EvaluationCriteria .
+
+
+###  http://www.isibang.ac.in/ns/mod#Apache
+mod:Apache rdf:type owl:NamedIndividual ,
+                    dcterms:LicenseDocument .
+
+
+###  http://www.isibang.ac.in/ns/mod#ApplicationBasedApproach
+mod:ApplicationBasedApproach rdf:type owl:NamedIndividual ,
+                                      mod:EvaluationMethod .
+
+
+###  http://www.isibang.ac.in/ns/mod#ApplicationOntology
+mod:ApplicationOntology rdf:type owl:NamedIndividual ,
+                                 omv:OntologyType .
+
+
+###  http://www.isibang.ac.in/ns/mod#Automatic
+mod:Automatic rdf:type owl:NamedIndividual ,
+                       omv:OntologyEngineeringMethodology .
+
+
+###  http://www.isibang.ac.in/ns/mod#Clarity
+mod:Clarity rdf:type owl:NamedIndividual ,
+                     mod:EvaluationCriteria .
+
+
+###  http://www.isibang.ac.in/ns/mod#ComputationalEfficiency
+mod:ComputationalEfficiency rdf:type owl:NamedIndividual ,
+                                     mod:EvaluationCriteria .
+
+
+###  http://www.isibang.ac.in/ns/mod#Consuming
+mod:Consuming rdf:type owl:NamedIndividual ,
+                       prov:Activity .
+
+
+###  http://www.isibang.ac.in/ns/mod#CoreOntology
+mod:CoreOntology rdf:type owl:NamedIndividual ,
+                          omv:OntologyType .
+
+
+###  http://www.isibang.ac.in/ns/mod#CreativeCommons
+mod:CreativeCommons rdf:type owl:NamedIndividual ,
+                             dcterms:LicenseDocument .
+
+
+###  http://www.isibang.ac.in/ns/mod#Cyc
+mod:Cyc rdf:type owl:NamedIndividual ,
+                 omv:OntologyEngineeringMethodology .
+
+
+###  http://www.isibang.ac.in/ns/mod#DataDrivenApproach
+mod:DataDrivenApproach rdf:type owl:NamedIndividual ,
+                                mod:EvaluationMethod .
+
+
+###  http://www.isibang.ac.in/ns/mod#DescriptionLogic
+mod:DescriptionLogic rdf:type owl:NamedIndividual ,
+                              omv:KnowledgeRepresentationParadigm .
+
+
+###  http://www.isibang.ac.in/ns/mod#DomainOntology
+mod:DomainOntology rdf:type owl:NamedIndividual ,
+                            omv:OntologyType .
+
+
+###  http://www.isibang.ac.in/ns/mod#EvaluationByHuman
+mod:EvaluationByHuman rdf:type owl:NamedIndividual ,
+                               mod:EvaluationMethod .
+
+
+###  http://www.isibang.ac.in/ns/mod#FirstOrderLogic
+mod:FirstOrderLogic rdf:type owl:NamedIndividual ,
+                             omv:KnowledgeRepresentationParadigm .
+
+
+###  http://www.isibang.ac.in/ns/mod#Formal
+mod:Formal rdf:type owl:NamedIndividual ,
+                    omv:FormalityLevel .
+
+
+###  http://www.isibang.ac.in/ns/mod#Frame
+mod:Frame rdf:type owl:NamedIndividual ,
+                   omv:KnowledgeRepresentationParadigm .
+
+
+###  http://www.isibang.ac.in/ns/mod#GAF
+mod:GAF rdf:type owl:NamedIndividual ,
+                 dcterms:FileFormat .
+
+
+###  http://www.isibang.ac.in/ns/mod#GNUGeneralPublicLicense
+mod:GNUGeneralPublicLicense rdf:type owl:NamedIndividual ,
+                                     dcterms:LicenseDocument .
+
+
+###  http://www.isibang.ac.in/ns/mod#GeneralOntology
+mod:GeneralOntology rdf:type owl:NamedIndividual ,
+                             omv:OntologyType .
+
+
+###  http://www.isibang.ac.in/ns/mod#GoldStandard
+mod:GoldStandard rdf:type owl:NamedIndividual ,
+                          mod:EvaluationMethod .
+
+
+###  http://www.isibang.ac.in/ns/mod#IndianStatisticalInstitute
+mod:IndianStatisticalInstitute rdf:type owl:NamedIndividual ,
+                                        foaf:Organization .
+
+
+###  http://www.isibang.ac.in/ns/mod#Informal
+mod:Informal rdf:type owl:NamedIndividual ,
+                      omv:FormalityLevel .
+
+
+###  http://www.isibang.ac.in/ns/mod#MethOntology
+mod:MethOntology rdf:type owl:NamedIndividual ,
+                          omv:OntologyEngineeringMethodology .
+
+
+###  http://www.isibang.ac.in/ns/mod#Modifying
+mod:Modifying rdf:type owl:NamedIndividual ,
+                       prov:Activity .
+
+
+###  http://www.isibang.ac.in/ns/mod#N-Triples
+mod:N-Triples rdf:type owl:NamedIndividual ,
+                       omv:OntologySyntax .
+
+
+###  http://www.isibang.ac.in/ns/mod#Notation3
+mod:Notation3 rdf:type owl:NamedIndividual ,
+                       omv:OntologySyntax .
+
+
+###  http://www.isibang.ac.in/ns/mod#OWL
+mod:OWL rdf:type owl:NamedIndividual ,
+                 omv:OntologyLanguage ,
+                 dcterms:FileFormat .
+
+
+###  http://www.isibang.ac.in/ns/mod#OWL-DL
+mod:OWL-DL rdf:type owl:NamedIndividual ,
+                    omv:OntologyLanguage .
+
+
+###  http://www.isibang.ac.in/ns/mod#OWL-Full
+mod:OWL-Full rdf:type owl:NamedIndividual ,
+                      omv:OntologyLanguage .
+
+
+###  http://www.isibang.ac.in/ns/mod#OWL-Lite
+mod:OWL-Lite rdf:type owl:NamedIndividual ,
+                      omv:OntologyLanguage .
+
+
+###  http://www.isibang.ac.in/ns/mod#OntologyMetadataProject
+mod:OntologyMetadataProject rdf:type owl:NamedIndividual ,
+                                     foaf:Project .
+
+
+###  http://www.isibang.ac.in/ns/mod#ProcessOntology
+mod:ProcessOntology rdf:type owl:NamedIndividual ,
+                             omv:OntologyType .
+
+
+###  http://www.isibang.ac.in/ns/mod#Processing
+mod:Processing rdf:type owl:NamedIndividual ,
+                        prov:Activity .
+
+
+###  http://www.isibang.ac.in/ns/mod#PropositionalLogic
+mod:PropositionalLogic rdf:type owl:NamedIndividual ,
+                                omv:KnowledgeRepresentationParadigm .
+
+
+###  http://www.isibang.ac.in/ns/mod#Protege
+mod:Protege rdf:type owl:NamedIndividual ,
+                     omv:OntologyEngineeringTool .
+
+
+###  http://www.isibang.ac.in/ns/mod#RDF
+mod:RDF rdf:type owl:NamedIndividual ,
+                 dcterms:FileFormat .
+
+
+###  http://www.isibang.ac.in/ns/mod#RDFS
+mod:RDFS rdf:type owl:NamedIndividual ,
+                  dcterms:FileFormat .
+
+
+###  http://www.isibang.ac.in/ns/mod#Relocating
+mod:Relocating rdf:type owl:NamedIndividual ,
+                        prov:Activity .
+
+
+###  http://www.isibang.ac.in/ns/mod#Semi-formal
+mod:Semi-formal rdf:type owl:NamedIndividual ,
+                         omv:FormalityLevel .
+
+
+###  http://www.isibang.ac.in/ns/mod#Semi-informal
+mod:Semi-informal rdf:type owl:NamedIndividual ,
+                           omv:FormalityLevel .
+
+
+###  http://www.isibang.ac.in/ns/mod#ServiceOntology
+mod:ServiceOntology rdf:type owl:NamedIndividual ,
+                             omv:OntologyType .
+
+
+###  http://www.isibang.ac.in/ns/mod#TaskOntology
+mod:TaskOntology rdf:type owl:NamedIndividual ,
+                          omv:OntologyType .
+
+
+###  http://www.isibang.ac.in/ns/mod#Transforming
+mod:Transforming rdf:type owl:NamedIndividual ,
+                          prov:Activity .
+
+
+###  http://www.isibang.ac.in/ns/mod#Turtle
+mod:Turtle rdf:type owl:NamedIndividual ,
+                    omv:OntologySyntax .
+
+
+###  http://www.isibang.ac.in/ns/mod#UniversityOfMontpellier
+mod:UniversityOfMontpellier rdf:type owl:NamedIndividual ,
+                                     foaf:Organization .
+
+
+###  http://www.isibang.ac.in/ns/mod#XML
+mod:XML rdf:type owl:NamedIndividual ,
+                 dcterms:FileFormat .
+
+
+###  http://www.isibang.ac.in/ns/mod#YAMO
+mod:YAMO rdf:type owl:NamedIndividual ,
+                  omv:OntologyEngineeringMethodology .
+
+
+###  http://www.isibang.ac.in/ns/mod#OWL/XML
+<http://www.isibang.ac.in/ns/mod#OWL/XML> rdf:type owl:NamedIndividual ,
+                                                   omv:OntologySyntax .
+
+
+###  http://www.isibang.ac.in/ns/mod#RDF/XML
+<http://www.isibang.ac.in/ns/mod#RDF/XML> rdf:type owl:NamedIndividual ,
+                                                   omv:OntologySyntax .
+
+
+[ rdf:type foaf:Agent ;
+  foaf:homepage <http://people.csiro.au/Nicholas-Car> ;
+  foaf:mbox <mailto:nicholas.car@csiro.au> ;
+  foaf:name "Nicholas Car"
+] .
+
+[ rdf:type foaf:Agent ;
+   foaf:mbox <mailto:bisu@drtc.isibang.ac.in> ;
+   foaf:name "Biswanth Dutta"
+ ] .
+
+[ rdf:type foaf:Agent ;
+   foaf:homepage <http://www.lirmm.fr/~jonquet/> ;
+   foaf:mbox <mailto:jonquet@lirmm.fr> ;
+   foaf:name "Clement Jonquet"
+ ] .
+
+#################################################################
+#    Annotations
+#################################################################
+
+owl:priorVersion rdfs:comment "This identifies the specified ontology as a prior version of the containing ontology."@en .
+
+
+owl:versionInfo rdfs:comment "The version information of the ontology."@en .
+
+
+foaf:homepage rdfs:comment "A homepage for some thing."@en .
+
+
+foaf:mbox rdfs:comment "personal mailbox - A personal mailbox, ie. an Internet mailbox associated with exactly one owner, the first owner of this mailbox."@en .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
