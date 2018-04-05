@@ -15,3 +15,5 @@ Contacts:
 Biswanath Dutta <bisu@drtc.isibang.ac.in> (@biswanathdutta)
 Clement Jonquet <jonquet@lirmm.fr> (@jonquet)
 
+MOD will be discussed now within the VSSIG #TG-ontology-metadata:
+https://vocabulary-services.slack.com/messages/C7GJM7U57/
