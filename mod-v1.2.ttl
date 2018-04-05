@@ -1,0 +1,3132 @@
+@prefix : <http://www.isibang.ac.in/ns/mod#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mod: <http://www.isibang.ac.in/ns/mod#> .
+@prefix omv: <http://omv.ontoware.org/2005/05/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix doap: <http://usefulinc.com/ns/doap/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@base <http://www.isibang.ac.in/ns/mod> .
+
+<http://www.isibang.ac.in/ns/mod> rdf:type owl:Ontology ;
+                                   owl:versionIRI <http://www.isibang.ac.in/ns/mod/1.2> ;
+                                   dct:contributor "Anne Toulet"@en ;
+                                   rdfs:label "MOD: Métadonnées pour l'ontologie Description et publication"@fr ;
+                                   owl:versionInfo "Version 1.2"@en ;
+                                   dct:title "MOD: Metadata for Ontology Description and publication"@en ;
+                                   dct:creator "Clement Jonquet"@en ;
+                                   rdfs:comment """MOD is a proposition of a new Metadata vocabulary for Ontology Description. It currently offers 88 properties to serve both as (i) an application profile to be used by ontology developers to describe their ontologies, or (ii) an explicit OWL vocabulary to be used by ontology repository to offer semantic descriptions of ontologies as linked data. 
+We present our results of using MOD with 8 agricultural ontologies from AgroPortal project and illustrate new supported use cases when ontology metadata is properly formalized. MOD is still in early stage, hence we pitch for a collaborative design & adoption of future versions."""@en ;
+                                   rdfs:label "MOD: Metadata for Ontology Description and publication"@en ;
+                                   dct:creator "Biswanath Dutta"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+dct:contributor rdf:type owl:AnnotationProperty ;
+                rdfs:range foaf:Agent .
+
+
+###  http://purl.org/dc/terms/creator
+dct:creator rdf:type owl:AnnotationProperty ;
+            rdfs:range foaf:Agent .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty ;
+          rdfs:range xsd:string ;
+          rdfs:domain mod:Ontology ,
+                      owl:Thing .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://omv.ontoware.org/2005/05/ontology#conformsToKnowledgeRepresentationParadigm
+omv:conformsToKnowledgeRepresentationParadigm rdf:type owl:ObjectProperty ;
+                                              rdfs:domain mod:Ontology ;
+                                              rdfs:range omv:KnowledgeRepresentationParadigm ;
+                                              rdfs:comment "A representation formalism that is followed to describe knowledge in an ontology. Example includes description logics, first order logic, etc. dct: An established standard to which the described resource conforms."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#endorsedBy
+omv:endorsedBy rdf:type owl:ObjectProperty ;
+               rdfs:domain mod:Ontology ;
+               rdfs:range foaf:Agent ;
+               rdfs:comment "An ontology endorsed by an agent."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#hasFormalityLevel
+omv:hasFormalityLevel rdf:type owl:ObjectProperty ;
+                      rdfs:domain mod:Ontology ;
+                      rdfs:range omv:FormalityLevel ;
+                      rdfs:comment "The level of formality of an ontology."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#hasOntologyLanguage
+omv:hasOntologyLanguage rdf:type owl:ObjectProperty ;
+                        rdfs:domain mod:Ontology ;
+                        rdfs:range omv:OntologyLanguage ;
+                        rdfs:comment "A language that is used to create an ontology."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#hasOntologySyntax
+omv:hasOntologySyntax rdf:type owl:ObjectProperty ;
+                      rdfs:domain mod:Ontology ;
+                      rdfs:range omv:OntologySyntax ;
+                      rdfs:comment "The syntax followed in the creation of an ontology."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#isOfType
+omv:isOfType rdf:type owl:ObjectProperty ;
+             rdfs:domain mod:Ontology ;
+             rdfs:range omv:OntologyType ;
+             rdfs:comment "The nature of the content of the ontology."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#usedOntologyEngineeringMethodology
+omv:usedOntologyEngineeringMethodology rdf:type owl:ObjectProperty ;
+                                       rdfs:domain mod:Ontology ;
+                                       rdfs:range omv:OntologyEngineeringMethodology ;
+                                       rdfs:comment "A methodolgy follwoing which an ontology is created."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#usedOntologyEngineeringTool
+omv:usedOntologyEngineeringTool rdf:type owl:ObjectProperty ;
+                                rdfs:domain mod:Ontology ;
+                                rdfs:range omv:OntologyEngineeringTool ;
+                                rdfs:comment "The tool used for the creation of an ontology."@en .
+
+
+###  http://purl.org/dc/terms/accessRights
+dct:accessRights rdf:type owl:ObjectProperty ;
+                 rdfs:domain mod:Ontology ;
+                 rdfs:range dct:RightsStatement ;
+                 rdfs:comment "Information on access (i.e., read, download) to an ontology."@en .
+
+
+###  http://purl.org/dc/terms/accrualMethod
+dct:accrualMethod rdf:type owl:ObjectProperty ;
+                  rdfs:domain mod:Ontology ;
+                  rdfs:range dct:MethodOfAccrual ;
+                  rdfs:comment "The method by which items are added to a collection."@en .
+
+
+###  http://purl.org/dc/terms/accrualPeriodicity
+dct:accrualPeriodicity rdf:type owl:ObjectProperty ;
+                       rdfs:domain mod:Ontology ;
+                       rdfs:range dct:Frequency ;
+                       rdfs:comment "The frequency with which items are added to a collection."@en .
+
+
+###  http://purl.org/dc/terms/accrualPolicy
+dct:accrualPolicy rdf:type owl:ObjectProperty ;
+                  rdfs:domain mod:Ontology ;
+                  rdfs:range dct:Policy ;
+                  rdfs:comment "The policy governing the addition of items to a collection."@en .
+
+
+###  http://purl.org/dc/terms/audience
+dct:audience rdf:type owl:ObjectProperty ;
+             rdfs:domain mod:Ontology ;
+             rdfs:range foaf:Agent ;
+             rdfs:comment "A class of entity for whom the resource is intended or useful."@en .
+
+
+###  http://purl.org/dc/terms/contributor
+dct:contributor rdf:type owl:ObjectProperty ;
+                rdfs:domain mod:Ontology .
+
+
+###  http://purl.org/dc/terms/creator
+dct:creator rdf:type owl:ObjectProperty ;
+            rdfs:domain mod:Ontology .
+
+
+###  http://purl.org/dc/terms/hasPart
+dct:hasPart rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf dct:relation ;
+            owl:inverseOf dct:isPartOf ;
+            rdfs:comment "A related resource that is included either physically or logically in the described resource."@en .
+
+
+###  http://purl.org/dc/terms/isPartOf
+dct:isPartOf rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf dct:relation ;
+             rdfs:domain mod:Ontology ;
+             rdfs:range mod:Ontology ;
+             rdfs:comment "A related resource in which the described resource is physically or logically included."@en .
+
+
+###  http://purl.org/dc/terms/license
+dct:license rdf:type owl:ObjectProperty ;
+            rdfs:domain mod:Ontology ;
+            rdfs:range dct:LicenseDocument ;
+            rdfs:comment "Information about rights held in and over the resource."@en .
+
+
+###  http://purl.org/dc/terms/publisher
+dct:publisher rdf:type owl:ObjectProperty ;
+              rdfs:domain mod:Ontology ;
+              rdfs:range foaf:Agent ;
+              rdfs:comment "An entity responsible for making the resource available."@en .
+
+
+###  http://purl.org/dc/terms/relation
+dct:relation rdf:type owl:ObjectProperty ;
+             rdfs:domain mod:Ontology ;
+             rdfs:range mod:Ontology ;
+             rdfs:comment "A related resource."@en .
+
+
+###  http://purl.org/dc/terms/rightsHolder
+dct:rightsHolder rdf:type owl:ObjectProperty ;
+                 rdfs:domain owl:Thing ;
+                 rdfs:range foaf:Agent ;
+                 rdfs:comment "The person who can be contacted to enquire about an ontology."@en .
+
+
+###  http://purl.org/pav/curatedBy
+pav:curatedBy rdf:type owl:ObjectProperty ;
+              rdfs:domain mod:Ontology ;
+              rdfs:range foaf:Agent ;
+              rdfs:comment "A curator who restructure the previously authored content and shape it to be appropriate for the intended representation (e.g. by normalizing the fields for being represented in a spreadsheet)."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#evaluatedBy
+mod:evaluatedBy rdf:type owl:ObjectProperty ;
+                rdfs:domain mod:Ontology ;
+                rdfs:range foaf:Agent ;
+                rdfs:comment "An ontology that has been evaluated by an agent."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#group
+mod:group rdf:type owl:ObjectProperty ;
+          rdfs:domain mod:Ontology ;
+          rdfs:range mod:Group ;
+          rdfs:comment "A group of ontologies that the ontology is usually considered into."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#ontologyInUse
+mod:ontologyInUse rdf:type owl:ObjectProperty ;
+                  rdfs:domain mod:Ontology ;
+                  rdfs:range foaf:Project ;
+                  rdfs:comment "An ontology that is used in a project."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#ontologyRelatedTo
+mod:ontologyRelatedTo rdf:type owl:ObjectProperty ;
+                      rdfs:domain mod:Ontology ;
+                      rdfs:range mod:Ontology .
+
+
+###  http://www.w3.org/2002/07/owl#backwardCompatibleWith
+owl:backwardCompatibleWith rdf:type owl:ObjectProperty ;
+                           rdfs:domain mod:Ontology ;
+                           rdfs:range mod:Ontology ;
+                           rdfs:comment "This identifies the specified ontology as a prior version of the containing ontology, and further indicates that it is backward compatible with it."@en .
+
+
+###  http://www.w3.org/2002/07/owl#incompatibleWith
+owl:incompatibleWith rdf:type owl:ObjectProperty ;
+                     rdfs:domain mod:Ontology ;
+                     rdfs:range mod:Ontology ;
+                     rdfs:comment "This indicates that the containing ontology is a later version of the referenced ontology, but is not backward compatible with it."@en .
+
+
+###  http://www.w3.org/ns/prov#generalizationOf
+prov:generalizationOf rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf mod:ontologyRelatedTo ;
+                      owl:inverseOf prov:specializationOf .
+
+
+###  http://www.w3.org/ns/prov#specializationOf
+prov:specializationOf rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf mod:ontologyRelatedTo ;
+                      rdfs:comment "An entity that is a specialization of another shares all aspects of the latter, and additionally presents more specific aspects of the same thing as the latter."@en .
+
+
+###  http://www.w3.org/ns/prov#wasGeneratedBy
+prov:wasGeneratedBy rdf:type owl:ObjectProperty ;
+                    rdfs:domain mod:Ontology ;
+                    rdfs:range prov:Activity ;
+                    rdfs:comment "Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation."@en .
+
+
+###  http://www.w3.org/ns/prov#wasinvalidatedBy
+prov:wasinvalidatedBy rdf:type owl:ObjectProperty ;
+                      rdfs:domain mod:Ontology ;
+                      rdfs:range prov:Activity ;
+                      rdfs:comment "Invalidation is the start of the destruction, cessation, or expiry of an existing entity by an activity. The entity is no longer available for use (or further invalidation) after invalidation. Any generation or usage of an entity precedes its invalidation."@en .
+
+
+###  http://xmlns.com/foaf/0.1/fundedBy
+foaf:fundedBy rdf:type owl:ObjectProperty ;
+              rdfs:domain mod:Ontology ;
+              rdfs:range foaf:Agent ;
+              rdfs:comment "An ontology that is sponsored by and developed under a project."@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://omv.ontoware.org/2005/05/ontology#URI
+omv:URI rdf:type owl:DatatypeProperty ;
+        rdfs:domain mod:Ontology ;
+        rdfs:range xsd:anyURI ;
+        rdfs:comment "The URI of the ontology which is described by this metadata."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#acronym
+omv:acronym rdf:type owl:DatatypeProperty ;
+            rdfs:domain owl:Thing ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Often used as an identifier within some ontology platforms such as BioPortal or OBO Foundry."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#designedForOntologyTask
+omv:designedForOntologyTask rdf:type owl:DatatypeProperty ;
+                            rdfs:domain mod:Ontology ;
+                            rdfs:range xsd:string ;
+                            rdfs:comment "The purpose for which the ontology was originally designed."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#hasDomain
+omv:hasDomain rdf:type owl:DatatypeProperty ;
+              rdfs:domain mod:Ontology ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Typically, the domain can refer to established topic hierarchies such as the general purpose topic hierarchy DMOZ or the domain specific topic hierarchy ACM for the computer science domain."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#keyClasses
+omv:keyClasses rdf:type owl:DatatypeProperty ;
+               rdfs:domain mod:Ontology ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Representative classes in the ontology."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#keywords
+omv:keywords rdf:type owl:DatatypeProperty ;
+             rdfs:domain mod:Ontology ;
+             rdfs:range xsd:string ;
+             rdfs:comment "A keyword(s) is used to describe the content of an ontology."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#knownUsage
+omv:knownUsage rdf:type owl:DatatypeProperty ;
+               rdfs:domain mod:Ontology ;
+               rdfs:range xsd:string ;
+               rdfs:comment "The applications where the ontology is being used."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#notes
+omv:notes rdf:type owl:DatatypeProperty ;
+          rdfs:domain owl:Thing ;
+          rdfs:range xsd:string ;
+          rdfs:comment """Additional information about the ontology that is not included somewhere else (e.g. information that you do not want to include in the documentation). 
+
+RDFS:comment: used to provide a human-readable description of a resource."""@en ;
+          rdfs:label "rdfs:comment"@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#numberOfAxioms
+omv:numberOfAxioms rdf:type owl:DatatypeProperty ;
+                   rdfs:domain mod:Ontology ;
+                   rdfs:range xsd:nonNegativeInteger ;
+                   rdfs:comment "The total number of axioms in an ontology."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#numberOfClasses
+omv:numberOfClasses rdf:type owl:DatatypeProperty ;
+                    rdfs:domain mod:Ontology ;
+                    rdfs:range xsd:nonNegativeInteger ;
+                    rdfs:comment "The total number of classes in an ontology."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#numberOfIndividuals
+omv:numberOfIndividuals rdf:type owl:DatatypeProperty ;
+                        rdfs:domain mod:Ontology ;
+                        rdfs:range xsd:nonNegativeInteger ;
+                        rdfs:comment "The total number of individuals in an ontology."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#numberOfProperties
+omv:numberOfProperties rdf:type owl:DatatypeProperty ;
+                       rdfs:domain mod:Ontology ;
+                       rdfs:range xsd:nonNegativeInteger ;
+                       rdfs:comment "The total number of properties in an ontology."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#resourceLocator
+omv:resourceLocator rdf:type owl:DatatypeProperty ;
+                    rdfs:domain mod:Ontology ;
+                    rdfs:range xsd:anyURI ;
+                    rdfs:comment "The location where the ontology can be found. It should be accessible via a URL. It can be the same as the value for URI property."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#status
+omv:status rdf:type owl:DatatypeProperty ;
+           rdfs:domain mod:Ontology ;
+           rdfs:range xsd:string ;
+           rdfs:comment "The tracking information for the contents of the ontology."@en .
+
+
+###  http://purl.org/dc/terms/abstract
+dct:abstract rdf:type owl:DatatypeProperty ;
+             rdfs:domain mod:Ontology ;
+             rdfs:range xsd:string ;
+             rdfs:comment "A summary of the resource."@en .
+
+
+###  http://purl.org/dc/terms/alternative
+dct:alternative rdf:type owl:DatatypeProperty ;
+                rdfs:domain mod:Ontology ;
+                rdfs:range xsd:string ;
+                rdfs:comment "An alternative name for the resource."@en .
+
+
+###  http://purl.org/dc/terms/bibliographicCitation
+dct:bibliographicCitation rdf:type owl:DatatypeProperty ;
+                          rdfs:domain mod:Ontology ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "A bibliographic reference for the resource."@en .
+
+
+###  http://purl.org/dc/terms/coverage
+dct:coverage rdf:type owl:DatatypeProperty ;
+             rdfs:domain mod:Ontology ;
+             rdfs:range xsd:string ;
+             rdfs:comment "The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant."@en .
+
+
+###  http://purl.org/dc/terms/created
+dct:created rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf dct:date ;
+            rdfs:domain mod:Ontology ;
+            rdfs:range xsd:dateTime ;
+            rdfs:comment "Date of creation of the resource."@en .
+
+
+###  http://purl.org/dc/terms/date
+dct:date rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/terms/dateSubmitted
+dct:dateSubmitted rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf dct:date ;
+                  rdfs:domain mod:Ontology ;
+                  rdfs:range xsd:dateTime ;
+                  rdfs:comment "Date of submission of the resource."@en .
+
+
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:DatatypeProperty ;
+                rdfs:domain owl:Thing ;
+                rdfs:range xsd:string ;
+                rdfs:comment "An account of the resource."@en .
+
+
+###  http://purl.org/dc/terms/hasFormat
+dct:hasFormat rdf:type owl:DatatypeProperty ;
+              rdfs:domain mod:Ontology ;
+              rdfs:range xsd:anyURI ;
+              rdfs:comment "A related resource that is substantially the same as the pre-existing described resource, but in another format."@en .
+
+
+###  http://purl.org/dc/terms/hasVersion
+dct:hasVersion rdf:type owl:DatatypeProperty ;
+               rdfs:domain mod:Ontology ;
+               rdfs:range xsd:anyURI ;
+               rdfs:comment "A related ontology that is a version, edition, or adtapation of the described ontology."@en .
+
+
+###  http://purl.org/dc/terms/identifier
+dct:identifier rdf:type owl:DatatypeProperty ;
+               rdfs:domain mod:Ontology ;
+               rdfs:range xsd:anyURI ;
+               rdfs:comment "An unambiguous reference to the resource within a given context."@en .
+
+
+###  http://purl.org/dc/terms/isFormatOf
+dct:isFormatOf rdf:type owl:DatatypeProperty ;
+               rdfs:domain mod:Ontology ;
+               rdfs:range xsd:anyURI ;
+               rdfs:comment "A related resource that is substantially the same as the described resource, but in another format."@en .
+
+
+###  http://purl.org/dc/terms/language
+dct:language rdf:type owl:DatatypeProperty ;
+             rdfs:domain mod:Ontology ;
+             rdfs:range xsd:anyURI ;
+             rdfs:comment "A language of the resource."@en .
+
+
+###  http://purl.org/dc/terms/modified
+dct:modified rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf dct:date ;
+             rdfs:domain mod:Ontology ;
+             rdfs:range xsd:dateTime ;
+             rdfs:comment "Date on which the resource was changed."@en .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:DatatypeProperty ;
+           rdfs:domain mod:Ontology ;
+           rdfs:range xsd:string ;
+           rdfs:comment "A related resource from which the described resource is derived."@en .
+
+
+###  http://purl.org/dc/terms/subject
+dct:subject rdf:type owl:DatatypeProperty ;
+            rdfs:domain mod:Ontology ;
+            rdfs:range xsd:string ;
+            rdfs:comment "The topic of the resource."@en .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/terms/valid
+dct:valid rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf dct:date ;
+          rdfs:domain mod:Ontology ;
+          rdfs:range xsd:dateTime ;
+          rdfs:comment "Date (often a range) of validity of a resource."@en .
+
+
+###  http://purl.org/pav/curatedOn
+pav:curatedOn rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf dct:date ;
+              rdfs:domain mod:Ontology ;
+              rdfs:range xsd:dateTime ;
+              rdfs:comment "Specifies the date this resource was curated. pav:curatedBy gives the agents that performed the curation."@en .
+
+
+###  http://purl.org/vocab/vann/changes
+vann:changes rdf:type owl:DatatypeProperty ;
+             rdfs:domain mod:Ontology ;
+             rdfs:range xsd:anyURI ;
+             rdfs:comment "A reference to a resource that describes changes between this version of a vocabulary and the previous."@en .
+
+
+###  http://purl.org/vocab/vann/example
+vann:example rdf:type owl:DatatypeProperty ;
+             rdfs:domain mod:Ontology ;
+             rdfs:range xsd:anyURI ;
+             rdfs:comment "A reference to a resource that provides an example of how this resource can be used."@en .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:DatatypeProperty ;
+                              rdfs:domain mod:Ontology ;
+                              rdfs:range xsd:string ;
+                              rdfs:comment "The preferred namespace prefix to use when using terms from this vocabulary in an XML document."@en .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:DatatypeProperty ;
+                           rdfs:domain mod:Ontology ;
+                           rdfs:range xsd:anyURI ;
+                           rdfs:comment "The preferred namespace URI to use when using terms from this vocabulary in an XML document."@en .
+
+
+###  http://usefulinc.com/ns/doap/bugDatabase
+doap:bugDatabase rdf:type owl:DatatypeProperty ;
+                 rdfs:domain mod:Ontology ;
+                 rdfs:range xsd:anyURI ;
+                 rdfs:comment "Bug tracker for a project."@en .
+
+
+###  http://usefulinc.com/ns/doap/mailing-list
+doap:mailing-list rdf:type owl:DatatypeProperty ;
+                  rdfs:domain owl:Thing ;
+                  rdfs:range xsd:anyURI ;
+                  rdfs:comment "Mailing list home page or email address."@en .
+
+
+###  http://usefulinc.com/ns/doap/repository
+doap:repository rdf:type owl:DatatypeProperty ;
+                rdfs:domain mod:Ontology ;
+                rdfs:range xsd:anyURI ;
+                rdfs:comment "Source code repository."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#address
+mod:address rdf:type owl:DatatypeProperty ;
+            rdfs:domain foaf:Agent ;
+            rdfs:range xsd:string .
+
+
+###  http://www.isibang.ac.in/ns/mod#browsingUI
+mod:browsingUI rdf:type owl:DatatypeProperty ;
+               rdfs:domain mod:Ontology ;
+               rdfs:range xsd:anyURI ;
+               rdfs:comment "The user interface (URL) where the ontology may be browsed or searched."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#byteSize
+mod:byteSize rdf:type owl:DatatypeProperty ;
+             rdfs:domain mod:Ontology ;
+             rdfs:range xsd:nonNegativeInteger ;
+             rdfs:comment "The byte size of an ontology."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#city
+mod:city rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf mod:address .
+
+
+###  http://www.isibang.ac.in/ns/mod#competencyQuestion
+mod:competencyQuestion rdf:type owl:DatatypeProperty ;
+                       rdfs:domain mod:Ontology ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "A set of questions made to build an ontology at the design time."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#numberOfDataProperties
+mod:numberOfDataProperties rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf omv:numberOfProperties ;
+                           rdfs:domain mod:Ontology ;
+                           rdfs:range xsd:nonNegativeInteger ;
+                           rdfs:comment "The total number of data properties in an ontology."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#numberOfLabels
+mod:numberOfLabels rdf:type owl:DatatypeProperty ;
+                   rdfs:domain mod:Ontology ;
+                   rdfs:range xsd:nonNegativeInteger ;
+                   rdfs:comment "Number of defined labels for any resources in an ontology (classes, properties, etc)."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#numberOfObjectProperties
+mod:numberOfObjectProperties rdf:type owl:DatatypeProperty ;
+                             rdfs:subPropertyOf omv:numberOfProperties ;
+                             rdfs:domain mod:Ontology ;
+                             rdfs:range xsd:nonNegativeInteger ;
+                             rdfs:comment "The total number of object properties in an ontology."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#postalCode
+mod:postalCode rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf mod:address .
+
+
+###  http://www.isibang.ac.in/ns/mod#rootClasses
+mod:rootClasses rdf:type owl:DatatypeProperty ;
+                rdfs:domain mod:Ontology ;
+                rdfs:range xsd:anyURI ;
+                rdfs:comment """This property is to provide the root class(es) of an ontology. This is automatically populated by taking the direct subclasses of owl:Thing 
+If the ontology is also defined as a unique skos:ConceptScheme, then this property should become equivalent of skos:hasTopConcept."""@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#sampleQueries
+mod:sampleQueries rdf:type owl:DatatypeProperty ;
+                  rdfs:domain mod:Ontology ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "A set of queries (may be SPARQL, DL Queries) that are provided along with an ontology."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#state
+mod:state rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf mod:address .
+
+
+###  http://www.isibang.ac.in/ns/mod#streetAddress
+mod:streetAddress rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf mod:address .
+
+
+###  http://www.isibang.ac.in/ns/mod#translation
+mod:translation rdf:type owl:DatatypeProperty ;
+                rdfs:domain mod:Ontology ;
+                rdfs:range xsd:anyURI ;
+                rdfs:comment "A pointer to the translated ontology(ies) for an existing ontology."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#vocabularyUsed
+mod:vocabularyUsed rdf:type owl:DatatypeProperty ;
+                   rdfs:domain mod:Ontology ;
+                   rdfs:range xsd:anyURI ;
+                   rdfs:comment "A vocabulary(ies) that is used and/or referred to create the current ontology."@en .
+
+
+###  http://www.w3.org/2002/07/owl#deprecated
+owl:deprecated rdf:type owl:DatatypeProperty ;
+               rdfs:domain mod:Ontology ;
+               rdfs:range xsd:boolean ;
+               rdfs:comment """An annotation with the owl:deprecated annotation property and the value equal to \"true\"^^xsd:boolean can be used to specify that an IRI is deprecated.
+IDOT: Indicates if the current dataset is obsolete (not provided any more to the public community). Value can either be 'true' or 'false' (xsd:boolean). The statement is usually omitted if 'false'."""@en .
+
+
+###  http://www.w3.org/2002/07/owl#imports
+owl:imports rdf:type owl:DatatypeProperty ;
+            rdfs:domain mod:Ontology ;
+            rdfs:range xsd:anyURI ;
+            rdfs:comment "References another OWL ontology containing definitions, whose meaning is considered to be part of the meaning of the importing ontology."@en .
+
+
+###  http://www.w3.org/2002/07/owl#priorVersion
+owl:priorVersion rdf:type owl:DatatypeProperty ;
+                 rdfs:domain mod:Ontology ;
+                 rdfs:range xsd:anyURI ;
+                 rdfs:comment "This identifies the specified ontology as a prior version of the containing ontology."@en .
+
+
+###  http://www.w3.org/2002/07/owl#versionIRI
+owl:versionIRI rdf:type owl:DatatypeProperty ;
+               rdfs:domain mod:Ontology ;
+               rdfs:range xsd:anyURI ;
+               rdfs:comment "The property that identifies the version IRI of an ontology."@en .
+
+
+###  http://www.w3.org/2002/07/owl#versionInfo
+owl:versionInfo rdf:type owl:DatatypeProperty ;
+                rdfs:domain mod:Ontology ;
+                rdfs:range xsd:string .
+
+
+###  http://www.w3.org/ns/sparql-service-description#endpoint
+sd:endpoint rdf:type owl:DatatypeProperty ;
+            rdfs:domain mod:Ontology ;
+            rdfs:range xsd:anyURI ;
+            rdfs:comment "Relates an instance of sd:Service to a SPARQL endpoint that implements the SPARQL Protocol service for the service. The object of the sd:endpoint property is an IRI."@en .
+
+
+###  http://xmlns.com/foaf/0.1/depiction
+foaf:depiction rdf:type owl:DatatypeProperty ;
+               rdfs:domain mod:Ontology ;
+               rdfs:range xsd:anyURI ;
+               rdfs:comment "A depiction of some thing."@en .
+
+
+###  http://xmlns.com/foaf/0.1/firstName
+foaf:firstName rdf:type owl:DatatypeProperty ;
+               rdfs:domain foaf:Person ;
+               rdfs:range xsd:string .
+
+
+###  http://xmlns.com/foaf/0.1/homepage
+foaf:homepage rdf:type owl:DatatypeProperty ;
+              rdfs:domain owl:Thing ;
+              rdfs:range xsd:anyURI ;
+              rdfs:comment "An unambiguous reference to the resource within a given context."@en .
+
+
+###  http://xmlns.com/foaf/0.1/lastName
+foaf:lastName rdf:type owl:DatatypeProperty ;
+              rdfs:domain foaf:Agent ;
+              rdfs:range xsd:string .
+
+
+###  http://xmlns.com/foaf/0.1/logo
+foaf:logo rdf:type owl:DatatypeProperty ;
+          rdfs:domain mod:Ontology ;
+          rdfs:range xsd:anyURI ;
+          rdfs:comment "A logo representing some thing."@en .
+
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:DatatypeProperty ;
+          rdfs:domain owl:Thing ;
+          rdfs:range xsd:string .
+
+
+###  http://xmlns.com/foaf/0.1/page
+foaf:page rdf:type owl:DatatypeProperty ;
+          rdfs:domain owl:Thing ;
+          rdfs:range xsd:anyURI ;
+          rdfs:comment "A link to the documentation page on a thing."@en .
+
+
+###  http://xmlns.com/foaf/0.1/phone
+foaf:phone rdf:type owl:DatatypeProperty ;
+           rdfs:domain foaf:Agent ;
+           rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://omv.ontoware.org/2005/05/ontology#FormalityLevel
+omv:FormalityLevel rdf:type owl:Class ;
+                   rdfs:comment "The level of formality of an ontology."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#KnowledgeRepresentationParadigm
+omv:KnowledgeRepresentationParadigm rdf:type owl:Class ;
+                                    rdfs:comment "Information about a knowledge representation paradigm a particular language adheres to."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology
+omv:OntologyEngineeringMethodology rdf:type owl:Class ;
+                                   rdfs:comment "Information about the ontology engineering methodology."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringTool
+omv:OntologyEngineeringTool rdf:type owl:Class ;
+                            rdfs:comment "A tool used to create the ontology."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#OntologyLanguage
+omv:OntologyLanguage rdf:type owl:Class ;
+                     rdfs:comment "Information about the language in which the ontology is implemented."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#OntologySyntax
+omv:OntologySyntax rdf:type owl:Class ;
+                   rdfs:comment "Information about the syntax used in an Ontology."@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#OntologyType
+omv:OntologyType rdf:type owl:Class ;
+                 rdfs:comment "This class subsumes types of ontologies according to well-known classifications in the Ontology Engineering literature."@en .
+
+
+###  http://purl.org/dc/terms/Frequency
+dct:Frequency rdf:type owl:Class ;
+              rdfs:comment "A rate at which something recurs."@en .
+
+
+###  http://purl.org/dc/terms/LicenseDocument
+dct:LicenseDocument rdf:type owl:Class ;
+                    rdfs:subClassOf dct:RightsStatement ;
+                    rdfs:comment "A legal document giving official permission to do something with a Resource."@en .
+
+
+###  http://purl.org/dc/terms/MethodOfAccrual
+dct:MethodOfAccrual rdf:type owl:Class ;
+                    rdfs:comment "A method by which resources are added to a collection."@en .
+
+
+###  http://purl.org/dc/terms/Policy
+dct:Policy rdf:type owl:Class ;
+           rdfs:comment "A plan or course of action by an authority, intended to influence and determine decisions, actions, and other matters."@en .
+
+
+###  http://purl.org/dc/terms/RightsStatement
+dct:RightsStatement rdf:type owl:Class ;
+                    rdfs:comment "A statement about the intellectual property rights (IPR) held in or over a Resource, a legal document giving official permission to do something with a resource, or a statement about access rights."@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#Group
+mod:Group rdf:type owl:Class .
+
+
+###  http://www.isibang.ac.in/ns/mod#Ontology
+mod:Ontology rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:conformsToKnowledgeRepresentationParadigm ;
+                               owl:allValuesFrom omv:KnowledgeRepresentationParadigm
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:hasFormalityLevel ;
+                               owl:allValuesFrom omv:FormalityLevel
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:hasOntologyLanguage ;
+                               owl:allValuesFrom omv:OntologyLanguage
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:hasOntologySyntax ;
+                               owl:allValuesFrom omv:OntologySyntax
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:usedOntologyEngineeringMethodology ;
+                               owl:allValuesFrom omv:OntologyEngineeringMethodology
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:usedOntologyEngineeringTool ;
+                               owl:allValuesFrom omv:OntologyEngineeringTool
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dct:creator ;
+                               owl:allValuesFrom foaf:Agent
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dct:creator ;
+                               owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass foaf:Agent
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:hasFormalityLevel ;
+                               owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:hasOntologySyntax ;
+                               owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:URI ;
+                               owl:allValuesFrom xsd:anyURI
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:designedForOntologyTask ;
+                               owl:allValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:keyClasses ;
+                               owl:allValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:keywords ;
+                               owl:allValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:resourceLocator ;
+                               owl:allValuesFrom xsd:anyURI
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dct:created ;
+                               owl:allValuesFrom xsd:dateTime
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dct:language ;
+                               owl:allValuesFrom xsd:anyURI
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dct:title ;
+                               owl:allValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:designedForOntologyTask ;
+                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:keyClasses ;
+                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:keywords ;
+                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dct:title ;
+                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty dct:created ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty omv:URI ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:anyURI
+                             ] .
+
+
+###  http://www.w3.org/ns/prov#Activity
+prov:Activity rdf:type owl:Class ;
+              rdfs:comment "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities."@en .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+foaf:Agent rdf:type owl:Class ;
+           rdfs:comment "An agent (eg. person, group, software or physical artifact)."@en .
+
+
+###  http://xmlns.com/foaf/0.1/Organization
+foaf:Organization rdf:type owl:Class ;
+                  rdfs:subClassOf foaf:Agent ;
+                  rdfs:comment "An organization."@en .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+foaf:Person rdf:type owl:Class ;
+            rdfs:subClassOf foaf:Agent ;
+            rdfs:comment "A person."@en .
+
+
+###  http://xmlns.com/foaf/0.1/Project
+foaf:Project rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty dct:title ;
+                               owl:allValuesFrom xsd:string
+                             ] ;
+             rdfs:comment "A project (a collective endeavour of some kind)."@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://disease-ontology.org
+<http://disease-ontology.org> rdf:type owl:NamedIndividual ,
+                                       mod:Ontology ;
+                              dct:rightsHolder mod:LynnSchriml ;
+                              omv:resourceLocator "http://purl.obolibrary.org/obo/doid.owl"^^xsd:anyURI ;
+                              doap:mailing-list "lschriml@som.umaryland.edu"^^xsd:anyURI ,
+                                                "lynn.schriml@gmail.com"^^xsd:anyURI ;
+                              foaf:homepage "http://disease-ontology.org"^^xsd:anyURI ;
+                              foaf:page "https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/master/doc"^^xsd:anyURI ;
+                              dct:title "Disease Ontology"^^xsd:string ;
+                              rdfs:label "Disease ontology"@en .
+
+
+###  http://agbiodata.agroportal.lirmm.fr/
+<http://agbiodata.agroportal.lirmm.fr/> rdf:type owl:NamedIndividual ,
+                                                 mod:Group ;
+                                        foaf:name "Consortium of Agricultural Biological Databases"^^xsd:string ;
+                                        rdfs:label "Consortium of Agricultural Biological Databases"@en .
+
+
+###  http://agroportal.lirmm.fr/
+<http://agroportal.lirmm.fr/> rdf:type owl:NamedIndividual ,
+                                       foaf:Project ;
+                              dct:rightsHolder <http://dbpedia.org/resource/University_of_Montpellier> ,
+                                               <http://orcid.org/0000-0002-2404-1582> ;
+                              foaf:homepage "http://agroportal.lirmm.fr/"^^xsd:anyURI ;
+                              rdfs:label "AgroPortal Project"@en .
+
+
+###  http://aims.fao.org/aos/agrovoc
+<http://aims.fao.org/aos/agrovoc> rdf:type owl:NamedIndividual ,
+                                           mod:Ontology ;
+                                  omv:endorsedBy <http://dbpedia.org/resource/Food_&_Agriculture_Organization> ,
+                                                 <https://www.rd-alliance.org/groups/wheat-data-interoperability-wg.html> ;
+                                  omv:hasFormalityLevel <http://w3id.org/nkos/nkostype#thesaurus> ;
+                                  omv:hasOntologyLanguage mod:SKOS ;
+                                  omv:hasOntologySyntax <http://www.w3.org/ns/formats/N3> ;
+                                  omv:isOfType mod:Vocabulary ;
+                                  dct:hasPart <http://voc.landportal.info/landterms> ;
+                                  dct:license <https://creativecommons.org/licenses/by/3.0/> ;
+                                  dct:publisher <http://dbpedia.org/resource/Food_&_Agriculture_Organization> ;
+                                  dct:rightsHolder <http://dbpedia.org/resource/Food_&_Agriculture_Organization> ;
+                                  mod:group <http://agbiodata.agroportal.lirmm.fr/> ,
+                                            <http://wheat.agroportal.lirmm.fr/> ;
+                                  omv:URI "http://aims.fao.org/aos/agrovoc"^^xsd:anyURI ;
+                                  omv:acronym "AGROVOC"^^xsd:string ;
+                                  omv:designedForOntologyTask "Indexing purposes"^^xsd:string ;
+                                  omv:keyClasses "http://aims.fao.org/aos/agrovoc/c_12332"^^xsd:string ,
+                                                 "http://aims.fao.org/aos/agrovoc/c_13551"^^xsd:string ,
+                                                 "http://aims.fao.org/aos/agrovoc/c_203"^^xsd:string ,
+                                                 "http://aims.fao.org/aos/agrovoc/c_3055"^^xsd:string ,
+                                                 "http://aims.fao.org/aos/agrovoc/c_6599"^^xsd:string ;
+                                  omv:notes "This file specifies in RDF Schema format then built-in classes and properties that together form the basis of the RDF/XML syntax of OWL Full, OWL DL and OWL Lite. We do not expect people to import this filen explicitly into their ontology. People that do import this filen should expect their ontology to be an OWL Full ontology."^^xsd:string ;
+                                  omv:numberOfAxioms "6230580"^^xsd:nonNegativeInteger ;
+                                  omv:numberOfClasses "31"^^xsd:nonNegativeInteger ;
+                                  omv:numberOfIndividuals "681570"^^xsd:nonNegativeInteger ;
+                                  omv:numberOfProperties "192"^^xsd:nonNegativeInteger ;
+                                  omv:resourceLocator "http://data.agroportal.lirmm.fr/ontologies/AGROVOC/submissions/1/download?apikey=1de0a270-29c5-4dda-b043-7c3580628cd5"^^xsd:anyURI ,
+                                                      "https://bitbucket.org/aims-fao/agrovoc/downloads/agrovoc_2017-04-03_lod.nq.zip"^^xsd:anyURI ,
+                                                      "https://bitbucket.org/aims-fao/agrovoc/downloads/agrovoc_2017-04-03_lod.nt.zip"^^xsd:anyURI ;
+                                  omv:status "Production"^^xsd:string ;
+                                  dct:alternative "Agrovoc Dataset"^^xsd:string ;
+                                  dct:created "1980-01-01T00:00:00+00:00"^^xsd:dateTime ;
+                                  dct:dateSubmitted "2017-01-04T00:00:00+00:00"^^xsd:dateTime ;
+                                  dct:description "The AGROVOC thesaurus contains more than 32 000 concepts in 23 languages covering topics related to food, nutrition, agriculture, fisheries, forestry, environment and other related domains. Complete metadata description available here: : http://aims.fao.org/aos/agrovoc/void.ttl"^^xsd:string ;
+                                  dct:identifier "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+                                  dct:isFormatOf "http://aims.fao.org/skosmos/agrovoc/en/"^^xsd:anyURI ;
+                                  dct:language "http://lexvo.org/id/iso639-3/ara"^^xsd:anyURI ,
+                                               "http://lexvo.org/id/iso639-3/ces"^^xsd:anyURI ,
+                                               "http://lexvo.org/id/iso639-3/cmn"^^xsd:anyURI ,
+                                               "http://lexvo.org/id/iso639-3/deu"^^xsd:anyURI ,
+                                               "http://lexvo.org/id/iso639-3/eng"^^xsd:anyURI ,
+                                               "http://lexvo.org/id/iso639-3/fas"^^xsd:anyURI ,
+                                               "http://lexvo.org/id/iso639-3/fra"^^xsd:anyURI ,
+                                               "http://lexvo.org/id/iso639-3/hin"^^xsd:anyURI ,
+                                               "http://lexvo.org/id/iso639-3/hun"^^xsd:anyURI ,
+                                               "http://lexvo.org/id/iso639-3/ita"^^xsd:anyURI ,
+                                               "http://lexvo.org/id/iso639-3/jpn"^^xsd:anyURI ,
+                                               "http://lexvo.org/id/iso639-3/kor"^^xsd:anyURI ,
+                                               "http://lexvo.org/id/iso639-3/pol"^^xsd:anyURI ,
+                                               "http://lexvo.org/id/iso639-3/por"^^xsd:anyURI ,
+                                               "http://lexvo.org/id/iso639-3/rus"^^xsd:anyURI ,
+                                               "http://lexvo.org/id/iso639-3/slk"^^xsd:anyURI ,
+                                               "http://lexvo.org/id/iso639-3/spa"^^xsd:anyURI ,
+                                               "http://lexvo.org/id/iso639-3/tha"^^xsd:anyURI ,
+                                               "http://lexvo.org/id/iso639-3/tur"^^xsd:anyURI ;
+                                  dct:modified "2017-05-05T00:00:00+00:00"^^xsd:dateTime ;
+                                  dct:source "http://aims.fao.org/agrovoc"^^xsd:string ;
+                                  dct:subject "Agricultural Research"^^xsd:string ,
+                                              "Earth and Environment"^^xsd:string ,
+                                              "Fisheries and Aquaculture"^^xsd:string ,
+                                              "Food and Human Nutrition"^^xsd:string ,
+                                              "Forest Science and Forest Products"^^xsd:string ,
+                                              "Natural Resources"^^xsd:string ,
+                                              "Technology and Engineering"^^xsd:string ,
+                                              "http://dbpedia.org/resource/Agriculture"^^xsd:string ,
+                                              "http://dbpedia.org/resource/Environment"^^xsd:string ,
+                                              "http://dbpedia.org/resource/Fishery"^^xsd:string ,
+                                              "http://dbpedia.org/resource/Food"^^xsd:string ,
+                                              "http://dbpedia.org/resource/Forestry"^^xsd:string ,
+                                              "http://dbpedia.org/resource/Nutrition"^^xsd:string ;
+                                  vann:example "http://aims.fao.org/aos/agrovoc/c_38445"^^xsd:anyURI ;
+                                  vann:preferredNamespacePrefix "agrovoc"^^xsd:string ;
+                                  vann:preferredNamespaceUri "http://aims.fao.org/aos/agrovoc/"^^xsd:anyURI ;
+                                  doap:mailing-list "AGROVOC@fao.org"^^xsd:anyURI ,
+                                                    "caterina.caracciolo@fao.org"^^xsd:anyURI ;
+                                  doap:repository "https://bitbucket.org/aims-fao/"^^xsd:anyURI ;
+                                  mod:vocabularyUsed "http://purl.org/dc/terms/"^^xsd:anyURI ,
+                                                     "http://rdfs.org/ns/void#"^^xsd:anyURI ,
+                                                     "http://www.w3.org/ns/lemon/lime#"^^xsd:anyURI ,
+                                                     "http://xmlns.com/foaf/0.1/"^^xsd:anyURI ;
+                                  owl:deprecated "false"^^xsd:boolean ;
+                                  owl:versionInfo "10 February 2004"^^xsd:string ;
+                                  sd:endpoint "http://202.45.139.84:10035/catalogs/fao/repositories/agrovoc"^^xsd:anyURI ;
+                                  foaf:homepage "http://aims.fao.org/standards/agrovoc/linked-open-data"^^xsd:anyURI ;
+                                  foaf:page "http://www.w3.org/2000/01/rdf-schema-more"^^xsd:anyURI ,
+                                            "https://doi.org/10.3233/SW-130106"^^xsd:anyURI ;
+                                  dct:contributor mod:AgNIC ;
+                                  dct:creator <http://dbpedia.org/resource/Food_&_Agriculture_Organization> ;
+                                  dct:title "AGROVOC"^^xsd:string ;
+                                  rdfs:label "AGROVOC"@en .
+
+
+###  http://aims.fao.org/vest-registry/vocabularies/national-agricultural-library-thesaurus
+<http://aims.fao.org/vest-registry/vocabularies/national-agricultural-library-thesaurus> rdf:type owl:NamedIndividual ,
+                                                                                                  mod:Ontology ;
+                                                                                         omv:endorsedBy <http://dbpedia.org/resource/Category:United_States_Department_of_Agriculture> ,
+                                                                                                        <http://www.iica.int/> ,
+                                                                                                        mod:AgNIC ,
+                                                                                                        <https://www.rd-alliance.org/groups/wheat-data-interoperability-wg.html> ;
+                                                                                         omv:hasFormalityLevel <http://w3id.org/nkos/nkostype#thesaurus> ;
+                                                                                         omv:hasOntologyLanguage mod:SKOS ;
+                                                                                         omv:hasOntologySyntax <http://www.w3.org/ns/formats/RDF_XML> ;
+                                                                                         omv:isOfType mod:Vocabulary ;
+                                                                                         omv:usedOntologyEngineeringTool mod:nalt2skos ;
+                                                                                         dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                                                                                         dct:publisher <http://dbpedia.org/resource/Category:United_States_Department_of_Agriculture> ;
+                                                                                         dct:rightsHolder <http://dbpedia.org/resource/U.S._Government> ;
+                                                                                         mod:group <http://agbiodata.agroportal.lirmm.fr/> ,
+                                                                                                   <http://wheat.agroportal.lirmm.fr/> ;
+                                                                                         foaf:fundedBy <http://dbpedia.org/resource/Agriculture_Research_Service> ;
+                                                                                         omv:URI "http://lod.nal.usda.gov/nalt/"^^xsd:anyURI ;
+                                                                                         omv:acronym "NALT"^^xsd:string ;
+                                                                                         omv:designedForOntologyTask "http://omv.ontoware.org/2005/05/ontology#IndexingTask"^^xsd:string ;
+                                                                                         omv:keyClasses "Animal health"^^xsd:string ,
+                                                                                                        "Animal manures"^^xsd:string ,
+                                                                                                        "Animals"^^xsd:string ,
+                                                                                                        "Food science"^^xsd:string ,
+                                                                                                        "veterinary medicine"^^xsd:string ;
+                                                                                         omv:knownUsage "The thesaurus is primarily used for indexing and for improving retrieval of agricultural information. Currently, the thesaurus is the indexing vocabulary for the National Agricultural Library's bibliographic database of citations to agricultural resources, AGRICOLA. The Food Safety Research Information Office (FSRIO) and Agricultural Network Information Center (AgNIC) also use the NALT as the indexing vocabulary for their information systems. In addition, the NALT is used as an aid for locating information at the Agricultural Research Service, Economic Research Service and AgNIC web sites and databases."^^xsd:string ;
+                                                                                         omv:notes "The NAL Agricultural Thesaurus (NALT) was originally prepared by staff of the National Agricultural Library to meet the needs of the United States Department of Agriculture (USDA), Agricultural Research Service (ARS). The first edition was published on January 1, 2002, and is only available in digital form. The thesaurus is annually updated."^^xsd:string ;
+                                                                                         omv:numberOfClasses "2"^^xsd:nonNegativeInteger ;
+                                                                                         omv:numberOfIndividuals "67311"^^xsd:nonNegativeInteger ;
+                                                                                         omv:numberOfProperties "0"^^xsd:nonNegativeInteger ;
+                                                                                         omv:resourceLocator "http://data.agroportal.lirmm.fr/ontologies/NALT/download?apikey=1de0a270-29c5-4dda-b043-7c3580628cd5&download_format=rdf"^^xsd:anyURI ,
+                                                                                                             "https://agclass.nal.usda.gov/download.shtml"^^xsd:anyURI ;
+                                                                                         omv:status "Production"^^xsd:string ;
+                                                                                         dct:abstract "The thesaurus is organized into 17 subject categories, indicated by the \"Subject Category\" designation. The subject categories are used to browse the Thesaurus in a specific discipline or subject area. The subject scope of agriculture is broadly defined in the thesaurus, and includes terminology in the supporting biological, physical and social sciences. Biological nomenclature comprises a majority of the terms in the thesaurus and is located in the “Taxonomic Classification of Organisms” Subject Category. Political geography is mainly described at the country level."^^xsd:string ;
+                                                                                         dct:created "2017-01-01T00:00:00+00:00"^^xsd:dateTime ;
+                                                                                         dct:dateSubmitted "2017-04-26T00:00:00+00:00"^^xsd:dateTime ;
+                                                                                         dct:description "As a work of the U.S. Government, the NAL Agricultural Thesaurus and Glossary are in the public domain within the United States. Additionally, the U.S. Government waives copyright and related rights in this work worldwide through the CC0 1.0 Universal Public Domain Dedication."^^xsd:string ,
+                                                                                                         "The Thesaurus is an online vocabulary of agricultural terms in English and Spanish and is cooperatively produced by the National Agricultural Library, USDA and the Inter-American Institute for Cooperation on Agriculture as well as other Latin American agricultural institutions belonging to the Agriculture Information and Documentation Service of the Americas (SIDALC)."^^xsd:string ;
+                                                                                         dct:identifier "http://lod.nal.usda.gov/nalt/"^^xsd:anyURI ;
+                                                                                         dct:language "http://lexvo.org/id/iso639-3/eng"^^xsd:anyURI ,
+                                                                                                      "http://lexvo.org/id/iso639-3/spa"^^xsd:anyURI ;
+                                                                                         dct:subject "http://www.eionet.europa.eu/gemet/concept/232"^^xsd:string ,
+                                                                                                     "http://www.eionet.europa.eu/gemet/concept/2944"^^xsd:string ,
+                                                                                                     "http://www.eionet.europa.eu/gemet/concept/881"^^xsd:string ;
+                                                                                         vann:example "http://lod.nal.usda.gov/nalt/38813"^^xsd:anyURI ;
+                                                                                         vann:preferredNamespacePrefix "nalt"^^xsd:string ;
+                                                                                         vann:preferredNamespaceUri "http://lod.nal.usda.gov/nalt/"^^xsd:anyURI ;
+                                                                                         doap:mailing-list "https://agclass.nal.usda.gov/contact.shtml"^^xsd:anyURI ;
+                                                                                         mod:rootClasses "http://lod.nal.usda.gov/nalt/127293"^^xsd:anyURI ,
+                                                                                                         "http://lod.nal.usda.gov/nalt/127295"^^xsd:anyURI ,
+                                                                                                         "http://lod.nal.usda.gov/nalt/127296"^^xsd:anyURI ,
+                                                                                                         "http://lod.nal.usda.gov/nalt/127297"^^xsd:anyURI ,
+                                                                                                         "http://lod.nal.usda.gov/nalt/127298"^^xsd:anyURI ,
+                                                                                                         "http://lod.nal.usda.gov/nalt/127299"^^xsd:anyURI ,
+                                                                                                         "http://lod.nal.usda.gov/nalt/127300"^^xsd:anyURI ,
+                                                                                                         "http://lod.nal.usda.gov/nalt/127301"^^xsd:anyURI ,
+                                                                                                         "http://lod.nal.usda.gov/nalt/127302"^^xsd:anyURI ,
+                                                                                                         "http://lod.nal.usda.gov/nalt/127303"^^xsd:anyURI ,
+                                                                                                         "http://lod.nal.usda.gov/nalt/127304"^^xsd:anyURI ,
+                                                                                                         "http://lod.nal.usda.gov/nalt/127305"^^xsd:anyURI ,
+                                                                                                         "http://lod.nal.usda.gov/nalt/127306"^^xsd:anyURI ,
+                                                                                                         "http://lod.nal.usda.gov/nalt/127307"^^xsd:anyURI ,
+                                                                                                         "http://lod.nal.usda.gov/nalt/127308"^^xsd:anyURI ,
+                                                                                                         "http://lod.nal.usda.gov/nalt/127309"^^xsd:anyURI ,
+                                                                                                         "http://lod.nal.usda.gov/nalt/127348"^^xsd:anyURI ;
+                                                                                         owl:deprecated "false"^^xsd:boolean ;
+                                                                                         owl:priorVersion "http://data.agroportal.lirmm.fr/ontologies/NALT/submissions/2"^^xsd:anyURI ;
+                                                                                         owl:versionInfo "1.0"^^xsd:string ;
+                                                                                         sd:endpoint "http://sparql.agroportal.lirmm.fr/test"^^xsd:anyURI ;
+                                                                                         foaf:homepage "https://agclass.nal.usda.gov/agt.shtml"^^xsd:anyURI ;
+                                                                                         foaf:page "https://agclass.nal.usda.gov/about.shtml"^^xsd:anyURI ,
+                                                                                                   "https://agclass.nal.usda.gov/bib.shtml"^^xsd:anyURI ;
+                                                                                         dct:contributor mod:AgNIC ;
+                                                                                         dct:creator <http://dbpedia.org/resource/National_Agricultural_Library> ,
+                                                                                                     <http://dbpedia.org/resource/Category:United_States_Department_of_Agriculture> ,
+                                                                                                     <http://www.iica.int/> ;
+                                                                                         dct:title "National Agricultural Library Thesaurus"^^xsd:string ;
+                                                                                         rdfs:label "National Agricultural Library Thesaurus"@en .
+
+
+###  http://dbpedia.org/page/Indian_Statistical_Institute
+<http://dbpedia.org/page/Indian_Statistical_Institute> rdf:type owl:NamedIndividual ,
+                                                                foaf:Organization ;
+                                                       foaf:homepage "http://www.isical.ac.in"^^xsd:anyURI ;
+                                                       rdfs:label "Indian Statistical Institute"@en .
+
+
+###  http://dbpedia.org/resource/Agriculture_Research_Service
+<http://dbpedia.org/resource/Agriculture_Research_Service> rdf:type owl:NamedIndividual ,
+                                                                    foaf:Organization ;
+                                                           omv:acronym "ARS"^^xsd:string ;
+                                                           dct:description "USDA Agricultural Research Service—one of the world's premier scientific organizations. Our nationally-coordinated research solves problems that affect Americans daily."^^xsd:string ;
+                                                           rdfs:label "USDA Agriculture Research Service"@en ,
+                                                                      "USDA-ARS"@en .
+
+
+###  http://dbpedia.org/resource/Bioversity_International
+<http://dbpedia.org/resource/Bioversity_International> rdf:type owl:NamedIndividual ,
+                                                                foaf:Organization ;
+                                                       rdfs:label "Bioversity International"@en .
+
+
+###  http://dbpedia.org/resource/CGIAR_Consortium_of_International_Agricultural_Research_Centers
+<http://dbpedia.org/resource/CGIAR_Consortium_of_International_Agricultural_Research_Centers> rdf:type owl:NamedIndividual ,
+                                                                                                       foaf:Organization ;
+                                                                                              foaf:homepage "www.cgiar.org"^^xsd:anyURI ;
+                                                                                              rdfs:label "CGIAR Consortium of International Agricultural Research Centers"@en .
+
+
+###  http://dbpedia.org/resource/CIRAD
+<http://dbpedia.org/resource/CIRAD> rdf:type owl:NamedIndividual ,
+                                             foaf:Organization ;
+                                    rdfs:label "CIRAD"@en .
+
+
+###  http://dbpedia.org/resource/Gene_Ontology_Consortium
+<http://dbpedia.org/resource/Gene_Ontology_Consortium> rdf:type owl:NamedIndividual ,
+                                                                foaf:Organization ;
+                                                       foaf:homepage "http://www.geneontology.org/"^^xsd:anyURI ;
+                                                       rdfs:label "Gene Ontology Consortium"@en .
+
+
+###  http://dbpedia.org/resource/INRIA
+<http://dbpedia.org/resource/INRIA> rdf:type owl:NamedIndividual ,
+                                             foaf:Organization ;
+                                    rdfs:label "French Institute for Research in Computer Science and Automation"@en .
+
+
+###  http://dbpedia.org/resource/INSERM
+<http://dbpedia.org/resource/INSERM> rdf:type owl:NamedIndividual ,
+                                              foaf:Organization ;
+                                     rdfs:label "French Institute of Health and Medical Research"@en ,
+                                                "INSERM"@en .
+
+
+###  http://dbpedia.org/resource/Inra
+<http://dbpedia.org/resource/Inra> rdf:type owl:NamedIndividual ,
+                                            foaf:Organization ;
+                                   rdfs:label "INRA"@en .
+
+
+###  http://dbpedia.org/resource/National_Agricultural_Library
+<http://dbpedia.org/resource/National_Agricultural_Library> rdf:type owl:NamedIndividual ,
+                                                                     foaf:Organization ;
+                                                            omv:acronym "NAL"^^xsd:string ;
+                                                            foaf:homepage "https://www.nal.usda.gov/"^^xsd:anyURI ;
+                                                            rdfs:label "National Agricultural Library"@en .
+
+
+###  http://dbpedia.org/resource/National_Human_Genome_Research_Institute
+<http://dbpedia.org/resource/National_Human_Genome_Research_Institute> rdf:type owl:NamedIndividual ,
+                                                                                foaf:Organization ;
+                                                                       rdfs:label "NHGRI"@en ,
+                                                                                  "National Human Genome Research Institute"@en .
+
+
+###  http://dbpedia.org/resource/National_Institute_of_Allergy_and_Infectious_Diseases
+<http://dbpedia.org/resource/National_Institute_of_Allergy_and_Infectious_Diseases> rdf:type owl:NamedIndividual ,
+                                                                                             foaf:Organization ;
+                                                                                    rdfs:label "NIAID"@en ,
+                                                                                               "National Institute of Allergy and Infectious Diseases"@en .
+
+
+###  http://dbpedia.org/resource/National_Library_of_Medicine
+<http://dbpedia.org/resource/National_Library_of_Medicine> rdf:type owl:NamedIndividual ,
+                                                                    foaf:Organization ;
+                                                           rdfs:label "NLM"@en ,
+                                                                      "National Library of Medicine"@en .
+
+
+###  http://dbpedia.org/resource/National_cancer_institute
+<http://dbpedia.org/resource/National_cancer_institute> rdf:type owl:NamedIndividual ,
+                                                                 foaf:Organization ;
+                                                        rdfs:label "NCI"@en ,
+                                                                   "National Cancer Institute"@en .
+
+
+###  http://dbpedia.org/resource/National_center_for_biotechnology_information
+<http://dbpedia.org/resource/National_center_for_biotechnology_information> rdf:type owl:NamedIndividual ,
+                                                                                     foaf:Organization ;
+                                                                            rdfs:label "NCBI"@en ,
+                                                                                       "National center for biotechnology information"@en .
+
+
+###  http://dbpedia.org/resource/SupAgro
+<http://dbpedia.org/resource/SupAgro> rdf:type owl:NamedIndividual ,
+                                               foaf:Organization ;
+                                      rdfs:label "L’Institut national d'études supérieures agronomiques de Montpellier (Montpellier Sup Agro)"@fr ,
+                                                 "SupAgro"@en .
+
+
+###  http://dbpedia.org/resource/The_Arabidopsis_Information_Resource
+<http://dbpedia.org/resource/The_Arabidopsis_Information_Resource> rdf:type owl:NamedIndividual ,
+                                                                            foaf:Organization ;
+                                                                   foaf:name "Phoenix Bioinformatics"^^xsd:string ;
+                                                                   rdfs:label "Phoenix Bioinformatics"@en .
+
+
+###  http://dbpedia.org/resource/U.S._Government
+<http://dbpedia.org/resource/U.S._Government> rdf:type owl:NamedIndividual ,
+                                                       foaf:Organization ;
+                                              foaf:homepage "https://www.usa.gov/"^^xsd:anyURI ;
+                                              rdfs:label "U. S. Government"@en .
+
+
+###  http://dbpedia.org/resource/University_of_Montpellier
+<http://dbpedia.org/resource/University_of_Montpellier> rdf:type owl:NamedIndividual ,
+                                                                 foaf:Organization ;
+                                                        rdfs:label "University of Montpellier"@en .
+
+
+###  http://dbpedia.org/resource/University_of_Stanford
+<http://dbpedia.org/resource/University_of_Stanford> rdf:type owl:NamedIndividual ,
+                                                              foaf:Organization ;
+                                                     rdfs:label "University of Stanford"@en .
+
+
+###  http://dbpedia.org/resource/University_of_Tennessee
+<http://dbpedia.org/resource/University_of_Tennessee> rdf:type owl:NamedIndividual ,
+                                                               foaf:Organization ;
+                                                      foaf:homepage "http://www.utk.edu/"^^xsd:anyURI ;
+                                                      foaf:name "University of Tennessee"^^xsd:string ;
+                                                      rdfs:label "University of Tennessee"@en .
+
+
+###  http://dbpedia.org/resource/Category:National_Institutes_of_Health
+<http://dbpedia.org/resource/Category:National_Institutes_of_Health> rdf:type owl:NamedIndividual ,
+                                                                              foaf:Organization ;
+                                                                     rdfs:label "NIH"@en ,
+                                                                                "National Institutes of Health"@en .
+
+
+###  http://dbpedia.org/resource/Category:National_Science_Foundation
+<http://dbpedia.org/resource/Category:National_Science_Foundation> rdf:type owl:NamedIndividual ,
+                                                                            foaf:Organization ;
+                                                                   foaf:homepage "https://www.nsf.gov/"^^xsd:anyURI ;
+                                                                   rdfs:label "National Science Foundation"@en .
+
+
+###  http://dbpedia.org/resource/Category:Oregon_State_University
+<http://dbpedia.org/resource/Category:Oregon_State_University> rdf:type owl:NamedIndividual ,
+                                                                        foaf:Organization ;
+                                                               rdfs:label "Oregon State University"@en .
+
+
+###  http://dbpedia.org/resource/Category:United_States_Department_of_Agriculture
+<http://dbpedia.org/resource/Category:United_States_Department_of_Agriculture> rdf:type owl:NamedIndividual ,
+                                                                                        foaf:Organization ;
+                                                                               omv:acronym "USDA"^^xsd:string ;
+                                                                               foaf:homepage "https://www.usda.gov/"^^xsd:anyURI ;
+                                                                               foaf:name "United States Department of Agriculture"^^xsd:string ;
+                                                                               rdfs:label "United States Department of Agriculture (USDA)"@en .
+
+
+###  http://dbpedia.org/resource/Category:University_of_Arizona
+<http://dbpedia.org/resource/Category:University_of_Arizona> rdf:type owl:NamedIndividual ,
+                                                                      foaf:Organization ;
+                                                             foaf:name "University of Arizona"^^xsd:string ;
+                                                             rdfs:label "University of Arizona"@en .
+
+
+###  http://dbpedia.org/resource/Category:University_of_Notre_Dame
+<http://dbpedia.org/resource/Category:University_of_Notre_Dame> rdf:type owl:NamedIndividual ;
+                                                                foaf:name "University of Notre Dame"^^xsd:string ;
+                                                                rdfs:label "University of Notre Dame"@en .
+
+
+###  http://dbpedia.org/resource/Category:Washington_State_University
+<http://dbpedia.org/resource/Category:Washington_State_University> rdf:type owl:NamedIndividual ;
+                                                                   foaf:homepage "https://wsu.edu/"^^xsd:anyURI ;
+                                                                   foaf:name "Washington State University"^^xsd:string ;
+                                                                   rdfs:label "Washington State University"@en .
+
+
+###  http://dbpedia.org/resource/Food_&_Agriculture_Organization
+<http://dbpedia.org/resource/Food_&_Agriculture_Organization> rdf:type owl:NamedIndividual ,
+                                                                       foaf:Organization ;
+                                                              omv:acronym "FAO"^^xsd:string ;
+                                                              rdfs:label "Food & Agriculture Organization"@en .
+
+
+###  http://dictybase.org/
+<http://dictybase.org/> rdf:type owl:NamedIndividual ,
+                                 foaf:Project ;
+                        dct:rightsHolder <http://www.isibang.ac.in/ns/orcid.org/0000-0002-5638-3990> ,
+                                         <http://www.northwestern.edu/> ;
+                        doap:mailing-list "r-chisholm@northwestern.edu"^^xsd:anyURI ;
+                        foaf:homepage "http://dictybase.org/About_dictyBase/"^^xsd:anyURI ;
+                        foaf:name "DictyBase"^^xsd:string ,
+                                  "Dictyostelium discoideum"^^xsd:string ;
+                        rdfs:label "DictyBase"@en .
+
+
+###  http://lovinra.inra.fr/2017/03/13/thesaurus-anaee/
+<http://lovinra.inra.fr/2017/03/13/thesaurus-anaee/> rdf:type owl:NamedIndividual ,
+                                                              mod:Ontology ;
+                                                     omv:hasFormalityLevel <http://w3id.org/nkos/nkostype#thesaurus> ;
+                                                     omv:hasOntologyLanguage mod:SKOS ;
+                                                     omv:hasOntologySyntax <http://www.w3.org/ns/formats/RDF_XML> ;
+                                                     omv:isOfType omv:DomainOntology ;
+                                                     dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                                     dct:publisher mod:AnaeeFrance ;
+                                                     dct:rightsHolder mod:AnaeeSemantics ;
+                                                     mod:group mod:INRALinkedOpenVocabularies ;
+                                                     mod:ontologyInUse mod:AnaeeSemanticsProject ;
+                                                     omv:acronym "ANAEETHES"^^xsd:string ;
+                                                     omv:keyClasses "biotic environment"^^xsd:string ,
+                                                                    "ecosystem"^^xsd:string ,
+                                                                    "spatio-temporal characteristics"^^xsd:string ;
+                                                     omv:numberOfClasses "2"^^xsd:nonNegativeInteger ;
+                                                     omv:numberOfIndividuals "3323"^^xsd:nonNegativeInteger ;
+                                                     omv:numberOfProperties "0"^^xsd:nonNegativeInteger ;
+                                                     omv:resourceLocator "http://data.agroportal.lirmm.fr/ontologies/ANAEETHES/download"^^xsd:anyURI ;
+                                                     omv:status "Alpha"^^xsd:string ;
+                                                     dct:created "2017-03-22T00:00:00+00:00"^^xsd:dateTime ;
+                                                     dct:dateSubmitted "2017-03-22T00:00:00"^^xsd:dateTime ;
+                                                     dct:description "The AnaEE thesaurus aims to provide a controlled vocabulary for the semantic description of the study of continental ecosystems and their biodiversity. It has been developed within the framework of the AnaEE-France infrastructure through an iterative process combining both top down and bottom up approaches: import of concepts from other thesauri and collection of concepts used in the AnaEE data bases and/or modeling platforms."^^xsd:string ;
+                                                     dct:language "http://lexvo.org/id/iso639-3/eng"^^xsd:anyURI ,
+                                                                  "http://lexvo.org/id/iso639-3/fra"^^xsd:anyURI ;
+                                                     dct:subject "Agricultural Research"^^xsd:string ,
+                                                                 "Earth and Environment"^^xsd:string ,
+                                                                 "Natural Resources"^^xsd:string ,
+                                                                 "Technology and Engineering"^^xsd:string ;
+                                                     vann:example "http://opendata.inra.fr/anaeeThes/c2_942"^^xsd:anyURI ;
+                                                     doap:mailing-list "anaee_thesaurus@inra.fr"^^xsd:anyURI ;
+                                                     mod:rootClasses "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Unit"^^xsd:anyURI ,
+                                                                     "http://opendata.inra.fr/anaeeThes/c2_112"^^xsd:anyURI ,
+                                                                     "http://opendata.inra.fr/anaeeThes/c2_115"^^xsd:anyURI ,
+                                                                     "http://opendata.inra.fr/anaeeThes/c2_2445"^^xsd:anyURI ,
+                                                                     "http://opendata.inra.fr/anaeeThes/c2_2934"^^xsd:anyURI ,
+                                                                     "http://opendata.inra.fr/anaeeThes/c2_2941"^^xsd:anyURI ,
+                                                                     "http://opendata.inra.fr/anaeeThes/c2_3022"^^xsd:anyURI ,
+                                                                     "http://opendata.inra.fr/anaeeThes/c_1401956207670"^^xsd:anyURI ,
+                                                                     "http://opendata.inra.fr/anaeeThes/c_1402038921919"^^xsd:anyURI ,
+                                                                     "http://opendata.inra.fr/anaeeThes/c_1403018120212"^^xsd:anyURI ,
+                                                                     "http://opendata.inra.fr/anaeeThes/c_9178f420"^^xsd:anyURI ,
+                                                                     "http://opendata.inra.fr/anaeeThes/c_b177c123"^^xsd:anyURI ;
+                                                     owl:deprecated "false"^^xsd:boolean ;
+                                                     owl:priorVersion "http://data.agroportal.lirmm.fr/ontologies/ANAEETHES/submissions/1"^^xsd:anyURI ;
+                                                     owl:versionInfo "1.0"^^xsd:string ;
+                                                     sd:endpoint "http://sparql.agroportal.lirmm.fr/test"^^xsd:anyURI ;
+                                                     foaf:homepage "http://dx.doi.org/10.15454/1.4894016754286177E12"^^xsd:anyURI ;
+                                                     foaf:page "http://dx.doi.org/10.15454/1.4894016754286177E12"^^xsd:anyURI ;
+                                                     dct:title "AnaEE Thesaurus"^^xsd:string ;
+                                                     rdfs:label "AnaEE Thesaurus"@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#ApplicationOntology
+omv:ApplicationOntology rdf:type owl:NamedIndividual ,
+                                 omv:OntologyType ;
+                        foaf:name "Application Ontology"^^xsd:string .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#CoreOntology
+omv:CoreOntology rdf:type owl:NamedIndividual ,
+                          omv:OntologyType ;
+                 foaf:name "Core Ontology"^^xsd:string .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#DAML-OIL
+omv:DAML-OIL rdf:type owl:NamedIndividual ,
+                      omv:OntologyLanguage .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#DescriptionLogics
+omv:DescriptionLogics rdf:type owl:NamedIndividual ,
+                               omv:KnowledgeRepresentationParadigm ;
+                      foaf:name "Description Logics"^^xsd:string .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#DomainOntology
+omv:DomainOntology rdf:type owl:NamedIndividual ,
+                            omv:OntologyType ;
+                   foaf:name "Domain Ontology"^^xsd:string .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#Frames
+omv:Frames rdf:type owl:NamedIndividual ,
+                    omv:KnowledgeRepresentationParadigm ;
+           foaf:name "Frames"^^xsd:string .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#NeOn-Toolkit
+omv:NeOn-Toolkit rdf:type owl:NamedIndividual ,
+                          omv:OntologyEngineeringTool ;
+                 foaf:name "NeOn Toolkit"^^xsd:string .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#OWL-DL
+omv:OWL-DL rdf:type owl:NamedIndividual ,
+                    omv:OntologyLanguage .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#OWL-Full
+omv:OWL-Full rdf:type owl:NamedIndividual ,
+                      omv:OntologyLanguage .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#OWL-Lite
+omv:OWL-Lite rdf:type owl:NamedIndividual ,
+                      omv:OntologyLanguage .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#OilEd
+omv:OilEd rdf:type owl:NamedIndividual ,
+                   omv:OntologyEngineeringTool ;
+          foaf:name "Oil Ed"^^xsd:string .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#Protégé
+omv:Protégé rdf:type owl:NamedIndividual ,
+                     omv:OntologyEngineeringTool .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#RDF-S
+omv:RDF-S rdf:type owl:NamedIndividual ,
+                   omv:OntologyLanguage ;
+          rdfs:label "RDF(S)"@en .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#SWOOP
+omv:SWOOP rdf:type owl:NamedIndividual ,
+                   omv:OntologyEngineeringTool ;
+          foaf:name "SWOOP"^^xsd:string .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#TaskOntology
+omv:TaskOntology rdf:type owl:NamedIndividual ,
+                          omv:OntologyType ;
+                 foaf:name "Task Ontology"^^xsd:string .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#UpperLevelOntology
+omv:UpperLevelOntology rdf:type owl:NamedIndividual ,
+                                omv:OntologyType ;
+                       foaf:name "Upper Level Ontology"^^xsd:string .
+
+
+###  http://orcid.org/0000-0002-2404-1582
+<http://orcid.org/0000-0002-2404-1582> rdf:type owl:NamedIndividual ,
+                                                foaf:Person ;
+                                       doap:mailing-list "jonquet@lirmm.fr"^^xsd:anyURI ;
+                                       rdfs:label "Clement Jonquet"@en .
+
+
+###  http://orcid.org/0000-0003-3059-8202
+<http://orcid.org/0000-0003-3059-8202> rdf:type owl:NamedIndividual ,
+                                                foaf:Person ;
+                                       doap:mailing-list "bisu@drtc.isibang.ac.in"^^xsd:anyURI ,
+                                                         "dutta2005@gmail.com"^^xsd:anyURI ;
+                                       rdfs:label "Biswanath Dutta"@en .
+
+
+###  http://pgsb.helmholtz-muenchen.de/plant/
+<http://pgsb.helmholtz-muenchen.de/plant/> rdf:type owl:NamedIndividual ,
+                                                    foaf:Project ;
+                                           dct:rightsHolder <http://www.isibang.ac.in/ns/mod#orcid.org/0000-0001-6484-1077> ,
+                                                            <https://www.helmholtz-muenchen.de/en/> ;
+                                           dct:description "The PGSB plant genomics group focuses on the analysis of plant genomes, using bioinformatic techniques. To store and manage the data, we developed a database, PlantsDB, that aims to provide a data and information resource for individual plant species. In addition PlantsDB provides a platform for integrative and comparative plant genome research."^^xsd:string ;
+                                           doap:mailing-list "kmayer@helmholtz-muenchen.de"^^xsd:anyURI ;
+                                           foaf:homepage "http://pgsb.helmholtz-muenchen.de/plant"^^xsd:anyURI ;
+                                           foaf:name "PGSB Plant Genome and Systems Biology"^^xsd:string ;
+                                           rdfs:label "Plant Genome and Systems Biology Project"@en .
+
+
+###  http://planteome.org/
+<http://planteome.org/> rdf:type owl:NamedIndividual ,
+                                 foaf:Project ;
+                        dct:rightsHolder <http://dbpedia.org/resource/Category:Oregon_State_University> ,
+                                         <http://www.isibang.ac.in/ns/orcid.org/0000-0002-1005-8383> ;
+                        dct:description "The Planteome Project is a centralized platform where reference ontologies for plants will be used to access plant genomics data."^^xsd:string ;
+                        doap:mailing-list "jaiswalp@science.oregonstate.edu"^^xsd:anyURI ;
+                        rdfs:label "Planteome Project" .
+
+
+###  http://proconsortium.org/pro/
+<http://proconsortium.org/pro/> rdf:type owl:NamedIndividual ,
+                                         mod:Ontology ;
+                                omv:endorsedBy <https://www.rd-alliance.org/groups/wheat-data-interoperability-wg.html> ;
+                                omv:hasFormalityLevel <http://w3id.org/nkos/nkostype#ontology> ;
+                                omv:hasOntologyLanguage mod:OBO ;
+                                omv:usedOntologyEngineeringTool mod:OBOEdit ;
+                                dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                dct:publisher mod:PROConsortium ;
+                                dct:relation <http://disease-ontology.org> ,
+                                             <http://www.geneontology.org/> ,
+                                             <http://www.sequenceontology.org/> ;
+                                dct:rightsHolder mod:PROConsortium ,
+                                                 mod:ProteinInformationResource ,
+                                                 <http://www.isibang.ac.in/ns/orcid.org/0000-0001-5809-9523> ;
+                                mod:group mod:OBOFoundry ;
+                                mod:ontologyInUse <http://planteome.org/> ,
+                                                  <http://vest.agrisemantics.org/> ;
+                                foaf:fundedBy <http://dbpedia.org/resource/National_Human_Genome_Research_Institute> ,
+                                              <http://dbpedia.org/resource/National_Institute_of_Allergy_and_Infectious_Diseases> ,
+                                              <http://dbpedia.org/resource/National_Library_of_Medicine> ,
+                                              <http://dbpedia.org/resource/National_cancer_institute> ,
+                                              <http://dbpedia.org/resource/Category:National_Science_Foundation> ,
+                                              mod:ComputercraftCorporation ,
+                                              mod:NIGMS ,
+                                              <http://www.wikidata.org/entity/Q11223> ;
+                                omv:URI "http://purl.obolibrary.org/obo/pr.owl"^^xsd:anyURI ;
+                                omv:acronym "PR"^^xsd:string ;
+                                omv:keyClasses "gene"^^xsd:string ,
+                                               "organism"^^xsd:string ,
+                                               "protein"^^xsd:string ,
+                                               "protein coding gene"^^xsd:string ;
+                                omv:keywords "amino acids"^^xsd:string ,
+                                             "genes"^^xsd:string ,
+                                             "immunology"^^xsd:string ,
+                                             "protein"^^xsd:string ,
+                                             "proteomics"^^xsd:string ,
+                                             "uniprot knowledgebase"^^xsd:string ;
+                                omv:numberOfClasses "83656"^^xsd:nonNegativeInteger ;
+                                omv:numberOfIndividuals "0"^^xsd:nonNegativeInteger ;
+                                omv:numberOfProperties "11"^^xsd:nonNegativeInteger ;
+                                omv:resourceLocator "http://data.agroportal.lirmm.fr/ontologies/PR/download?download_format=rdf"^^xsd:anyURI ;
+                                omv:status "Production"^^xsd:string ;
+                                dct:created "2014-04-13T00:00:00+00:00"^^xsd:dateTime ;
+                                dct:dateSubmitted "2015-06-30T00:00:00"^^xsd:dateTime ;
+                                dct:description "An ontological representation of protein-related entities. The PRotein Ontology (PRO) formally defines taxon-specific and taxon-neutral protein-related entities in three major areas: proteins related by evolution; proteins produced from a given gene; and protein-containing complexes."^^xsd:string ,
+                                                "The Protein Ontology (PRO; http://proconsortium.org) formally defines protein entities and explicitly represents their major forms and interrelations. Protein entities represented in PRO corresponding to single amino acid chains are categorized by level of specificity into family, gene, sequence and modification metaclasses, and there is a separate metaclass for protein complexes. All metaclasses also have organism-specific derivatives. PRO complements established sequence databases such as UniProtKB, and interoperates with other biomedical and biological ontologies such as the Gene Ontology (GO). PRO relates to UniProtKB in that PRO's organism-specific classes of proteins encoded by a specific gene correspond to entities documented in UniProtKB entries. PRO relates to the GO in that PRO's representations of organism-specific protein complexes are subclasses of the organism-agnostic protein complex terms in the GO Cellular Component Ontology. The past few years have seen growth and changes to the PRO, as well as new points of access to the data and new applications of PRO in immunology and proteomics. Here we describe some of these developments."^^xsd:string ;
+                                dct:isFormatOf "http://purl.obolibrary.org/obo/pr.owl"^^xsd:anyURI ;
+                                dct:language "http://lexvo.org/id/iso639-3/eng"^^xsd:anyURI ;
+                                vann:example "http://purl.obolibrary.org/obo/PR_000018263"^^xsd:anyURI ;
+                                vann:preferredNamespacePrefix "pr"^^xsd:string ;
+                                vann:preferredNamespaceUri "http://purl.obolibrary.org/obo/"^^xsd:anyURI ;
+                                doap:mailing-list "dan5@georgetown.edu"^^xsd:anyURI ,
+                                                  "pirmail@georgetown.edu"^^xsd:anyURI ;
+                                doap:repository "https://sourceforge.net/projects/pro-obo/"^^xsd:anyURI ;
+                                mod:rootClasses "http://purl.obolibrary.org/obo/BFO_0000019"^^xsd:anyURI ,
+                                                "http://purl.obolibrary.org/obo/BFO_0000040"^^xsd:anyURI ,
+                                                "http://purl.obolibrary.org/obo/SO_0000110"^^xsd:anyURI ;
+                                owl:deprecated "false"^^xsd:boolean ;
+                                owl:versionInfo "41.0"^^xsd:string ;
+                                sd:endpoint "http://pir.georgetown.edu/pro/pro_sparql.shtml"^^xsd:anyURI ;
+                                foaf:depiction "http://proconsortium.org/pirwww/images/Pro2.png"^^xsd:anyURI ;
+                                foaf:homepage "http://proconsortium.org/pro/"^^xsd:anyURI ;
+                                foaf:logo "https://raw.githubusercontent.com/PROconsortium/logo/master/PROlogo_small.pn"^^xsd:anyURI ;
+                                foaf:page "http://proconsortium.org/pirwww/about/publication.shtml"^^xsd:anyURI ,
+                                          "http://proconsortium.org/pirwww/support/help.shtml"^^xsd:anyURI ;
+                                dct:contributor mod:CathyHWu ,
+                                                mod:CeciliaArighi ,
+                                                mod:LeslieArminski ;
+                                dct:creator <http://www.isibang.ac.in/ns/orcid.org/0000-0001-5809-9523> ;
+                                dct:title "Protein Ontology"^^xsd:string ;
+                                rdfs:label "Protein Ontology"@en .
+
+
+###  http://purl.org/linked-data/sdmx/2009/code#freq-A
+<http://purl.org/linked-data/sdmx/2009/code#freq-A> rdf:type owl:NamedIndividual ,
+                                                             dct:Frequency ;
+                                                    rdfs:label "Annual"@en .
+
+
+###  http://purl.org/linked-data/sdmx/2009/code#freq-B
+<http://purl.org/linked-data/sdmx/2009/code#freq-B> rdf:type owl:NamedIndividual ,
+                                                             dct:Frequency ;
+                                                    rdfs:label "Daily - business week"@en .
+
+
+###  http://purl.org/linked-data/sdmx/2009/code#freq-D
+<http://purl.org/linked-data/sdmx/2009/code#freq-D> rdf:type owl:NamedIndividual ,
+                                                             dct:Frequency ;
+                                                    rdfs:label "Daily"@en .
+
+
+###  http://purl.org/linked-data/sdmx/2009/code#freq-M
+<http://purl.org/linked-data/sdmx/2009/code#freq-M> rdf:type owl:NamedIndividual ,
+                                                             dct:Frequency ;
+                                                    rdfs:label "Monthly"@en .
+
+
+###  http://purl.org/linked-data/sdmx/2009/code#freq-N
+<http://purl.org/linked-data/sdmx/2009/code#freq-N> rdf:type owl:NamedIndividual ,
+                                                             dct:Frequency ;
+                                                    rdfs:label "Minutely"@en .
+
+
+###  http://purl.org/linked-data/sdmx/2009/code#freq-Q
+<http://purl.org/linked-data/sdmx/2009/code#freq-Q> rdf:type owl:NamedIndividual ,
+                                                             dct:Frequency ;
+                                                    rdfs:label "Quarterly"@en .
+
+
+###  http://purl.org/linked-data/sdmx/2009/code#freq-S
+<http://purl.org/linked-data/sdmx/2009/code#freq-S> rdf:type owl:NamedIndividual ,
+                                                             dct:Frequency ;
+                                                    rdfs:label "Half Yearly, semester"@en .
+
+
+###  http://purl.org/linked-data/sdmx/2009/code#freq-W
+<http://purl.org/linked-data/sdmx/2009/code#freq-W> rdf:type owl:NamedIndividual ,
+                                                             dct:Frequency ;
+                                                    rdfs:label "Weekly"@en .
+
+
+###  http://uberon.github.io/
+<http://uberon.github.io/> rdf:type owl:NamedIndividual ,
+                                    mod:Ontology ;
+                           omv:resourceLocator "http://purl.obolibrary.org/obo/uberon.owl"^^xsd:anyURI ;
+                           dct:description "Uberon is an integrated cross-species ontology covering anatomical structures in animals."^^xsd:string ;
+                           rdfs:label "Uberon ontology"@en .
+
+
+###  http://vest.agrisemantics.org/
+<http://vest.agrisemantics.org/> rdf:type owl:NamedIndividual ,
+                                          foaf:Project ;
+                                 dct:rightsHolder <http://dbpedia.org/resource/Food_&_Agriculture_Organization> ,
+                                                  <http://www.isibang.ac.in/ns/orcid.org/0000-0003-3860-4304> ;
+                                 dct:description "This VEST-AgroPortal provides a global map of existing vocabularies for the exchange of data in the field of food and agriculture. The directory is the result of the merging of records from two different sources: the VEST Registry (a registry of vocabularies of all types and all formats) and the AgroPortal (a repository of ontologies)."^^xsd:string ;
+                                 doap:mailing-list "valeria.pesce@fao.org"^^xsd:anyURI ;
+                                 foaf:homepage "http://vest.agrisemantics.org/"^^xsd:anyURI ;
+                                 rdfs:label "VEST-AgroPortal Map of Standards"@en .
+
+
+###  http://voc.landportal.info/landterms
+<http://voc.landportal.info/landterms> rdf:type owl:NamedIndividual ;
+                                       foaf:homepage "http://voc.landportal.info/landterms"^^xsd:anyURI ;
+                                       rdfs:label "Land terms"@en .
+
+
+###  http://volvestre.cirad.fr:8080/agrold/
+<http://volvestre.cirad.fr:8080/agrold/> rdf:type owl:NamedIndividual ,
+                                                  foaf:Project ;
+                                         dct:rightsHolder mod:IRD ,
+                                                          <http://www.isibang.ac.in/ns/orcid.org/0000-0002-2923-9790> ;
+                                         omv:acronym "AgroLD"^^xsd:string ;
+                                         dct:description "AgroLD is a RDF knowledge base that consists of data integrated from a variety of plant resources and ontologies. The aim of the Agronomic Linked Data (AgroLD) project is to provide a portal for bioinformatics and domain experts to exploit the homogenized data models towards efficiently generating research hypotheses."^^xsd:string ;
+                                         foaf:homepage "http://volvestre.cirad.fr:8080/agrold/"^^xsd:anyURI ;
+                                         rdfs:label "Agronomic Linked Data Project"@en .
+
+
+###  http://w3id.org/nkos/nkostype#categorization_schema
+<http://w3id.org/nkos/nkostype#categorization_schema> rdf:type owl:NamedIndividual ,
+                                                               omv:FormalityLevel ;
+                                                      rdfs:label "Categorization scheme"@en .
+
+
+###  http://w3id.org/nkos/nkostype#classification_schema
+<http://w3id.org/nkos/nkostype#classification_schema> rdf:type owl:NamedIndividual ,
+                                                               omv:FormalityLevel ;
+                                                      rdfs:label "Classification scheme"@en .
+
+
+###  http://w3id.org/nkos/nkostype#dictionary
+<http://w3id.org/nkos/nkostype#dictionary> rdf:type owl:NamedIndividual ,
+                                                    omv:FormalityLevel ;
+                                           rdfs:label "Dictionary"@en .
+
+
+###  http://w3id.org/nkos/nkostype#glossary
+<http://w3id.org/nkos/nkostype#glossary> rdf:type owl:NamedIndividual ,
+                                                  omv:FormalityLevel ;
+                                         rdfs:label "Glossary"@en .
+
+
+###  http://w3id.org/nkos/nkostype#name_authority_list
+<http://w3id.org/nkos/nkostype#name_authority_list> rdf:type owl:NamedIndividual ,
+                                                             omv:FormalityLevel ;
+                                                    rdfs:label "Name authority list"@en .
+
+
+###  http://w3id.org/nkos/nkostype#ontology
+<http://w3id.org/nkos/nkostype#ontology> rdf:type owl:NamedIndividual ,
+                                                  omv:FormalityLevel ;
+                                         rdfs:label "Ontology"@en .
+
+
+###  http://w3id.org/nkos/nkostype#semantic_network
+<http://w3id.org/nkos/nkostype#semantic_network> rdf:type owl:NamedIndividual ,
+                                                          omv:FormalityLevel ;
+                                                 rdfs:label "Semantic network"@en .
+
+
+###  http://w3id.org/nkos/nkostype#subject_heading_scheme
+<http://w3id.org/nkos/nkostype#subject_heading_scheme> rdf:type owl:NamedIndividual ,
+                                                                omv:FormalityLevel ;
+                                                       rdfs:label "Subject heading scheme"@en .
+
+
+###  http://w3id.org/nkos/nkostype#synonym_ring
+<http://w3id.org/nkos/nkostype#synonym_ring> rdf:type owl:NamedIndividual ,
+                                                      omv:FormalityLevel ;
+                                             rdfs:comment "set of synonymous or almost synonymous terms, any of which can be used to refer to a particular concept."@en ;
+                                             rdfs:label "Synonym ring"@en .
+
+
+###  http://w3id.org/nkos/nkostype#taxonomy
+<http://w3id.org/nkos/nkostype#taxonomy> rdf:type owl:NamedIndividual ,
+                                                  omv:FormalityLevel ;
+                                         rdfs:label "Taxonomy"@en .
+
+
+###  http://w3id.org/nkos/nkostype#terminology
+<http://w3id.org/nkos/nkostype#terminology> rdf:type owl:NamedIndividual ,
+                                                     omv:FormalityLevel ;
+                                            rdfs:label "Terminology"@en .
+
+
+###  http://w3id.org/nkos/nkostype#thesaurus
+<http://w3id.org/nkos/nkostype#thesaurus> rdf:type owl:NamedIndividual ,
+                                                   omv:FormalityLevel ;
+                                          rdfs:label "Thesaurus"@en .
+
+
+###  http://wheat.agroportal.lirmm.fr/
+<http://wheat.agroportal.lirmm.fr/> rdf:type owl:NamedIndividual ,
+                                             mod:Group ;
+                                    foaf:homepage "http://ist.blogs.inra.fr/wdi"^^xsd:anyURI ;
+                                    rdfs:label "Wheat Data Interoperability working group"@en .
+
+
+###  http://www.agbase.msstate.edu/
+<http://www.agbase.msstate.edu/> rdf:type owl:NamedIndividual ,
+                                          foaf:Project ;
+                                 dct:rightsHolder <http://dbpedia.org/resource/Category:University_of_Arizona> ,
+                                                  mod:FionaMcCarthy ;
+                                 dct:description "AgBase is a curated resource for functional analysis of agricultural plant and animal gene products including Gene Ontology annotations."^^xsd:string ;
+                                 doap:mailing-list "fionamcc@email.arizona.edu"^^xsd:anyURI ;
+                                 foaf:homepage "http://www.agbase.msstate.edu/"^^xsd:anyURI ;
+                                 foaf:name "AgBase"^^xsd:string ;
+                                 rdfs:label "AgBase"@en .
+
+
+###  http://www.cropontology.org/
+<http://www.cropontology.org/> rdf:type owl:NamedIndividual ,
+                                        mod:Ontology ;
+                               omv:endorsedBy <http://dbpedia.org/resource/Category:National_Science_Foundation> ,
+                                              mod:IntegratedBreedingPlatform ,
+                                              mod:Palnteome ,
+                                              <https://www.rd-alliance.org/groups/wheat-data-interoperability-wg.html> ;
+                               omv:hasFormalityLevel <http://w3id.org/nkos/nkostype#ontology> ;
+                               omv:hasOntologyLanguage mod:OBO ;
+                               omv:hasOntologySyntax <http://www.w3.org/ns/formats/RDF_XML> ;
+                               omv:isOfType omv:DomainOntology ;
+                               dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+                               dct:publisher mod:IntegratedBreedingPlatform ;
+                               dct:rightsHolder mod:CropOntologyHelpdesk ,
+                                                <http://www.isibang.ac.in/ns/orcid.org/0000-0002-9399-8003> ;
+                               mod:group mod:CropOntologyCurationTool ;
+                               mod:ontologyInUse <http://vest.agrisemantics.org/> ,
+                                                 mod:CropOntologyproject ;
+                               foaf:fundedBy <http://dbpedia.org/resource/CGIAR_Consortium_of_International_Agricultural_Research_Centers> ;
+                               omv:acronym "CO_715"^^xsd:string ;
+                               omv:keyClasses "Corrugation"^^xsd:string ,
+                                              "Crop research ontology"^^xsd:string ,
+                                              "Sub-irrigation"^^xsd:string ,
+                                              "Wild flooding"^^xsd:string ;
+                               omv:keywords "crop study"^^xsd:string ,
+                                            "environmental conditions"^^xsd:string ,
+                                            "experimental design"^^xsd:string ;
+                               omv:knownUsage "The concepts of the CO are used to curate agronomic databases and describe the data."^^xsd:string ;
+                               omv:numberOfClasses "256"^^xsd:nonNegativeInteger ;
+                               omv:numberOfIndividuals "0"^^xsd:nonNegativeInteger ;
+                               omv:numberOfProperties "2"^^xsd:nonNegativeInteger ;
+                               omv:status "Production"^^xsd:string ;
+                               dct:created "2017-03-09T18:03:17+01:00"^^xsd:dateTime ;
+                               dct:dateSubmitted "2017-03-09T18:03:17+01:00"^^xsd:dateTime ;
+                               dct:description "Describes experimental design, environmental conditions and methods associated with the crop study/experiment/trail and their evaluation."^^xsd:string ;
+                               dct:language "http://lexvo.org/id/iso639-3/eng"^^xsd:anyURI ;
+                               vann:preferredNamespacePrefix "co"^^xsd:string ;
+                               doap:mailing-list "helpdesk@cropontology-curationtool.org"^^xsd:anyURI ,
+                                                 "r.shrestha2@cgiar.org"^^xsd:anyURI ;
+                               mod:rootClasses "http://purl.obolibrary.org/obo/CO_715_0000000"^^xsd:anyURI ,
+                                               "http://purl.obolibrary.org/obo/CO_715_0000207"^^xsd:anyURI ,
+                                               "http://purl.obolibrary.org/obo/CO_715_0000208"^^xsd:anyURI ,
+                                               "http://purl.obolibrary.org/obo/CO_715_0000209"^^xsd:anyURI ,
+                                               "http://purl.obolibrary.org/obo/CO_715_0000210"^^xsd:anyURI ,
+                                               "http://purl.obolibrary.org/obo/CO_715_0000211"^^xsd:anyURI ,
+                                               "http://purl.obolibrary.org/obo/CO_715_0000212"^^xsd:anyURI ,
+                                               "http://purl.obolibrary.org/obo/CO_715_0000213"^^xsd:anyURI ,
+                                               "http://purl.obolibrary.org/obo/CO_715_0000214"^^xsd:anyURI ;
+                               owl:versionInfo "2012"^^xsd:string ;
+                               foaf:homepage "http://www.cropontology.org/"^^xsd:anyURI ;
+                               foaf:page "http://www.cropontology.org/"^^xsd:anyURI ;
+                               dct:creator mod:RosemaryShrestha ;
+                               dct:title "IBP Crop Research Ontology"^^xsd:string ;
+                               rdfs:label "IBP Crop Research Ontology"@en .
+
+
+###  http://www.echinobase.org/Echinobase/
+<http://www.echinobase.org/Echinobase/> rdf:type owl:NamedIndividual ,
+                                                 foaf:Project ;
+                                        dct:rightsHolder mod:KathleenFoltz ;
+                                        dct:description "Home for genomic information on echinoderms. It either hosts or will soon host sequence and annotation data for species from all of the eleutherozoan echinoderms (sea urchins, sea stars, brittle stars and sea cucumbers)."^^xsd:string ;
+                                        doap:mailing-list "foltz@lifesci.ucsb.edu"^^xsd:anyURI ;
+                                        foaf:homepage "http://www.echinobase.org/Echinobase/"^^xsd:anyURI ;
+                                        foaf:name "EchinoBase: An Echinoderm genomic database"^^xsd:string ;
+                                        rdfs:label "EchinoBase: An Echinoderm genomic database"@en .
+
+
+###  http://www.geneontology.org/
+<http://www.geneontology.org/> rdf:type owl:NamedIndividual ,
+                                        mod:Ontology ;
+                               omv:hasFormalityLevel <http://w3id.org/nkos/nkostype#ontology> ;
+                               omv:hasOntologyLanguage <https://www.w3.org/2002/07/owl> ;
+                               omv:hasOntologySyntax <http://www.w3.org/ns/formats/RDF_XML> ;
+                               omv:usedOntologyEngineeringTool mod:TermGenie1.0 ;
+                               dct:license <https://creativecommons.org/licenses/by/3.0/> ;
+                               dct:publisher <http://dbpedia.org/resource/Gene_Ontology_Consortium> ;
+                               dct:relation <http://uberon.github.io/> ,
+                                            mod:GeneOntologyPlus ,
+                                            mod:NCBITAXON ,
+                                            mod:RelationsOntology ;
+                               dct:rightsHolder <http://dbpedia.org/resource/Gene_Ontology_Consortium> ;
+                               mod:group mod:AgronomicLinkedData ,
+                                         mod:OBOFoundry ;
+                               mod:ontologyInUse <http://dictybase.org/> ,
+                                                 <http://pgsb.helmholtz-muenchen.de/plant/> ,
+                                                 <http://planteome.org/> ,
+                                                 <http://vest.agrisemantics.org/> ,
+                                                 <http://volvestre.cirad.fr:8080/agrold/> ,
+                                                 <http://www.agbase.msstate.edu/> ,
+                                                 <http://www.echinobase.org/Echinobase/> ,
+                                                 <http://www.hardwoodgenomics.org/> ,
+                                                 <http://www.ibc-montpellier.fr/> ,
+                                                 <https://i5k.nal.usda.gov/> ,
+                                                 <https://peanutbase.org/> ,
+                                                 <https://triticeaetoolbox.org/> ,
+                                                 <https://www.arabidopsis.org/> ,
+                                                 <https://www.maizegdb.org/> ,
+                                                 <https://www.rosaceae.org/> ,
+                                                 <https://www.soybase.org/> ,
+                                                 <https://www.vectorbase.org/> ;
+                               omv:URI "http://purl.obolibrary.org/obo/go.owl"^^xsd:anyURI ;
+                               omv:acronym "GO"^^xsd:string ;
+                               omv:hasDomain "Biology"^^xsd:string ;
+                               omv:keyClasses "biological process"^^xsd:string ,
+                                              "cellular component"^^xsd:string ,
+                                              "molecular function"^^xsd:string ;
+                               omv:keywords "gene function"^^xsd:string ;
+                               omv:knownUsage "The use of GO terms by collaborating databases facilitates uniform queries across all of them. Controlled vocabularies are structured so they can be queried at different levels; for example, users may query GO to find all gene products in the mouse genome that are involved in signal transduction, or zoom in on all receptor tyrosine kinases that have been annotated. This structure also allows annotators to assign properties to genes or gene products at different levels, depending on the depth of knowledge about that entity."^^xsd:string ;
+                               omv:numberOfClasses "48549"^^xsd:nonNegativeInteger ;
+                               omv:numberOfIndividuals "0"^^xsd:nonNegativeInteger ;
+                               omv:numberOfProperties "9"^^xsd:nonNegativeInteger ;
+                               omv:resourceLocator "http://data.agroportal.lirmm.fr/ontologies/GO/download"^^xsd:anyURI ;
+                               omv:status "Production"^^xsd:string ;
+                               dct:created "2017-04-06T18:08:56+02:00"^^xsd:dateTime ;
+                               dct:dateSubmitted "2017-03-28T00:00:00"^^xsd:dateTime ,
+                                                 "2017-03-30T00:00:00"^^xsd:dateTime ,
+                                                 "2017-03-31T00:00:00"^^xsd:dateTime ,
+                                                 "2017-04-01T00:00:00"^^xsd:dateTime ,
+                                                 "2017-04-06T00:00:00"^^xsd:dateTime ;
+                               dct:description "The GO defines concepts/classes used to describe gene function, and relationships between these concepts. It classifies functions along three aspects: molecular function (molecular activities of gene products), cellular component (where gene products are active), biological process (pathways and larger processes made up of the activities of multiple gene products)."^^xsd:string ,
+                                               "The Gene Ontology (GO) project is a collaborative effort to address the need for consistent descriptions of gene products across databases. Founded in 1998, the project began as a collaboration between three model organism databases, FlyBase (Drosophila), the Saccharomyces Genome Database (SGD) and the Mouse Genome Database (MGD). The GO Consortium (GOC) has since grown to incorporate many databases, including several of the world's major repositories for plant, animal, and microbial genomes. The GO Contributors page lists all member organizations."^^xsd:string ;
+                               dct:isFormatOf "http://purl.obolibrary.org/obo/go.obo"^^xsd:anyURI ;
+                               dct:language "http://lexvo.org/id/iso639-3/eng"^^xsd:anyURI ;
+                               dct:source "http://purl.org/dc/elements/1.1/"^^xsd:string ;
+                               vann:example "http://purl.obolibrary.org/obo/GO_0015219"^^xsd:anyURI ;
+                               vann:preferredNamespacePrefix "gene_ontology"^^xsd:string ;
+                               doap:bugDatabase "https://github.com/geneontology/go-ontology/issues/"^^xsd:anyURI ;
+                               doap:mailing-list "go@geneontology.org"^^xsd:anyURI ,
+                                                 "http://geneontology.org/page/go-mailing-lists"^^xsd:anyURI ;
+                               doap:repository "https://sourceforge.net/projects/geneontology/"^^xsd:anyURI ;
+                               mod:numberOfDataProperties "9"^^xsd:nonNegativeInteger ;
+                               mod:numberOfObjectProperties "0"^^xsd:nonNegativeInteger ;
+                               mod:rootClasses "http://purl.obolibrary.org/obo/GO_0003674"^^xsd:anyURI ,
+                                               "http://purl.obolibrary.org/obo/GO_0005575"^^xsd:anyURI ,
+                                               "http://purl.obolibrary.org/obo/GO_0008150"^^xsd:anyURI ;
+                               owl:deprecated "false"^^xsd:boolean ;
+                               owl:priorVersion "http://data.agroportal.lirmm.fr/ontologies/GO/submissions/72"^^xsd:anyURI ;
+                               owl:versionIRI "http://purl.obolibrary.org/obo/go/releases/2017-03-08/go.owl"^^xsd:anyURI ;
+                               owl:versionInfo "2017-03-08"^^xsd:string ;
+                               sd:endpoint "http://sparql.agroportal.lirmm.fr/test"^^xsd:anyURI ;
+                               foaf:depiction "http://geneontology.org/sites/default/files/u425/diag-ontology-graph.gif"^^xsd:anyURI ;
+                               foaf:homepage "http://www.geneontology.org/"^^xsd:anyURI ;
+                               foaf:logo "http://geneontology.org/sites/default/files/go-logo-icon.png"^^xsd:anyURI ;
+                               foaf:page "http://geneontology.org/page/ontology-documentation"^^xsd:anyURI ,
+                                         "http://geneontology.org/page/publications"^^xsd:anyURI ;
+                               dct:contributor mod:CRVinayaka ,
+                                               mod:Chuming_Chen ,
+                                               mod:HongzhanHuang ,
+                                               mod:JianZhang ,
+                                               mod:KarenRoss ,
+                                               mod:KatiLaiho ,
+                                               mod:Lai-SuLYeh ,
+                                               mod:QinghuaWang ,
+                                               mod:RajaMazumder ,
+                                               mod:SonaVasudevan ,
+                                               mod:Yongxing_Chen ,
+                                               mod:YuqiMWang ,
+                                               <http://www.isibang.ac.in/ns/orcid.org/0000-0002-1521-4306> ,
+                                               <http://www.isibang.ac.in/ns/orcid.org/0000-0002-4131-735X> ,
+                                               <http://www.isibang.ac.in/ns/orcid.org/0000-0002-8312-6017> ;
+                               dct:title "Gene Ontology"^^xsd:string ;
+                               rdfs:label "Gene ontology"@en .
+
+
+###  http://www.hardwoodgenomics.org/
+<http://www.hardwoodgenomics.org/> rdf:type owl:NamedIndividual ,
+                                            foaf:Project ;
+                                   dct:rightsHolder <http://dbpedia.org/resource/University_of_Tennessee> ,
+                                                    <http://www.isibang.ac.in/ns/mod#orcid.org/0000-0003-2971-9353> ,
+                                                    <http://www.isibang.ac.in/ns/mod#orcid.org/0000-0003-4377-9205> ;
+                                   dct:description "The Hardwood Genomics Web serves forest tree scientists by providing online access to hardwood tree genomic and genetic data, including assembled reference genomes, transcriptomes, and genetic mapping information."^^xsd:string ;
+                                   doap:mailing-list "bcondon@utk.edu"^^xsd:anyURI ,
+                                                     "mstaton1@utk.edu"^^xsd:anyURI ;
+                                   foaf:homepage "http://www.hardwoodgenomics.org/"^^xsd:anyURI ;
+                                   foaf:name "Hardwood Genomics Project"^^xsd:string ;
+                                   rdfs:label "Hardwood Genomics Project"@en .
+
+
+###  http://www.ibc-montpellier.fr/
+<http://www.ibc-montpellier.fr/> rdf:type owl:NamedIndividual ,
+                                          foaf:Project ;
+                                 dct:rightsHolder <http://dbpedia.org/resource/CIRAD> ,
+                                                  <http://dbpedia.org/resource/INRIA> ,
+                                                  <http://dbpedia.org/resource/INSERM> ,
+                                                  <http://dbpedia.org/resource/Inra> ,
+                                                  <http://dbpedia.org/resource/SupAgro> ,
+                                                  <http://dbpedia.org/resource/University_of_Montpellier> ,
+                                                  mod:CNRS ,
+                                                  mod:IRD ,
+                                                  <http://www.isibang.ac.in/ns/orcid.org/0000-0002-2923-9790> ;
+                                 dct:description "Modeling, processing and analysis of large scale data in biology, health, agronomy and environment."^^xsd:string ;
+                                 doap:mailing-list "pierre.larmande@ird.fr"^^xsd:anyURI ;
+                                 foaf:homepage "http://www.ibc-montpellier.fr/"^^xsd:anyURI ;
+                                 rdfs:label "Computational Biology Institute Project"@en .
+
+
+###  http://www.iica.int/
+<http://www.iica.int/> rdf:type owl:NamedIndividual ,
+                                foaf:Organization ;
+                       omv:acronym "IICA"^^xsd:string ;
+                       foaf:homepage "http://www.iica.int/en"^^xsd:anyURI ;
+                       foaf:name "Inter-American Institute for Cooperation on Agriculture"^^xsd:string ;
+                       rdfs:label "Inter-American Institute for Cooperation on Agriculture"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#AGROOE
+mod:AGROOE rdf:type owl:NamedIndividual ,
+                    mod:Ontology ;
+           omv:hasOntologySyntax <http://www.w3.org/ns/formats/RDF_XML> ;
+           omv:acronym "AGROOE"^^xsd:string ;
+           omv:status "Alpha"^^xsd:string ;
+           dct:bibliographicCitation "http://stageportal.lirmm.fr/ontologies/is%20primary%20topic%20of"^^xsd:string ;
+           dct:description "AGROOE is an ontology used to test the metadata extraction, AGROOE is an ontology to illustrate how to describe their ontologies."^^xsd:string ;
+           dct:subject "Ontology"^^xsd:string ;
+           mod:rootClasses "http://lirmm.fr/2015/resource/AGROOE_c_01"^^xsd:anyURI ,
+                           "http://omv.ontoware.org/2005/05/ontology#Ontology"^^xsd:anyURI ,
+                           "http://omv.ontoware.org/2005/05/ontology#OntologyDomain"^^xsd:anyURI ,
+                           "http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology"^^xsd:anyURI ,
+                           "http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringTool"^^xsd:anyURI ,
+                           "http://omv.ontoware.org/2005/05/ontology#OntologyTask"^^xsd:anyURI ,
+                           "http://omv.ontoware.org/2005/05/ontology#OntologyType"^^xsd:anyURI ,
+                           "http://omv.ontoware.org/2005/05/ontology#Organisation"^^xsd:anyURI ,
+                           "http://omv.ontoware.org/2005/05/ontology#Person"^^xsd:anyURI ,
+                           "http://purl.org/dc/terms/Agent"^^xsd:anyURI ,
+                           "http://xmlns.com/foaf/0.1/Person"^^xsd:anyURI ;
+           owl:versionInfo "Alpha 2.0"^^xsd:string ;
+           foaf:homepage "http://agroportal.lirmm.fr/"^^xsd:anyURI ;
+           foaf:page "http://agroportal.lirmm.fr"^^xsd:anyURI .
+
+
+###  http://www.isibang.ac.in/ns/mod#Accessibility
+mod:Accessibility rdf:type owl:NamedIndividual .
+
+
+###  http://www.isibang.ac.in/ns/mod#Accuracy
+mod:Accuracy rdf:type owl:NamedIndividual .
+
+
+###  http://www.isibang.ac.in/ns/mod#Adaptability
+mod:Adaptability rdf:type owl:NamedIndividual .
+
+
+###  http://www.isibang.ac.in/ns/mod#AgNIC
+mod:AgNIC rdf:type owl:NamedIndividual ,
+                   foaf:Organization ;
+          omv:acronym "AgNIC"^^xsd:string ;
+          foaf:homepage "https://www.agnic.org/"^^xsd:anyURI ;
+          foaf:name "Agriculture Network Information Collaborative (AgNIC)"^^xsd:string ;
+          rdfs:label "Agriculture Network Information Collaborative"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#AgronomicLinkedData
+mod:AgronomicLinkedData rdf:type owl:NamedIndividual ,
+                                 mod:Group ;
+                        dct:description "AgroLD is a RDF knowledge base that consists of data integrated from a variety of plant resources and ontologies. The aim of the Agronomic Linked Data (AgroLD) project is to provide a portal for bioinformatics and domain experts to exploit the homogenized data models towards efficiently generating research hypotheses."^^xsd:string ;
+                        rdfs:label "Agronomic Linked Data"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#AnaeeFrance
+mod:AnaeeFrance rdf:type owl:NamedIndividual ,
+                         foaf:Organization ;
+                rdfs:label "AnaEE France"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#AnaeeSemantics
+mod:AnaeeSemantics rdf:type owl:NamedIndividual ,
+                            foaf:Organization .
+
+
+###  http://www.isibang.ac.in/ns/mod#AnaeeSemanticsProject
+mod:AnaeeSemanticsProject rdf:type owl:NamedIndividual ,
+                                   foaf:Project ;
+                          dct:rightsHolder mod:CnrsInra ;
+                          dct:description "The AnaEE semantics group aims to provide a semantics vocabularies (thesaurus and ontology for the description of the study of continental ecosystems and their biodiversity."^^xsd:string ;
+                          doap:mailing-list "anaee_thesaurus@inra.fr"^^xsd:anyURI ;
+                          foaf:homepage "https://www.anaee-france.fr/fr/"^^xsd:anyURI ;
+                          foaf:name "ANAEE Semantics"^^xsd:string ;
+                          rdfs:label "Anaee Semantics Project"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#AnneToulet
+mod:AnneToulet rdf:type owl:NamedIndividual ,
+                        foaf:Person ;
+               foaf:firstName "Anne"^^xsd:string ;
+               foaf:lastName "Toulet"^^xsd:string ;
+               rdfs:label "Anne Toulet"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#Apache
+mod:Apache rdf:type owl:NamedIndividual ,
+                    dct:LicenseDocument .
+
+
+###  http://www.isibang.ac.in/ns/mod#ApplicationBasedApproach
+mod:ApplicationBasedApproach rdf:type owl:NamedIndividual .
+
+
+###  http://www.isibang.ac.in/ns/mod#Automatic
+mod:Automatic rdf:type owl:NamedIndividual ,
+                       omv:OntologyEngineeringMethodology .
+
+
+###  http://www.isibang.ac.in/ns/mod#BarryMoore
+mod:BarryMoore rdf:type owl:NamedIndividual ,
+                        foaf:Person ;
+               doap:mailing-list "barry.moore@genetics.utah.edu"^^xsd:anyURI ;
+               foaf:firstName "Barry"^^xsd:string ;
+               foaf:lastName "Moore"^^xsd:string .
+
+
+###  http://www.isibang.ac.in/ns/mod#CNRS
+mod:CNRS rdf:type owl:NamedIndividual ,
+                  foaf:Organization .
+
+
+###  http://www.isibang.ac.in/ns/mod#CRVinayaka
+mod:CRVinayaka rdf:type owl:NamedIndividual ,
+                        foaf:Person ;
+               foaf:firstName "C.R."^^xsd:string ;
+               foaf:lastName "Vinayaka"^^xsd:string ;
+               rdfs:label "C.R. Vinayaka"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#CaterinaCaracciolo
+mod:CaterinaCaracciolo rdf:type owl:NamedIndividual ,
+                                foaf:Person ;
+                       doap:mailing-list "caterina.caracciolo@fao.org"^^xsd:anyURI ;
+                       foaf:firstName "Caterina"^^xsd:string ;
+                       foaf:lastName "Caracciolo"^^xsd:string ;
+                       foaf:name "Caterina Caracciolo"^^xsd:string ;
+                       rdfs:label "Caterina Caracciolo"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#CathyHWu
+mod:CathyHWu rdf:type owl:NamedIndividual ,
+                      foaf:Person ;
+             rdfs:label "Cathy H. Wu"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#CeciliaArighi
+mod:CeciliaArighi rdf:type owl:NamedIndividual ,
+                           foaf:Person ;
+                  rdfs:label "Cecilia Arighi"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#Chuming_Chen
+mod:Chuming_Chen rdf:type owl:NamedIndividual ,
+                          foaf:Person ;
+                 foaf:firstName "Chuming"^^xsd:string ;
+                 foaf:lastName "Chen"^^xsd:string ;
+                 rdfs:label "Chuming Chen" .
+
+
+###  http://www.isibang.ac.in/ns/mod#Clarity
+mod:Clarity rdf:type owl:NamedIndividual .
+
+
+###  http://www.isibang.ac.in/ns/mod#ClaytonBirkett
+mod:ClaytonBirkett rdf:type owl:NamedIndividual ,
+                            foaf:Person ;
+                   doap:mailing-list "clb343@cornell.edu"^^xsd:anyURI ;
+                   foaf:firstName "Clayton"^^xsd:string ;
+                   foaf:lastName "Birkett"^^xsd:string ;
+                   rdfs:label "Clayton Birkett"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#CnrsInra
+mod:CnrsInra rdf:type owl:NamedIndividual ,
+                      foaf:Organization .
+
+
+###  http://www.isibang.ac.in/ns/mod#ComputationalEfficiency
+mod:ComputationalEfficiency rdf:type owl:NamedIndividual .
+
+
+###  http://www.isibang.ac.in/ns/mod#ComputercraftCorporation
+mod:ComputercraftCorporation rdf:type owl:NamedIndividual ,
+                                      foaf:Organization .
+
+
+###  http://www.isibang.ac.in/ns/mod#Consuming
+mod:Consuming rdf:type owl:NamedIndividual ,
+                       prov:Activity .
+
+
+###  http://www.isibang.ac.in/ns/mod#CropOntologyCurationTool
+mod:CropOntologyCurationTool rdf:type owl:NamedIndividual ,
+                                      mod:Group ;
+                             rdfs:label "Crop Ontology Curation Tool"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#CropOntologyHelpdesk
+mod:CropOntologyHelpdesk rdf:type owl:NamedIndividual ,
+                                  foaf:Organization ;
+                         rdfs:label "Crop Ontology Helpdesk"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#CropOntologyproject
+mod:CropOntologyproject rdf:type owl:NamedIndividual ,
+                                 foaf:Project ;
+                        dct:rightsHolder <http://dbpedia.org/resource/Bioversity_International> ,
+                                         mod:ElizabethArnaud ;
+                        dct:description "Crop Ontology is a service of the Integrated Breeding Platform, and targets agricultural data annotation. The project is led by Bioversity International in collaboration with the CGIAR and other partners. Crop Ontology centralizes concepts defined by breeders to annotate their data egarding germplasm, phenotypes, trial location, environment and design, plant anatomy, and plant development."^^xsd:string ;
+                        doap:mailing-list "e.arnaud@cgiar.org"^^xsd:anyURI ;
+                        foaf:homepage "http://www.cropontology.org/"^^xsd:anyURI ;
+                        rdfs:label "The Crop Ontology project"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#Cyc
+mod:Cyc rdf:type owl:NamedIndividual ,
+                 omv:OntologyEngineeringMethodology .
+
+
+###  http://www.isibang.ac.in/ns/mod#DataDrivenApproach
+mod:DataDrivenApproach rdf:type owl:NamedIndividual .
+
+
+###  http://www.isibang.ac.in/ns/mod#DavidGrant
+mod:DavidGrant rdf:type owl:NamedIndividual ,
+                        foaf:Person ;
+               doap:mailing-list "david.grant@ars.usda.gov"^^xsd:anyURI ;
+               foaf:firstName "David"^^xsd:string ;
+               foaf:lastName "Grant"^^xsd:string ;
+               rdfs:label "David Grant"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#ElisabethHarper
+mod:ElisabethHarper rdf:type owl:NamedIndividual ,
+                             foaf:Person ;
+                    doap:mailing-list "lisaharper@me.com"^^xsd:anyURI ;
+                    foaf:firstName "Elisabeth"^^xsd:string ;
+                    foaf:lastName "Harper"^^xsd:string ;
+                    rdfs:label "Elisabeth Harper"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#ElizabethArnaud
+mod:ElizabethArnaud rdf:type owl:NamedIndividual ,
+                             foaf:Person ;
+                    doap:mailing-list "e.arnaud@cgiar.org"^^xsd:anyURI ;
+                    rdfs:label "Elizabeth Arnaud"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#EstherDzalé-Yeumo
+mod:EstherDzalé-Yeumo rdf:type owl:NamedIndividual ,
+                               foaf:Person ;
+                      rdfs:label "Esther Dzalé-Yeumo"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#EvaluationByHuman
+mod:EvaluationByHuman rdf:type owl:NamedIndividual .
+
+
+###  http://www.isibang.ac.in/ns/mod#FionaMcCarthy
+mod:FionaMcCarthy rdf:type owl:NamedIndividual ,
+                           foaf:Person ;
+                  doap:mailing-list "fionamcc@email.arizona.edu"^^xsd:anyURI ;
+                  foaf:firstName "Fiona"^^xsd:string ;
+                  foaf:lastName "McCarthy"^^xsd:string ;
+                  rdfs:label "Fiona McCarthy"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#FirstOrderLogic
+mod:FirstOrderLogic rdf:type owl:NamedIndividual ,
+                             omv:KnowledgeRepresentationParadigm .
+
+
+###  http://www.isibang.ac.in/ns/mod#GeneOntologyPlus
+mod:GeneOntologyPlus rdf:type owl:NamedIndividual ,
+                              mod:Ontology ;
+                     omv:resourceLocator "http://purl.obolibrary.org/obo/go/extensions/go-plus.owl"^^xsd:anyURI ;
+                     rdfs:label "Gene Ontology plus"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#GoldStandard
+mod:GoldStandard rdf:type owl:NamedIndividual .
+
+
+###  http://www.isibang.ac.in/ns/mod#HongzhanHuang
+mod:HongzhanHuang rdf:type owl:NamedIndividual ,
+                           foaf:Person ;
+                  foaf:firstName "Hongzhan"^^xsd:string ;
+                  foaf:lastName "Huang"^^xsd:string ;
+                  rdfs:label "Hongzhan Huang"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#INRALinkedOpenVocabularies
+mod:INRALinkedOpenVocabularies rdf:type owl:NamedIndividual ,
+                                        mod:Group .
+
+
+###  http://www.isibang.ac.in/ns/mod#IRD
+mod:IRD rdf:type owl:NamedIndividual ,
+                 foaf:Organization .
+
+
+###  http://www.isibang.ac.in/ns/mod#IntegratedBreedingPlatform
+mod:IntegratedBreedingPlatform rdf:type owl:NamedIndividual ,
+                                        foaf:Organization ;
+                               foaf:homepage "https://www.integratedbreeding.net/"^^xsd:anyURI ;
+                               rdfs:label "Integrated Breeding Platform"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#JianZhang
+mod:JianZhang rdf:type owl:NamedIndividual ,
+                       foaf:Person ;
+              foaf:firstName "Jian"^^xsd:string ;
+              foaf:lastName "Zhang"^^xsd:string ;
+              rdfs:label "Jian Zhang"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#KarenRoss
+mod:KarenRoss rdf:type owl:NamedIndividual ,
+                       foaf:Person ;
+              foaf:firstName "Karen"^^xsd:string ;
+              foaf:lastName "Ross"^^xsd:string ;
+              rdfs:label "Karen Ross"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#KathleenFoltz
+mod:KathleenFoltz rdf:type owl:NamedIndividual ,
+                           foaf:Person ;
+                  doap:mailing-list "foltz@lifesci.ucsb.edu"^^xsd:anyURI ;
+                  foaf:firstName "Kathleen"^^xsd:string ;
+                  foaf:lastName "Foltz"^^xsd:string ;
+                  rdfs:label "Kathleen Foltz"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#KatiLaiho
+mod:KatiLaiho rdf:type owl:NamedIndividual ,
+                       foaf:Person ;
+              foaf:firstName "Kati"^^xsd:string ;
+              foaf:lastName "Laiho"^^xsd:string ;
+              rdfs:label "Kati Laiho"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#Lai-SuLYeh
+mod:Lai-SuLYeh rdf:type owl:NamedIndividual ,
+                        foaf:Person ;
+               foaf:firstName "Lai-Su L."^^xsd:string ;
+               foaf:lastName "Yeh"^^xsd:string ;
+               rdfs:label "Lai-Su L. Yeh"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#LeslieArminski
+mod:LeslieArminski rdf:type owl:NamedIndividual ,
+                            foaf:Person ;
+                   rdfs:label "Leslie Arminski"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#LynnSchriml
+mod:LynnSchriml rdf:type owl:NamedIndividual ,
+                         foaf:Person ;
+                rdfs:label "Lynn Schriml"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#MODApproach
+mod:MODApproach rdf:type owl:NamedIndividual ,
+                         omv:OntologyEngineeringMethodology .
+
+
+###  http://www.isibang.ac.in/ns/mod#MetadataForOntologyDescriptionAndPublication
+mod:MetadataForOntologyDescriptionAndPublication rdf:type owl:NamedIndividual ,
+                                                          mod:Ontology ;
+                                                 omv:conformsToKnowledgeRepresentationParadigm omv:DescriptionLogics ;
+                                                 omv:endorsedBy <http://dbpedia.org/resource/University_of_Stanford> ;
+                                                 omv:hasFormalityLevel <http://w3id.org/nkos/nkostype#ontology> ;
+                                                 omv:hasOntologyLanguage omv:OWL-DL ;
+                                                 omv:hasOntologySyntax <http://www.w3.org/ns/formats/RDF_XML> ;
+                                                 omv:isOfType mod:Vocabulary ;
+                                                 omv:usedOntologyEngineeringMethodology mod:MODApproach ;
+                                                 omv:usedOntologyEngineeringTool omv:Protégé ;
+                                                 dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                                 dct:rightsHolder <http://dbpedia.org/page/Indian_Statistical_Institute> ,
+                                                                  <http://dbpedia.org/resource/University_of_Montpellier> ,
+                                                                  <http://orcid.org/0000-0002-2404-1582> ,
+                                                                  <http://orcid.org/0000-0003-3059-8202> ;
+                                                 pav:curatedBy mod:AnneToulet ;
+                                                 mod:group mod:OntologyMetadataCommunity ;
+                                                 mod:ontologyInUse <http://agroportal.lirmm.fr/> ;
+                                                 prov:wasGeneratedBy mod:Transforming ;
+                                                 foaf:fundedBy <http://dbpedia.org/page/Indian_Statistical_Institute> ,
+                                                               <http://dbpedia.org/resource/University_of_Montpellier> ;
+                                                 omv:URI "https://github.com/sifrproject/MOD-Ontology/blob/master/mod-v1.2.owl"^^xsd:anyURI ;
+                                                 omv:acronym "MOD"^^xsd:string ;
+                                                 omv:designedForOntologyTask "To describe the vocabularies, e.g., ontology, classification, metadata, etc."^^xsd:string ;
+                                                 omv:keyClasses "Agent"^^xsd:string ,
+                                                                "Group"^^xsd:string ,
+                                                                "Ontology"^^xsd:string ,
+                                                                "Ontology type"^^xsd:string ,
+                                                                "Project"^^xsd:string ;
+                                                 omv:keywords "Ontology metadata"^^xsd:string ;
+                                                 omv:numberOfAxioms "1331"^^xsd:nonNegativeInteger ;
+                                                 omv:numberOfClasses "20"^^xsd:nonNegativeInteger ;
+                                                 omv:numberOfIndividuals "166"^^xsd:nonNegativeInteger ;
+                                                 omv:numberOfProperties "88"^^xsd:nonNegativeInteger ;
+                                                 omv:resourceLocator "https://github.com/sifrproject/MOD-Ontology/blob/master/mod-v1.2.owl"^^xsd:anyURI ;
+                                                 omv:status "MOD 1.2 is ready for production use."^^xsd:string ;
+                                                 dct:created "2016-09-15T00:00:00"^^xsd:dateTime ;
+                                                 dct:dateSubmitted "2017-01-10T00:00:00"^^xsd:dateTime ;
+                                                 dct:description "A metadata vocabulary to describe and publish ontologies on the Web."^^xsd:string ;
+                                                 dct:identifier "http://www.isibang.ac.in/ns/mod"^^xsd:anyURI ,
+                                                                "https://github.com/sifrproject/MOD-Ontology"^^xsd:anyURI ;
+                                                 dct:language "http://lexvo.org/id/iso639-3/eng"^^xsd:anyURI ;
+                                                 dct:source "MOD 1.0 and AgroPortal"^^xsd:string ;
+                                                 dct:subject "Ontology metadata"^^xsd:string ;
+                                                 vann:preferredNamespacePrefix "mod"^^xsd:string ;
+                                                 vann:preferredNamespaceUri "http://www.isibang.ac.in/ns/mod#"^^xsd:anyURI ;
+                                                 doap:bugDatabase "https://github.com/sifrproject/MOD-Ontology/issues"^^xsd:anyURI ;
+                                                 doap:mailing-list "dutta2005@gmail.com"^^xsd:anyURI ,
+                                                                   "jonquet@lirmm.fr"^^xsd:anyURI ;
+                                                 mod:competencyQuestion """(1) List out the totals number ontologies in the triple store? 
+(2) Which ontology editor is used most in constructing the ontologies? 
+(3) How many classes and properties an ontology has?"""^^xsd:string ;
+                                                 mod:numberOfDataProperties "60"^^xsd:nonNegativeInteger ;
+                                                 mod:numberOfObjectProperties "28"^^xsd:nonNegativeInteger ;
+                                                 mod:rootClasses "http://www.isibang.ac.in/ns/mod#Activity"^^xsd:anyURI ,
+                                                                 "http://www.isibang.ac.in/ns/mod#Agent"^^xsd:anyURI ,
+                                                                 "http://www.isibang.ac.in/ns/mod#Frequency"^^xsd:anyURI ,
+                                                                 "http://www.isibang.ac.in/ns/mod#Group"^^xsd:anyURI ,
+                                                                 "http://www.isibang.ac.in/ns/mod#MethodOfAccrual"^^xsd:anyURI ,
+                                                                 "http://www.isibang.ac.in/ns/mod#Ontology"^^xsd:anyURI ,
+                                                                 "http://www.isibang.ac.in/ns/mod#Policy"^^xsd:anyURI ,
+                                                                 "http://www.isibang.ac.in/ns/mod#Project"^^xsd:anyURI ,
+                                                                 "http://www.isibang.ac.in/ns/mod#RightsStatement"^^xsd:anyURI ;
+                                                 mod:vocabularyUsed "http://omv.ontoware.org/2005/05/ontology#"^^xsd:anyURI ,
+                                                                    "http://purl.org/dc/terms/"^^xsd:anyURI ,
+                                                                    "http://purl.org/pav/"^^xsd:anyURI ,
+                                                                    "http://usefulinc.com/ns/doap/"^^xsd:anyURI ,
+                                                                    "http://www.w3.org/2004/02/skos/core#"^^xsd:anyURI ,
+                                                                    "http://www.w3.org/ns/prov#"^^xsd:anyURI ,
+                                                                    "http://xmlns.com/foaf/0.1"^^xsd:anyURI ;
+                                                 owl:deprecated "false"^^xsd:boolean ;
+                                                 owl:priorVersion "www.isibang.ac.in/~bisu/ontology/mod-ontology-09092016.owl"^^xsd:anyURI ;
+                                                 owl:versionIRI "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+                                                 owl:versionInfo "MOD version 1.2. The preceeding version is MOD1.1."^^xsd:string ;
+                                                 foaf:page "http://www.isibang.ac.in/ns/mod.html"^^xsd:anyURI ;
+                                                 dct:contributor mod:AnneToulet ;
+                                                 dct:creator <http://orcid.org/0000-0002-2404-1582> ,
+                                                             <http://orcid.org/0000-0003-3059-8202> ;
+                                                 dct:title "Metadata for Ontology Description and Publication"^^xsd:string ;
+                                                 rdfs:label "Metadata for Ontology Description and publication"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#MethOntology
+mod:MethOntology rdf:type owl:NamedIndividual ,
+                          omv:OntologyEngineeringMethodology .
+
+
+###  http://www.isibang.ac.in/ns/mod#Modifying
+mod:Modifying rdf:type owl:NamedIndividual ,
+                       prov:Activity .
+
+
+###  http://www.isibang.ac.in/ns/mod#NCBITAXON
+mod:NCBITAXON rdf:type owl:NamedIndividual ,
+                       mod:Ontology ;
+              omv:hasFormalityLevel <http://w3id.org/nkos/nkostype#taxonomy> ;
+              omv:hasOntologyLanguage mod:UMLS ;
+              omv:hasOntologySyntax <http://www.w3.org/ns/formats/Turtle> ;
+              omv:isOfType omv:DomainOntology ;
+              dct:publisher <http://dbpedia.org/resource/National_center_for_biotechnology_information> ;
+              dct:rightsHolder <http://dbpedia.org/resource/National_Library_of_Medicine> ,
+                               <http://dbpedia.org/resource/National_center_for_biotechnology_information> ;
+              mod:group mod:AgronomicLinkedData ,
+                        mod:OBOFoundry ;
+              mod:ontologyInUse <http://vest.agrisemantics.org/> ,
+                                <http://volvestre.cirad.fr:8080/agrold/> ,
+                                <http://www.ibc-montpellier.fr/> ;
+              omv:acronym "NCBITAXON"^^xsd:string ;
+              omv:keyClasses "Viroids"^^xsd:string ,
+                             "Viruses"^^xsd:string ,
+                             "cellular organisms"^^xsd:string ,
+                             "plasmids"^^xsd:string ;
+              omv:numberOfClasses "906907"^^xsd:nonNegativeInteger ;
+              omv:numberOfIndividuals "0"^^xsd:nonNegativeInteger ;
+              omv:numberOfProperties "3"^^xsd:nonNegativeInteger ;
+              omv:resourceLocator "https://www.ncbi.nlm.nih.gov/home/download.shtml"^^xsd:anyURI ;
+              omv:status "Production"^^xsd:string ;
+              dct:created "2015-06-09T17:38:59-07:00"^^xsd:dateTime ;
+              dct:dateSubmitted "2015-06-23T00:00:00"^^xsd:dateTime ;
+              dct:description "The NCBI Taxonomy Database is a curated classification and nomenclature for all of the organisms in the public sequence databases. This currently represents about 10% of the described species of life on the planet."^^xsd:string ;
+              dct:hasFormat "http://purl.obolibrary.org/obo/ncbitaxon.owl"^^xsd:anyURI ;
+              dct:identifier "https://bioportal.bioontology.org/ontologies/NCBITAXON"^^xsd:anyURI ;
+              dct:isFormatOf "https://www.ncbi.nlm.nih.gov/taxonomy"^^xsd:anyURI ;
+              dct:language "http://lexvo.org/id/iso639-3/eng"^^xsd:anyURI ;
+              dct:subject "Taxonomic Classifications of Organisms"^^xsd:string ;
+              vann:example "http://purl.bioontology.org/ontology/NCBITAXON/201174"^^xsd:anyURI ;
+              vann:preferredNamespacePrefix "ncbitaxon"^^xsd:string ;
+              doap:mailing-list "info@ncbi.nlm.nih.gov"^^xsd:anyURI ;
+              mod:rootClasses "http://purl.bioontology.org/ontology/NCBITAXON/10239"^^xsd:anyURI ,
+                              "http://purl.bioontology.org/ontology/NCBITAXON/12884"^^xsd:anyURI ,
+                              "http://purl.bioontology.org/ontology/NCBITAXON/131567"^^xsd:anyURI ,
+                              "http://purl.bioontology.org/ontology/NCBITAXON/28384"^^xsd:anyURI ;
+              owl:versionInfo "2015AA"^^xsd:string ;
+              foaf:homepage "http://agroportal.lirmm.fr/ontologies/NCBITAXON"^^xsd:anyURI ,
+                            "https://www.ncbi.nlm.nih.gov/"^^xsd:anyURI ;
+              foaf:logo "https://www.ncbi.nlm.nih.gov/portal/portal3rc.fcgi/4117326/img/28977"^^xsd:anyURI ;
+              foaf:page "https://doi.org/10.1093/nar/gki062"^^xsd:anyURI ,
+                        "https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/NCBI/"^^xsd:anyURI ;
+              dct:title "NCBI TAXON Ontology"^^xsd:string ;
+              rdfs:label "NCBITAXON ontology"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#NIGMS
+mod:NIGMS rdf:type owl:NamedIndividual ,
+                   foaf:Organization .
+
+
+###  http://www.isibang.ac.in/ns/mod#OBO
+mod:OBO rdf:type owl:NamedIndividual ,
+                 omv:OntologyLanguage .
+
+
+###  http://www.isibang.ac.in/ns/mod#OBOEdit
+mod:OBOEdit rdf:type owl:NamedIndividual ,
+                     omv:OntologyEngineeringTool ;
+            foaf:homepage "http://oboedit.org/"^^xsd:anyURI ;
+            rdfs:label "OBO-Edit"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#OBOFoundry
+mod:OBOFoundry rdf:type owl:NamedIndividual ,
+                        mod:Group ;
+               rdfs:label "OBO Foundry"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#OntologyMetadataCommunity
+mod:OntologyMetadataCommunity rdf:type owl:NamedIndividual ,
+                                       mod:Group .
+
+
+###  http://www.isibang.ac.in/ns/mod#PIR
+mod:PIR rdf:type owl:NamedIndividual ,
+                 foaf:Organization ;
+        foaf:homepage "http://proconsortium.org/pirwww/about/staff.shtml"^^xsd:anyURI ;
+        rdfs:label "PIR"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#PROConsortium
+mod:PROConsortium rdf:type owl:NamedIndividual ,
+                           foaf:Organization ;
+                  foaf:homepage "http://proconsortium.org"^^xsd:anyURI ;
+                  rdfs:label "PRO Consortium"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#Palnteome
+mod:Palnteome rdf:type owl:NamedIndividual ,
+                       foaf:Organization ;
+              foaf:homepage "http://www.planteome.org/"^^xsd:anyURI ;
+              rdfs:label "Planteome"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#ProcessOntology
+mod:ProcessOntology rdf:type owl:NamedIndividual ,
+                             omv:OntologyType .
+
+
+###  http://www.isibang.ac.in/ns/mod#Processing
+mod:Processing rdf:type owl:NamedIndividual ,
+                        prov:Activity .
+
+
+###  http://www.isibang.ac.in/ns/mod#PropositionalLogic
+mod:PropositionalLogic rdf:type owl:NamedIndividual ,
+                                omv:KnowledgeRepresentationParadigm .
+
+
+###  http://www.isibang.ac.in/ns/mod#ProteinInformationResource
+mod:ProteinInformationResource rdf:type owl:NamedIndividual ,
+                                        foaf:Organization ;
+                               rdfs:label "Protein Information Resource"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#QinghuaWang
+mod:QinghuaWang rdf:type owl:NamedIndividual ,
+                         foaf:Person ;
+                foaf:firstName "Qinghua"^^xsd:string ;
+                foaf:lastName "Wang"^^xsd:string ;
+                rdfs:label "Qinghua Wang"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#RDA
+mod:RDA rdf:type owl:NamedIndividual ,
+                 foaf:Organization ;
+        rdfs:label "Research Data Alliance"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#RajaMazumder
+mod:RajaMazumder rdf:type owl:NamedIndividual ,
+                          foaf:Person ;
+                 foaf:firstName "Raja"^^xsd:string ;
+                 foaf:lastName "Mazumder"^^xsd:string ;
+                 rdfs:label "Raja Mazumder"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#RelationsOntology
+mod:RelationsOntology rdf:type owl:NamedIndividual ,
+                               mod:Ontology ;
+                      foaf:homepage "http://www.obofoundry.org/ontology/ro"^^xsd:anyURI ;
+                      rdfs:label "Relations Ontology"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#Relocating
+mod:Relocating rdf:type owl:NamedIndividual ,
+                        prov:Activity .
+
+
+###  http://www.isibang.ac.in/ns/mod#RichardFulss
+mod:RichardFulss rdf:type owl:NamedIndividual ,
+                          foaf:Person ;
+                 foaf:firstName "Richard"^^xsd:string ;
+                 foaf:lastName "Fulss"^^xsd:string ;
+                 rdfs:label "Richard Fulss"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#SKOS
+mod:SKOS rdf:type owl:NamedIndividual ,
+                  omv:OntologyLanguage .
+
+
+###  http://www.isibang.ac.in/ns/mod#ServiceOntology
+mod:ServiceOntology rdf:type owl:NamedIndividual ,
+                             omv:OntologyType .
+
+
+###  http://www.isibang.ac.in/ns/mod#SonaVasudevan
+mod:SonaVasudevan rdf:type owl:NamedIndividual ,
+                           foaf:Person ;
+                  foaf:firstName "Sona"^^xsd:string ;
+                  foaf:lastName "Vasudevan"^^xsd:string ;
+                  rdfs:label "Sona Vasudevan"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#SookJung
+mod:SookJung rdf:type owl:NamedIndividual ,
+                      foaf:Person ;
+             doap:mailing-list "sook_jung@wsu.edu"^^xsd:anyURI ;
+             foaf:firstName "Sook"^^xsd:string ;
+             foaf:homepage "https://www.bioinfo.wsu.edu/node/199"^^xsd:anyURI ;
+             foaf:lastName "Jung"^^xsd:string ;
+             rdfs:label "Sook Jung"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#TAIRcurator
+mod:TAIRcurator rdf:type owl:NamedIndividual ,
+                         foaf:Person ;
+                doap:mailing-list "curator@arabidopsis.org"^^xsd:anyURI ;
+                rdfs:label "TAIR curator"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#TermGenie1.0
+mod:TermGenie1.0 rdf:type owl:NamedIndividual ,
+                          omv:OntologyEngineeringTool ;
+                 rdfs:label "TermGenie 1.0"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#Transforming
+mod:Transforming rdf:type owl:NamedIndividual ,
+                          prov:Activity .
+
+
+###  http://www.isibang.ac.in/ns/mod#UMLS
+mod:UMLS rdf:type owl:NamedIndividual ,
+                  omv:OntologyLanguage ;
+         omv:acronym "UMLS"^^xsd:string ;
+         rdfs:label "UMLS"@en ,
+                    "Unified Medical Language System"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#Vocabulary
+mod:Vocabulary rdf:type owl:NamedIndividual ,
+                        omv:OntologyType .
+
+
+###  http://www.isibang.ac.in/ns/mod#YAMO
+mod:YAMO rdf:type owl:NamedIndividual ,
+                  omv:OntologyEngineeringMethodology .
+
+
+###  http://www.isibang.ac.in/ns/mod#Yongxing_Chen
+mod:Yongxing_Chen rdf:type owl:NamedIndividual ,
+                           foaf:Person ;
+                  foaf:firstName "Yongxing"^^xsd:string ;
+                  foaf:lastName "Chen"^^xsd:string ;
+                  rdfs:label "Yongxing Chen" .
+
+
+###  http://www.isibang.ac.in/ns/mod#YuqiMWang
+mod:YuqiMWang rdf:type owl:NamedIndividual ,
+                       foaf:Person ;
+              foaf:firstName "Yuqi M."^^xsd:string ;
+              foaf:lastName "Wang"^^xsd:string ;
+              rdfs:label "Yuqi M. Wang"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#irregular
+mod:irregular rdf:type owl:NamedIndividual ,
+                       dct:Frequency .
+
+
+###  http://www.isibang.ac.in/ns/mod#nalt2skos
+mod:nalt2skos rdf:type owl:NamedIndividual ,
+                       omv:OntologyEngineeringTool .
+
+
+###  http://www.isibang.ac.in/ns/mod#orcid.org/0000-0001-5985-7429
+<http://www.isibang.ac.in/ns/mod#orcid.org/0000-0001-5985-7429> rdf:type owl:NamedIndividual ,
+                                                                         foaf:Person ;
+                                                                doap:mailing-list "colin@tantallon.org.uk"^^xsd:anyURI ;
+                                                                foaf:firstName "Colin"^^xsd:string ;
+                                                                foaf:lastName "Batchelor"^^xsd:string ;
+                                                                rdfs:label "Colin Batchelor"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#orcid.org/0000-0001-6484-1077
+<http://www.isibang.ac.in/ns/mod#orcid.org/0000-0001-6484-1077> rdf:type owl:NamedIndividual ,
+                                                                         foaf:Person ;
+                                                                doap:mailing-list "kmayer@helmholtz-muenchen.de"^^xsd:anyURI ;
+                                                                foaf:firstName "Klaus"^^xsd:string ;
+                                                                foaf:lastName "Mayer"^^xsd:string ;
+                                                                rdfs:label "Klaus Mayer"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#orcid.org/0000-0002-0831-6427
+<http://www.isibang.ac.in/ns/mod#orcid.org/0000-0002-0831-6427> rdf:type owl:NamedIndividual ,
+                                                                         foaf:Person ;
+                                                                doap:mailing-list "karen.eilbeck@genetics.utah.edu"^^xsd:anyURI ;
+                                                                foaf:firstName "Karen"^^xsd:string ;
+                                                                foaf:lastName "Eilbeck"^^xsd:string ;
+                                                                rdfs:label "Karen Eilbeck"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#orcid.org/0000-0002-1253-5550
+<http://www.isibang.ac.in/ns/mod#orcid.org/0000-0002-1253-5550> rdf:type owl:NamedIndividual ,
+                                                                         foaf:Person ;
+                                                                doap:mailing-list "christopher.childers@ars.usda.gov"^^xsd:anyURI ;
+                                                                foaf:firstName "Christopher"^^xsd:string ;
+                                                                foaf:lastName "Childers"^^xsd:string ;
+                                                                rdfs:label "Chris Childers"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#orcid.org/0000-0003-2777-8034
+<http://www.isibang.ac.in/ns/mod#orcid.org/0000-0003-2777-8034> rdf:type owl:NamedIndividual ,
+                                                                         foaf:Person ;
+                                                                doap:mailing-list "scannon@iastate.edu"^^xsd:anyURI ;
+                                                                foaf:firstName "Steven"^^xsd:string ;
+                                                                foaf:lastName "Cannon"^^xsd:string ;
+                                                                rdfs:label "Steven Cannon"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#orcid.org/0000-0003-2971-9353
+<http://www.isibang.ac.in/ns/mod#orcid.org/0000-0003-2971-9353> rdf:type owl:NamedIndividual ,
+                                                                         foaf:Person ;
+                                                                doap:mailing-list "mstaton1@utk.edu"^^xsd:anyURI ;
+                                                                foaf:firstName "Margaret"^^xsd:string ;
+                                                                foaf:lastName "Staton"^^xsd:string ;
+                                                                rdfs:label "Margaret Staton"@en .
+
+
+###  http://www.isibang.ac.in/ns/mod#orcid.org/0000-0003-4377-9205
+<http://www.isibang.ac.in/ns/mod#orcid.org/0000-0003-4377-9205> rdf:type owl:NamedIndividual ,
+                                                                         foaf:Person ;
+                                                                doap:mailing-list "bcondon@utk.edu"^^xsd:anyURI ;
+                                                                foaf:firstName "Bradford"^^xsd:string ;
+                                                                foaf:lastName "Condon"^^xsd:string ;
+                                                                rdfs:label "Bradford Condon"@en .
+
+
+###  http://www.isibang.ac.in/ns/orcid.org/0000-0001-5809-9523
+<http://www.isibang.ac.in/ns/orcid.org/0000-0001-5809-9523> rdf:type owl:NamedIndividual ,
+                                                                     foaf:Person ;
+                                                            doap:mailing-list "dan5@georgetown.edu"^^xsd:anyURI ;
+                                                            rdfs:label "Darren A. Natale"@en .
+
+
+###  http://www.isibang.ac.in/ns/orcid.org/0000-0002-1005-8383
+<http://www.isibang.ac.in/ns/orcid.org/0000-0002-1005-8383> rdf:type owl:NamedIndividual ,
+                                                                     foaf:Person ;
+                                                            doap:mailing-list "jaiswalp@science.oregonstate.edu"^^xsd:anyURI ;
+                                                            foaf:firstName "Pankaj"^^xsd:string ;
+                                                            foaf:lastName "Jaiswal"^^xsd:string ;
+                                                            rdfs:label "Pankaj Jaiswal"@en .
+
+
+###  http://www.isibang.ac.in/ns/orcid.org/0000-0002-1521-4306
+<http://www.isibang.ac.in/ns/orcid.org/0000-0002-1521-4306> rdf:type owl:NamedIndividual ,
+                                                                     foaf:Person ;
+                                                            foaf:firstName "Baris"^^xsd:string ;
+                                                            foaf:lastName "Suzek"^^xsd:string ;
+                                                            rdfs:label "Baris Suzek"@en .
+
+
+###  http://www.isibang.ac.in/ns/orcid.org/0000-0002-2923-9790
+<http://www.isibang.ac.in/ns/orcid.org/0000-0002-2923-9790> rdf:type owl:NamedIndividual ,
+                                                                     foaf:Person ;
+                                                            doap:mailing-list "pierre.larmande@ird.fr"^^xsd:anyURI ;
+                                                            foaf:firstName "Pierre"^^xsd:string ;
+                                                            foaf:lastName "Larmande"^^xsd:string ;
+                                                            rdfs:label "Pierre Larmande"@en .
+
+
+###  http://www.isibang.ac.in/ns/orcid.org/0000-0002-4131-735X
+<http://www.isibang.ac.in/ns/orcid.org/0000-0002-4131-735X> rdf:type owl:NamedIndividual ,
+                                                                     foaf:Person ;
+                                                            foaf:firstName "John S."^^xsd:string ;
+                                                            foaf:lastName "Garavelli"^^xsd:string ;
+                                                            rdfs:label "John S. Garavelli"@en .
+
+
+###  http://www.isibang.ac.in/ns/orcid.org/0000-0002-5638-3990
+<http://www.isibang.ac.in/ns/orcid.org/0000-0002-5638-3990> rdf:type owl:NamedIndividual ,
+                                                                     foaf:Person ;
+                                                            doap:mailing-list "r-chisholm@northwestern.edu"^^xsd:anyURI ;
+                                                            foaf:firstName "Rex"^^xsd:string ;
+                                                            foaf:lastName "Chisholm"^^xsd:string ;
+                                                            rdfs:label "Rex Chisholm"@en .
+
+
+###  http://www.isibang.ac.in/ns/orcid.org/0000-0002-8312-6017
+<http://www.isibang.ac.in/ns/orcid.org/0000-0002-8312-6017> rdf:type owl:NamedIndividual ,
+                                                                     foaf:Person ;
+                                                            foaf:firstName "Peter"^^xsd:string ;
+                                                            foaf:lastName "McGarvey"^^xsd:string ;
+                                                            rdfs:label "Peter McGarvey"@en .
+
+
+###  http://www.isibang.ac.in/ns/orcid.org/0000-0002-9399-8003
+<http://www.isibang.ac.in/ns/orcid.org/0000-0002-9399-8003> rdf:type owl:NamedIndividual ,
+                                                                     foaf:Person ;
+                                                            doap:mailing-list "r.shrestha2@cgiar.org"^^xsd:anyURI ;
+                                                            foaf:firstName "Rosemary"^^xsd:string ;
+                                                            foaf:lastName "Shrestha"^^xsd:string ;
+                                                            rdfs:label "Rosemary Shrestha"@en .
+
+
+###  http://www.isibang.ac.in/ns/orcid.org/0000-0003-3860-4304
+<http://www.isibang.ac.in/ns/orcid.org/0000-0003-3860-4304> rdf:type owl:NamedIndividual ,
+                                                                     foaf:Person ;
+                                                            doap:mailing-list "valeria.pesce@fao.org"^^xsd:anyURI ;
+                                                            foaf:firstName "Valeria"^^xsd:string ;
+                                                            foaf:lastName "Pesce"^^xsd:string ;
+                                                            rdfs:label "Valeria Pesce"@en .
+
+
+###  http://www.northwestern.edu/
+<http://www.northwestern.edu/> rdf:type owl:NamedIndividual ,
+                                        foaf:Organization ;
+                               rdfs:label "Northwestern University"@en .
+
+
+###  http://www.sequenceontology.org/
+<http://www.sequenceontology.org/> rdf:type owl:NamedIndividual ,
+                                            mod:Ontology ;
+                                   omv:endorsedBy <https://www.rd-alliance.org/groups/wheat-data-interoperability-wg.html> ;
+                                   omv:hasFormalityLevel <http://w3id.org/nkos/nkostype#ontology> ;
+                                   omv:hasOntologyLanguage <https://www.w3.org/2002/07/owl> ;
+                                   omv:isOfType omv:DomainOntology ;
+                                   omv:usedOntologyEngineeringTool mod:OBOEdit ;
+                                   dct:rightsHolder mod:BarryMoore ,
+                                                    <http://www.isibang.ac.in/ns/mod#orcid.org/0000-0001-5985-7429> ,
+                                                    <http://www.isibang.ac.in/ns/mod#orcid.org/0000-0002-0831-6427> ;
+                                   mod:group <http://agbiodata.agroportal.lirmm.fr/> ,
+                                             <http://wheat.agroportal.lirmm.fr/> ,
+                                             mod:AgronomicLinkedData ,
+                                             mod:OBOFoundry ;
+                                   mod:ontologyInUse <http://dictybase.org/> ,
+                                                     <http://vest.agrisemantics.org/> ,
+                                                     <http://volvestre.cirad.fr:8080/agrold/> ,
+                                                     <http://www.hardwoodgenomics.org/> ,
+                                                     <http://www.ibc-montpellier.fr/> ,
+                                                     <https://i5k.nal.usda.gov/> ,
+                                                     <https://peanutbase.org/> ,
+                                                     <https://triticeaetoolbox.org/> ,
+                                                     <https://www.rosaceae.org/> ,
+                                                     <https://www.soybase.org/> ;
+                                   omv:URI "http://purl.obolibrary.org/obo/so.owl"^^xsd:anyURI ;
+                                   omv:acronym "SO"^^xsd:string ;
+                                   omv:keyClasses "Chromosome variation"^^xsd:string ,
+                                                  "Contig collection"^^xsd:string ,
+                                                  "Genome"^^xsd:string ,
+                                                  "Peptide collection"^^xsd:string ;
+                                   omv:notes "test"^^xsd:string ;
+                                   omv:numberOfClasses "2385"^^xsd:nonNegativeInteger ;
+                                   omv:numberOfIndividuals "0"^^xsd:nonNegativeInteger ;
+                                   omv:numberOfProperties "50"^^xsd:nonNegativeInteger ;
+                                   omv:status "Production"^^xsd:string ;
+                                   dct:created "2017-06-26T18:01:50+02:00"^^xsd:dateTime ;
+                                   dct:dateSubmitted "2017-06-26T18:01:50+02:00"^^xsd:dateTime ;
+                                   dct:description "A structured controlled vocabulary for sequence annotation, for the exchange of annotation data and for the description of sequence objects in databases."^^xsd:string ;
+                                   dct:identifier "http://purl.obolibrary.org/obo/so.owl"^^xsd:anyURI ;
+                                   dct:isFormatOf "http://purl.obolibrary.org/obo/so.obo"^^xsd:anyURI ;
+                                   dct:language "http://lexvo.org/id/iso639-3/eng"^^xsd:anyURI ;
+                                   dct:subject "Plant Genetic Resources"^^xsd:string ,
+                                               "http://data.agroportal.lirmm.fr/categories/GENPLANT"^^xsd:string ;
+                                   vann:preferredNamespacePrefix "sequence"^^xsd:string ;
+                                   doap:bugDatabase "https://github.com/The-Sequence-Ontology/SO-Ontologies/issues"^^xsd:anyURI ;
+                                   doap:repository "https://github.com/The-Sequence-Ontology/SO-Ontologies"^^xsd:anyURI ;
+                                   mod:rootClasses "http://purl.obolibrary.org/obo/SO_0000110"^^xsd:anyURI ,
+                                                   "http://purl.obolibrary.org/obo/SO_0000400"^^xsd:anyURI ,
+                                                   "http://purl.obolibrary.org/obo/SO_0001060"^^xsd:anyURI ,
+                                                   "http://purl.obolibrary.org/obo/SO_0001260"^^xsd:anyURI ;
+                                   owl:deprecated "false"^^xsd:boolean ;
+                                   owl:priorVersion "http://data.agroportal.lirmm.fr/ontologies/SO/submissions/16"^^xsd:anyURI ;
+                                   sd:endpoint "http://sparql.agroportal.lirmm.fr/test/"^^xsd:anyURI ;
+                                   foaf:homepage "http://www.sequenceontology.org/"^^xsd:anyURI ;
+                                   foaf:page "http://www.sequenceontology.org/?page_id=296"^^xsd:anyURI ,
+                                             "https://github.com/The-Sequence-Ontology"^^xsd:anyURI ;
+                                   dct:title "Sequence Types and Features Ontology"^^xsd:string ;
+                                   rdfs:label "Sequence Types and Features Ontology"@en .
+
+
+###  http://www.w3.org/ns/formats/N-Triples
+<http://www.w3.org/ns/formats/N-Triples> rdf:type owl:NamedIndividual ,
+                                                  omv:OntologySyntax .
+
+
+###  http://www.w3.org/ns/formats/N3
+<http://www.w3.org/ns/formats/N3> rdf:type owl:NamedIndividual ,
+                                           omv:OntologySyntax ;
+                                  rdfs:label "N3"@en ,
+                                             "Notation3"@en .
+
+
+###  http://www.w3.org/ns/formats/OWL_XML
+<http://www.w3.org/ns/formats/OWL_XML> rdf:type owl:NamedIndividual ,
+                                                omv:OntologySyntax ;
+                                       rdfs:label "OWL XML"@en .
+
+
+###  http://www.w3.org/ns/formats/RDF_XML
+<http://www.w3.org/ns/formats/RDF_XML> rdf:type owl:NamedIndividual ,
+                                                omv:OntologySyntax ;
+                                       rdfs:label "RDF/XML"@en .
+
+
+###  http://www.w3.org/ns/formats/Turtle
+<http://www.w3.org/ns/formats/Turtle> rdf:type owl:NamedIndividual ,
+                                               omv:OntologySyntax ;
+                                      rdfs:label "Turtle"@en .
+
+
+###  http://www.wikidata.org/entity/Q11223
+<http://www.wikidata.org/entity/Q11223> rdf:type owl:NamedIndividual ,
+                                                 foaf:Organization ;
+                                        rdfs:label "United States Air Force"@en .
+
+
+###  https://creativecommons.org/licenses/by/3.0/
+<https://creativecommons.org/licenses/by/3.0/> rdf:type owl:NamedIndividual ,
+                                                        dct:LicenseDocument ;
+                                               foaf:homepage "https://creativecommons.org/licenses/by/3.0/"^^xsd:anyURI ;
+                                               rdfs:label "Creative Commons Attribution3.0"@en .
+
+
+###  https://creativecommons.org/licenses/by/4.0/
+<https://creativecommons.org/licenses/by/4.0/> rdf:type owl:NamedIndividual ,
+                                                        dct:LicenseDocument ;
+                                               rdfs:label "Creative Commons Attribution 4.0 International"@en .
+
+
+###  https://creativecommons.org/publicdomain/zero/1.0/
+<https://creativecommons.org/publicdomain/zero/1.0/> rdf:type owl:NamedIndividual ,
+                                                              dct:LicenseDocument ;
+                                                     rdfs:label "CC0 1.0 Universal (CC0 1.0)"@en .
+
+
+###  https://i5k.nal.usda.gov/
+<https://i5k.nal.usda.gov/> rdf:type owl:NamedIndividual ,
+                                     foaf:Project ;
+                            dct:rightsHolder <http://dbpedia.org/resource/Agriculture_Research_Service> ,
+                                             <http://www.isibang.ac.in/ns/mod#orcid.org/0000-0002-1253-5550> ;
+                            dct:description "The i5K is an initiative to sequence the genomes of 5,000 arthropod species."^^xsd:string ;
+                            doap:mailing-list "christopher.childers@ars.usda.gov"^^xsd:anyURI ;
+                            foaf:homepage "https://i5k.nal.usda.gov/"^^xsd:anyURI ;
+                            foaf:name "i5k Workspace Project"^^xsd:string ;
+                            rdfs:label "i5k Workspace Project @NAL"@en .
+
+
+###  https://legumefederation.org/
+<https://legumefederation.org/> rdf:type owl:NamedIndividual ,
+                                         foaf:Organization ;
+                                foaf:homepage "https://legumefederation.org/"^^xsd:anyURI ;
+                                foaf:name "Legume Federation"^^xsd:string ;
+                                rdfs:label "Legume Federation"@en .
+
+
+###  https://peanutbase.org/
+<https://peanutbase.org/> rdf:type owl:NamedIndividual ,
+                                   foaf:Project ;
+                          dct:rightsHolder <http://www.isibang.ac.in/ns/mod#orcid.org/0000-0003-2777-8034> ,
+                                           <https://legumefederation.org/> ;
+                          dct:description "Genetic and genomic data to enable more rapid crop improvement in peanut."^^xsd:string ;
+                          doap:mailing-list "scannon@iastate.edu"^^xsd:anyURI ;
+                          foaf:homepage "https://peanutbase.org/"^^xsd:anyURI ;
+                          rdfs:label "Peanut Data Base Project"@en .
+
+
+###  https://triticeaetoolbox.org/
+<https://triticeaetoolbox.org/> rdf:type owl:NamedIndividual ,
+                                         foaf:Project ;
+                                dct:rightsHolder <http://dbpedia.org/resource/Agriculture_Research_Service> ,
+                                                 mod:ClaytonBirkett ;
+                                dct:description "T3 is the webportal for the data generated by the Triticeae Coordinated Agricultural Project (CAP). T3 contains SNP, phenotypic, and pedigree data from wheat and barley germplasm in the Triticeae CAP."^^xsd:string ;
+                                doap:mailing-list "clb343@cornell.edu"^^xsd:anyURI ;
+                                foaf:homepage "https://triticeaetoolbox.org/"^^xsd:anyURI ;
+                                foaf:name "The Triticeae Toolbox"^^xsd:string ;
+                                rdfs:label "The Triticeae Toolbox"@en .
+
+
+###  https://www.arabidopsis.org/
+<https://www.arabidopsis.org/> rdf:type owl:NamedIndividual ,
+                                        foaf:Project ;
+                               dct:rightsHolder <http://dbpedia.org/resource/The_Arabidopsis_Information_Resource> ,
+                                                mod:TAIRcurator ;
+                               dct:description "The Arabidopsis Information Resource (TAIR) maintains a database of genetic and molecular biology data for the model higher plant Arabidopsis thaliana."^^xsd:string ;
+                               doap:mailing-list "curator@arabidopsis.org"^^xsd:anyURI ;
+                               foaf:homepage "https://www.arabidopsis.org/"^^xsd:anyURI ;
+                               foaf:name "The Arabidopsis Information Resource project"^^xsd:string ;
+                               rdfs:label "Arabidopsis Information Resource project"@en .
+
+
+###  https://www.gnu.org/licenses/gpl-3.0.en.html
+<https://www.gnu.org/licenses/gpl-3.0.en.html> rdf:type owl:NamedIndividual ,
+                                                        dct:LicenseDocument ;
+                                               foaf:homepage "https://www.gnu.org/licenses/gpl-3.0.en.html"^^xsd:anyURI ;
+                                               rdfs:label "GNU General Public License"@en .
+
+
+###  https://www.helmholtz-muenchen.de/en/
+<https://www.helmholtz-muenchen.de/en/> rdf:type owl:NamedIndividual ,
+                                                 foaf:Organization ;
+                                        foaf:homepage "https://www.helmholtz-muenchen.de/en/"^^xsd:anyURI ;
+                                        foaf:name "German Research Center for Environmental Health"^^xsd:string ;
+                                        rdfs:label "German Research Center for Environmental Health"@en .
+
+
+###  https://www.maizegdb.org/
+<https://www.maizegdb.org/> rdf:type owl:NamedIndividual ,
+                                     foaf:Project ;
+                            dct:rightsHolder <http://dbpedia.org/resource/Agriculture_Research_Service> ,
+                                             mod:ElisabethHarper ;
+                            dct:description "MaizeGDB is a community-oriented, long-term, federally funded informatics service to researchers focused on the crop plant and model organism Zea mays."^^xsd:string ;
+                            foaf:homepage "https://www.maizegdb.org/"^^xsd:anyURI ;
+                            rdfs:label "Maize Genetics and Genomics Database project"@en .
+
+
+###  https://www.rd-alliance.org/groups/wheat-data-interoperability-wg.html
+<https://www.rd-alliance.org/groups/wheat-data-interoperability-wg.html> rdf:type owl:NamedIndividual ,
+                                                                                  foaf:Organization ;
+                                                                         dct:rightsHolder mod:EstherDzalé-Yeumo ,
+                                                                                          mod:RDA ,
+                                                                                          mod:RichardFulss ;
+                                                                         dct:description "The Wheat Data Interoperability Working Group aims to provide a common framework for describing, representing linking and publishing Wheat data with respect to open standards. The RDA WDI group has a specific slice in AgroPortal: http://wheat.agroPortal.lirmm.fr"^^xsd:string ;
+                                                                         doap:mailing-list "edzale@versailles.inra.fr"^^xsd:anyURI ,
+                                                                                           "r.fulss@cgiar.org"^^xsd:anyURI ;
+                                                                         foaf:homepage "https://www.rd-alliance.org/groups/wheat-data-interoperability-wg.html"^^xsd:anyURI ;
+                                                                         foaf:page "http://ist.blogs.inra.fr/wdi/"^^xsd:anyURI ;
+                                                                         rdfs:label "RDA Wheat Data Interoperability Working Group"@en .
+
+
+###  https://www.rosaceae.org/
+<https://www.rosaceae.org/> rdf:type owl:NamedIndividual ,
+                                     foaf:Project ;
+                            dct:rightsHolder <http://dbpedia.org/resource/Category:Washington_State_University> ,
+                                             mod:SookJung ;
+                            dct:description "The Genome Database for Rosaceae is a curated and integrated web-based relational database providing data mining tools and publicly available genomics, genetics and breeding data for Rosaceae (almond, apple, blackberry, cherry, peach, pear, plum, raspberry, rose, and strawberry), to aid basic, translational and applied research in this economically important family."^^xsd:string ;
+                            doap:mailing-list "sook_jung@wsu.edu"^^xsd:anyURI ;
+                            foaf:homepage "https://www.rosaceae.org/"^^xsd:anyURI ;
+                            foaf:name "Genome Database for Rosaceae"^^xsd:string ;
+                            rdfs:label "Genome Database for Rosaceae"@en .
+
+
+###  https://www.soybase.org/
+<https://www.soybase.org/> rdf:type owl:NamedIndividual ,
+                                    foaf:Project ;
+                           dct:rightsHolder <http://dbpedia.org/resource/Agriculture_Research_Service> ,
+                                            mod:DavidGrant ;
+                           dct:description "Integrating Genetics and Molecular Biology for Soybean Researchers."^^xsd:string ;
+                           doap:mailing-list "david.grant@ars.usda.gov"^^xsd:anyURI ;
+                           foaf:homepage "https://www.soybase.org/"^^xsd:anyURI ;
+                           foaf:name "SoyBase and the Soybean Breeder's Toolbox"^^xsd:string ;
+                           rdfs:label "SoyBase and the Soybean Breeder's Toolbox"@en .
+
+
+###  https://www.vectorbase.org/
+<https://www.vectorbase.org/> rdf:type owl:NamedIndividual ,
+                                       foaf:Project ;
+                              dct:rightsHolder <http://dbpedia.org/resource/Category:University_of_Notre_Dame> ;
+                              dct:description "VectorBase is a National Institute of Allergy and Infectious Diseases (NIAID) Bioinformatics Resource Center (BRC) providing genomic, phenotypic and population-centric data to the scientific community for invertebrate vectors of human pathogens."^^xsd:string ;
+                              doap:mailing-list "https://www.vectorbase.org/"^^xsd:anyURI ,
+                                                "info@vectorbase.org"^^xsd:anyURI ;
+                              foaf:name "VectorBase: Bioinformatics Resource for Invertebrate Vectors of Human Pathogens"^^xsd:string ;
+                              rdfs:label "VectorBase: Bioinformatics Resource for Invertebrate Vectors of Human Pathogens"@en .
+
+
+###  https://www.w3.org/2002/07/owl
+<https://www.w3.org/2002/07/owl> rdf:type owl:NamedIndividual ,
+                                          omv:OntologyLanguage .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+dct:contributor rdfs:comment "An entity responsible for making contributions to the resource."@en .
+
+
+dct:creator rdfs:comment "An entity primarily responsible for making the resource."@en .
+
+
+dct:title rdfs:comment "A name given to the resource."@en .
+
+
+owl:versionInfo rdfs:comment "The version of the released ontology."@en .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
