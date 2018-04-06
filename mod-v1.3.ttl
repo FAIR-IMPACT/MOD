@@ -28,7 +28,7 @@
                                    rdfs:label "MOD: Métadonnées pour l'ontologie Description et publication"@fr ;
                                    rdfs:comment """This ontology is an OWL ontology to capture metadata information for ontologies. It is a follow-up of the OMV2 ontology (http://omv2.sourceforge.net).
 
-This project is related to the work done by Biswanath Dutta, Clement Jonquet and others on a new ontology metadata model implemented within AgroPortal (https://github.com/agroportal), see the documentation here: https://github.com/agroportal/documentation/tree/master/metadata."""@en ;
+This project is related to the work done by Clement Jonquet, Biswanath Dutta and others on a new ontology metadata model implemented within AgroPortal (https://github.com/agroportal), see the documentation here: https://github.com/agroportal/documentation/tree/master/metadata."""@en ;
                                    owl:priorVersion <http://www.isibang.ac.in/ns/mod/1.2> ;
                                    rdfs:seeAlso <https://github.com/sifrproject/MOD-Ontology> ;
                                    rdfs:label "MOD: Metadata for Ontology Description and publication"@en ;
