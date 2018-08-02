@@ -1,0 +1,2847 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.isibang.ac.in/ns/mod#"
+     xml:base="http://www.isibang.ac.in/ns/mod"
+     xmlns:mod="http://www.isibang.ac.in/ns/mod#mod:"
+     xmlns:pav="http://purl.org/pav/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:sparql-service-description="http://www.w3.org/ns/sparql-service-description#"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:doap="http://usefulinc.com/ns/doap/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:omv="http://omv.ontoware.org/2005/05/ontology#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.isibang.ac.in/ns/mod">
+        <owl:versionIRI rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+        <dct:Creator xml:lang="en">Clement Jonquet</dct:Creator>
+        <omv:Status xml:lang="en">This version MOD 1.2 is a stable version.</omv:Status>
+        <dct:Title xml:lang="en">MOD: Metadata for Ontology Description and publication</dct:Title>
+        <vann:PreferredNamespaceUri xml:lang="en">http://www.isibang.ac.in/ns/mod#</vann:PreferredNamespaceUri>
+        <owl:VersionInfo xml:lang="en">This is MOD 1.2.</owl:VersionInfo>
+        <dct:Contributor xml:lang="en">Anne Toulet</dct:Contributor>
+        <dct:Title xml:lang="fr">MOD: Métadonnées pour l&apos;ontologie Description et publication</dct:Title>
+        <mod:SampleQueries xml:lang="en">For sample SPARQL quesries to query MOD OWL knowledge base, see here: https://github.com/sifrproject/MOD-Ontology/blob/master/SPARQL_Queries_on_MOD_1.2.3-with-instances.txt</mod:SampleQueries>
+        <dct:License xml:lang="en">MOD is licensed under the Creative Commons Attribution 4.0 
+For details, see here: https://github.com/sifrproject/MOD-Ontology/blob/master/LICENSE</dct:License>
+        <vann:PreferredNamespacePrefix xml:lang="en">mod</vann:PreferredNamespacePrefix>
+        <dct:Abstract xml:lang="en">MOD provides a set of terms which can be used by the ontology developers, ontology libraries (e.g., ontology registry, ontology repository, ontology portal), and in general by the Web developers to describe and publish the ontologies. The enriched description of ontologies, in turn, will help the users to search, discover, identify and select the required ontologies. This will ultimately promote the reuse of ontologies.</dct:Abstract>
+        <dct:Creator xml:lang="en">Biswanath Dutta</dct:Creator>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#Status -->
+
+    <owl:AnnotationProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#Status"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/Abstract -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/Abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/Contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/Contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/Creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/Creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/License -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/License"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/Title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/Title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/PreferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/PreferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/PreferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/PreferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#mod:SampleQueries -->
+
+    <owl:AnnotationProperty rdf:about="http://www.isibang.ac.in/ns/mod#mod:SampleQueries"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#PriorVersion -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#PriorVersion"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#VersionInfo -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#VersionInfo">
+        <rdfs:comment xml:lang="en">The version of the released ontology.</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#conformsToKnowledgeRepresentationParadigm -->
+
+    <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#conformsToKnowledgeRepresentationParadigm">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://omv.ontoware.org/2005/05/ontology#KnowledgeRepresentationParadigm"/>
+        <rdfs:comment xml:lang="en">A representation formalism that is followed to describe knowledge in an ontology. Example includes description logics, first order logic, etc. dct: An established standard to which the described resource conforms.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#endorsedBy -->
+
+    <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#endorsedBy">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment xml:lang="en">The parties that have expressed support or approval to this ontology.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#hasFormalityLevel -->
+
+    <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#hasFormalityLevel">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://omv.ontoware.org/2005/05/ontology#FormalityLevel"/>
+        <rdfs:comment xml:lang="en">The level of formality of an ontology.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#hasOntologyLanguage -->
+
+    <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#hasOntologyLanguage">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyLanguage"/>
+        <rdfs:comment xml:lang="en">A language that is used to create an ontology.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#hasOntologySyntax -->
+
+    <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#hasOntologySyntax">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologySyntax"/>
+        <rdfs:comment xml:lang="en">The syntax followed in the creation of an ontology.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#isOfType -->
+
+    <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#isOfType">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyType"/>
+        <rdfs:comment xml:lang="en">The nature of the content of the ontology.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#usedOntologyEngineeringMethodology -->
+
+    <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#usedOntologyEngineeringMethodology">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology"/>
+        <rdfs:comment xml:lang="en">A methodolgy follwoing which an ontology is created.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#usedOntologyEngineeringTool -->
+
+    <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#usedOntologyEngineeringTool">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringTool"/>
+        <rdfs:comment xml:lang="en">The tool used for the creation of an ontology.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/accessRights -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/accessRights">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+        <rdfs:comment xml:lang="en">Information about who can access the resource or an indication of its security status.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/accrualMethod -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/accrualMethod">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/MethodOfAccrual"/>
+        <rdfs:comment xml:lang="en">The method by which items are added to a collection.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/accrualPeriodicity -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/accrualPeriodicity">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/Frequency"/>
+        <rdfs:comment xml:lang="en">The frequency with which items are added to a collection.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/accrualPolicy -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/accrualPolicy">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/Policy"/>
+        <rdfs:comment xml:lang="en">The policy governing the addition of items to a collection.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/audience -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/audience">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment xml:lang="en">A class of entity for whom the resource is intended or useful.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/contributor">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment xml:lang="en">An entity responsible for making contributions to the resource.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/creator">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:comment xml:lang="en">An entity primarily responsible for making the resource.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/hasPart">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+        <owl:inverseOf rdf:resource="http://purl.org/dc/terms/isPartOf"/>
+        <rdfs:comment xml:lang="en">A related resource that is included either physically or logically in the described resource.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/isPartOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:comment xml:lang="en">A related resource in which the described resource is physically or logically included.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/license">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
+        <rdfs:comment xml:lang="en">A legal document giving official permission to do something with the resource.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/publisher">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:comment xml:lang="en">An entity responsible for making the resource available.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/relation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/relation">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:comment xml:lang="en">A related resource.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/rightsHolder -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/rightsHolder">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment xml:lang="en">A person or organization owning or managing rights over the resource.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/pav/curatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/pav/curatedBy">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment xml:lang="en">A curator who restructure the previously authored content and shape it to be appropriate for the intended representation (e.g. by normalizing the fields for being represented in a spreadsheet).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#evaluatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.isibang.ac.in/ns/mod#evaluatedBy">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment xml:lang="en">An ontology that has been evaluated by an agent.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#group -->
+
+    <owl:ObjectProperty rdf:about="http://www.isibang.ac.in/ns/mod#group">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#Group"/>
+        <rdfs:comment xml:lang="en">A group of ontologies that the ontology is usually considered into.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#ontologyInUse -->
+
+    <owl:ObjectProperty rdf:about="http://www.isibang.ac.in/ns/mod#ontologyInUse">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <rdfs:comment xml:lang="en">An ontology that is used in a project.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#ontologyRelatedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.isibang.ac.in/ns/mod#ontologyRelatedTo">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#backwardCompatibleWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#backwardCompatibleWith">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:comment xml:lang="en">This identifies the specified ontology as a prior version of the containing ontology, and further indicates that it is backward compatible with it.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#incompatibleWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#incompatibleWith">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:comment xml:lang="en">This indicates that the containing ontology is a later version of the referenced ontology, but is not backward compatible with it.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#generalizationOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#generalizationOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.isibang.ac.in/ns/mod#ontologyRelatedTo"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/prov#specializationOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#specializationOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#specializationOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.isibang.ac.in/ns/mod#ontologyRelatedTo"/>
+        <rdfs:comment xml:lang="en">An entity that is a specialization of another shares all aspects of the latter, and additionally presents more specific aspects of the same thing as the latter.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasGeneratedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasGeneratedBy">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <rdfs:comment xml:lang="en">Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasinvalidatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasinvalidatedBy">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <rdfs:comment xml:lang="en">Invalidation is the start of the destruction, cessation, or expiry of an existing entity by an activity. The entity is no longer available for use (or further invalidation) after invalidation. Any generation or usage of an entity precedes its invalidation.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/fundedBy -->
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/fundedBy">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment xml:lang="en">An ontology that is sponsored by and developed under a project.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#URI -->
+
+    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#URI">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">The URI of the ontology which is described by this metadata.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#acronym -->
+
+    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#acronym">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A short name by which an ontology is formally known.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#designedForOntologyTask -->
+
+    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#designedForOntologyTask">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The purpose for which the ontology was originally designed.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#hasDomain -->
+
+    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#hasDomain">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#keyClasses -->
+
+    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#keyClasses">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Representative classes in the ontology.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#keywords -->
+
+    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#keywords">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A keyword(s) is used to describe the content of an ontology.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#knownUsage -->
+
+    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#knownUsage">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The applications where the ontology is being used.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#numberOfAxioms -->
+
+    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#numberOfAxioms">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">The total number of axioms in an ontology.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#numberOfClasses -->
+
+    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#numberOfClasses">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">The total number of classes in an ontology.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#numberOfIndividuals -->
+
+    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#numberOfIndividuals">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">The total number of individuals in an ontology.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#numberOfProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#numberOfProperties">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:comment xml:lang="en">The total number of properties in an ontology.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#resourceLocator -->
+
+    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#resourceLocator">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">The location where the ontology can be found. It should be accessible via a URL. It can be the same as the value for URI property.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#status -->
+
+    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#status">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The tracking information for the contents of the ontology.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/abstract -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/abstract">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A summary of the resource.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/alternative -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/alternative">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">An alternative name for the resource.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/bibliographicCitation -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A bibliographic reference for the resource.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/coverage -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/coverage">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/created">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Date of creation of the resource.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/date -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/date">
+        <rdfs:comment xml:lang="en">A point or period of time associated with an event in the lifecycle of the resource.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/dateSubmitted -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/dateSubmitted">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Date of submission of the resource.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/description">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">An account of the resource.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasFormat -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/hasFormat">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">A related resource that is substantially the same as the pre-existing described resource, but in another format.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/hasVersion">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">A related resource that is a version, edition, or adaptation of the described resource.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">An unambiguous reference to the resource within a given context.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/isFormatOf -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/isFormatOf">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">A related resource that is substantially the same as the described resource, but in another format.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/language -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/language">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">A language of the resource.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/modified">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Date on which the resource was changed.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/source">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A related resource from which the described resource is derived.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/subject -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/subject">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The topic of the resource.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A name given to the resource.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/valid -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/valid">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Date (often a range) of validity of a resource.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/pav/curatedOn -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/pav/curatedOn">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Specifies the date this resource was curated. pav:curatedBy gives the agents that performed the curation.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/vocab/vann/changes -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/vocab/vann/changes">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">A reference to a resource that describes changes between this version of a vocabulary and the previous.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/vocab/vann/example -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/vocab/vann/example">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">A reference to a resource that provides an example of how this resource can be used.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The preferred namespace prefix to use when using terms from this vocabulary in an XML document.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">The preferred namespace URI to use when using terms from this vocabulary in an XML document.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap/bugDatabase -->
+
+    <owl:DatatypeProperty rdf:about="http://usefulinc.com/ns/doap/bugDatabase">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">Bug tracker for a project.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap/mailingList -->
+
+    <owl:DatatypeProperty rdf:about="http://usefulinc.com/ns/doap/mailingList">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">Mailing list home page or email address.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap/repository -->
+
+    <owl:DatatypeProperty rdf:about="http://usefulinc.com/ns/doap/repository">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">Source code repository.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#address -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/ns/mod#address">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#browsingUI -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/ns/mod#browsingUI">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">The user interface (URL) where the ontology may be browsed or searched.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#byteSize -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/ns/mod#byteSize">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">The byte size of an ontology.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#city -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/ns/mod#city">
+        <rdfs:subPropertyOf rdf:resource="http://www.isibang.ac.in/ns/mod#address"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#competencyQuestion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/ns/mod#competencyQuestion">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A set of questions made to build an ontology at the design time.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#numberOfDataProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/ns/mod#numberOfDataProperties">
+        <rdfs:subPropertyOf rdf:resource="http://omv.ontoware.org/2005/05/ontology#numberOfProperties"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">The total number of data properties in an ontology.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#numberOfLabels -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/ns/mod#numberOfLabels">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">Number of defined labels for any resources in an ontology (classes, properties, etc).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#numberOfObjectProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/ns/mod#numberOfObjectProperties">
+        <rdfs:subPropertyOf rdf:resource="http://omv.ontoware.org/2005/05/ontology#numberOfProperties"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">The total number of object properties in an ontology.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#postalCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/ns/mod#postalCode">
+        <rdfs:subPropertyOf rdf:resource="http://www.isibang.ac.in/ns/mod#address"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#rootClasses -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/ns/mod#rootClasses">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">This property is to provide the root class(es) of an ontology. This is automatically populated by taking the direct subclasses of owl:Thing 
+If the ontology is also defined as a unique skos:ConceptScheme, then this property should become equivalent of skos:hasTopConcept</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#sampleQueries -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/ns/mod#sampleQueries">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A set of queries (may be SPARQL, DL Queries) that are provided along with an ontology.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#state -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/ns/mod#state">
+        <rdfs:subPropertyOf rdf:resource="http://www.isibang.ac.in/ns/mod#address"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#streetAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/ns/mod#streetAddress">
+        <rdfs:subPropertyOf rdf:resource="http://www.isibang.ac.in/ns/mod#address"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#translation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/ns/mod#translation">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">A pointer to the translated ontology(ies) for an existing ontology.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#vocabularyUsed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isibang.ac.in/ns/mod#vocabularyUsed">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">A vocabulary(ies) that is used and/or referred to create the current ontology.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Comment -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#Comment">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Is used to provide a human-readable description of a resource.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#deprecated -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#deprecated">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">An annotation with the owl:deprecated annotation property and the value equal to &quot;true&quot;^^xsd:boolean can be used to specify that an IRI is deprecated.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#imports -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#imports">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">References to another OWL ontology containing definitions, whose meaning is considered to be part of the meaning of the importing ontology.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#priorVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#priorVersion">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">This identifies the specified ontology as a prior version of the containing ontology.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionIRI -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#versionIRI">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">The property that identifies the version IRI of an ontology.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sparql-service-description#endpoint -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/sparql-service-description#endpoint">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">Relates an instance of sd:Service to a SPARQL endpoint that implements the SPARQL Protocol service for the service. The object of the sd:endpoint property is an IRI.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/depiction -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/depiction">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">A depiction of some thing.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/firstName -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/firstName">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/homepage -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/homepage">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">An unambiguous reference to the resource within a given context.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/lastName -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/lastName">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/logo -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/logo">
+        <rdfs:domain rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">A logo representing some thing.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/mbox -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/mbox">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/page -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/page">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">A link to the documentation page on a thing.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/phone -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/phone">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#FormalityLevel -->
+
+    <owl:Class rdf:about="http://omv.ontoware.org/2005/05/ontology#FormalityLevel">
+        <rdfs:comment xml:lang="en">The level of formality of an ontology.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#KnowledgeRepresentationParadigm -->
+
+    <owl:Class rdf:about="http://omv.ontoware.org/2005/05/ontology#KnowledgeRepresentationParadigm">
+        <rdfs:comment xml:lang="en">Information about a knowledge representation paradigm a particular language adheres to.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology -->
+
+    <owl:Class rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology">
+        <rdfs:comment xml:lang="en">Information about the ontology engineering methodology.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringTool -->
+
+    <owl:Class rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringTool">
+        <rdfs:comment xml:lang="en">A tool used to create the ontology.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#OntologyLanguage -->
+
+    <owl:Class rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologyLanguage">
+        <rdfs:comment xml:lang="en">Information about the language in which the ontology is implemented.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#OntologySyntax -->
+
+    <owl:Class rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologySyntax">
+        <rdfs:comment xml:lang="en">A syntax that is used to implement an ontology. Example includes RDF/XML, Notation3, n-triples, RDFa and Turtle.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://omv.ontoware.org/2005/05/ontology#OntologyType -->
+
+    <owl:Class rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologyType">
+        <rdfs:comment xml:lang="en">This class subsumes types of ontologies according to well-known classifications in the Ontology Engineering literature.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/Frequency -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/Frequency">
+        <rdfs:comment xml:lang="en">A rate at which something recurs.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/LicenseDocument -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/LicenseDocument">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+        <rdfs:comment xml:lang="en">A legal document giving official permission to do something with a Resource.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/MethodOfAccrual -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/MethodOfAccrual">
+        <rdfs:comment xml:lang="en">A method by which resources are added to a collection.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/Policy -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/Policy">
+        <rdfs:comment xml:lang="en">A plan or course of action by an authority, intended to influence and determine decisions, actions, and other matters.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/RightsStatement -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/RightsStatement">
+        <rdfs:comment xml:lang="en">A statement about the intellectual property rights (IPR) held in or over a Resource, a legal document giving official permission to do something with a resource, or a statement about access rights.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#Group -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/ns/mod#Group">
+        <rdfs:comment xml:lang="en">A group of ontologies that the ontology is usually considered into.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#Ontology -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/ns/mod#Ontology">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#conformsToKnowledgeRepresentationParadigm"/>
+                <owl:allValuesFrom rdf:resource="http://omv.ontoware.org/2005/05/ontology#KnowledgeRepresentationParadigm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#hasFormalityLevel"/>
+                <owl:allValuesFrom rdf:resource="http://omv.ontoware.org/2005/05/ontology#FormalityLevel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#hasOntologyLanguage"/>
+                <owl:allValuesFrom rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyLanguage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#hasOntologySyntax"/>
+                <owl:allValuesFrom rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologySyntax"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#usedOntologyEngineeringMethodology"/>
+                <owl:allValuesFrom rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#usedOntologyEngineeringTool"/>
+                <owl:allValuesFrom rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringTool"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/creator"/>
+                <owl:allValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/creator"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#hasFormalityLevel"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#hasOntologySyntax"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#URI"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#designedForOntologyTask"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#keyClasses"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#keywords"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#resourceLocator"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/created"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/language"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/title"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#designedForOntologyTask"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#keyClasses"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#keywords"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/title"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/created"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#URI"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#resourceLocator"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">By ontology, we not only refers the OWL structure that respects all the conditions to be referred as a fully formalized ontology but also every ontology like structure that formalizes some knowledge (e.g., thesaurus, taxonomy, metadata vocabulary).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Activity -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Activity">
+        <rdfs:comment xml:lang="en">An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
+        <rdfs:comment xml:lang="en">An agent (eg. person, group, software or physical artifact).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment xml:lang="en">An organization.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment xml:lang="en">A person.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Project -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Project">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/title"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A project (a collective endeavour of some kind).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#AGROOE -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#AGROOE">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <omv:hasOntologySyntax rdf:resource="http://www.isibang.ac.in/ns/mod#RDF/XML"/>
+        <omv:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AGROOE</omv:acronym>
+        <omv:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alpha</omv:status>
+        <dct:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://stageportal.lirmm.fr/ontologies/is%20primary%20topic%20of</dct:bibliographicCitation>
+        <dct:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AGROOE is an ontology used to test the metadata extraction, AGROOE is an ontology to illustrate how to describe their ontologies.</dct:description>
+        <dct:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontology</dct:subject>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://lirmm.fr/2015/resource/AGROOE_c_01</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://omv.ontoware.org/2005/05/ontology#Ontology</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://omv.ontoware.org/2005/05/ontology#OntologyDomain</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringTool</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://omv.ontoware.org/2005/05/ontology#OntologyTask</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://omv.ontoware.org/2005/05/ontology#OntologyType</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://omv.ontoware.org/2005/05/ontology#Organisation</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://omv.ontoware.org/2005/05/ontology#Person</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/dc/terms/Agent</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://xmlns.com/foaf/0.1/Person</rootClasses>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alpha 2.0</owl:versionInfo>
+        <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://agroportal.lirmm.fr/</foaf:homepage>
+        <foaf:page rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://agroportal.lirmm.fr</foaf:page>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#AgroPortalProject -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#AgroPortalProject">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#ClementJonquet"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#UniversityOfMontpellier"/>
+        <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://agroportal.lirmm.fr/</foaf:homepage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#AgronomicLinkedData -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#AgronomicLinkedData">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/ns/mod#Group"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#AgronomicLinkedDataProject -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#AgronomicLinkedDataProject">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#IRD"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#PierreLarmande"/>
+        <dct:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AgroLD is a RDF knowledge base that consists of data integrated from a variety of plant resources and ontologies. The aim of the Agronomic Linked Data (AgroLD) project is to provide a portal for bioinformatics and domain experts to exploit the homogenized data models towards efficiently generating research hypotheses.</dct:description>
+        <doap:mailingList rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">pierre.larmande@ird.fr</doap:mailingList>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#AnaEEThesaurus -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#AnaEEThesaurus">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <omv:hasFormalityLevel rdf:resource="http://www.isibang.ac.in/ns/mod#Thesaurus"/>
+        <omv:hasOntologyLanguage rdf:resource="http://www.isibang.ac.in/ns/mod#SKOS"/>
+        <omv:hasOntologySyntax rdf:resource="http://www.isibang.ac.in/ns/mod#RDF/XML"/>
+        <omv:isOfType rdf:resource="http://www.isibang.ac.in/ns/mod#DomainOntology"/>
+        <dct:license rdf:resource="http://www.isibang.ac.in/ns/mod#CreativeCommonsAttribution4.0"/>
+        <dct:publisher rdf:resource="http://www.isibang.ac.in/ns/mod#AnaeeFrance"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#AnaeeSemantics"/>
+        <group rdf:resource="http://www.isibang.ac.in/ns/mod#INRALinkedOpenVocabularies"/>
+        <ontologyInUse rdf:resource="http://www.isibang.ac.in/ns/mod#AnaeeSemanticsProject"/>
+        <omv:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ANAEETHES</omv:acronym>
+        <omv:keyClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biotic environment</omv:keyClasses>
+        <omv:keyClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ecosystem</omv:keyClasses>
+        <omv:keyClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spatio-temporal characteristics</omv:keyClasses>
+        <omv:resourceLocator rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://data.agroportal.lirmm.fr/ontologies/ANAEETHES/download</omv:resourceLocator>
+        <omv:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alpha</omv:status>
+        <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-03-22T00:00:00+00:00</dct:created>
+        <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-03-22T00:00:00</dct:dateSubmitted>
+        <dct:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The AnaEE thesaurus aims to provide a controlled vocabulary for the semantic description of the study of continental ecosystems and their biodiversity. It has been developed within the framework of the AnaEE-France infrastructure through an iterative process combining both top down and bottom up approaches: import of concepts from other thesauri and collection of concepts used in the AnaEE data bases and/or modeling platforms.</dct:description>
+        <dct:language rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://lexvo.org/id/iso639-3/eng</dct:language>
+        <dct:language rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://lexvo.org/id/iso639-3/fra</dct:language>
+        <dct:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agricultural Research</dct:subject>
+        <dct:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Earth and Environment</dct:subject>
+        <dct:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Natural Resources</dct:subject>
+        <dct:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technology and Engineering</dct:subject>
+        <vann:example rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opendata.inra.fr/anaeeThes/c2_942</vann:example>
+        <doap:mailingList rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">anaee_thesaurus@inra.fr</doap:mailingList>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Unit</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opendata.inra.fr/anaeeThes/c2_112</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opendata.inra.fr/anaeeThes/c2_115</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opendata.inra.fr/anaeeThes/c2_2445</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opendata.inra.fr/anaeeThes/c2_2934</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opendata.inra.fr/anaeeThes/c2_2941</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opendata.inra.fr/anaeeThes/c2_3022</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opendata.inra.fr/anaeeThes/c_1401956207670</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opendata.inra.fr/anaeeThes/c_1402038921919</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opendata.inra.fr/anaeeThes/c_1403018120212</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opendata.inra.fr/anaeeThes/c_9178f420</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opendata.inra.fr/anaeeThes/c_b177c123</rootClasses>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:deprecated>
+        <owl:priorVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://data.agroportal.lirmm.fr/ontologies/ANAEETHES/submissions/1</owl:priorVersion>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.0</owl:versionInfo>
+        <sparql-service-description:endpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://sparql.agroportal.lirmm.fr/test</sparql-service-description:endpoint>
+        <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dx.doi.org/10.15454/1.4894016754286177E12</foaf:homepage>
+        <foaf:page rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dx.doi.org/10.15454/1.4894016754286177E12</foaf:page>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#AnaeeFrance -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#AnaeeFrance">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#AnaeeSemantics -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#AnaeeSemantics">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#AnaeeSemanticsProject -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#AnaeeSemanticsProject">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#CnrsInra"/>
+        <dct:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The AnaEE semantics group aims to provide a semantics vocabularies (thesaurus and ontology for the description of the study of continental ecosystems and their biodiversity.</dct:description>
+        <doap:mailingList rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">anaee_thesaurus@inra.fr</doap:mailingList>
+        <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.anaee-france.fr/fr/</foaf:homepage>
+        <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ANAEE Semantics</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#AnneToulet -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#AnneToulet">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#Apache -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#Apache">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#ApplicationOntology -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#ApplicationOntology">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#Automatic -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#Automatic">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#BioversityInternational -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#BioversityInternational">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#BiswanathDutta -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#BiswanathDutta">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <doap:mailingList rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">bisu@drtc.isibang.ac.in</doap:mailingList>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#CGIAR -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#CGIAR">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">www.cgiar.org</foaf:homepage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#CIRAD -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#CIRAD">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#CNRS -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#CNRS">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#CathyHWu -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#CathyHWu">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#CeciliaArighi -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#CeciliaArighi">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#ClementJonquet -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#ClementJonquet">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <doap:mailingList rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">jonquet@lirmm.fr</doap:mailingList>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#CnrsInra -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#CnrsInra">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#ComputationalBiologyInstituteProject -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#ComputationalBiologyInstituteProject">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#CIRAD"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#CNRS"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#INRA"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#INRIA"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#INSERM"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#IRD"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#PierreLarmande"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#SupAgro"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#UniversityOfMontpellier"/>
+        <dct:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Modeling, processing and analysis of large scale data in biology, health, agronomy and environment.</dct:description>
+        <doap:mailingList rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">pierre.larmande@ird.fr</doap:mailingList>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#ComputercraftCorporation -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#ComputercraftCorporation">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#Consuming -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#Consuming">
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#CoreOntology -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#CoreOntology">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#CreativeCommonsAttribution3.0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#CreativeCommonsAttribution3.0">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
+        <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://creativecommons.org/licenses/by/3.0/</foaf:homepage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#CreativeCommonsAttribution4.0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#CreativeCommonsAttribution4.0">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#CropOntologyCurationTool -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#CropOntologyCurationTool">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/ns/mod#Group"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#CropOntologyHelpdesk -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#CropOntologyHelpdesk">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#CropOntologyproject -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#CropOntologyproject">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#BioversityInternational"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#ElizabethArnaud"/>
+        <dct:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crop Ontology is a service of the Integrated Breeding Platform, and targets agricultural data annotation. The project is led by Bioversity International in collaboration with the CGIAR and other partners. Crop Ontology centralizes concepts defined by breeders to annotate their data egarding germplasm, phenotypes, trial location, environment and design, plant anatomy, and plant development.</dct:description>
+        <doap:mailingList rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">e.arnaud@cgiar.org</doap:mailingList>
+        <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.cropontology.org/</foaf:homepage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#Cyc -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#Cyc">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#DarrenANatale -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#DarrenANatale">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#DarrenNatale -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#DarrenNatale">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#DescriptionLogics -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#DescriptionLogics">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#KnowledgeRepresentationParadigm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#DiseaseOntology -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#DiseaseOntology">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#LynnSchriml"/>
+        <omv:resourceLocator rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/doid.owl</omv:resourceLocator>
+        <doap:mailingList rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">lschriml@som.umaryland.edu</doap:mailingList>
+        <doap:mailingList rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">lynn.schriml@gmail.com</doap:mailingList>
+        <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://disease-ontology.org</foaf:homepage>
+        <foaf:page rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/DiseaseOntology/HumanDiseaseOntology/tree/master/doc</foaf:page>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#DomainOntology -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#DomainOntology">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#ElizabethArnaud -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#ElizabethArnaud">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">e.arnaud@cgiar.org</foaf:mbox>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#EstherDzalé-Yeumo -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#EstherDzalé-Yeumo">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#FAO -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#FAO">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#FirstOrderLogic -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#FirstOrderLogic">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#KnowledgeRepresentationParadigm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#Formal -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#Formal">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#FormalityLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#Frame -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#Frame">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#KnowledgeRepresentationParadigm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#GNUGeneralPublicLicense -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#GNUGeneralPublicLicense">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#GeneOntology -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#GeneOntology">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <omv:hasFormalityLevel rdf:resource="http://www.isibang.ac.in/ns/mod#Vocabulary"/>
+        <omv:hasOntologyLanguage rdf:resource="http://www.isibang.ac.in/ns/mod#OWL"/>
+        <omv:hasOntologySyntax rdf:resource="http://www.isibang.ac.in/ns/mod#RDF/XML"/>
+        <omv:usedOntologyEngineeringTool rdf:resource="http://www.isibang.ac.in/ns/mod#TermGenie1.0"/>
+        <dct:license rdf:resource="http://www.isibang.ac.in/ns/mod#CreativeCommonsAttribution3.0"/>
+        <dct:publisher rdf:resource="http://www.isibang.ac.in/ns/mod#GeneOntologyConsortium"/>
+        <dct:relation rdf:resource="http://www.isibang.ac.in/ns/mod#GeneOntologyPlus"/>
+        <dct:relation rdf:resource="http://www.isibang.ac.in/ns/mod#NCBITAXON"/>
+        <dct:relation rdf:resource="http://www.isibang.ac.in/ns/mod#RelationsOntology"/>
+        <dct:relation rdf:resource="http://www.isibang.ac.in/ns/mod#Uberon"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#GeneOntologyConsortium"/>
+        <group rdf:resource="http://www.isibang.ac.in/ns/mod#AgronomicLinkedData"/>
+        <group rdf:resource="http://www.isibang.ac.in/ns/mod#OBOFoundry"/>
+        <ontologyInUse rdf:resource="http://www.isibang.ac.in/ns/mod#AgronomicLinkedDataProject"/>
+        <ontologyInUse rdf:resource="http://www.isibang.ac.in/ns/mod#ComputationalBiologyInstituteProject"/>
+        <ontologyInUse rdf:resource="http://www.isibang.ac.in/ns/mod#PlanteomeProject"/>
+        <ontologyInUse rdf:resource="http://www.isibang.ac.in/ns/mod#VEST-AgroPortalMapOfStandards"/>
+        <omv:URI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/go.owl</omv:URI>
+        <omv:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO</omv:acronym>
+        <omv:hasDomain rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biology</omv:hasDomain>
+        <omv:keyClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biological process</omv:keyClasses>
+        <omv:keyClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cellular component</omv:keyClasses>
+        <omv:keyClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#string">molecular function</omv:keyClasses>
+        <omv:keywords rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gene function</omv:keywords>
+        <omv:knownUsage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The use of GO terms by collaborating databases facilitates uniform queries across all of them. Controlled vocabularies are structured so they can be queried at different levels; for example, users may query GO to find all gene products in the mouse genome that are involved in signal transduction, or zoom in on all receptor tyrosine kinases that have been annotated. This structure also allows annotators to assign properties to genes or gene products at different levels, depending on the depth of knowledge about that entity.</omv:knownUsage>
+        <omv:numberOfClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">48549</omv:numberOfClasses>
+        <omv:numberOfIndividuals rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</omv:numberOfIndividuals>
+        <omv:numberOfProperties rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">9</omv:numberOfProperties>
+        <omv:resourceLocator rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://data.agroportal.lirmm.fr/ontologies/GO/download</omv:resourceLocator>
+        <omv:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Production</omv:status>
+        <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-04-06T18:08:56+02:00</dct:created>
+        <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-03-28T00:00:00</dct:dateSubmitted>
+        <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-03-30T00:00:00</dct:dateSubmitted>
+        <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-03-31T00:00:00</dct:dateSubmitted>
+        <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-04-01T00:00:00</dct:dateSubmitted>
+        <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-04-06T00:00:00</dct:dateSubmitted>
+        <dct:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The GO defines concepts/classes used to describe gene function, and relationships between these concepts. It classifies functions along three aspects: molecular function (molecular activities of gene products), cellular component (where gene products are active), biological process (pathways and larger processes made up of the activities of multiple gene products).</dct:description>
+        <dct:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Gene Ontology (GO) project is a collaborative effort to address the need for consistent descriptions of gene products across databases. Founded in 1998, the project began as a collaboration between three model organism databases, FlyBase (Drosophila), the Saccharomyces Genome Database (SGD) and the Mouse Genome Database (MGD). The GO Consortium (GOC) has since grown to incorporate many databases, including several of the world&apos;s major repositories for plant, animal, and microbial genomes. The GO Contributors page lists all member organizations.</dct:description>
+        <dct:isFormatOf rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/go.obo</dct:isFormatOf>
+        <dct:language rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://lexvo.org/id/iso639-3/eng</dct:language>
+        <dct:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.org/dc/elements/1.1/</dct:source>
+        <vann:example rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/GO_0015219</vann:example>
+        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gene_ontology</vann:preferredNamespacePrefix>
+        <doap:bugDatabase rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/</doap:bugDatabase>
+        <doap:mailingList rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">go@geneontology.org</doap:mailingList>
+        <doap:mailingList rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://geneontology.org/page/go-mailing-lists</doap:mailingList>
+        <doap:repository rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://sourceforge.net/projects/geneontology/</doap:repository>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/GO_0003674</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/GO_0005575</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/GO_0008150</rootClasses>
+        <rdfs:Comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cvs version: $Revision: 38972 $, Includes Ontology(OntologyID(OntologyIRI())) [Axioms: 18 Logical Axioms: 0]</rdfs:Comment>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:deprecated>
+        <owl:priorVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://data.agroportal.lirmm.fr/ontologies/GO/submissions/72</owl:priorVersion>
+        <owl:versionIRI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/go/releases/2017-03-08/go.owl</owl:versionIRI>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-03-08</owl:versionInfo>
+        <sparql-service-description:endpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://sparql.agroportal.lirmm.fr/test</sparql-service-description:endpoint>
+        <foaf:depiction rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://geneontology.org/sites/default/files/u425/diag-ontology-graph.gif</foaf:depiction>
+        <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.geneontology.org/</foaf:homepage>
+        <foaf:logo rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://geneontology.org/sites/default/files/go-logo-icon.png</foaf:logo>
+        <foaf:page rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://geneontology.org/page/ontology-documentation</foaf:page>
+        <foaf:page rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://geneontology.org/page/publications</foaf:page>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#GeneOntologyConsortium -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#GeneOntologyConsortium">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.geneontology.org/</foaf:homepage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#GeneOntologyPlus -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#GeneOntologyPlus">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <omv:resourceLocator rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/go/extensions/go-plus.owl</omv:resourceLocator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#GeneralOntology -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#GeneralOntology">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#IBPCropResearchOntology -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#IBPCropResearchOntology">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <omv:endorsedBy rdf:resource="http://www.isibang.ac.in/ns/mod#IntegratedBreedingPlatform"/>
+        <omv:endorsedBy rdf:resource="http://www.isibang.ac.in/ns/mod#NationalScienceFoundation"/>
+        <omv:endorsedBy rdf:resource="http://www.isibang.ac.in/ns/mod#Palnteome"/>
+        <omv:hasFormalityLevel rdf:resource="http://www.isibang.ac.in/ns/mod#Vocabulary"/>
+        <omv:hasOntologyLanguage rdf:resource="http://www.isibang.ac.in/ns/mod#OBO"/>
+        <omv:hasOntologySyntax rdf:resource="http://www.isibang.ac.in/ns/mod#RDF/XML"/>
+        <omv:isOfType rdf:resource="http://www.isibang.ac.in/ns/mod#DomainOntology"/>
+        <dct:creator rdf:resource="http://www.isibang.ac.in/ns/mod#RosemaryShrestha"/>
+        <dct:license rdf:resource="http://www.isibang.ac.in/ns/mod#CreativeCommonsAttribution4.0"/>
+        <dct:publisher rdf:resource="http://www.isibang.ac.in/ns/mod#IntegratedBreedingPlatform"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#CropOntologyHelpdesk"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#RosemaryShrestha"/>
+        <group rdf:resource="http://www.isibang.ac.in/ns/mod#CropOntologyCurationTool"/>
+        <group rdf:resource="http://www.isibang.ac.in/ns/mod#WheatDataInteroperabilityWorkingGroup"/>
+        <ontologyInUse rdf:resource="http://www.isibang.ac.in/ns/mod#CropOntologyproject"/>
+        <ontologyInUse rdf:resource="http://www.isibang.ac.in/ns/mod#RDAWheatInteroperabilityWorkingGroup"/>
+        <ontologyInUse rdf:resource="http://www.isibang.ac.in/ns/mod#VEST-AgroPortalMapOfStandards"/>
+        <foaf:fundedBy rdf:resource="http://www.isibang.ac.in/ns/mod#CGIAR"/>
+        <omv:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CO_715</omv:acronym>
+        <omv:keyClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corrugation</omv:keyClasses>
+        <omv:keyClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crop research ontology</omv:keyClasses>
+        <omv:keyClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sub-irrigation</omv:keyClasses>
+        <omv:keyClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wild flooding</omv:keyClasses>
+        <omv:keywords rdf:datatype="http://www.w3.org/2001/XMLSchema#string">crop study</omv:keywords>
+        <omv:keywords rdf:datatype="http://www.w3.org/2001/XMLSchema#string">environmental conditions</omv:keywords>
+        <omv:keywords rdf:datatype="http://www.w3.org/2001/XMLSchema#string">experimental design</omv:keywords>
+        <omv:knownUsage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The concepts of the CO are used to curate agronomic databases and describe the data.</omv:knownUsage>
+        <omv:numberOfClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">256</omv:numberOfClasses>
+        <omv:numberOfIndividuals rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</omv:numberOfIndividuals>
+        <omv:numberOfProperties rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</omv:numberOfProperties>
+        <omv:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Production</omv:status>
+        <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-03-09T18:03:17+01:00</dct:created>
+        <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-03-09T18:03:17+01:00</dct:dateSubmitted>
+        <dct:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Describes experimental design, environmental conditions and methods associated with the crop study/experiment/trail and their evaluation.</dct:description>
+        <dct:language rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://lexvo.org/id/iso639-3/eng</dct:language>
+        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">co</vann:preferredNamespacePrefix>
+        <doap:mailingList rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">helpdesk@cropontology-curationtool.org</doap:mailingList>
+        <doap:mailingList rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">r.shrestha2@cgiar.org</doap:mailingList>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CO_715_0000000</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CO_715_0000207</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CO_715_0000208</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CO_715_0000209</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CO_715_0000210</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CO_715_0000211</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CO_715_0000212</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CO_715_0000213</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CO_715_0000214</rootClasses>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</owl:versionInfo>
+        <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.cropontology.org/</foaf:homepage>
+        <foaf:page rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.cropontology.org/</foaf:page>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#INRA -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#INRA">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#INRALinkedOpenVocabularies -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#INRALinkedOpenVocabularies">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/ns/mod#Group"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#INRIA -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#INRIA">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#INSERM -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#INSERM">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#IRD -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#IRD">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#IndianStatisticalInstitute -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#IndianStatisticalInstitute">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#Informal -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#Informal">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#FormalityLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#IntegratedBreedingPlatform -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#IntegratedBreedingPlatform">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.integratedbreeding.net/</foaf:homepage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#LeslieArminski -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#LeslieArminski">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#LynnSchriml -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#LynnSchriml">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#MODApproach -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#MODApproach">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#MethOntology -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#MethOntology">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#Modifying -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#Modifying">
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#N-Triples -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#N-Triples">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologySyntax"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#NCBI -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#NCBI">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#NCBITAXON -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#NCBITAXON">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <omv:hasFormalityLevel rdf:resource="http://www.isibang.ac.in/ns/mod#Taxonomy"/>
+        <omv:hasOntologyLanguage rdf:resource="http://www.isibang.ac.in/ns/mod#UMLS"/>
+        <omv:hasOntologySyntax rdf:resource="http://www.isibang.ac.in/ns/mod#Turtle"/>
+        <omv:isOfType rdf:resource="http://www.isibang.ac.in/ns/mod#DomainOntology"/>
+        <dct:publisher rdf:resource="http://www.isibang.ac.in/ns/mod#NCBI"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#NCBI"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#NLM"/>
+        <group rdf:resource="http://www.isibang.ac.in/ns/mod#AgronomicLinkedData"/>
+        <group rdf:resource="http://www.isibang.ac.in/ns/mod#OBOFoundry"/>
+        <ontologyInUse rdf:resource="http://www.isibang.ac.in/ns/mod#AgronomicLinkedDataProject"/>
+        <ontologyInUse rdf:resource="http://www.isibang.ac.in/ns/mod#ComputationalBiologyInstituteProject"/>
+        <ontologyInUse rdf:resource="http://www.isibang.ac.in/ns/mod#VEST-AgroPortalMapOfStandards"/>
+        <omv:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITAXON</omv:acronym>
+        <omv:keyClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Viroids</omv:keyClasses>
+        <omv:keyClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Viruses</omv:keyClasses>
+        <omv:keyClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cellular organisms</omv:keyClasses>
+        <omv:keyClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plasmids</omv:keyClasses>
+        <omv:numberOfClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">906907</omv:numberOfClasses>
+        <omv:numberOfIndividuals rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</omv:numberOfIndividuals>
+        <omv:numberOfProperties rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</omv:numberOfProperties>
+        <omv:resourceLocator rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.ncbi.nlm.nih.gov/home/download.shtml</omv:resourceLocator>
+        <omv:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Production</omv:status>
+        <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-06-09T17:38:59-07:00</dct:created>
+        <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-06-23T00:00:00</dct:dateSubmitted>
+        <dct:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The NCBI Taxonomy Database is a curated classification and nomenclature for all of the organisms in the public sequence databases. This currently represents about 10% of the described species of life on the planet.</dct:description>
+        <dct:hasFormat rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/ncbitaxon.owl</dct:hasFormat>
+        <dct:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://bioportal.bioontology.org/ontologies/NCBITAXON</dct:identifier>
+        <dct:isFormatOf rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.ncbi.nlm.nih.gov/taxonomy</dct:isFormatOf>
+        <dct:language rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://lexvo.org/id/iso639-3/eng</dct:language>
+        <dct:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taxonomic Classifications of Organisms</dct:subject>
+        <vann:example rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/NCBITAXON/201174</vann:example>
+        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbitaxon</vann:preferredNamespacePrefix>
+        <doap:mailingList rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">info@ncbi.nlm.nih.gov</doap:mailingList>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/NCBITAXON/10239</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/NCBITAXON/12884</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/NCBITAXON/131567</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/NCBITAXON/28384</rootClasses>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015AA</owl:versionInfo>
+        <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://agroportal.lirmm.fr/ontologies/NCBITAXON</foaf:homepage>
+        <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.ncbi.nlm.nih.gov/</foaf:homepage>
+        <foaf:logo rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.ncbi.nlm.nih.gov/portal/portal3rc.fcgi/4117326/img/28977</foaf:logo>
+        <foaf:page rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://doi.org/10.1093/nar/gki062</foaf:page>
+        <foaf:page rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/NCBI/</foaf:page>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#NCI -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#NCI">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#NHGRI -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#NHGRI">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#NIAID -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#NIAID">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#NIGMS -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#NIGMS">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#NIH -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#NIH">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#NLM -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#NLM">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#NationalScienceFoundation -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#NationalScienceFoundation">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.nsf.gov/</foaf:homepage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#Notation3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#Notation3">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologySyntax"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#OBO -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#OBO">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyLanguage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#OBOEdit -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#OBOEdit">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringTool"/>
+        <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://oboedit.org/</foaf:homepage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#OBOFoundry -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#OBOFoundry">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/ns/mod#Group"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#OWL -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#OWL">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyLanguage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#OWL-DL -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#OWL-DL">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyLanguage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#OWL-Full -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#OWL-Full">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyLanguage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#OWL-Lite -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#OWL-Lite">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyLanguage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#OntologyMetadataCommunity -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#OntologyMetadataCommunity">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/ns/mod#Group"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#OregonStateUniversity -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#OregonStateUniversity">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#PIR -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#PIR">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://proconsortium.org/pirwww/about/staff.shtml</foaf:homepage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#PROConsortium -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#PROConsortium">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://proconsortium.org</foaf:homepage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#Palnteome -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#Palnteome">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.planteome.org/</foaf:homepage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#PankajJaiswal -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#PankajJaiswal">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#PierreLarmande -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#PierreLarmande">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#PlanteomeProject -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#PlanteomeProject">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#OregonStateUniversity"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#PankajJaiswal"/>
+        <dct:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Planteome Project is a centralized platform where reference ontologies for plants will be used to access plant genomics data.</dct:description>
+        <doap:mailingList rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">jaiswalp@science.oregonstate.edu</doap:mailingList>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#ProcessOntology -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#ProcessOntology">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#Processing -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#Processing">
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#PropositionalLogic -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#PropositionalLogic">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#KnowledgeRepresentationParadigm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#Protege -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#Protege">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringTool"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#ProteinInformationResource -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#ProteinInformationResource">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#ProteinOntology -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#ProteinOntology">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <omv:hasFormalityLevel rdf:resource="http://www.isibang.ac.in/ns/mod#Vocabulary"/>
+        <omv:hasOntologyLanguage rdf:resource="http://www.isibang.ac.in/ns/mod#OBO"/>
+        <omv:usedOntologyEngineeringTool rdf:resource="http://www.isibang.ac.in/ns/mod#OBOEdit"/>
+        <dct:contributor rdf:resource="http://www.isibang.ac.in/ns/mod#CathyHWu"/>
+        <dct:contributor rdf:resource="http://www.isibang.ac.in/ns/mod#CeciliaArighi"/>
+        <dct:contributor rdf:resource="http://www.isibang.ac.in/ns/mod#LeslieArminski"/>
+        <dct:creator rdf:resource="http://www.isibang.ac.in/ns/mod#DarrenANatale"/>
+        <dct:license rdf:resource="http://www.isibang.ac.in/ns/mod#CreativeCommonsAttribution4.0"/>
+        <dct:publisher rdf:resource="http://www.isibang.ac.in/ns/mod#PROConsortium"/>
+        <dct:relation rdf:resource="http://www.isibang.ac.in/ns/mod#DiseaseOntology"/>
+        <dct:relation rdf:resource="http://www.isibang.ac.in/ns/mod#GeneOntology"/>
+        <dct:relation rdf:resource="http://www.isibang.ac.in/ns/mod#SequenceTypesAndFeaturesOntology"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#DarrenNatale"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#PROConsortium"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#ProteinInformationResource"/>
+        <group rdf:resource="http://www.isibang.ac.in/ns/mod#OBOFoundry"/>
+        <group rdf:resource="http://www.isibang.ac.in/ns/mod#WheatDataInteroperabilityWorkingGroup"/>
+        <ontologyInUse rdf:resource="http://www.isibang.ac.in/ns/mod#PlanteomeProject"/>
+        <ontologyInUse rdf:resource="http://www.isibang.ac.in/ns/mod#VEST-AgroPortalMapOfStandards"/>
+        <foaf:fundedBy rdf:resource="http://www.isibang.ac.in/ns/mod#ComputercraftCorporation"/>
+        <foaf:fundedBy rdf:resource="http://www.isibang.ac.in/ns/mod#NCI"/>
+        <foaf:fundedBy rdf:resource="http://www.isibang.ac.in/ns/mod#NHGRI"/>
+        <foaf:fundedBy rdf:resource="http://www.isibang.ac.in/ns/mod#NIAID"/>
+        <foaf:fundedBy rdf:resource="http://www.isibang.ac.in/ns/mod#NIGMS"/>
+        <foaf:fundedBy rdf:resource="http://www.isibang.ac.in/ns/mod#NLM"/>
+        <foaf:fundedBy rdf:resource="http://www.isibang.ac.in/ns/mod#NationalScienceFoundation"/>
+        <foaf:fundedBy rdf:resource="http://www.isibang.ac.in/ns/mod#USAirForce"/>
+        <omv:URI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/pr.owl</omv:URI>
+        <omv:acronym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PR</omv:acronym>
+        <omv:keyClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gene</omv:keyClasses>
+        <omv:keyClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organism</omv:keyClasses>
+        <omv:keyClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protein</omv:keyClasses>
+        <omv:keyClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protein coding gene</omv:keyClasses>
+        <omv:keywords rdf:datatype="http://www.w3.org/2001/XMLSchema#string">amino acids</omv:keywords>
+        <omv:keywords rdf:datatype="http://www.w3.org/2001/XMLSchema#string">genes</omv:keywords>
+        <omv:keywords rdf:datatype="http://www.w3.org/2001/XMLSchema#string">immunology</omv:keywords>
+        <omv:keywords rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protein</omv:keywords>
+        <omv:keywords rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proteomics</omv:keywords>
+        <omv:keywords rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uniprot knowledgebase</omv:keywords>
+        <omv:numberOfClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">83656</omv:numberOfClasses>
+        <omv:numberOfIndividuals rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</omv:numberOfIndividuals>
+        <omv:numberOfProperties rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">11</omv:numberOfProperties>
+        <omv:resourceLocator rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://data.agroportal.lirmm.fr/ontologies/PR/download?download_format=rdf</omv:resourceLocator>
+        <omv:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Production</omv:status>
+        <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-04-13T00:00:00+00:00</dct:created>
+        <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-06-30T00:00:00</dct:dateSubmitted>
+        <dct:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An ontological representation of protein-related entities. The PRotein Ontology (PRO) formally defines taxon-specific and taxon-neutral protein-related entities in three major areas: proteins related by evolution; proteins produced from a given gene; and protein-containing complexes.</dct:description>
+        <dct:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Protein Ontology (PRO; http://proconsortium.org) formally defines protein entities and explicitly represents their major forms and interrelations. Protein entities represented in PRO corresponding to single amino acid chains are categorized by level of specificity into family, gene, sequence and modification metaclasses, and there is a separate metaclass for protein complexes. All metaclasses also have organism-specific derivatives. PRO complements established sequence databases such as UniProtKB, and interoperates with other biomedical and biological ontologies such as the Gene Ontology (GO). PRO relates to UniProtKB in that PRO&apos;s organism-specific classes of proteins encoded by a specific gene correspond to entities documented in UniProtKB entries. PRO relates to the GO in that PRO&apos;s representations of organism-specific protein complexes are subclasses of the organism-agnostic protein complex terms in the GO Cellular Component Ontology. The past few years have seen growth and changes to the PRO, as well as new points of access to the data and new applications of PRO in immunology and proteomics. Here we describe some of these developments.</dct:description>
+        <dct:isFormatOf rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/pr.owl</dct:isFormatOf>
+        <dct:language rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://lexvo.org/id/iso639-3/eng</dct:language>
+        <vann:example rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PR_000018263</vann:example>
+        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pr</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/</vann:preferredNamespaceUri>
+        <doap:mailingList rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">dan5@georgetown.edu</doap:mailingList>
+        <doap:mailingList rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">pirmail@georgetown.edu</doap:mailingList>
+        <doap:repository rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://sourceforge.net/projects/pro-obo/</doap:repository>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/BFO_0000019</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/BFO_0000040</rootClasses>
+        <rootClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/SO_0000110</rootClasses>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:deprecated>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">41.0</owl:versionInfo>
+        <sparql-service-description:endpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://pir.georgetown.edu/pro/pro_sparql.shtml</sparql-service-description:endpoint>
+        <foaf:depiction rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://proconsortium.org/pirwww/images/Pro2.png</foaf:depiction>
+        <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://proconsortium.org/pro/</foaf:homepage>
+        <foaf:logo rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/PROconsortium/logo/master/PROlogo_small.pn</foaf:logo>
+        <foaf:page rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://proconsortium.org/pirwww/about/publication.shtml</foaf:page>
+        <foaf:page rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://proconsortium.org/pirwww/support/help.shtml</foaf:page>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#RDA -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#RDA">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#RDAWheatInteroperabilityWorkingGroup -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#RDAWheatInteroperabilityWorkingGroup">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#EstherDzalé-Yeumo"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#RDA"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#RichardFulss"/>
+        <dct:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Wheat Data Interoperability Working Group aims to provide a common framework for describing, representing linking and publishing Wheat data with respect to open standards. The RDA WDI group has a specific slice in AgroPortal: http://wheat.agroPortal.lirmm.fr</dct:description>
+        <doap:mailingList rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">edzale@versailles.inra.fr</doap:mailingList>
+        <doap:mailingList rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">r.fulss@cgiar.org</doap:mailingList>
+        <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.rd-alliance.org/groups/wheat-data-interoperability-wg.html</foaf:homepage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#RelationsOntology -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#RelationsOntology">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.obofoundry.org/ontology/ro</foaf:homepage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#Relocating -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#Relocating">
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#RichardFulss -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#RichardFulss">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#RosemaryShrestha -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#RosemaryShrestha">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#SKOS -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#SKOS">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyLanguage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#Schema -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#Schema">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#FormalityLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#Semi-formal -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#Semi-formal">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#FormalityLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#Semi-informal -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#Semi-informal">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#FormalityLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#SequenceTypesAndFeaturesOntology -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#SequenceTypesAndFeaturesOntology">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#ServiceOntology -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#ServiceOntology">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#SupAgro -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#SupAgro">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#TaskOntology -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#TaskOntology">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#Taxonomy -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#Taxonomy">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#FormalityLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#TermGenie1.0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#TermGenie1.0">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringTool"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#Terminology -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#Terminology">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#FormalityLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#Thesaurus -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#Thesaurus">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#FormalityLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#Transforming -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#Transforming">
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#Turtle -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#Turtle">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologySyntax"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#UMLS -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#UMLS">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyLanguage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#USAirForce -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#USAirForce">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#Uberon -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#Uberon">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/ns/mod#Ontology"/>
+        <omv:resourceLocator rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/uberon.owl</omv:resourceLocator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#UniversityOfMontpellier -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#UniversityOfMontpellier">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#UniversityOfStanford -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#UniversityOfStanford">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#VEST-AgroPortalMapOfStandards -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#VEST-AgroPortalMapOfStandards">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#FAO"/>
+        <dct:rightsHolder rdf:resource="http://www.isibang.ac.in/ns/mod#ValeriaPesce"/>
+        <dct:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This VEST-AgroPortal provides a global map of existing vocabularies for the exchange of data in the field of food and agriculture. The directory is the result of the merging of records from two different sources: the VEST Registry (a registry of vocabularies of all types and all formats) and the AgroPortal (a repository of ontologies).</dct:description>
+        <doap:mailingList rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">valeria.pesce@fao.org</doap:mailingList>
+        <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://vest.agrisemantics.org/</foaf:homepage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#ValeriaPesce -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#ValeriaPesce">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#Vocabulary -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#Vocabulary">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#FormalityLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#WheatDataInteroperabilityWorkingGroup -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#WheatDataInteroperabilityWorkingGroup">
+        <rdf:type rdf:resource="http://www.isibang.ac.in/ns/mod#Group"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#YAMO -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#YAMO">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#OWL/XML -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#OWL/XML">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologySyntax"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#RDF(S) -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#RDF(S)">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyLanguage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#RDF/XML -->
+
+    <owl:NamedIndividual rdf:about="http://www.isibang.ac.in/ns/mod#RDF/XML">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologySyntax"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
