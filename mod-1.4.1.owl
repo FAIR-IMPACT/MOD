@@ -25,18 +25,18 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://www.isibang.ac.in/ns/mod">
         <owl:versionIRI rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
-        <dct:Creator xml:lang="en">Clement Jonquet</dct:Creator>
+        <dc:creator xml:lang="en">Clement Jonquet</dct:Creator>
         <dc:title xml:lang="en">MOD: Metadata for Ontology Description and publication</dc:title>
         <vann:PreferredNamespaceUri xml:lang="en">http://www.isibang.ac.in/ns/mod#</vann:PreferredNamespaceUri>
-        <dct:Contributor xml:lang="en">Anne Toulet</dct:Contributor>
+        <dc:Contributor xml:lang="en">Anne Toulet</dct:Contributor>
         <dc:abstract xml:lang="en">MOD provides a set of terms which can be used by the ontology developers, ontology libraries (e.g., ontology registry, ontology repository, ontology portal), and in general by the Web developers to describe and publish the ontologies. The enriched description of ontologies, in turn, will help the users to search, discover, identify and select the required ontologies. This will ultimately promote the reuse of ontologies.</dc:abstract>
         <mod:SampleQueries xml:lang="en">For sample SPARQL quesries to query MOD OWL knowledge base, see here: https://github.com/sifrproject/MOD-Ontology/blob/master/SPARQL_Queries_on_MOD_1.2.3-with-instances.txt</mod:SampleQueries>
-        <dct:License xml:lang="en">MOD is licensed under the Creative Commons Attribution 4.0 
+        <dc:license xml:lang="en">MOD is licensed under the Creative Commons Attribution 4.0 
 For details, see here: https://github.com/sifrproject/MOD-Ontology/blob/master/LICENSE</dct:License>
         <dc:title xml:lang="fr">MOD: Métadonnées pour l&apos;ontologie Description et publication</dc:title>
         <vann:PreferredNamespacePrefix xml:lang="en">mod</vann:PreferredNamespacePrefix>
         <dc:contributor xml:lang="en">Udaya Varadarajan</dc:contributor>
-        <dct:Creator xml:lang="en">Biswanath Dutta</dct:Creator>
+        <dc:creator xml:lang="en">Biswanath Dutta</dct:Creator>
         <omv:Status xml:lang="en">This version MOD 1.4 is a stable version.</omv:Status>
     </owl:Ontology>
     
