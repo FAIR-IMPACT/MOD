@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.isibang.ac.in/ns/mod#"
      xml:base="http://www.isibang.ac.in/ns/mod"
-     xmlns:schema="http://schema.org"
+     xmlns:schema="http://schema.org" 
      xmlns:door="http://kannel.open.ac.uk/ontology#"
      xmlns:mod="http://www.isibang.ac.in/ns/mod#mod:"
      xmlns:void="http://rdfs.org/ns/void#"
@@ -36,7 +36,7 @@ For details, see here: https://github.com/sifrproject/MOD-Ontology/blob/master/L
         <vann:PreferredNamespacePrefix xml:lang="en">mod</vann:PreferredNamespacePrefix>
         <dc:contributor xml:lang="en">Udaya Varadarajan</dc:contributor>
         <dc:creator xml:lang="en">Biswanath Dutta</dct:Creator>
-        <omv:Status xml:lang="en">This version MOD 1.4 is a stable version.</omv:Status>
+        <omv:Status xml:lang="en">This version MOD 1.4 is a working version.</omv:Status>
     </owl:Ontology>
     
 
