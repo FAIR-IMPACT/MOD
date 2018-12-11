@@ -3,7 +3,7 @@ Metadata for Ontology Description and Publication Ontology
 
 This project consists in building an OWL ontology and application profile to capture metadata information for ontologies, vocabularies or semantic resources in general. 
 
-MOD is an OWL ontology to capture metadata information for ontologies. It is a follow-up to the [OVM2 Ontology]( http://omv2.sourceforge.net) project.
+MOD is an OWL ontology to capture metadata information for ontologies. It is a follow-up to the [OMV2 Ontology]( http://omv2.sourceforge.net) project.
 This project is connected to the work done by @jonquet and @antool on a new ontology metadata model implemented within AgroPortal (https://github.com/agroportal): https://github.com/agroportal/documentation/tree/master/metadata
 
 MOD 1.0 was published by @biswanathdutta in September 2015: 
