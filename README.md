@@ -27,4 +27,4 @@ This repository is licensed under Creative Commons 4.0 International. See the [L
 
 **Clement Jonquet**  
 <jonquet@lirmm.fr>  
-(@jonquet)
+(@jonquet) 
