@@ -23,7 +23,7 @@ This repository is licensed under Creative Commons 4.0 International. See the [L
 ## Contacts:
 **Biswanath Dutta**  
 <bisu@drtc.isibang.ac.in>  
-(@biswanathdutta)
+(@biswanathdutta) 
 
 **Clement Jonquet**  
 <jonquet@lirmm.fr>  
