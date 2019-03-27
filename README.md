@@ -21,10 +21,10 @@ http://dcpapers.dublincore.org/pubs/article/view/3758
 This repository is licensed under Creative Commons 4.0 International. See the [LICENSE deed](LICENSE) for details.
 
 ## Contacts
-**Biswanath Dutta (Indian Statistical Institute) **  
+**Biswanath Dutta (Indian Statistical Institute)**  
 <bisu@drtc.isibang.ac.in>  
 (@biswanathdutta) 
 
-**Clement Jonquet (University of Montpellier) **  
+**Clement Jonquet (University of Montpellier)**  
 <jonquet@lirmm.fr>  
 (@jonquet) 
