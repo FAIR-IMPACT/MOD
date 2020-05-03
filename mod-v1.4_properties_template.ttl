@@ -1,0 +1,217 @@
+
+#################################################################
+#    Empty MOD1.4 properties template to copy/paste for reuse
+# 	 Clement Jonquet
+#################################################################
+
+	########## Intrinsic properties ##########
+		omv:acronym 					"" ;
+		dct:title						""@en,
+										""@fr ;
+		dct:alternative 				""@en ,
+										""@fr ;
+		skos:hiddenLabel				""@en;
+		owl:ontologyIRI					<> ;
+		owl:versionIRI 					<> ;
+		dct:identifier					"" ;
+		owl:versionInfo					"" ;
+		omv:status						"" ;
+		owl:deprecated					false ;
+		dct:license						<> ;	
+		omv:hasOntologyLanguage			omv:OWL ;
+		omv:hasFormalityLevel			omv:Vocabulary ;
+		omv:hasOntologySyntax			<http://www.w3.org/ns/formats/Turtle> ;
+		dct:language					<http://lexvo.org/id/iso639-3/eng> ,
+										<http://lexvo.org/id/iso639-3/fra> ;
+
+	########## Description properties ##########
+		dct:description					""@en , 
+										""@fr ;
+		dct:abstract					""@en ,
+										""@fr ;
+		cc:morePermissions				"" ;
+		cc:useGuidelines				""@en ,
+										""@fr ;
+		dct:bibliographicCitation 		<> ;
+		foaf:page						<> ;
+		omv:resourceLocator				<> ;
+		rdfs:comment					""@en ,
+										""@fr ;
+		omv:keywords					""@en ,
+										""@fr ;
+		omv:isOfType					omv:TaskOntology ;
+		omv:designedForOntologyTask 	omv:ConfigurationTask ;
+		omv:usedOntologyEngineeringTool <> ;
+		omv:usedOntologyEngineeringMethodology	""@en ,
+												""@fr ;
+		omv:conformsToKnowledgeRepresentationParadigm "" ;
+		dct:coverage					""@en ,
+										""@fr ;
+		mod:competencyQuestion			""@en ,
+										""@fr ;
+		foaf:depiction					<> ;
+		foaf:logo						<> ;
+		foaf:homepage					<> ;
+		dct:accessRights				""@en ,
+										""@fr ;
+		vann:changes					""@en ,
+										""@fr ;
+		vann:example					""@en ,
+										""@fr ;
+		vann:preferredNamespaceUri		<> ;
+		vann:preferredNamespacePrefix	"" ;
+		mod:prefLabelProperty			rdfs:label ;
+		mod:synonymProperty				skos:altLabel ;
+		mod:definitionProperty			dct:description ;
+		mod:authorProperty				pav:importedBy ;
+		mod:obsoleteProperty			owl:deprecated ;
+		mod:hierarchyProperty			rdfs:subClassOf ;
+		mod:obsoleteParent				<> ;
+		void:uriRegexPattern			"" ;
+		voaf:toDoList					"" ;
+		idot:exampleIdentifier			<> ;
+		schema:award					""@en ,
+										""@fr ;
+		schema:associatedMedia			<> ;
+		schema:includedInDataCatalog	<> ;
+
+	########## People properties ##########
+	
+		dct:creator						"" ,
+										"" ;	
+		dct:contributor					"" ,
+										"" ;
+		dct:publisher					"" ,
+										"" ;
+		pav:curatedBy					"" ;
+		schema:translator				"" ;
+		dct:rightsHolder				""@en ,
+										""@fr;
+
+	########## Grouping properties ##########
+
+		dct:subject						""@en ;
+		mod:group						""@en ;
+
+	########## Relation properties ##########
+
+		owl:imports						<> ;
+		owl:priorVersion				<> ;
+		owl:backwardCompatibleWith		<> ;
+		owl:incompatibleWith			<> ;
+		dct:isPartOf					"" ;
+		dct:hasPart						"" ;	
+		dct:hasVersion					"" ;
+		dct:isFormatOf					<> ,
+										<> ;
+		dct:hasFormat					<> ;
+		dct:relation					""@en ,
+										""@fr ;
+		voaf:specializes				<>;
+		schema:workTranslation			"" ;
+		schema:translationOfWork		"" ;
+		door:comesFromTheSameDomain		"" ;
+		voaf:similar					"" ;
+		voaf:hasEquivalencesWith		""@en ,	
+										""@fr ;
+		door:hasDisparateModelling		""@en ,
+										""@fr ;
+		voaf:usedBy						"" ;
+		voaf:generalizes				"" ;
+		voaf:hasDisjunctionsWith		"" ;
+
+	########## Content properties ##########
+
+		omv:keyClasses					<> ;
+		void:rootResource				<> ;
+		mod:browsingUI					"" ;
+		sd:endpoint						<> ;
+		mod:vocabularyUsed				<http://creativecommons.org/ns#> ,
+										<http://www.w3.org/ns/sparql-service-description#> ,
+										<http://purl.org/dc/terms/> ,
+										<http://omv.ontoware.org/2005/05/ontology#> ,
+										<http://www.w3.org/2002/07/owl#> ,
+										<http://purl.org/pav/> ,
+										<http://www.w3.org/1999/02/22-rdf-syntax-ns#> ,
+										<http://www.w3.org/XML/1998/namespace> ,
+										<http://www.w3.org/2001/XMLSchema#> ,
+										<http://usefulinc.com/ns/doap/> ,
+										<http://kannel.open.ac.uk/ontology#> ,
+										<http://xmlns.com/foaf/0.1/> ,
+										<http://identifiers.org/idot/> ,
+										<http://www.w3.org/ns/prov#> ,
+										<http://www.w3.org/2000/01/rdf-schema#> ,
+										<http://www.w3.org/2004/02/skos/core#> ,
+										<http://purl.org/vocab/vann/> ,
+										<http://purl.org/vocommons/voaf#> ,
+										<http://rdfs.org/ns/void#> ,
+										<http://schema.org/> ;
+		mod:sampleQueries				""@en ,
+										""@fr ;
+		void:propertyPartition			"" ;
+		void:classPartition				"" ;
+		void:dataDump					"" ,
+										"" ,
+										"" ,
+										"" ,
+										"" ;
+		void:openSearchDescription		"" ;
+		void:uriLookupEndpoint			"" ;
+
+	########## Community properties ##########
+
+		omv:knownUsage					""@en ,
+										""@fr ;
+		omv:endorsedBy					""@en ,
+										""@fr ;
+		mod:ontologyInUse				"" ;
+		dct:audience					""@en ,
+										""@fr ;
+		foaf:fundedBy					""@en ;
+		doap:repository					<> ;
+		doap:bugDatabase				<> ;
+		doap:mailingList				"" ;
+		mod:hasEvaluation				"" ;
+		schema:comment 					"" ;
+		mod:analytics 					<> ;
+
+	########## Date properties ##########
+
+		dct:created 					"2018-08-02" ;
+		dct:modified 					"2020-03-27" ;
+		dct:valid 						"Not specified" ;
+		dct:dateSubmitted 				"" ;
+		pav:curatedOn 					"2019-03-01" ;
+
+	########## Metrics properties ##########
+
+		mod:metrics 					"" ;
+		omv:numberOfClasses 			25;
+		omv:numberOfIndividuals 		146;
+		omv:numberOfProperties 			131;
+		mod:numberOfObjectProperties 	45;
+		mod:numberOfDataProperties 		86;
+		omv:numberOfAxioms 				1369;		
+		mod:numberOfLabels 				138;
+		mod:byteSize 					111000;
+		mod:maxDepth 					1;
+		mod:maxChildCount 				1;
+		mod:averageChildCount 			1;
+		mod:classesWithOneChild 		1;
+		mod:classesWithMoreThan25Children 0; 
+		mod:classesWithNoDefinition 	25;
+
+	########## Provenance properties ##########
+
+		dct:source 						""@en ,
+										""@fr ;
+		prov:wasGeneratedBy 			""@en ,
+										""@fr ;
+		prov:wasInvalidatedBy 			"" ;
+		dct:accrualMethod 				""@en ,
+										""@fr ;
+		dct:accrualPeriodicity 			""@en ,
+										""@fr ;
+		dct:accrualPolicy 				""@en ,
+										""@fr .
+

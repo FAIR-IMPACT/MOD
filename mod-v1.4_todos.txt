@@ -1,0 +1,26 @@
+MOD1.4 TODOS: 
+
+- Express the usage constraint in the ontology (B & C)
+- Change URI scheme possibly with W3IDs (Biswanath)
+- Generate new html docs for 1.4 automatically (Biswanath)
+- Discuss subClassOf and types for mod:Ontology (B & C) 
+- Synchronize the descriptions back to the file (B & C)
+- Translate descriptions to French (Clement)
+- Change long property name in relations with shorter ones (Clement)
+
+MOD2.0 TODOS: 
+- Check new version of DCAT
+- Check outcomes of the W3C's DXWG
+- Separate reliesOn and relatedTo and hierarchise relations a bit
+- Maybe relies more on VOAF
+
+
+LOG (March 2020): 
+- Describe MOD1.4 profile with itself (Clement)
+- Establish formal link from profile to ontology (Clement)
+- Curate the metadata of properties (Clement)
+- Store the information with MIRO (Clement)
+- Check the README file on GitHub (Clement)
+- Move from owl:Thing to rdfs:Resource in profile (Clement)
+- Fixe the dates of each releases with right info (Clement)
+- Changed mod:vocabularyUsed by voaf:metadataVoc
