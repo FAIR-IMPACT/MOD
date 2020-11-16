@@ -24,13 +24,12 @@ jobs:
 
     - name: Generate docs
       run: |
-        wget -O OMV.owl https://www.oeg-upm.net/files/omv/OMV.owl
         ontospy gendocs -o docs --type 2 --nobrowser mod-v1.4_ontology.owl
 
     - name: Commit and push
       run: |
-        git config --global user.name 'Vincent Emonet'
-        git config --global user.email 'vincent.emonet@maastrichtuniversity.nl'
+        git config --global user.name 'Clément Jonquet'
+        git config --global user.email 'jonquet@lirmm.fr'
         git add -A && git commit -m "Automatically generate documentation from OWL ontology file using Ontospy gendocs."
         git push
     
