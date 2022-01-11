@@ -18,7 +18,7 @@ MOD 1.0 was published by @biswanathdutta in September 2015:
 http://dcpapers.dublincore.org/pubs/article/view/3758
 
 ## License
-This repository is licensed under Creative Commons 4.0 International. See the [LICENSE deed](LICENSE) for details.
+This repository is licensed under Creative Commons 4.0 Attribution International. See the [LICENSE deed](LICENSE) for details.
 
 ## Contacts
 **Biswanath Dutta (Indian Statistical Institute)**  
