@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:p1="http://www.owl-ontologies.com/file1.owl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://kannel.open.ac.uk/ontology#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xml:base="http://kannel.open.ac.uk/ontology">
+  <owl:Ontology rdf:about="">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Created with TopBraid Composer</owl:versionInfo>
+    <owl:imports rdf:resource="http://www.w3.org/2003/11/swrlb"/>
+    <owl:imports rdf:resource="http://www.w3.org/2003/11/swrl"/>
+  </owl:Ontology>
+  <owl:Class rdf:ID="Ontology">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Class representing an ontology. Should be mapped to omv:Ontology (maybe even owl:Ontology)</rdfs:comment>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="hasDisparateModelling">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >the relation of having disparate modelling</rdfs:label>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="disagreesWith"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >when two ontologies took different design/modelling decisions</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="mappingSimilarTo">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >is aligned to a large extent</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >the relation of being similar based on an alignement</rdfs:label>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="isAlignedTo"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="similarTo"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="incoherentWith">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="incompatibleWith"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >evolution which involves a only at the syntactic level</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >the relation of being incoherent</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isTheSchemaFor">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="ontologyRelatedTo"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Needs to be defined</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#incompatibleWith">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >an ontology is incompatible with another if it cannot be merged with it without generating inconsistencies or incoherences</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The relation of incompatibility</rdfs:label>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#disagreesWith"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="owlIncompatibleWith">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >the relation of being a new incompatible version from OWL</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#incompatibleWith"/>
+    <rdfs:subPropertyOf>
+      <owl:TransitiveProperty rdf:ID="conceptualEvolutionOf"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >should be linked to the actual OWL property</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="inconsistentWith">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >evolution which involves a only at the syntactic level</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >the relation of being an explanationEvolution</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#incompatibleWith"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#similarTo">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >the similarity relation</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >an ontology is similar to another one if its model overlap with the model of the other ontology</rdfs:comment>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#ontologyRelatedTo"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#isAlignedTo">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#ontologyRelatedTo"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Needs to be defined</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#disagreesWith">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#ontologyRelatedTo"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >an ontology disagree with another if it expressed contradicting beliefs on something</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The relation of disagreement</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="backwardCompatibleWith">
+    <rdfs:subPropertyOf>
+      <owl:TransitiveProperty rdf:ID="isLatterVersionOf"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >should be mapped to tha actual owl property</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >the relation of being a compatible new version from owl</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="agrees">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The relation of being a previous version</rdfs:label>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#ontologyRelatedTo"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >an ontology agrees with another if it expresses the same belief on something</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#ontologyRelatedTo">
+    <rdfs:domain rdf:resource="#Ontology"/>
+    <rdfs:range rdf:resource="#Ontology"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >relation between ontologies</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:TransitiveProperty rdf:about="#conceptualEvolutionOf">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >the relation of being a conceptual evolution</rdfs:label>
+    <rdfs:subPropertyOf>
+      <owl:TransitiveProperty rdf:about="#isLatterVersionOf"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >evolution which involves a change in the model</rdfs:comment>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:ID="semanticallyIncludedIn">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >the set of axioms is included</rdfs:comment>
+    <rdfs:subPropertyOf>
+      <owl:TransitiveProperty rdf:ID="includedIn"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Syntactic inclusion</rdfs:label>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:ID="imports">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Should be mapped to owl:imports</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The import relation from owl</rdfs:label>
+    <rdfs:subPropertyOf>
+      <owl:TransitiveProperty rdf:ID="syntacticallyIncludedIn"/>
+    </rdfs:subPropertyOf>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:ID="semanticallyEquivalentTo">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >have the same logical models</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Semantic Equivalence</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#semanticallyIncludedIn"/>
+    <rdfs:subPropertyOf>
+      <owl:SymmetricProperty rdf:ID="equivalentTo"/>
+    </rdfs:subPropertyOf>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:ID="isAConservativeExtensionOf">
+    <rdfs:subPropertyOf>
+      <owl:TransitiveProperty rdf:about="#syntacticallyIncludedIn"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >need to be specified</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >look at the literature</rdfs:comment>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="#includedIn">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >an ontology is included in another if its model is contained in the one of the other ontology.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >the inclusion relation</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#ontologyRelatedTo"/>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:ID="explanationEvolution">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >evolution which involves a only at the syntactic level</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="#semanticallyEquivalentTo"/>
+    <rdfs:subPropertyOf>
+      <owl:TransitiveProperty rdf:about="#isLatterVersionOf"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >the relation of being an explanationEvolution</rdfs:label>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:ID="syntacticallyEquivalentTo">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >have the same set of axioms</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="#semanticallyEquivalentTo"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Syntactical Equivalence</rdfs:label>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:ID="priorVersion">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >prior version relation from OWL</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >should be mapped to the actual owl relation</rdfs:comment>
+    <rdfs:subPropertyOf>
+      <owl:TransitiveProperty rdf:ID="isPreviousVersionOf"/>
+    </rdfs:subPropertyOf>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:ID="isHomomorphicTo">
+    <rdfs:subPropertyOf rdf:resource="#includedIn"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >to be better defined</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >the graph are included</rdfs:comment>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:ID="isIsomorphicTo">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Relation of being isomorphic</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#isHomomorphicTo"/>
+    <rdfs:subPropertyOf>
+      <owl:SymmetricProperty rdf:about="#equivalentTo"/>
+    </rdfs:subPropertyOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Needs to be better defined</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >have the same graph structure</rdfs:comment>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="#isPreviousVersionOf">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An ontology is a latter version of another one if it is an evolution of the other one.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="#similarTo"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The relation of being a previous version</rdfs:label>
+    <owl:inverseOf>
+      <owl:TransitiveProperty rdf:about="#isLatterVersionOf"/>
+    </owl:inverseOf>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="#syntacticallyIncludedIn">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >the set of axioms is included</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="#semanticallyIncludedIn"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Syntactic inclusion</rdfs:label>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="#isLatterVersionOf">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >is aligned to a large extent</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >the relation of being a latter version</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#similarTo"/>
+  </owl:TransitiveProperty>
+  <owl:SymmetricProperty rdf:ID="comesFromTheSameDomain">
+    <owl:inverseOf rdf:resource="#comesFromTheSameDomain"/>
+    <rdfs:subPropertyOf rdf:resource="#ontologyRelatedTo"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:about="#equivalentTo">
+    <rdfs:subPropertyOf rdf:resource="#agrees"/>
+    <rdfs:subPropertyOf rdf:resource="#includedIn"/>
+    <rdfs:subPropertyOf rdf:resource="#similarTo"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >purposedly ignore reflexive</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >two ontologies are equivalent if they represent the same model.</rdfs:comment>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:ID="syntacticallySimilarTo">
+    <rdfs:subPropertyOf>
+      <owl:SymmetricProperty rdf:ID="semanticallySimilarTo"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >overlaps in the axioms</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >the relation of being syntactically similar</rdfs:label>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:about="#semanticallySimilarTo">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >overlaps in the models</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="#agrees"/>
+    <rdfs:subPropertyOf rdf:resource="#similarTo"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >the relation of being syntactically similar</rdfs:label>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:ID="lexicallySimilarTo">
+    <rdfs:subPropertyOf rdf:resource="#similarTo"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >the relation of being lexically similar</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >overlaps in the vocabulary</rdfs:comment>
+  </owl:SymmetricProperty>
+  <swrl:AtomList rdf:ID="AtomList_1"/>
+  <swrl:AtomList rdf:ID="AtomList_2"/>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4, Build 533)  http://protege.stanford.edu -->
