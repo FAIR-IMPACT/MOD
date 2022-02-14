@@ -273,12 +273,54 @@
 
 
 #################################################################
-#    Annotation properties
+# Pattern to respect for each MOD properties
+#################################################################
+#
+#### PropertyURI
+#originalns:xx a rdf:Property ;
+#            rdfs:subPropertyOf      SUPER PROPERTY IF ANY
+#            rdfs:label              LABELS
+#            rdfs:domain             DOMAIN INFO IF ANY
+#            rdfs:range              RANGE INFO IF ANY
+#            dcterms:description     DESCCRIPTION FROM ORIGINAL SOURCE ;
+#            rdfs:isDefinedBy        URI OF ORIGINAL SOURCE ;
+#            dcterms:issued          "DATE OF THE FIRST CREATION OF THE PROPERTY BY ORIGINAL RESOURCE"^^xsd:date> ;
+#            owl:equivalentProperty  EQUIVALENT PROPERTY (Equivalent properties have the same "values" (i.e., the same property extension))
+#            pav:derivedFrom         URI OF FIRST MOD VERSION INCLUDING" ;
+#            pav:importedOn          "DATE OF FIRST MOD VERSION INCLUDING"^^xsd:dateTime ;
+#                    
+#            #OPTIONAL STATEMENTS
+#            prov:wasInfluencedBy    "MIRO guidelines: ...." ;
+#            
+#            #OTHER ORIGINAL STATEMENTS IF ANY 
+#            
 #################################################################
 
-###  http://purl.org/dc/elements/1.1/creator
-dcterms:creator rdf:type owl:AnnotationProperty .
 
+### http://purl.org/dc/terms/creator
+dcterms:creator a rdf:Property ;
+            rdfs:subPropertyOf      <http://purl.org/dc/elements/1.1/creator>, dcterms:contributor ;
+            rdfs:label              "creator"@en ,
+                                    "créateur"@fr ;
+            dcterms:description     "An entity responsible for making the resource. Recommended practice is to identify the creator with a URI.  If this is not possible or feasible, a literal value that identifies the creator may be provided."@en ;
+            rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
+            dcterms:issued          "2008-01-14"^^xsd:date ;
+            owl:equivalentProperty  omv:creator ,
+                                    pav:authoredBy ,
+                                    pav:createdBy ,
+                                    schema:author ,
+                                    doap:maintainer ,
+                                    prov:wasAttributedTo ,
+                                    foaf:maker ;
+            pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+            pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+            prov:wasInfluencedBy    "MIRO guidelines: C.2" ;
+            
+            #OTHER ORIGINAL STATEMENTS IF ANY 
+            <http://purl.org/dc/dcam/rangeIncludes> dcterms:Agent .
+           
 
 ###  http://purl.org/dc/elements/1.1/title
 dcterms:title rdf:type owl:AnnotationProperty .
