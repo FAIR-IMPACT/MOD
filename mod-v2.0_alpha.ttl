@@ -22,7 +22,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <https://vocab.org/vann/> .
 @prefix void: <http://rdfs.org/ns/void#> .
-@prefix frbrer: <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
 @prefix schema: <https://schema.org/> .
 @prefix oboinowl: <http://www.geneontology.org/formats/oboInOwl#> .
 @base <https://w3id.org/mod> .
@@ -1011,24 +1011,24 @@ doap:wiki rdf:type owl:ObjectProperty ;
 
 ###  http://w3id.org/nkos#alignedWith
 nkos:alignedWith rdf:type owl:ObjectProperty ;
-                 rdfs:domain frbrer:Expression ;
-                 rdfs:range frbrer:Expression ;
+                 rdfs:domain frbr:Expression ;
+                 rdfs:range frbr:Expression ;
                  rdfs:comment "A related resource with which the described resource is aligned."@en ;
                  rdfs:label "aligned with"@en .
 
 
 ###  http://w3id.org/nkos#basedOn
 nkos:basedOn rdf:type owl:ObjectProperty ;
-             rdfs:domain frbrer:Work ;
-             rdfs:range frbrer:Work ;
+             rdfs:domain frbr:Work ;
+             rdfs:range frbr:Work ;
              rdfs:comment "A resource used as the source for a derivative resource."@en ;
              rdfs:label "based on"@en .
 
 
 ###  http://w3id.org/nkos#usedBy
 nkos:usedBy rdf:type owl:ObjectProperty ;
-            rdfs:domain frbrer:Expression ,
-                        frbrer:Work ;
+            rdfs:domain frbr:Expression ,
+                        frbr:Work ;
             rdfs:range dcterms:AgentClass ;
             rdfs:comment "Agent using the described KOS."@en ;
             rdfs:label "used by"@en .
@@ -1981,7 +1981,7 @@ doap:language rdf:type owl:DatatypeProperty ;
 
 ###  http://w3id.org/nkos#updateFrequency
 nkos:updateFrequency rdf:type owl:DatatypeProperty ;
-                     rdfs:domain frbrer:Expression ;
+                     rdfs:domain frbr:Expression ;
                      rdfs:range rdfs:Literal ;
                      rdfs:comment "The period in which a KOS is typically updated."@en ;
                      rdfs:label "update frequency"@en .
@@ -2449,13 +2449,13 @@ cc:work rdf:type owl:Class ;
 
 
 ###  http://iflastandards.info/ns/fr/frbr/frbrer/Expression
-frbrer:Expression rdf:type owl:Class ;
+frbr:Expression rdf:type owl:Class ;
                   rdfs:comment "The intellectual or artistic realization of a work in the form of alpha-numeric, musical, or choreographic notation, sound, image, object, movement, etc., or any combination of such forms."@en ;
                   rdfs:label "Expression"@en .
 
 
 ###  http://iflastandards.info/ns/fr/frbr/frbrer/Work
-frbrer:Work rdf:type owl:Class ;
+frbr:Work rdf:type owl:Class ;
             rdfs:comment "A distinct intellectual or artistic creation."@en ;
             rdfs:label "Work"@en .
 
@@ -2871,8 +2871,8 @@ foaf:Project rdf:type owl:Class ;
 ###  https://w3id.org/mod#SemanticArtefact
 :SemanticArtefact rdf:type owl:Class ;
                   rdfs:subClassOf cc:work ,
-                                  frbrer:Expression ,
-                                  frbrer:Work ,
+                                  frbr:Expression ,
+                                  frbr:Work ,
                                   dcmi:Collection ,
                                   dcmi:Dataset ,
                                   schema:Dataset ,
