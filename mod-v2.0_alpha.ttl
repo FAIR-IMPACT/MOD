@@ -192,7 +192,7 @@
                             <http://www.w3.org/2004/02/skos/core#> ,
                             <http://purl.org/vocab/vann/> ,
                             <http://rdfs.org/ns/void#> ,
-                            <http://schema.org/> ;
+                            <https://schema.org/> ;
     mod:sampleQueries       
                             "For sample SPARQL queries to query MOD OWL knowledge base, see here: https://github.com/sifrproject/MOD-Ontology/blob/master/SPARQL_Queries_on_MOD_1.2.3-with-instances.txt"@en ,
                             "Pour des examples de requêtes SPARQL sur la base de connaissances MOD, voir ici : https://github.com/sifrproject/MOD-Ontology/blob/master/SPARQL_Queries_on_MOD_1.2.3-with-instances.txt"@fr ;
@@ -298,23 +298,23 @@ skos:note rdf:type owl:AnnotationProperty .
 #################################################################
 
 ###  http://schema.org/Date
-<http://schema.org/Date> rdf:type rdfs:Datatype .
+schema:Date rdf:type rdfs:Datatype .
 
 
 ###  http://schema.org/DateTime
-<http://schema.org/DateTime> rdf:type rdfs:Datatype .
+schema:DateTime rdf:type rdfs:Datatype .
 
 
 ###  http://schema.org/Number
-<http://schema.org/Number> rdf:type rdfs:Datatype .
+schema:Number rdf:type rdfs:Datatype .
 
 
 ###  http://schema.org/Text
-<http://schema.org/Text> rdf:type rdfs:Datatype .
+schema:Text rdf:type rdfs:Datatype .
 
 
 ###  http://schema.org/URL
-<http://schema.org/URL> rdf:type rdfs:Datatype .
+schema:URL rdf:type rdfs:Datatype .
 
 
 #################################################################
@@ -360,8 +360,8 @@ dcterms:Relation rdf:type owl:ObjectProperty ;
 ###  http://purl.org/dc/terms/accessRights
 dcterms:accessRights rdf:type owl:ObjectProperty ;
                  rdfs:domain [ rdf:type owl:Class ;
-                               owl:unionOf ( <http://www.w3.org/ns/dcat#Distribution>
-                                             <http://www.w3.org/ns/dcat#Resource>
+                               owl:unionOf ( dcat:Distribution
+                                             dcat:Resource
                                            )
                              ] ;
                  rdfs:range dcterms:RightsStatement ;
@@ -379,7 +379,7 @@ dcterms:accrualMethod rdf:type owl:ObjectProperty ;
 
 ###  http://purl.org/dc/terms/accrualPeriodicity
 dcterms:accrualPeriodicity rdf:type owl:ObjectProperty ;
-                       rdfs:domain <http://www.w3.org/ns/dcat#Dataset> ;
+                       rdfs:domain dcat:Dataset ;
                        rdfs:range dcterms:Frequency ;
                        rdfs:comment "The frequency at which dataset is published."@en ;
                        rdfs:label "accrual periodicity"@en .
@@ -402,8 +402,8 @@ dcterms:audience rdf:type owl:ObjectProperty ;
 ###  http://purl.org/dc/terms/conformsTo
 dcterms:conformsTo rdf:type owl:ObjectProperty ;
                rdfs:domain [ rdf:type owl:Class ;
-                             owl:unionOf ( <http://www.w3.org/ns/dcat#Distribution>
-                                           <http://www.w3.org/ns/dcat#Resource>
+                             owl:unionOf ( dcat:Distribution
+                                           dcat:Resource
                                          )
                            ] ;
                rdfs:range dcterms:Standard ;
@@ -712,33 +712,33 @@ void:vocabulary rdf:type owl:ObjectProperty ;
 
 
 ###  http://schema.org/about
-<http://schema.org/about> rdf:type owl:ObjectProperty ;
-                          rdfs:domain <http://schema.org/CreativeWork> ;
+schema:about rdf:type owl:ObjectProperty ;
+                          rdfs:domain schema:CreativeWork ;
                           rdfs:comment "The subject matter of the content."@en ;
                           rdfs:label "about"@en .
 
 
 ###  http://schema.org/associatedMedia
-<http://schema.org/associatedMedia> rdf:type owl:ObjectProperty ;
-                                    rdfs:domain <http://schema.org/CreativeWork> ;
-                                    rdfs:range <http://schema.org/MediaObject> ;
+schema:associatedMedia rdf:type owl:ObjectProperty ;
+                                    rdfs:domain schema:CreativeWork ;
+                                    rdfs:range schema:MediaObject ;
                                     rdfs:comment "A media object that encodes this CreativeWork. This property is a synonym for encoding."@en ;
                                     rdfs:label "associated media"@en .
 
 
 ###  http://schema.org/audience
-<http://schema.org/audience> rdf:type owl:ObjectProperty ;
-                             rdfs:domain <http://schema.org/CreativeWork> ;
-                             rdfs:range <http://schema.org/Audience> ;
+schema:audience rdf:type owl:ObjectProperty ;
+                             rdfs:domain schema:CreativeWork ;
+                             rdfs:range schema:Audience ;
                              rdfs:comment "An intended audience, i.e. a group for whom something was created."@en ;
                              rdfs:label "audience"@en .
 
 
 ###  http://schema.org/author
-<http://schema.org/author> rdf:type owl:ObjectProperty ;
-                           rdfs:domain <http://schema.org/CreativeWork> ;
+schema:author rdf:type owl:ObjectProperty ;
+                           rdfs:domain schema:CreativeWork ;
                            rdfs:range [ rdf:type owl:Class ;
-                                        owl:unionOf ( <http://schema.org/Organization>
+                                        owl:unionOf ( schema:Organization
                                                       foaf:Person
                                                     )
                                       ] ;
@@ -747,25 +747,25 @@ void:vocabulary rdf:type owl:ObjectProperty ;
 
 
 ###  http://schema.org/citation
-<http://schema.org/citation> rdf:type owl:ObjectProperty ;
-                             rdfs:domain <http://schema.org/CreativeWork> ;
-                             rdfs:range <http://schema.org/CreativeWork> ;
+schema:citation rdf:type owl:ObjectProperty ;
+                             rdfs:domain schema:CreativeWork ;
+                             rdfs:range schema:CreativeWork ;
                              rdfs:comment "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc."@en ;
                              rdfs:label "citation"@en .
 
 
 ###  http://schema.org/comment
-<http://schema.org/comment> rdf:type owl:ObjectProperty ;
-                            rdfs:range <http://schema.org/Comment> ;
+schema:comment rdf:type owl:ObjectProperty ;
+                            rdfs:range schema:Comment ;
                             rdfs:comment "Comments, typically from users."@en ;
                             rdfs:label "comment"@en .
 
 
 ###  http://schema.org/contributor
-<http://schema.org/contributor> rdf:type owl:ObjectProperty ;
-                                rdfs:domain <http://schema.org/CreativeWork> ;
+schema:contributor rdf:type owl:ObjectProperty ;
+                                rdfs:domain schema:CreativeWork ;
                                 rdfs:range [ rdf:type owl:Class ;
-                                             owl:unionOf ( <http://schema.org/Organization>
+                                             owl:unionOf ( schema:Organization
                                                            foaf:Person
                                                          )
                                            ] ;
@@ -774,10 +774,10 @@ void:vocabulary rdf:type owl:ObjectProperty ;
 
 
 ###  http://schema.org/copyrightHolder
-<http://schema.org/copyrightHolder> rdf:type owl:ObjectProperty ;
-                                    rdfs:domain <http://schema.org/CreativeWork> ;
+schema:copyrightHolder rdf:type owl:ObjectProperty ;
+                                    rdfs:domain schema:CreativeWork ;
                                     rdfs:range [ rdf:type owl:Class ;
-                                                 owl:unionOf ( <http://schema.org/Organization>
+                                                 owl:unionOf ( schema:Organization
                                                                foaf:Person
                                                              )
                                                ] ;
@@ -786,64 +786,64 @@ void:vocabulary rdf:type owl:ObjectProperty ;
 
 
 ###  http://schema.org/distribution
-<http://schema.org/distribution> rdf:type owl:ObjectProperty ;
-                                 rdfs:domain <http://schema.org/Dataset> ;
-                                 rdfs:range <http://schema.org/dataDownload> ;
+schema:distribution rdf:type owl:ObjectProperty ;
+                                 rdfs:domain schema:Dataset ;
+                                 rdfs:range schema:dataDownload ;
                                  rdfs:comment "A downloadable form of this dataset, at a specific location, in a specific format."@en ;
                                  rdfs:label "distribution"@en .
 
 
 ###  http://schema.org/hasPart
-<http://schema.org/hasPart> rdf:type owl:ObjectProperty ;
-                            owl:inverseOf <http://schema.org/isPartOf> ;
+schema:hasPart rdf:type owl:ObjectProperty ;
+                            owl:inverseOf schema:isPartOf ;
                             rdfs:comment "Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense)."@en ;
                             rdfs:label "has part"@en .
 
 
 ###  http://schema.org/includedInDataCatalog
-<http://schema.org/includedInDataCatalog> rdf:type owl:ObjectProperty ;
-                                          rdfs:domain <http://schema.org/Dataset> ;
-                                          rdfs:range <http://schema.org/DataCatalog> ;
+schema:includedInDataCatalog rdf:type owl:ObjectProperty ;
+                                          rdfs:domain schema:Dataset ;
+                                          rdfs:range schema:DataCatalog ;
                                           rdfs:comment "A data catalog which contains this dataset."@en ;
                                           rdfs:label "included in data catalog"@en .
 
 
 ###  http://schema.org/isBasedOn
-<http://schema.org/isBasedOn> rdf:type owl:ObjectProperty ;
-                              rdfs:domain <http://schema.org/CreativeWork> ;
-                              rdfs:range <http://schema.org/CreativeWork> ;
+schema:isBasedOn rdf:type owl:ObjectProperty ;
+                              rdfs:domain schema:CreativeWork ;
+                              rdfs:range schema:CreativeWork ;
                               rdfs:comment "A resource from which this work is derived or from which it is a modification or adaption."@en ;
                               rdfs:label "is based on"@en .
 
 
 ###  http://schema.org/isPartOf
-<http://schema.org/isPartOf> rdf:type owl:ObjectProperty ;
-                             rdfs:domain <http://schema.org/CreativeWork> ;
-                             rdfs:range <http://schema.org/CreativeWork> ;
+schema:isPartOf rdf:type owl:ObjectProperty ;
+                             rdfs:domain schema:CreativeWork ;
+                             rdfs:range schema:CreativeWork ;
                              rdfs:comment "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of."@en ;
                              rdfs:label "is Part of"@en .
 
 
 ###  http://schema.org/license
-<http://schema.org/license> rdf:type owl:ObjectProperty ;
-                            rdfs:domain <http://schema.org/CreativeWork> ;
-                            rdfs:range <http://schema.org/CreativeWork> ;
+schema:license rdf:type owl:ObjectProperty ;
+                            rdfs:domain schema:CreativeWork ;
+                            rdfs:range schema:CreativeWork ;
                             rdfs:comment "A license document that applies to this content, typically indicated by URL."@en ;
                             rdfs:label "license"@en .
 
 
 ###  http://schema.org/mainEntity
-<http://schema.org/mainEntity> rdf:type owl:ObjectProperty ;
-                               rdfs:domain <http://schema.org/CreativeWork> ;
+schema:mainEntity rdf:type owl:ObjectProperty ;
+                               rdfs:domain schema:CreativeWork ;
                                rdfs:comment "Indicates the primary entity described in some page or other CreativeWork."@en ;
                                rdfs:label "main entity"@en .
 
 
 ###  http://schema.org/publisher
-<http://schema.org/publisher> rdf:type owl:ObjectProperty ;
-                              rdfs:domain <http://schema.org/CreativeWork> ;
+schema:publisher rdf:type owl:ObjectProperty ;
+                              rdfs:domain schema:CreativeWork ;
                               rdfs:range [ rdf:type owl:Class ;
-                                           owl:unionOf ( <http://schema.org/Organization>
+                                           owl:unionOf ( schema:Organization
                                                          foaf:Person
                                                        )
                                          ] ;
@@ -852,40 +852,40 @@ void:vocabulary rdf:type owl:ObjectProperty ;
 
 
 ###  http://schema.org/review
-<http://schema.org/review> rdf:type owl:ObjectProperty ;
-                           rdfs:range <http://schema.org/Review> ;
+schema:review rdf:type owl:ObjectProperty ;
+                           rdfs:range schema:Review ;
                            rdfs:comment "A review of the item."@en ;
                            rdfs:label "review"@en .
 
 
 ###  http://schema.org/sourceOrganization
-<http://schema.org/sourceOrganization> rdf:type owl:ObjectProperty ;
-                                       rdfs:domain <http://schema.org/CreativeWork> ;
-                                       rdfs:range <http://schema.org/Organization> ;
+schema:sourceOrganization rdf:type owl:ObjectProperty ;
+                                       rdfs:domain schema:CreativeWork ;
+                                       rdfs:range schema:Organization ;
                                        rdfs:comment "The Organization on whose behalf the creator was working."@en ;
                                        rdfs:label "source organization"@en .
 
 
 ###  http://schema.org/spatial
-<http://schema.org/spatial> rdf:type owl:ObjectProperty ;
-                            rdfs:domain <http://schema.org/CreativeWork> ;
-                            rdfs:range <http://schema.org/Place> ;
+schema:spatial rdf:type owl:ObjectProperty ;
+                            rdfs:domain schema:CreativeWork ;
+                            rdfs:range schema:Place ;
                             rdfs:comment "The \"spatial\" property can be used in cases when more specific properties (e.g. locationCreated, spatialCoverage, contentLocation) are not known to be appropriate."@en ;
                             rdfs:label "spatial"@en .
 
 
 ###  http://schema.org/translationOfWork
-<http://schema.org/translationOfWork> rdf:type owl:ObjectProperty ;
-                                      owl:inverseOf <http://schema.org/workTranslation> ;
+schema:translationOfWork rdf:type owl:ObjectProperty ;
+                                      owl:inverseOf schema:workTranslation ;
                                       rdfs:comment "The work that this work has been translated from. e.g. 物种起源 is a translationOf “On the Origin of Species”"@en ;
                                       rdfs:label "translation of work"@en .
 
 
 ###  http://schema.org/translator
-<http://schema.org/translator> rdf:type owl:ObjectProperty ;
-                               rdfs:domain <http://schema.org/CreativeWork> ;
+schema:translator rdf:type owl:ObjectProperty ;
+                               rdfs:domain schema:CreativeWork ;
                                rdfs:range [ rdf:type owl:Class ;
-                                            owl:unionOf ( <http://schema.org/Organization>
+                                            owl:unionOf ( schema:Organization
                                                           foaf:Person
                                                         )
                                           ] ;
@@ -894,17 +894,17 @@ void:vocabulary rdf:type owl:ObjectProperty ;
 
 
 ###  http://schema.org/workExample
-<http://schema.org/workExample> rdf:type owl:ObjectProperty ;
-                                rdfs:domain <http://schema.org/CreativeWork> ;
-                                rdfs:range <http://schema.org/CreativeWork> ;
+schema:workExample rdf:type owl:ObjectProperty ;
+                                rdfs:domain schema:CreativeWork ;
+                                rdfs:range schema:CreativeWork ;
                                 rdfs:comment "Example/instance/realization/derivation of the concept of this creative work. eg. The paperback edition, first edition, or eBook."@en ;
                                 rdfs:label "work example"@en .
 
 
 ###  http://schema.org/workTranslation
-<http://schema.org/workTranslation> rdf:type owl:ObjectProperty ;
-                                    rdfs:domain <http://schema.org/CreativeWork> ;
-                                    rdfs:range <http://schema.org/CreativeWork> ;
+schema:workTranslation rdf:type owl:ObjectProperty ;
+                                    rdfs:domain schema:CreativeWork ;
+                                    rdfs:range schema:CreativeWork ;
                                     rdfs:comment "A work that is a translation of the content of this work. e.g. 西遊記 has an English workTranslation “Journey to the West”,a German workTranslation “Monkeys Pilgerfahrt” and a Vietnamese translation Tây du ký bình khảo."@en ;
                                     rdfs:label "work translation"@en .
 
@@ -1095,24 +1095,24 @@ adms:translation rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.w3.org/ns/dcat#accessSerive
-<http://www.w3.org/ns/dcat#accessSerive> rdf:type owl:ObjectProperty ;
-                                         rdfs:domain <http://www.w3.org/ns/dcat#Distribution> ;
-                                         rdfs:range <http://www.w3.org/ns/dcat#DataService> ;
+dcat:accessSerive rdf:type owl:ObjectProperty ;
+                                         rdfs:domain dcat:Distribution ;
+                                         rdfs:range dcat:DataService ;
                                          rdfs:comment "A data service that gives access to the distribution of the dataset."@en ;
                                          rdfs:label "access service"@en .
 
 
 ###  http://www.w3.org/ns/dcat#accessService
-<http://www.w3.org/ns/dcat#accessService> rdf:type owl:ObjectProperty ;
-                                          rdfs:domain <http://www.w3.org/ns/dcat#Distribution> ;
-                                          rdfs:range <http://www.w3.org/ns/dcat#DataService> ;
+dcat:accessService rdf:type owl:ObjectProperty ;
+                                          rdfs:domain dcat:Distribution ;
+                                          rdfs:range dcat:DataService ;
                                           rdfs:comment "A data service that gives access to the distribution of the dataset."@en ;
                                           rdfs:label "access service"@en .
 
 
 ###  http://www.w3.org/ns/dcat#accessURL
-<http://www.w3.org/ns/dcat#accessURL> rdf:type owl:ObjectProperty ;
-                                      rdfs:domain <http://www.w3.org/ns/dcat#Distribution> ;
+dcat:accessURL rdf:type owl:ObjectProperty ;
+                                      rdfs:domain dcat:Distribution ;
                                       rdfs:range rdfs:Resource ;
                                       rdfs:comment "A URL of the resource that gives access to a distribution of the dataset. E.g. landing page, feed, SPARQL endpoint."@en ,
                                                    """dcat:accessURL SHOULD be used for the URL of a service or location that can provide access to this distribution, typically through a Web form, query or API call.
@@ -1124,8 +1124,8 @@ If the distribution(s) are accessible only through a landing page (i.e. direct d
 
 
 ###  http://www.w3.org/ns/dcat#compressFormat
-<http://www.w3.org/ns/dcat#compressFormat> rdf:type owl:ObjectProperty ;
-                                           rdfs:domain <http://www.w3.org/ns/dcat#Distribution> ;
+dcat:compressFormat rdf:type owl:ObjectProperty ;
+                                           rdfs:domain dcat:Distribution ;
                                            rdfs:range dcterms:MediaType ;
                                            rdfs:comment "The compression format of the distribution in which the data is contained in a compressed form, e.g. to reduce the size of the downloadable file."@en ,
                                                         "This property to be used when the files in the distribution are compressed, e.g. in a ZIP file. The format SHOULD be expressed using a media type as defined by IANA [IANA-MEDIA-TYPES], if available."@en ;
@@ -1133,31 +1133,31 @@ If the distribution(s) are accessible only through a landing page (i.e. direct d
 
 
 ###  http://www.w3.org/ns/dcat#contactPoint
-<http://www.w3.org/ns/dcat#contactPoint> rdf:type owl:ObjectProperty ;
-                                         rdfs:domain <http://www.w3.org/ns/dcat#Resource> ;
+dcat:contactPoint rdf:type owl:ObjectProperty ;
+                                         rdfs:domain dcat:Resource ;
                                          rdfs:range <http://www.w3.org/2006/vcard/ns#Kind> ;
                                          rdfs:comment "Relevant contact information for the cataloged resource. Use of vCard is recommended."@en ;
                                          rdfs:label "contact point"@en .
 
 
 ###  http://www.w3.org/ns/dcat#dataset
-<http://www.w3.org/ns/dcat#dataset> rdf:type owl:ObjectProperty ;
-                                    rdfs:domain <http://www.w3.org/ns/dcat#Catalog> ;
-                                    rdfs:range <http://www.w3.org/ns/dcat#Dataset> ;
+dcat:dataset rdf:type owl:ObjectProperty ;
+                                    rdfs:domain dcat:Catalog ;
+                                    rdfs:range dcat:Dataset ;
                                     rdfs:comment "A collection of data that is listed in the catalog."@en ;
                                     rdfs:label "dataset"@en .
 
 
 ###  http://www.w3.org/ns/dcat#distribution
-<http://www.w3.org/ns/dcat#distribution> rdf:type owl:ObjectProperty ;
+dcat:distribution rdf:type owl:ObjectProperty ;
                                          rdfs:domain [ rdf:type owl:Class ;
                                                        owl:unionOf ( adms:Asset
-                                                                     <http://www.w3.org/ns/dcat#Dataset>
+                                                                     dcat:Dataset
                                                                    )
                                                      ] ;
                                          rdfs:range [ rdf:type owl:Class ;
                                                       owl:unionOf ( adms:AssetDistribution
-                                                                    <http://www.w3.org/ns/dcat#Distribution>
+                                                                    dcat:Distribution
                                                                   )
                                                     ] ;
                                          rdfs:comment "An available distribution of the dataset."@en ;
@@ -1165,66 +1165,66 @@ If the distribution(s) are accessible only through a landing page (i.e. direct d
 
 
 ###  http://www.w3.org/ns/dcat#downloadURL
-<http://www.w3.org/ns/dcat#downloadURL> rdf:type owl:ObjectProperty ;
-                                        rdfs:domain <http://www.w3.org/ns/dcat#Distribution> ;
+dcat:downloadURL rdf:type owl:ObjectProperty ;
+                                        rdfs:domain dcat:Distribution ;
                                         rdfs:range rdfs:Resource ;
                                         rdfs:comment "The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution's dcterms:format and/or dcat:mediaType"@en ;
                                         rdfs:label "download URL"@en .
 
 
 ###  http://www.w3.org/ns/dcat#landingPage
-<http://www.w3.org/ns/dcat#landingPage> rdf:type owl:ObjectProperty ;
+dcat:landingPage rdf:type owl:ObjectProperty ;
                                         rdfs:subPropertyOf foaf:page ;
-                                        rdfs:domain <http://www.w3.org/ns/dcat#Resource> ;
+                                        rdfs:domain dcat:Resource ;
                                         rdfs:range foaf:Document ;
                                         rdfs:comment "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information."@en ;
                                         rdfs:label "landing page"@en .
 
 
 ###  http://www.w3.org/ns/dcat#mediaType
-<http://www.w3.org/ns/dcat#mediaType> rdf:type owl:ObjectProperty ;
+dcat:mediaType rdf:type owl:ObjectProperty ;
                                       rdfs:subPropertyOf dcterms:format ;
-                                      rdfs:domain <http://www.w3.org/ns/dcat#Distribution> ;
+                                      rdfs:domain dcat:Distribution ;
                                       rdfs:range dcterms:MediaType ;
                                       rdfs:comment "The media type of the distribution as defined by IANA [IANA-MEDIA-TYPES]."@en ;
                                       rdfs:label "media type"@en .
 
 
 ###  http://www.w3.org/ns/dcat#packageFormat
-<http://www.w3.org/ns/dcat#packageFormat> rdf:type owl:ObjectProperty ;
-                                          rdfs:domain <http://www.w3.org/ns/dcat#Distribution> ;
+dcat:packageFormat rdf:type owl:ObjectProperty ;
+                                          rdfs:domain dcat:Distribution ;
                                           rdfs:range dcterms:MediaType ;
                                           rdfs:comment "The package format of the distribution in which one or more data files are grouped together, e.g. to enable a set of related files to be downloaded together."@en ;
                                           rdfs:label "packaging format"@en .
 
 
 ###  http://www.w3.org/ns/dcat#record
-<http://www.w3.org/ns/dcat#record> rdf:type owl:ObjectProperty ;
-                                   rdfs:domain <http://www.w3.org/ns/dcat#Catalog> ;
-                                   rdfs:range <http://www.w3.org/ns/dcat#CatalogRecord> ;
+dcat:record rdf:type owl:ObjectProperty ;
+                                   rdfs:domain dcat:Catalog ;
+                                   rdfs:range dcat:CatalogRecord ;
                                    rdfs:comment "A record describing the registration of a single resource (e.g., a dataset, a data service) that is part of the catalog."@en ;
                                    rdfs:label "catalog record"@en .
 
 
 ###  http://www.w3.org/ns/dcat#servesDataset
-<http://www.w3.org/ns/dcat#servesDataset> rdf:type owl:ObjectProperty ;
-                                          rdfs:range <http://www.w3.org/ns/dcat#Dataset> ;
+dcat:servesDataset rdf:type owl:ObjectProperty ;
+                                          rdfs:range dcat:Dataset ;
                                           rdfs:comment "A collection of data that this data service can distribute."@en ;
                                           rdfs:label "serves dataset"@en .
 
 
 ###  http://www.w3.org/ns/dcat#service
-<http://www.w3.org/ns/dcat#service> rdf:type owl:ObjectProperty ;
+dcat:service rdf:type owl:ObjectProperty ;
                                     rdfs:subPropertyOf dcterms:hasPart ;
-                                    rdfs:domain <http://www.w3.org/ns/dcat#Catalog> ;
-                                    rdfs:range <http://www.w3.org/ns/dcat#DataService> ;
+                                    rdfs:domain dcat:Catalog ;
+                                    rdfs:range dcat:DataService ;
                                     rdfs:comment "A site or end-point that is listed in the catalog."@en ;
                                     rdfs:label "service"@en .
 
 
 ###  http://www.w3.org/ns/dcat#theme
-<http://www.w3.org/ns/dcat#theme> rdf:type owl:ObjectProperty ;
-                                  rdfs:domain <http://www.w3.org/ns/dcat#Resource> ;
+dcat:theme rdf:type owl:ObjectProperty ;
+                                  rdfs:domain dcat:Resource ;
                                   rdfs:range skos:Concept ;
                                   rdfs:comment "A main category of the resource. A resource can have multiple themes."@en ;
                                   rdfs:label "theme"@en .
@@ -1233,8 +1233,8 @@ If the distribution(s) are accessible only through a landing page (i.e. direct d
 ###  http://www.w3.org/ns/odrl/2/hasPolicy
 odrl:hasPolicy rdf:type owl:ObjectProperty ;
                rdfs:domain [ rdf:type owl:Class ;
-                             owl:unionOf ( <http://www.w3.org/ns/dcat#Distribution>
-                                           <http://www.w3.org/ns/dcat#Resource>
+                             owl:unionOf ( dcat:Distribution
+                                           dcat:Resource
                                          )
                            ] ;
                rdfs:range odrl:Policy ;
@@ -1374,13 +1374,13 @@ foaf:primaryTopic rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf foaf:page ;
                   rdf:type owl:FunctionalProperty ;
                   rdfs:domain [ rdf:type owl:Class ;
-                                owl:unionOf ( <http://www.w3.org/ns/dcat#CatalogRecord>
+                                owl:unionOf ( dcat:CatalogRecord
                                               foaf:Document
                                             )
                               ] ;
                   rdfs:range [ rdf:type owl:Class ;
                                owl:unionOf ( owl:Thing
-                                             <http://www.w3.org/ns/dcat#Resource>
+                                             dcat:Resource
                                            )
                              ] ;
                   rdfs:comment "A page or document about this thing."@en ;
@@ -1433,7 +1433,7 @@ foaf:topic rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/mod#describes
 :describes rdf:type owl:ObjectProperty ;
            rdfs:domain :SemanticArtefact ;
-           rdfs:range <http://www.w3.org/ns/dcat#Dataset> .
+           rdfs:range dcat:Dataset .
 
 
 ###  https://w3id.org/mod#designedForTask
@@ -1507,8 +1507,8 @@ foaf:topic rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/mod#qualifiedRelation
 :qualifiedRelation rdf:type owl:ObjectProperty ;
-                   rdfs:domain <http://www.w3.org/ns/dcat#Resource> ;
-                   rdfs:range <http://www.w3.org/ns/dcat#Relationship> ;
+                   rdfs:domain dcat:Resource ;
+                   rdfs:range dcat:Relationship ;
                    rdfs:comment "Link to a description of a relationship with another resource."@en ;
                    rdfs:label "qualified relation"@en .
 
@@ -1800,32 +1800,32 @@ void:uriSpace rdf:type owl:DatatypeProperty ;
 
 
 ###  http://schema.org/award
-<http://schema.org/award> rdf:type owl:DatatypeProperty ;
-                          rdfs:range <http://schema.org/Text> ;
+schema:award rdf:type owl:DatatypeProperty ;
+                          rdfs:range schema:Text ;
                           rdfs:comment "An award won by or for this item."@en ;
                           rdfs:label "award"@en .
 
 
 ###  http://schema.org/dateCreated
-<http://schema.org/dateCreated> rdf:type owl:DatatypeProperty ;
-                                rdfs:range <http://schema.org/DateTime> ;
+schema:dateCreated rdf:type owl:DatatypeProperty ;
+                                rdfs:range schema:DateTime ;
                                 rdfs:comment "The date on which the CreativeWork was created or the item was added to a DataFeed."@en ;
                                 rdfs:label "date created"@en .
 
 
 ###  http://schema.org/dateModified
-<http://schema.org/dateModified> rdf:type owl:DatatypeProperty ;
-                                 rdfs:range <http://schema.org/DateTime> ;
+schema:dateModified rdf:type owl:DatatypeProperty ;
+                                 rdfs:range schema:DateTime ;
                                  rdfs:comment "The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed."@en ;
                                  rdfs:label "date modified"@en .
 
 
 ###  http://schema.org/datePublished
-<http://schema.org/datePublished> rdf:type owl:DatatypeProperty ;
-                                  rdfs:domain <http://schema.org/CreativeWork> ;
+schema:datePublished rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain schema:CreativeWork ;
                                   rdfs:range [ rdf:type rdfs:Datatype ;
-                                               owl:unionOf ( <http://schema.org/Date>
-                                                             <http://schema.org/DateTime>
+                                               owl:unionOf ( schema:Date
+                                                             schema:DateTime
                                                            )
                                              ] ;
                                   rdfs:comment "Date of first broadcast/publication."@en ;
@@ -1833,18 +1833,18 @@ void:uriSpace rdf:type owl:DatatypeProperty ;
 
 
 ###  http://schema.org/description
-<http://schema.org/description> rdf:type owl:DatatypeProperty ;
-                                rdfs:range <http://schema.org/Text> ;
+schema:description rdf:type owl:DatatypeProperty ;
+                                rdfs:range schema:Text ;
                                 rdfs:comment "A description of the item."@en ;
                                 rdfs:label "description"@en .
 
 
 ###  http://schema.org/fileFormat
-<http://schema.org/fileFormat> rdf:type owl:DatatypeProperty ;
-                               rdfs:domain <http://schema.org/CreativeWork> ;
+schema:fileFormat rdf:type owl:DatatypeProperty ;
+                               rdfs:domain schema:CreativeWork ;
                                rdfs:range [ rdf:type rdfs:Datatype ;
-                                            owl:unionOf ( <http://schema.org/Text>
-                                                          <http://schema.org/URL>
+                                            owl:unionOf ( schema:Text
+                                                          schema:URL
                                                         )
                                           ] ;
                                rdfs:comment "Media type, typically MIME format (see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry."@en ;
@@ -1852,26 +1852,26 @@ void:uriSpace rdf:type owl:DatatypeProperty ;
 
 
 ###  http://schema.org/image
-<http://schema.org/image> rdf:type owl:DatatypeProperty ;
-                          rdfs:range <http://schema.org/URL> ;
+schema:image rdf:type owl:DatatypeProperty ;
+                          rdfs:range schema:URL ;
                           rdfs:comment "An image of the item. This can be a URL or a fully described ImageObject."@en ;
                           rdfs:label "image"@en .
 
 
 ###  http://schema.org/inLanguage
-<http://schema.org/inLanguage> rdf:type owl:DatatypeProperty ;
-                               rdfs:domain <http://schema.org/CreativeWork> ;
-                               rdfs:range <http://schema.org/Text> ;
+schema:inLanguage rdf:type owl:DatatypeProperty ;
+                               rdfs:domain schema:CreativeWork ;
+                               rdfs:range schema:Text ;
                                rdfs:comment "The language of the content or performance or used in an action. Please use one of the language codes from the IETF BCP 47 standard. See also availableLanguage."@en ;
                                rdfs:label "in language"@en .
 
 
 ###  http://schema.org/keywords
-<http://schema.org/keywords> rdf:type owl:DatatypeProperty ;
-                             rdfs:domain <http://schema.org/CreativeWork> ;
+schema:keywords rdf:type owl:DatatypeProperty ;
+                             rdfs:domain schema:CreativeWork ;
                              rdfs:range [ rdf:type rdfs:Datatype ;
-                                          owl:unionOf ( <http://schema.org/Text>
-                                                        <http://schema.org/URL>
+                                          owl:unionOf ( schema:Text
+                                                        schema:URL
                                                       )
                                         ] ;
                              rdfs:comment "Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas."@en ;
@@ -1879,29 +1879,29 @@ void:uriSpace rdf:type owl:DatatypeProperty ;
 
 
 ###  http://schema.org/logo
-<http://schema.org/logo> rdf:type owl:DatatypeProperty ;
-                         rdfs:range <http://schema.org/URL> ;
+schema:logo rdf:type owl:DatatypeProperty ;
+                         rdfs:range schema:URL ;
                          rdfs:comment "An associated logo."@en ;
                          rdfs:label "logo"@en .
 
 
 ###  http://schema.org/mainEntityOfPage
-<http://schema.org/mainEntityOfPage> rdf:type owl:DatatypeProperty ;
-                                     rdfs:range <http://schema.org/URL> ;
+schema:mainEntityOfPage rdf:type owl:DatatypeProperty ;
+                                     rdfs:range schema:URL ;
                                      rdfs:comment "Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details."@en ;
                                      rdfs:label "main entity of page"@en .
 
 
 ###  http://schema.org/name
-<http://schema.org/name> rdf:type owl:DatatypeProperty ;
-                         rdfs:range <http://schema.org/Text> ;
+schema:name rdf:type owl:DatatypeProperty ;
+                         rdfs:range schema:Text ;
                          rdfs:comment "The name of the item."@en ;
                          rdfs:label "name"@en .
 
 
 ###  http://schema.org/publishingPrinciples
-<http://schema.org/publishingPrinciples> rdf:type owl:DatatypeProperty ;
-                                         rdfs:domain <http://schema.org/CreativeWork> ;
+schema:publishingPrinciples rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain schema:CreativeWork ;
                                          rdfs:comment """The publishingPrinciples property indicates (typically via URL) a document describing the editorial principles of an Organization (or individual e.g. a Person writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a CreativeWork (e.g. NewsArticle) the principles are those of the party primarily responsible for the creation of the CreativeWork.
 
 While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a funder) can be expressed using schema.org terminology."""@en ;
@@ -1909,11 +1909,11 @@ While such policies are most typically expressed in natural language, sometimes 
 
 
 ###  http://schema.org/schemaVersion
-<http://schema.org/schemaVersion> rdf:type owl:DatatypeProperty ;
-                                  rdfs:domain <http://schema.org/CreativeWork> ;
+schema:schemaVersion rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain schema:CreativeWork ;
                                   rdfs:range [ rdf:type rdfs:Datatype ;
-                                               owl:unionOf ( <http://schema.org/Text>
-                                                             <http://schema.org/URL>
+                                               owl:unionOf ( schema:Text
+                                                             schema:URL
                                                            )
                                              ] ;
                                   rdfs:comment "Indicates (by URL or string) a particular version of a schema used in some CreativeWork. This property was created primarily to indicate the use of a specific schema.org release, e.g. 10.0 as a simple string, or more explicitly via URL, https://schema.org/docs/releases.html#v10.0. There may be situations in which other schemas might usefully be referenced this way, e.g. http://dublincore.org/specifications/dublin-core/dces/1999-07-02/ but this has not been carefully explored in the community."@en ;
@@ -1921,12 +1921,12 @@ While such policies are most typically expressed in natural language, sometimes 
 
 
 ###  http://schema.org/temporalCoverage
-<http://schema.org/temporalCoverage> rdf:type owl:DatatypeProperty ;
-                                     rdfs:domain <http://schema.org/CreativeWork> ;
+schema:temporalCoverage rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain schema:CreativeWork ;
                                      rdfs:range [ rdf:type rdfs:Datatype ;
-                                                  owl:unionOf ( <http://schema.org/DateTime>
-                                                                <http://schema.org/Text>
-                                                                <http://schema.org/URL>
+                                                  owl:unionOf ( schema:DateTime
+                                                                schema:Text
+                                                                schema:URL
                                                               )
                                                 ] ;
                                      rdfs:comment """The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in ISO 8601 time interval format. In the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written \"2011/2012\"). Other forms of content e.g. ScholarlyArticle, Book, TVSeries or TVEpisode may indicate their temporalCoverage in broader terms - textually or via well-known URL. Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via \"1939/1945\".
@@ -1936,11 +1936,11 @@ Open-ended date ranges can be written with \"..\" in place of the end date. For 
 
 
 ###  http://schema.org/version
-<http://schema.org/version> rdf:type owl:DatatypeProperty ;
-                            rdfs:domain <http://schema.org/CreativeWork> ;
+schema:version rdf:type owl:DatatypeProperty ;
+                            rdfs:domain schema:CreativeWork ;
                             rdfs:range [ rdf:type rdfs:Datatype ;
-                                         owl:unionOf ( <http://schema.org/Number>
-                                                       <http://schema.org/Text>
+                                         owl:unionOf ( schema:Number
+                                                       schema:Text
                                                      )
                                        ] ;
                             rdfs:comment "The version of the CreativeWork embodied by a specified resource."@en ;
@@ -2071,8 +2071,8 @@ adms:versionNotes rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.w3.org/ns/dcat#byteSize
-<http://www.w3.org/ns/dcat#byteSize> rdf:type owl:DatatypeProperty ;
-                                     rdfs:domain <http://www.w3.org/ns/dcat#Distribution> ;
+dcat:byteSize rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain dcat:Distribution ;
                                      rdfs:range xsd:nonNegativeInteger ;
                                      rdfs:comment "The size in bytes can be approximated (as a decimal) when the precise size is not known."@en ,
                                                   "The size of a distribution in bytes."@en ;
@@ -2080,18 +2080,18 @@ adms:versionNotes rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.w3.org/ns/dcat#keyword
-<http://www.w3.org/ns/dcat#keyword> rdf:type owl:DatatypeProperty ;
-                                    rdfs:domain <http://www.w3.org/ns/dcat#Resource> ;
+dcat:keyword rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain dcat:Resource ;
                                     rdfs:range rdfs:Literal ;
                                     rdfs:comment "A keyword or tag describing the resource."@en ;
                                     rdfs:label "keyword"@en .
 
 
 ###  http://www.w3.org/ns/dcat#spatialResolutionInMeters
-<http://www.w3.org/ns/dcat#spatialResolutionInMeters> rdf:type owl:DatatypeProperty ;
+dcat:spatialResolutionInMeters rdf:type owl:DatatypeProperty ;
                                                       rdfs:domain [ rdf:type owl:Class ;
-                                                                    owl:unionOf ( <http://www.w3.org/ns/dcat#Dataset>
-                                                                                  <http://www.w3.org/ns/dcat#Distribution>
+                                                                    owl:unionOf ( dcat:Dataset
+                                                                                  dcat:Distribution
                                                                                 )
                                                                   ] ;
                                                       rdfs:range xsd:decimal ;
@@ -2100,10 +2100,10 @@ adms:versionNotes rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.w3.org/ns/dcat#temporalResolution
-<http://www.w3.org/ns/dcat#temporalResolution> rdf:type owl:DatatypeProperty ;
+dcat:temporalResolution rdf:type owl:DatatypeProperty ;
                                                rdfs:domain [ rdf:type owl:Class ;
-                                                             owl:unionOf ( <http://www.w3.org/ns/dcat#Dataset>
-                                                                           <http://www.w3.org/ns/dcat#Distribution>
+                                                             owl:unionOf ( dcat:Dataset
+                                                                           dcat:Distribution
                                                                          )
                                                            ] ;
                                                rdfs:comment "Minimum time period resolvable in the dataset."@en ;
@@ -2113,7 +2113,7 @@ adms:versionNotes rdf:type owl:DatatypeProperty ;
 ###  http://www.w3.org/ns/prov#generatedAtTime
 prov:generatedAtTime rdf:type owl:DatatypeProperty ;
                      rdfs:domain prov:Entity ;
-                     rdfs:range <http://schema.org/DateTime> ;
+                     rdfs:range schema:DateTime ;
                      rdfs:comment "Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation."@en ;
                      rdfs:label "generated at time"@en .
 
@@ -2121,7 +2121,7 @@ prov:generatedAtTime rdf:type owl:DatatypeProperty ;
 ###  http://www.w3.org/ns/prov#invalidatedAtTime
 prov:invalidatedAtTime rdf:type owl:DatatypeProperty ;
                        rdfs:domain prov:Entity ;
-                       rdfs:range <http://schema.org/DateTime> ;
+                       rdfs:range schema:DateTime ;
                        rdfs:comment "Invalidation is the start of the destruction, cessation, or expiry of an existing entity by an activity. The entity is no longer available for use (or further invalidation) after invalidation. Any generation or usage of an entity precedes its invalidation."@en ;
                        rdfs:label "invalidated at time"@en .
 
@@ -2136,7 +2136,7 @@ foaf:name rdf:type owl:DatatypeProperty ;
 
 ###  https://schema.org/alternateName
 schema:alternateName rdf:type owl:DatatypeProperty ;
-                     rdfs:range <http://schema.org/Text> ;
+                     rdfs:range schema:Text ;
                      rdfs:comment "An alias for the item."@en ;
                      rdfs:label "alternate name"@en .
 
@@ -2583,73 +2583,73 @@ void:Dataset rdf:type owl:Class ;
 
 
 ###  http://schema.org/Audience
-<http://schema.org/Audience> rdf:type owl:Class ;
+schema:Audience rdf:type owl:Class ;
                              rdfs:comment "Intended audience for an item, i.e. the group for whom the item was created."@en ;
                              rdfs:label "Audience"@en .
 
 
 ###  http://schema.org/Comment
-<http://schema.org/Comment> rdf:type owl:Class ;
-                            rdfs:subClassOf <http://schema.org/CreativeWork> ;
+schema:Comment rdf:type owl:Class ;
+                            rdfs:subClassOf schema:CreativeWork ;
                             rdfs:comment "A comment on an item - for example, a comment on a blog post. The comment's content is expressed via the text property, and its topic via about, properties shared with all CreativeWorks."@en ;
                             rdfs:label "Comment"@en .
 
 
 ###  http://schema.org/CreativeWork
-<http://schema.org/CreativeWork> rdf:type owl:Class ;
+schema:CreativeWork rdf:type owl:Class ;
                                  rdfs:comment "The most generic kind of creative work, including books, movies, photographs, software programs, etc."@en ;
                                  rdfs:label "Creative Work"@en .
 
 
 ###  http://schema.org/DataCatalog
-<http://schema.org/DataCatalog> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://schema.org/CreativeWork> ;
+schema:DataCatalog rdf:type owl:Class ;
+                                rdfs:subClassOf schema:CreativeWork ;
                                 rdfs:comment "A collection of datasets."@en ;
                                 rdfs:label "Data Catalog"@en .
 
 
 ###  http://schema.org/Dataset
-<http://schema.org/Dataset> rdf:type owl:Class ;
-                            rdfs:subClassOf <http://schema.org/CreativeWork> ;
+schema:Dataset rdf:type owl:Class ;
+                            rdfs:subClassOf schema:CreativeWork ;
                             rdfs:comment "A body of structured information describing some topic(s) of interest."@en ;
                             rdfs:label "Dataset"@en .
 
 
 ###  http://schema.org/MediaObject
-<http://schema.org/MediaObject> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://schema.org/CreativeWork> ;
+schema:MediaObject rdf:type owl:Class ;
+                                rdfs:subClassOf schema:CreativeWork ;
                                 rdfs:comment "A media object, such as an image, video, or audio object embedded in a web page or a downloadable dataset i.e. DataDownload. Note that a creative work may have many media objects associated with it on the same web page. For example, a page about a single song (MusicRecording) may have a music video (VideoObject), and a high and low bandwidth audio stream (2 AudioObject's)."@en ;
                                 rdfs:label "Media Object"@en .
 
 
 ###  http://schema.org/Organization
-<http://schema.org/Organization> rdf:type owl:Class ;
+schema:Organization rdf:type owl:Class ;
                                  rdfs:comment "An organization such as a school, NGO, corporation, club, etc."@en ;
                                  rdfs:label "Organization"@en .
 
 
 ###  http://schema.org/Person
-<http://schema.org/Person> rdf:type owl:Class ;
+schema:Person rdf:type owl:Class ;
                            rdfs:comment "A person (alive, dead, undead, or fictional)."@en ;
                            rdfs:label "Person"@en .
 
 
 ###  http://schema.org/Place
-<http://schema.org/Place> rdf:type owl:Class ;
+schema:Place rdf:type owl:Class ;
                           rdfs:comment "Entities that have a somewhat fixed, physical extension."@en ;
                           rdfs:label "Place"@en .
 
 
 ###  http://schema.org/Review
-<http://schema.org/Review> rdf:type owl:Class ;
-                           rdfs:subClassOf <http://schema.org/CreativeWork> ;
+schema:Review rdf:type owl:Class ;
+                           rdfs:subClassOf schema:CreativeWork ;
                            rdfs:comment "A review of an item - for example, of a restaurant, movie, or store."@en ;
                            rdfs:label "Review"@en .
 
 
 ###  http://schema.org/dataDownload
-<http://schema.org/dataDownload> rdf:type owl:Class ;
-                                 rdfs:subClassOf <http://schema.org/MediaObject> ;
+schema:dataDownload rdf:type owl:Class ;
+                                 rdfs:subClassOf schema:MediaObject ;
                                  rdfs:comment "A dataset in downloadable form."@en ;
                                  rdfs:label "data download"@en .
 
@@ -2711,14 +2711,14 @@ Location - To represent location objects"""@en ;
 
 ###  http://www.w3.org/ns/adms#Asset
 adms:Asset rdf:type owl:Class ;
-           rdfs:subClassOf <http://www.w3.org/ns/dcat#Dataset> ;
+           rdfs:subClassOf dcat:Dataset ;
            rdfs:comment "An abstract entity that reflects the intellectual content of the asset and represents those characteristics of the asset that are independent of its physical embodiment. This abstract entity combines the FRBR entities work (a distinct intellectual or artistic creation) and expression (the intellectual or artistic realization of a work)."@en ;
            rdfs:label "Asset"@en .
 
 
 ###  http://www.w3.org/ns/adms#AssetDistribution
 adms:AssetDistribution rdf:type owl:Class ;
-                       rdfs:subClassOf <http://www.w3.org/ns/dcat#Distribution> ;
+                       rdfs:subClassOf dcat:Distribution ;
                        rdfs:comment "A particular physical embodiment of an Asset, which is an example of the FRBR entity manifestation (the physical embodiment of an expression of a work)."@en ;
                        rdfs:label "Asset Distribution"@en .
 
@@ -2735,41 +2735,41 @@ adms:Identifier rdf:type owl:Class ;
 
 
 ###  http://www.w3.org/ns/dcat#Catalog
-<http://www.w3.org/ns/dcat#Catalog> rdf:type owl:Class ;
-                                    rdfs:subClassOf <http://www.w3.org/ns/dcat#Dataset> .
+dcat:Catalog rdf:type owl:Class ;
+                                    rdfs:subClassOf dcat:Dataset .
 
 
 ###  http://www.w3.org/ns/dcat#CatalogRecord
-<http://www.w3.org/ns/dcat#CatalogRecord> rdf:type owl:Class ;
+dcat:CatalogRecord rdf:type owl:Class ;
                                           rdfs:comment "A record in a catalog, describing the registration of a single dcat:Resource."@en ;
                                           rdfs:label "Catalog Record"@en .
 
 
 ###  http://www.w3.org/ns/dcat#DataService
-<http://www.w3.org/ns/dcat#DataService> rdf:type owl:Class ;
-                                        rdfs:subClassOf <http://www.w3.org/ns/dcat#Resource> .
+dcat:DataService rdf:type owl:Class ;
+                                        rdfs:subClassOf dcat:Resource .
 
 
 ###  http://www.w3.org/ns/dcat#Dataset
-<http://www.w3.org/ns/dcat#Dataset> rdf:type owl:Class ;
-                                    rdfs:subClassOf <http://www.w3.org/ns/dcat#Resource> ;
+dcat:Dataset rdf:type owl:Class ;
+                                    rdfs:subClassOf dcat:Resource ;
                                     rdfs:label "Dataset"@en .
 
 
 ###  http://www.w3.org/ns/dcat#Distribution
-<http://www.w3.org/ns/dcat#Distribution> rdf:type owl:Class ;
+dcat:Distribution rdf:type owl:Class ;
                                          rdfs:comment "A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above)."@en ;
                                          rdfs:label "Distribution"@en .
 
 
 ###  http://www.w3.org/ns/dcat#Relationship
-<http://www.w3.org/ns/dcat#Relationship> rdf:type owl:Class ;
+dcat:Relationship rdf:type owl:Class ;
                                          rdfs:comment "An association class for attaching additional information to a relationship between DCAT Resources."@en ;
                                          rdfs:label "Relationship"@en .
 
 
 ###  http://www.w3.org/ns/dcat#Resource
-<http://www.w3.org/ns/dcat#Resource> rdf:type owl:Class ;
+dcat:Resource rdf:type owl:Class ;
                                      rdfs:subClassOf rdfs:Resource ;
                                      rdfs:comment "Resource published or curated by a single agent."@en ;
                                      rdfs:label "Cataloged Resource"@en ,
@@ -2875,11 +2875,11 @@ foaf:Project rdf:type owl:Class ;
                                   frbrer:Work ,
                                   dcmi:Collection ,
                                   dcmi:Dataset ,
-                                  <http://schema.org/Dataset> ,
+                                  schema:Dataset ,
                                   doap:Project ,
                                   adms:Asset ,
-                                  <http://www.w3.org/ns/dcat#Dataset> ,
-                                  <http://www.w3.org/ns/dcat#Resource> ,
+                                  dcat:Dataset ,
+                                  dcat:Resource ,
                                   prov:Entity ,
                                   sd:Service ,
                                   foaf:Document ;
@@ -2888,13 +2888,13 @@ foaf:Project rdf:type owl:Class ;
 
 ###  https://w3id.org/mod#SemanticArtefactCatalogRecord
 :SemanticArtefactCatalogRecord rdf:type owl:Class ;
-                               rdfs:subClassOf <http://www.w3.org/ns/dcat#CatalogRecord> .
+                               rdfs:subClassOf dcat:CatalogRecord .
 
 
 ###  https://w3id.org/mod#SemanticArtefactDistribution
 :SemanticArtefactDistribution rdf:type owl:Class ;
                               rdfs:subClassOf adms:AssetDistribution ,
-                                              <http://www.w3.org/ns/dcat#Distribution> .
+                                              dcat:Distribution .
 
 
 ###  https://w3id.org/mod#SemanticArtefactEvaluation
@@ -2904,7 +2904,7 @@ foaf:Project rdf:type owl:Class ;
 
 ###  https://w3id.org/mod#SemanticArtefactService
 :SemanticArtefactService rdf:type owl:Class ;
-                         rdfs:subClassOf <http://www.w3.org/ns/dcat#DataService> .
+                         rdfs:subClassOf dcat:DataService .
 
 
 ###  https://w3id.org/mod#SemanticArtefactTask
@@ -2914,7 +2914,7 @@ foaf:Project rdf:type owl:Class ;
 
 ###  https://w3id.org/mod#SemanticArtfeactCatalog
 :SemanticArtfeactCatalog rdf:type owl:Class ;
-                         rdfs:subClassOf <http://www.w3.org/ns/dcat#Catalog> .
+                         rdfs:subClassOf dcat:Catalog .
 
 
 ###  https://w3id.org/mod#Taxonomy
