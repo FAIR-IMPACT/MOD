@@ -41,24 +41,24 @@
 
   ########## Intrinsic properties ##########
     mod:acronym                     "MOD" ;
-    dcterms:title                       "MOD: Metadata for Ontology Description and publication"@en,
+    dcterms:title                   "MOD: Metadata for Ontology Description and publication"@en,
                                     "MOD: Metadonnées pour la Description et la publication d'Ontologies"@fr ;
-    dcterms:alternative                 "MOD Vocabulary"@en ,
+    dcterms:alternative             "MOD Vocabulary"@en ,
                                     "Vocabulaire MOD"@fr ,
                                     "MOD Ontology Metadata model"@en ,
                                     "Modèle de métadonnées d'ontologie MOD"@fr ;
     skos:hiddenLabel                "MOD-Ontology"@en;
     owl:ontologyIRI                 <https://w3id.org/mod> ;
     owl:versionIRI                  <https://w3id.org/mod/2.0> ;
-##  dcterms:identifier                  ;
+##  dcterms:identifier              ;
     owl:versionInfo                 "2.0.1" ;
     mod:status                      "alpha" ;
     owl:deprecated                  false ;
-    dcterms:license                     <https://creativecommons.org/licenses/by/4.0> ; 
+    dcterms:license                 <https://creativecommons.org/licenses/by/4.0> ; 
     mod:hasRepresentationLanguage   omv:OWL ;
     mod:hasFormalityLevel           omv:Vocabulary ;
     mod:hasSyntax                   <http://www.w3.org/ns/formats/Turtle> ;
-    dcterms:language                    <http://lexvo.org/id/iso639-3/eng> ,
+    dcterms:language                <http://lexvo.org/id/iso639-3/eng> ,
                                     <http://lexvo.org/id/iso639-3/fra> ;
 
   ########## Description properties ##########
@@ -68,26 +68,27 @@
     dcterms:abstract
                     "MOD provides a set of properties which can be used by ontology developers, ontology libraries (e.g., ontology registry, ontology repository, ontology portal), to describe and publish ontologies. The enriched description of ontologies, in turn, will help users to search, discover, identify and select ontologies."@en ,
                     "MOD fournit un ensemble de propriétés pouvant être utilisées par les développeurs d’ontologies ou les portails d’ontologies (registre, bibliothèques), pour décrire et publier des ontologies. La description enrichie des ontologies aidera les utilisateurs à rechercher, découvrir, identifier et sélectionner des ontologies."@fr ;
-    cc:morePermissions          "https://github.com/sifrproject/MOD-Ontology/blob/master/LICENSE" ;
-    cc:useGuidelines            "MOD is free of use; feedback is welcome."@en ,
-                                "MOD peut être utilisée de manière libre; les retours sont appréciés"@fr ;
+    cc:morePermissions              "https://github.com/sifrproject/MOD-Ontology/blob/master/LICENSE" ;
+    cc:useGuidelines                "MOD is free of use; feedback is welcome."@en ,
+                                    "MOD peut être utilisée de manière libre; les retours sont appréciés"@fr ;
     dcterms:bibliographicCitation   <https://dx.doi.org/10.1007/978-3-319-70863-8_17> ;
-    foaf:page                   <https://www.isibang.ac.in/ns/mod/index.html> ;
-    dcat:accessURL              <https://www.isibang.ac.in/ns/mod/ontology.ttl> ;
+    foaf:page                       <https://www.isibang.ac.in/ns/mod/index.html> ;
+    dcat:accessURL                  <https://www.isibang.ac.in/ns/mod/ontology.ttl> ;
     rdfs:comment            
-                            "This project is connected to the work done within AgroPortal (with MOD1.4). MOD 2.0 is work in progress."@en ,
-                            "Ce projet est lié au travail mis en œuvre dans AgroPortal (avec MOD1.4). MOD2.0 est en cours de développement."@fr ;
-    omv:keywords            "metadata description, metadata vocabularies, ontology description, ontology profile"@en ,
-                            "description de métadonnées, vocabulaires de métadonnées, description d'ontologie, profil d'ontologie"@fr ;
-    dcterms:type                        omv:TaskOntology ;
+                                    "This project is connected to the work done within AgroPortal (with MOD1.4). MOD 2.0 is work in progress."@en ,
+                                    "Ce projet est lié au travail mis en œuvre dans AgroPortal (avec MOD1.4). MOD2.0 est en cours de développement."@fr ;
+    omv:keywords                    "metadata description, metadata vocabularies, ontology description, ontology profile"@en ,
+                                    "description de métadonnées, vocabulaires de métadonnées, description d'ontologie, profil d'ontologie"@fr ;
+    dcterms:type                    omv:TaskOntology ;
     mod:designedForTask             omv:ConfigurationTask ;
     pav:createdWith                 <https://protege.stanford.edu> ;
     mod:usedEngineeringMethodology  
                                     "MOD 1 has been designed by reviewing in total 23 standard existing metadata vocabularies (e.g., Dublin Core, OMV, DCAT, VoID) and selecting relevant properties for describing ontologies. Then, we studied metadata usage analytics within ontologies and ontology repositories. MOD 2 abandon the integration approach of MOD 1 but re-incorporates properties of several obsolete metadata vocabularies inside its own namespace (DOOR, OMV, VOAF). MOD 2 is designed as an extension of the DCAT 2 metadata vocabulary."@en ,
                                     "MOD 1 a été conçue en examinant au total 23 vocabulaires de métadonnées standard existants (e.g., Dublin Core, OMV, DCAT, VoID) et en sélectionnant des propriétés pertinentes pour la description des ontologies. Nous avons ensuite étudié l’analyse de l’utilisation des métadonnées au sein d’ontologies et de portail d’ontologies. MOD 2 abandonne l'approche d'intégration de MOD 1 mais réincorpore les propriétés de plusieurs vocabulaires de métadonnées obsolètes dans son propre espace de nolmage (DOOR, OMV, VOAF). MOD 2 est conçue comme une extension du vocabulaire des métadonnées DCAT 2."@fr ;
     mod:conformsToKnowledgeRepresentationParadigm "OWL Ontology" ;
-    dcterms:coverage    "Ontologies or semantic resources/artefacts in general (thesaurus, terminologies, vocabularies, etc.)"@en ,
-                    "Les ontologies ou les ressources/artefacts sémantiques en général (thésaurus, terminologies, vocabulaires, etc.)"@fr ;
+    dcterms:coverage    
+                                    "Ontologies or semantic resources/artefacts in general (thesaurus, terminologies, vocabularies, etc.)"@en ,
+                                    "Les ontologies ou les ressources/artefacts sémantiques en général (thésaurus, terminologies, vocabulaires, etc.)"@fr ;
     mod:competencyQuestion
                                     "How to standardly and semantically capture the description of an ontology while relying on other existing metadata vocabularies?"@en ,
                                     "Comment capturer de manière standard et sémantique la description d'une ontologie en s'appuyant sur d'autres vocabulaires de métadonnées existants?"@fr ;
@@ -122,51 +123,51 @@
 
   ########## People properties ##########
   
-    dcterms:creator                     "Biswanath Dutta (https://orcid.org/0000-0003-3059-8202)" ,
+    dcterms:creator                 "Biswanath Dutta (https://orcid.org/0000-0003-3059-8202)" ,
                                     "Clement Jonquet (https://orcid.org/0000-0002-2404-1582)" ; 
-    dcterms:contributor                 "Anne Toulet (https://orcid.org/0000-0003-0463-0854)" ,
+    dcterms:contributor             "Anne Toulet (https://orcid.org/0000-0003-0463-0854)" ,
                                     "Luiz Bonino (https://orcid.org/0000-0002-1164-1351)" ,
                                     "Yann Le Franc (https://orcid.org/0000-0003-4631-418X)" ,
                                     "Udaya Varadarajan (https://orcid.org/0000-0002-4936-0272)" ; 
-    dcterms:publisher                   "Indian Statistical Institute, Bangalore Centre, India (https://www.isibang.ac.in)" ,
+    dcterms:publisher               "Indian Statistical Institute, Bangalore Centre, India (https://www.isibang.ac.in)" ,
                                     "LIRMM, University of Montpellier, France (http://www.lirmm.fr)" ;
     pav:curatedBy                   "Anne Toulet" ;
     schema:translator               "Clement Jonquet" ;
-    dcterms:rightsHolder                "Indian Statistical Institute and University of Montpellier"@en ,
+    dcterms:rightsHolder            "Indian Statistical Institute and University of Montpellier"@en ,
                                     "Institut Indien de la Statistique et Université de Montpellier"@fr;
 
   ########## Grouping properties ##########
 
-    dcterms:subject         "Metadata descriptions"@en ;
-    mod:group           "Metadata vocabularies"@en ;
+    dcterms:subject                 "Metadata descriptions"@en ;
+    mod:group                       "Metadata vocabularies"@en ;
 
   ########## Relation properties ##########
 
-##  owl:imports                 ;
-    owl:priorVersion            <https://github.com/sifrproject/MOD-Ontology/raw/master/mod-v1.4_ontology.owl> ;
-    owl:backwardCompatibleWith  <http://omv.ontoware.org/2005/05/ontology>;
-    owl:incompatibleWith        <http://kannel.open.ac.uk/ontology> ;
+##  owl:imports                     ;  
+    owl:priorVersion                <https://github.com/sifrproject/MOD-Ontology/raw/master/mod-v1.4_ontology.owl> ;
+    owl:backwardCompatibleWith      <http://omv.ontoware.org/2005/05/ontology>;
+    owl:incompatibleWith            <http://kannel.open.ac.uk/ontology> ;
 ##  dcterms:isPartOf                ;
 ##  dcterms:hasPart                 ;  
 ##  dcterms:hasVersion              ;
 ##  dcterms:isFormatOf              ;
 ##  dcterms:hasFormat               ;
     dcterms:relation              
-                                "MOD uses or relates to each of these vocabularies: ADMS,CC,DCAT,DC,DCT,DOAP,DOOR,FOAF,IDOT,OBOINOWL,OMV,OWL,NKOS,PAV,PROV,RDFS,SCHEMA,SD,SKOS,VANN,VOAF,VOID."@en ,
-                                "MOD utilise ou se repose sur chacun des vocabulaires suivants : ADMS,CC,DCAT,DC,DCT,DOAP,DOOR,FOAF,IDOT,OBOINOWL,OMV,OWL,NKOS,PAV,PROV,RDFS,SCHEMA,SD,SKOS,VANN,VOAF,VOID."@fr ;
-    mod:specializes            <http://omv.ontoware.org/2005/05/ontology>;
-##  schema:workTranslation      ;
-##  schema:translationOfWork    ;
-    mod:comesFromTheSameDomain   "OBOINOWL,OMV,OWL,NKOS,RDFS,SKOS,VANN,VOAF,VOID" ;
-    mod:similar                  "OMV,VANN,VOAF,VOID" ;
+                                    "MOD uses or relates to each of these vocabularies: ADMS,CC,DCAT,DC,DCT,DOAP,DOOR,FOAF,IDOT,OBOINOWL,OMV,OWL,NKOS,PAV,PROV,RDFS,SCHEMA,SD,SKOS,VANN,VOAF,VOID."@en ,
+                                    "MOD utilise ou se repose sur chacun des vocabulaires suivants : ADMS,CC,DCAT,DC,DCT,DOAP,DOOR,FOAF,IDOT,OBOINOWL,OMV,OWL,NKOS,PAV,PROV,RDFS,SCHEMA,SD,SKOS,VANN,VOAF,VOID."@fr ;
+    mod:specializes                 <http://omv.ontoware.org/2005/05/ontology>;
+##  schema:workTranslation          ;
+##  schema:translationOfWork        ;
+    mod:comesFromTheSameDomain      "OBOINOWL,OMV,OWL,NKOS,RDFS,SKOS,VANN,VOAF,VOID" ;
+    mod:similar                     "OMV,VANN,VOAF,VOID" ;
     mod:hasEquivalencesWith      
-                                "MOD properties are 'reused' from properties in each these vocabularies: ADMS,CC,DCAT,DC,DCT,DOAP,FOAF,IDOT,OBOINOWL,OWL,NKOS,PAV,PROV,RDFS,SCHEMA,SD,SKOS,VANN,VOID. Reuses are formalized by a dcterms:relation. MOD2 redefines properties from DOOR, OMV, VOAF."@en ,  
-                                "Les propriétés de MOD sont 'importées' à partir des vocabulaires suivants : ADMS,CC,DCAT,DC,DCT,DOAP,FOAF,IDOT,OBOINOWL,OWL,NKOS,PAV,PROV,RDFS,SCHEMA,SD,SKOS,VANN,VOID. Les réutilisations soont formalisées par une propriété dcterms:relation. MOD2 re-définie les propriétés dans DOOR, OMV, VOAF."@fr ;
+                                    "MOD properties are 'reused' from properties in each these vocabularies: ADMS,CC,DCAT,DC,DCT,DOAP,FOAF,IDOT,OBOINOWL,OWL,NKOS,PAV,PROV,RDFS,SCHEMA,SD,SKOS,VANN,VOID. Reuses are formalized by a dcterms:relation. MOD2 redefines properties from DOOR, OMV, VOAF."@en ,  
+                                    "Les propriétés de MOD sont 'importées' à partir des vocabulaires suivants : ADMS,CC,DCAT,DC,DCT,DOAP,FOAF,IDOT,OBOINOWL,OWL,NKOS,PAV,PROV,RDFS,SCHEMA,SD,SKOS,VANN,VOID. Les réutilisations soont formalisées par une propriété dcterms:relation. MOD2 re-définie les propriétés dans DOOR, OMV, VOAF."@fr ;
     mod:hasDisparateModelling  
-                                "DOAP (MOD reuses properties from both objects doap:Project and foaf:Document that are disjoincts.)"@en ,
-                                "DOAP (MOD réutilise des propriétés de des objets doap:Project et foaf:Document qui sont disjointes.)"@fr ;
-##  mod:usedBy                 ;
-    mod:generalizes            "DOOR,OMV,VOAF"  ;
+                                    "DOAP (MOD reuses properties from both objects doap:Project and foaf:Document that are disjoincts.)"@en ,
+                                    "DOAP (MOD réutilise des propriétés de des objets doap:Project et foaf:Document qui sont disjointes.)"@fr ;
+##  mod:usedBy                      ;
+    mod:generalizes                 "DOOR,OMV,VOAF"  ;
 ##  mod:hasDisjunctionsWith    ;
 
   ########## Content properties ##########
@@ -228,10 +229,10 @@
 
   ########## Date properties ##########
 
-    dcterms:created           "2021-12-01" ;
-    dcterms:modified          "2022-02-14" ;
-##  dcterms:valid             ;
-##  pav:curatedOn         ;
+    dcterms:created         "2021-12-01" ;
+    dcterms:modified        "2022-02-14" ;
+##  dcterms:valid           ;
+##  pav:curatedOn           ;
 
   ########## Metrics properties ##########
 
@@ -1396,7 +1397,7 @@ foaf:topic rdf:type owl:ObjectProperty ;
 
 
 ###  https://w3id.org/mod#analytics
-:analytics rdf:type owl:ObjectProperty ;
+mod:analytics rdf:type owl:ObjectProperty ;
            rdfs:domain :SemanticArtefact ;
            rdfs:range :Analytics ;
            rdfs:comment "This property shall be used to store any analytics for an ontology. E.g., number of visits an ontology received in a portal, number of downloads, etc."@en ;
@@ -1405,7 +1406,7 @@ foaf:topic rdf:type owl:ObjectProperty ;
 
 
 ###  https://w3id.org/mod#comesFromTheSameDomain
-:comesFromTheSameDomain rdf:type owl:ObjectProperty ;
+mod:comesFromTheSameDomain rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf :semanticArtefactRelation ;
                         rdfs:domain :SemanticArtefact ;
                         rdfs:range :SemanticArtefact ;
@@ -1414,7 +1415,7 @@ foaf:topic rdf:type owl:ObjectProperty ;
 
 
 ###  https://w3id.org/mod#conformsToKnowledgeRepresentationParadigm
-:conformsToKnowledgeRepresentationParadigm rdf:type owl:ObjectProperty ;
+mod:conformsToKnowledgeRepresentationParadigm rdf:type owl:ObjectProperty ;
                                            rdfs:domain :SemanticArtefact ;
                                            rdfs:range :KnowledgeRepresentationParadigm ;
                                            rdfs:comment "A representation formalism that is followed to describe knowledge in an ontology. Example includes description logics, first order logic, etc. dcterms: An established standard to which the described resource conforms."@en ;
@@ -1423,7 +1424,7 @@ foaf:topic rdf:type owl:ObjectProperty ;
 
 
 ###  https://w3id.org/mod#depiction
-:depiction rdf:type owl:ObjectProperty ;
+mod:depiction rdf:type owl:ObjectProperty ;
            rdfs:domain owl:Thing ;
            rdfs:range foaf:Image ;
            rdfs:comment "A depiction of some thing."@en ;
@@ -1431,20 +1432,20 @@ foaf:topic rdf:type owl:ObjectProperty ;
 
 
 ###  https://w3id.org/mod#describes
-:describes rdf:type owl:ObjectProperty ;
+mod:describes rdf:type owl:ObjectProperty ;
            rdfs:domain :SemanticArtefact ;
            rdfs:range dcat:Dataset .
 
 
 ###  https://w3id.org/mod#designedForTask
-:designedForTask rdf:type owl:ObjectProperty ;
+mod:designedForTask rdf:type owl:ObjectProperty ;
                  rdfs:domain :SemanticArtefact ;
                  rdfs:range :SemanticArtefactTask ;
                  rdfs:label "designed for task"@en .
 
 
 ###  https://w3id.org/mod#endorsedBy
-:endorsedBy rdf:type owl:ObjectProperty ;
+mod:endorsedBy rdf:type owl:ObjectProperty ;
             rdfs:domain :SemanticArtefact ;
             rdfs:range dcterms:Agent ;
             rdfs:comment "An ontology endorsed by an agent."@en ;
@@ -1452,7 +1453,7 @@ foaf:topic rdf:type owl:ObjectProperty ;
 
 
 ###  https://w3id.org/mod#generalizes
-:generalizes rdf:type owl:ObjectProperty ;
+mod:generalizes rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :semanticArtefactRelation ;
              owl:inverseOf :specializes ;
              rdfs:comment "Indicates that the subject vocabulary generalizes by some superclasses or superproperties the object vocabulary."@en ;
@@ -1460,7 +1461,7 @@ foaf:topic rdf:type owl:ObjectProperty ;
 
 
 ###  https://w3id.org/mod#group
-:group rdf:type owl:ObjectProperty ;
+mod:group rdf:type owl:ObjectProperty ;
        rdfs:domain :SemanticArtefact ;
        rdfs:range :Group ;
        rdfs:comment "A group of ontologies that the ontology is usually considered into."@en ;
@@ -1468,21 +1469,21 @@ foaf:topic rdf:type owl:ObjectProperty ;
 
 
 ###  https://w3id.org/mod#hasDisjunctionsWith
-:hasDisjunctionsWith rdf:type owl:ObjectProperty ;
+mod:hasDisjunctionsWith rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf :semanticArtefactRelation ;
                      rdfs:comment "Indicates that the subject vocabulary declares some disjunct classes with the object vocabulary."@en ;
                      rdfs:label "has disjunctions with"@en .
 
 
 ###  https://w3id.org/mod#hasDisparateModellingWith
-:hasDisparateModellingWith rdf:type owl:ObjectProperty ;
+mod:hasDisparateModellingWith rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf :semanticArtefactRelation ;
                            rdfs:comment "Disagreements related  to  the  conceptualization  of  the  ontologies. Two ontologies are considered to have disparate modeling if they represent corresponding entities in different ways, e.g.  as an instance in one case and a class in the other."@en ;
                            rdfs:label "disparate modelling with"@en .
 
 
 ###  https://w3id.org/mod#hasEquivalencesWith
-:hasEquivalencesWith rdf:type owl:ObjectProperty ;
+mod:hasEquivalencesWith rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf :semanticArtefactRelation ;
                      rdfs:domain :SemanticArtefact ;
                      rdfs:range :SemanticArtefact ;
@@ -1491,7 +1492,7 @@ foaf:topic rdf:type owl:ObjectProperty ;
 
 
 ###  https://w3id.org/mod#hasEvaluation
-:hasEvaluation rdf:type owl:ObjectProperty ;
+mod:hasEvaluation rdf:type owl:ObjectProperty ;
                rdfs:domain :SemanticArtefact ;
                rdfs:range :Evaluation ;
                rdfs:comment "This property makes a relationship between an ontology and its evaluation result."@en ;
@@ -1499,14 +1500,14 @@ foaf:topic rdf:type owl:ObjectProperty ;
 
 
 ###  https://w3id.org/mod#metadataVoc
-:metadataVoc rdf:type owl:ObjectProperty ;
+mod:metadataVoc rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :semanticArtefactRelation ;
              rdfs:comment "Indicates that the subject vocabulary uses the object vocabulary in metadata at vocabulary or element level."@en ;
              rdfs:label "metadata vocubulary used"@en .
 
 
 ###  https://w3id.org/mod#qualifiedRelation
-:qualifiedRelation rdf:type owl:ObjectProperty ;
+mod:qualifiedRelation rdf:type owl:ObjectProperty ;
                    rdfs:domain dcat:Resource ;
                    rdfs:range dcat:Relationship ;
                    rdfs:comment "Link to a description of a relationship with another resource."@en ;
@@ -1514,13 +1515,13 @@ foaf:topic rdf:type owl:ObjectProperty ;
 
 
 ###  https://w3id.org/mod#semanticArtefactRelation
-:semanticArtefactRelation rdf:type owl:ObjectProperty ;
+mod:semanticArtefactRelation rdf:type owl:ObjectProperty ;
                           rdfs:domain :SemanticArtefact ;
                           rdfs:range :SemanticArtefact .
 
 
 ###  https://w3id.org/mod#similar
-:similar rdf:type owl:ObjectProperty ;
+mod:similar rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf :semanticArtefactRelation ;
          rdfs:domain :SemanticArtefact ;
          rdfs:range :SemanticArtefact ;
@@ -1529,21 +1530,21 @@ foaf:topic rdf:type owl:ObjectProperty ;
 
 
 ###  https://w3id.org/mod#specializes
-:specializes rdf:type owl:ObjectProperty ;
+mod:specializes rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :semanticArtefactRelation ;
              rdfs:comment "An entity that is a specialization of another shares all aspects of the latter, and additionally presents more specific aspects of the same thing as the latter. voaf:Indicates that the subject vocabulary defines some subclasses or subproperties of the object vocabulary, or local restrictions on those."@en ;
              rdfs:label "specializes"@en .
 
 
 ###  https://w3id.org/mod#usedBy
-:usedBy rdf:type owl:ObjectProperty ;
+mod:usedBy rdf:type owl:ObjectProperty ;
         rdfs:subPropertyOf :semanticArtefactRelation ;
         rdfs:comment "Indicates that the subject vocabulary is used by the object vocabulary."@en ;
         rdfs:label "used by"@en .
 
 
 ###  https://w3id.org/mod#usedEngineeringMethodology
-:usedEngineeringMethodology rdf:type owl:ObjectProperty ;
+mod:usedEngineeringMethodology rdf:type owl:ObjectProperty ;
                             rdfs:domain :SemanticArtefact ;
                             rdfs:range :EngineeringMethodology ;
                             rdfs:label "used engineering methodology"@en ;
@@ -1551,7 +1552,7 @@ foaf:topic rdf:type owl:ObjectProperty ;
 
 
 ###  https://w3id.org/mod#usedInProject
-:usedInProject rdf:type owl:ObjectProperty ;
+mod:usedInProject rdf:type owl:ObjectProperty ;
                rdfs:domain :SemanticArtefact ;
                rdfs:range foaf:Project ;
                rdfs:comment "An semantic artefact that is used in a project."@en ;
@@ -2172,7 +2173,7 @@ vann:usageNote rdf:type owl:DatatypeProperty ;
 
 
 ###  https://w3id.org/mod#URI
-:URI rdf:type owl:DatatypeProperty ;
+mod:URI rdf:type owl:DatatypeProperty ;
      rdfs:domain :SemanticArtefact ;
      rdfs:range xsd:anyURI ;
      rdfs:comment "The URI of the ontology which is described by this metadata."@en ;
@@ -2180,7 +2181,7 @@ vann:usageNote rdf:type owl:DatatypeProperty ;
 
 
 ###  https://w3id.org/mod#acronym
-:acronym rdf:type owl:DatatypeProperty ;
+mod:acronym rdf:type owl:DatatypeProperty ;
          rdfs:domain :SemanticArtefact ;
          rdfs:range xsd:string ;
          rdfs:comment "Often used as an identifier within some ontology platforms such as BioPortal or OBO Foundry."@en ;
@@ -2188,14 +2189,14 @@ vann:usageNote rdf:type owl:DatatypeProperty ;
 
 
 ###  https://w3id.org/mod#authorProperty
-:authorProperty rdf:type owl:DatatypeProperty ;
+mod:authorProperty rdf:type owl:DatatypeProperty ;
                 rdfs:range xsd:anyURI ;
                 rdfs:comment "property used to specify the author of a class (BioPortal definition)."@en ;
                 rdfs:label "object author property"@en .
 
 
 ###  https://w3id.org/mod#averageChildCount
-:averageChildCount rdf:type owl:DatatypeProperty ;
+mod:averageChildCount rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf :metrics ;
                    rdfs:range xsd:nonNegativeInteger ;
                    rdfs:comment "Average number of children per class (BioPortal definition) ."@en ;
@@ -2203,7 +2204,7 @@ vann:usageNote rdf:type owl:DatatypeProperty ;
 
 
 ###  https://w3id.org/mod#browsingUI
-:browsingUI rdf:type owl:DatatypeProperty ;
+mod:browsingUI rdf:type owl:DatatypeProperty ;
             rdfs:domain :SemanticArtefact ;
             rdfs:range xsd:anyURI ;
             rdfs:comment "The user interface (URL) where the ontology may be browsed or searched."@en ;
@@ -2212,7 +2213,7 @@ vann:usageNote rdf:type owl:DatatypeProperty ;
 
 
 ###  https://w3id.org/mod#classesWithMoreThan25Children
-:classesWithMoreThan25Children rdf:type owl:DatatypeProperty ;
+mod:classesWithMoreThan25Children rdf:type owl:DatatypeProperty ;
                                rdfs:subPropertyOf :metrics ;
                                rdfs:range xsd:nonNegativeInteger ;
                                rdfs:comment "Number of classes that have more than 25 direct subclasses (BioPortal definition)."@en ;
@@ -2220,7 +2221,7 @@ vann:usageNote rdf:type owl:DatatypeProperty ;
 
 
 ###  https://w3id.org/mod#classesWithNoDefinition
-:classesWithNoDefinition rdf:type owl:DatatypeProperty ;
+mod:classesWithNoDefinition rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf :metrics ;
                          rdfs:range xsd:nonNegativeInteger ;
                          rdfs:comment "List of classes that have no value for the definition property (BioPortal definition). For ontologies in OBO and RRF formats, the property for definition is part of the language. For OWL ontologies, the authors specify this property as part of the ontology metadata (the default is skos:definition)."@en ;
@@ -2228,7 +2229,7 @@ vann:usageNote rdf:type owl:DatatypeProperty ;
 
 
 ###  https://w3id.org/mod#classesWithOneChild
-:classesWithOneChild rdf:type owl:DatatypeProperty ;
+mod:classesWithOneChild rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :metrics ;
                      rdfs:range xsd:nonNegativeInteger ;
                      rdfs:comment "Number of classes that have only one subclass in the is-a hierarchy (BioPortal definition)."@en ;
@@ -2236,7 +2237,7 @@ vann:usageNote rdf:type owl:DatatypeProperty ;
 
 
 ###  https://w3id.org/mod#competencyQuestion
-:competencyQuestion rdf:type owl:DatatypeProperty ;
+mod:competencyQuestion rdf:type owl:DatatypeProperty ;
                     rdfs:domain :SemanticArtefact ;
                     rdfs:range xsd:string ;
                     rdfs:comment "A set of questions made to build an ontology at the design time."@en ;
@@ -2244,7 +2245,7 @@ vann:usageNote rdf:type owl:DatatypeProperty ;
 
 
 ###  https://w3id.org/mod#definitionProperty
-:definitionProperty rdf:type owl:DatatypeProperty ;
+mod:definitionProperty rdf:type owl:DatatypeProperty ;
                     rdfs:domain :SemanticArtefactDistribution ;
                     rdfs:range xsd:anyURI ;
                     rdfs:comment "Property used to specify the definition of a class (BioPortal definition)."@en ;
@@ -2252,7 +2253,7 @@ vann:usageNote rdf:type owl:DatatypeProperty ;
 
 
 ###  https://w3id.org/mod#hasFormalityLevel
-:hasFormalityLevel rdf:type owl:DatatypeProperty ;
+mod:hasFormalityLevel rdf:type owl:DatatypeProperty ;
                    rdfs:domain :SemanticArtefact ;
                    rdfs:range xsd:string ;
                    rdfs:comment "The level of formality of an ontology."@en ;
@@ -2261,7 +2262,7 @@ vann:usageNote rdf:type owl:DatatypeProperty ;
 
 
 ###  https://w3id.org/mod#hasRepresentationLanguage
-:hasRepresentationLanguage rdf:type owl:DatatypeProperty ;
+mod:hasRepresentationLanguage rdf:type owl:DatatypeProperty ;
                            rdfs:domain :SemanticArtefactDistribution ;
                            rdfs:range xsd:anyURI ;
                            rdfs:comment "A language that is used to create an ontology."@en ;
@@ -2269,7 +2270,7 @@ vann:usageNote rdf:type owl:DatatypeProperty ;
 
 
 ###  https://w3id.org/mod#hasSyntax
-:hasSyntax rdf:type owl:DatatypeProperty ;
+mod:hasSyntax rdf:type owl:DatatypeProperty ;
            rdfs:domain :SemanticArtefactDistribution ;
            rdfs:range xsd:anyURI ;
            rdfs:comment "The syntax followed in the creation of an ontology."@en ;
@@ -2277,7 +2278,7 @@ vann:usageNote rdf:type owl:DatatypeProperty ;
 
 
 ###  https://w3id.org/mod#hierarchyProperty
-:hierarchyProperty rdf:type owl:DatatypeProperty ;
+mod:hierarchyProperty rdf:type owl:DatatypeProperty ;
                    rdfs:domain :SemanticArtefactDistribution ;
                    rdfs:range xsd:anyURI ;
                    rdfs:comment "property used to specify the hierarchy  (e.g. rdfs:subClassOf or skos:broader)."@en ;
@@ -2285,7 +2286,7 @@ vann:usageNote rdf:type owl:DatatypeProperty ;
 
 
 ###  https://w3id.org/mod#knownUsage
-:knownUsage rdf:type owl:DatatypeProperty ;
+mod:knownUsage rdf:type owl:DatatypeProperty ;
             rdfs:domain :SemanticArtefact ;
             rdfs:range xsd:string ;
             rdfs:comment "The applications where the ontology is being used."@en ;
@@ -2294,7 +2295,7 @@ vann:usageNote rdf:type owl:DatatypeProperty ;
 
 
 ###  https://w3id.org/mod#maxChildCount
-:maxChildCount rdf:type owl:DatatypeProperty ;
+mod:maxChildCount rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf :metrics ;
                rdfs:range xsd:nonNegativeInteger ;
                rdfs:comment """Maximum number of children per class (BioPortal definition)
@@ -2303,7 +2304,7 @@ Screen reader support enabled."""@en ;
 
 
 ###  https://w3id.org/mod#maxDepth
-:maxDepth rdf:type owl:DatatypeProperty ;
+mod:maxDepth rdf:type owl:DatatypeProperty ;
           rdfs:subPropertyOf :metrics ;
           rdfs:range xsd:nonNegativeInteger ;
           rdfs:comment "Maximum depth of the hierarchy tree (BioPortal definition)."@en ;
@@ -2311,14 +2312,14 @@ Screen reader support enabled."""@en ;
 
 
 ###  https://w3id.org/mod#metrics
-:metrics rdf:type owl:DatatypeProperty ;
+mod:metrics rdf:type owl:DatatypeProperty ;
          rdfs:domain :SemanticArtefactDistribution ;
          rdfs:comment "A generic property to store any metrics related to the ontology."@en ;
          rdfs:label "metrics"@en .
 
 
 ###  https://w3id.org/mod#numberOfAxioms
-:numberOfAxioms rdf:type owl:DatatypeProperty ;
+mod:numberOfAxioms rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf :metrics ;
                 rdfs:range xsd:nonNegativeInteger ;
                 rdfs:comment "The total number of axioms in an ontology."@en ;
@@ -2326,7 +2327,7 @@ Screen reader support enabled."""@en ;
 
 
 ###  https://w3id.org/mod#numberOfClasses
-:numberOfClasses rdf:type owl:DatatypeProperty ;
+mod:numberOfClasses rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf :metrics ;
                  rdfs:range xsd:nonNegativeInteger ;
                  rdfs:comment "The total number of classes in an ontology."@en ;
@@ -2334,7 +2335,7 @@ Screen reader support enabled."""@en ;
 
 
 ###  https://w3id.org/mod#numberOfDataProperties
-:numberOfDataProperties rdf:type owl:DatatypeProperty ;
+mod:numberOfDataProperties rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf :numberOfProperties ;
                         rdfs:range xsd:nonNegativeInteger ;
                         rdfs:comment "The total number of data properties in an ontology."@en ;
@@ -2342,7 +2343,7 @@ Screen reader support enabled."""@en ;
 
 
 ###  https://w3id.org/mod#numberOfIndividuals
-:numberOfIndividuals rdf:type owl:DatatypeProperty ;
+mod:numberOfIndividuals rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :metrics ;
                      rdfs:range xsd:nonNegativeInteger ;
                      rdfs:comment "The total number of individuals in an ontology."@en ;
@@ -2350,7 +2351,7 @@ Screen reader support enabled."""@en ;
 
 
 ###  https://w3id.org/mod#numberOfLabels
-:numberOfLabels rdf:type owl:DatatypeProperty ;
+mod:numberOfLabels rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf :metrics ;
                 rdfs:range xsd:nonNegativeInteger ;
                 rdfs:comment "Number of defined labels for any resources in an ontology (classes, properties, etc)."@en ;
@@ -2358,7 +2359,7 @@ Screen reader support enabled."""@en ;
 
 
 ###  https://w3id.org/mod#numberOfObjectProperties
-:numberOfObjectProperties rdf:type owl:DatatypeProperty ;
+mod:numberOfObjectProperties rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf :numberOfProperties ;
                           rdfs:range xsd:nonNegativeInteger ;
                           rdfs:comment "The total number of object properties in an ontology."@en ;
@@ -2366,7 +2367,7 @@ Screen reader support enabled."""@en ;
 
 
 ###  https://w3id.org/mod#numberOfProperties
-:numberOfProperties rdf:type owl:DatatypeProperty ;
+mod:numberOfProperties rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf :metrics ;
                     rdfs:range xsd:nonNegativeInteger ;
                     rdfs:comment "The total number of properties in an ontology."@en ;
@@ -2374,7 +2375,7 @@ Screen reader support enabled."""@en ;
 
 
 ###  https://w3id.org/mod#obsoleteParent
-:obsoleteParent rdf:type owl:DatatypeProperty ;
+mod:obsoleteParent rdf:type owl:DatatypeProperty ;
                 rdfs:domain :SemanticArtefactDistribution ;
                 rdfs:range xsd:anyURI ;
                 rdfs:comment "property used to specify the root of an obsolete branch in the ontology."@en ;
@@ -2382,7 +2383,7 @@ Screen reader support enabled."""@en ;
 
 
 ###  https://w3id.org/mod#obsoleteProperty
-:obsoleteProperty rdf:type owl:DatatypeProperty ;
+mod:obsoleteProperty rdf:type owl:DatatypeProperty ;
                   rdfs:domain :SemanticArtefactDistribution ;
                   rdfs:range xsd:anyURI ;
                   rdfs:comment "property used to specify an obsolete class."@en ;
@@ -2390,7 +2391,7 @@ Screen reader support enabled."""@en ;
 
 
 ###  https://w3id.org/mod#prefLabelPropert
-:prefLabelPropert rdf:type owl:DatatypeProperty ;
+mod:prefLabelPropert rdf:type owl:DatatypeProperty ;
                   rdfs:domain :SemanticArtefactDistribution ;
                   rdfs:range xsd:anyURI ;
                   rdfs:comment "Property used to specify preferred name (BioPortal definition)."@en ;
@@ -2398,7 +2399,7 @@ Screen reader support enabled."""@en ;
 
 
 ###  https://w3id.org/mod#sampleQueries
-:sampleQueries rdf:type owl:DatatypeProperty ;
+mod:sampleQueries rdf:type owl:DatatypeProperty ;
                rdfs:domain :SemanticArtefactDistribution ;
                rdfs:range xsd:string ;
                rdfs:comment "A set of queries (may be SPARQL, DL Queries) that are provided along with an ontology."@en ;
@@ -2406,7 +2407,7 @@ Screen reader support enabled."""@en ;
 
 
 ###  https://w3id.org/mod#status
-:status rdf:type owl:DatatypeProperty ;
+mod:status rdf:type owl:DatatypeProperty ;
         rdfs:domain :SemanticArtefact ;
         rdfs:range xsd:string ;
         rdfs:comment "The tracking information for the contents of the ontology."@en ;
@@ -2414,7 +2415,7 @@ Screen reader support enabled."""@en ;
 
 
 ###  https://w3id.org/mod#synonymProperty
-:synonymProperty rdf:type owl:DatatypeProperty ;
+mod:synonymProperty rdf:type owl:DatatypeProperty ;
                  rdfs:domain :SemanticArtefactDistribution ;
                  rdfs:range xsd:anyURI ;
                  rdfs:comment "Property used to specify preferred name (BioPortal definition)."@en ;
@@ -2422,7 +2423,7 @@ Screen reader support enabled."""@en ;
 
 
 ###  https://w3id.org/mod#toDoList
-:toDoList rdf:type owl:DatatypeProperty ;
+mod:toDoList rdf:type owl:DatatypeProperty ;
           rdfs:domain :SemanticArtefact ;
           rdfs:range xsd:string ;
           rdfs:comment "Describes future tasks planned by a resource curator. This property is primarily intended to be used for vocabularies or datasets, but the domain is left open, it can be used for any resource. Use iCalendar Vtodo class and its properties to further describe the task calendar, priorities etc."@en ;
@@ -2838,38 +2839,38 @@ foaf:Project rdf:type owl:Class ;
 
 
 ###  https://w3id.org/mod#Analytics
-:Analytics rdf:type owl:Class ;
+mod:Analytics rdf:type owl:Class ;
            rdfs:comment "Number of visits an ontology received."@en ;
            rdfs:isDefinedBy "https://www.isibang.ac.in/ns/mod/1.4/"@en ;
            rdfs:label "Analytics"@en .
 
 
 ###  https://w3id.org/mod#EngineeringMethodology
-:EngineeringMethodology rdf:type owl:Class ;
+mod:EngineeringMethodology rdf:type owl:Class ;
                         rdfs:comment "Information about the engineering methodology."@en ;
                         rdfs:label "Engineering Methodology"@en ;
                         skos:historyNote "This class has been adopted from OMV Ontology Metadata Vocabulary, and renamed and redefined in the MOD namespace."@en .
 
 
 ###  https://w3id.org/mod#Evaluation
-:Evaluation rdf:type owl:Class ;
+mod:Evaluation rdf:type owl:Class ;
             rdfs:comment "The results of evaluating an ontology. An ontology can have more than one evaluations."@en ;
             rdfs:label "Evaluation"@en .
 
 
 ###  https://w3id.org/mod#Group
-:Group rdf:type owl:Class ;
+mod:Group rdf:type owl:Class ;
        rdfs:comment "A group of ontologies that the ontology is usually considered into."@en ;
        rdfs:label "Group"@en .
 
 
 ###  https://w3id.org/mod#KnowledgeRepresentationParadigm
-:KnowledgeRepresentationParadigm rdf:type owl:Class ;
+mod:KnowledgeRepresentationParadigm rdf:type owl:Class ;
                                  rdfs:label "Knowledge representation paradigm"@en .
 
 
 ###  https://w3id.org/mod#SemanticArtefact
-:SemanticArtefact rdf:type owl:Class ;
+mod:SemanticArtefact rdf:type owl:Class ;
                   rdfs:subClassOf cc:work ,
                                   frbr:Expression ,
                                   frbr:Work ,
@@ -2887,48 +2888,48 @@ foaf:Project rdf:type owl:Class ;
 
 
 ###  https://w3id.org/mod#SemanticArtefactCatalogRecord
-:SemanticArtefactCatalogRecord rdf:type owl:Class ;
+mod:SemanticArtefactCatalogRecord rdf:type owl:Class ;
                                rdfs:subClassOf dcat:CatalogRecord .
 
 
 ###  https://w3id.org/mod#SemanticArtefactDistribution
-:SemanticArtefactDistribution rdf:type owl:Class ;
+mod:SemanticArtefactDistribution rdf:type owl:Class ;
                               rdfs:subClassOf adms:AssetDistribution ,
                                               dcat:Distribution .
 
 
 ###  https://w3id.org/mod#SemanticArtefactEvaluation
-:SemanticArtefactEvaluation rdf:type owl:Class ;
+mod:SemanticArtefactEvaluation rdf:type owl:Class ;
                             rdfs:label "Semantic Artefact Evaluation"@en .
 
 
 ###  https://w3id.org/mod#SemanticArtefactService
-:SemanticArtefactService rdf:type owl:Class ;
+mod:SemanticArtefactService rdf:type owl:Class ;
                          rdfs:subClassOf dcat:DataService .
 
 
 ###  https://w3id.org/mod#SemanticArtefactTask
-:SemanticArtefactTask rdf:type owl:Class ;
+mod:SemanticArtefactTask rdf:type owl:Class ;
                       rdfs:label "Semantic Artefact Task"@en .
 
 
 ###  https://w3id.org/mod#SemanticArtfeactCatalog
-:SemanticArtfeactCatalog rdf:type owl:Class ;
+mod:SemanticArtfeactCatalog rdf:type owl:Class ;
                          rdfs:subClassOf dcat:Catalog .
 
 
 ###  https://w3id.org/mod#Taxonomy
-:Taxonomy rdf:type owl:Class ;
+mod:Taxonomy rdf:type owl:Class ;
           rdfs:subClassOf :SemanticArtefact .
 
 
 ###  https://w3id.org/mod#Terminology
-:Terminology rdf:type owl:Class ;
+mod:Terminology rdf:type owl:Class ;
              rdfs:subClassOf :SemanticArtefact .
 
 
 ###  https://w3id.org/mod#Thesaurus
-:Thesaurus rdf:type owl:Class ;
+mod:Thesaurus rdf:type owl:Class ;
            rdfs:subClassOf :SemanticArtefact .
 
 
