@@ -913,7 +913,7 @@ schema:workTranslation rdf:type owl:ObjectProperty ;
 doap:blog rdf:type owl:ObjectProperty ;
           rdfs:domain doap:Project ;
           rdfs:range [ rdf:type owl:Class ;
-                       owl:unionOf ( <http://rdfs.org/sioc/ns#Weblog>
+                       owl:unionOf ( sioc:Weblog
                                      rdfs:Resource
                                    )
                      ] ;
@@ -964,7 +964,7 @@ doap:helper rdf:type owl:ObjectProperty ;
 ###  http://usefulinc.com/ns/doap#mailing-list
 doap:mailing-list rdf:type owl:ObjectProperty ;
                   rdfs:domain doap:Project ;
-                  rdfs:range <http://rdfs.org/sioc/ns#MailingList> ;
+                  rdfs:range sioc:MailingList ;
                   rdfs:comment "Mailing list home page or email address."@en ;
                   rdfs:label "mailing-list"@en .
 
@@ -1004,7 +1004,7 @@ doap:screenshots rdf:type owl:ObjectProperty ;
 ###  http://usefulinc.com/ns/doap#wiki
 doap:wiki rdf:type owl:ObjectProperty ;
           rdfs:domain doap:Project ;
-          rdfs:range <http://rdfs.org/sioc/ns#Wiki> ;
+          rdfs:range sioc:Wiki ;
           rdfs:comment "URL of Wiki for collaborative discussion of project."@en ;
           rdfs:label "wiki"@en .
 
@@ -2564,19 +2564,19 @@ void:Dataset rdf:type owl:Class ;
 
 
 ###  http://rdfs.org/sioc/ns#MailingList
-<http://rdfs.org/sioc/ns#MailingList> rdf:type owl:Class ;
+sioc:MailingList rdf:type owl:Class ;
                                       rdfs:comment "Describes an electronic mailing list."@en ;
                                       rdfs:label "MailingList"@en .
 
 
 ###  http://rdfs.org/sioc/ns#Weblog
-<http://rdfs.org/sioc/ns#Weblog> rdf:type owl:Class ;
+sioc:Weblog rdf:type owl:Class ;
                                  rdfs:comment "Describes a weblog (blog), i.e. an online journal."@en ;
                                  rdfs:label "Weblog"@en .
 
 
 ###  http://rdfs.org/sioc/ns#Wiki
-<http://rdfs.org/sioc/ns#Wiki> rdf:type owl:Class ;
+sioc:Wiki rdf:type owl:Class ;
                                rdfs:comment "Describes a wiki space."@en ;
                                rdfs:isDefinedBy "http://rdfs.org/sioc/types#"@en ;
                                rdfs:label "Wiki"@en .
