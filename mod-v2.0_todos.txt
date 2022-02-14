@@ -1,0 +1,14 @@
+MOD2.0 TODOS: 
+- Mark the properties of the FAIRsFAIR minimum metadata profile (Clement & Yann)
+- Synchronize the descriptions back to the GSheet file (B & C)
+- Translate descriptions to French (Clement)
+- Separate reliesOn and relatedTo and hierarchize relations
+- Add voaf:reliesOn and remove the mapping with dct:relation
+- Check outcomes of the W3C's DXWG
+- Formalize other classes (all but SemanticArtefact)
+
+LOG (From December 2021): 
+- Create the new OWL file for MOD 2.0 (Biswanath)
+- Declare MOD on w3id (Biswanath)
+- Update the README file on GitHub (Clement)
+- Describe MOD2.0 with itself (Clement)
