@@ -610,6 +610,230 @@ mod:hasSyntax       rdf:type                owl:DatatypeProperty ;
     
 
 
+### http://purl.org/dc/terms/language
+dcterms:language    rdf:type                rdf:Property ;
+                    rdfs:subPropertyOf      <http://purl.org/dc/elements/1.1/language> ;
+                    rdfs:label              "natural language"@en ,
+                                            "langage naturel"@fr ;
+                    dcterms:description     "DCTERMS: A language of the resource. Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [[IETF-BCP47](https://tools.ietf.org/html/bcp47)] language tag. OMV: The language of the content of the ontology, i.e. English, French, etc. DOAP: ISO language code a project has been translated into."@en ;
+                    rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
+                    dcterms:issued          "2008-01-14"^^xsd:date ;
+                    owl:equivalentProperty  omv:naturalLanguage ,
+                                            schema:inLanguage ,
+                                            doap:language ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: F2" ;
+            
+            #OTHER ORIGINAL STATEMENTS IF ANY 
+                    <http://purl.org/dc/dcam/rangeIncludes>     dcterms:LinguisticSystem .
+
+    
+##########################################
+######## Description properties ##########
+##########################################
+      
+
+### http://purl.org/dc/terms/description
+dcterms:description rdf:type                rdf:Property ;
+                    rdfs:subPropertyOf      <http://purl.org/dc/elements/1.1/description> ;
+                    rdfs:label              "description"@en ,
+                                            "description"@fr ;
+                    dcterms:description     "DCTERMS: An account of the resource. Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. OMV: Free text description of an ontology. SCHEMA: A description of the item. DOAP: Plain text description of a project, of 2-4 sentences in length."@en ;
+                    rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
+                    dcterms:issued          "2008-01-14"^^xsd:date ;
+                    owl:equivalentProperty  omv:description ,
+                                            schema:description ,
+                                            doap:description ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "MIRO guidelines: C.3" ,
+                                            "FAIR principle: F2" .
+            
+
+
+### http://purl.org/dc/terms/abstract
+dcterms:abstract    rdf:type                rdf:Property ;
+                    rdfs:subPropertyOf      <http://purl.org/dc/elements/1.1/description>, dcterms:description ;
+                    rdfs:label              "abstract"@en ,
+                                            "résumé"@fr ;
+                    dcterms:description     "DCTERMS: A summary of the resource."@en ;
+                    rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
+                    dcterms:issued          "2000-07-11"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: F2" .
+            
+
+
+### http://creativecommons.org/ns#morePermissions
+cc:morePermissions  rdf:type                rdf:Property ;
+                    rdfs:subPropertyOf      dcterms:relation ; 
+                    rdfs:label              "more permissions"@en ,
+                                            "droits d'accès détaillés"@fr ;
+                    rdfs:domain             cc:Work ;
+                    rdfs:range              rdfs:Resource ;
+                    dcterms:description     "CC: A related resource which describes additional permissions or alternative licenses for a Work which may be available."@en ;     
+                    rdfs:isDefinedBy        <http://creativecommons.org/ns#> ;
+                    dcterms:issued          "2008-03-03"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: R1.1" .
+  
+
+
+### http://creativecommons.org/ns#useGuidelines
+cc:useGuidelines    rdf:type                rdf:Property ;
+                    rdfs:subPropertyOf      dcterms:relation ; 
+                    rdfs:label              "use guidelines"@en ,
+                                            "guide d'utilisation"@fr ;
+                    rdfs:domain             cc:Work ;
+                    rdfs:range              rdfs:Resource ;
+                    dcterms:description     "CC: A related resource which defines non-binding use guidelines for the work."@en ;     
+                    rdfs:isDefinedBy        <http://creativecommons.org/ns#> ;
+                    dcterms:issued          "2008-03-03"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: R1.1" .
+  
+
+### http://purl.org/dc/terms/bibliographicCitation
+dcterms:bibliographicCitation
+                    rdf:type                rdf:Property ;
+                    rdfs:subPropertyOf      <http://purl.org/dc/elements/1.1/identifier> , dcterms:identifier;
+                    rdfs:label              "bibliographic reference"@en ,
+                                            "référence bibliographique";
+                    rdfs:range              rdfs:Literal ;
+                    dcterms:description     "DCTERMS: A bibliographic reference for the resource. Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible. OMV: List of bibliographic references describing the ontology and its applications. FOAF: A document that this thing is the primary topic of"@en ;
+                    rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
+                    dcterms:issued          "2003-02-15"^^xsd:date ;
+                    owl:equivalentProperty  omv:reference ,
+                                            foaf:isPrimaryTopicOf ,
+                                            schema:citation ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: F2" .
+
+
+
+###  http://www.w3.org/ns/dcat#landingPage
+dcat:landingPage    rdf:type                rdf:Property , owl:ObjectProperty ;
+                    rdfs:subPropertyOf      foaf:page ; 
+                    rdfs:label              "landing page"@en ,
+                                            "page d'atterrissage"@fr ;
+                    rdfs:range              foaf:Document ;
+                    dcterms:description     "DCAT: A Web page that can be navigated to in a Web browser to gain access to the dataset, its distributions and/or additional information. MOD: A link to the documentation page on a thing. OMV: URL for further documentation. RDFS: Further information about the subject resource. DOAP: URL of Wiki for collaborative discussion of project. VANN: A reference to a resource that provides information on how this resource is to be used."@en ;
+                    rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
+                    dcterms:issued          "2014-01-16"^^xsd:date ;
+                    owl:equivalentProperty  omv:documentation ,
+                                            vann:usageNote ,
+                                            doap:wiki ,
+                                            rdfs:seeAlso ,
+                                            <http://www.isibang.ac.in/ns/mod/1.0/document> ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "MIRO guidelines: C.3, F.1" ,
+                                            "FAIR principle: F2" ;
+            
+            #OTHER ORIGINAL STATEMENTS IF ANY 
+                    skos:scopeNote          "If the distribution(s) are accessible only through a landing page (i.e. direct download URLs are not known), then the landing page link should be duplicated as accessURL on a distribution."@en .
+
+
+###  http://www.w3.org/ns/dcat#accessURL
+dcat:accessURL      rdf:type                rdf:Property , owl:ObjectProperty ;
+                    rdfs:label              "access URL"@en ,
+                                            "URL d'accès"@fr ;
+                    rdfs:domain             dcat:Distribution ;
+                    rdfs:range              rdfs:Resource ;
+                    dcterms:description     "DCAT: A URL of a resource that gives access to a distribution of the dataset. E.g. landing page, feed, SPARQL endpoint. Use for all cases except a simple download link, in which case downloadURL is preferred. OMV: The location where the ontology can be found. It should be accessible via a URL. It can be the same as the value for URI property. DOAP:  Web page from which the project software can be downloaded."@en ;
+                    rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
+                    dcterms:issued          "2014-01-16"^^xsd:date ;
+                    owl:equivalentProperty  omv:resourceLocator ,
+                                            doap:download-page ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "MIRO guidelines: A.4" ,
+                                            "FAIR principle: F2" ;
+            
+            #OTHER ORIGINAL STATEMENTS IF ANY 
+                     skos:scopeNote         "If the distribution(s) are accessible only through a landing page (i.e. direct download URLs are not known), then the landing page link should be duplicated as accessURL on a distribution."@en .
+ 
+ 
+
+### http://www.w3.org/2000/01/rdf-schema#Comment
+rdfs:comment        rdf:type                rdf:Property ;
+                    rdfs:label              "notes or comments"@en ,
+                                            "notes ou commentaires"@fr ;
+                    rdfs:domain             rdfs:Resource ;
+                    rdfs:range              rdfs:Literal ;           
+                    dcterms:description     "RDFS: A description of the subject resource. OMV: Additional information about the ontology that is not included somewhere else (e.g. information that you do not want to include in the documentation)."@en ;
+                    rdfs:isDefinedBy        <http://www.w3.org/2000/01/rdf-schema#> ;
+                    dcterms:issued          "2002-04-30"^^xsd:date ;
+                    owl:equivalentProperty  omv:notes ,
+                                            dcterms:description ,
+                                            adms:versionNotes ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: F2" .
+        
+
+
+###  http://www.w3.org/ns/dcat#keyword
+dcat:keyword        rdf:type                rdf:Property , owl:DatatypeProperty ;
+                    rdfs:subPropertyOf      dcterms:subject ; 
+                    rdfs:label              "keyword"@en ,
+                                            "motclé"@fr ;
+                    rdfs:range              rdfs:Literal ;
+                    dcterms:description     "DCAT: A keyword or tag describing a resource. MOD: A keyword(s) is used to describe the content of an ontology. OMV: List of keywords related to an ontology. SCHEMA: Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas."@en ;
+                    rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
+                    dcterms:issued          "2014-01-16"^^xsd:date ;
+                    owl:equivalentProperty   omv:keywords ,
+                                             schema:keywords ,
+                                             <http://www.isibang.ac.in/ns/mod/1.1/keyword> ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "MIRO guidelines: C.1" ,
+                                            "FAIR principle: F2" .
+            
+
+
+### http://purl.org/dc/terms/type
+dcterms:type        rdf:type                rdf:Property ;
+                    rdfs:subPropertyOf      <http://purl.org/dc/elements/1.1/type> ;
+                    rdfs:label              "type"@en ,
+                                            "type"@fr ;
+                    dcterms:description     "DCTERMS: The nature or genre of the resource. Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [[DCMI-TYPE](http://dublincore.org/documents/dcmi-type-vocabulary/)]. To describe the file format, physical medium, or dimensions of the resource, use the property Format. OMV: The nature of the content of the ontology."@en ;
+                    rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
+                    dcterms:issued          "2008-01-14"^^xsd:date ;
+                    owl:equivalentProperty  omv:isOfType ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: F2" .
+
+
+
 
 ############################################################################################# HERE: moved properties as defined in MOD1.4 and updated to MOD2
 ############################################################################################# HERE: moved properties as defined in MOD1.4 and updated to MOD2
@@ -702,19 +926,6 @@ cc:license rdf:type owl:ObjectProperty ;
 (a subproperty of dc:license, the same as xhtml:license)."""@en ;
            rdfs:label "license"@en .
 
-
-###  http://creativecommons.org/ns#morePermissions
-cc:morePermissions rdf:type owl:ObjectProperty ;
-                   rdfs:range rdfs:Resource ;
-                   rdfs:comment "A related resource which describes additional permissions or alternative licenses for a Work which may be available."@en ;
-                   rdfs:label "more permissions"@en .
-
-
-###  http://creativecommons.org/ns#useGuidelines
-cc:useGuidelines rdf:type owl:ObjectProperty ;
-                 rdfs:range rdfs:Resource ;
-                 rdfs:comment "A related resource which defines non-binding use guidelines for the work."@en ;
-                 rdfs:label "use guidelines"@en .
 
 
 ###  http://purl.org/dc/terms/Relation
@@ -858,12 +1069,6 @@ dcterms:isVersionOf rdf:type owl:ObjectProperty ;
                 rdfs:comment "A related resource of which the described resource is a version, edition, or adaptation."@en ;
                 rdfs:label "is version of"@en .
 
-
-###  http://purl.org/dc/terms/language
-dcterms:language rdf:type owl:ObjectProperty ;
-             rdfs:range dcterms:LinguisticSystem ;
-             rdfs:comment "A language of the resource."@en ;
-             rdfs:label "language"@en .
 
 
 
@@ -1472,18 +1677,6 @@ dcat:accessService rdf:type owl:ObjectProperty ;
                                           rdfs:label "access service"@en .
 
 
-###  http://www.w3.org/ns/dcat#accessURL
-dcat:accessURL rdf:type owl:ObjectProperty ;
-                                      rdfs:domain dcat:Distribution ;
-                                      rdfs:range rdfs:Resource ;
-                                      rdfs:comment "A URL of the resource that gives access to a distribution of the dataset. E.g. landing page, feed, SPARQL endpoint."@en ,
-                                                   """dcat:accessURL SHOULD be used for the URL of a service or location that can provide access to this distribution, typically through a Web form, query or API call.
-
-dcat:downloadURL is preferred for direct links to downloadable resources.
-
-If the distribution(s) are accessible only through a landing page (i.e. direct download URLs are not known), then the landing page URL associated with the dcat:Dataset SHOULD be duplicated as access URL on a distribution (see § 5.7 Dataset available only behind some Web page)."""@en ;
-                                      rdfs:label "access URL"@en .
-
 
 ###  http://www.w3.org/ns/dcat#compressFormat
 dcat:compressFormat rdf:type owl:ObjectProperty ;
@@ -1534,13 +1727,6 @@ dcat:downloadURL rdf:type owl:ObjectProperty ;
                                         rdfs:label "download URL"@en .
 
 
-###  http://www.w3.org/ns/dcat#landingPage
-dcat:landingPage rdf:type owl:ObjectProperty ;
-                                        rdfs:subPropertyOf foaf:page ;
-                                        rdfs:domain dcat:Resource ;
-                                        rdfs:range foaf:Document ;
-                                        rdfs:comment "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information."@en ;
-                                        rdfs:label "landing page"@en .
 
 
 ###  http://www.w3.org/ns/dcat#mediaType
@@ -1723,12 +1909,7 @@ foaf:maker rdf:type owl:ObjectProperty ;
            rdfs:label "maker"@en .
 
 
-###  http://xmlns.com/foaf/0.1/page
-foaf:page rdf:type owl:ObjectProperty ;
-          rdfs:domain owl:Thing ;
-          rdfs:range foaf:Document ;
-          rdfs:comment "A page or document about this thing."@en ;
-          rdfs:label "page"@en .
+
 
 
 ###  http://xmlns.com/foaf/0.1/primaryTopic
@@ -1972,19 +2153,10 @@ idot:state rdf:type owl:DatatypeProperty ;
            rdfs:label "state"@en .
 
 
-###  http://purl.org/dc/terms/abstract
-dcterms:abstract rdf:type owl:DatatypeProperty ;
-             rdfs:comment "A summary of the resource."@en ;
-             rdfs:label "abstract"@en .
 
 
 
 
-###  http://purl.org/dc/terms/bibliographicCitation
-dcterms:bibliographicCitation rdf:type owl:DatatypeProperty ;
-                          rdfs:range rdfs:Literal ;
-                          rdfs:comment "A bibliographic reference for the resource."@en ;
-                          rdfs:label "bibliographic citation"@en .
 
 
 ###  http://purl.org/dc/terms/created
@@ -2011,10 +2183,6 @@ dcterms:dateSubmitted rdf:type owl:DatatypeProperty ;
                   rdfs:label "date submitted"@en .
 
 
-###  http://purl.org/dc/terms/description
-dcterms:description rdf:type owl:DatatypeProperty ;
-                rdfs:comment "An account of the resource."@en ;
-                rdfs:label "description"@en .
 
 
 ###  http://purl.org/dc/terms/identifier
@@ -2416,13 +2584,6 @@ dcat:byteSize rdf:type owl:DatatypeProperty ;
                                                   "The size of a distribution in bytes."@en ;
                                      rdfs:label "byte size"@en .
 
-
-###  http://www.w3.org/ns/dcat#keyword
-dcat:keyword rdf:type owl:DatatypeProperty ;
-                                    rdfs:domain dcat:Resource ;
-                                    rdfs:range rdfs:Literal ;
-                                    rdfs:comment "A keyword or tag describing the resource."@en ;
-                                    rdfs:label "keyword"@en .
 
 
 ###  http://www.w3.org/ns/dcat#spatialResolutionInMeters
