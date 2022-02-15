@@ -277,54 +277,266 @@
 #################################################################
 #
 #### PropertyURI
-#originalns:xx a rdf:Property ;
-#            rdfs:subPropertyOf      SUPER PROPERTY IF ANY
-#            rdfs:label              LABELS
-#            rdfs:domain             DOMAIN INFO IF ANY
-#            rdfs:range              RANGE INFO IF ANY
-#            dcterms:description     DESCCRIPTION FROM ORIGINAL SOURCE ;
-#            rdfs:isDefinedBy        URI OF ORIGINAL SOURCE ;
-#            dcterms:issued          "DATE OF THE FIRST CREATION OF THE PROPERTY BY ORIGINAL RESOURCE"^^xsd:date> ;
-#            owl:equivalentProperty  EQUIVALENT PROPERTY (Equivalent properties have the same "values" (i.e., the same property extension))
-#            pav:derivedFrom         URI OF FIRST MOD VERSION INCLUDING" ;
-#            pav:importedOn          "DATE OF FIRST MOD VERSION INCLUDING"^^xsd:dateTime ;
+#originalns:xx      rdf:type                rdf:Property ;
+#                   rdfs:subPropertyOf      SUPER PROPERTY IF ANY
+#                   rdfs:label              ""@en ,
+#                                           ""@fr ;
+#                   rdfs:domain             DOMAIN INFO IF ANY
+#                   rdfs:range              RANGE INFO IF ANY
+#                   dcterms:description     DESCCRIPTION FROM ORIGINAL SOURCE ;
+#                   rdfs:isDefinedBy        URI OF ORIGINAL SOURCE ;
+#                   dcterms:issued          "DATE OF THE FIRST CREATION OF THE PROPERTY BY ORIGINAL RESOURCE"^^xsd:date ;
+#                   owl:equivalentProperty  EQUIVALENT PROPERTY (Equivalent properties have the same "values" (i.e., the same property extension))
+#                   pav:derivedFrom         URI OF FIRST MOD VERSION INCLUDING" ;
+#                   pav:importedOn          "DATE OF FIRST MOD VERSION INCLUDING"^^xsd:dateTime ;
 #                    
 #            #OPTIONAL STATEMENTS
-#            prov:wasInfluencedBy    "MIRO guidelines: ...." ;
+#                   prov:wasInfluencedBy    "MIRO guidelines: ...." ;
 #            
 #            #OTHER ORIGINAL STATEMENTS IF ANY 
 #            
 #################################################################
 
 
-### http://purl.org/dc/terms/creator
-dcterms:creator a rdf:Property ;
-            rdfs:subPropertyOf      <http://purl.org/dc/elements/1.1/creator>, dcterms:contributor ;
-            rdfs:label              "creator"@en ,
-                                    "créateur"@fr ;
-            dcterms:description     "An entity responsible for making the resource. Recommended practice is to identify the creator with a URI.  If this is not possible or feasible, a literal value that identifies the creator may be provided."@en ;
-            rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
-            dcterms:issued          "2008-01-14"^^xsd:date ;
-            owl:equivalentProperty  omv:creator ,
-                                    pav:authoredBy ,
-                                    pav:createdBy ,
-                                    schema:author ,
-                                    doap:maintainer ,
-                                    prov:wasAttributedTo ,
-                                    foaf:maker ;
-            pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-            pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+#################################################################
+#  Properties (sorted as in GSheet working document)
+#################################################################
+
+##########################################
+########## Intrinsic properties ##########
+##########################################
+
+
+###  https://w3id.org/mod#acronym
+mod:acronym         rdf:type                owl:DatatypeProperty ;
+                    rdfs:subPropertyOf      rdfs:label ;
+                    rdfs:label              "acronym"@en ,
+                                            "acronyme"@fr ;
+                    rdfs:domain             mod:SemanticArtefact ;
+                    rdfs:range              xsd:string ;
+                    dcterms:description     "MOD: Short acronym label, often used as an identifier within some ontology platforms such as BioPortal or OBO Foundry. OMV: A short name by which an ontology is formally known."@en ;
+                    rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
+                    dcterms:issued          "2009-12-24"^^xsd:date ;
+                    owl:equivalentProperty  <http://www.isibang.ac.in/ns/mod/1.1/acronym> ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.1> ;
+                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+            
+#            #OPTIONAL STATEMENTS
+                    skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
+                    prov:wasInfluencedBy    "MIRO guidelines: A.1" ,
+                                            "FAIR principle: F2" .
+            
+
+
+### http://purl.org/dc/terms/title
+dcterms:title       rdf:type                rdf:Property ;
+                    rdfs:subPropertyOf      <http://purl.org/dc/elements/1.1/title> ;
+                    rdfs:label              "title"@en ,
+                                            "titre"@fr ;
+                    rdfs:range              rdfs:Literal ;
+                    dcterms:description     "DCTERMS: A name given to the resource. OMV: The name by which an ontology is formally known. RDFS: A human-readable name for the subject. FOAF:  A name for some thing. SKOS: The preferred and alternative labels are useful when generating or creating human-readable representations of a knowledge organization system. SCHEMA: The name of the item."@en ;
+                    rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
+                    dcterms:issued          "2008-01-14"^^xsd:date ;
+                    owl:equivalentProperty  cc:attributionName ,
+                                            omv:name ,
+                                            schema:name ,
+                                            skos:prefLabel ,
+                                            foaf:name ;
+
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
                     
             #OPTIONAL STATEMENTS
-            prov:wasInfluencedBy    "MIRO guidelines: C.2" ;
+                    prov:wasInfluencedBy    "MIRO guidelines: A.1" ,
+                                            "FAIR principle: F2" .
+     
+
+
+### http://purl.org/dc/terms/alternative
+dcterms:alternative rdf:type                rdf:Property ;
+                    rdfs:subPropertyOf      <http://purl.org/dc/elements/1.1/title>, dcterms:title ;
+                    rdfs:label              "alternative name"@en ,
+                                            "nom alternatif"@fr ;
+                    rdfs:range              rdfs:Literal ;
+                    dcterms:description     "DCTERMS: An alternative name for the resource. The distinction between titles and alternative titles is application-specific. SKOS: The preferred and alternative labels are useful when generating or creating human-readable representations of a knowledge organization system. SCHEMA: An alias for the item."@en ;
+                    rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
+                    dcterms:issued          "2000-07-11"^^xsd:date ;
+                    owl:equivalentProperty  idot:alternatePrefix ,
+                                            schema:alternateName ,
+                                            skos:altLabel ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "MIRO guidelines: A.1" ,
+                                            "FAIR principle: F2" .
+            
+
+
+### http://www.w3.org/2004/02/skos/core#hiddenLabel
+skos:hiddenLabel    rdf:type                rdfs:Property ,
+                                            owl:AnnotationProperty ;
+                    rdfs:subPropertyOf      rdfs:label ;
+                    rdfs:label              "hidden label"@en ,
+                                            "nom caché"@fr ;
+
+                    rdfs:range              rdfs:Literal ;
+                    dcterms:description     "MOD: Hidden or past name. SKOS: A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations."@en;
+                    rdfs:isDefinedBy        <http://www.w3.org/2004/02/skos/core> ;
+                    dcterms:issued          "2009-08-18"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "MIRO guidelines: A.1" ,
+                                            "FAIR principle: F2" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
-            <http://purl.org/dc/dcam/rangeIncludes> dcterms:Agent .
-           
+                    rdfs:comment            "S12 (not formally stated): The range of skos:hiddenLabel is the class of RDF plain literals. S13 (not formally stated): skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."@en .
 
-###  http://purl.org/dc/elements/1.1/title
-dcterms:title rdf:type owl:AnnotationProperty .
 
+    
+###  https://w3id.org/mod#URI
+mod:URI             rdf:type                owl:DatatypeProperty ;
+                    rdfs:label              "URI"@en ,
+                                            "URI"@fr ;
+                    rdfs:domain             mod:SemanticArtefact ;
+                    rdfs:range              xsd:anyURI ;
+                    dcterms:description     "OMV: The URI of the ontology which is described by this metadata."@en ;
+                    rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
+                    dcterms:issued          "2009-12-24"^^xsd:date ;
+                    owl:equivalentProperty  omv:URI ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+            
+#            #OPTIONAL STATEMENTS
+                    skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
+                    prov:wasInfluencedBy    "MIRO guidelines: A.4" ,
+                                            "FAIR principle: F1" .   
+  
+
+
+### http://www.w3.org/2002/07/owl#versionIRI
+owl:versionIRI      rdf:type                owl:OntologyProperty ;
+                    rdfs:label              "version IRI"@en ,
+                                            "IRI de la version"@fr ;
+                    rdfs:domain             owl:Ontology ;
+                    rdfs:range              owl:Ontology ;
+                    dcterms:description     "OWL: The property that identifies the version IRI of an ontology."@en ;  
+                    rdfs:isDefinedBy        <http://www.w3.org/2002/07/owl#> ;
+                    dcterms:issued          "2004-02-10"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "MIRO guidelines: A.4" ,
+                                            "FAIR principle: F1" .
+            
+
+
+### http://purl.org/dc/terms/identifier
+dcterms:identifier  rdf:type                rdf:Property ;
+                    rdfs:subPropertyOf      <http://purl.org/dc/elements/1.1/identifier> ;
+                    rdfs:label              "Other identifier"@en ,
+                                            "Autre identifiant"@fr ;
+                    rdfs:range              rdfs:Literal ;
+                    dcterms:description     "DCTERMS: An unambiguous reference to the resource within a given context. Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN).  Persistent identifiers should be provided as HTTP URIs. SKOS: A notation is a string of characters such as 'T58.5 or '303.4833' used to uniquely identify a concept within the scope of a given concept scheme. ADMS: adms:identifier is used to link any resource to an instance of adms:Identifier which is its range. N.B. it is not appropriate to use dcterms:identifer to link to the Identifier class as its range is rdfs:Literal. ADMS uses this to provide any identifier for the Asset."@en ;
+                    rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
+                    dcterms:issued          "2008-01-14"^^xsd:date ;
+                    owl:equivalentProperty  skos:notation ,
+                                            adms:identifier ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: F1,A1" .
+            
+
+
+### http://www.w3.org/2002/07/owl#versionInfo
+owl:versionInfo     rdf:type                owl:AnnotationProperty  ;
+                    rdfs:label              "version information"@en ,
+                                            "information de version"@fr ;
+                    rdfs:domain             rdfs:Resource ;
+                    rdfs:range              rdfs:Resource ;
+                    dcterms:description     "MOD: The version of the released ontology. OMV: The version information of the ontology. OWL: The annotation property that provides version information for an ontology or another OWL construct. PAV: The version number of a resource. This is a freetext string, typical values are '1.5' or '21'. DOAP: A project release."@en ;  
+                    rdfs:isDefinedBy        <http://www.w3.org/2002/07/owl#> ;
+                    dcterms:issued          "2004-02-10"^^xsd:date ;
+                    owl:equivalentProperty  omv:version ,
+                                            pav:version ,
+                                            doap:release ,
+                                            oboinowl:data-version ,
+                                            oboinowl:hasVersion ,
+                                            schema:version ,
+                                            <http://www.isibang.ac.in/ns/mod/1.1/version> ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.1> ;
+                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+        
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "MIRO guidelines: A.1" ,
+                                            "FAIR principle: R1.2" .
+            
+
+
+###  https://w3id.org/mod#status
+mod:status          rdf:type                owl:DatatypeProperty ;
+                    rdfs:label              "status"@en ,
+                                            "statut"@fr ;
+                    rdfs:domain             mod:SemanticArtefact ;
+                    rdfs:range              xsd:string ;
+                    dcterms:description     "OMV: It specifies the tracking information for the contents of the ontology. Pre-defined values."@en ;
+                    rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
+                    dcterms:issued          "2009-12-24"^^xsd:date ;
+                    owl:equivalentProperty  idot:state ,
+                                            adms:adms-status ,
+                                            <http://www.isibang.ac.in/ns/mod/1.1/status> ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.1> ;
+                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+            
+#            #OPTIONAL STATEMENTS
+                    skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
+                    prov:wasInfluencedBy    "FAIR principle: A2" .
+
+
+
+############################################################################################# HERE: moved properties as defined in MOD1.4 and updated to MOD2
+############################################################################################# HERE: moved properties as defined in MOD1.4 and updated to MOD2
+############################################################################################# HERE: moved properties as defined in MOD1.4 and updated to MOD2
+############################################################################################# HERE: moved properties as defined in MOD1.4 and updated to MOD2
+############################################################################################# HERE: moved properties as defined in MOD1.4 and updated to MOD2
+############################################################################################# HERE: moved properties as defined in MOD1.4 and updated to MOD2
+############################################################################################# HERE: moved properties as defined in MOD1.4 and updated to MOD2
+############################################################################################# HERE: moved properties as defined in MOD1.4 and updated to MOD2
+
+
+### http://purl.org/dc/terms/creator
+dcterms:creator     rdf:type                rdf:Property ;
+                    rdfs:subPropertyOf      <http://purl.org/dc/elements/1.1/creator>, dcterms:contributor ;
+                    rdfs:label              "creator"@en ,
+                                            "créateur"@fr ;
+                    dcterms:description     "DCTERMS: An entity responsible for making the resource. Recommended practice is to identify the creator with a URI.  If this is not possible or feasible, a literal value that identifies the creator may be provided."@en ;
+                    rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
+                    dcterms:issued          "2008-01-14"^^xsd:date ;
+                    owl:equivalentProperty  omv:creator ,
+                                            pav:authoredBy ,
+                                            pav:createdBy ,
+                                            schema:author ,
+                                            doap:maintainer ,
+                                            prov:wasAttributedTo ,
+                                            foaf:maker ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "MIRO guidelines: C.2" ;
+            
+            #OTHER ORIGINAL STATEMENTS IF ANY 
+                    <http://purl.org/dc/dcam/rangeIncludes>     dcterms:Agent .
+
+
+#################################################################
+#   AnnotationProperty
+#################################################################
 
 ###  http://www.w3.org/2004/02/skos/core#historyNote
 skos:historyNote rdf:type owl:AnnotationProperty ;
@@ -1659,11 +1871,6 @@ dcterms:abstract rdf:type owl:DatatypeProperty ;
              rdfs:label "abstract"@en .
 
 
-###  http://purl.org/dc/terms/alternative
-dcterms:alternative rdf:type owl:DatatypeProperty ;
-                rdfs:range rdfs:Literal ;
-                rdfs:comment "An alternative name for the resource."@en ;
-                rdfs:label "alternative"@en .
 
 
 ###  http://purl.org/dc/terms/bibliographicCitation
@@ -2072,12 +2279,6 @@ owl:deprecated rdf:type owl:DatatypeProperty ;
                rdfs:label "deprecated"@en .
 
 
-###  http://www.w3.org/2002/07/owl#versionInfo
-owl:versionInfo rdf:type owl:DatatypeProperty ;
-                rdfs:domain :SemanticArtefact ;
-                rdfs:range xsd:string ;
-                rdfs:comment "The version information of the ontology."@en ;
-                rdfs:label "version info"@en .
 
 
 ###  http://www.w3.org/2004/02/skos/core#altLabel
@@ -2088,12 +2289,6 @@ skos:altLabel rdf:type owl:DatatypeProperty ;
               rdfs:label "alternative label"@en .
 
 
-###  http://www.w3.org/2004/02/skos/core#hiddenLabel
-skos:hiddenLabel rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :SemanticArtefact ;
-                 rdfs:range rdfs:Literal ;
-                 rdfs:comment "A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations."@en ;
-                 rdfs:label "hidden label"@en .
 
 
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
@@ -2214,20 +2409,6 @@ vann:usageNote rdf:type owl:DatatypeProperty ;
                rdfs:label "usage note"@en .
 
 
-###  https://w3id.org/mod#URI
-mod:URI rdf:type owl:DatatypeProperty ;
-     rdfs:domain :SemanticArtefact ;
-     rdfs:range xsd:anyURI ;
-     rdfs:comment "The URI of the ontology which is described by this metadata."@en ;
-     rdfs:label "URI"@en .
-
-
-###  https://w3id.org/mod#acronym
-mod:acronym rdf:type owl:DatatypeProperty ;
-         rdfs:domain :SemanticArtefact ;
-         rdfs:range xsd:string ;
-         rdfs:comment "Often used as an identifier within some ontology platforms such as BioPortal or OBO Foundry."@en ;
-         rdfs:label "acronym"@en .
 
 
 ###  https://w3id.org/mod#authorProperty
@@ -2447,13 +2628,6 @@ mod:sampleQueries rdf:type owl:DatatypeProperty ;
                rdfs:comment "A set of queries (may be SPARQL, DL Queries) that are provided along with an ontology."@en ;
                rdfs:label "sample queries"@en .
 
-
-###  https://w3id.org/mod#status
-mod:status rdf:type owl:DatatypeProperty ;
-        rdfs:domain :SemanticArtefact ;
-        rdfs:range xsd:string ;
-        rdfs:comment "The tracking information for the contents of the ontology."@en ;
-        skos:historyNote "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en .
 
 
 ###  https://w3id.org/mod#synonymProperty
