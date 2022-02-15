@@ -144,8 +144,11 @@
   ########## Relation properties ##########
 
 ##  owl:imports                     ;  
-    owl:priorVersion                <https://github.com/sifrproject/MOD-Ontology/raw/master/mod-v1.4_ontology.owl> ;
-    owl:backwardCompatibleWith      <http://omv.ontoware.org/2005/05/ontology>;
+    owl:priorVersion                <https://www.isibang.ac.in/ns/mod/1.4/> ,
+                                    <https://www.isibang.ac.in/ns/mod/1.2/> ,
+                                    <https://www.isibang.ac.in/ns/mod/1.1/> ,
+                                    <https://www.isibang.ac.in/ns/mod/1.0/> ;
+    owl:backwardCompatibleWith      <http://omv.ontoware.org/2005/05/ontology> ;
     owl:incompatibleWith            <http://kannel.open.ac.uk/ontology> ;
 ##  dcterms:isPartOf                ;
 ##  dcterms:hasPart                 ;  
@@ -317,8 +320,8 @@ mod:acronym         rdf:type                owl:DatatypeProperty ;
                     dcterms:description     "MOD: Short acronym label, often used as an identifier within some ontology platforms such as BioPortal or OBO Foundry. OMV: A short name by which an ontology is formally known."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
-                    owl:equivalentProperty  <http://www.isibang.ac.in/ns/mod/1.1/acronym> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.1> ;
+                    owl:equivalentProperty  <http://www.isibang.ac.in/ns/mod/1.0/acronym> ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:dateTime ;
             
 #            #OPTIONAL STATEMENTS
@@ -342,7 +345,6 @@ dcterms:title       rdf:type                rdf:Property ;
                                             schema:name ,
                                             skos:prefLabel ,
                                             foaf:name ;
-
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:dateTime ;
                     
@@ -468,8 +470,8 @@ owl:versionInfo     rdf:type                owl:AnnotationProperty  ;
                                             oboinowl:data-version ,
                                             oboinowl:hasVersion ,
                                             schema:version ,
-                                            <http://www.isibang.ac.in/ns/mod/1.1/version> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.1> ;
+                                            <http://www.isibang.ac.in/ns/mod/1.0/version> ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:dateTime ;
         
             #OPTIONAL STATEMENTS
@@ -488,14 +490,124 @@ mod:status          rdf:type                owl:DatatypeProperty ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
                     owl:equivalentProperty  idot:state ,
-                                            adms:adms-status ,
-                                            <http://www.isibang.ac.in/ns/mod/1.1/status> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.1> ;
+                                            adms:adms-status ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:dateTime ;
             
 #            #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
                     prov:wasInfluencedBy    "FAIR principle: A2" .
+
+
+
+### http://www.w3.org/2002/07/owl#Deprecated
+owl:deprecated     rdf:type                owl:AnnotationProperty ; 
+                   rdfs:label              "deprecated"@en ,
+                                           "obsolète"@fr ;
+                   rdfs:domain             rdfs:Resource ;
+                   rdfs:range              rdfs:Resource ;
+                   dcterms:description     "OWL: The annotation property that indicates that a given entity has been deprecated. IDOT: Indicates if the current dataset is obsolete (not provided any more to the public community). Value can either be 'true' or 'false' (xsd:boolean). The statement is usually omitted if 'false'."@en ;
+                   rdfs:isDefinedBy        <http://www.w3.org/2002/07/owl#> ;
+                   dcterms:issued          "2004-02-10"^^xsd:date ;
+                   owl:equivalentProperty  idot:obsolete ,
+                                           <http://www.isibang.ac.in/ns/mod/1.1/deprecated> ;                                         
+                   pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.1> ;
+                   pav:importedOn          "2016-09-02"^^xsd:dateTime ; 
+                                       
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy   "FAIR principle: A2" .
+            
+     
+
+### http://purl.org/dc/terms/license
+dcterms:license     rdf:type                rdf:Property ;
+                    rdfs:subPropertyOf      <http://purl.org/dc/elements/1.1/rights>, dcterms:rights ;
+                    rdfs:label              "license"@en ,
+                                            "licence"@fr ;
+                    dcterms:description     "DCTERMS: A legal document giving official permission to do something with the resource. Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided. DCTERMS:rights Information about rights held in and over the resource. OMV: Underlying license model. SCHEMA: A license document that applies to this content, typically indicated by URL."@en ;
+                    rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
+                    dcterms:issued          "2004-06-14"^^xsd:date ;
+                    owl:equivalentProperty  cc:license ,
+                                            omv:license ,
+                                            schema:license ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "MIRO guidelines: A.3" ,
+                                            "FAIR principle: A2" ;
+            
+            #OTHER ORIGINAL STATEMENTS IF ANY 
+                    <http://purl.org/dc/dcam/rangeIncludes>     dcterms:LicenseDocument .
+
+
+
+###  https://w3id.org/mod#hasRepresentationLanguage
+mod:hasRepresentationLanguage   
+                    rdf:type                owl:DatatypeProperty ;
+                    rdfs:label              "representation language"@en ,
+                                            "language de représentation"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
+                    rdfs:range              xsd:anyURI ;
+                    dcterms:description     "MOD: A language that is used to create an ontology. OMV: The ontology language."@en ;
+                    rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
+                    dcterms:issued          "2009-12-24"^^xsd:date ;
+                    owl:equivalentProperty  omv:hasOntologyLanguage ,
+                                            schema:fileFormat ,
+                                            <http://www.isibang.ac.in/ns/mod/1.0/ontologyDesignLanguage> ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
+                    prov:wasInfluencedBy    "MIRO guidelines: E.1" ,
+                                            "FAIR principle: I1" .
+                
+
+
+###  https://w3id.org/mod#hasFormalityLevel
+mod:hasFormalityLevel   
+                    rdf:type                owl:DatatypeProperty ;
+                    rdfs:label              "formality level"@en ,
+                                            "niveau de formalisme"@fr ;
+                    rdfs:domain             mod:SemanticArtefact ;
+                    rdfs:range              xsd:string ;
+                    dcterms:description     "MOD: The level of formality of an ontology. OMV: Level of formality of the ontology."@en ;
+                    rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
+                    dcterms:issued          "2009-12-24"^^xsd:date ;
+                    owl:equivalentProperty  omv:hasFormalityLevel ,
+                                            schema:fileFormat ,
+                                            <http://www.isibang.ac.in/ns/mod/1.0/formalityLevel> ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
+                    prov:wasInfluencedBy    "MIRO guidelines: E.1" ,
+                                            "FAIR principle: I1" .
+              
+
+
+###  https://w3id.org/mod#hasSyntax
+mod:hasSyntax       rdf:type                owl:DatatypeProperty ;
+                    rdfs:label              "syntax"@en ,
+                                            "syntaxe"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
+                    rdfs:range              xsd:anyURI ;
+                    dcterms:description     "MOD: The syntax followed in the creation of an ontology. OMV: The presentation syntax for the ontology langage."@en ;
+                    rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
+                    dcterms:issued          "2009-12-24"^^xsd:date ;
+                    owl:equivalentProperty  omv:hasOntologySyntax ,
+                                            dcterms:format ,
+                                            <http://www.isibang.ac.in/ns/mod/1.0/syntax> ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+            
+#            #OPTIONAL STATEMENTS
+                    skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
+                    prov:wasInfluencedBy    "MIRO guidelines: E.1" ,
+                                            "FAIR principle: I1" .
+    
 
 
 
@@ -754,11 +866,6 @@ dcterms:language rdf:type owl:ObjectProperty ;
              rdfs:label "language"@en .
 
 
-###  http://purl.org/dc/terms/license
-dcterms:license rdf:type owl:ObjectProperty ;
-            rdfs:range dcterms:LicenseDocument ;
-            rdfs:comment "A legal document giving official permission to do something with the resource."@en ;
-            rdfs:label "license"@en .
 
 
 ###  http://purl.org/dc/terms/publisher
@@ -2272,13 +2379,6 @@ oboinowl:savedBy rdf:type owl:DatatypeProperty ;
                  rdfs:label "saved by"@en .
 
 
-###  http://www.w3.org/2002/07/owl#deprecated
-owl:deprecated rdf:type owl:DatatypeProperty ;
-               rdfs:domain :SemanticArtefact ;
-               rdfs:range xsd:boolean ;
-               rdfs:label "deprecated"@en .
-
-
 
 
 ###  http://www.w3.org/2004/02/skos/core#altLabel
@@ -2475,29 +2575,10 @@ mod:definitionProperty rdf:type owl:DatatypeProperty ;
                     rdfs:label "object definition property"@en .
 
 
-###  https://w3id.org/mod#hasFormalityLevel
-mod:hasFormalityLevel rdf:type owl:DatatypeProperty ;
-                   rdfs:domain :SemanticArtefact ;
-                   rdfs:range xsd:string ;
-                   rdfs:comment "The level of formality of an ontology."@en ;
-                   rdfs:label "has formality level"@en ;
-                   skos:historyNote "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en .
 
 
-###  https://w3id.org/mod#hasRepresentationLanguage
-mod:hasRepresentationLanguage rdf:type owl:DatatypeProperty ;
-                           rdfs:domain :SemanticArtefactDistribution ;
-                           rdfs:range xsd:anyURI ;
-                           rdfs:comment "A language that is used to create an ontology."@en ;
-                           rdfs:label "has representation language"@en .
 
 
-###  https://w3id.org/mod#hasSyntax
-mod:hasSyntax rdf:type owl:DatatypeProperty ;
-           rdfs:domain :SemanticArtefactDistribution ;
-           rdfs:range xsd:anyURI ;
-           rdfs:comment "The syntax followed in the creation of an ontology."@en ;
-           rdfs:label "has syntax"@en .
 
 
 ###  https://w3id.org/mod#hierarchyProperty
