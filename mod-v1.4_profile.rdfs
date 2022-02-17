@@ -339,7 +339,8 @@ dct:identifier a rdf:Property ;
                dct:description "An unambiguous reference to the resource within a given context."@en ;
                dct:relation "http://purl.org/dc/elements/1.1/identifier"^^xsd:anyURI ,
                             "https://www.w3.org/2009/08/skos-reference/skos.html#notation"^^xsd:anyURI ,
-                            "https://www.w3.org/TR/vocab-adms/#adms-identifier"^^xsd:anyURI ;
+                            "https://www.w3.org/TR/vocab-adms/#adms-identifier"^^xsd:anyURI ,
+                            "https://schema.org/identifier"^^xsd:anyURI ;
                pav:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
             pav:importedOn "2015-08-05"^^xsd:dateTime ;
                rdfs:label 		"Other identifier"@en ,

@@ -446,7 +446,8 @@ dcterms:identifier  rdf:type                rdf:Property ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
                     owl:equivalentProperty  skos:notation ,
-                                            adms:identifier ;
+                                            adms:identifier 
+                                            shema:identifier;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:dateTime ;
                     
