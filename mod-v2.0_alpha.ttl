@@ -324,7 +324,7 @@ mod:acronym         rdf:type                owl:DatatypeProperty ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:dateTime ;
             
-#            #OPTIONAL STATEMENTS
+            #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
                     prov:wasInfluencedBy    "MIRO guidelines: A.1" ,
                                             "FAIR principle: F2" .
@@ -360,7 +360,7 @@ dcterms:alternative rdf:type                rdf:Property ;
                     rdfs:label              "alternative name"@en ,
                                             "nom alternatif"@fr ;
                     rdfs:range              rdfs:Literal ;
-                    dcterms:description     "DCTERMS: An alternative name for the resource. The distinction between titles and alternative titles is application-specific. SKOS: The preferred and alternative labels are useful when generating or creating human-readable representations of a knowledge organization system. SCHEMA: An alias for the item."@en ;
+                    dcterms:description     "DCTERMS: An alternative name for the resource. The distinction between titles and alternative titles is application-specific. SKOS: The preferred and alternative labels are useful when generating or creating human-readable representations of a knowledge organization system. SCHEMA: An alias for the item. A short label that is used by some communities to refer to a dataset (see 'preferredPrefix')."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2000-07-11"^^xsd:date ;
                     owl:equivalentProperty  idot:alternatePrefix ,
@@ -411,7 +411,7 @@ mod:URI             rdf:type                owl:DatatypeProperty ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:dateTime ;
             
-#            #OPTIONAL STATEMENTS
+            #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
                     prov:wasInfluencedBy    "MIRO guidelines: A.4" ,
                                             "FAIR principle: F1" .   
@@ -487,7 +487,7 @@ mod:status          rdf:type                owl:DatatypeProperty ;
                                             "statut"@fr ;
                     rdfs:domain             mod:SemanticArtefact ;
                     rdfs:range              xsd:string ;
-                    dcterms:description     "OMV: It specifies the tracking information for the contents of the ontology. Pre-defined values."@en ;
+                    dcterms:description     "OMV: It specifies the tracking information for the contents of the ontology. Pre-defined values. IDOT: State of a resource (physical location providing access to data or information about the identified entity). This is should be based on a recent manual or automatic check of the resource. Possible values are: 'up', 'down', 'probably up', 'obsolete resource', 'restricted access' and 'unknown'."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
                     owl:equivalentProperty  idot:state ,
@@ -495,7 +495,7 @@ mod:status          rdf:type                owl:DatatypeProperty ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:dateTime ;
             
-#            #OPTIONAL STATEMENTS
+            #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
                     prov:wasInfluencedBy    "FAIR principle: A2" .
 
@@ -604,7 +604,7 @@ mod:hasSyntax       rdf:type                owl:DatatypeProperty ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:dateTime ;
             
-#            #OPTIONAL STATEMENTS
+            #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
                     prov:wasInfluencedBy    "MIRO guidelines: E.1" ,
                                             "FAIR principle: I1" .
@@ -867,7 +867,7 @@ mod:createdWith     rdf:type                owl:ObjectProperty ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:dateTime ;
             
-#            #OPTIONAL STATEMENTS
+            #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: E.2" ,
                                             "FAIR principle: R1.2" .
         
@@ -889,7 +889,7 @@ mod:usedEngineeringMethodology
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:dateTime ;
             
-#            #OPTIONAL STATEMENTS
+            #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
                     prov:wasInfluencedBy    "MIRO guidelines: A.6" ,
                                             "FAIR principle: R1.2" .
@@ -912,7 +912,7 @@ mod:conformsToKnowledgeRepresentationParadigm
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:dateTime ;
             
-#            #OPTIONAL STATEMENTS
+            #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
                     prov:wasInfluencedBy    "MIRO guidelines: E.1" ,
                                             "FAIR principle: R1.2" .
@@ -1025,16 +1025,355 @@ foaf:homepage       rdf:type                rdf:Property , owl:InverseFunctional
             
 
 
-    
-############################################################################################# HERE: moved properties as defined in MOD1.4 and updated to MOD2
-############################################################################################# HERE: moved properties as defined in MOD1.4 and updated to MOD2
-############################################################################################# HERE: moved properties as defined in MOD1.4 and updated to MOD2
-############################################################################################# HERE: moved properties as defined in MOD1.4 and updated to MOD2
-############################################################################################# HERE: moved properties as defined in MOD1.4 and updated to MOD2
-############################################################################################# HERE: moved properties as defined in MOD1.4 and updated to MOD2
-############################################################################################# HERE: moved properties as defined in MOD1.4 and updated to MOD2
-############################################################################################# HERE: moved properties as defined in MOD1.4 and updated to MOD2
+### http://purl.org/dc/terms/accessRights
+dcterms:accessRights
+                    rdf:type                rdf:Property ;
+                    rdfs:subPropertyOf      <http://purl.org/dc/elements/1.1/rights> , dcterms:rights ;
+                    rdfs:label              "access rights"@en ,
+                                            "droits d'accès"@fr ;
+                    dcterms:description     "DCTERMS: Information about who access the resource or an indication of its security status. Access Rights may include information regarding access or restrictions based on privacy, security, or other policies. MOD: Information on access (i.e., read, download) to an ontology."@en ;
+                    rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
+                    dcterms:issued          "2003-02-15"^^xsd:date ;
+                    owl:equivalentProperty  <http://www.isibang.ac.in/ns/mod/1.0/accessibility> ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: R1.1" ;
+            
+            #OTHER ORIGINAL STATEMENTS IF ANY 
+                    <http://purl.org/dc/dcam/rangeIncludes>     dcterms:RightsStatement .
 
+
+    
+### https://vocab.org/vann/changes
+vann:changes        rdf:type                owl:AnnotationProperty ;
+                    rdfs:subPropertyOf      rdfs:seeAlso ;
+                    rdfs:label              "changes"@en ,
+                                            "changements"@fr ;
+                    dcterms:description     "VANN: A reference to a resource that describes changes between this version of a vocabulary and the previous."@en ;
+                    rdfs:isDefinedBy        <http://purl.org/vocab/vann/> ;
+                    dcterms:issued          "2005-04-01"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: R1.2" .
+
+
+
+### https://vocab.org/vann/example
+vann:example        rdf:type                owl:AnnotationProperty ;
+                    rdfs:subPropertyOf      rdfs:seeAlso ;
+                    rdfs:label              "example"@en ,
+                                            "exemple"@fr ;
+                    dcterms:description     "VANN: A reference to a resource that provides an example of how this resource can be used. SCHEMA: Example/instance/realization/derivation of the concept of this creative work. eg. The paperback edition, first edition, or eBook."@en ;
+                    rdfs:isDefinedBy        <http://purl.org/vocab/vann/> ;
+                    dcterms:issued          "2005-04-01"^^xsd:date ;
+                    owl:equivalentProperty  schema:workExample ;
+         
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "MIRO guidelines: G.3" ,
+                                            "FAIR principle: F2" .
+
+
+
+### http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri 
+                    rdf:type                owl:AnnotationProperty ;
+                    rdfs:label              "preferred namespace URI"@en ,
+                                            "URI préféré d'espace de nom"@fr ;
+                    dcterms:description     "VANN: The preferred namespace URI to use when using terms from this vocabulary in an XML document. VOID: A URI that is a common string prefix of all the entity URIs in a void:Dataset."@en ;
+                    rdfs:isDefinedBy        <http://purl.org/vocab/vann/> ;
+                    dcterms:issued          "2005-04-01"^^xsd:date ;
+                    owl:equivalentProperty  void:uriSpace ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "MIRO guidelines: E.5" ,
+                                            "FAIR principle: F2" .
+            
+
+
+### http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix
+                    rdf:type                owl:AnnotationProperty ;
+                    rdfs:label              "preferred namespace prefix"@en ,
+                                            "préfixe d'espace de nom préféré"@fr  ;
+                    dcterms:description     "VANN: The preferred namespace prefix to use when using terms from this vocabulary in an XML document. IDOT: Short label that is commonly used to refer to the dataset. Often utilised to identify the dataset in IRIs for specific items (or records). This may also stand in place of the base IRI of the dataset (e.g. see http://prefix.cc)."@en ; 
+                    rdfs:isDefinedBy        <http://purl.org/vocab/vann/> ;
+                    dcterms:issued          "2005-04-01"^^xsd:date ;
+                    owl:equivalentProperty  idot:preferredPrefix ,
+                                            oboinowl:default-namespace ,
+                                            oboinowl:hasDefaultNamespace ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "MIRO guidelines: E.11" ,
+                                            "FAIR principle: F2" .
+            
+
+
+### https://w3id.org/mod#prefLabelProperty
+mod:prefLabelProperty
+                    rdf:type                owl:DatatypeProperty ;
+                    rdfs:label              "object preferred label property"@en ,
+                                            "propriété de nom préféré des objets"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
+                    rdfs:range              xsd:anyURI ;
+                    dcterms:description     "MOD: Property used to specify objects' preferred label."@en ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod> ;
+                    dcterms:issued          "2018-08-02"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "MIRO guidelines: E.7" ,
+                                            "FAIR principle: R1" .
+                        
+
+
+### https://w3id.org/mod#synonymProperty
+mod:synonymProperty rdf:type                owl:DatatypeProperty ;
+                    rdfs:label              "object synonym property"@en ,
+                                            "propriété de synonyme des objets"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
+                    rdfs:range              xsd:anyURI ;
+                    dcterms:description     "MOD: Property used to specify objects' synonyms."@en ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod> ;
+                    dcterms:issued          "2018-08-02"^^xsd:date ;
+                    owl:equivalentProperty  oboinowl:hasSynonymType ,
+                                            oboinowl:synonymtypedef ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "MIRO guidelines: E.7" ,
+                                            "FAIR principle: R1" .
+
+
+
+                        
+
+### https://w3id.org/mod#definitionProperty
+mod:definitionProperty 
+                    rdf:type                owl:DatatypeProperty ;
+                    rdfs:label              "object definition property"@en ,
+                                            "propriété de définition des objets"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
+                    rdfs:range              xsd:anyURI ;
+                    dcterms:description     "MOD: Property used to specify objects' definition."@en ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod> ;
+                    dcterms:issued          "2018-08-02"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "MIRO guidelines: E.7" ,
+                                            "FAIR principle: R1" .
+                    
+
+
+### https://w3id.org/mod#authorProperty
+mod:authorProperty  rdf:type                owl:DatatypeProperty ;
+                    rdfs:label              "object author property"@en ,
+                                            "propriété d'auteur des objets"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
+                    rdfs:range              xsd:anyURI ;
+                    dcterms:description     "MOD: Property used to specify objects's author."@en ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod> ;
+                    dcterms:issued          "2018-08-02"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                   
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "MIRO guidelines: E.7" ,
+                                            "FAIR principle: R1" .
+
+
+
+### https://w3id.org/mod#obsoleteProperty
+mod:obsoleteProperty
+                    rdf:type               owl:DatatypeProperty ;
+                    rdfs:label              "object obsolete property"@en ,
+                                            "propriété d'obsolescence des objets"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
+                    rdfs:range              xsd:anyURI ;
+                    dcterms:description     "MOD: Property used to specify obsolete objects."@en ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod> ;
+                    dcterms:issued          "2018-08-02"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "MIRO guidelines: E.7" ,
+                                            "FAIR principle: R1" .
+
+
+
+### https://w3id.org/mod#hierarchyProperty
+mod:hierarchyProperty
+                    rdf:type                owl:DatatypeProperty ;
+                    rdfs:label              "transitive hierarchy property"@en ,
+                                            "propriété de hiérarchie transitive"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
+                    rdfs:range              xsd:anyURI ;
+                    dcterms:description     "MOD: Property used to specify the hierarchy (e.g. rdfs:subClassOf or skos:broader)."@en ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod> ;
+                    dcterms:issued          "2018-08-02"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "MIRO guidelines: E.9" ,
+                                            "FAIR principle: R1" .
+
+
+
+### https://w3id.org/mod#obsoleteParent
+mod:obsoleteParent
+                    rdf:type                owl:DatatypeProperty ;
+                    rdfs:label              "transitive hierarchy property"@en ,
+                                            "propriété de hiérarchie transitive"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
+                    rdfs:range              xsd:anyURI ;
+                    dcterms:description     "MOD: Property used to specify the root of an obsolete branch in the ontology."@en ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod> ;
+                    dcterms:issued          "2018-08-02"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: R1" .
+
+
+
+
+### http://rdfs.org/ns/void#uriRegexPattern
+void:uriRegexPattern
+                    rdf:type                rdf:Property ;
+                    rdfs:label              "identifier pattern"@en ,
+                                            "patron d'identifiant"@fr ;
+                    rdfs:domain             void:Dataset ;
+                    dcterms:description     "VOID: A regular expression that matches the URIs of a void:Dataset's entities. IDOT: Regular expression describing alphanumeric strings used to identify items (or records) in a dataset.."@en ;
+                    rdfs:isDefinedBy        <http://vocab.deri.ie/void> ;
+                    dcterms:issued          "2010-01-26"^^xsd:date ;
+                    owl:equivalentProperty  idot:identifierPattern ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "MIRO guidelines: E.6" ,
+                                            "FAIR principle: F2" .
+
+
+
+### https://w3id.org/mod#toDoList
+mod:toDoList        rdf:type                owl:ObjectProperty ;
+                    rdfs:label              "to-do list"@en ,
+                                            "liste des choses à faire"@fr;
+                    rdfs:range              <http://www.w3.org/2002/12/cal/ical#Vtodo> ;
+                    dcterms:description     "VOID: Describes future tasks planned by a resource curator. This property is primarily intended to be used for vocabularies or datasets, but the domain is left open, it can be used for any resource. Use iCalendar Vtodo class and its properties to further describe the task calendar, priorities etc."@en ;    
+                    rdfs:isDefinedBy        <http://purl.org/vocommons/voaf> ;
+                    dcterms:issued          "2013-05-23"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    skos:historyNote        "This property had been originally defined by VOAF metadata vocabulary. Now, it has been adopted and redefined in the MOD namespace."@en ;
+                    prov:wasInfluencedBy    "MIRO guidelines: " ,
+                                            "FAIR principle: " .
+            
+
+
+### http://identifiers.org/idot/exampleIdentifier
+idot:exampleIdentifier
+                    rdf:type                rdf:Property ;
+                    rdfs:label              "example of identifier"@en ,
+                                            "exemple d'identifiant"@fr;
+                    rdfs:domain             dcmi:Dataset ;
+                    rdfs:range              xsd:string ;
+                    dcterms:description     "IDOT: An example identifier used by one item (or record) from a dataset."@en ;
+                    rdfs:isDefinedBy        <http://identifiers.org/idot> ;
+                    dcterms:issued          "2014-03-04"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "MIRO guidelines: E.6" ,
+                                            "FAIR principle: " .
+
+            
+
+### http://schema.org/award
+schema:award        rdf:type                rdf:Property ;
+                    rdfs:label              "award"@en ,
+                                            "prix"@fr ;
+                    dcterms:description     "SCHEMA: An award won by or for this item."@en ;
+                    rdfs:isDefinedBy        <http://schema.org/> ;
+                    dcterms:issued          "2012-04-21"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: F2" ;
+            
+            #OTHER ORIGINAL STATEMENTS IF ANY 
+                    schema:domainIncludes   schema:CreativeWork, schema:Organization, schema:Person, schema:Product, schema:Service ;
+                    schema:rangeIncludes    schema:Text .
+
+
+
+### http://schema.org/associatedMedia
+schema:associatedMedia
+                    rdf:type                rdf:Property ;
+                    rdfs:label              "associated media"@en ,
+                                            "média associé"@fr  ;
+                    dcterms:description     "SCHEMA: A media object that encodes this CreativeWork. This property is a synonym for encoding."@en ;
+                    rdfs:isDefinedBy        <http://schema.org/> ;
+                    dcterms:issued          "2012-04-21"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:importedOn          "2014-07-28"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: F2" ;
+            
+            #OTHER ORIGINAL STATEMENTS IF ANY 
+                    schema:domainIncludes   schema:CreativeWork, schema:HyperToc, schema:HyperTocEntry ;
+                    schema:rangeIncludes    schema:MediaObject .
+
+
+
+### http://schema.org/includedInDataCatalog
+schema:includedInDataCatalog
+                    rdf:type                rdf:Property ;
+                    rdfs:label              "Indexed or included in catalog or repository"@en ,
+                                            "indexé ou inclus dans un catalogue ou un entrepôt"@fr ;
+                    dcterms:description     "SCHEMA: A data catalog which contains this dataset."@en ;
+                    rdfs:isDefinedBy        <http://schema.org/> ;
+                    dcterms:issued          "2016-05-04"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:importedOn          "2014-07-28"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: F4, A1.1, A1.2" ;
+            
+            #OTHER ORIGINAL STATEMENTS IF ANY 
+                    schema:domainIncludes   schema:Dataset ;
+                    schema:inverseOf        schema:dataset ;
+                    schema:rangeIncludes    schema:DataCatalog .
+
+
+
+##########################################
+########## People properties ##########
+##########################################
+    
 
 ### http://purl.org/dc/terms/creator
 dcterms:creator     rdf:type                rdf:Property ;
@@ -1059,6 +1398,22 @@ dcterms:creator     rdf:type                rdf:Property ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
                     <http://purl.org/dc/dcam/rangeIncludes>     dcterms:Agent .
+
+
+
+
+
+
+
+############################################################################################# HERE: moved properties as defined in MOD1.4 and updated to MOD2
+############################################################################################# HERE: moved properties as defined in MOD1.4 and updated to MOD2
+############################################################################################# HERE: moved properties as defined in MOD1.4 and updated to MOD2
+############################################################################################# HERE: moved properties as defined in MOD1.4 and updated to MOD2
+############################################################################################# HERE: moved properties as defined in MOD1.4 and updated to MOD2
+############################################################################################# HERE: moved properties as defined in MOD1.4 and updated to MOD2
+############################################################################################# HERE: moved properties as defined in MOD1.4 and updated to MOD2
+############################################################################################# HERE: moved properties as defined in MOD1.4 and updated to MOD2
+
 
 
 #################################################################
@@ -1126,16 +1481,6 @@ dcterms:Relation rdf:type owl:ObjectProperty ;
              rdfs:label "relation"@en .
 
 
-### http://purl.org/dc/terms/accessRights
-dcterms:accessRights rdf:type owl:ObjectProperty ;
-                 rdfs:domain [ rdf:type owl:Class ;
-                               owl:unionOf ( dcat:Distribution
-                                             dcat:Resource
-                                           )
-                             ] ;
-                 rdfs:range dcterms:RightsStatement ;
-                 rdfs:comment "Information about who access the resource or an indication of its security status."@en ;
-                 rdfs:label "access rights"@en .
 
 
 ### http://purl.org/dc/terms/accrualMethod
@@ -2069,16 +2414,12 @@ foaf:isPrimaryTopicOf rdf:type owl:ObjectProperty ;
                       rdfs:label "is primary topic of"@en .
 
 
-
-
 ### http://xmlns.com/foaf/0.1/maker
 foaf:maker rdf:type owl:ObjectProperty ;
            rdfs:domain owl:Thing ;
            rdfs:range foaf:Agent ;
            rdfs:comment "An agent that made this thing."@en ;
            rdfs:label "maker"@en .
-
-
 
 
 
@@ -2126,15 +2467,10 @@ mod:comesFromTheSameDomain rdf:type owl:ObjectProperty ;
                         rdfs:label "comes from the same domain"@en .
 
 
-
-
-
-
 ### https://w3id.org/mod#describes
 mod:describes rdf:type owl:ObjectProperty ;
            rdfs:domain :SemanticArtefact ;
            rdfs:range dcat:Dataset .
-
 
 
 
@@ -2263,11 +2599,6 @@ idot:alternatePrefix rdf:type owl:DatatypeProperty ;
                      rdfs:label "alternate prefix"@en .
 
 
-### http://identifiers.org/idot/exampleIdentifier
-idot:exampleIdentifier rdf:type owl:DatatypeProperty ;
-                       rdfs:domain dcmi:Dataset ;
-                       rdfs:range xsd:string ;
-                       rdfs:label "example identifier"@en .
 
 
 ### http://identifiers.org/idot/identifierPattern
@@ -2296,12 +2627,6 @@ idot:state rdf:type owl:DatatypeProperty ;
            rdfs:domain dcmi:Dataset ;
            rdfs:range xsd:string ;
            rdfs:label "state"@en .
-
-
-
-
-
-
 
 
 ### http://purl.org/dc/terms/created
@@ -2452,12 +2777,6 @@ void:triples rdf:type owl:DatatypeProperty ;
              rdfs:label "triples"@en .
 
 
-### http://rdfs.org/ns/void#uriRegexPattern
-void:uriRegexPattern rdf:type owl:DatatypeProperty ;
-                     rdfs:domain void:Dataset ;
-                     rdfs:range xsd:string ;
-                     rdfs:comment "A regular expression that matches the URIs of a void:Dataset's entities."@en ;
-                     rdfs:label "uri regex pattern"@en .
 
 
 ### http://rdfs.org/ns/void#uriSpace
@@ -2469,11 +2788,6 @@ void:uriSpace rdf:type owl:DatatypeProperty ;
               rdfs:label "uri space"@en .
 
 
-### http://schema.org/award
-schema:award rdf:type owl:DatatypeProperty ;
-                          rdfs:range schema:Text ;
-                          rdfs:comment "An award won by or for this item."@en ;
-                          rdfs:label "award"@en .
 
 
 ### http://schema.org/dateCreated
@@ -2785,43 +3099,13 @@ schema:alternateName rdf:type owl:DatatypeProperty ;
                      rdfs:label "alternate name"@en .
 
 
-### https://vocab.org/vann/changes
-vann:changes rdf:type owl:DatatypeProperty ;
-             rdfs:comment "A reference to a resource that describes changes between this version of a vocabulary and the previous."@en ;
-             rdfs:label "changes"@en .
 
-
-### https://vocab.org/vann/example
-vann:example rdf:type owl:DatatypeProperty ;
-             rdfs:comment "A reference to a resource that provides an example of how this resource can be used."@en ;
-             rdfs:label "example"@en .
-
-
-### https://vocab.org/vann/preferredNamespacePrefix
-vann:preferredNamespacePrefix rdf:type owl:DatatypeProperty ;
-                              rdfs:comment "The preferred namespace prefix to use when using terms from this vocabulary in an XML document."@en ;
-                              rdfs:label "preferred namespace prefix"@en .
-
-
-### https://vocab.org/vann/preferredNamespaceUri
-vann:preferredNamespaceUri rdf:type owl:DatatypeProperty ;
-                           rdfs:comment "The preferred namespace URI to use when using terms from this vocabulary in an XML document."@en ;
-                           rdfs:label "preferred namespace uri"@en .
 
 
 ### https://vocab.org/vann/usageNote
 vann:usageNote rdf:type owl:DatatypeProperty ;
                rdfs:comment "A reference to a resource that provides information on how this resource is to be used."@en ;
                rdfs:label "usage note"@en .
-
-
-
-
-### https://w3id.org/mod#authorProperty
-mod:authorProperty rdf:type owl:DatatypeProperty ;
-                rdfs:range xsd:anyURI ;
-                rdfs:comment "property used to specify the author of a class (BioPortal definition)."@en ;
-                rdfs:label "object author property"@en .
 
 
 ### https://w3id.org/mod#averageChildCount
@@ -2863,29 +3147,6 @@ mod:classesWithOneChild rdf:type owl:DatatypeProperty ;
                      rdfs:range xsd:nonNegativeInteger ;
                      rdfs:comment "Number of classes that have only one subclass in the is-a hierarchy (BioPortal definition)."@en ;
                      rdfs:label "number of classes with a single child"@en .
-
-
-
-### https://w3id.org/mod#definitionProperty
-mod:definitionProperty rdf:type owl:DatatypeProperty ;
-                    rdfs:domain :SemanticArtefactDistribution ;
-                    rdfs:range xsd:anyURI ;
-                    rdfs:comment "Property used to specify the definition of a class (BioPortal definition)."@en ;
-                    rdfs:label "object definition property"@en .
-
-
-
-
-
-
-
-
-### https://w3id.org/mod#hierarchyProperty
-mod:hierarchyProperty rdf:type owl:DatatypeProperty ;
-                   rdfs:domain :SemanticArtefactDistribution ;
-                   rdfs:range xsd:anyURI ;
-                   rdfs:comment "property used to specify the hierarchy  (e.g. rdfs:subClassOf or skos:broader)."@en ;
-                   rdfs:label "transitive hierarchy property"@en .
 
 
 ### https://w3id.org/mod#knownUsage
@@ -2977,28 +3238,6 @@ mod:numberOfProperties rdf:type owl:DatatypeProperty ;
                     rdfs:label "number of properties"@en .
 
 
-### https://w3id.org/mod#obsoleteParent
-mod:obsoleteParent rdf:type owl:DatatypeProperty ;
-                rdfs:domain :SemanticArtefactDistribution ;
-                rdfs:range xsd:anyURI ;
-                rdfs:comment "property used to specify the root of an obsolete branch in the ontology."@en ;
-                rdfs:label "root of obsolete branch"@en .
-
-
-### https://w3id.org/mod#obsoleteProperty
-mod:obsoleteProperty rdf:type owl:DatatypeProperty ;
-                  rdfs:domain :SemanticArtefactDistribution ;
-                  rdfs:range xsd:anyURI ;
-                  rdfs:comment "property used to specify an obsolete class."@en ;
-                  rdfs:label "object obsolete property"@en .
-
-
-### https://w3id.org/mod#prefLabelPropert
-mod:prefLabelPropert rdf:type owl:DatatypeProperty ;
-                  rdfs:domain :SemanticArtefactDistribution ;
-                  rdfs:range xsd:anyURI ;
-                  rdfs:comment "Property used to specify preferred name (BioPortal definition)."@en ;
-                  rdfs:label "object preferred label property"@en .
 
 
 ### https://w3id.org/mod#sampleQueries
@@ -3009,23 +3248,6 @@ mod:sampleQueries rdf:type owl:DatatypeProperty ;
                rdfs:label "sample queries"@en .
 
 
-
-### https://w3id.org/mod#synonymProperty
-mod:synonymProperty rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :SemanticArtefactDistribution ;
-                 rdfs:range xsd:anyURI ;
-                 rdfs:comment "Property used to specify preferred name (BioPortal definition)."@en ;
-                 rdfs:label "object synonym property"@en .
-
-
-### https://w3id.org/mod#toDoList
-mod:toDoList rdf:type owl:DatatypeProperty ;
-          rdfs:domain :SemanticArtefact ;
-          rdfs:range xsd:string ;
-          rdfs:comment "Describes future tasks planned by a resource curator. This property is primarily intended to be used for vocabularies or datasets, but the domain is left open, it can be used for any resource. Use iCalendar Vtodo class and its properties to further describe the task calendar, priorities etc."@en ;
-          rdfs:label "to do list"@en ;
-          skos:historyNote """This property had been originally defined by VOAF metadata vocabulary. 
-Now, it has been adopted and redefined in the MOD namespace."""@en .
 
 
 #################################################################
