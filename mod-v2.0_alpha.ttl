@@ -1769,10 +1769,10 @@ mod:semanticArtefactRelation
                     rdfs:range              mod:SemanticArtefact ;
                     dcterms:description     "MOD: A general property for semantic artefact relations. DOOR: An ontology is related to another if one of the DOOR relations is satisfied."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod/2.0> ;
-                    dcterms:issued          "2022-05-01"^^xsd:date ;
+                    dcterms:issued          "2021-12-06"^^xsd:date ;
                     owl:equivalentProperty  door:ontologyRelatedTo ; 
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
-                    pav:importedOn          "2022-05-01"^^xsd:dateTime ;
+                    pav:importedOn          "2021-12-06"^^xsd:dateTime ;
 
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: I2" .
@@ -1791,7 +1791,7 @@ mod:reliesOn        rdf:type                owl:ObjectProperty ;
                     owl:equivalentProperty  voaf:reliesOn ,
                                             void:vocabulary  ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
-                    pav:importedOn          "2022-05-01"^^xsd:dateTime ;
+                    pav:importedOn          "2021-12-06"^^xsd:dateTime ;
             
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property had been originally defined by VOAF metadata vocabulary. Now, it has been adopted and redefined in the MOD namespace."@en ;
