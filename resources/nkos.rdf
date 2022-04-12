@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:dc="http://purl.org/dc/terms/" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#" 
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+xmlns:dc11="http://purl.org/dc/elements/1.1/" 
+xmlns:owl="http://www.w3.org/2002/07/owl#" 
+xmlns:voaf="http://purl.org/vocommons/voaf#" 
+xmlns:skos="http://www.w3.org/2004/02/skos/core#" 
+xmlns:adms="http://www.w3.org/ns/adms#" 
+xmlns:dcat="http://www.w3.org/ns/dcat#" 
+xmlns:frbrer="http://iflastandards.info/ns/fr/frbr/frbrer/" 
+xmlns:frsad="http://iflastandards.info/ns/fr/frsad/" 
+xmlns:nkos="http://w3id.org/nkos#" 
+xmlns:prov="http://www.w3.org/ns/prov#"
+xmlns:wdrs="http://www.w3.org/2007/05/powder-s#"> 
+
+<!-- Document metadata -->
+
+  <rdf:Description rdf:about="http://w3id.org/nkos">
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dc:title xml:lang="en">Networked Knowledge Organization Systems Application Profile (NKOS AP)</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-04-03</dc:created>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-09-20</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-09-20</dc:modified>
+    <dc:creator>Marcia L. Zeng</dc:creator>
+    <dc:creator>Maja Žumer</dc:creator>
+    <dc:contributor>DCMI NKOS Task Group</dc:contributor>
+    <rdfs:comment xml:lang="en">This file specifies the set of RDF classes and properties used in NKOS AP</rdfs:comment>
+    <wdrs:describedby rdf:resource="http://wiki.dublincore.org/index.php/NKOS_Vocabularies"/>
+    <wdrs:describedby rdf:resource="http://nkos.slis.kent.edu/nkos-ap.html"/>
+  </rdf:Description>
+  
+  <!-- NKOS Object Properties -->
+  <rdf:Description rdf:about="#alignedWith">
+    <rdfs:label xml:lang="en">Aligned With</rdfs:label>
+    <rdfs:comment xml:lang="en">A related resource with which the described resource is aligned.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/nkos"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+    <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#basedOn">
+    <rdfs:label xml:lang="en">Based On</rdfs:label>
+    <rdfs:comment xml:lang="en">A resource used as the source for a derivative resource.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/nkos"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Work"/>
+    <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#sizeNote">
+    <rdfs:label xml:lang="en">Size Note</rdfs:label>
+    <rdfs:comment xml:lang="en">Number of concepts, terms, or other semantic units included in a KOS.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/nkos"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#serviceOffered">
+    <rdfs:label xml:lang="en">Service Offered</rdfs:label>
+    <rdfs:comment xml:lang="en">Services provided to users for the described resources.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/nkos"/>
+    <skos:note xml:lang="en">Example: download, extract, query, annotation.</skos:note>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Manifestation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#usedBy">
+    <rdfs:label xml:lang="en">Used By</rdfs:label>
+    <rdfs:comment xml:lang="en">Agent using the described KOS.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/nkos"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Work"/>
+    <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
+  </rdf:Description>
+    <rdf:Description rdf:about="#updateFrequency">
+    <rdfs:label xml:lang="en">Update Frequency </rdfs:label>
+    <rdfs:comment xml:lang="en">The period in which a KOS is typically updated.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/nkos"/>
+    <dc:description xml:lang="en">Suggest using DCMI Collection Description Frequency Vocabulary. (http://dublincore.org/groups/collections/frequency/) .</dc:description>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <!-- Re-used Object Properties from other schemas (with NKOS AP constrains and notes) -->
+  <rdf:Description rdf:about="http://purl.org/dc/terms/audience">
+    <rdfs:label xml:lang="en">Audience</rdfs:label>
+    <rdfs:comment xml:lang="en">A class of entity for whom the resource is intended or useful.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2001-05-21</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:modified>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:note xml:lang="en">Recommend using a controlled vocabulary.</skos:note>
+    <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#audience-003"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Manifestation"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Work"/>
+    <rdfs:range rdf:resource="http://purl.org/dc/terms/AgentClass"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#contactPoint">
+    <rdfs:label xml:lang="en">Contact</rdfs:label>
+    <rdfs:comment xml:lang="en">Links an asset to a contact point from where further information about an Asset can be obtained.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/dcat#"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Manifestation"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/created">
+    <rdfs:label xml:lang="en">Date Created</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+    <rdfs:comment xml:lang="en">Date of creation of the resource.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:modified>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+    <skos:note xml:lang="en">Core element. For the date of a manifestation, use dct:issued</skos:note>
+    <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#created-003"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
+    <rdfs:label xml:lang="en">Creator</rdfs:label>
+    <rdfs:comment xml:lang="en">An entity primarily responsible for making the resource.</rdfs:comment>
+    <dc:description xml:lang="en">Examples of a Creator include a person, an organization, or a service.</dc:description>
+    <skos:note xml:lang="en">Core element</skos:note>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-10-11</dc:modified>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/contributor"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/creator"/>
+    <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#creatorT-002"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Work"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Manifestation"/>
+    <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
+    <owl:equivalentProperty rdf:resource="http://xmlns.com/foaf/0.1/maker"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2007/05/powder-s#describedby">
+    <rdfs:label xml:lang="en">Described by </rdfs:label>
+    <rdfs:comment xml:lang="en">The relationship A 'describedby' B asserts that resource B provides a description of resource A.</rdfs:comment>
+    <dc:description xml:lang="en">There are no constraints on the format or representation of either A or B, neither are there any further constraints on either resource.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2007/05/powder-s#"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Work"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Manifestation"/>
+    <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+    <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+    <rdfs:label xml:lang="en">Description</rdfs:label>
+    <rdfs:comment xml:lang="en">An account of the resource.</rdfs:comment>
+    <dc:description xml:lang="en">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:modified>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+    <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#descriptionT-001"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Work"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Manifestation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/format">
+    <rdfs:label xml:lang="en">Format</rdfs:label>
+    <rdfs:comment xml:lang="en">The file format, physical medium, or dimensions of the resource.</rdfs:comment>
+    <dc:description xml:lang="en">Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME].</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/format"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:modified>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#formatT-001"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Manifestation"/>
+    <rdfs:range rdf:resource="http://purl.org/dc/terms/MediaTypeOrExtent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/identifier">
+    <rdfs:label xml:lang="en">Identifier</rdfs:label>
+    <rdfs:comment xml:lang="en">An unambiguous reference to the resource within a given context.</rdfs:comment>
+    <dc:description xml:lang="en">Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. </dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:modified>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
+    <skos:note xml:lang="en">Core element</skos:note>
+    <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#identifierT-001"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Work"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Manifestation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iflastandards.info/ns/fr/frbr/frbrer/P2004">
+    <rdfs:label xml:lang="en">Is embodiment of</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a manifestation to an expression that is embodied in the manifestation.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-03</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-02-01</dc:modified>
+    <skos:note xml:lang="en">Core element</skos:note>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Manifestation"/>
+    <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/isPartOf">
+    <rdfs:label xml:lang="en">Is Part Of</rdfs:label>
+    <rdfs:comment xml:lang="en">A related resource in which the described resource is physically or logically included.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:modified>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    <skos:note xml:lang="en">A related KOS, in which the described KOS is logically included. This is different from nkos:based-on relationship type. Consult KOS Relation-Type Vocabulary for examples and possible extended properties. (http://wiki.dublincore.org/index.php/NKOS_Vocabularies)</skos:note>
+    <skos:note xml:lang="en">This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.</skos:note>
+    <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#isPartOf-003"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Manifestation"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Work"/>
+    <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Manifestation"/>
+    <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+    <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iflastandards.info/ns/fr/frbr/frbrer/P2002">
+    <rdfs:label xml:lang="en">Is Realization Of</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates an expression to the work that is realized through the expression.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-13</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-02-01</dc:modified>
+    <skos:note xml:lang="en">Core element</skos:note>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+    <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
+    <rdfs:label xml:lang="en">Date Issued</rdfs:label>
+    <rdfs:comment xml:lang="en">Date of formal issuance (e.g., publication) of the resource.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:modified>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+    <skos:note xml:lang="en">Core element</skos:note>
+    <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#issued-003"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Manifestation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/language">
+    <rdfs:label xml:lang="en">Language</rdfs:label>
+    <rdfs:comment xml:lang="en">A language of the resource.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646].</dc:description>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:modified>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/language"/>
+    <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#languageT-001"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+    <rdfs:range rdf:resource="http://purl.org/dc/terms/LinguisticSystem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
+    <rdfs:label xml:lang="en">Date Modified</rdfs:label>
+    <rdfs:comment xml:lang="en">Date on which the resource was changed.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:modified>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Manifestation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#modified-003"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/publisher">
+    <rdfs:label xml:lang="en">Publisher</rdfs:label>
+    <rdfs:comment xml:lang="en">An entity responsible for making the resource available.</rdfs:comment>
+    <dc:description xml:lang="en">Examples of a Publisher include a person, an organization, or a service.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-10-11</dc:modified>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/publisher"/>
+    <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#publisherT-001"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Manifestation"/>
+    <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/relation">
+    <rdfs:label xml:lang="en">Relation</rdfs:label>
+    <rdfs:comment xml:lang="en">A related resource.</rdfs:comment>
+    <dc:description xml:lang="en">Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. </dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:modified>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+    <skos:note xml:lang="en">This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.</skos:note>
+    <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#relationT-001"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Manifestation"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Work"/>
+    <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Manifestation"/>
+    <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+    <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/rights">
+    <rdfs:label xml:lang="en">Rights</rdfs:label>
+    <rdfs:comment xml:lang="en">Information about rights held in and over the resource.</rdfs:comment>
+    <dc:description xml:lang="en">Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:modified>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/rights"/>
+    <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#rightsT-001"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Manifestation"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Work"/>
+    <rdfs:range rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/adms#sample">
+    <rdfs:label xml:lang="en">Sample</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to a sample of an Asset (which is itself an Asset).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/adms#"/>
+    <skos:note xml:lang="en">A link to a fragment of the resource.</skos:note>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+    <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/subject">
+    <rdfs:label xml:lang="en">Subject</rdfs:label>
+    <rdfs:comment xml:lang="en">The topic of the resource.</rdfs:comment>
+    <dc:description xml:lang="en">Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-14</dc:modified><rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/subject"/>
+    <skos:note xml:lang="en">Core element</skos:note>  
+    <skos:note xml:lang="en">This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.</skos:note>
+    <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#subjectT-002"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Work"/>
+    <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Thema"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+    <rdfs:label xml:lang="en">Title</rdfs:label>
+    <rdfs:comment xml:lang="en">A name given to the resource.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-10-11</dc:modified>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+    <skos:note xml:lang="en">Core element</skos:note>
+    <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#titleT-002"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Manifestation"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Work"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/type">
+    <rdfs:label xml:lang="en">Type</rdfs:label>
+    <rdfs:comment xml:lang="en">The nature or genre of the resource.</rdfs:comment>
+    <dc:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:modified>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type"/>
+    <skos:note>Type of knowledge organization system or structure. Recommend use of KOS Types Vocabulary. Core element.</skos:note>
+    <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#typeT-001"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Work"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+    
+	<rdf:Description rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom">
+    <rdfs:label xml:lang="en">Derived From</rdfs:label>
+    <rdfs:comment xml:lang="en">A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity.</rdfs:comment>    
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:note>Derived-From covers relationships between resources such as translation-of, abridgement-of, extension-of, and version-of. It is different from part-of relationship type.  Consult KOS Relation-Type Vocabulary for examples and possible extended properties. http://wiki.dublincore.org/index.php/NKOS_Vocabularies</skos:note>    
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+    <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+  </rdf:Description>
+  
+  
+  <!-- Re-used Classes -->
+  <rdf:Description rdf:about="http://purl.org/dc/terms/Agent">
+    <rdfs:label xml:lang="en">Agent</rdfs:label>
+    <rdfs:comment xml:lang="en">A resource that acts or has the power to act.</rdfs:comment>
+    <dc:description xml:lang="en">Examples of Agent include person, organization, and software agent.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdf:type rdf:resource="http://purl.org/dc/terms/AgentClass"/>
+    <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#Agent-001"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/AgentClass">
+    <rdfs:label xml:lang="en">Agent Class</rdfs:label>
+    <rdfs:comment xml:lang="en">A group of agents.</rdfs:comment>
+    <dc:description xml:lang="en">Examples of Agent Class include groups seen as classes, such as students, women, charities, lecturers.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-14</dc:modified>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#AgentClass-003"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/LinguisticSystem">
+    <rdfs:label xml:lang="en">Linguistic System</rdfs:label>
+    <rdfs:comment xml:lang="en">A system of signs, symbols, sounds, gestures, or rules used in communication.</rdfs:comment>
+    <dc:description xml:lang="en">Examples include written, spoken, sign, and computer languages.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#LinguisticSystem-001"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/MediaType">
+    <rdfs:label xml:lang="en">Media Type</rdfs:label>
+    <rdfs:comment xml:lang="en">A file format or physical medium.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/MediaTypeOrExtent"/>
+    <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#MediaType-001"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/RightsStatement">
+    <rdfs:label xml:lang="en">Rights Statement</rdfs:label>
+    <rdfs:comment xml:lang="en">A statement about the intellectual property rights (IPR) held in or over a Resource, a legal document giving official permission to do something with a resource, or a statement about access rights.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#RightsStatement-001"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/adms#Asset">
+    <rdfs:label xml:lang="en">Asset</rdfs:label>
+    <rdfs:comment xml:lang="en">An abstract entity that reflects the intellectual content of the asset and represents those characteristics of the asset that are independent of its physical embodiment.</rdfs:comment>
+    <dc:description xml:lang="en">Assets can be versioned. Every time the intellectual content of an asset changes, the result is considered to be a new asset that can be linked to previous and next versions of the Asset.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/adms#"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:note xml:lang="en">This abstract entity combines the FRBR entities work (a distinct intellectual or artistic creation) and expression (the intellectual or artistic realization of a work) [ FRBR ].</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iflastandards.info/ns/fr/frbr/frbrer/C1001">
+    <rdfs:label xml:lang="en">Work</rdfs:label>
+    <rdfs:comment xml:lang="en">A distinct intellectual or artistic creation.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-11</dc:issued>
+    <skos:note xml:lang="en">Usually a KOS as a whole is a work, e.g., ASIS&amp;T Thesaurus.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iflastandards.info/ns/fr/frsad/C1001">
+    <rdfs:label xml:lang="en">Thema</rdfs:label>
+    <rdfs:comment xml:lang="en">Any entity used as a subject of a work.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://iflastandards.info/ns/fr/frsad/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-08-06</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-07-13</dc:modified>
+    <skos:note xml:lang="en">A subject domain to which the KOS belongs. It can be a broad subject or any number of narrower subjects. Suggest to use a controlled vocabulary for those subjects.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iflastandards.info/ns/fr/frbr/frbrer/C1002">
+    <rdfs:label xml:lang="en">Expression</rdfs:label>
+    <rdfs:comment xml:lang="en">The intellectual or artistic realization of a work in the form of alpha-numeric, musical, or choreographic notation, sound, image, object, movement, etc., or any combination of such forms.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-11</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-01-05</dc:modified>
+    <skos:note xml:lang="en">A particular version of the KOS, such as in a particular language or an abridgment.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iflastandards.info/ns/fr/frbr/frbrer/C1003">
+    <rdfs:label xml:lang="en">Manifestation</rdfs:label>
+    <rdfs:comment xml:lang="en">The physical embodiment of an expression of a work.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-11</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-04-11</dc:modified>
+    <skos:note xml:lang="en">Examples are: the printed edition of a thesaurus' 2010 English version, the SKOS Linked Data representation of the same version.</skos:note>
+  </rdf:Description>
+</rdf:RDF>

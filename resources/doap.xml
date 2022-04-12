@@ -1,0 +1,839 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:doap="http://usefulinc.com/ns/doap#"
+>
+
+<!-- Copyright Â© 2004-2009 Edd Dumbill <edd@usefulinc.com>
+
+	$LastChangedDate$
+	$LastChangedRevision$
+	$LastChangedBy$
+
+-->
+
+<!-- about this schema -->
+
+<owl:Ontology rdf:about="http://usefulinc.com/ns/doap#">
+	<owl:imports rdf:resource="http://xmlns.com/foaf/0.1/index.rdf" />
+
+	<dc:title>Description of a Project (DOAP) vocabulary</dc:title>
+	<dc:description>The Description of a Project (DOAP) vocabulary, described using W3C RDF Schema and the Web Ontology Language.</dc:description>
+	<dc:description xml:lang="fr">Le vocabulaire Description Of A Project (DOAP, Description D'Un Projet),
+		dÃ©crit en utilisant RDF Schema du W3C et OWL.</dc:description>
+	<dc:description xml:lang="es">El vocabulario Description of a Project (DOAP, DescripciÃ³n de un Proyecto), descrito usando RDF Schema de W3C
+		y Web Ontology Language.</dc:description>
+	<dc:description xml:lang="de">Das Vokabular "Description of a Project (DOAP)", beschrieben durch W3C RDF Schema and the Web Ontology Language.</dc:description>
+        <dc:description xml:lang="cs">SlovnÃ­k Description of a Project (DOAP, Popis projektu), popsanÃ½ pouÅ¾itÃ­m W3C RDF Schema a Web Ontology Language.</dc:description>
+	<dc:description xml:lang="ja">ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®èª¬æ˜Žã®èªžå½™(DOAP)ã€‚W3C RDF Schemaã¨Web Ontology Languageã§ä½œã‚‰ã‚ŒãŸã€‚</dc:description>
+	<dc:creator>Edd Dumbill</dc:creator>
+	<dc:format>application/rdf+xml</dc:format>
+	<dc:rights>Copyright Â© 2004-2009 Edd Dumbill</dc:rights>
+
+	<foaf:maker>
+		<foaf:Person>
+			<foaf:name>Edd Dumbill</foaf:name>
+			<foaf:mbox rdf:resource="mailto:edd@usefulinc.com" />
+		</foaf:Person>
+	</foaf:maker>
+
+</owl:Ontology>
+
+<!-- Classes are listed first -->
+
+<rdfs:Class rdf:about="http://usefulinc.com/ns/doap#Project">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">Project</rdfs:label>
+	<rdfs:label xml:lang="fr">Projet</rdfs:label>
+	<rdfs:label xml:lang="es">Proyecto</rdfs:label>
+	<rdfs:label xml:lang="de">Prijekt</rdfs:label>
+        <rdfs:label xml:lang="cs">Projekt</rdfs:label>
+        <rdfs:label xml:lang="ja">ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆ</rdfs:label>
+	<rdfs:comment xml:lang="en">A project.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">Un projet.</rdfs:comment>
+	<rdfs:comment xml:lang="es">Un proyecto.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Ein Projekt.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">Projekt.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ãƒ—ãƒ­ã‚°ãƒ©ãƒŸãƒ³ã‚°ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆ</rdfs:comment>
+	<rdfs:subClassOf rdf:resource="http://xmlns.com/wordnet/1.6/Project" />
+	<rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Project" />
+</rdfs:Class>
+
+<rdfs:Class rdf:about="http://usefulinc.com/ns/doap#Version">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">Version</rdfs:label>
+	<rdfs:label xml:lang="fr">Version</rdfs:label>
+	<rdfs:label xml:lang="es">VersiÃ³n</rdfs:label>
+	<rdfs:label xml:lang="de">Version</rdfs:label>
+        <rdfs:label xml:lang="cs">Verze</rdfs:label>
+	<rdfs:label xml:lang="ja">ãƒãƒ¼ã‚·ãƒ§ãƒ³</rdfs:label>
+	<rdfs:comment xml:lang="en">Version information of a project release.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">DÃ©tails sur une version d'une realease d'un projet.</rdfs:comment>
+	<rdfs:comment xml:lang="es">InformaciÃ³n sobre la versiÃ³n de un release del proyecto.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Versionsinformation eines Projekt Releases.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">Informace o uvolnÄ›nÃ© verzi projektu.</rdfs:comment>
+	<rdfs:comment xml:lang="jp">ãƒªãƒªãƒ¼ã‚¹ã®ãƒãƒ¼ã‚·ãƒ§ãƒ³æƒ…å ±</rdfs:comment>
+</rdfs:Class>
+
+<rdfs:Class rdf:about="http://usefulinc.com/ns/doap#Specification">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">Specification</rdfs:label>
+	<rdfs:label xml:lang="ja">æ˜Žç´°æ›¸ã˜</rdfs:label>
+	<rdfs:comment xml:lang="en">A specification of a system's aspects, technical or otherwise.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã‚ã‚‹ã‚·ã‚¹ãƒ†ãƒ ã®è©³ã—ãæ›¸ã„ãŸæ˜Žç´°æ›¸ã€‚å¤šåˆ†æŠ€è¡“çš„ãªã‚‚ã®ã€‚</rdfs:comment>	
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+</rdfs:Class>
+
+<rdfs:Class rdf:about="http://usefulinc.com/ns/doap#Repository">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">Repository</rdfs:label>
+	<rdfs:label xml:lang="fr">DÃ©pÃ´t</rdfs:label>
+	<rdfs:label xml:lang="es">Repositorio</rdfs:label>
+	<rdfs:label xml:lang="de">Repository</rdfs:label>
+	<rdfs:label xml:lang="cs">ÃšloÅ¾iÅ¡tÄ›</rdfs:label>
+	<rdfs:label xml:lang="ja">ãƒªãƒã‚¸ãƒˆãƒª</rdfs:label>
+	<rdfs:comment xml:lang="en">Source code repository.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">DÃ©pÃ´t du code source.</rdfs:comment>
+	<rdfs:comment xml:lang="es">Repositorio del cÃ³digo fuente.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Quellcode-Versionierungssystem.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">ÃšloÅ¾iÅ¡tÄ› zdrojovÃ½ch kÃ³dÅ¯.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã®ãƒªãƒã‚¸ãƒˆãƒª</rdfs:comment>
+</rdfs:Class>
+
+<rdfs:Class rdf:about="http://usefulinc.com/ns/doap#SVNRepository">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">Subversion Repository</rdfs:label>
+	<rdfs:label xml:lang="fr">DÃ©pÃ´t Subversion</rdfs:label>
+	<rdfs:label xml:lang="es">Repositorio Subversion</rdfs:label>
+	<rdfs:label xml:lang="de">Subversion Repository</rdfs:label>
+        <rdfs:label xml:lang="cs">ÃšloÅ¾iÅ¡tÄ› Subversion</rdfs:label>
+	<rdfs:label xml:lang="ja">Subversionã®ãƒªãƒã‚¸ãƒˆãƒª</rdfs:label>
+	<rdfs:comment xml:lang="en">Subversion source code repository.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">DÃ©pÃ´t Subversion du code source.</rdfs:comment>
+	<rdfs:comment xml:lang="es">Repositorio Subversion del cÃ³digo fuente.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Subversion Quellcode-Versionierungssystem.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">ÃšloÅ¾iÅ¡tÄ› zdrojovÃ½ch kÃ³dÅ¯ Subversion.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã®Subversionã®ãƒªãƒã‚¸ãƒˆãƒª</rdfs:comment>
+	<rdfs:subClassOf rdf:resource="http://usefulinc.com/ns/doap#Repository" />
+</rdfs:Class>
+
+<rdfs:Class rdf:about="http://usefulinc.com/ns/doap#BKRepository">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">BitKeeper Repository</rdfs:label>
+	<rdfs:label xml:lang="fr">DÃ©pÃ´t BitKeeper</rdfs:label>
+	<rdfs:label xml:lang="es">Repositorio BitKeeper</rdfs:label>
+	<rdfs:label xml:lang="de">BitKeeper Repository</rdfs:label>
+        <rdfs:label xml:lang="cs">ÃšloÅ¾iÅ¡tÄ› BitKeeper</rdfs:label>
+	<rdfs:label xml:lang="ja">BitKeeperã®ãƒªãƒã‚¸ãƒˆãƒª</rdfs:label>
+	<rdfs:comment xml:lang="en">BitKeeper source code repository.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">DÃ©pÃ´t BitKeeper du code source.</rdfs:comment>
+	<rdfs:comment xml:lang="es">Repositorio BitKeeper del cÃ³digo fuente.</rdfs:comment>
+	<rdfs:comment xml:lang="de">BitKeeper Quellcode-Versionierungssystem.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">ÃšloÅ¾iÅ¡tÄ› zdrojovÃ½ch kÃ³dÅ¯ BitKeeper.</rdfs:comment>
+<rdfs:comment xml:lang="ja">ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã®BitKeeperã®ãƒªãƒã‚¸ãƒˆãƒª</rdfs:comment>
+	<rdfs:subClassOf rdf:resource="http://usefulinc.com/ns/doap#Repository" />
+</rdfs:Class>
+
+<rdfs:Class rdf:about="http://usefulinc.com/ns/doap#CVSRepository">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">CVS Repository</rdfs:label>
+	<rdfs:label xml:lang="fr">DÃ©pÃ´t CVS</rdfs:label>
+	<rdfs:label xml:lang="es">Repositorio CVS</rdfs:label>
+	<rdfs:label xml:lang="de">CVS Repository</rdfs:label>
+        <rdfs:label xml:lang="cs">ÃšloÅ¾iÅ¡tÄ› CVS</rdfs:label>
+	<rdfs:label xml:lang="ja">CVSã®ãƒªãƒã‚¸ãƒˆãƒª</rdfs:label>
+	<rdfs:comment xml:lang="en">CVS source code repository.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">DÃ©pÃ´t CVS du code source.</rdfs:comment>
+	<rdfs:comment xml:lang="es">Repositorio CVS del cÃ³digo fuente.</rdfs:comment>
+	<rdfs:comment xml:lang="de">CVS Quellcode-Versionierungssystem.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">ÃšloÅ¾iÅ¡tÄ› zdrojovÃ½ch kÃ³dÅ¯ CVS.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã®CVSã®ãƒªãƒã‚¸ãƒˆãƒª</rdfs:comment>
+	<rdfs:subClassOf rdf:resource="http://usefulinc.com/ns/doap#Repository" />
+</rdfs:Class>
+
+<rdfs:Class rdf:about="http://usefulinc.com/ns/doap#ArchRepository">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">GNU Arch repository</rdfs:label>
+	<rdfs:label xml:lang="fr">DÃ©pÃ´t GNU Arch</rdfs:label>
+	<rdfs:label xml:lang="es">Repositorio GNU Arch</rdfs:label>
+	<rdfs:label xml:lang="de">GNU Arch repository</rdfs:label>
+        <rdfs:label xml:lang="cs">ÃšloÅ¾iÅ¡tÄ› GNU Arch</rdfs:label>
+	<rdfs:label xml:lang="ja">GNU Archã®ãƒªãƒã‚¸ãƒˆãƒª</rdfs:label>
+	<rdfs:comment xml:lang="en">GNU Arch source code repository.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">DÃ©pÃ´t GNU Arch du code source.</rdfs:comment>
+	<rdfs:comment xml:lang="es">Repositorio GNU Arch del cÃ³digo fuente.</rdfs:comment>
+	<rdfs:comment xml:lang="de">GNU Arch Quellcode-Versionierungssystem.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">ÃšloÅ¾iÅ¡tÄ› zdrojovÃ½ch kÃ³dÅ¯ GNU Arch.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã®GNU Archã®ãƒªãƒã‚¸ãƒˆãƒª</rdfs:comment>
+	<rdfs:subClassOf rdf:resource="http://usefulinc.com/ns/doap#Repository" />
+</rdfs:Class>
+
+<rdfs:Class rdf:about="http://usefulinc.com/ns/doap#BazaarBranch">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">Bazaar Branch</rdfs:label>
+	<rdfs:label xml:lang="ja">Bazzarã®ãƒªãƒã‚¸ãƒˆãƒª</rdfs:label>
+	<rdfs:comment xml:lang="en">Bazaar source code branch.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã®Bazzarã®ãƒªãƒã‚¸ãƒˆãƒª</rdfs:comment>	
+	<rdfs:subClassOf rdf:resource="http://usefulinc.com/ns/doap#Repository" />
+</rdfs:Class>
+
+<rdfs:Class rdf:about="http://usefulinc.com/ns/doap#GitRepository">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">Git Repository</rdfs:label>
+	<rdfs:label xml:lang="fr">DÃ©pÃ´t Git</rdfs:label>
+	<rdfs:label xml:lang="es">Repositorio Git</rdfs:label>
+	<rdfs:label xml:lang="de">Git repository</rdfs:label>
+        <rdfs:label xml:lang="cs">ÃšloÅ¾iÅ¡tÄ› Git</rdfs:label>
+	<rdfs:label xml:lang="ja">Gitã®ãƒªãƒã‚¸ãƒˆãƒª</rdfs:label>
+	<rdfs:comment xml:lang="en">Git source code repository.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">DÃ©pÃ´t Git du code source.</rdfs:comment>
+	<rdfs:comment xml:lang="es">Repositorio Git del cÃ³digo fuente.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Git Quellcode-Versionierungssystem.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">ÃšloÅ¾iÅ¡tÄ› zdrojovÃ½ch kÃ³dÅ¯ Git.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã®Gitã®ãƒªãƒã‚¸ãƒˆãƒª</rdfs:comment>
+	<rdfs:subClassOf rdf:resource="http://usefulinc.com/ns/doap#Repository" />
+</rdfs:Class>
+
+<rdfs:Class rdf:about="http://usefulinc.com/ns/doap#HgRepository">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">Mercurial Repository</rdfs:label>
+	<rdfs:label xml:lang="ja">Mercurialã®ãƒªãƒã‚¸ãƒˆãƒª</rdfs:label>
+	<rdfs:comment xml:lang="en">Mercurial source code repository.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã®Mercurialã®ãƒªãƒã‚¸ãƒˆãƒª</rdfs:comment>	
+	<rdfs:subClassOf rdf:resource="http://usefulinc.com/ns/doap#Repository" />
+</rdfs:Class>
+
+<rdfs:Class rdf:about="http://usefulinc.com/ns/doap#DarcsRepository">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">darcs Repository</rdfs:label>
+	<rdfs:label xml:lang="fr">DÃ©pÃ´t darcs</rdfs:label>
+	<rdfs:label xml:lang="es">Repositorio darcs</rdfs:label>
+	<rdfs:label xml:lang="ja">darcsã®ãƒªãƒã‚¸ãƒˆãƒª</rdfs:label>
+	<rdfs:comment xml:lang="en">darcs source code repository.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">DÃ©pÃ´t darcs du code source.</rdfs:comment>
+	<rdfs:comment xml:lang="es">Repositorio darcs del cÃ³digo fuente.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã®darcsã®ãƒªãƒã‚¸ãƒˆãƒª</rdfs:comment>	
+	<rdfs:subClassOf rdf:resource="http://usefulinc.com/ns/doap#Repository" />
+</rdfs:Class>
+
+
+
+<!-- Properties -->
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#name">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">name</rdfs:label>
+	<rdfs:label xml:lang="fr">nom</rdfs:label>
+	<rdfs:label xml:lang="es">nombre</rdfs:label>
+	<rdfs:label xml:lang="de">Name</rdfs:label>
+        <rdfs:label xml:lang="cs">jmÃ©no</rdfs:label>
+	<rdfs:label xml:lang="ja">åå‰</rdfs:label>
+	<rdfs:comment xml:lang="en">A name of something.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">Le nom de quelque chose.</rdfs:comment>
+	<rdfs:comment xml:lang="es">El nombre de algo.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Der Name von Irgendwas</rdfs:comment>
+        <rdfs:comment xml:lang="cs">JmÃ©no nÄ›Äeho.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ä½•ã‹ã®åå‰</rdfs:comment>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#homepage">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">homepage</rdfs:label>
+	<rdfs:label xml:lang="fr">page web</rdfs:label>
+	<rdfs:label xml:lang="es">pÃ¡gina web</rdfs:label>
+	<rdfs:label xml:lang="de">Homepage</rdfs:label>
+        <rdfs:label xml:lang="cs">domovskÃ¡ strÃ¡nka</rdfs:label>
+	<rdfs:label xml:lang="ja">ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸</rdfs:label>
+	<rdfs:comment xml:lang="en">URL of a project's homepage,
+		associated with exactly one project.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">L'URL de la page web d'un projet,
+		associÃ©e avec un unique projet.</rdfs:comment>
+	<rdfs:comment xml:lang="es">El URL de la pÃ¡gina de un proyecto,
+		asociada con exactamente un proyecto.</rdfs:comment>
+	<rdfs:comment xml:lang="de">URL der Projekt-Homepage,
+		verbunden mit genau einem Projekt.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">URL adresa domovskÃ© strÃ¡nky projektu asociovanÃ© s prÃ¡vÄ› jednÃ­m projektem.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã“ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸ã®URLã€‚ã“ã®ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸ã¯ä»–ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸ã˜ã‚ƒãªã„ã“ã¨ã€‚</rdfs:comment>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty" />
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project" />
+	<rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/homepage" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#old-homepage">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">old homepage</rdfs:label>
+	<rdfs:label xml:lang="fr">ancienne page web</rdfs:label>
+	<rdfs:label xml:lang="es">pÃ¡gina web antigua</rdfs:label>
+	<rdfs:label xml:lang="de">Alte Homepage</rdfs:label>
+        <rdfs:label xml:lang="cs">starÃ¡ domovskÃ¡ strÃ¡nka</rdfs:label>
+        <rdfs:label xml:lang="ja">å‰ã®ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸</rdfs:label>	
+	<rdfs:comment xml:lang="en">URL of a project's past homepage,
+		associated with exactly one project.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">L'URL d'une ancienne page web d'un
+		projet, associÃ©e avec un unique projet.</rdfs:comment>
+	<rdfs:comment xml:lang="es">El URL de la antigua pÃ¡gina de un proyecto,
+		asociada con exactamente un proyecto.</rdfs:comment>
+	<rdfs:comment xml:lang="de">URL der letzten Projekt-Homepage,
+		verbunden mit genau einem Projekt.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">URL adresa pÅ™edeÅ¡lÃ© domovskÃ© strÃ¡nky projektu asociovanÃ© s prÃ¡vÄ› jednÃ­m projektem.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã“ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®å‰ã®ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸ã€‚ä»–ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®å‰ã®ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸ã˜ã‚ƒãªã„ã“ã¨ã€‚</rdfs:comment>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty" />
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project" />
+	<rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/homepage" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#created">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">created</rdfs:label>
+	<rdfs:label xml:lang="fr">crÃ©Ã©</rdfs:label>
+	<rdfs:label xml:lang="es">creado</rdfs:label>
+	<rdfs:label xml:lang="de">erstellt</rdfs:label>
+        <rdfs:label xml:lang="cs">vytvoÅ™eno</rdfs:label>
+	<rdfs:label xml:lang="ja">ä½œæˆæ—¥ä»˜</rdfs:label>
+	<rdfs:comment xml:lang="en">Date when something was created, in YYYY-MM-DD form. e.g. 2004-04-05</rdfs:comment>
+	<rdfs:comment xml:lang="fr">Date Ã  laquelle a Ã©tÃ© crÃ©Ã© quelque chose, au format AAAA-MM-JJ (par ex. 2004-04-05)</rdfs:comment>
+	<rdfs:comment xml:lang="es">Fecha en la que algo fue creado, en formato AAAA-MM-DD. e.g. 2004-04-05</rdfs:comment>
+	<rdfs:comment xml:lang="de">Erstellungsdatum von Irgendwas, angegeben im YYYY-MM-DD Format, z.B. 2004-04-05.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">Datum, kdy bylo nÄ›co vytvoÅ™eno ve formÃ¡tu RRRR-MM-DD, napÅ™. 2004-04-05</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ä½•ã‹ãŒä½œæˆã•ã‚ŒãŸæ—¥ä»˜ã€AAAA-MM-JJã®åž‹ã€ä¾‹ãˆã°2004-04-05ã€‚</rdfs:comment>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#shortdesc">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">short description</rdfs:label>
+	<rdfs:label xml:lang="fr">description courte</rdfs:label>
+	<rdfs:label xml:lang="es">descripciÃ³n corta</rdfs:label>
+	<rdfs:label xml:lang="de">Kurzbeschreibung</rdfs:label>
+        <rdfs:label xml:lang="cs">krÃ¡tkÃ½ popis</rdfs:label>
+	<rdfs:label xml:lang="ja">ç°¡å˜ãªèª¬æ˜Ž</rdfs:label>
+	<rdfs:comment xml:lang="en">Short (8 or 9 words) plain text description of a project.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">Texte descriptif concis (8 ou 9 mots) d'un projet.</rdfs:comment>
+	<rdfs:comment xml:lang="es">DescripciÃ³n corta (8 o 9 palabras) en texto plano de un proyecto.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Kurzbeschreibung (8 oder 9 WÃ¶rter) eines Projects als einfacher Text.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">KrÃ¡tkÃ½ (8 nebo 9 slov) ÄistÄ› textovÃ½ popis projektu.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">æ—¥æœ¬èªžã®äºŒåæ–‡å­—ãã‚‰ã„ã®èª¬æ˜Ž</rdfs:comment>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#description">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">description</rdfs:label>
+	<rdfs:label xml:lang="fr">description</rdfs:label>
+	<rdfs:label xml:lang="es">descripciÃ³n</rdfs:label>
+	<rdfs:label xml:lang="de">Beschreibung</rdfs:label>
+        <rdfs:label xml:lang="cs">popis</rdfs:label>
+	<rdfs:label xml:lang="ja">èª¬æ˜Ž</rdfs:label>
+	<rdfs:comment xml:lang="en">Plain text description of a project, of 2-4 sentences in length.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">Texte descriptif d'un projet, long de 2 Ã  4 phrases.</rdfs:comment>
+	<rdfs:comment xml:lang="es">DescripciÃ³n en texto plano de un proyecto, de 2 a 4 enunciados de longitud.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Beschreibung eines Projekts als einfacher Text mit der LÃ¤nge von 2 bis 4 SÃ¤tzen.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">ÄŒistÄ› textovÃ½, 2 aÅ¾ 4 vÄ›ty dlouhÃ½ popis projektu.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®æ–‡ã®èª¬æ˜Žã€2ã‹ã‚‰4ã¾ã§ã®è¡Œæ•°ã€‚</rdfs:comment>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#release">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">release</rdfs:label>
+	<rdfs:label xml:lang="fr">release</rdfs:label>
+	<rdfs:label xml:lang="es">release</rdfs:label>
+	<rdfs:label xml:lang="de">Release</rdfs:label>
+        <rdfs:label xml:lang="cs">release</rdfs:label>
+	<rdfs:label xml:lang="ja">ãƒªãƒªãƒ¼ã‚¹</rdfs:label>
+	<rdfs:comment xml:lang="en">A project release.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">Une release (rÃ©vision) d'un projet.</rdfs:comment>
+	<rdfs:comment xml:lang="es">Un release (versiÃ³n) de un proyecto.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Ein Release (Version) eines Projekts.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">Relase (verze) projektu.</rdfs:comment>
+        <rdfs:comment xml:lang="ja">ã“ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®ãƒªãƒªãƒ¼ã‚¹</rdfs:comment>
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project" />
+	<rdfs:range rdf:resource="http://usefulinc.com/ns/doap#Version" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#mailing-list">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">mailing list</rdfs:label>
+	<rdfs:label xml:lang="fr">liste de diffusion</rdfs:label>
+	<rdfs:label xml:lang="es">lista de correo</rdfs:label>
+	<rdfs:label xml:lang="de">Mailing Liste</rdfs:label>
+        <rdfs:label xml:lang="cs">eâ€“mailovÃ¡ diskuse</rdfs:label>
+	<rdfs:label xml:lang="ja">ãƒ¡ãƒ¼ãƒªãƒ³ã‚°ãƒªã‚¹ãƒˆ</rdfs:label>
+	<rdfs:comment xml:lang="en">Mailing list home page or email address.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">Page web de la liste de diffusion, ou adresse de courriel.</rdfs:comment>
+	<rdfs:comment xml:lang="es">PÃ¡gina web de la lista de correo o direcciÃ³n de correo.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Homepage der Mailing Liste oder E-Mail Adresse.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">DomovskÃ¡ strÃ¡nka nebo eâ€“mailovÃ¡ adresa eâ€“mailovÃ© diskuse.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ãƒ¡ãƒ¼ãƒªãƒ³ã‚°ãƒªã‚¹ãƒˆã®ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸ã‚„ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹</rdfs:comment>
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#category">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">category</rdfs:label>
+	<rdfs:label xml:lang="fr">catÃ©gorie</rdfs:label>
+	<rdfs:label xml:lang="es">categorÃ­a</rdfs:label>
+	<rdfs:label xml:lang="de">Kategorie</rdfs:label>
+        <rdfs:label xml:lang="cs">kategorie</rdfs:label>
+	<rdfs:label xml:lang="ja">åˆ†é¡ž</rdfs:label>
+	<rdfs:comment xml:lang="en">A category of project.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">Une catÃ©gorie de projet.</rdfs:comment>
+	<rdfs:comment xml:lang="es">Una categorÃ­a de proyecto.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Eine Kategorie eines Projektes.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">Kategorie projektu.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã“ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®åˆ†é¡žã€‚</rdfs:comment>
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project" />
+</rdf:Property>
+
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#license">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">license</rdfs:label>
+	<rdfs:label xml:lang="fr">licence</rdfs:label>
+	<rdfs:label xml:lang="es">licencia</rdfs:label>
+	<rdfs:label xml:lang="de">Lizenz</rdfs:label>
+        <rdfs:label xml:lang="cs">licence</rdfs:label>
+	<rdfs:label xml:lang="ja">ãƒ©ã‚¤ã‚»ãƒ³ã‚¹</rdfs:label>
+	<rdfs:comment xml:lang="en">The URI of an RDF description of the license the software is distributed under.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">L'URI d'une description RDF de la licence sous laquelle le programme est distribuÃ©.</rdfs:comment>
+	<rdfs:comment xml:lang="es">El URI de una descripciÃ³n RDF de la licencia bajo la cuÃ¡l se distribuye el software.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Die URI einer RDF-Beschreibung einer Lizenz unter der die Software herausgegeben wird.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">URI adresa RDF popisu licence, pod kterou je software distribuovÃ¡n.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã“ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®æ•£å¸ƒãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã®RDFèª¬æ˜Žã®URI</rdfs:comment>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#repository">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">repository</rdfs:label>
+	<rdfs:label xml:lang="fr">dÃ©pÃ´t</rdfs:label>
+	<rdfs:label xml:lang="es">repositorio</rdfs:label>
+	<rdfs:label xml:lang="de">Repository</rdfs:label>
+        <rdfs:label xml:lang="cs">ÃºloÅ¾iÅ¡tÄ›</rdfs:label>
+	<rdfs:label xml:lang="ja">ãƒªãƒã‚¸ãƒˆãƒª</rdfs:label>
+	<rdfs:comment xml:lang="en">Source code repository.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">DÃ©pÃ´t du code source.</rdfs:comment>
+	<rdfs:comment xml:lang="es">Repositorio del cÃ³digo fuente.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Quellcode-Versionierungssystem.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">ÃšloÅ¾iÅ¡tÄ› zdrojovÃ½ch kÃ³dÅ¯.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã“ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã®ãƒªãƒã‚¸ãƒˆãƒª</rdfs:comment>
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project" />
+	<rdfs:range rdf:resource="http://usefulinc.com/ns/doap#Repository" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#anon-root">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">anonymous root</rdfs:label>
+	<rdfs:label xml:lang="fr">racine anonyme</rdfs:label>
+	<rdfs:label xml:lang="es">raÃ­z anÃ³nima</rdfs:label>
+	<rdfs:label xml:lang="de">Anonymes Root</rdfs:label>
+        <rdfs:label xml:lang="cs">anonymnÃ­ koÅ™en</rdfs:label>
+	<rdfs:label xml:lang="ja">åŒ¿åãƒ«ãƒ¼ãƒˆ</rdfs:label>
+	<rdfs:comment xml:lang="en">Repository for anonymous access.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">DÃ©pÃ´t pour accÃ¨s anonyme.</rdfs:comment>
+	<rdfs:comment xml:lang="es">Repositorio para acceso anÃ³nimo.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Repository fÃ¼r anonymen Zugriff</rdfs:comment>
+        <rdfs:comment xml:lang="cs">ÃšloÅ¾iÅ¡tÄ› pro anonymnÃ­ pÅ™Ã­stup.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">åŒ¿åã§ã‚¢ã‚¯ã‚»ã‚¹ã§ãã‚‹ãƒ‘ã‚¹</rdfs:comment>
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Repository" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#browse">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">browse</rdfs:label>
+	<rdfs:label xml:lang="fr">visualiser</rdfs:label>
+	<rdfs:label xml:lang="es">navegar</rdfs:label>
+	<rdfs:label xml:lang="de">browse</rdfs:label>
+        <rdfs:label xml:lang="cs">prohlÃ­Å¾eÄ</rdfs:label>
+	<rdfs:label xml:lang="ja">ã‚¦ã‚§ãƒ–ã®ãƒ¦ãƒ¼ã‚¶ã‚¤ãƒ³ã‚¿ãƒ•ã‚§ãƒ¼ã‚¹</rdfs:label>
+	<rdfs:comment xml:lang="en">Web browser interface to repository.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">Interface web au dÃ©pÃ´t.</rdfs:comment>
+	<rdfs:comment xml:lang="es">Interface web del repositorio.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Web-Browser Interface fÃ¼r das Repository.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">WebovÃ© rozhranÃ­ pro prohlÃ­Å¾enÃ­ ÃºloÅ¾iÅ¡tÄ›.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã“ã®ãƒªãƒã‚¸ãƒˆãƒªã®ã‚¦ã‚§ãƒ–ã®ã‚¦ã‚§ãƒ–ã®ãƒ¦ãƒ¼ã‚¶ã‚¤ãƒ³ã‚¿ãƒ•ã‚§ãƒ¼ã‚¹</rdfs:comment>
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Repository" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#module">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">module</rdfs:label>
+	<rdfs:label xml:lang="fr">module</rdfs:label>
+	<rdfs:label xml:lang="es">mÃ³dulo</rdfs:label>
+	<rdfs:label xml:lang="de">Modul</rdfs:label>
+        <rdfs:label xml:lang="cs">modul</rdfs:label>
+	<rdfs:label xml:lang="ja">ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«åå‰</rdfs:label>
+	<rdfs:comment xml:lang="en">Module name of a repository.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">Nom du module d'un dÃ©pÃ´t.</rdfs:comment>
+	<rdfs:comment xml:lang="es">Nombre del mÃ³dulo de un repositorio.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Modul-Name eines Subversion.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã“ã®ãƒªãƒã‚¸ãƒˆãƒªã®ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«åå‰</rdfs:comment>
+    <rdfs:comment xml:lang="cs">JmÃ©no modulu v ÃºloÅ¾iÅ¡ti.</rdfs:comment>
+	<!-- only applies to repositories with a two-part naming convention -->
+	<rdfs:domain>
+	  <owl:Class>
+		<owl:unionOf rdf:parseType="Collection">
+		  <owl:Class rdf:about="http://usefulinc.com/ns/doap#CVSRepository" />
+		  <owl:Class rdf:about="http://usefulinc.com/ns/doap#ArchRepository" />
+		  <owl:Class rdf:about="http://usefulinc.com/ns/doap#BKRepository" />
+		</owl:unionOf>
+	  </owl:Class>
+	</rdfs:domain>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#location">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">repository location</rdfs:label>
+	<rdfs:label xml:lang="fr">emplacement du dÃ©pÃ´t</rdfs:label>
+	<rdfs:label xml:lang="es">lugar del respositorio</rdfs:label>
+	<rdfs:label xml:lang="de">Repository Lokation</rdfs:label>
+        <rdfs:label xml:lang="cs">umÃ­stÄ›nÃ­ ÃºloÅ¾iÅ¡tÄ›</rdfs:label>
+	<rdfs:label xml:lang="ja">ã“ã®ãƒªãƒã‚¸ãƒˆãƒªã®URL</rdfs:label>
+	<rdfs:comment xml:lang="en">Location of a repository.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">Emplacement d'un dÃ©pÃ´t.</rdfs:comment>
+	<rdfs:comment xml:lang="es">lugar de un repositorio.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Lokation eines Repositorys.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">UmÃ­stÄ›nÃ­ ÃºloÅ¾iÅ¡tÄ›.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã“ã®ãƒªãƒã‚¸ãƒˆãƒªã®å ´æ‰€ã€‚</rdfs:comment>
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Repository" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#download-page">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">download page</rdfs:label>
+	<rdfs:label xml:lang="fr">page de tÃ©lÃ©chargement</rdfs:label>
+	<rdfs:label xml:lang="es">pÃ¡gina de descarga</rdfs:label>
+	<rdfs:label xml:lang="de">Seite zum Herunterladen</rdfs:label>
+        <rdfs:label xml:lang="cs">strÃ¡nka pro staÅ¾enÃ­</rdfs:label>
+	<rdfs:label xml:lang="ja">ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ãƒšãƒ¼ã‚¸</rdfs:label>
+	<rdfs:comment xml:lang="en">Web page from which the project software can be downloaded.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">Page web Ã  partir de laquelle on peut tÃ©lÃ©charger le programme.</rdfs:comment>
+	<rdfs:comment xml:lang="es">PÃ¡gina web de la cuÃ¡l se puede bajar el software.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Web-Seite von der die Projekt-Software heruntergeladen werden kann.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">WebovÃ¡ strÃ¡nka, na kterÃ© lze stÃ¡hnout projektovÃ½ software.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã“ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã§ãã‚‹ã‚¦ã‚§ãƒ–ãƒšãƒ¼ã‚¸</rdfs:comment>	
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#download-mirror">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">download mirror</rdfs:label>
+	<rdfs:label xml:lang="fr">miroir pour le tÃ©lÃ©chargement</rdfs:label>
+	<rdfs:label xml:lang="es">mirror de descarga</rdfs:label>
+	<rdfs:label xml:lang="de">Spiegel der Seite zum Herunterladen</rdfs:label>
+        <rdfs:label xml:lang="cs">zrcadlo strÃ¡nky pro staÅ¾enÃ­</rdfs:label>
+	<rdfs:label xml:lang="ja">ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ãƒŸãƒ©ãƒ¼</rdfs:label>
+	<rdfs:comment xml:lang="en">Mirror of software download web page.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">Miroir de la page de tÃ©lÃ©chargement du programme.</rdfs:comment>
+	<rdfs:comment xml:lang="es">Mirror de la pÃ¡gina web de descarga.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Spiegel der Seite von die Projekt-Software heruntergeladen werden kann.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">Zrcadlo strÃ¡nky pro staÅ¾enÃ­ softwaru.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã“ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ãƒŸãƒ©ãƒ¼</rdfs:comment>
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#revision">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">revision</rdfs:label>
+	<rdfs:label xml:lang="fr">rÃ©vision</rdfs:label>
+	<rdfs:label xml:lang="es">versiÃ³n</rdfs:label>
+	<rdfs:label xml:lang="de">Version</rdfs:label>
+        <rdfs:label xml:lang="cs">verze</rdfs:label>
+	<rdfs:label xml:lang="ja">ãƒªãƒ“ã‚¸ãƒ§ãƒ³ã‚³ãƒ¼ãƒˆ</rdfs:label>
+	<rdfs:comment xml:lang="en">Revision identifier of a software release.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">Identifiant de rÃ©vision d'une release du programme.</rdfs:comment>
+	<rdfs:comment xml:lang="es">Indentificador de la versiÃ³n de un release de software.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Versionsidentifikator eines Software-Releases.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">IdentifikÃ¡tor zpÅ™Ã­stupnÄ›nÃ© revize softwaru.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã“ã®ãƒªãƒªãƒ¼ã‚¹ã®ãƒªãƒ“ã‚¸ãƒ§ãƒ³è­˜åˆ¥å­</rdfs:comment>
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Version" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#file-release">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">file-release</rdfs:label>
+        <rdfs:label xml:lang="cs">soubor revize</rdfs:label>
+	<rdfs:label xml:lang="ja">ãƒ•ã‚¡ã‚¤ãƒ«</rdfs:label>
+	<rdfs:comment xml:lang="en">URI of download associated with this release.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">URI adresa staÅ¾enÃ­ asociovanÃ© s revizÃ­.</rdfs:comment>
+	<rdfs:label xml:lang="ja">ã“ã®ãƒªãƒªãƒ¼ã‚¹ã®ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã§ãã‚‹ãƒ•ã‚¡ã‚¤ãƒ«ã®URI</rdfs:label>
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Version" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#wiki">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">wiki</rdfs:label>
+	<rdfs:label xml:lang="fr">wiki</rdfs:label>
+	<rdfs:label xml:lang="es">wiki</rdfs:label>
+	<rdfs:label xml:lang="de">Wiki</rdfs:label>
+        <rdfs:label xml:lang="cs">wiki</rdfs:label>
+	<rdfs:label xml:lang="ja">ã‚¦ã‚£ã‚­</rdfs:label>
+	<rdfs:comment xml:lang="en">URL of Wiki for collaborative discussion of project.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">L'URL du Wiki pour la discussion collaborative sur le projet.</rdfs:comment>
+	<rdfs:comment xml:lang="es">URL del Wiki para discusiÃ³n colaborativa del proyecto.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Wiki-URL fÃ¼r die kollaborative Dikussion eines Projektes.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">URL adresa wiki projektu pro spoleÄnÃ© diskuse.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã“ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®è¨Žè«–ç”¨ã‚¦ã‚£ã‚­</rdfs:comment>
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#bug-database">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">bug database</rdfs:label>
+	<rdfs:label xml:lang="fr">suivi des bugs</rdfs:label>
+	<rdfs:label xml:lang="es">base de datos de bugs</rdfs:label>
+	<rdfs:label xml:lang="de">Fehlerdatenbank</rdfs:label>
+        <rdfs:label xml:lang="cs">databÃ¡ze chyb</rdfs:label>
+	<rdfs:label xml:lang="ja">ãƒã‚°ãƒšãƒ¼ã‚¸</rdfs:label>
+	<rdfs:comment xml:lang="en">Bug tracker for a project.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">Suivi des bugs pour un projet.</rdfs:comment>
+	<rdfs:comment xml:lang="es">Bug tracker para un proyecto.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Fehlerdatenbank eines Projektes.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">SprÃ¡va chyb projektu.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã“ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ã®ãƒã‚°ç®¡ç†ãƒšãƒ¼ã‚¸</rdfs:comment>
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#screenshots">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">screenshots</rdfs:label>
+	<rdfs:label xml:lang="fr">captures d'Ã©cran</rdfs:label>
+	<rdfs:label xml:lang="es">capturas de pantalla</rdfs:label>
+	<rdfs:label xml:lang="de">Screenshots</rdfs:label>
+        <rdfs:label xml:lang="cs">snÃ­mek obrazovky</rdfs:label>
+	<rdfs:label xml:lang="ja">ã‚¹ã‚¯ãƒªãƒ¼ãƒ³ã‚·ãƒ§ãƒƒãƒˆ</rdfs:label>
+	<rdfs:comment xml:lang="en">Web page with screenshots of project.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">Page web avec des captures d'Ã©cran du projet.</rdfs:comment>
+	<rdfs:comment xml:lang="es">PÃ¡gina web con capturas de pantalla del proyecto.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Web-Seite mit Screenshots eines Projektes.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">WebovÃ¡ strÃ¡nka projektu se snÃ­mky obrazovky.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã‚¹ã‚¯ãƒªãƒ¼ãƒ³ã‚·ãƒ§ãƒƒãƒˆã®ã‚ã‚‹ã‚¦ã‚§ãƒ–ãƒšãƒ¼ã‚¸</rdfs:comment>
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#maintainer">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">maintainer</rdfs:label>
+	<rdfs:label xml:lang="fr">dÃ©veloppeur principal</rdfs:label>
+	<rdfs:label xml:lang="es">desarrollador principal</rdfs:label>
+	<rdfs:label xml:lang="de">Projektverantwortlicher</rdfs:label>
+        <rdfs:label xml:lang="cs">sprÃ¡vce</rdfs:label>
+        <rdfs:label xml:lang="ja">ãƒ¡ãƒ³ãƒ†ãƒŠãƒ¼</rdfs:label>
+	<rdfs:comment xml:lang="en">Maintainer of a project, a project leader.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">DÃ©veloppeur principal d'un projet, un meneur du projet.</rdfs:comment>
+	<rdfs:comment xml:lang="es">Desarrollador principal de un proyecto, un lÃ­der de proyecto.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Hauptentwickler eines Projektes, der Projektleiter</rdfs:comment>
+        <rdfs:comment xml:lang="cs">SprÃ¡vce projektu, vedoucÃ­ projektu.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã“ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®ãƒ¡ãƒ³ãƒ†ãªãƒ¼åŠã³ãƒªãƒ¼ãƒ€ã€‚</rdfs:comment>
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project" />
+	<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#developer">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">developer</rdfs:label>
+	<rdfs:label xml:lang="fr">dÃ©veloppeur</rdfs:label>
+	<rdfs:label xml:lang="es">desarrollador</rdfs:label>
+	<rdfs:label xml:lang="de">Entwickler</rdfs:label>
+        <rdfs:label xml:lang="cs">vÃ½vojÃ¡Å™</rdfs:label>
+	<rdfs:label xml:lang="ja">é–‹ç™ºè€…</rdfs:label>
+	<rdfs:comment xml:lang="en">Developer of software for the project.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">DÃ©veloppeur pour le projet.</rdfs:comment>
+	<rdfs:comment xml:lang="es">Desarrollador de software para el proyecto.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Software-Entwickler fÃ¼r eine Projekt.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">VÃ½vojÃ¡Å™ softwaru projektu.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã®é–‹ç™ºè€…</rdfs:comment>
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project" />
+	<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#documenter">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">documenter</rdfs:label>
+	<rdfs:label xml:lang="fr">rÃ©dacteur de l'aide</rdfs:label>
+	<rdfs:label xml:lang="es">escritor de ayuda</rdfs:label>
+	<rdfs:label xml:lang="de">Dokumentator</rdfs:label>
+        <rdfs:label xml:lang="cs">dokumentarista</rdfs:label>
+	<rdfs:label xml:lang="ja">æ–‡ç« åˆ¶ä½œè€…</rdfs:label>
+	<rdfs:comment xml:lang="en">Contributor of documentation to the project.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">Collaborateur Ã  la documentation du projet.</rdfs:comment>
+	<rdfs:comment xml:lang="es">Proveedor de documentaciÃ³n para el proyecto.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Mitarbeiter an der Dokumentation eines Projektes.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">Spoluautor dokumentace projektu.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã“ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã®è²¢çŒ®è€…</rdfs:comment>
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project" />
+	<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#translator">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">translator</rdfs:label>
+	<rdfs:label xml:lang="fr">traducteur</rdfs:label>
+	<rdfs:label xml:lang="es">traductor</rdfs:label>
+	<rdfs:label xml:lang="de">Ãœbersetzer</rdfs:label>
+        <rdfs:label xml:lang="cs">pÅ™ekladatel</rdfs:label>
+	<rdfs:label xml:lang="ja">ç¿»è¨³è€…</rdfs:label>
+	<rdfs:comment xml:lang="en">Contributor of translations to the project.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">Collaborateur Ã  la traduction du projet.</rdfs:comment>
+	<rdfs:comment xml:lang="es">Proveedor de traducciones al proyecto.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Mitarbeiter an den Ãœbersetzungen eines Projektes.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">Spoluautor pÅ™ekladu projektu.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã“ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã‚’ç¿»è¨³ã™ã‚‹è²¢çŒ®è€…</rdfs:comment>
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project" />
+	<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#tester">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">tester</rdfs:label>
+	<rdfs:label xml:lang="fr">testeur</rdfs:label>
+	<rdfs:label xml:lang="es">tester</rdfs:label>
+	<rdfs:label xml:lang="de">Tester</rdfs:label>
+        <rdfs:label xml:lang="cs">tester</rdfs:label>
+	<rdfs:label xml:lang="ja">è©¦é¨“è€…</rdfs:label>
+	<rdfs:comment xml:lang="en">A tester or other quality control contributor.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">Un testeur ou un collaborateur au contrÃ´le qualitÃ©.</rdfs:comment>
+	<rdfs:comment xml:lang="es">Un tester u otro proveedor de control de calidad.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Ein Tester oder anderer Mitarbeiter der QualitÃ¤tskontrolle.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">Tester nebo jinÃ½ spoluautor kontrolujÃ­cÃ­ kvalitu.</rdfs:comment>
+	<rdfs:comment xml:lang="en">ã“ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®ãŸã‚ã€è©¦é¨“ã‚’ã™ã‚‹äººã‚„å“è³ªãƒ¡ãƒ³ãƒ†ãƒŠãƒ¼ã€‚</rdfs:comment>
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project" />
+	<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#helper">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">helper</rdfs:label>
+	<rdfs:label xml:lang="fr">collaborateur</rdfs:label>
+	<rdfs:label xml:lang="es">colaborador</rdfs:label>
+	<rdfs:label xml:lang="de">Helfer</rdfs:label>
+        <rdfs:label xml:lang="cs">spoluautor</rdfs:label>
+	<rdfs:label xml:lang="ja">è²¢çŒ®è€…</rdfs:label>
+	<rdfs:comment xml:lang="en">Project contributor.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">Collaborateur au projet.</rdfs:comment>
+	<rdfs:comment xml:lang="es">Colaborador del proyecto.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Projekt-Mitarbeiter.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">Spoluautor projektu.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã“ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®è²¢çŒ®è€…</rdfs:comment>
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project" />
+	<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#programming-language">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">programming language</rdfs:label>
+	<rdfs:label xml:lang="fr">langage de programmation</rdfs:label>
+	<rdfs:label xml:lang="es">lenguaje de programaciÃ³n</rdfs:label>
+	<rdfs:label xml:lang="de">Programmiersprache</rdfs:label>
+        <rdfs:label xml:lang="cs">programovacÃ­ jazyk</rdfs:label>
+	<rdfs:label xml:lang="ja">ãƒ—ãƒ­ã‚°ãƒ©ãƒŸãƒ³ã‚°è¨€èªž</rdfs:label>
+	<rdfs:comment xml:lang="en">Programming language a project is implemented in or intended for use with.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">Langage de programmation avec lequel un projet est implÃ©mentÃ©,
+		ou avec lequel il est prÃ©vu de l'utiliser.</rdfs:comment>
+	<rdfs:comment xml:lang="es">Lenguaje de programaciÃ³n en el que un proyecto es implementado o con el cuÃ¡l pretende usarse.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Programmiersprache in der ein Projekt implementiert ist oder intendiert wird zu benutzen.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">ProgramovacÃ­ jazyk, ve kterÃ©m je projekt implementovÃ¡n nebo pro kterÃ½ je zamÃ½Å¡len k pouÅ¾itÃ­.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒŸãƒ³ã‚°ã®å®Ÿè£…ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒŸãƒ³ã‚°è¨€èªžã€ã¾ãŸã¯ç›®æŒ‡ã—ãŸè¨€èªžã€‚</rdfs:comment>
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#os">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">operating system</rdfs:label>
+	<rdfs:label xml:lang="fr">systÃ¨me d'exploitation</rdfs:label>
+	<rdfs:label xml:lang="es">sistema operativo</rdfs:label>
+	<rdfs:label xml:lang="de">Betriebssystem</rdfs:label>
+        <rdfs:label xml:lang="cs">operaÄnÃ­ systÃ©m</rdfs:label>
+	<rdfs:label xml:lang="ja">ã‚ªãƒšãƒ¬ãƒ¼ãƒ†ã‚£ãƒ³ã‚°ã‚·ã‚¹ãƒ†ãƒ </rdfs:label>
+	<rdfs:comment xml:lang="en">Operating system that a project is limited to.  Omit this property if the project is not OS-specific.</rdfs:comment>
+	<rdfs:comment xml:lang="fr">SystÃ¨me d'exploitation auquel est limitÃ© le projet. Omettez cette propriÃ©tÃ© si le
+		projet n'est pas limitÃ© Ã  un systÃ¨me d'exploitation.</rdfs:comment>
+	<rdfs:comment xml:lang="es">Sistema opertivo al cuÃ¡l estÃ¡ limitado el proyecto.  Omita esta propiedad si el proyecto no es especÃ­fico
+		de un sistema opertaivo en particular.</rdfs:comment>
+	<rdfs:comment xml:lang="de">Betriebssystem auf dem das Projekt eingesetzt werden kann. Diese Eigenschaft kann ausgelassen werden, wenn das Projekt nicht BS-spezifisch ist.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">OperaÄnÃ­ systÃ©m, na jehoÅ¾ pouÅ¾itÃ­ je projekt limitovÃ¡n. Vynechejte tuto vlastnost, pokud je projekt nezÃ¡vislÃ½ na operaÄnÃ­m systÃ©mu.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã“ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®é™ã‚‰ã‚ŒãŸã‚ªãƒšãƒ¬ãƒ¼ãƒ†ã‚£ãƒ³ã‚°ã‚·ã‚¹ãƒ†ãƒ ã€‚ã‚‚ã—ã€ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã¯ã©ã®OSã‚‚å¤§ä¸ˆå¤«ãªã‚‰ã€ã“ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’æ›¸ãè½ã¨ã—ã¦ã„ã„ã€‚</rdfs:comment>
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project" />
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Version" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#implements">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">Implements specification</rdfs:label>
+	<rdfs:label xml:lang="ja">å®Ÿè£…ã—ãŸæ˜Žç´°æ›¸</rdfs:label>
+	<rdfs:comment xml:lang="en">A specification that a project implements. Could be a standard, API or legally defined level of conformance.</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã“ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆãŒå®Ÿè£…ã—ãŸã‚·ã‚¹ãƒ†ãƒ ã®æ˜Žç´°æ›¸ã€‚æ¨™æº–ã‚„APIã‚„æ˜Žç´°æ›¸ã®ã‚ˆã†ãªã‚‚ã®ã€‚</rdfs:comment>
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project" />
+	<rdfs:range rdf:resource="http://usefulinc.com/ns/doap#Specification" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#service-endpoint">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">service endpoint</rdfs:label>
+	<rdfs:label xml:lang="ja">ã‚µãƒ¼ãƒ“ã‚¹ã‚µã‚¤ãƒˆ</rdfs:label>
+	<rdfs:comment xml:lang="en">The URI of a web service endpoint where software as a service may be accessed</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã“ã¨ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆãŒæä¾›ã—ãŸã‚µãƒ¼ãƒ–ã‚¹ã‚’è¼‰ã›ã‚‹ã‚µã‚¤ãƒˆã€‚</rdfs:comment>	
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#language">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">language</rdfs:label>
+	<rdfs:label xml:lang="ja">è¨€èªž</rdfs:label>
+	<rdfs:comment xml:lang="en">ISO language code a project has been translated into</rdfs:comment>
+	<rdfs:comment xml:lang="en">ã“ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®ç¿»è¨³ã•ã‚ŒãŸè¨€èªžã®ISOè¨€èªžã‚³ãƒ¼ãƒˆ</rdfs:comment>
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#vendor">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">vendor</rdfs:label>
+	<rdfs:label xml:lang="ja">æä¾›çµ„ç¹”</rdfs:label>
+	<rdfs:comment xml:lang="en">Vendor organization: commercial, free or otherwise</rdfs:comment>
+	<rdfs:comment xml:lang="ja">æä¾›çµ„ç¹”ã€å•†æ¥­ã®çµ„ç¹”ã‚„è‡ªç”±ã®çµ„ç¹”ã€‚</rdfs:comment>
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project" />
+	<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organization" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#platform">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">platform</rdfs:label>
+	<rdfs:label xml:lang="ja">ãƒ—ãƒ©ãƒƒãƒˆãƒ•ã‚©ãƒ¼ãƒ </rdfs:label>
+	<rdfs:comment xml:lang="en">Indicator of software platform (non-OS specific), e.g. Java, Firefox, ECMA CLR</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã“ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®å¿…è¦ãªãƒ—ãƒ©ãƒƒãƒˆãƒ•ã‚©ãƒ¼ãƒ ï¼ˆOSã«é–¢ä¿‚ãªã„ï¼‰ã€‚ä¾‹ãˆã°ï¼šJavaã€Firefoxã€ECMA CLRã¨ã‹ã€‚</rdfs:comment>
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project" />
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Version" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#audience">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">audience</rdfs:label>
+	<rdfs:label xml:lang="ja">ç›®æŒ‡ã—ãŸãƒ¦ãƒ¼ã‚¶</rdfs:label>
+	<rdfs:comment xml:lang="en">Description of target user base</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ç›®æŒ‡ã—ãŸãƒ¦ãƒ¼ã‚¶ãŸã¡ã®èª¬æ˜Ž</rdfs:comment>
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+</rdf:Property>
+
+<rdf:Property rdf:about="http://usefulinc.com/ns/doap#blog">
+	<rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#" />
+	<rdfs:label xml:lang="en">blog</rdfs:label>
+	<rdfs:label xml:lang="ja">ãƒ–ãƒ­ã‚°</rdfs:label>
+	<rdfs:comment xml:lang="en">URI of a blog related to a project</rdfs:comment>
+	<rdfs:comment xml:lang="ja">ã“ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã«é–¢ã™ã‚‹ãƒ–ãƒ­ã‚°ã®URI</rdfs:comment>
+	<rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource" />
+</rdf:Property>
+
+</rdf:RDF>
