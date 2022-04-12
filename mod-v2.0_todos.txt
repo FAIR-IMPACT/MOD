@@ -1,14 +1,25 @@
 MOD2.0 TODOS: 
 - Mark the properties of the FAIRsFAIR minimum metadata profile (Clement & Yann)
-- Synchronize the descriptions back to the GSheet file (B & C)
 - Translate descriptions to French (Clement)
-- Separate reliesOn and relatedTo and hierarchize relations
-- Add voaf:reliesOn and remove the mapping with dct:relation
 - Check outcomes of the W3C's DXWG
 - Formalize other classes (all but SemanticArtefact)
+- Verifier que tous les commentaires d'integration sont bien la pour OMV, DOOR et VOAF
+- Change ontology to SA in the MOD descriptions
+- Double check if properties are for SA or SADistribution
+- Add dcmi:Collection as a type for SA
+- Remove declarations from external objects (classes and properties) not of direct use in MOD
+
 
 LOG (From December 2021): 
 - Create the new OWL file for MOD 2.0 (Biswanath)
 - Declare MOD on w3id (Biswanath)
 - Update the README file on GitHub (Clement)
 - Describe MOD2.0 with itself (Clement)
+- Reintegrate the MOD1.4 properties inside MOD2 (Clement)
+
+QUESTIONS: 
+- Reverse derivedFrom and isdefinedBy
+- VOAF specializes/generalizes  from PROV instead ? 
+- Reassign this property: DOAP: The URI of a web service endpoint where software as a service may be accessed.
+
+
