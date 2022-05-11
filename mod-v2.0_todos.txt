@@ -8,6 +8,27 @@ MOD2.0 TODOS:
 - Double check if properties are for SA or SADistribution
 - Add dcmi:Collection as a type for SA
 - Remove declarations from external objects (classes and properties) not of direct use in MOD
+- From discussion with Biswanath (May 2022) => recreate a MOD2 profile and a MOD ontology
+	- Clement to rename the current ttl fle with _profile and clean it from useless content
+	- Clement to reintroduce mappings to mod properties inisde the profile file
+	- Biswanath to re-create another _ontology.owl file for the MOD2 ontology
+	- Biswanath to use the following patern for properties : 
+#################################################################
+#
+#### PropertyURI
+#mod:xx      		df:type                	rdf:Property , owl:ObjectProperty OR owl:DataProperty
+#                   rdfs:subPropertyOf      SUPER PROPERTY IF ANY
+#                   rdfs:label              ""@en ,
+#                                           ""@fr ;
+#                   rdfs:domain             DOMAIN INFO IF ANY
+#                   rdfs:range              RANGE INFO IF ANY
+#                   rdfs:isDefinedBy        URI OF MOD2 ;
+#                   pav:derivedFrom         URI OF FIRST MOD VERSION INCLUDING" ;
+#                   pav:importedOn          "DATE OF FIRST MOD VERSION INCLUDING"^^xsd:dateTime ;
+#            
+#################################################################
+
+
 
 
 LOG (From December 2021): 
