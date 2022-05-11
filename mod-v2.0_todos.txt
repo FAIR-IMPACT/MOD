@@ -9,26 +9,11 @@ MOD2.0 TODOS:
 - Add dcmi:Collection as a type for SA
 - Remove declarations from external objects (classes and properties) not of direct use in MOD
 - From discussion with Biswanath (May 2022) => recreate a MOD2 profile and a MOD ontology
-	- Clement to rename the current ttl fle with _profile and clean it from useless content
 	- Clement to reintroduce mappings to mod properties inisde the profile file
-	- Biswanath to re-create another _ontology.owl file for the MOD2 ontology
-	- Biswanath to use the following patern for properties : 
-#################################################################
-#
-#### PropertyURI
-#mod:xx      		df:type                	rdf:Property , owl:ObjectProperty OR owl:DataProperty
-#                   rdfs:subPropertyOf      SUPER PROPERTY IF ANY
-#                   rdfs:label              ""@en ,
-#                                           ""@fr ;
-#                   rdfs:domain             DOMAIN INFO IF ANY
-#                   rdfs:range              RANGE INFO IF ANY
-#                   rdfs:isDefinedBy        URI OF MOD2 ;
-#                   pav:derivedFrom         URI OF FIRST MOD VERSION INCLUDING" ;
-#                   pav:importedOn          "DATE OF FIRST MOD VERSION INCLUDING"^^xsd:dateTime ;
-#            
-#################################################################
-
-
+	- Clement to refresh the description of MOD2 ontology using MOD2 profile
+	- Clement to refresh the description of MOD2 profile using the MOD2 profile
+	- Clement to updates the URIs accordingly (as it was done in MOD1.4)
+	- Biswanath to use the pattern for properties in MOD2 ontology defined inside the MOD2 ontology file (remove the information there because of copy/paste)
 
 
 LOG (From December 2021): 
@@ -37,6 +22,9 @@ LOG (From December 2021):
 - Update the README file on GitHub (Clement)
 - Describe MOD2.0 with itself (Clement)
 - Reintegrate the MOD1.4 properties inside MOD2 (Clement)
+- Rename the current ttl fle with _profile and clean it from useless content (Clement)
+- Re-create another _ontology.owl file for the MOD2 ontology with classes inside but not equivalent properties
+ 
 
 QUESTIONS: 
 - Reverse derivedFrom and isdefinedBy
