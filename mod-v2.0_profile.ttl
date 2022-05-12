@@ -30,8 +30,7 @@
 @prefix oboinowl: <http://www.geneontology.org/formats/oboInOwl#> .
 @base <https://w3id.org/mod> .
 
-<https://w3id.org/mod> rdf:type owl:Ontology ;
-                        owl:versionIRI <https://w3id.org/mod/2.0> ;
+<https://w3id.org/mod> rdf:type owl:Ontology ;       
 
 #################################################################
 #    MOD2.0 profile description with MOD2 profile properties

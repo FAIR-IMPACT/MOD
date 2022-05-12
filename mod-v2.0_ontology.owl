@@ -31,16 +31,14 @@
 @base <https://w3id.org/mod> .
 
 <https://w3id.org/mod> rdf:type owl:Ontology ;
-                        owl:versionIRI <https://w3id.org/mod/2.0> ;
 
 #################################################################
-#    MOD2.0 profile description with MOD2 profile properties
+#    MOD2.0 ontology 
 #################################################################
 
-# This section is a description of MOD using each of the MOD2.0 properties. 
+# This section is a description of MOD2 ontology suing the MOD2 profile (mod-v2.0_profile.ttl). 
 # Properties are sorted and grouped as in GSheet working document.
-# Texttual descriptions are available in English and French. 
-# Properties from MOD2 thata re not used to described MOD2 are commented.
+# Properties from MOD2 profile that are not used to described MOD2 are commented.
 
   ########## Intrinsic properties ##########
     mod:acronym                     "MOD" ;
@@ -279,27 +277,17 @@
 
 
 #################################################################
-# Pattern to respect for each MOD properties
-#################################################################
 #
 #### PropertyURI
-#originalns:xx      rdf:type                rdf:Property ;
+#mod:xx             df:type                 rdf:Property , owl:ObjectProperty OR owl:DataProperty
 #                   rdfs:subPropertyOf      SUPER PROPERTY IF ANY
 #                   rdfs:label              ""@en ,
 #                                           ""@fr ;
 #                   rdfs:domain             DOMAIN INFO IF ANY
 #                   rdfs:range              RANGE INFO IF ANY
-#                   dcterms:description     DESCCRIPTION FROM ORIGINAL SOURCE ;
-#                   rdfs:isDefinedBy        URI OF ORIGINAL SOURCE ;
-#                   dcterms:issued          "DATE OF THE FIRST CREATION OF THE PROPERTY BY ORIGINAL RESOURCE"^^xsd:date ;
-#                   owl:equivalentProperty  EQUIVALENT PROPERTY (Equivalent properties have the same "values" (i.e., the same property extension))
+#                   rdfs:isDefinedBy        URI OF MOD2 ;
 #                   pav:derivedFrom         URI OF FIRST MOD VERSION INCLUDING" ;
 #                   pav:importedOn          "DATE OF FIRST MOD VERSION INCLUDING"^^xsd:dateTime ;
-#                    
-#            #OPTIONAL STATEMENTS
-#                   prov:wasInfluencedBy    "MIRO guidelines: ...." ;
-#            
-#            #OTHER ORIGINAL STATEMENTS IF ANY 
 #            
 #################################################################
 
@@ -2976,13 +2964,100 @@ dcterms:accrualPolicy
 ############################################################################################# 
 ############################################################################################# 
 #################################################################
-#   END OF MOD2 profile PROPERTIES
+#   END OF MOD2 ontology PROPERTIES
 #################################################################
 ############################################################################################# 
 ############################################################################################# 
 
 
 
+
+#################################################################
+#    Classes
+#################################################################
+
+
+
+### https://w3id.org/mod#Analytics
+mod:Analytics rdf:type owl:Class ;
+           rdfs:comment "Number of visits an ontology received."@en ;
+           rdfs:isDefinedBy "https://www.isibang.ac.in/ns/mod/1.4/"@en ;
+           rdfs:label "Analytics"@en .
+
+
+### https://w3id.org/mod#EngineeringMethodology
+mod:EngineeringMethodology rdf:type owl:Class ;
+                        rdfs:comment "Information about the engineering methodology."@en ;
+                        rdfs:label "Engineering Methodology"@en ;
+                        skos:historyNote "This class has been adopted from OMV Ontology Metadata Vocabulary, and renamed and redefined in the MOD namespace."@en .
+
+
+### https://w3id.org/mod#Evaluation
+mod:Evaluation rdf:type owl:Class ;
+            rdfs:comment "The results of evaluating an ontology. An ontology can have more than one evaluations."@en ;
+            rdfs:label "Evaluation"@en .
+
+
+### https://w3id.org/mod#Group
+mod:Group rdf:type owl:Class ;
+       rdfs:comment "A group of ontologies that the ontology is usually considered into."@en ;
+       rdfs:label "Group"@en .
+
+
+### https://w3id.org/mod#KnowledgeRepresentationParadigm
+mod:KnowledgeRepresentationParadigm rdf:type owl:Class ;
+                                 rdfs:label "Knowledge representation paradigm"@en .
+
+
+
+
+### https://w3id.org/mod#SemanticArtefactCatalogRecord
+mod:SemanticArtefactCatalogRecord rdf:type owl:Class ;
+                               rdfs:subClassOf dcat:CatalogRecord .
+
+
+### https://w3id.org/mod#SemanticArtefactDistribution
+mod:SemanticArtefactDistribution rdf:type owl:Class ;
+                              rdfs:subClassOf adms:AssetDistribution ,
+                                              dcat:Distribution .
+
+
+### https://w3id.org/mod#SemanticArtefactEvaluation
+mod:SemanticArtefactEvaluation rdf:type owl:Class ;
+                            rdfs:label "Semantic Artefact Evaluation"@en .
+
+
+### https://w3id.org/mod#SemanticArtefactService
+mod:SemanticArtefactService rdf:type owl:Class ;
+                         rdfs:subClassOf dcat:DataService .
+
+
+### https://w3id.org/mod#SemanticArtefactTask
+mod:SemanticArtefactTask rdf:type owl:Class ;
+                      rdfs:label "Semantic Artefact Task"@en .
+
+
+### https://w3id.org/mod#SemanticArtfeactCatalog
+mod:SemanticArtfeactCatalog rdf:type owl:Class ;
+                         rdfs:subClassOf dcat:Catalog .
+
+
+### https://w3id.org/mod#Taxonomy
+mod:Taxonomy rdf:type owl:Class ;
+          rdfs:subClassOf :SemanticArtefact .
+
+
+### https://w3id.org/mod#Terminology
+mod:Terminology rdf:type owl:Class ;
+             rdfs:subClassOf :SemanticArtefact .
+
+
+### https://w3id.org/mod#Thesaurus
+mod:Thesaurus rdf:type owl:Class ;
+           rdfs:subClassOf :SemanticArtefact .
+
+
+### Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
 
 
 
