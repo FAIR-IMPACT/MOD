@@ -30,29 +30,25 @@
 @prefix oboinowl: <http://www.geneontology.org/formats/oboInOwl#> .
 @base <https://w3id.org/mod> .
 
-<https://w3id.org/mod> rdf:type owl:Ontology ;       
+<https://w3id.org/modp> rdf:type owl:Ontology ;       
 
 #################################################################
 #    MOD2.0 profile description with MOD2 profile properties
 #################################################################
 
-# This section is a description of MOD using each of the MOD2.0 properties. 
+# This section is a description of MOD2 profile with a subset of properties of the profile itself. 
 # Properties are sorted and grouped as in GSheet working document.
 # Texttual descriptions are available in English and French. 
-# Properties from MOD2 thata re not used to described MOD2 are commented.
+# Properties from MOD2 that are not used to described MOD2 profile are commented.
 
   ########## Intrinsic properties ##########
-    mod:acronym                     "MOD" ;
-    dcterms:title                   "MOD: Metadata for Ontology Description and publication"@en,
-                                    "MOD: Metadonnées pour la Description et la publication d'Ontologies"@fr ;
-    dcterms:alternative             "MOD Vocabulary"@en ,
-                                    "Vocabulaire MOD"@fr ,
-                                    "MOD Ontology Metadata model"@en ,
-                                    "Modèle de métadonnées d'ontologie MOD"@fr ;
-    skos:hiddenLabel                "MOD-Ontology"@en;
-    owl:ontologyIRI                 <https://w3id.org/mod> ;
-    owl:versionIRI                  <https://w3id.org/mod/2.0> ;
-##  dcterms:identifier              ;
+    mod:acronym                     "MODP" ;
+    dcterms:title                   "MODP: Metadata for Ontology Description and publication Profile"@en,
+                                    "MODP: Profil de Metadonnées pour la Description et la publication d'Ontologies"@fr ;
+    dcterms:alternative             "MOD metadata profile"@en ,
+                                    "Profil de métadonnées MOD"@fr ;
+    owl:ontologyIRI                 <https://w3id.org/modp> ;
+    owl:versionIRI                  <https://w3id.org/modp/2.0> ;
     owl:versionInfo                 "2.0.1" ;
     mod:status                      "alpha" ;
     owl:deprecated                  false ;
@@ -65,75 +61,51 @@
 
   ########## Description properties ##########
     dcterms:description        
-                    "MOD (Metadata for Ontology Description and publication) is a project to define a standard way to capture metadata descriptions for ontologies or semantic resources/artefacts in general (thesaurus, terminologies, vocabularies, etc.). The MOD OWL file can be used to create knowledge bases consisting of metadata records of ontologies/vocabularies as instances. The MOD vocabulary can also be used to define specific profiles for recommended metadata properties (e.g., H2020 project FAIRsFAIR semantic artefact minimum metadata profile). Users can go through MOD and pickup the required properties to describe their ontology."@en, 
-                    "MOD (Metadonnées pour la Description et la publication d'Ontologie) est un projet visant à définir un moyen standard pour capturer des descriptions de métadonnées pour les ontologies ou les ressources/artefacts sémantiques en général (thésaurus, terminologies, vocabulaires, etc.). Le fichier MOD OWL peut être utilisé pour créer des bases de connaissances composées d’instances d’ontologies / vocabulaires décrites avec MOD. Le vocabulaire MOD peut également être utilisé pour définir des profils de métadonnées (e.g., le profil de métadonnées minimale pour les artefacts sémanttique du projet H2020 FAIRsFAIR). Les utilisateurs peuvent consulter la spécification et récupérer les propriétés requises pour décrire leur ontologie."@fr ;
+                                    "MODP (Metadata for Ontology Description and publication Profile) is a metadata profile to describe metadata descriptions for ontologies or semantic resources/artefacts in general (thesaurus, terminologies, vocabularies, etc.). The MODP OWL file is a formal specifications of the metadata profile in RDF. It is based on the work done to build the MOD ontology. MODP is maximal (i.e., contains as much property as possible) and can be used to define sub-profiles for recommended metadata properties (e.g., H2020 project FAIRsFAIR semantic artefact minimum metadata profile). Users can go through MODP and pickup the required properties to describe their ontology."@en, 
+                                    "MODP (Profil de Metadonnées pour la Description et la publication d'Ontologie) est un profil de métadonnées pour décire des descriptions de métadonnées pour les ontologies ou les ressources/artefacts sémantiques en général (thésaurus, terminologies, vocabulaires, etc.). Le fichier MODP OWL est une description formelle du profil en RDF basée sur le travail fait pur construire l'ontologie MOD. MODP est maximal (i.e., contient autant de propriété que possible) et peut donc être utilisé pour définir des sous-profils de métadonnées (e.g., le profil de métadonnées minimale pour les artefacts sémanttique du projet H2020 FAIRsFAIR). Les utilisateurs peuvent consulter la spécification de MODP et récupérer les propriétés requises pour décrire leur ontologie."@fr ;
     dcterms:abstract
-                    "MOD provides a set of properties which can be used by ontology developers, ontology libraries (e.g., ontology registry, ontology repository, ontology portal), to describe and publish ontologies. The enriched description of ontologies, in turn, will help users to search, discover, identify and select ontologies."@en ,
-                    "MOD fournit un ensemble de propriétés pouvant être utilisées par les développeurs d’ontologies ou les portails d’ontologies (registre, bibliothèques), pour décrire et publier des ontologies. La description enrichie des ontologies aidera les utilisateurs à rechercher, découvrir, identifier et sélectionner des ontologies."@fr ;
+                                    "MODP provides a set of properties which can be used by ontology developers, ontology libraries (e.g., ontology registry, ontology repository, ontology portal), to describe and publish ontologies or semantic resources/artefacts. The enriched description of ontologies, in turn, will help users to search, discover, identify and select ontologies."@en ,
+                                    "MODP fournit un ensemble de propriétés pouvant être utilisées par les développeurs d’ontologies ou les portails d’ontologies (registre, bibliothèques), pour décrire et publier des ontologies ou des ressources/artefacts sémantiques. La description enrichie des ontologies aidera les utilisateurs à rechercher, découvrir, identifier et sélectionner des ontologies."@fr ;
     cc:morePermissions              "https://github.com/sifrproject/MOD-Ontology/blob/master/LICENSE" ;
-    cc:useGuidelines                "MOD is free of use; feedback is welcome."@en ,
-                                    "MOD peut être utilisée de manière libre; les retours sont appréciés"@fr ;
-    dcterms:bibliographicCitation   <https://dx.doi.org/10.1007/978-3-319-70863-8_17> ;
-    foaf:page                       <https://www.isibang.ac.in/ns/mod/index.html> ;
-    dcat:accessURL                  <https://www.isibang.ac.in/ns/mod/ontology.ttl> ;
+    cc:useGuidelines                "MODP is free of use; feedback is welcome."@en ,
+                                    "MODP peut être utilisée de manière libre; les retours sont appréciés."@fr ;
     rdfs:comment            
-                                    "This project is connected to the work done within AgroPortal (with MOD1.4). MOD 2.0 is work in progress."@en ,
-                                    "Ce projet est lié au travail mis en œuvre dans AgroPortal (avec MOD1.4). MOD2.0 est en cours de développement."@fr ;
-    omv:keywords                    "metadata description, metadata vocabularies, ontology description, ontology profile"@en ,
-                                    "description de métadonnées, vocabulaires de métadonnées, description d'ontologie, profil d'ontologie"@fr ;
-    dcterms:type                    omv:TaskOntology ;
-    mod:designedForTask             omv:ConfigurationTask ;
-    pav:createdWith                 <https://protege.stanford.edu> ;
-    mod:usedEngineeringMethodology  
-                                    "MOD 1 has been designed by reviewing in total 23 standard existing metadata vocabularies (e.g., Dublin Core, OMV, DCAT, VoID) and selecting relevant properties for describing ontologies. Then, we studied metadata usage analytics within ontologies and ontology repositories. MOD 2 abandon the integration approach of MOD 1 but re-incorporates properties of several obsolete metadata vocabularies inside its own namespace (DOOR, OMV, VOAF). MOD 2 is designed as an extension of the DCAT 2 metadata vocabulary."@en ,
-                                    "MOD 1 a été conçue en examinant au total 23 vocabulaires de métadonnées standard existants (e.g., Dublin Core, OMV, DCAT, VoID) et en sélectionnant des propriétés pertinentes pour la description des ontologies. Nous avons ensuite étudié l’analyse de l’utilisation des métadonnées au sein d’ontologies et de portail d’ontologies. MOD 2 abandonne l'approche d'intégration de MOD 1 mais réincorpore les propriétés de plusieurs vocabulaires de métadonnées obsolètes dans son propre espace de nolmage (DOOR, OMV, VOAF). MOD 2 est conçue comme une extension du vocabulaire des métadonnées DCAT 2."@fr ;
-    mod:conformsToKnowledgeRepresentationParadigm "OWL Ontology" ;
+                                    "This project is connected to the work done within AgroPortal (with MOD1.4). MODP and MOD 2.0 are work in progress."@en ,
+                                    "Ce projet est lié au travail mis en œuvre dans AgroPortal (avec MOD1.4). MODP et MOD2.0 sont en cours de développement."@fr ;
+    omv:keywords                    "metadata description, metadata vocabularies, ontology description, metadata profile"@en ,
+                                    "description de métadonnées, vocabulaires de métadonnées, description d'ontologie, profil de métadonnées"@fr ;
+    pav:createdWith                 "Text editor" ;
     dcterms:coverage    
                                     "Ontologies or semantic resources/artefacts in general (thesaurus, terminologies, vocabularies, etc.)"@en ,
                                     "Les ontologies ou les ressources/artefacts sémantiques en général (thésaurus, terminologies, vocabulaires, etc.)"@fr ;
     mod:competencyQuestion
                                     "How to standardly and semantically capture the description of an ontology while relying on other existing metadata vocabularies?"@en ,
                                     "Comment capturer de manière standard et sémantique la description d'une ontologie en s'appuyant sur d'autres vocabulaires de métadonnées existants?"@fr ;
-    foaf:depiction                  <https://github.com/sifrproject/MOD-Ontology/raw/master/figures/MOD2.0_summary.png> ;
- ## foaf:logo                        ;
     foaf:homepage                   <https://github.com/sifrproject/MOD-Ontology> ;
     dcterms:accessRights        
-                                    "MOD is licensed under the Creative Commons Attribution 4.0 ; For details, see here: https://github.com/sifrproject/MOD-Ontology/blob/master/LICENSE"@en ,
-                                    "MOD est disponible sous Licence Creative Commons Attribution 4.0 ; pour plus de details voir https://github.com/sifrproject/MOD-Ontology/blob/master/LICENSE"@fr ;
+                                    "MOD and MODP are licensed under the Creative Commons Attribution 4.0 ; For details, see here: https://github.com/sifrproject/MOD-Ontology/blob/master/LICENSE"@en ,
+                                    "MOD and MODP sont disponibles sous Licence Creative Commons Attribution 4.0 ; pour plus de details voir https://github.com/sifrproject/MOD-Ontology/blob/master/LICENSE"@fr ;
     vann:changes                    
-                                    "From MOD 1.2: (i) added description of properties, (ii) extended number of properties (from 88 to 128), (iii) separation of profile and ontology files, (iv) new URIs scheme. From MOD2.0: (i) use of w3id URIs, (ii) integration of DOOR, OMV, VOAF properties within MOD namespace, (iii) compliant with DCAT2."@en ,
-                                    "Depuis MOD 1.2 : (i) ajout de la description des propriétés, (ii) nombre étendu de propriétés (de 88 à 128), (iii) séparation des fichiers de profil et d’ontologie, (iv) nouveaux URI. Depuis MOD2.O : (i) utilisation de w3id pour les URIs, (ii) intégration des propriétés de DOOR, OMV et VOAF dans l'espace de nommage de MOD, (iii) compatible avec DCAT2. "@fr ;
+                                    "See changes in MOD2."@en ,
+                                    "Voir changements dans MOD2"@fr ;
     vann:example                    
                                     "An adaptation of MOD1.4 is used within AgroPortal, since 2017. MOD2 is the baseline for H2020 project FAIRsFAIR semantic artefact minimum metadata profile."@en ,
                                     "Une adaptation de MOD est utilisée dans AgroPortal, depuis 2017. MOD2 est réutilisée par le profil de métadonnées minimale pour les artefacts sémanttique du projet H2020 FAIRsFAIR."@fr ;
-    vann:preferredNamespaceUri      <https://w3id.org/mod> ;
-    vann:preferredNamespacePrefix   "mod" ;
     mod:prefLabelProperty           rdfs:label ;
     mod:synonymProperty             skos:altLabel ;
     mod:definitionProperty          dcterms:description ;
     mod:authorProperty              pav:importedBy ;
     mod:obsoleteProperty            owl:deprecated ;
     mod:hierarchyProperty           rdfs:subClassOf ;
-##  mod:obsoleteParent              ;
-    void:uriRegexPattern            "OriginalURI | BaseURI+ShortName" ;
     mod:toDoList                   "https://github.com/sifrproject/MOD-Ontology/raw/master/mod-v2.0_todos.txt" ;
-    idot:exampleIdentifier          <https://w3id.org/mod#analytics> ;
-    schema:award                    "Published at MTSR 2017"@en ,
-                                    "Publiée a MTSR 2017"@fr ;
-    schema:associatedMedia          <https://drive.google.com/drive/folders/1kSF0XuSr9mwBk-daR6RYut_1Dzzko33v> ;
-##  schema:includedInDataCatalog    ;
 
   ########## People properties ##########
   
     dcterms:creator                 "Biswanath Dutta (https://orcid.org/0000-0003-3059-8202)" ,
                                     "Clement Jonquet (https://orcid.org/0000-0002-2404-1582)" ; 
-    dcterms:contributor             "Anne Toulet (https://orcid.org/0000-0003-0463-0854)" ,
-                                    "Luiz Bonino (https://orcid.org/0000-0002-1164-1351)" ,
-                                    "Yann Le Franc (https://orcid.org/0000-0003-4631-418X)" ,
-                                    "Udaya Varadarajan (https://orcid.org/0000-0002-4936-0272)" ; 
+    dcterms:contributor             "Anne Toulet (https://orcid.org/0000-0003-0463-0854)" ; 
     dcterms:publisher               "Indian Statistical Institute, Bangalore Centre, India (https://www.isibang.ac.in)" ,
                                     "LIRMM, University of Montpellier, France (http://www.lirmm.fr)" ;
-    pav:curatedBy                   "Anne Toulet" ;
     schema:translator               "Clement Jonquet" ;
     dcterms:rightsHolder            "Indian Statistical Institute and University of Montpellier"@en ,
                                     "Institut Indien de la Statistique et Université de Montpellier"@fr;
@@ -291,7 +263,7 @@
 #                   dcterms:description     DESCCRIPTION FROM ORIGINAL SOURCE ;
 #                   rdfs:isDefinedBy        URI OF ORIGINAL SOURCE ;
 #                   dcterms:issued          "DATE OF THE FIRST CREATION OF THE PROPERTY BY ORIGINAL RESOURCE"^^xsd:date ;
-#                   owl:equivalentProperty  EQUIVALENT PROPERTY (Equivalent properties have the same "values" (i.e., the same property extension))
+#                   dcterms:relation        EQUIVALENT PROPERTY (Equivalent properties have the same "values" (i.e., the same property extension))
 #                   pav:derivedFrom         URI OF FIRST MOD VERSION INCLUDING" ;
 #                   pav:importedOn          "DATE OF FIRST MOD VERSION INCLUDING"^^xsd:dateTime ;
 #                    
@@ -322,7 +294,7 @@ mod:acronym         rdf:type                owl:DatatypeProperty ;
                     dcterms:description     "MOD: Short acronym label, often used as an identifier within some ontology platforms such as BioPortal or OBO Foundry. OMV: A short name by which an ontology is formally known."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
-                    owl:equivalentProperty  <http://www.isibang.ac.in/ns/mod/1.0/acronym> ;
+                    dcterms:relation        <http://www.isibang.ac.in/ns/mod/1.0/acronym> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:dateTime ;
             
@@ -342,7 +314,7 @@ dcterms:title       rdf:type                rdf:Property ;
                     dcterms:description     "DCTERMS: A name given to the resource. OMV: The name by which an ontology is formally known. RDFS: A human-readable name for the subject. FOAF:  A name for some thing. SKOS: The preferred and alternative labels are useful when generating or creating human-readable representations of a knowledge organization system. SCHEMA: The name of the item."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
-                    owl:equivalentProperty  cc:attributionName ,
+                    dcterms:relation        cc:attributionName ,
                                             omv:name ,
                                             schema:name ,
                                             skos:prefLabel ,
@@ -365,7 +337,7 @@ dcterms:alternative rdf:type                rdf:Property ;
                     dcterms:description     "DCTERMS: An alternative name for the resource. The distinction between titles and alternative titles is application-specific. SKOS: The preferred and alternative labels are useful when generating or creating human-readable representations of a knowledge organization system. SCHEMA: An alias for the item. A short label that is used by some communities to refer to a dataset (see 'preferredPrefix')."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2000-07-11"^^xsd:date ;
-                    owl:equivalentProperty  idot:alternatePrefix ,
+                    dcterms:relation        idot:alternatePrefix ,
                                             schema:alternateName ,
                                             skos:altLabel ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
@@ -409,7 +381,7 @@ mod:URI             rdf:type                owl:DatatypeProperty ;
                     dcterms:description     "OMV: The URI of the ontology which is described by this metadata."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
-                    owl:equivalentProperty  omv:URI ;
+                    dcterms:relation        omv:URI ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:dateTime ;
             
@@ -447,7 +419,7 @@ dcterms:identifier  rdf:type                rdf:Property ;
                     dcterms:description     "DCTERMS: An unambiguous reference to the resource within a given context. Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN).  Persistent identifiers should be provided as HTTP URIs. SKOS: A notation is a string of characters such as 'T58.5 or '303.4833' used to uniquely identify a concept within the scope of a given concept scheme. ADMS: adms:identifier is used to link any resource to an instance of adms:Identifier which is its range. N.B. it is not appropriate to use dcterms:identifer to link to the Identifier class as its range is rdfs:Literal. ADMS uses this to provide any identifier for the Asset."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
-                    owl:equivalentProperty  skos:notation ,
+                    dcterms:relation        skos:notation ,
                                             adms:identifier ,
                                             schema:identifier ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
@@ -467,7 +439,7 @@ owl:versionInfo     rdf:type                owl:AnnotationProperty  ;
                     dcterms:description     "MOD: The version of the released ontology. OMV: The version information of the ontology. OWL: The annotation property that provides version information for an ontology or another OWL construct. PAV: The version number of a resource. This is a freetext string, typical values are '1.5' or '21'. DOAP: A project release."@en ;  
                     rdfs:isDefinedBy        <http://www.w3.org/2002/07/owl#> ;
                     dcterms:issued          "2004-02-10"^^xsd:date ;
-                    owl:equivalentProperty  omv:version ,
+                    dcterms:relation        omv:version ,
                                             pav:version ,
                                             doap:release ,
                                             oboinowl:data-version ,
@@ -492,7 +464,7 @@ mod:status          rdf:type                owl:DatatypeProperty ;
                     dcterms:description     "OMV: It specifies the tracking information for the contents of the ontology. Pre-defined values. IDOT: State of a resource (physical location providing access to data or information about the identified entity). This is should be based on a recent manual or automatic check of the resource. Possible values are: 'up', 'down', 'probably up', 'obsolete resource', 'restricted access' and 'unknown'."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
-                    owl:equivalentProperty  idot:state ,
+                    dcterms:relation        idot:state ,
                                             adms:adms-status ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:dateTime ;
@@ -512,7 +484,7 @@ owl:deprecated     rdf:type                owl:AnnotationProperty ;
                    dcterms:description     "OWL: The annotation property that indicates that a given entity has been deprecated. IDOT: Indicates if the current dataset is obsolete (not provided any more to the public community). Value can either be 'true' or 'false' (xsd:boolean). The statement is usually omitted if 'false'."@en ;
                    rdfs:isDefinedBy        <http://www.w3.org/2002/07/owl#> ;
                    dcterms:issued          "2004-02-10"^^xsd:date ;
-                   owl:equivalentProperty  idot:obsolete ,
+                   dcterms:relation        idot:obsolete ,
                                            <http://www.isibang.ac.in/ns/mod/1.1/deprecated> ;                                         
                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.1> ;
                    pav:importedOn          "2016-09-02"^^xsd:dateTime ; 
@@ -530,7 +502,7 @@ dcterms:license     rdf:type                rdf:Property ;
                     dcterms:description     "DCTERMS: A legal document giving official permission to do something with the resource. Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided. DCTERMS:rights Information about rights held in and over the resource. OMV: Underlying license model. SCHEMA: A license document that applies to this content, typically indicated by URL."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2004-06-14"^^xsd:date ;
-                    owl:equivalentProperty  cc:license ,
+                    dcterms:relation        cc:license ,
                                             omv:license ,
                                             schema:license ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
@@ -555,7 +527,7 @@ mod:hasRepresentationLanguage
                     dcterms:description     "MOD: A language that is used to create an ontology. OMV: The ontology language."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
-                    owl:equivalentProperty  omv:hasOntologyLanguage ,
+                    dcterms:relation        omv:hasOntologyLanguage ,
                                             schema:fileFormat ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/ontologyDesignLanguage> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
@@ -578,7 +550,7 @@ mod:hasFormalityLevel
                     dcterms:description     "MOD: The level of formality of an ontology. OMV: Level of formality of the ontology."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
-                    owl:equivalentProperty  omv:hasFormalityLevel ,
+                    dcterms:relation        omv:hasFormalityLevel ,
                                             schema:fileFormat ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/formalityLevel> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
@@ -600,7 +572,7 @@ mod:hasSyntax       rdf:type                owl:DatatypeProperty ;
                     dcterms:description     "MOD: The syntax followed in the creation of an ontology. OMV: The presentation syntax for the ontology langage."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
-                    owl:equivalentProperty  omv:hasOntologySyntax ,
+                    dcterms:relation        omv:hasOntologySyntax ,
                                             dcterms:format ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/syntax> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
@@ -621,7 +593,7 @@ dcterms:language    rdf:type                rdf:Property ;
                     dcterms:description     "DCTERMS: A language of the resource. Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [[IETF-BCP47](https://tools.ietf.org/html/bcp47)] language tag. OMV: The language of the content of the ontology, i.e. English, French, etc. DOAP: ISO language code a project has been translated into."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
-                    owl:equivalentProperty  omv:naturalLanguage ,
+                    dcterms:relation        omv:naturalLanguage ,
                                             schema:inLanguage ,
                                             doap:language ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
@@ -647,7 +619,7 @@ dcterms:description rdf:type                rdf:Property ;
                     dcterms:description     "DCTERMS: An account of the resource. Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. OMV: Free text description of an ontology. SCHEMA: A description of the item. DOAP: Plain text description of a project, of 2-4 sentences in length."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
-                    owl:equivalentProperty  omv:description ,
+                    dcterms:relation        omv:description ,
                                             schema:description ,
                                             doap:description ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
@@ -720,7 +692,7 @@ dcterms:bibliographicCitation
                     dcterms:description     "DCTERMS: A bibliographic reference for the resource. Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible. OMV: List of bibliographic references describing the ontology and its applications. FOAF: A document that this thing is the primary topic of"@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2003-02-15"^^xsd:date ;
-                    owl:equivalentProperty  omv:reference ,
+                    dcterms:relation        omv:reference ,
                                             foaf:isPrimaryTopicOf ,
                                             schema:citation ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
@@ -740,7 +712,7 @@ dcat:landingPage    rdf:type                rdf:Property , owl:ObjectProperty ;
                     dcterms:description     "DCAT: A Web page that can be navigated to in a Web browser to gain access to the dataset, its distributions and/or additional information. MOD: A link to the documentation page on a thing. OMV: URL for further documentation. RDFS: Further information about the subject resource. DOAP: URL of Wiki for collaborative discussion of project. VANN: A reference to a resource that provides information on how this resource is to be used."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
                     dcterms:issued          "2014-01-16"^^xsd:date ;
-                    owl:equivalentProperty  omv:documentation ,
+                    dcterms:relation        omv:documentation ,
                                             vann:usageNote ,
                                             doap:wiki ,
                                             rdfs:seeAlso ,
@@ -765,7 +737,7 @@ dcat:accessURL      rdf:type                rdf:Property , owl:ObjectProperty ;
                     dcterms:description     "DCAT: A URL of a resource that gives access to a distribution of the dataset. E.g. landing page, feed, SPARQL endpoint. Use for all cases except a simple download link, in which case downloadURL is preferred. OMV: The location where the ontology can be found. It should be accessible via a URL. It can be the same as the value for URI property. DOAP:  Web page from which the project software can be downloaded."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
                     dcterms:issued          "2014-01-16"^^xsd:date ;
-                    owl:equivalentProperty  omv:resourceLocator ,
+                    dcterms:relation        omv:resourceLocator ,
                                             doap:download-page ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:dateTime ;
@@ -788,7 +760,7 @@ rdfs:comment        rdf:type                rdf:Property ;
                     dcterms:description     "RDFS: A description of the subject resource. OMV: Additional information about the ontology that is not included somewhere else (e.g. information that you do not want to include in the documentation)."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/2000/01/rdf-schema#> ;
                     dcterms:issued          "2002-04-30"^^xsd:date ;
-                    owl:equivalentProperty  omv:notes ,
+                    dcterms:relation        omv:notes ,
                                             dcterms:description ,
                                             adms:versionNotes ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
@@ -808,7 +780,7 @@ dcat:keyword        rdf:type                rdf:Property , owl:DatatypeProperty 
                     dcterms:description     "DCAT: A keyword or tag describing a resource. MOD: A keyword(s) is used to describe the content of an ontology. OMV: List of keywords related to an ontology. SCHEMA: Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
                     dcterms:issued          "2014-01-16"^^xsd:date ;
-                    owl:equivalentProperty   omv:keywords ,
+                    dcterms:relation         omv:keywords ,
                                              schema:keywords ,
                                              <http://www.isibang.ac.in/ns/mod/1.1/keyword> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
@@ -828,7 +800,7 @@ dcterms:type        rdf:type                rdf:Property ;
                     dcterms:description     "DCTERMS: The nature or genre of the resource. Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [[DCMI-TYPE](http://dublincore.org/documents/dcmi-type-vocabulary/)]. To describe the file format, physical medium, or dimensions of the resource, use the property Format. OMV: The nature of the content of the ontology."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
-                    owl:equivalentProperty  omv:isOfType ;
+                    dcterms:relation        omv:isOfType ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:dateTime ;
                     
@@ -863,7 +835,7 @@ mod:createdWith     rdf:type                owl:ObjectProperty ;
                     dcterms:description     "PAV: The software/tool used by the creator (pav:createdBy) when making the digital resource, for instance a word processor or an annotation tool. MOD: The tool used for the creation of an ontology. OMV: Information about the tool used to create the ontology."@en ;
                     rdfs:isDefinedBy        <http://purl.org/pav/> ;
                     dcterms:issued          "2014-08-28"^^xsd:date ;
-                    owl:equivalentProperty  omv:usedOntologyEngineeringTool ,
+                    dcterms:relation        omv:usedOntologyEngineeringTool ,
                                             oboinowl:auto-generated-by , 
                                             <http://www.isibang.ac.in/ns/mod/1.0/toolUsed> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
@@ -885,7 +857,7 @@ mod:usedEngineeringMethodology
                     dcterms:description     "MOD: A methodolgy follwoing which an ontology is created. OMV: Information about the method model used to create the ontology."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
-                    owl:equivalentProperty  adms:representationTechnique ,
+                    dcterms:relation        adms:representationTechnique ,
                                             schema:publishingPrinciples ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/methodologyUsed> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
@@ -908,7 +880,7 @@ mod:conformsToKnowledgeRepresentationParadigm
                     dcterms:description     "MOD: A representation formalism that is followed to describe knowledge in an ontology. Example includes description logics, first order logic, etc. dcterms: An established standard to which the described resource conforms. OMV: Information about the paradigm model used to create the ontology. DCTERMS: An established standard to which the described resource conforms."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
-                    owl:equivalentProperty  omv:conformsToKnowledgeRepresentationParadigm , 
+                    dcterms:relation        omv:conformsToKnowledgeRepresentationParadigm , 
                                             dcterms:conformsTo ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/knowledgeRepresentationFormalism> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
@@ -969,7 +941,7 @@ foaf:depiction      rdf:type                rdf:Property , owl:ObjectProperty ;
                     dcterms:description     "FOAF: A depiction of some thing. DOAP: Web page with screenshots of project. An image of the item. This can be a URL or a fully described ImageObject."@en ;
                     rdfs:isDefinedBy        <http://xmlns.com/foaf/0.1/> ;
                     dcterms:issued          "2014-01-14"^^xsd:date ;
-                    owl:equivalentProperty  schema:image ,
+                    dcterms:relation        schema:image ,
                                             doap:screenshots ;
                     pav:derivedFrom          <http://www.isibang.ac.in/ns/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:dateTime ;
@@ -991,7 +963,7 @@ foaf:logo           rdf:type                rdf:Property , owl:InverseFunctional
                     dcterms:description     "FOAF: A logo representing some thing. SCHEMA: An associated logo."@en ;
                     rdfs:isDefinedBy        <http://xmlns.com/foaf/0.1/> ;
                     dcterms:issued          "2014-01-14"^^xsd:date ;
-                    owl:equivalentProperty  schema:logo ;
+                    dcterms:relation        schema:logo ;
                     pav:derivedFrom          <http://www.isibang.ac.in/ns/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:dateTime ;
                     
@@ -1014,7 +986,7 @@ foaf:homepage       rdf:type                rdf:Property , owl:InverseFunctional
                     dcterms:description     "FOAF: A homepage for some thing. MOD: An unambiguous reference to the resource within a given context. DOAP: URI of a blog related to a project. CC: The URL the creator of a Work would like used when attributing re-use. SCHEMA: Indicates a page (or other CreativeWork) for which this thing is the main entity being described."@en ;
                     rdfs:isDefinedBy        <http://xmlns.com/foaf/0.1/> ;
                     dcterms:issued          "2014-01-14"^^xsd:date ;
-                    owl:equivalentProperty  schema:mainEntityOfPage ,
+                    dcterms:relation        schema:mainEntityOfPage ,
                                             cc:attributionURL ,
                                             doap:blog ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/homepage> ;
@@ -1036,7 +1008,7 @@ dcterms:accessRights
                     dcterms:description     "DCTERMS: Information about who access the resource or an indication of its security status. Access Rights may include information regarding access or restrictions based on privacy, security, or other policies. MOD: Information on access (i.e., read, download) to an ontology."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2003-02-15"^^xsd:date ;
-                    owl:equivalentProperty  <http://www.isibang.ac.in/ns/mod/1.0/accessibility> ;
+                    dcterms:relation        <http://www.isibang.ac.in/ns/mod/1.0/accessibility> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:dateTime ;
                     
@@ -1072,7 +1044,7 @@ vann:example        rdf:type                owl:AnnotationProperty ;
                     dcterms:description     "VANN: A reference to a resource that provides an example of how this resource can be used. SCHEMA: Example/instance/realization/derivation of the concept of this creative work. eg. The paperback edition, first edition, or eBook."@en ;
                     rdfs:isDefinedBy        <http://purl.org/vocab/vann/> ;
                     dcterms:issued          "2005-04-01"^^xsd:date ;
-                    owl:equivalentProperty  schema:workExample ;
+                    dcterms:relation        schema:workExample ;
          
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:dateTime ;
@@ -1091,7 +1063,7 @@ vann:preferredNamespaceUri
                     dcterms:description     "VANN: The preferred namespace URI to use when using terms from this vocabulary in an XML document. VOID: A URI that is a common string prefix of all the entity URIs in a void:Dataset."@en ;
                     rdfs:isDefinedBy        <http://purl.org/vocab/vann/> ;
                     dcterms:issued          "2005-04-01"^^xsd:date ;
-                    owl:equivalentProperty  void:uriSpace ;
+                    dcterms:relation        void:uriSpace ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:dateTime ;
                     
@@ -1109,7 +1081,7 @@ vann:preferredNamespacePrefix
                     dcterms:description     "VANN: The preferred namespace prefix to use when using terms from this vocabulary in an XML document. IDOT: Short label that is commonly used to refer to the dataset. Often utilised to identify the dataset in IRIs for specific items (or records). This may also stand in place of the base IRI of the dataset (e.g. see http://prefix.cc)."@en ; 
                     rdfs:isDefinedBy        <http://purl.org/vocab/vann/> ;
                     dcterms:issued          "2005-04-01"^^xsd:date ;
-                    owl:equivalentProperty  idot:preferredPrefix ,
+                    dcterms:relation        idot:preferredPrefix ,
                                             oboinowl:default-namespace ,
                                             oboinowl:hasDefaultNamespace ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
@@ -1149,7 +1121,7 @@ mod:synonymProperty rdf:type                owl:DatatypeProperty ;
                     dcterms:description     "MOD: Property used to specify objects' synonyms."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
-                    owl:equivalentProperty  oboinowl:hasSynonymType ,
+                    dcterms:relation        oboinowl:hasSynonymType ,
                                             oboinowl:synonymtypedef ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:dateTime ;
@@ -1265,7 +1237,7 @@ void:uriRegexPattern
                     dcterms:description     "VOID: A regular expression that matches the URIs of a void:Dataset's entities. IDOT: Regular expression describing alphanumeric strings used to identify items (or records) in a dataset."@en ;
                     rdfs:isDefinedBy        <http://vocab.deri.ie/void> ;
                     dcterms:issued          "2010-01-26"^^xsd:date ;
-                    owl:equivalentProperty  idot:identifierPattern ;
+                    dcterms:relation        idot:identifierPattern ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:dateTime ;
                     
@@ -1283,7 +1255,7 @@ mod:toDoList        rdf:type                owl:ObjectProperty ;
                     dcterms:description     "VOID: Describes future tasks planned by a resource curator. This property is primarily intended to be used for vocabularies or datasets, but the domain is left open, it can be used for any resource. Use iCalendar Vtodo class and its properties to further describe the task calendar, priorities etc."@en ;    
                     rdfs:isDefinedBy        <http://purl.org/vocommons/voaf> ;
                     dcterms:issued          "2013-05-23"^^xsd:date ;
-                    owl:equivalentProperty  voaf:toDoList ;
+                    dcterms:relation        voaf:toDoList ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:dateTime ;
                     
@@ -1303,7 +1275,7 @@ void:exampleResource
                     dcterms:description     "VOID: Example resource of dataset. IDOT: An example identifier used by one item (or record) from a dataset."@en ;
                     rdfs:isDefinedBy        <http://vocab.deri.ie/void> ;
                     dcterms:issued          "2010-01-26"^^xsd:date ;
-                    owl:equivalentProperty  idot:exampleIdentifier ;
+                    dcterms:relation        idot:exampleIdentifier ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:dateTime ;
                     
@@ -1384,7 +1356,7 @@ dcterms:creator     rdf:type                rdf:Property ;
                     dcterms:description     "DCTERMS: An entity responsible for making the resource. Recommended practice is to identify the creator with a URI.  If this is not possible or feasible, a literal value that identifies the creator may be provided."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
-                    owl:equivalentProperty  omv:creator ,
+                    dcterms:relation        omv:creator ,
                                             pav:authoredBy ,
                                             pav:createdBy ,
                                             schema:author ,
@@ -1411,7 +1383,7 @@ dcterms:contributor rdf:type                rdf:Property ;
                     dcterms:description     "DCTERMS: An entity responsible for making contributions to the resource. OMV: Contributors to the creation of the ontology. PAV: The resource was contributed to by the given agent. SCHEMA: A secondary contributor to the CreativeWork or Event. DOAP: Project contributor."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
-                    owl:equivalentProperty  omv:hasContributor ,
+                    dcterms:relation        omv:hasContributor ,
                                             pav:contributedBy ,
                                             schema:contributor ,
                                             doap:developer ,
@@ -1438,7 +1410,7 @@ dcterms:publisher   rdf:type                rdf:Property ;
                     dcterms:description     "DDCTERMS: An entity responsible for making the resource available."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
-                    owl:equivalentProperty  schema:publisher ,
+                    dcterms:relation        schema:publisher ,
                                             adms:schemaAgency ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:dateTime ;
@@ -1502,7 +1474,7 @@ dcterms:rightsHolder
                     dcterms:description     "DCTERMS: A person or organization owning or managing rights over the resource. MOD: The person who can be contacted to enquire about an ontology. SCHEMA: The party holding the legal copyright to the CreativeWork. DCAT: Relevant contact information for the cataloged resource. Use of vCard is recommended."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2004-06-14"^^xsd:date ;
-                    owl:equivalentProperty  schema:copyrightHolder ,
+                    dcterms:relation        schema:copyrightHolder ,
                                             dcat:contactPoint ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:dateTime ;
@@ -1529,7 +1501,7 @@ dcterms:subject     rdf:type                rdf:Property ;
                     dcterms:description     "DCTERMS: The topic of the resource. OMV: Typically, the domain can refer to established topic hierarchies such as the general purpose topic hierarchy DMOZ or the domain specific topic hierarchy ACM for the computer science domain. SCHEMA: The subject matter of the content. DCAT: A main category of the resource. A resource can have multiple themes. FOAF: A topic of some page or document."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
-                    owl:equivalentProperty  omv:hasDomain ,
+                    dcterms:relation        omv:hasDomain ,
                                             schema:about ,
                                             dcat:theme ,
                                             foaf:topic ;
@@ -1572,7 +1544,7 @@ owl:imports         rdf:type                owl:OntologyProperty  ;
                     dcterms:description     "OWL: References another OWL ontology containing definitions, whose meaning is considered to be part of the meaning of the importing ontology. OMV: References another ontology metadata instance that describes an ontology containing definitions, whose meaning is considered to be part of the meaning of the ontology described by this ontology metadata instance. DCTERMS: A related resource that is required by the described resource to support its function, delivery, or coherence. VOAF: Indicates that the subject vocabulary extends the expressivity of the object vocabulary by declaring subsumption relationships, using object vocabulary class as domain or range of a subject vocabulary property, defining local restrictions etc ...."@en ;  
                     rdfs:isDefinedBy        <http://www.w3.org/2002/07/owl#> ;
                     dcterms:issued          "2004-02-10"^^xsd:date ;
-                    owl:equivalentProperty  omv:useImports ,
+                    dcterms:relation        omv:useImports ,
                                             dcterms:requires ,
                                             voaf:extends ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
@@ -1593,7 +1565,7 @@ owl:PriorVersion    rdf:type                owl:AnnotationProperty, owl:Ontology
                     dcterms:description     "OWL:  This identifies the specified ontology as a prior version of the containing ontology. OMV: Contains a reference to another ontology metadata instance. DCTERMS: A related resource of which the described resource is a version, edition, or adaptation. PROV: A revision is a derivation for which the resulting entity is a revised version of some original. The implication here is that the resulting entity contains substantial content from the original. DOOR: Prior version relation from OWL. ADMS: A link to the previous version of the Asset."@en ;  
                     rdfs:isDefinedBy        <http://www.w3.org/2002/07/owl#> ;
                     dcterms:issued          "2004-02-10"^^xsd:date ;
-                    owl:equivalentProperty  omv:hasPriorVersion ,
+                    dcterms:relation        omv:hasPriorVersion ,
                                             dcterms:isVersionOf ,
                                             prov:wasRevisionOf ,
                                             door:priorVersion ,
@@ -1617,7 +1589,7 @@ owl:backwardCompatibleWith
                     dcterms:description     "OWL: This identifies the specified ontology as a prior version of the containing ontology, and further indicates that it is backward compatible with it. OMV: The ontology metadata instance which describes an ontology that is a compatible prior version of the ontology described by this ontology metadata Instance. DOOR: The relation of being a compatible new version from owl."@en ;  
                     rdfs:isDefinedBy        <http://www.w3.org/2002/07/owl#> ;
                     dcterms:issued          "2004-02-10"^^xsd:date ;
-                    owl:equivalentProperty  omv:isBackwardCompatibleWith ,
+                    dcterms:relation        omv:isBackwardCompatibleWith ,
                                             door:backwardCompatibleWith ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:dateTime ;
@@ -1638,7 +1610,7 @@ owl:incompatibleWith
                     dcterms:description     "OWL: This indicates that the containing ontology is a later version of the referenced ontology, but is not backward compatible with it. OMV: The described ontology is a later version of the ontology described by the metadata specified, but is not backward compatible with it. It can be used to explicitly state that ontology cannot upgrade to use the new version without checking whether changes are required. "@en ;  
                     rdfs:isDefinedBy        <http://www.w3.org/2002/07/owl#> ;
                     dcterms:issued          "2004-02-10"^^xsd:date ;
-                    owl:equivalentProperty  omv:isIncompatibleWith ,
+                    dcterms:relation        omv:isIncompatibleWith ,
                                             door:owlIncompatibleWith ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:dateTime ;
@@ -1656,7 +1628,7 @@ dcterms:isPartOf    rdf:type                rdf:Property ;
                     dcterms:description     "DCTERMS: A related resource in which the described resource is physically or logically included. MOD: Shall be used to identify a subset or a view of an ontology. DOOR: An ontology is included in another if its model is contained in the one of the other ontology. SCHEMA: Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2000-07-11"^^xsd:date ;
-                    owl:equivalentProperty  door:includedIn ,
+                    dcterms:relation        door:includedIn ,
                                             void:subset , 
                                             schema:isPartOf ,
                                             <http://www.isibang.ac.in/ns/mod/1.1/module> ;
@@ -1676,7 +1648,7 @@ dcterms:hasPart     rdf:type                rdf:Property ;
                     dcterms:description     "DCTERMS: A related resource that is included either physically or logically in the described resource. SCHEMA: Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense). ADMS: Links to a sample of an Asset (which is itself an Asset)."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2000-07-11"^^xsd:date ;
-                    owl:equivalentProperty  schema:hasPart ,
+                    dcterms:relation        schema:hasPart ,
                                             adms:sample , 
                                             oboinowl:hasSubset ;
                     pav:derivedFrom        <http://www.isibang.ac.in/ns/mod/1.0> ;
@@ -1695,7 +1667,7 @@ dcterms:hasVersion  rdf:type                rdf:Property ;
                     dcterms:description     "DCTERMS: a related resource that is a version, edition, or adaptation of the described resource. MOD: A related ontology that is a version, edition, or adtapation of the described ontology. PAV: This resource has a more specific, versioned resource."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2000-07-11"^^xsd:date ;
-                    owl:equivalentProperty  schema:hasPart ,
+                    dcterms:relation        schema:hasPart ,
                                             pav:hasVersion , 
                                             <http://www.isibang.ac.in/ns/mod/1.2/version> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
@@ -1714,7 +1686,7 @@ dcterms:isFormatOf  rdf:type                rdf:Property ;
                     dcterms:description     "DCTERMS: A related resource that is substantially the same as the described resource, but in another format."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2000-07-11"^^xsd:date ;
-                    owl:equivalentProperty  schema:hasPart ,
+                    dcterms:relation        schema:hasPart ,
                                             <http://www.isibang.ac.in/ns/mod/1.2/syntax> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:dateTime ;
@@ -1732,7 +1704,7 @@ dcterms:hasFormat   rdf:type                rdf:Property ;
                     dcterms:description     "DCTERMS: A related resource that is substantially the same as the pre-existing described resource, but in another format."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2000-07-11"^^xsd:date ;
-                    owl:equivalentProperty  schema:hasPart ,
+                    dcterms:relation        schema:hasPart ,
                                             <http://www.isibang.ac.in/ns/mod/1.2/syntax> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:dateTime ;
@@ -1769,7 +1741,7 @@ mod:semanticArtefactRelation
                     dcterms:description     "MOD: A general property for semantic artefact relations. DOOR: An ontology is related to another if one of the DOOR relations is satisfied."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod/2.0> ;
                     dcterms:issued          "2021-12-06"^^xsd:date ;
-                    owl:equivalentProperty  door:ontologyRelatedTo ; 
+                    dcterms:relation        door:ontologyRelatedTo ; 
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
                     pav:importedOn          "2021-12-06"^^xsd:dateTime ;
 
@@ -1787,7 +1759,7 @@ mod:reliesOn        rdf:type                owl:ObjectProperty ;
                     dcterms:description     "MOD: A general property for different kind of case when a semantic resource relies or reuses another one. VOAF: Indicates that the subject vocabulary uses or extends some class or property of the object vocabulary. VOID: A vocabulary that is used in the dataset."@en ;
                     rdfs:isDefinedBy        <http://purl.org/vocommons/voaf> ;
                     dcterms:issued          "2013-05-24"^^xsd:date ;
-                    owl:equivalentProperty  voaf:reliesOn ,
+                    dcterms:relation        voaf:reliesOn ,
                                             void:vocabulary  ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
                     pav:importedOn          "2021-12-06"^^xsd:dateTime ;
@@ -1807,7 +1779,7 @@ mod:usedBy          rdf:type                owl:ObjectProperty ;
                     dcterms:description     "VOAF: Indicates that the subject vocabulary is used by the object vocabulary. NKOS: Agent using the described KOS."@en ;
                     rdfs:isDefinedBy        <http://purl.org/vocommons/voaf> ;
                     dcterms:issued          "2013-05-23"^^xsd:date ;
-                    owl:equivalentProperty  voaf:usedBy ,
+                    dcterms:relation        voaf:usedBy ,
                                             nkos:usedBy ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:dateTime ;
@@ -1827,7 +1799,7 @@ mod:specializes     rdf:type                owl:ObjectProperty ;
                     dcterms:description     "DOOR: Evolution which involves a only at the syntactic level. PROV: An entity that is a specialization of another shares all aspects of the latter, and additionally presents more specific aspects of the same thing as the latter. VOAF:Indicates that the subject vocabulary defines some subclasses or subproperties of the object vocabulary, or local restrictions on those."@en ;
                     rdfs:isDefinedBy        <http://purl.org/vocommons/voaf> ;
                     dcterms:issued          "2013-05-23"^^xsd:date ;
-                    owl:equivalentProperty  door:explanationEvolution ,
+                    dcterms:relation        door:explanationEvolution ,
                                             voaf:specializes ,
                                             prov:specializationOf ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
@@ -1848,7 +1820,7 @@ mod:generalizes     rdf:type                owl:ObjectProperty ;
                     dcterms:description     "VOAF: Indicates that the subject vocabulary generalizes by some superclasses or superproperties the object vocabulary. PROV: Inverse property of specializationOf."@en ;
                     rdfs:isDefinedBy        <http://purl.org/vocommons/voaf> ;
                     dcterms:issued          "2013-05-23"^^xsd:date ;
-                    owl:equivalentProperty  voaf:generalizes ,
+                    dcterms:relation        voaf:generalizes ,
                                             prov:generalizationOf ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:dateTime ;
@@ -1867,7 +1839,7 @@ schema:workTranslation
                     dcterms:description     "MOD: A pointer to the translated ontology(ies) for an existing ontology. SCHEMA: A work that is a translation of the content of this work. ADMS: Links Assets that are translations of each other."@en ;
                     rdfs:isDefinedBy        <http://schema.org/> ;
                     dcterms:issued          "2012-04-21"^^xsd:date ;
-                    owl:equivalentProperty  adms:translation ,
+                    dcterms:relation        adms:translation ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/translation> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:dateTime ;
@@ -1888,7 +1860,7 @@ schema:translationOfWork
                     dcterms:description     "SCHEMA: The work that this work has been translated from. ADMS: Links Assets that are translations of each other."@en ;
                     rdfs:isDefinedBy        <http://schema.org/> ;
                     dcterms:issued          "2012-04-21"^^xsd:date ;
-                    owl:equivalentProperty  adms:translation  ;
+                    dcterms:relation        adms:translation  ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:dateTime ;
 
@@ -1909,7 +1881,7 @@ mod:comesFromTheSameDomain
                     dcterms:description     "DOOR: If the two ontologies come from the same domain (without any other details)."@en ;
                     rdfs:isDefinedBy        <http://kannel.open.ac.uk/ontology> ;
                     dcterms:issued          "2009-10-06"^^xsd:date ;
-                    owl:equivalentProperty  <http://kannel.open.ac.uk/ontology/comesFromTheSameDomain> ;
+                    dcterms:relation        <http://kannel.open.ac.uk/ontology/comesFromTheSameDomain> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:dateTime ;
             
@@ -1928,7 +1900,7 @@ mod:similar     rdf:type                    owl:ObjectProperty ;
                     dcterms:description     "VOAF: Used to assert that two vocabularies are similar in scope and objectives, independently of the fact that they otherwise refer to each other. DOOR: Represents the meaning of 'how an ontology overlap/cover parts of the same area of interest of another ontology.'"@en ;
                     rdfs:isDefinedBy        <http://purl.org/vocommons/voaf> ;
                     dcterms:issued          "2013-05-23"^^xsd:date ;
-                    owl:equivalentProperty  <http://kannel.open.ac.uk/ontology/similarTo> ,
+                    dcterms:relation        <http://kannel.open.ac.uk/ontology/similarTo> ,
                                             voaf:similar ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:dateTime ;
@@ -1949,7 +1921,7 @@ mod:hasEquivalencesWith
                     dcterms:description     "VOAF: Indicates that the subject vocabulary declares some equivalent classes or properties with the object vocabulary. DOOR: Links two ontologies if there exists an alignment which covers a substantial part of the vocabulary (i.e., a proportion greater than a threshold). NKOS: A related resource with which the described resource is aligned."@en ;
                     rdfs:isDefinedBy        <http://purl.org/vocommons/voaf> ;
                     dcterms:issued          "2013-05-23"^^xsd:date ;
-                    owl:equivalentProperty  door:isAlignedTo ,
+                    dcterms:relation        door:isAlignedTo ,
                                             voaf:hasEquivalencesWith ,
                                             nkos:alignedWith ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
@@ -1971,7 +1943,7 @@ mod:hasDisparateModelling
                     dcterms:description     "DOOR: Disagreements related  to  the  conceptualization  of  the  ontologies. Two ontologies are considered to have disparate modeling if they represent corresponding entities in different ways, e.g.  as an instance in one case and a class in the other."@en ;
                     rdfs:isDefinedBy        <http://kannel.open.ac.uk/ontology> ;
                     dcterms:issued          "2009-10-06"^^xsd:date ;
-                    owl:equivalentProperty  <http://kannel.open.ac.uk/ontology/hasDisparateModelling> ;
+                    dcterms:relation        <http://kannel.open.ac.uk/ontology/hasDisparateModelling> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:dateTime ;
             
@@ -1993,7 +1965,7 @@ mod:hasDisjunctionsWith
                     dcterms:description     "VOAF: Indicates that the subject vocabulary declares some disjunct classes with the object vocabulary."@en ;
                     rdfs:isDefinedBy        <http://purl.org/vocommons/voaf> ;
                     dcterms:issued          "2013-05-23"^^xsd:date ;
-                    owl:equivalentProperty  voaf:hasDisjunctionsWith ;
+                    dcterms:relation        voaf:hasDisjunctionsWith ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:dateTime ;
             
@@ -2017,7 +1989,7 @@ foaf:primaryTopic   rdf:type                owl:ObjectProperty , owl:FunctionalP
                     dcterms:description     ""@en ;
                     rdfs:isDefinedBy        <http://xmlns.com/foaf/0.1/> ;
                     dcterms:issued          "2014-01-14"^^xsd:date ;
-                    owl:equivalentProperty  omv:keyClasses ,
+                    dcterms:relation        omv:keyClasses ,
                                             schema:mainEntity ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:dateTime ;
@@ -2039,7 +2011,7 @@ void:rootResource   rdf:type                rdf:Property ;
                     dcterms:description     "VOID: A top concept or entry point for a void:Dataset that is structured in a tree-like fashion. All resources in a dataset can be reached by following links from its root resources in a small number of steps. MOD: This property is to provide the root class(es) of an ontology. This is automatically populated by taking the direct subclasses of owl:Thing. If the ontology is also defined as a unique skos:ConceptScheme, then this property should become equivalent of skos:hasTopConcept. SKOS: The property skos:hasTopConcept is, by convention, used to link a concept scheme to the SKOS concept(s) which are topmost in the hierarchical relations for that scheme."@en ;
                     rdfs:isDefinedBy        <http://vocab.deri.ie/void> ;
                     dcterms:issued          "2010-01-26"^^xsd:date ;
-                    owl:equivalentProperty  skos:hasTopConcept ,
+                    dcterms:relation        skos:hasTopConcept ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/rootClasses> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:dateTime ;
@@ -2072,7 +2044,7 @@ sd:endpoint         rdf:type                rdf:Property , owl:InverseFunctional
                     dcterms:description     "SD: Relates an instance of sd:Service to a SPARQL endpoint that implements the SPARQL Protocol service for the service. The object of the sd:endpoint property is an IRI. VOID: A SPARQL protocol endpoint that allows SPARQL query access to a void:Dataset."@en ;
                     rdfs:isDefinedBy        <ttp://www.w3.org/ns/sparql-service-description> ;
                     dcterms:issued          "2013-03-21"^^xsd:date ;
-                    owl:equivalentProperty  void:sparqlEndpoint ;
+                    dcterms:relation        void:sparqlEndpoint ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:dateTime ;
                     
@@ -2089,7 +2061,7 @@ mod:metadataVoc     rdf:type                owl:ObjectProperty ;
                     dcterms:description     "VOAF: Indicates that the subject vocabulary uses the object vocabulary in metadata at vocabulary or element level. SCHEMA: Indicates (by URL or string) a particular version of a schema used in some CreativeWork. ADMS: A schema according to which the Asset Repository can provide data about its content, e.g. ADMS. MOD: A vocabulary(ies) that is used and/or referred to create the current ontology."@en ;    
                     rdfs:isDefinedBy        <http://purl.org/vocommons/voaf> ;
                     dcterms:issued          "2013-05-23"^^xsd:date ;
-                    owl:equivalentProperty  voaf:metadataVoc ,
+                    dcterms:relation        voaf:metadataVoc ,
                                             schema:schemaVersion ,
                                             adms:supportedSchema ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/vocabularyUsed> ;
@@ -2171,7 +2143,7 @@ dcat:downloadURL    rdf:type                rdf:Property , owl:ObjectProperty ;
                     dcterms:description     "DCAT: The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution's dct:format and/or dcat:mediaType. VOID: An RDF dump, partial or complete, of a void:Dataset. DOAP: Mirror of software download web page. SCHEMA: A downloadable form of this dataset, at a specific location, in a specific format."@en ; 
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
                     dcterms:issued          "2014-01-16"^^xsd:date ;
-                    owl:equivalentProperty  void:dataDump ,
+                    dcterms:relation        void:dataDump ,
                                             doap:download-mirror ,
                                             schema:distribution ;
                    pav:derivedFrom          <http://www.isibang.ac.in/ns/mod/1.4> ;
@@ -2234,7 +2206,7 @@ mod:knownUsage      rdf:type                owl:DatatypeProperty ;
                     dcterms:description     "OMV: The applications where the ontology is being used."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
-                    owl:equivalentProperty  omv:knownUsage ;
+                    dcterms:relation        omv:knownUsage ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:dateTime ;
             
@@ -2254,7 +2226,7 @@ mod:endorsedBy      rdf:type                owl:ObjectProperty ;
                     dcterms:description     "MOD: An ontology endorsed by an agent. OMV: The parties that have expressed support or approval to this ontology."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
-                    owl:equivalentProperty  omv:endorsedBy ;
+                    dcterms:relation        omv:endorsedBy ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:dateTime ;
             
@@ -2274,7 +2246,7 @@ mod:usedInProject   rdf:type                owl:ObjectProperty ;
                     dcterms:description     "MOD: An ontology that is used in a project."@en ; 
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2015-08-05"^^xsd:date ;
-                    owl:equivalentProperty  <http://www.isibang.ac.in/ns/mod/1.0/ontologyInUse> ;
+                    dcterms:relation        <http://www.isibang.ac.in/ns/mod/1.0/ontologyInUse> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:dateTime ;
                     
@@ -2292,7 +2264,7 @@ dcterms:audience    rdf:type                rdf:Property ;
                     dcterms:description     "DCTERMS: a class of entity for whom the resource is intended or useful (public visé ou recommandé pour la ressource). DOAP: Description of target user base. SCHEMA: An intended audience, i.e. a group for whom something was created."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2001-05-21"^^xsd:date ; 
-                    owl:equivalentProperty  doap:audience ,
+                    dcterms:relation        doap:audience ,
                                             schema:audience ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:dateTime ;
@@ -2314,7 +2286,7 @@ foaf:fundedBy       rdf:type                rdf:Property , owl:ObjectProperty ;
                     dcterms:description     "MOD: An ontology that is sponsored by and developed under a project. FOAF: An organization funding a project or person. SCHEMA: The Organization on whose behalf the creator was working."@en ;
                     rdfs:isDefinedBy        <http://xmlns.com/foaf/0.1/> ;
                     dcterms:issued          "2014-01-14"^^xsd:date ;
-                    owl:equivalentProperty  schema:sourceOrganization ,
+                    dcterms:relation        schema:sourceOrganization ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/sponsoredBy> ;
                     pav:derivedFrom          <http://www.isibang.ac.in/ns/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:dateTime ;
@@ -2386,7 +2358,7 @@ mod:hasEvaluation   rdf:type                owl:ObjectProperty ;
                     dcterms:description     "MOD: This property makes a relationship between an ontology and its evaluation result."@en ; 
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2015-08-05"^^xsd:date ;
-                    owl:equivalentProperty  schema:review ;
+                    dcterms:relation        schema:review ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:dateTime ;
                     
@@ -2447,7 +2419,7 @@ dcterms:created     rdf:type                rdf:Property ;
                     dcterms:description     "DCTERMS:date : A point or period of time associated with an event in the lifecycle of the resource. DCTERMS:created : Date of creation of the resource. DCTERMS:issued Date of formal issuance (e.g., publication) of the resource. PROV: Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation. PAV: The date this resource was authored. PAV: The date this resource was contributed to. PAV: The date of creation of the resource representation. DOAP: Date when something was created, in YYYY-MM-DD form. e.g. 2004-04-05. SCHEMA: The date on which the CreativeWork was created or the item was added to a DataFeed. DOAP: Date when something was created, in YYYY-MM-DD form. e.g. 2004-04-05."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2000-07-11"^^xsd:date ; 
-                    owl:equivalentProperty  omv:creationDate ,
+                    dcterms:relation        omv:creationDate ,
                                             dcterms:issued ,
                                             pav:authoredOn ,
                                             pav:contributedOn ,
@@ -2475,7 +2447,7 @@ dcterms:modified    rdf:type                rdf:Property ;
                     dcterms:description     "OMV: Date of the last modification made to the ontology. DCTERMS:Date on which the resource was changed. PAV: The date of the last update of the resource. An update is a change which did not warrant making a new resource related using pav:previousVersion, for instance correcting a spelling mistake. SCHEMA: The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2000-07-11"^^xsd:date ; 
-                    owl:equivalentProperty  omv:modificationDate ,
+                    dcterms:relation        omv:modificationDate ,
                                             schema:dateModified ,
                                             pav:lastUpdateOn ,
                                             <http://www.isibang.ac.in/ns/mod/1.1/creationDate> ;
@@ -2496,7 +2468,7 @@ dcterms:valid       rdf:type                rdf:Property ;
                     dcterms:description     "DCTERMS: Date (often a range) of validity of a resource. PROV: Invalidation is the start of the destruction, cessation, or expiry of an existing entity by an activity. The entity is no longer available for use (or further invalidation) after invalidation. Any generation or usage of an entity precedes its invalidation. SCHEMA: The end date and time of the item (in ISO 8601 date format)."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2000-07-11"^^xsd:date ; 
-                    owl:equivalentProperty  schema:endDate ,
+                    dcterms:relation        schema:endDate ,
                                             prov:invalidatedAtTime ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:dateTime ;
@@ -2516,7 +2488,7 @@ dcterms:dateSubmitted
                     dcterms:description     "DCTERMS: Date of submission of the resource. SCHEMA: Date of first broadcast/publication."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2002-07-13"^^xsd:date ; 
-                    owl:equivalentProperty  schema:datePublished ;
+                    dcterms:relation        schema:datePublished ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:dateTime ;
                     
@@ -2575,7 +2547,7 @@ mod:numberOfClasses rdf:type                owl:DatatypeProperty ;
                     dcterms:description     "MOD: The total number of classes in an ontology. OMV: Number of classes in the ontology. VOAF: The number of classes defined in the vocabulary namespace. Classes imported from other namespaces are not taken into account. VOID: The total number of distinct classes in a void:Dataset. In other words, the number of distinct resources occuring as objects of rdf:type."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
-                    owl:equivalentProperty  omv:numberOfClasses ,
+                    dcterms:relation        omv:numberOfClasses ,
                                             voaf:classNumber ,
                                             void:classes ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/noOfClasses> ;
@@ -2599,7 +2571,7 @@ mod:numberOfIndividuals
                     dcterms:description     "MOD: The total number of individuals in an ontology. OMV: Number of individuals in the ontology. VOID: The total number of entities that are described in a void:Dataset."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
-                    owl:equivalentProperty  omv:numberOfIndividuals ,
+                    dcterms:relation        omv:numberOfIndividuals ,
                                             void:entities ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/noOfIndividuals> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
@@ -2622,7 +2594,7 @@ mod:numberOfProperties
                     dcterms:description     "MOD: The total number of properties in an ontology. OMV: Number of properties in the ontology. VOAF: The number of properties defined in the vocabulary namespace. Properties imported from other namespaces are not taken into account. VOID: The total number of distinct properties in a void:Dataset. In other words, the number of distinct resources that occur in the predicate position of triples in the dataset."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
-                    owl:equivalentProperty  omv:numberOfProperties ,
+                    dcterms:relation        omv:numberOfProperties ,
                                             voaf:propertyNumber ,
                                             void:properties ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/noOfProperties> ;
@@ -2684,7 +2656,7 @@ mod:numberOfAxioms
                     dcterms:description     "MOD: The total number of axioms in an ontology. OMV: Number of axioms in the ontology."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
-                    owl:equivalentProperty  omv:numberOfAxioms ,
+                    dcterms:relation        omv:numberOfAxioms ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/noOfAxioms> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:dateTime ;
@@ -2724,7 +2696,7 @@ dcat:byteSize       rdf:type                rdf:Property , owl:DatatypeProperty 
                     dcterms:description     "DCAT: The size of a distribution in bytes. MOD: The byte size of an ontology."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
                     dcterms:issued          "2014-01-16"^^xsd:date ;
-                    owl:equivalentProperty  <http://www.isibang.ac.in/ns/mod/1.0/size> ,
+                    dcterms:relation        <http://www.isibang.ac.in/ns/mod/1.0/size> ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/byteSize> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:dateTime ;
@@ -2851,7 +2823,7 @@ dcterms:source      rdf:type                rdf:Property ;
                     dcterms:description     "DCTERMS: A related resource from which the described resource is derived. MOD: The ontology(ies) referred to while creating the present ontology. PROV: Influence is the capacity of an entity, activity, or agent to have an effect on the character, development, or behavior of another by means of usage, start, end, generation, invalidation, communication, derivation, attribution, association, or delegation. PROV: A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity. PAV: Derived from a different resource. NKOS: A resource used as the source for a derivative resource."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
-                    owl:equivalentProperty  schema:isBasedOn ,
+                    dcterms:relation        schema:isBasedOn ,
                                             nkos:basedOn ,
                                             prov:wasDerivedFrom , 
                                             prov:wasInfluencedBy ,
