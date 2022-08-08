@@ -263,7 +263,7 @@
 #                   dcterms:description     DESCCRIPTION FROM ORIGINAL SOURCE ;
 #                   rdfs:isDefinedBy        URI OF ORIGINAL SOURCE ;
 #                   dcterms:issued          "DATE OF THE FIRST CREATION OF THE PROPERTY BY ORIGINAL RESOURCE"^^xsd:date ;
-#                   dcterms:relation        EQUIVALENT PROPERTY (Equivalent properties have the same "values" (i.e., the same property extension))
+#                   dcterms:relation        RELATED PROPERTY IN ANOTHER METADATA (not owl:equivalentProperty); 
 #                   pav:derivedFrom         URI OF FIRST MOD VERSION INCLUDING" ;
 #                   pav:importedOn          "DATE OF FIRST MOD VERSION INCLUDING"^^xsd:dateTime ;
 #                    
