@@ -350,7 +350,7 @@ dcterms:alternative rdf:type                rdf:Property ;
 
 
 ### http://www.w3.org/2004/02/skos/core#hiddenLabel
-skos:hiddenLabel    rdf:type                rdfs:Property ,
+skos:hiddenLabel    rdf:type                rdf:Property ,
                                             owl:AnnotationProperty ;
                     rdfs:subPropertyOf      rdfs:label ;
                     rdfs:label              "hidden label"@en ,
