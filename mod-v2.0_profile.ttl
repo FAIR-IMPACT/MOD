@@ -2734,7 +2734,7 @@ mod:maxDepth        rdf:type                owl:DatatypeProperty ;
 
 
 ###  https://w3id.org/mod#maxChildCount
-mod:maxDepth        rdf:type                owl:DatatypeProperty ;
+mod:maxChildCount   rdf:type                owl:DatatypeProperty ;
                     rdfs:subPropertyOf      mod:metrics ;
                     rdfs:label              "maximum number of children per class"@en ,
                                             "nombre maximum d'enfant par classe"@fr ;
@@ -2751,41 +2751,42 @@ mod:maxDepth        rdf:type                owl:DatatypeProperty ;
 
 
 ###  https://w3id.org/mod#averageChildCount
-mod:maxDepth        rdf:type                owl:DatatypeProperty ;
-                    rdfs:subPropertyOf      mod:metrics ;
-                    rdfs:label              "average number of children per class"@en ,
-                                            "nombre moyen d'enfant par classe"@fr ;
-                    rdfs:range              xsd:nonNegativeInteger ;
-                    dcterms:description     "MOD: Average number of children per class (BioPortal definition)."@en ;
-                    rdfs:isDefinedBy        <https://w3id.org/mod> ;
-                    dcterms:issued          "2017-07-06"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+mod:averageChildCount           rdf:type                owl:DatatypeProperty ;
+                                rdfs:subPropertyOf      mod:metrics ;
+                                rdfs:label              "average number of children per class"@en ,
+                                                        "nombre moyen d'enfant par classe"@fr ;
+                                rdfs:range              xsd:nonNegativeInteger ;
+                                dcterms:description     "MOD: Average number of children per class (BioPortal definition)."@en ;
+                                rdfs:isDefinedBy        <https://w3id.org/mod> ;
+                                dcterms:issued          "2017-07-06"^^xsd:date ;
+                                pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                                pav:importedOn          "2018-08-02"^^xsd:dateTime ;
             
             #OPTIONAL STATEMENTS
-                    prov:wasInfluencedBy    "FAIR principle: R1" .
+                                prov:wasInfluencedBy    "FAIR principle: R1" .
 
 
 
 ###  https://w3id.org/mod#classesWithOneChild
-mod:maxDepth        rdf:type                owl:DatatypeProperty ;
-                    rdfs:subPropertyOf      mod:metrics ;
-                    rdfs:label              "number of classes with a single child"@en ,
-                                            "nombre de classes avec un seul enfant"@fr ;
-                    rdfs:range              xsd:nonNegativeInteger ;
-                    dcterms:description     "MOD: Number of classes that have only one subclass in the is-a hierarchy (BioPortal definition)."@en ;
-                    rdfs:isDefinedBy        <https://w3id.org/mod> ;
-                    dcterms:issued          "2017-07-06"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+mod:classesWithOneChild         rdf:type                owl:DatatypeProperty ;
+                                rdfs:subPropertyOf      mod:metrics ;
+                                rdfs:label              "number of classes with a single child"@en ,
+                                                        "nombre de classes avec un seul enfant"@fr ;
+                                rdfs:range              xsd:nonNegativeInteger ;
+                                dcterms:description     "MOD: Number of classes that have only one subclass in the is-a hierarchy (BioPortal definition)."@en ;
+                                rdfs:isDefinedBy        <https://w3id.org/mod> ;
+                                dcterms:issued          "2017-07-06"^^xsd:date ;
+                                pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                                pav:importedOn          "2018-08-02"^^xsd:dateTime ;
             
             #OPTIONAL STATEMENTS
-                    prov:wasInfluencedBy    "FAIR principle: R1" .
+                                prov:wasInfluencedBy    "FAIR principle: R1" .
 
 
 
 ###  https://w3id.org/mod#classesWithMoreThan25Children
-mod:maxDepth        rdf:type                owl:DatatypeProperty ;
+mod:classesWithMoreThan25Children
+                    rdf:type                owl:DatatypeProperty ;
                     rdfs:subPropertyOf      mod:metrics ;
                     rdfs:label              "number of classes with more than 25 children"@en ,
                                             "nombre de classes avec plus de 25 enfants"@fr ;
@@ -2802,7 +2803,8 @@ mod:maxDepth        rdf:type                owl:DatatypeProperty ;
 
 
 ###  https://w3id.org/mod#classesWithNoDefinition
-mod:maxDepth        rdf:type                owl:DatatypeProperty ;
+mod:classesWithNoDefinition
+                    rdf:type                owl:DatatypeProperty ;
                     rdfs:subPropertyOf      mod:metrics ;
                     rdfs:label              "number of classes with no definition"@en ,
                                             "nombre de classes sans définition"@fr ;
