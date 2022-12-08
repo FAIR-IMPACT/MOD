@@ -1993,7 +1993,9 @@ foaf:primaryTopic   rdf:type                owl:ObjectProperty , owl:FunctionalP
                                             "sujet principal"@fr ;
                     rdfs:domain             foaf:Document ;
                     rdfs:range              owl:Thing ;
-                    dcterms:description     ""@en ;
+                    dcterms:description     "OMV: Representative classes in the ontology.
+                                             FOAF: The primary topic of some page or document.
+                                             SCHEMA: Indicates the primary entity described in some page or other CreativeWork."@en ;
                     rdfs:isDefinedBy        <http://xmlns.com/foaf/0.1/> ;
                     dcterms:issued          "2014-01-14"^^xsd:date ;
                     dcterms:relation        omv:keyClasses ,
