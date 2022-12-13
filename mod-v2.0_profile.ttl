@@ -15,7 +15,7 @@
 @prefix dcmi: <http://purl.org/dc/dcmitype/> .
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix idot: <http://identifiers.org/idot/> .
+@prefix idot: <http://identifiers.org/idot/> . 
 @prefix nkos: <http://w3id.org/nkos#> .
 @prefix odrl: <http://www.w3.org/ns/odrl/2/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -311,7 +311,7 @@ dcterms:title       rdf:type                rdf:Property ;
                     rdfs:label              "title"@en ,
                                             "titre"@fr ;
                     rdfs:range              rdfs:Literal ;
-                    dcterms:description     "DCTERMS: A name given to the resource. OMV: The name by which an ontology is formally known. RDFS: A human-readable name for the subject. FOAF:  A name for some thing. SKOS: The preferred and alternative labels are useful when generating or creating human-readable representations of a knowledge organization system. SCHEMA: The name of the item."@en ;
+                    dcterms:description     "DCTERMS: A name given to the resource. OMV: The name by which an ontology is formally known. CC : The name the creator of a Work would like used when attributing re-use. RDFS: A human-readable name for the subject. FOAF:  A name for some thing. SKOS: The preferred and alternative labels are useful when generating or creating human-readable representations of a knowledge organization system. SCHEMA: The name of the item."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
                     dcterms:relation        cc:attributionName ,
