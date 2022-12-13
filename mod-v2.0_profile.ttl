@@ -777,7 +777,7 @@ dcat:keyword        rdf:type                rdf:Property , owl:DatatypeProperty 
                     rdfs:label              "keyword"@en ,
                                             "motclé"@fr ;
                     rdfs:range              rdfs:Literal ;
-                    dcterms:description     "DCAT: A keyword or tag describing a resource. MOD: A keyword(s) is used to describe the content of an ontology. OMV: List of keywords related to an ontology. SCHEMA: Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas."@en ;
+                    dcterms:description     "DCAT: A keyword or tag describing a resource. MOD: A keyword(s) is used to describe the content of an ontology. OMV: List of keywords related to an ontology. SCHEMA: Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.CTERMS : A keyword(s) is used to describe the content of an ontology"@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
                     dcterms:issued          "2014-01-16"^^xsd:date ;
                     dcterms:relation         omv:keywords ,
@@ -2832,7 +2832,7 @@ dcterms:source      rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:source , dcterms:relation ;
                     rdfs:label             "source"@en ,
                                             "source"@fr ;
-                    dcterms:description     "DCTERMS: A related resource from which the described resource is derived. MOD: The ontology(ies) referred to while creating the present ontology. PROV: Influence is the capacity of an entity, activity, or agent to have an effect on the character, development, or behavior of another by means of usage, start, end, generation, invalidation, communication, derivation, attribution, association, or delegation. PROV: A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity. PAV: Derived from a different resource. NKOS: A resource used as the source for a derivative resource."@en ;
+                    dcterms:description     "DCTERMS: A related resource from which the described resource is derived. MOD: The ontology(ies) referred to while creating the present ontology. PROV: Influence is the capacity of an entity, activity, or agent to have an effect on the character, development, or behavior of another by means of usage, start, end, generation, invalidation, communication, derivation, attribution, association, or delegation. PROV: A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity. PAV: Derived from a different resource. NKOS: A resource used as the source for a derivative resource. SCHEMA : A resource from which this work is derived or from which it is a modification or adaption."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
                     dcterms:relation        schema:isBasedOn ,
