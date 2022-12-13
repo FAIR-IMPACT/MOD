@@ -436,7 +436,7 @@ owl:versionInfo     rdf:type                owl:AnnotationProperty  ;
                                             "information de version"@fr ;
                     rdfs:domain             rdfs:Resource ;
                     rdfs:range              rdfs:Resource ;
-                    dcterms:description     "MOD: The version of the released ontology. OMV: The version information of the ontology. OWL: The annotation property that provides version information for an ontology or another OWL construct. PAV: The version number of a resource. This is a freetext string, typical values are '1.5' or '21'. DOAP: A project release."@en ;  
+                    dcterms:description     "MOD: The version of the released ontology. OMV: The version information of the ontology. SCHEMA : The version of the CreativeWork embodied by a specified resource. OWL: The annotation property that provides version information for an ontology or another OWL construct. PAV: The version number of a resource. This is a freetext string, typical values are '1.5' or '21'. DOAP: A project release."@en ;  
                     rdfs:isDefinedBy        <http://www.w3.org/2002/07/owl#> ;
                     dcterms:issued          "2004-02-10"^^xsd:date ;
                     dcterms:relation        omv:version ,
@@ -481,7 +481,7 @@ owl:deprecated     rdf:type                owl:AnnotationProperty ;
                                            "obsolète"@fr ;
                    rdfs:domain             rdfs:Resource ;
                    rdfs:range              rdfs:Resource ;
-                   dcterms:description     "OWL: The annotation property that indicates that a given entity has been deprecated. IDOT: Indicates if the current dataset is obsolete (not provided any more to the public community). Value can either be 'true' or 'false' (xsd:boolean). The statement is usually omitted if 'false'."@en ;
+                   dcterms:description     "OWL: The annotation property that indicates that a given entity has been deprecated. DCAT : An annotation with the owl:deprecated annotation property and the value equal to \"true\"^^xsd:boolean can be used to specify that an IRI is deprecated. IDOT: Indicates if the current dataset is obsolete (not provided any more to the public community). Value can either be 'true' or 'false' (xsd:boolean). The statement is usually omitted if 'false'."@en ;
                    rdfs:isDefinedBy        <http://www.w3.org/2002/07/owl#> ;
                    dcterms:issued          "2004-02-10"^^xsd:date ;
                    dcterms:relation        idot:obsolete ,
@@ -499,7 +499,7 @@ dcterms:license     rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:rights , dcterms:rights ;
                     rdfs:label              "license"@en ,
                                             "licence"@fr ;
-                    dcterms:description     "DCTERMS: A legal document giving official permission to do something with the resource. Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided. DCTERMS:rights Information about rights held in and over the resource. OMV: Underlying license model. SCHEMA: A license document that applies to this content, typically indicated by URL."@en ;
+                    dcterms:description     "DCTERMS: A legal document giving official permission to do something with the resource. Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided. DCTERMS:rights Information about rights held in and over the resource. OMV: Underlying license model. SCHEMA: A license document that applies to this content, typically indicated by URL. CC : A Work has a License.DUBLIN CORE : Information about rights held in and over the resource.DCMI : A legal document giving official permission to do something with the resource."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2004-06-14"^^xsd:date ;
                     dcterms:relation        cc:license ,
@@ -569,7 +569,7 @@ mod:hasSyntax       rdf:type                owl:DatatypeProperty ;
                                             "syntaxe"@fr ;
                     rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              xsd:anyURI ;
-                    dcterms:description     "MOD: The syntax followed in the creation of an ontology. OMV: The presentation syntax for the ontology langage."@en ;
+                    dcterms:description     "MOD: The syntax followed in the creation of an ontology. OMV: The presentation syntax for the ontology langage. DUBLIN CORE : The file format, physical medium, or dimensions of the resource."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
                     dcterms:relation        omv:hasOntologySyntax ,
@@ -590,7 +590,7 @@ dcterms:language    rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:language ;
                     rdfs:label              "natural language"@en ,
                                             "langage naturel"@fr ;
-                    dcterms:description     "DCTERMS: A language of the resource. Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [[IETF-BCP47](https://tools.ietf.org/html/bcp47)] language tag. OMV: The language of the content of the ontology, i.e. English, French, etc. DOAP: ISO language code a project has been translated into."@en ;
+                    dcterms:description     "DCTERMS: A language of the resource. Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [[IETF-BCP47](https://tools.ietf.org/html/bcp47)] language tag. OMV: The language of the content of the ontology, i.e. English, French, etc. DOAP: ISO language code a project has been translated into. SCHEMA : Media type, typically MIME format (see IANA site) of the content. "@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
                     dcterms:relation        omv:naturalLanguage ,
@@ -1414,7 +1414,8 @@ dcterms:publisher   rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:publisher ;
                     rdfs:label              "publisher"@en ,
                                             "éditeur"@fr ;
-                    dcterms:description     "DDCTERMS: An entity responsible for making the resource available."@en ;
+                    dcterms:description     "DDCTERMS: An entity responsible for making the resource available.SCHEMA : The publisher of creative work. 
+"@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
                     dcterms:relation        schema:publisher ,
@@ -1457,7 +1458,7 @@ mod:curatedBy       rdf:type                owl:ObjectProperty ;
 schema:translator   rdf:type                rdf:Property ;
                     rdfs:label              "translator"@en ,
                                             "traducteur"@fr ;
-                    dcterms:description     "SCHEMA: Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event."@en ;
+                    dcterms:description     "SCHEMA: Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event. DCT : Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event"@en ;
                     rdfs:isDefinedBy        <http://schema.org/> ;
                     dcterms:issued          "2012-04-21"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
