@@ -1189,6 +1189,41 @@ mod:obsoleteProperty
                                             "FAIR principle: R1" .
 
 
+### https://w3id.org/mod#createdProperty
+mod:createdProperty
+                    rdf:type               owl:DatatypeProperty ;
+                    rdfs:label              "object creation date  property"@en ,
+                                            "propriété de date de création des objets"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
+                    rdfs:range              xsd:anyURI ;
+                    dcterms:description     "MOD: Property used to specify the date of creation of a class or another object in the ontology."@en ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod> ;
+                    dcterms:issued          "2018-08-02"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
+                    pav:importedOn          "2023-01-24"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "MIRO guidelines: E.7" ,
+                                            "FAIR principle: R1" .
+
+
+### https://w3id.org/mod#modifiedProperty
+mod:modifiedProperty
+                    rdf:type               owl:DatatypeProperty ;
+                    rdfs:label              "object modiifcation date property"@en ,
+                                            "propriété de date de modification des objets"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
+                    rdfs:range              xsd:anyURI ;
+                    dcterms:description     "MOD: Property used to specify the date of modification of a class or another object in the ontology."@en ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod> ;
+                    dcterms:issued          "2018-08-02"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
+                    pav:importedOn          "2023-01-24"^^xsd:dateTime ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "MIRO guidelines: E.7" ,
+                                            "FAIR principle: R1" .
+
 
 ### https://w3id.org/mod#hierarchyProperty
 mod:hierarchyProperty
