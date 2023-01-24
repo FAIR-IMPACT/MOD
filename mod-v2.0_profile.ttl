@@ -1193,11 +1193,11 @@ mod:obsoleteProperty
 ### https://w3id.org/mod#hierarchyProperty
 mod:hierarchyProperty
                     rdf:type                owl:DatatypeProperty ;
-                    rdfs:label              "transitive hierarchy property"@en ,
-                                            "propriété de hiérarchie transitive"@fr ;
+                    rdfs:label              "hierarchy property"@en ,
+                                            "propriété de hiérarchie"@fr ;
                     rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              xsd:anyURI ;
-                    dcterms:description     "MOD: Property used to specify the hierarchy (e.g. rdfs:subClassOf or skos:broader)."@en ;
+                    dcterms:description     "MOD: Property used to specify the hierarchy (e.g., rdfs:subClassOf or skos:broader)."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
