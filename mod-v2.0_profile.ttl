@@ -709,7 +709,7 @@ dcat:landingPage    rdf:type                rdf:Property , owl:ObjectProperty ;
                     rdfs:label              "landing page"@en ,
                                             "page d'atterrissage"@fr ;
                     rdfs:range              foaf:Document ;
-                    dcterms:description     "DCAT: A Web page that can be navigated to in a Web browser to gain access to the dataset, its distributions and/or additional information. MOD: A link to the documentation page on a thing. OMV: URL for further documentation. RDFS: Further information about the subject resource. DOAP: URL of Wiki for collaborative discussion of project. VANN: A reference to a resource that provides information on how this resource is to be used."@en ;
+                    dcterms:description     "DCAT: A Web page that can be navigated to in a Web browser to gain access to the dataset, its distributions and/or additional information. MOD: A link to the documentation page on a thing. OMV: URL for further documentation. RDFS: Further information about the subject resource. DOAP: URL of Wiki for collaborative discussion of project. VANN: A reference to a resource that provides information on how this resource is to be used. FOAF: FOAF: A page or document about this thing."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
                     dcterms:issued          "2014-01-16"^^xsd:date ;
                     dcterms:relation        omv:documentation ,
@@ -751,7 +751,7 @@ dcat:accessURL      rdf:type                rdf:Property , owl:ObjectProperty ;
  
  
 
-### http://www.w3.org/2000/01/rdf-schema#Comment
+### http://www.w3.org/2000/01/rdf-schema#comment
 rdfs:comment        rdf:type                rdf:Property ;
                     rdfs:label              "notes or comments"@en ,
                                             "notes ou commentaires"@fr ;
@@ -854,7 +854,10 @@ mod:usedEngineeringMethodology
                                             "méthodologie de développement"@fr ;
                     rdfs:domain             mod:SemanticArtefact ;
                     rdfs:range              mod:EngineeringMethodology ;
-                    dcterms:description     "MOD: A methodolgy follwoing which an ontology is created. OMV: Information about the method model used to create the ontology."@en ;
+                    dcterms:description     "MOD: A methodolgy follwoing which an ontology is created.
+                                             OMV: Information about the method model used to create the ontology.
+                                             ADMS: More information about the format in which an Asset Distribution is released. This is different from the file format as, for example, a ZIP file (file format) could contain an XML schema (representation technique).
+                                             SCHEMA: The publishingPrinciples property indicates (typically via URL) a document describing the editorial principles of an Organization (or individual, e.g. a Person writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
                     dcterms:relation        adms:representationTechnique ,
@@ -898,7 +901,8 @@ dcterms:coverage    rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:coverage ;
                     rdfs:label              "coverage"@en ,
                                             "couverture"@fr ;
-                    dcterms:description     "DCTERMS: The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant. Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names [[TGN](https://www.getty.edu/research/tools/vocabulary/tgn/index.html)]. Where appropriate, named places or time periods may be used in preference to numeric identifiers such as sets of coordinates or date ranges.  Because coverage is so broadly defined, it is preferable to use the more specific subproperties Temporal Coverage and Spatial Coverage."@en ;
+                    dcterms:description     "DCTERMS: The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant. Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. 
+                                            SCHEMA: The 'spatial' property can be used in cases when more specific properties (e.g. locationCreated, spatialCoverage, contentLocation) are not known to be appropriate."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
@@ -1192,7 +1196,7 @@ mod:obsoleteProperty
 ### https://w3id.org/mod#createdProperty
 mod:createdProperty
                     rdf:type               owl:DatatypeProperty ;
-                    rdfs:label              "object creation date  property"@en ,
+                    rdfs:label              "object creation date property"@en ,
                                             "propriété de date de création des objets"@fr ;
                     rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              xsd:anyURI ;
@@ -1247,8 +1251,8 @@ mod:hierarchyProperty
 ### https://w3id.org/mod#obsoleteParent
 mod:obsoleteParent
                     rdf:type                owl:DatatypeProperty ;
-                    rdfs:label              "transitive hierarchy property"@en ,
-                                            "propriété de hiérarchie transitive"@fr ;
+                    rdfs:label              "Root of obsolete branch"@en ,
+                                            "Racine de la branche des objets obsolètes"@fr ;
                     rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              xsd:anyURI ;
                     dcterms:description     "MOD: Property used to specify the root of an obsolete branch in the ontology."@en ;
@@ -1449,8 +1453,9 @@ dcterms:publisher   rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:publisher ;
                     rdfs:label              "publisher"@en ,
                                             "éditeur"@fr ;
-                    dcterms:description     "DDCTERMS: An entity responsible for making the resource available.SCHEMA : The publisher of creative work. 
-"@en ;
+                    dcterms:description     "DDCTERMS: An entity responsible for making the resource available.
+                                            SCHEMA: The publisher of creative work. 
+                                            ADMS: The name of the agency that issued the identifier."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
                     dcterms:relation        schema:publisher ,
@@ -1668,7 +1673,7 @@ dcterms:isPartOf    rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:relation , dcterms:relation ;
                     rdfs:label              "is part of (view of)"@en ,
                                             "est partie (une vue) de"@fr ;
-                    dcterms:description     "DCTERMS: A related resource in which the described resource is physically or logically included. MOD: Shall be used to identify a subset or a view of an ontology. DOOR: An ontology is included in another if its model is contained in the one of the other ontology. SCHEMA: Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of."@en ;
+                    dcterms:description     "DCTERMS: A related resource in which the described resource is physically or logically included. MOD: Shall be used to identify a subset or a view of an ontology. DOOR: An ontology is included in another if its model is contained in the one of the other ontology. SCHEMA: Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of. The void:subset property can be used to provide descriptions of parts of a dataset."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2000-07-11"^^xsd:date ;
                     dcterms:relation        door:includedIn ,
@@ -2400,7 +2405,8 @@ mod:hasEvaluation   rdf:type                owl:ObjectProperty ;
                                             "évaluation"@fr ;
                     rdfs:domain             mod:SemanticArtefact ;
                     rdfs:range              mod:Evaluation ;
-                    dcterms:description     "MOD: This property makes a relationship between an ontology and its evaluation result."@en ; 
+                    dcterms:description     "MOD: This property makes a relationship between an ontology and its evaluation result.
+                                            SCHEMA: A review of the item."@en ; 
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2015-08-05"^^xsd:date ;
                     dcterms:relation        schema:review ;
@@ -2461,7 +2467,14 @@ dcterms:created     rdf:type                rdf:Property ;
                     rdfs:label              "creation date"@en ,
                                             "date de création"@fr ;
                     rdfs:range              rdfs:Literal ; 
-                    dcterms:description     "DCTERMS:date : A point or period of time associated with an event in the lifecycle of the resource. DCTERMS:created : Date of creation of the resource. DCTERMS:issued Date of formal issuance (e.g., publication) of the resource. PROV: Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation. PAV: The date this resource was authored. PAV: The date this resource was contributed to. PAV: The date of creation of the resource representation. DOAP: Date when something was created, in YYYY-MM-DD form. e.g. 2004-04-05. SCHEMA: The date on which the CreativeWork was created or the item was added to a DataFeed. DOAP: Date when something was created, in YYYY-MM-DD form. e.g. 2004-04-05."@en ;
+                    dcterms:description     "DCTERMS:date : A point or period of time associated with an event in the lifecycle of the resource. 
+                                            DCTERMS:created : Date of creation of the resource. 
+                                            DCTERMS:issued Date of formal issuance (e.g., publication) of the resource. 
+                                            PROV: Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation. 
+                                            PAV:authoredOn The date this resource was authored. PAV: The date this resource was contributed to. 
+                                            PAV:createdOn The date of creation of the resource representation. 
+                                            SCHEMA: The date on which the CreativeWork was created or the item was added to a DataFeed. 
+                                            DOAP: Date when something was created, in YYYY-MM-DD form. e.g. 2004-04-05."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2000-07-11"^^xsd:date ; 
                     dcterms:relation        omv:creationDate ,
