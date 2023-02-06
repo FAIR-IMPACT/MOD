@@ -2745,6 +2745,24 @@ mod:numberOfLabels
 
 
 
+###  https://w3id.org/mod#numberOfDeprecated
+mod:numberOfDeprecated
+                    rdf:type                owl:DatatypeProperty ;
+                    rdfs:subPropertyOf      mod:metrics ;
+                    rdfs:label              "number of deprecated objects"@en ,
+                                            "nombre d'objets obsolètes"@fr ;
+                    rdfs:range              xsd:nonNegativeInteger ;
+                    dcterms:description     "MOD: Number of objects (classes, properties, etc) declared as owl:deprecated=true in an ontology."@en ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod> ;
+                    dcterms:issued          "2023-02-06"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
+                    pav:importedOn          "2023-02-06"^^xsd:dateTime ;
+            
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "MIRO guidelines:  E.3" ,
+                                            "FAIR principle: F2" .
+
+
 ### http://www.w3.org/ns/dcat#byteSize
 dcat:byteSize       rdf:type                rdf:Property , owl:DatatypeProperty ;
                     rdfs:label              "byte size"@en ,
