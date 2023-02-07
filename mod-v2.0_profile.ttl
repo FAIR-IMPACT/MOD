@@ -1604,8 +1604,8 @@ owl:imports         rdf:type                owl:OntologyProperty  ;
 
 
 
-### http://www.w3.org/2002/07/owl#PriorVersion
-owl:PriorVersion    rdf:type                owl:AnnotationProperty, owl:OntologyProperty  ;
+### http://www.w3.org/2002/07/owl#priorVersion
+owl:priorVersion    rdf:type                owl:AnnotationProperty, owl:OntologyProperty  ;
                     rdfs:label              "prior version"@en ,
                                             "version précédente"@fr ;
                     rdfs:domain             owl:Ontology ;
