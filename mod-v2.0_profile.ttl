@@ -905,6 +905,8 @@ dcterms:coverage    rdf:type                rdf:Property ;
                                             SCHEMA: The 'spatial' property can be used in cases when more specific properties (e.g. locationCreated, spatialCoverage, contentLocation) are not known to be appropriate."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
+                    dcterms:relation        dcterms:spatial , 
+                                            dcterms:temporal ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:dateTime ;
                     
