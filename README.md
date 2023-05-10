@@ -8,7 +8,8 @@ This project is connected to the work done by @jonquet and @antool on a new onto
 
 MOD1.4 is considered stable (but surely improvable). We are currently working on MOD 2.0 designed as a profile of DCAT 2.
 
-MOD is discussed within the [RDA](http://rd-alliance.org)'s [Vocabulary Services Interest Group](http://rd-alliance.org/groups/vocabulary-services-interest-group.html) and more recently within the H2020 FAIRsFAIR Task 2.2 ("FAIR semantics"). 
+MOD is discussed within the [RDA](http://rd-alliance.org)'s [Vocabulary Services Interest Group](http://rd-alliance.org/groups/vocabulary-services-interest-group.html) and more recently within the H2020 FAIRsFAIR Task 2.2 ("FAIR semantics") and Horizon Europe FAIR-IMPACT's WP4.
+
 See the RDA VSSIG "ontology metadata" TG's working folder: https://drive.google.com/drive/folders/1EqEHwnhjQef9EtjhNifMYVREmdtD26BQ
 
 ## Versions 
@@ -45,4 +46,4 @@ This repository is licensed under Creative Commons 4.0 Attribution International
 <jonquet@lirmm.fr>  
 (@jonquet) 
 
-Other contributors, since MOD2, include: Yann Lefranc, Luiz Bonino
+Other contributors, since MOD2, include: Yann Le Franc, Luiz Bonino, Alejandra Gonzalez-Beltran
