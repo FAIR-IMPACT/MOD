@@ -701,7 +701,7 @@ dcterms:bibliographicCitation
                     rdfs:label              "bibliographic reference"@en ,
                                             "référence bibliographique";
                     rdfs:range              rdfs:Literal ;
-                    dcterms:description     "DCTERMS: A bibliographic reference for the resource. Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible. OMV: List of bibliographic references describing the ontology and its applications. FOAF: A document that this thing is the primary topic of"@en ;
+                    dcterms:description     "DCTERMS: A bibliographic reference for the resource. Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible. OMV: List of bibliographic references describing the ontology and its applications. FOAF: A document that this thing is the primary topic of. SCHEMA: A citation or reference to another creative work, such as another publication, web page, scholarly article, etc."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2003-02-15"^^xsd:date ;
                     dcterms:relation        omv:reference ,
