@@ -467,11 +467,11 @@ mod:status          rdf:type                owl:DatatypeProperty ;
                                             "statut"@fr ;
                     rdfs:domain             mod:SemanticArtefact ;
                     rdfs:range              xsd:string ;
-                    dcterms:description     "OMV: It specifies the tracking information for the contents of the ontology. Pre-defined values. IDOT: State of a resource (physical location providing access to data or information about the identified entity). This is should be based on a recent manual or automatic check of the resource. Possible values are: 'up', 'down', 'probably up', 'obsolete resource', 'restricted access' and 'unknown'."@en ;
+                    dcterms:description     "OMV: It specifies the tracking information for the contents of the ontology. Pre-defined values. IDOT: State of a resource (physical location providing access to data or information about the identified entity). This is should be based on a recent manual or automatic check of the resource. Possible values are: 'up', 'down', 'probably up', 'obsolete resource', 'restricted access' and 'unknown'. ADMS: The status of the Asset in the context of a particular workflow process."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
                     dcterms:relation        idot:state ,
-                                            adms:adms-status ;
+                                            adms:status ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:dateTime ;
             
