@@ -772,7 +772,7 @@ rdfs:comment        rdf:type                rdf:Property ;
                                             "notes ou commentaires"@fr ;
                     rdfs:domain             rdfs:Resource ;
                     rdfs:range              rdfs:Literal ;           
-                    dcterms:description     "RDFS: A description of the subject resource. OMV: Additional information about the ontology that is not included somewhere else (e.g. information that you do not want to include in the documentation)."@en ;
+                    dcterms:description     "RDFS: A description of the subject resource. OMV: Additional information about the ontology that is not included somewhere else (e.g. information that you do not want to include in the documentation). ADMS: A description of changes between this version and the previous version of the Asset."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/2000/01/rdf-schema#> ;
                     dcterms:issued          "2002-04-30"^^xsd:date ;
                     dcterms:relation        omv:notes ,
