@@ -287,7 +287,7 @@
 #                   rdfs:range              RANGE INFO IF ANY
 #                   rdfs:isDefinedBy        URI OF MOD2 ;
 #                   pav:derivedFrom         URI OF FIRST MOD VERSION INCLUDING" ;
-#                   pav:importedOn          "DATE OF FIRST MOD VERSION INCLUDING"^^xsd:dateTime ;
+#                   pav:importedOn          "DATE OF FIRST MOD VERSION INCLUDING"^^xsd:date ;
 #            
 #################################################################
 
@@ -313,7 +313,7 @@ mod:acronym         rdf:type                owl:DatatypeProperty ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
                     owl:equivalentProperty  <http://www.isibang.ac.in/ns/mod/1.0/acronym> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
@@ -337,7 +337,7 @@ dcterms:title       rdf:type                rdf:Property ;
                                             skos:prefLabel ,
                                             foaf:name ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: A.1" ,
@@ -358,7 +358,7 @@ dcterms:alternative rdf:type                rdf:Property ;
                                             schema:alternateName ,
                                             skos:altLabel ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: A.1" ,
@@ -378,7 +378,7 @@ skos:hiddenLabel    rdf:type                rdfs:Property ,
                     rdfs:isDefinedBy        <http://www.w3.org/2004/02/skos/core> ;
                     dcterms:issued          "2009-08-18"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: A.1" ,
@@ -400,7 +400,7 @@ mod:URI             rdf:type                owl:DatatypeProperty ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
                     owl:equivalentProperty  omv:URI ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
@@ -419,7 +419,7 @@ owl:versionIRI      rdf:type                owl:OntologyProperty ;
                     rdfs:isDefinedBy        <http://www.w3.org/2002/07/owl#> ;
                     dcterms:issued          "2004-02-10"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: A.4" ,
@@ -440,7 +440,7 @@ dcterms:identifier  rdf:type                rdf:Property ;
                                             adms:identifier ,
                                             schema:identifier ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F1,A1" .
@@ -464,7 +464,7 @@ owl:versionInfo     rdf:type                owl:AnnotationProperty  ;
                                             schema:version ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/version> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
         
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: A.1" ,
@@ -484,7 +484,7 @@ mod:status          rdf:type                owl:DatatypeProperty ;
                     owl:equivalentProperty  idot:state ,
                                             adms:adms-status ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
@@ -523,7 +523,7 @@ dcterms:license     rdf:type                rdf:Property ;
                                             omv:license ,
                                             schema:license ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: A.3" ,
@@ -548,7 +548,7 @@ mod:hasRepresentationLanguage
                                             schema:fileFormat ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/ontologyDesignLanguage> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
@@ -571,7 +571,7 @@ mod:hasFormalityLevel
                                             schema:fileFormat ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/formalityLevel> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
@@ -593,7 +593,7 @@ mod:hasSyntax       rdf:type                owl:DatatypeProperty ;
                                             dcterms:format ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/syntax> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
@@ -614,7 +614,7 @@ dcterms:language    rdf:type                rdf:Property ;
                                             schema:inLanguage ,
                                             doap:language ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F2" ;
@@ -640,7 +640,7 @@ dcterms:description rdf:type                rdf:Property ;
                                             schema:description ,
                                             doap:description ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: C.3" ,
@@ -657,7 +657,7 @@ dcterms:abstract    rdf:type                rdf:Property ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2000-07-11"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F2" .
@@ -675,7 +675,7 @@ cc:morePermissions  rdf:type                rdf:Property ;
                     rdfs:isDefinedBy        <http://creativecommons.org/ns#> ;
                     dcterms:issued          "2008-03-03"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: R1.1" .
@@ -693,7 +693,7 @@ cc:useGuidelines    rdf:type                rdf:Property ;
                     rdfs:isDefinedBy        <http://creativecommons.org/ns#> ;
                     dcterms:issued          "2008-03-03"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: R1.1" .
@@ -713,7 +713,7 @@ dcterms:bibliographicCitation
                                             foaf:isPrimaryTopicOf ,
                                             schema:citation ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F2" .
@@ -735,7 +735,7 @@ dcat:landingPage    rdf:type                rdf:Property , owl:ObjectProperty ;
                                             rdfs:seeAlso ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/document> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: C.3, F.1" ,
@@ -757,7 +757,7 @@ dcat:accessURL      rdf:type                rdf:Property , owl:ObjectProperty ;
                     owl:equivalentProperty  omv:resourceLocator ,
                                             doap:download-page ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: A.4" ,
@@ -781,7 +781,7 @@ rdfs:comment        rdf:type                rdf:Property ;
                                             dcterms:description ,
                                             adms:versionNotes ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F2" .
@@ -801,7 +801,7 @@ dcat:keyword        rdf:type                rdf:Property , owl:DatatypeProperty 
                                              schema:keywords ,
                                              <http://www.isibang.ac.in/ns/mod/1.1/keyword> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: C.1" ,
@@ -819,7 +819,7 @@ dcterms:type        rdf:type                rdf:Property ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
                     owl:equivalentProperty  omv:isOfType ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F2" .
@@ -836,7 +836,7 @@ mod:designedForTask rdf:type                owl:ObjectProperty ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: B.1" ,
@@ -856,7 +856,7 @@ mod:createdWith     rdf:type                owl:ObjectProperty ;
                                             oboinowl:auto-generated-by , 
                                             <http://www.isibang.ac.in/ns/mod/1.0/toolUsed> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: E.2" ,
@@ -878,7 +878,7 @@ mod:usedEngineeringMethodology
                                             schema:publishingPrinciples ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/methodologyUsed> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
@@ -901,7 +901,7 @@ mod:conformsToKnowledgeRepresentationParadigm
                                             dcterms:conformsTo ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/knowledgeRepresentationFormalism> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
@@ -919,7 +919,7 @@ dcterms:coverage    rdf:type                rdf:Property ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: C.1" ,
@@ -939,9 +939,9 @@ mod:competencyQuestion
                     rdfs:range              xsd:string ;
                     dcterms:description     "A set of questions made to build an ontology at the design time."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
-                    dcterms:issued          "2015-08-05"^^xsd:dateTime ;
+                    dcterms:issued          "2015-08-05"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: A.6, D.3" ,
@@ -961,7 +961,7 @@ foaf:depiction      rdf:type                rdf:Property , owl:ObjectProperty ;
                     owl:equivalentProperty  schema:image ,
                                             doap:screenshots ;
                     pav:derivedFrom          <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F2" ;
@@ -982,7 +982,7 @@ foaf:logo           rdf:type                rdf:Property , owl:InverseFunctional
                     dcterms:issued          "2014-01-14"^^xsd:date ;
                     owl:equivalentProperty  schema:logo ;
                     pav:derivedFrom          <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F2" ;
@@ -1008,7 +1008,7 @@ foaf:homepage       rdf:type                rdf:Property , owl:InverseFunctional
                                             doap:blog ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/homepage> ;
                     pav:derivedFrom          <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: C.3" ,
@@ -1027,7 +1027,7 @@ dcterms:accessRights
                     dcterms:issued          "2003-02-15"^^xsd:date ;
                     owl:equivalentProperty  <http://www.isibang.ac.in/ns/mod/1.0/accessibility> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: R1.1" ;
@@ -1046,7 +1046,7 @@ vann:changes        rdf:type                owl:AnnotationProperty ;
                     rdfs:isDefinedBy        <http://purl.org/vocab/vann/> ;
                     dcterms:issued          "2005-04-01"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: R1.2" .
@@ -1064,7 +1064,7 @@ vann:example        rdf:type                owl:AnnotationProperty ;
                     owl:equivalentProperty  schema:workExample ;
          
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: G.3" ,
@@ -1082,7 +1082,7 @@ vann:preferredNamespaceUri
                     dcterms:issued          "2005-04-01"^^xsd:date ;
                     owl:equivalentProperty  void:uriSpace ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: E.5" ,
@@ -1102,7 +1102,7 @@ vann:preferredNamespacePrefix
                                             oboinowl:default-namespace ,
                                             oboinowl:hasDefaultNamespace ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: E.11" ,
@@ -1121,7 +1121,7 @@ mod:prefLabelProperty
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
 
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: E.7" ,
@@ -1141,7 +1141,7 @@ mod:synonymProperty rdf:type                owl:DatatypeProperty ;
                     owl:equivalentProperty  oboinowl:hasSynonymType ,
                                             oboinowl:synonymtypedef ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: E.7" ,
@@ -1162,7 +1162,7 @@ mod:definitionProperty
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: E.7" ,
@@ -1180,7 +1180,7 @@ mod:authorProperty  rdf:type                owl:DatatypeProperty ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
                    
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: E.7" ,
@@ -1199,7 +1199,7 @@ mod:obsoleteProperty
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: E.7" ,
@@ -1218,7 +1218,7 @@ mod:hierarchyProperty
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
 
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: E.9" ,
@@ -1237,7 +1237,7 @@ mod:obsoleteParent
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
 
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: R1" .
@@ -1256,7 +1256,7 @@ void:uriRegexPattern
                     dcterms:issued          "2010-01-26"^^xsd:date ;
                     owl:equivalentProperty  idot:identifierPattern ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: E.6" ,
@@ -1274,7 +1274,7 @@ mod:toDoList        rdf:type                owl:ObjectProperty ;
                     dcterms:issued          "2013-05-23"^^xsd:date ;
                     owl:equivalentProperty  voaf:toDoList ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property had been originally defined by VOAF metadata vocabulary. Now, it has been adopted and redefined in the MOD namespace."@en ;
@@ -1294,7 +1294,7 @@ void:exampleResource
                     dcterms:issued          "2010-01-26"^^xsd:date ;
                     owl:equivalentProperty  idot:exampleIdentifier ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: E.6" ,
@@ -1309,7 +1309,7 @@ schema:award        rdf:type                rdf:Property ;
                     rdfs:isDefinedBy        <http://schema.org/> ;
                     dcterms:issued          "2012-04-21"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F2" ;
@@ -1381,7 +1381,7 @@ dcterms:creator     rdf:type                rdf:Property ;
                                             prov:wasAttributedTo ,
                                             foaf:maker ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: C.2" , 
@@ -1408,7 +1408,7 @@ dcterms:contributor rdf:type                rdf:Property ;
                                             oboinowl:saved-by ,
                                             oboinowl:savedBy  ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: C.2" , 
@@ -1430,7 +1430,7 @@ dcterms:publisher   rdf:type                rdf:Property ;
                     owl:equivalentProperty  schema:publisher ,
                                             adms:schemaAgency ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: A.2" , 
@@ -1450,7 +1450,7 @@ mod:curatedBy       rdf:type                owl:ObjectProperty ;
                     rdfs:isDefinedBy        <http://purl.org/pav/> ;
                     dcterms:issued          "2014-08-28"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: C.2" ,
@@ -1471,7 +1471,7 @@ schema:translator   rdf:type                rdf:Property ;
                     rdfs:isDefinedBy        <http://schema.org/> ;
                     dcterms:issued          "2012-04-21"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F2" ;
@@ -1494,7 +1494,7 @@ dcterms:rightsHolder
                     owl:equivalentProperty  schema:copyrightHolder ,
                                             dcat:contactPoint ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: A.2" , 
@@ -1523,7 +1523,7 @@ dcterms:subject     rdf:type                rdf:Property ;
                                             dcat:theme ,
                                             foaf:topic ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: C.1" , 
@@ -1541,7 +1541,7 @@ mod:group           rdf:type                owl:ObjectProperty ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2017-07-06"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: R1.3" .
@@ -1565,7 +1565,7 @@ owl:imports         rdf:type                owl:OntologyProperty  ;
                                             dcterms:requires ,
                                             voaf:extends ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
         
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: E.4" ,
@@ -1588,7 +1588,7 @@ owl:PriorVersion    rdf:type                owl:AnnotationProperty, owl:Ontology
                                             door:priorVersion ,
                                             adms:prev ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
         
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: A.5" ,
@@ -1609,7 +1609,7 @@ owl:backwardCompatibleWith
                     owl:equivalentProperty  omv:isBackwardCompatibleWith ,
                                             door:backwardCompatibleWith ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
         
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: E.8,E.10" ,
@@ -1630,7 +1630,7 @@ owl:incompatibleWith
                     owl:equivalentProperty  omv:isIncompatibleWith ,
                                             door:owlIncompatibleWith ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
         
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: I2" .
@@ -1650,7 +1650,7 @@ dcterms:isPartOf    rdf:type                rdf:Property ;
                                             schema:isPartOf ,
                                             <http://www.isibang.ac.in/ns/mod/1.1/module> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F2" .
@@ -1669,7 +1669,7 @@ dcterms:hasPart     rdf:type                rdf:Property ;
                                             adms:sample , 
                                             oboinowl:hasSubset ;
                     pav:derivedFrom        <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F2" .
@@ -1688,7 +1688,7 @@ dcterms:hasVersion  rdf:type                rdf:Property ;
                                             pav:hasVersion , 
                                             <http://www.isibang.ac.in/ns/mod/1.2/version> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: A2,R1.2" .
@@ -1706,7 +1706,7 @@ dcterms:isFormatOf  rdf:type                rdf:Property ;
                     owl:equivalentProperty  schema:hasPart ,
                                             <http://www.isibang.ac.in/ns/mod/1.2/syntax> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: I1" .
@@ -1724,7 +1724,7 @@ dcterms:hasFormat   rdf:type                rdf:Property ;
                     owl:equivalentProperty  schema:hasPart ,
                                             <http://www.isibang.ac.in/ns/mod/1.2/syntax> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: I1" .
@@ -1740,7 +1740,7 @@ dcterms:relation    rdf:type                rdf:Property ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: I2" .
@@ -1799,7 +1799,7 @@ mod:usedBy          rdf:type                owl:ObjectProperty ;
                     owl:equivalentProperty  voaf:usedBy ,
                                             nkos:usedBy ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property had been originally defined by VOAF metadata vocabulary. Now, it has been adopted and redefined in the MOD namespace."@en ;
@@ -1820,7 +1820,7 @@ mod:specializes     rdf:type                owl:ObjectProperty ;
                                             voaf:specializes ,
                                             prov:specializationOf ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property had been originally defined by VOAF metadata vocabulary. Now, it has been adopted and redefined in the MOD namespace."@en ;
@@ -1840,7 +1840,7 @@ mod:generalizes     rdf:type                owl:ObjectProperty ;
                     owl:equivalentProperty  voaf:generalizes ,
                                             prov:generalizationOf ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property had been originally defined by VOAF metadata vocabulary. Now, it has been adopted and redefined in the MOD namespace."@en ;
@@ -1859,7 +1859,7 @@ schema:workTranslation
                     owl:equivalentProperty  adms:translation ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/translation> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
                     schema:domainIncludes   schema:CreativeWork ;
@@ -1879,7 +1879,7 @@ schema:translationOfWork
                     dcterms:issued          "2012-04-21"^^xsd:date ;
                     owl:equivalentProperty  adms:translation  ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
 
             #OTHER ORIGINAL STATEMENTS IF ANY 
                     schema:domainIncludes   schema:CreativeWork ;
@@ -1900,7 +1900,7 @@ mod:comesFromTheSameDomain
                     dcterms:issued          "2009-10-06"^^xsd:date ;
                     owl:equivalentProperty  <http://kannel.open.ac.uk/ontology/comesFromTheSameDomain> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property had been originally defined by DOOR metadata vocabulary. Now, it has been adopted and redefined in the MOD namespace."@en ;
@@ -1920,7 +1920,7 @@ mod:similar     rdf:type                    owl:ObjectProperty ;
                     owl:equivalentProperty  <http://kannel.open.ac.uk/ontology/similarTo> ,
                                             voaf:similar ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property had been originally defined by VOAF metadata vocabulary. Now, it has been adopted and redefined in the MOD namespace."@en ;
@@ -1942,7 +1942,7 @@ mod:hasEquivalencesWith
                                             voaf:hasEquivalencesWith ,
                                             nkos:alignedWith ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property had been originally defined by VOAF metadata vocabulary. Now, it has been adopted and redefined in the MOD namespace."@en ;
@@ -1962,7 +1962,7 @@ mod:hasDisparateModelling
                     dcterms:issued          "2009-10-06"^^xsd:date ;
                     owl:equivalentProperty  <http://kannel.open.ac.uk/ontology/hasDisparateModelling> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property had been originally defined by DOOR metadata vocabulary. Now, it has been adopted and redefined in the MOD namespace."@en ;
@@ -1984,7 +1984,7 @@ mod:hasDisjunctionsWith
                     dcterms:issued          "2013-05-23"^^xsd:date ;
                     owl:equivalentProperty  voaf:hasDisjunctionsWith ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property had been originally defined by VOAF metadata vocabulary. Now, it has been adopted and redefined in the MOD namespace."@en ;
@@ -2009,7 +2009,7 @@ foaf:primaryTopic   rdf:type                owl:ObjectProperty , owl:FunctionalP
                     owl:equivalentProperty  omv:keyClasses ,
                                             schema:mainEntity ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F2" ;
@@ -2031,7 +2031,7 @@ void:rootResource   rdf:type                rdf:Property ;
                     owl:equivalentProperty  skos:hasTopConcept ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/rootClasses> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F2" .
@@ -2047,7 +2047,7 @@ mod:browsingUI      rdf:type                owl:DatatypeProperty ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2017-07-06"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F2" .
@@ -2063,7 +2063,7 @@ sd:endpoint         rdf:type                rdf:Property , owl:InverseFunctional
                     dcterms:issued          "2013-03-21"^^xsd:date ;
                     owl:equivalentProperty  void:sparqlEndpoint ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: A1" .
@@ -2083,7 +2083,7 @@ mod:metadataVoc     rdf:type                owl:ObjectProperty ;
                                             adms:supportedSchema ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/vocabularyUsed> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property had been originally defined by VOAF metadata vocabulary. Now, it has been adopted and redefined in the MOD namespace."@en ;
@@ -2102,7 +2102,7 @@ mod:sampleQueries   rdf:type                owl:DatatypeProperty ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2015-08-05"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F2" .
@@ -2120,7 +2120,7 @@ void:propertyPartition
                     rdfs:isDefinedBy        <http://vocab.deri.ie/void> ;
                     dcterms:issued          "2010-01-26"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F2" ;
@@ -2141,7 +2141,7 @@ void:classPartition
                     rdfs:isDefinedBy        <http://vocab.deri.ie/void> ;
                     dcterms:issued          "2010-01-26"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F2" ;
@@ -2164,7 +2164,7 @@ dcat:downloadURL    rdf:type                rdf:Property , owl:ObjectProperty ;
                                             doap:download-mirror ,
                                             schema:distribution ;
                    pav:derivedFrom          <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F2" ;
@@ -2185,7 +2185,7 @@ void:openSearchDescription
                     rdfs:isDefinedBy        <http://vocab.deri.ie/void> ;
                     dcterms:issued          "2010-01-26"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F2" .
@@ -2203,7 +2203,7 @@ void:uriLookupEndpoint
                     rdfs:isDefinedBy        <http://vocab.deri.ie/void> ;
                     dcterms:issued          "2010-01-26"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F2" .
@@ -2225,7 +2225,7 @@ mod:knownUsage      rdf:type                owl:DatatypeProperty ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
                     owl:equivalentProperty  omv:knownUsage ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
@@ -2245,7 +2245,7 @@ mod:endorsedBy      rdf:type                owl:ObjectProperty ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
                     owl:equivalentProperty  omv:endorsedBy ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
@@ -2265,7 +2265,7 @@ mod:usedInProject   rdf:type                owl:ObjectProperty ;
                     dcterms:issued          "2015-08-05"^^xsd:date ;
                     owl:equivalentProperty  <http://www.isibang.ac.in/ns/mod/1.0/ontologyInUse> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: B.3,G.5" ,
@@ -2284,7 +2284,7 @@ dcterms:audience    rdf:type                rdf:Property ;
                     owl:equivalentProperty  doap:audience ,
                                             schema:audience ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: B.3" ,
@@ -2306,7 +2306,7 @@ foaf:fundedBy       rdf:type                rdf:Property , owl:ObjectProperty ;
                     owl:equivalentProperty  schema:sourceOrganization ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/sponsoredBy> ;
                     pav:derivedFrom          <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: R1.2" .
@@ -2324,7 +2324,7 @@ doap:repository     rdf:type                rdf:Property ;
                     rdfs:isDefinedBy        <http://usefulinc.com/ns/doap#> ;
                     dcterms:issued          "2004"^^xsd:date ;
                     pav:derivedFrom          <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: A.5" , 
@@ -2341,7 +2341,7 @@ doap:bug-database    rdf:type                rdf:Property ;
                     rdfs:isDefinedBy        <http://usefulinc.com/ns/doap#> ;
                     dcterms:issued          "2004"^^xsd:date ;
                     pav:derivedFrom          <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: C.3" , 
@@ -2358,7 +2358,7 @@ doap:mailing-list   rdf:type                rdf:Property ;
                     rdfs:isDefinedBy        <http://usefulinc.com/ns/doap#> ;
                     dcterms:issued          "2004"^^xsd:date ;
                     pav:derivedFrom          <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: C.3" , 
@@ -2377,7 +2377,7 @@ mod:hasEvaluation   rdf:type                owl:ObjectProperty ;
                     dcterms:issued          "2015-08-05"^^xsd:date ;
                     owl:equivalentProperty  schema:review ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: G.2" ,
@@ -2393,7 +2393,7 @@ schema:comment      rdf:type                rdf:Property ;
                     rdfs:isDefinedBy        <http://schema.org/> ;
                     dcterms:issued          "2012-04-21"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F4, A1.1, A1.2" ;
@@ -2414,7 +2414,7 @@ mod:analytics       rdf:type                owl:ObjectProperty ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: G.2" ,
@@ -2448,7 +2448,7 @@ dcterms:created     rdf:type                rdf:Property ;
                                             prov:generatedAtTime ,
                                             <http://www.isibang.ac.in/ns/mod/1.1/creationDate> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F2" .
@@ -2469,7 +2469,7 @@ dcterms:modified    rdf:type                rdf:Property ;
                                             pav:lastUpdateOn ,
                                             <http://www.isibang.ac.in/ns/mod/1.1/creationDate> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F2" .
@@ -2488,7 +2488,7 @@ dcterms:valid       rdf:type                rdf:Property ;
                     owl:equivalentProperty  schema:endDate ,
                                             prov:invalidatedAtTime ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F2" .     
@@ -2507,7 +2507,7 @@ dcterms:dateSubmitted
                     dcterms:issued          "2002-07-13"^^xsd:date ; 
                     owl:equivalentProperty  schema:datePublished ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F2" .     
@@ -2524,7 +2524,7 @@ mod:curatedOn       rdf:type                owl:DatatypeProperty ;
                     rdfs:isDefinedBy        <http://purl.org/pav/> ;
                     dcterms:issued          "2014-08-28"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F2" ;
@@ -2547,7 +2547,7 @@ mod:metrics         rdf:type                owl:DatatypeProperty ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: E.3" ,
@@ -2569,7 +2569,7 @@ mod:numberOfClasses rdf:type                owl:DatatypeProperty ;
                                             void:classes ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/noOfClasses> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
@@ -2592,7 +2592,7 @@ mod:numberOfIndividuals
                                             void:entities ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/noOfIndividuals> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
@@ -2616,7 +2616,7 @@ mod:numberOfProperties
                                             void:properties ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/noOfProperties> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
@@ -2636,7 +2636,7 @@ mod:numberOfObjectProperties
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2017-07-06"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines:  E.3" ,
@@ -2655,7 +2655,7 @@ mod:numberOfDataProperties
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2017-07-06"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines:  E.3" ,
@@ -2676,7 +2676,7 @@ mod:numberOfAxioms
                     owl:equivalentProperty  omv:numberOfAxioms ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/noOfAxioms> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
@@ -2696,7 +2696,7 @@ mod:numberOfLabels
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2017-07-06"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines:  E.3" ,
@@ -2716,7 +2716,7 @@ dcat:byteSize       rdf:type                rdf:Property , owl:DatatypeProperty 
                     owl:equivalentProperty  <http://www.isibang.ac.in/ns/mod/1.0/size> ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/byteSize> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: E.3" ,
@@ -2737,7 +2737,7 @@ mod:maxDepth        rdf:type                owl:DatatypeProperty ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2017-07-06"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: R1" .
@@ -2753,7 +2753,7 @@ mod:maxDepth        rdf:type                owl:DatatypeProperty ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2017-07-06"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: R1" .
@@ -2770,7 +2770,7 @@ mod:maxDepth        rdf:type                owl:DatatypeProperty ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2017-07-06"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: R1" .
@@ -2787,7 +2787,7 @@ mod:maxDepth        rdf:type                owl:DatatypeProperty ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2017-07-06"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: R1" .
@@ -2804,7 +2804,7 @@ mod:maxDepth        rdf:type                owl:DatatypeProperty ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2017-07-06"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: R1" .
@@ -2821,7 +2821,7 @@ mod:maxDepth        rdf:type                owl:DatatypeProperty ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2017-07-06"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: R1" .
@@ -2847,7 +2847,7 @@ dcterms:source      rdf:type                rdf:Property ;
                                             pav:derivedFrom ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/sourceOntology> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: D.2" ,
@@ -2866,7 +2866,7 @@ prov:wasGeneratedBy rdf:type                owl:ObjectProperty ;
                     rdfs:isDefinedBy        <http://www.w3.org/ns/prov-o#> ;
                     dcterms:issued          "2013-04-30"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: D.1" ,
@@ -2889,7 +2889,7 @@ prov:wasinvalidatedBy
                     rdfs:isDefinedBy        <http://www.w3.org/ns/prov-o#> ;
                     dcterms:issued          "2013-04-30"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: R1.2" ;
@@ -2909,7 +2909,7 @@ dcterms:accrualMethod
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2005-06-13"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: D.3, F.2" ,
@@ -2930,7 +2930,7 @@ dcterms:accrualPeriodicity
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2005-06-13"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: F.2" ,
@@ -2951,7 +2951,7 @@ dcterms:accrualPolicy
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2005-06-13"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
-                    pav:importedOn          "2017-07-06"^^xsd:dateTime ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: F.2, F.3" ,
