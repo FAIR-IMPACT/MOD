@@ -2,9 +2,9 @@
 
 ## Design Issues
 
-Currently MOD 2.1 design issues are under discussion and therefore any contributions should be related to design issues.
+Currently MOD 3.0 design issues are under discussion and therefore any contributions should be related to design issues.
 
-If you wish to contribute to MOD 2.1 design issues, then this should be done via the [discussions]( https://github.com/FAIR-IMPACT/MOD/discussions) in GitHub. 
+If you wish to contribute to MOD 3.0 design issues, then this should be done via the [discussions]( https://github.com/FAIR-IMPACT/MOD/discussions) in GitHub. 
 
 If you have something to contribute to a `discussion` then please add your comments to that `discussion`. 
 
