@@ -52,7 +52,7 @@
     owl:ontologyIRI                 <https://w3id.org/mod> ;
     owl:versionIRI                  <https://w3id.org/mod/2.0> ;
 ##  dcterms:identifier              ;
-    owl:versionInfo                 "2.0.1" ;
+    owl:versionInfo                 "2.1" ;
     mod:status                      "alpha" ;
     owl:deprecated                  false ;
     dcterms:license                 <https://creativecommons.org/licenses/by/4.0> ; 

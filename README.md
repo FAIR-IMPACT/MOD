@@ -1,4 +1,4 @@
-# MOD-Ontology
+# MOD Ontology
 Metadata for Ontology Description and Publication Ontology
 
 This project consists in building an OWL ontology and application profile to capture metadata information for ontologies, vocabularies or semantic resources/artefacts in general. 
@@ -11,6 +11,15 @@ MOD1.4 is considered stable (but surely improvable). We are currently working on
 MOD is discussed within the [RDA](http://rd-alliance.org)'s [Vocabulary Services Interest Group](http://rd-alliance.org/groups/vocabulary-services-interest-group.html) and more recently within the H2020 FAIRsFAIR Task 2.2 ("FAIR semantics") and Horizon Europe FAIR-IMPACT's WP4.
 
 See the RDA VSSIG "ontology metadata" TG's working folder: https://drive.google.com/drive/folders/1EqEHwnhjQef9EtjhNifMYVREmdtD26BQ
+
+## Resources
+
+- mod.ttl - the MOD vocabulary
+
+- 
+
+- profile.ttl - the profile declaration. A description of all of the items in this profile (the formal model, validating resources, documentation etc.) according to the W3C's Profiles Ontology which describes how all the parts related to one another, the roles they play (to give guidance for use, to validate data etc.) and how this profile profiles the various standards listed above.
+
 
 ## Versions 
 MOD2.1 - Design issues are being documented and discussed under the [Discussions](https://github.com/FAIR-IMPACT/MOD/discussions) section - feel free to join the conversation!
