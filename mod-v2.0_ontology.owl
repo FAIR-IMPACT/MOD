@@ -1746,8 +1746,8 @@ dcterms:relation    rdf:type                rdf:Property ;
                     prov:wasInfluencedBy    "FAIR principle: I2" .
 
 
-### https://w3id.org/mod#semanticArtefact
-mod:semanticArtefactRelation 
+### https://w3id.org/mod#SemanticArtefact
+mod:SemanticArtefact 
                     rdf:type                owl:Class ;
                     rdfs:label              "Semantic Artefact"@en .
 
