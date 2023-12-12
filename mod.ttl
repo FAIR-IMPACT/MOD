@@ -1,8 +1,8 @@
 @prefix mod: <https://w3id.org/mod#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix door: <http://kannel.open.ac.uk/ontology#> .
 @prefix omv: <http://omv.ontoware.org/2005/05/ontology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -43,16 +43,16 @@
   ########## Intrinsic properties ##########
     mod:acronym                     "MOD" ;
     dcterms:title                   "MOD: Metadata for Ontology Description and publication"@en,
-                                    "MOD: Metadonnées pour la Description et la publication d'Ontologies"@fr ;
+                                    "MOD: Metadonnées pour la Description et la publication d'Ontologies"@fr ,
+                                    "MOD: Metadatos para la Descripción y Publicación de Ontologías"@es;
     dcterms:alternative             "MOD Vocabulary"@en ,
                                     "Vocabulaire MOD"@fr ,
                                     "MOD Ontology Metadata model"@en ,
                                     "Modèle de métadonnées d'ontologie MOD"@fr ;
     skos:hiddenLabel                "MOD-Ontology"@en;
     owl:ontologyIRI                 <https://w3id.org/mod> ;
-    owl:versionIRI                  <https://w3id.org/mod/2.0> ;
-##  dcterms:identifier              ;
-    owl:versionInfo                 "2.0.1" ;
+    owl:versionIRI                  <https://w3id.org/mod/3.0> ;
+    owl:versionInfo                 "3.0" ;
     mod:status                      "alpha" ;
     owl:deprecated                  false ;
     dcterms:license                 <https://creativecommons.org/licenses/by/4.0> ; 
@@ -60,12 +60,14 @@
     mod:hasFormalityLevel           omv:Vocabulary ;
     mod:hasSyntax                   <http://www.w3.org/ns/formats/Turtle> ;
     dcterms:language                <http://lexvo.org/id/iso639-3/eng> ,
-                                    <http://lexvo.org/id/iso639-3/fra> ;
+                                    <http://lexvo.org/id/iso639-3/fra> ,
+                                    <http://lexvo.org/id/iso639-3/spa> ;
 
   ########## Description properties ##########
     dcterms:description        
                     "MOD (Metadata for Ontology Description and publication) is a project to define a standard way to capture metadata descriptions for ontologies or semantic resources/artefacts in general (thesaurus, terminologies, vocabularies, etc.). The MOD OWL file can be used to create knowledge bases consisting of metadata records of ontologies/vocabularies as instances. The MOD vocabulary can also be used to define specific profiles for recommended metadata properties (e.g., H2020 project FAIRsFAIR semantic artefact minimum metadata profile). Users can go through MOD and pickup the required properties to describe their ontology."@en, 
-                    "MOD (Metadonnées pour la Description et la publication d'Ontologie) est un projet visant à définir un moyen standard pour capturer des descriptions de métadonnées pour les ontologies ou les ressources/artefacts sémantiques en général (thésaurus, terminologies, vocabulaires, etc.). Le fichier MOD OWL peut être utilisé pour créer des bases de connaissances composées d’instances d’ontologies / vocabulaires décrites avec MOD. Le vocabulaire MOD peut également être utilisé pour définir des profils de métadonnées (e.g., le profil de métadonnées minimale pour les artefacts sémanttique du projet H2020 FAIRsFAIR). Les utilisateurs peuvent consulter la spécification et récupérer les propriétés requises pour décrire leur ontologie."@fr ;
+                    "MOD (Metadonnées pour la Description et la publication d'Ontologie) est un projet visant à définir un moyen standard pour capturer des descriptions de métadonnées pour les ontologies ou les ressources/artefacts sémantiques en général (thésaurus, terminologies, vocabulaires, etc.). Le fichier MOD OWL peut être utilisé pour créer des bases de connaissances composées d’instances d’ontologies / vocabulaires décrites avec MOD. Le vocabulaire MOD peut également être utilisé pour définir des profils de métadonnées (e.g., le profil de métadonnées minimale pour les artefacts sémanttique du projet H2020 FAIRsFAIR). Les utilisateurs peuvent consulter la spécification et récupérer les propriétés requises pour décrire leur ontologie."@fr ,
+                    "MOD (Metadatos para la Descripción y Publicación de Ontologías) es un proyecto para definir un manera estándar de capturar las descripciones de metadatos para ontologías o recursos/artefactos semánticos en general (tesauros, terminologías, vocabularios, etc.). El archivo MOD se puede usar para crear bases de conocimiento consistentes en registros de metadatos de ontologías/vocabularios como instancias. El vocabulario MOD puede utilizarse también para definir perfiles específicos para las propiedades de metadatos recomendadas (e.g. el perfil de metadatos mínimo del projecto H2020 FAIRsFAIR). Los usuarios pueden recorrer MOD y elegir las propiedades requeridas para describir su ontología."@es;
     dcterms:abstract
                     "MOD provides a set of properties which can be used by ontology developers, ontology libraries (e.g., ontology registry, ontology repository, ontology portal), to describe and publish ontologies. The enriched description of ontologies, in turn, will help users to search, discover, identify and select ontologies."@en ,
                     "MOD fournit un ensemble de propriétés pouvant être utilisées par les développeurs d’ontologies ou les portails d’ontologies (registre, bibliothèques), pour décrire et publier des ontologies. La description enrichie des ontologies aidera les utilisateurs à rechercher, découvrir, identifier et sélectionner des ontologies."@fr ;
