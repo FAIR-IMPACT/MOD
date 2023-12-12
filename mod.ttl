@@ -2978,6 +2978,12 @@ dcterms:accrualPolicy
 #    Classes
 #################################################################
 
+### https://w3id.org/mod#Analytics
+mod:SemanticArtefact rdf:type owl:Class ;
+           rdfs:comment "A specification of a conceptualization that may be represented by different levels of formalization (including controlled lists, thesauri and ontologies - either lightweight or heavyweight."@en ;
+           rdfs:comment "Una especificación de una conceptualización que puede ser representada a distintos niveles de formalización (incluyendo listas controladas, tesaurus y ontologías."@en ;
+           rdfs:label "Semantic Artefact"@en ;
+           rdfs:label "Artefacto Semántico"@es .
 
 
 ### https://w3id.org/mod#Analytics
