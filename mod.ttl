@@ -2982,10 +2982,21 @@ dcterms:accrualPolicy
 
 ### https://w3id.org/mod#Analytics
 mod:SemanticArtefact rdf:type owl:Class ;
-           rdfs:comment "A specification of a conceptualization that may be represented by different levels of formalization (including controlled lists, thesauri and ontologies - either lightweight or heavyweight."@en ;
-           rdfs:comment "Una especificación de una conceptualización que puede ser representada a distintos niveles de formalización (incluyendo listas controladas, tesaurus y ontologías."@es ;
-           rdfs:label "Semantic Artefact"@en ;
-           rdfs:label "Artefacto Semántico"@es .
+                     rdf:type rdfs:Class ;
+                     rdfs:subClassOf dcat:Resource ;
+                     rdfs:comment "A specification of a conceptualization that may be represented by different levels of formalization (including controlled lists, thesauri and ontologies - either lightweight or heavyweight."@en ;
+                     rdfs:comment "Una especificación de una conceptualización que puede ser representada a distintos niveles de formalización (incluyendo listas controladas, tesaurus y ontologías."@es ;
+                     rdfs:label "Semantic Artefact"@en ;
+                     rdfs:label "Artefacto Semántico"@es .
+
+### https://w3id.org/mod#SemanticArtefactDistribution
+mod:SemanticArtefactDistribution rdf:type owl:Class ;
+                                 rdfs:subClassOf adms:AssetDistribution ,
+                                                 dcat:Distribution ;
+                                 rdfs:label "Semantic Artefact Distribution"@en ;
+                                 rdfs:label "Distribución de un Artefacto Semántico"@es ;
+                                 rdfs:comment "A specific representation of a semantic artefact"@en ;
+                                 rdfs:comment "Una representación específica de un artefacto semántico"@es .
 
 
 ### https://w3id.org/mod#Analytics
@@ -3025,11 +3036,6 @@ mod:KnowledgeRepresentationParadigm rdf:type owl:Class ;
 mod:SemanticArtefactCatalogRecord rdf:type owl:Class ;
                                rdfs:subClassOf dcat:CatalogRecord .
 
-
-### https://w3id.org/mod#SemanticArtefactDistribution
-mod:SemanticArtefactDistribution rdf:type owl:Class ;
-                              rdfs:subClassOf adms:AssetDistribution ,
-                                              dcat:Distribution .
 
 
 ### https://w3id.org/mod#SemanticArtefactEvaluation
