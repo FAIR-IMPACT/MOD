@@ -1746,11 +1746,6 @@ dcterms:relation    rdf:type                rdf:Property ;
                     prov:wasInfluencedBy    "FAIR principle: I2" .
 
 
-### https://w3id.org/mod#SemanticArtefact
-mod:SemanticArtefact 
-                    rdf:type                owl:Class ;
-                    rdfs:label              "Semantic Artefact"@en .
-
 ### https://w3id.org/mod#semanticArtefactRelation
 mod:semanticArtefactRelation 
                     rdf:type                owl:ObjectProperty ;
@@ -2980,6 +2975,11 @@ dcterms:accrualPolicy
 #    Classes
 #################################################################
 
+### https://w3id.org/mod#SemanticArtefact
+mod:SemanticArtefact 
+                    rdf:type                owl:Class ;
+                    rdfs:label              "Semantic Artefact"@en .
+                    rdfs:comment "A specification of a conceptualization that may be represented by different levels of formalization (including controlled lists, thesauri and ontologies - either lightweight or heavyweight."@en ;           
 
 
 ### https://w3id.org/mod#Analytics
