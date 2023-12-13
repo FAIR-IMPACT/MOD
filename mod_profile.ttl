@@ -33,7 +33,7 @@
 <https://w3id.org/modp> rdf:type owl:Ontology ;       
 
 #################################################################
-#    MOD2.0 profile description with MOD2 profile properties
+#    MOD profile description with MOD profile properties
 #################################################################
 
 # This section is a description of MOD2 profile with a subset of properties of the profile itself. 

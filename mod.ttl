@@ -70,6 +70,7 @@
                     "MOD (Metadatos para la Descripción y Publicación de Ontologías) es un proyecto para definir un manera estándar de capturar las descripciones de metadatos para ontologías o recursos/artefactos semánticos en general (tesauros, terminologías, vocabularios, etc.). El archivo MOD se puede usar para crear bases de conocimiento consistentes en registros de metadatos de ontologías/vocabularios como instancias. El vocabulario MOD puede utilizarse también para definir perfiles específicos para las propiedades de metadatos recomendadas (e.g. el perfil de metadatos mínimo del projecto H2020 FAIRsFAIR). Los usuarios pueden recorrer MOD y elegir las propiedades requeridas para describir su ontología."@es;
     dcterms:abstract
                     "MOD provides a set of properties which can be used by ontology developers, ontology libraries (e.g., ontology registry, ontology repository, ontology portal), to describe and publish ontologies. The enriched description of ontologies, in turn, will help users to search, discover, identify and select ontologies."@en ,
+                    "MOD provee un conjunto de propiedades que pueden usarse por desarroladores de ontologías, librerías de ontologías (e.g., registros de ontologías, repositorios de ontologías, portales de ontologías), para describir to describe and publish ontologies. The enriched description of ontologies, in turn, will help users to search, discover, identify and select ontologies."@en ,
                     "MOD fournit un ensemble de propriétés pouvant être utilisées par les développeurs d’ontologies ou les portails d’ontologies (registre, bibliothèques), pour décrire et publier des ontologies. La description enrichie des ontologies aidera les utilisateurs à rechercher, découvrir, identifier et sélectionner des ontologies."@fr ;
     cc:morePermissions              "https://github.com/sifrproject/MOD-Ontology/blob/master/LICENSE" ;
     cc:useGuidelines                "MOD is free of use; feedback is welcome."@en ,
@@ -307,7 +308,8 @@
 mod:acronym         rdf:type                owl:DatatypeProperty ;
                     rdfs:subPropertyOf      rdfs:label ;
                     rdfs:label              "acronym"@en ,
-                                            "acronyme"@fr ;
+                                            "acronyme"@fr ,
+                                            "acrónimo"@es ;
                     rdfs:domain             mod:SemanticArtefact ;
                     rdfs:range              xsd:string ;
                     dcterms:description     "MOD: Short acronym label, often used as an identifier within some ontology platforms such as BioPortal or OBO Foundry. OMV: A short name by which an ontology is formally known."@en ;
@@ -2981,7 +2983,7 @@ dcterms:accrualPolicy
 ### https://w3id.org/mod#Analytics
 mod:SemanticArtefact rdf:type owl:Class ;
            rdfs:comment "A specification of a conceptualization that may be represented by different levels of formalization (including controlled lists, thesauri and ontologies - either lightweight or heavyweight."@en ;
-           rdfs:comment "Una especificación de una conceptualización que puede ser representada a distintos niveles de formalización (incluyendo listas controladas, tesaurus y ontologías."@en ;
+           rdfs:comment "Una especificación de una conceptualización que puede ser representada a distintos niveles de formalización (incluyendo listas controladas, tesaurus y ontologías."@es ;
            rdfs:label "Semantic Artefact"@en ;
            rdfs:label "Artefacto Semántico"@es .
 
