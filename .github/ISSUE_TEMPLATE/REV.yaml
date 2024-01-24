@@ -2,7 +2,7 @@
 name: Term revision form
 description: A request for an existing term to be changed or revised.
 title: "[REV]: "
-labels: term_revision
+labels: ["term revision"]
 body: 
 - type: markdown
   attributes: 

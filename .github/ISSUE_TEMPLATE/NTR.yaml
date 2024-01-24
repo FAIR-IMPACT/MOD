@@ -2,7 +2,7 @@
 name: New term request form
 description: A request for a new term to be added to the vocabulary.
 title: "[NTR]: "
-labels: new_term_request
+labels: ["new term request"]
 body: 
 - type: markdown
   attributes: 

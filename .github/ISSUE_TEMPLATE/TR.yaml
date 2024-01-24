@@ -2,7 +2,7 @@
 name: Term retirement or replacement form
 description: A request for an existing term to be replaced or retired.
 title: "[TR]: "
-labels: term_retired
+labels: ["term retired"]
 body: 
 - type: markdown
   attributes: 
