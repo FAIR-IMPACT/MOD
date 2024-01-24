@@ -2980,10 +2980,12 @@ dcterms:accrualPolicy
 #    Classes
 #################################################################
 
-### https://w3id.org/mod#Analytics
+### https://w3id.org/mod#SemanticArtefact
 mod:SemanticArtefact rdf:type owl:Class ;
                      rdf:type rdfs:Class ;
                      rdfs:subClassOf dcat:Resource ;
+                     rdfs:comment "Semantic Artefact is defined here as a machine-actionable and -readable formalisation of a conceptualisation enabling sharing and reuse by humans and machines. These artefacts may have a broad range of formalisation, from loose set of terms, taxonomies, thesauri to higher-order logics, and include the concepts/terms/classes constituting these. Moreover, semantic artefacts are serialised using a variety of digital representation formats, e.g., RDF Turtle, OWL-RDF, XML, JSON-LD."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/mod#> ;
                      rdfs:comment "A specification of a conceptualization that may be represented by different levels of formalization (including controlled lists, thesauri and ontologies - either lightweight or heavyweight."@en ;
                      rdfs:comment "Una especificación de una conceptualización que puede ser representada a distintos niveles de formalización (incluyendo listas controladas, tesaurus y ontologías."@es ;
                      rdfs:label "Semantic Artefact"@en ;
