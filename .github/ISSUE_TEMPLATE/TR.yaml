@@ -1,0 +1,37 @@
+---
+name: Term retirement or replacement form
+description: A request for an existing term to be replaced or retired.
+title: "[TR]: "
+labels: term_retired
+body: 
+- type: markdown
+  attributes: 
+    value: "## Thanks for suggesting a term retirement"
+- type: input
+  id: prefLabel
+  attributes: 
+    label: existing term label
+    description: term to be retired or replaced
+    placeholder: label
+  validations:
+    required: true
+- type: input
+  id: replacedBy
+  attributes: 
+    label: replacement 
+    description: replacement term (if existing term is replaced by a new term)
+    placeholder: label
+- type: textarea
+  id: explanation
+  attributes:
+    label: explanation
+    description: explanation for change
+    placeholder: explanation
+  validations:
+    required: true
+- type: textarea
+  id: comment
+  attributes:
+    label: additional information
+    description: comment
+    placeholder: comment

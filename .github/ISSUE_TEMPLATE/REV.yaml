@@ -1,0 +1,71 @@
+---
+name: Term revision form
+description: A request for an existing term to be changed or revised.
+title: "[REV]: "
+labels: term_revision
+body: 
+- type: markdown
+  attributes: 
+    value: "## Thanks for suggesting a term revision"
+- type: input
+  id: prefLabel
+  attributes: 
+    label: existing term label
+    description: term to be changed or revised
+    placeholder: label
+  validations:
+    required: true
+- type: textarea
+  id: definition
+  attributes:
+    label: definition (if change requested)
+    description: textual definition
+    placeholder: definition
+- type: input
+  id: sourceURI
+  attributes: 
+    label: source of definition (URI) (if change requested)
+    description: URI for the source of the definition
+    placeholder: URI
+- type: textarea
+  id: source
+  attributes:
+    label: source of definition (citation) (if change requested)
+    description: citation for the source of the definition
+    placeholder: citation
+- type: input
+  id: broader
+  attributes: 
+    label: broader term (if change requested)
+    description: broader term or super-class
+    placeholder: label
+- type: textarea
+  id: relation
+  attributes: 
+    label: related term(s) (if change requested)
+    description: related term or class in this vocabulary
+    placeholder: label(s) (one per line)
+- type: textarea
+  id: match
+  attributes: 
+    label: mapping term (if change requested)
+    description: related term or class in another vocabulary
+    placeholder: URI(s) (one per line)
+- type: textarea
+  id: altLabel
+  attributes: 
+    label: synonym or alternative label (if change requested)
+    description: label with no punctuation except `-` and `_`
+    placeholder: label(s) (one per line)
+- type: textarea
+  id: scopeNote
+  attributes:
+    label: usage- or scope-note (if change requested)
+    description: scope note
+    placeholder: note
+- type: textarea
+  id: comment
+  attributes:
+    label: additional information
+    description: comment
+    placeholder: comment
