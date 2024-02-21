@@ -40,7 +40,7 @@ body:
   attributes: 
     label: broader term 
     description: broader term or super-class
-    placeholder: label
+    placeholder: URI
 - type: textarea
   id: relation
   attributes: 
