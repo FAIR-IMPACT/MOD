@@ -13,7 +13,7 @@ MOD is discussed within the [RDA](http://rd-alliance.org)'s [Vocabulary Services
 See the RDA VSSIG "ontology metadata" TG's working folder: https://drive.google.com/drive/folders/1EqEHwnhjQef9EtjhNifMYVREmdtD26BQ
 
 ## Versions 
-MOD2.1 - Design issues are being documented and discussed under the [Discussions](https://github.com/FAIR-IMPACT/MOD/discussions) section - feel free to join the conversation!
+MOD3 - Design issues are being documented and discussed under the [Discussions](https://github.com/FAIR-IMPACT/MOD/discussions) section - feel free to join the conversation!
 
 MOD2.0 alpha was presented during the 16th RDA plenary (November 2020) and H2020 FAIRsFAIR workshop (June 2021). [See presentation](https://drive.google.com/drive/folders/1kSF0XuSr9mwBk-daR6RYut_1Dzzko33v).
 
