@@ -30,7 +30,7 @@ jobs:
       run: |
         cd widoco        
         java -jar ./widoco.jar \
-        -ontFile mod.ttl \
+        -ontFile ../mod.ttl \
         -oops \
         -webVowl \
         -includeAnnotationProperties \
