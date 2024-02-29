@@ -20,7 +20,7 @@ See the RDA VSSIG "ontology metadata" TG's working folder: https://drive.google.
 
 
 ## Versions 
-MOD 3.0 - Design issues for this version are documented and discussed under the [Discussions](https://github.com/FAIR-IMPACT/MOD/discussions) section. See also, [FAIR-IMPACT milestone](https://doi.org/10.5281/zenodo.10725304) and Widoco documentation for [MOD 3.0](https://fair-impact.github.io/MOD/index-en.html)
+MOD 3.0 - Design issues for this version are documented and discussed under the [Discussions](https://github.com/FAIR-IMPACT/MOD/discussions) section. The MOD 3.0 file is [here](https://github.com/FAIR-IMPACT/MOD/blob/main/mod.ttl). See also, [FAIR-IMPACT milestone](https://doi.org/10.5281/zenodo.10725304) and Widoco documentation for [MOD 3.0](https://fair-impact.github.io/MOD/index-en.html)
 
 MOD 2.0 alpha was presented during the 16th RDA plenary (November 2020) and H2020 FAIRsFAIR workshop (June 2021). [See presentation](https://drive.google.com/drive/folders/1kSF0XuSr9mwBk-daR6RYut_1Dzzko33v).
 
