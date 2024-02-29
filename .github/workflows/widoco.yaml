@@ -24,7 +24,7 @@ jobs:
       uses: actions/checkout@v2
       
     - name: Download widoco
-      run: mkdir widoco && wget -O widoco/widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.21/widoco-1.4.14-jar-with-dependencies.jar
+      run: mkdir widoco && wget -O widoco/widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.14/widoco-1.4.14-jar-with-dependencies.jar
   
     - name: Compile documentation
       run: |
