@@ -1,4 +1,4 @@
-# MOD-Ontology
+# MOD Ontology
 Metadata for Ontology Description and Publication Ontology
 
 This project consists in building an OWL ontology and application profile to capture metadata information for ontologies, vocabularies or semantic resources/artefacts in general. 
@@ -12,10 +12,17 @@ MOD is discussed within the [RDA](http://rd-alliance.org)'s [Vocabulary Services
 
 See the RDA VSSIG "ontology metadata" TG's working folder: https://drive.google.com/drive/folders/1EqEHwnhjQef9EtjhNifMYVREmdtD26BQ
 
-## Versions 
-MOD3 - Design issues are being documented and discussed under the [Discussions](https://github.com/FAIR-IMPACT/MOD/discussions) section - feel free to join the conversation!
+## Resources
 
-MOD2.0 alpha was presented during the 16th RDA plenary (November 2020) and H2020 FAIRsFAIR workshop (June 2021). [See presentation](https://drive.google.com/drive/folders/1kSF0XuSr9mwBk-daR6RYut_1Dzzko33v).
+- mod.ttl - the MOD vocabulary
+
+- profile.ttl - the profile declaration. A description of all of the items in this profile (the formal model, validating resources, documentation etc.) according to the W3C's Profiles Ontology which describes how all the parts related to one another, the roles they play (to give guidance for use, to validate data etc.) and how this profile profiles the various standards listed above.
+
+
+## Versions 
+MOD 3.0 - Design issues for this version are documented and discussed under the [Discussions](https://github.com/FAIR-IMPACT/MOD/discussions) section. See also, [FAIR-IMPACT milestone](https://doi.org/10.5281/zenodo.10725304).
+
+MOD 2.0 alpha was presented during the 16th RDA plenary (November 2020) and H2020 FAIRsFAIR workshop (June 2021). [See presentation](https://drive.google.com/drive/folders/1kSF0XuSr9mwBk-daR6RYut_1Dzzko33v).
 
 * [https://w3id.org/mod/2.0](https://w3id.org/mod/2.0) (2021-12-06)
 

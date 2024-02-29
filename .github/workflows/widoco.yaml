@@ -1,0 +1,50 @@
+name: widoco
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for all branches
+on: 
+  push:
+    branches: [ '*' ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    - name: Deploy Java
+      uses: actions/setup-java@v1.4.3
+      with:
+        java-version: 1.8
+     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - name: Checkout repo
+      uses: actions/checkout@v2
+      
+    - name: Download widoco
+      run: mkdir widoco && wget -O widoco/widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.14/widoco-1.4.14-jar-with-dependencies.jar
+  
+    - name: Compile documentation
+      run: |
+        cd widoco        
+        java -jar ./widoco.jar \
+        -ontFile ../mod.ttl \
+        -oops \
+        -webVowl \
+        -includeAnnotationProperties \
+        -outFolder doc/ \
+        -rewriteAll \
+        -includeImportedOntologies \
+        -uniteSections \
+        -excludeIntroduction
+        cd ..
+
+    - name: Publish on Github Pages
+      uses: crazy-max/ghaction-github-pages@v2.3.0
+      with:
+        build_dir: widoco/doc 
+        publish_dir: target/site
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   

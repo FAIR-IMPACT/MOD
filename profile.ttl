@@ -1,0 +1,22 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
+
+
+<https://w3id.org/mod/dcat-profile>
+  a prof:Profile ;
+  rdfs:label "MOD DCAT Profile" ;
+  rdfs:comment """An Metadata Ontology Description profile of the Data Catalogue Vocabulary""" ;
+  prof:isProfileOf <http://www.w3.org/ns/dcat#> ;
+  prof:hasResource [
+            a prof:ResourceDescriptor ;
+            rdfs:label "SHACL Validator" ;
+            dct:conformsTo <https://www.w3.org/TR/shacl/> ;
+            dct:format <https://w3id.org/mediatype/text/turtle> ;
+            prof:hasArtifact <https://w3id.org/mod/dcat-profile/validator> ;
+            prof:hasRole role:validator
+        ] 
+   .
+
+<http://www.w3.org/ns/dcat#> a dct:Standard ;
+  rdfs:label "DCAT" .

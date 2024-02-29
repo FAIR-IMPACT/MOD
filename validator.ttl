@@ -1,0 +1,218 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX moddcatprofile: <https://w3id.org/mod/dcat-profile/validator/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX odrl: <http://www.w3.org/ns/odrl/2/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/mod/dcat-profile>
+    a owl:Ontology ;
+    dcterms:created "2023-07-19"^^xsd:date ;
+    dcterms:creator <https://orcid.org/0000-0003-3499-8262> ;
+    dcterms:description """An MOD-based profile of DCAT that implements minimal metadata descriptions for ontologies/vocabularies. """@en ;
+    dcterms:modified "2023-07-19"^^xsd:date ;
+    dcterms:publisher <https://orcid.org/0000-0003-3499-8262> ;
+    dcterms:title "MOD DCAT Profile"@en ;
+    owl:versionIRI <https://w3id.org/mod/dcat-profile/validator/1.0> ;
+    owl:versionInfo "1.0" ;
+.
+
+<https://orcid.org/0000-0003-3499-8262>
+    sdo:email "alejandra.gonzalez-beltran@stfc.ac.uk"^^xsd:anyURI ;
+    sdo:name "Alejandra Gonzalez-Beltran" ;
+.
+
+
+moddcatprofile:resource
+    a sh:NodeShape ;
+    sh:property
+        dcatnull:resource-accessRights ,
+        dcatnull:resource-conformsTo ,
+        dcatnull:resource-contactPoint ,
+        dcatnull:resource-creator ,
+        dcatnull:resource-description ,
+        dcatnull:resource-title ,
+        dcatnull:resource-issued ,
+        dcatnull:resource-modified ,
+        dcatnull:resource-language ,
+        dcatnull:resource-publisher ,
+        dcatnull:resource-theme ,
+        dcatnull:resource-type ,
+        dcatnull:resource-relation ,
+        dcatnull:resource-qualifiedRelation ,
+        dcatnull:resource-keyword ,
+        dcatnull:resource-landingPage ,
+        dcatnull:resource-qualifiedAttribution ,
+        dcatnull:resource-license ,
+        dcatnull:resource-rights ,
+        dcatnull:resource-hasPolicy ,
+        dcatnull:resource-isReferencedBy ;
+    sh:targetClass dcat:Resource ;
+.
+
+dcatnull:resource-accessRights
+    a sh:PropertyShape ;
+    sh:class dcterms:RightsStatement ;
+    sh:path dcterms:accessRights ;
+.
+
+dcatnull:resource-conformsTo
+    a sh:PropertyShape ;
+    sh:class dcterms:Standard ;
+    sh:path dcterms:conformsTo ;
+.
+
+dcatnull:resource-contactPoint
+    a sh:PropertyShape ;
+    sh:class vcard:Kind ;
+    sh:path dcat:contactPoint ;
+.
+
+dcatnull:resource-creator
+    a sh:PropertyShape ;
+    sh:class foaf:Agent ;
+    sh:path dcterms:creator ;
+.
+
+dcatnull:resource-description
+    a sh:PropertyShape ;
+    # sh:class rdfs:Literal ;
+    sh:nodeKind sh:Literal ;
+    sh:path dcterms:description ;
+.
+
+dcatnull:resource-title
+    a sh:PropertyShape ;
+    # sh:class rdfs:Literal ;
+    sh:nodeKind sh:Literal ;
+    sh:path dcterms:title ;
+.
+
+dcatnull:resource-issued
+    a sh:PropertyShape ;
+    sh:or (
+        [
+            sh:datatype xsd:dateTimeStamp ;
+        ]
+        [
+            sh:datatype xsd:dateTime ;
+        ]
+        [
+            sh:datatype xsd:date ;
+        ]
+        [
+            sh:datatype xsd:gYearMonth ;
+        ]
+        [
+            sh:datatype xsd:gYear ;
+        ]
+    ) ;
+    sh:path dcterms:issued ;
+.
+
+dcatnull:resource-modified
+    a sh:PropertyShape ;
+    sh:or (
+        [
+            sh:datatype xsd:dateTimeStamp ;
+        ]
+        [
+            sh:datatype xsd:dateTime ;
+        ]
+        [
+            sh:datatype xsd:date ;
+        ]
+        [
+            sh:datatype xsd:gYearMonth ;
+        ]
+        [
+            sh:datatype xsd:gYear ;
+        ]
+    ) ;
+    sh:path dcterms:modified ;
+.
+
+dcatnull:resource-language
+    a sh:PropertyShape ;
+    sh:class dcterms:LinguisticSystem ;
+    sh:path dcterms:language ;
+.
+
+dcatnull:resource-publisher
+    a sh:PropertyShape ;
+    sh:class foaf:Agent ;
+    sh:path dcterms:publisher ;
+    sh:severity sh:Warning ;
+.
+
+dcatnull:resource-theme
+    a sh:PropertyShape ;
+    sh:class skos:Concept ;
+    sh:path dcat:theme ;
+.
+
+dcatnull:resource-type
+    a sh:PropertyShape ;
+    # sh:class rdfs:Class ;
+    sh:path dcterms:type ;
+.
+
+dcatnull:resource-relation
+    a sh:PropertyShape ;
+    sh:path dcterms:relation ;
+.
+
+dcatnull:resource-qualifiedRelation
+    a sh:PropertyShape ;
+    sh:class dcat:Relationship ;
+    sh:path dcat:qualifiedRelation ;
+.
+
+dcatnull:resource-keyword
+    a sh:PropertyShape ;
+    # sh:class rdfs:Literal ;
+    sh:nodeKind sh:Literal ;
+    sh:path dcat:keyword ;
+.
+
+dcatnull:resource-landingPage
+    a sh:PropertyShape ;
+    sh:class foaf:Document ;
+    sh:path dcat:landingPage ;
+.
+
+dcatnull:resource-qualifiedAttribution
+    a sh:PropertyShape ;
+    sh:class prov:Attribution ;
+    sh:path prov:qualifiedAttribution ;
+.
+
+dcatnull:resource-license
+    a sh:PropertyShape ;
+    sh:class dcterms:LicenseDocument ;
+    sh:path dcterms:license ;
+.
+
+dcatnull:resource-rights
+    a sh:PropertyShape ;
+    sh:class dcterms:RightsStatement ;
+    sh:path dcterms:rights ;
+.
+
+dcatnull:resource-hasPolicy
+    a sh:PropertyShape ;
+    sh:class odrl:Policy ;
+    sh:path odrl:hasPolicy ;
+.
+
+dcatnull:resource-isReferencedBy
+    a sh:PropertyShape ;
+    sh:path dcterms:isReferencedBy ;
+.
