@@ -41,6 +41,7 @@
 ##############################################################################
 
 <https://w3id.org/mod#>
+    rdf:type mod:SemanticArtefact ;
 ########## Intrinsic properties ##########
     mod:acronym                     "MOD" ;
     dcterms:title                   "MOD: Metadata for Ontology Description and publication"@en,
@@ -84,6 +85,7 @@
                                     "This project is connected to the work done within AgroPortal (with MOD1.4). MOD 2.0 is work in progress."@en ,
                                     "Ce projet est lié au travail mis en œuvre dans AgroPortal (avec MOD1.4). MOD2.0 est en cours de développement."@fr ;
     omv:keywords                    "metadata description, metadata vocabularies, ontology description, ontology profile"@en ,
+                                    "descripción de metadatatos, vocabularies de metadatos, descripción de ontologías, perfil de ontologías"@es ,
                                     "description de métadonnées, vocabulaires de métadonnées, description d'ontologie, profil d'ontologie"@fr ;
     dcterms:type                    omv:TaskOntology ;
     mod:designedForTask             omv:ConfigurationTask ;
