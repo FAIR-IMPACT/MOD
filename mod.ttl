@@ -300,7 +300,7 @@ mod:SemanticArtefactDistribution rdf:type owl:Class ;
 
 ### https://w3id.org/mod#SemanticArtefactCatalogRecord
 mod:SemanticArtefactCatalogRecord rdf:type owl:Class ;
-                               rdfs:subClassOf dcat:CatalogRecord .
+                               rdfs:subClassOf dcat:CatalogRecord ;
                                rdfs:label "Semantic Artefact Catalog Record"@en .
 
 
@@ -342,7 +342,7 @@ mod:SemanticArtefactEvaluation rdf:type owl:Class ;
 
 ### https://w3id.org/mod#SemanticArtefactService
 mod:SemanticArtefactService rdf:type owl:Class ;
-                         rdfs:subClassOf dcat:DataService .
+                         rdfs:subClassOf dcat:DataService ;
                          rdfs:label "Semantic Artefact Service"@en .
 
 
@@ -353,25 +353,25 @@ mod:SemanticArtefactTask rdf:type owl:Class ;
 
 ### https://w3id.org/mod#SemanticArtefactCatalog
 mod:SemanticArtefactCatalog rdf:type owl:Class ;
-                         rdfs:subClassOf dcat:Catalog .
+                         rdfs:subClassOf dcat:Catalog ;
                          rdfs:label "Semantic Artefact Catalog"@en .
 
 
 ### https://w3id.org/mod#Taxonomy
 mod:Taxonomy rdf:type owl:Class ;
-          rdfs:subClassOf mod:SemanticArtefact .
+          rdfs:subClassOf mod:SemanticArtefact ;
           rdfs:label "Taxonomy"@en .
 
 
 ### https://w3id.org/mod#Terminology
 mod:Terminology rdf:type owl:Class ;
-             rdfs:subClassOf mod:SemanticArtefact .
+             rdfs:subClassOf mod:SemanticArtefact ;
              rdfs:label "Terminology"@en .
 
 
 ### https://w3id.org/mod#Thesaurus
 mod:Thesaurus rdf:type owl:Class ;
-           rdfs:subClassOf mod:SemanticArtefact .
+           rdfs:subClassOf mod:SemanticArtefact ;
            rdfs:label "Thesaurus"@en .
 
 
