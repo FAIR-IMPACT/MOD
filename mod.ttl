@@ -332,7 +332,7 @@ mod:Group rdf:type owl:Class ;
 
 ### https://w3id.org/mod#KnowledgeRepresentationParadigm
 mod:KnowledgeRepresentationParadigm rdf:type owl:Class ;
-                                 rdfs:label "Knowledge representation paradigm"@en .
+                                 rdfs:label "Knowledge Representation Paradigm"@en .
 
 
 ### https://w3id.org/mod#SemanticArtefactEvaluation
