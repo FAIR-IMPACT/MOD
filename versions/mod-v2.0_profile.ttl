@@ -872,10 +872,7 @@ mod:usedEngineeringMethodology
                                             "méthodologie de développement"@fr ;
                     rdfs:domain             mod:SemanticArtefact ;
                     rdfs:range              mod:EngineeringMethodology ;
-                    dcterms:description     "MOD: A methodolgy follwoing which an ontology is created.
-                                             OMV: Information about the method model used to create the ontology.
-                                             ADMS: More information about the format in which an Asset Distribution is released. This is different from the file format as, for example, a ZIP file (file format) could contain an XML schema (representation technique).
-                                             SCHEMA: The publishingPrinciples property indicates (typically via URL) a document describing the editorial principles of an Organization (or individual, e.g. a Person writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies."@en ;
+                    dcterms:description     "MOD: A methodolgy follwoing which an ontology is created. OMV: Information about the method model used to create the ontology. ADMS: More information about the format in which an Asset Distribution is released. This is different from the file format as, for example, a ZIP file (file format) could contain an XML schema (representation technique). SCHEMA: The publishingPrinciples property indicates (typically via URL) a document describing the editorial principles of an Organization (or individual, e.g. a Person writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
                     dcterms:relation        adms:representationTechnique ,
@@ -921,8 +918,7 @@ dcterms:coverage    rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:coverage ;
                     rdfs:label              "coverage"@en ,
                                             "couverture"@fr ;
-                    dcterms:description     "DCTERMS: The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant. Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. 
-                                            SCHEMA: The 'spatial' property can be used in cases when more specific properties (e.g. locationCreated, spatialCoverage, contentLocation) are not known to be appropriate."@en ;
+                    dcterms:description     "DCTERMS: The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant. Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. SCHEMA: The 'spatial' property can be used in cases when more specific properties (e.g. locationCreated, spatialCoverage, contentLocation) are not known to be appropriate."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
                     dcterms:relation        dcterms:spatial , 
@@ -1403,7 +1399,7 @@ schema:includedInDataCatalog
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F4, A1.1, A1.2" ,
-                                            "FAIRsFAIR profile: OPTIONAL" .
+                                            "FAIRsFAIR profile: OPTIONAL" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
                     schema:domainIncludes   schema:Dataset ;
