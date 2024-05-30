@@ -1,0 +1,16 @@
+MOD2.0 TODOS: 
+=> move left ofver to GitHub issues on May 30 2024
+
+LOG (From December 2021): 
+- Create the new OWL file for MOD 2.0 (Biswanath)
+- Declare MOD on w3id (Biswanath)
+- Update the README file on GitHub (Clement)
+- Describe MOD2.0 with itself (Clement)
+- Reintegrate the MOD1.4 properties inside MOD2 (Clement)
+- Rename the current ttl fle with _profile and clean it from useless content in the profile (Clement)
+- Re-create another _ontology.owl file for the MOD2 ontology with classes inside but not equivalent properties (Clement)
+- Changed owl:equivalentProperty by dcterms:relation because the semantics of owl/equivalentProperty is too strong (problem with when parsing with OWL-API)
+ 
+
+
+
