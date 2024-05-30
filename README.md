@@ -55,7 +55,7 @@ This repository is licensed under Creative Commons 4.0 Attribution International
 <jonquet@lirmm.fr>  
 (@jonquet) 
 
-**Clement Jonquet (STCF then United Kingdom Atomic Energy Authority)**  
+**Alejandra Gonzalez-Beltran (STCF then United Kingdom Atomic Energy Authority)**  
 <alejandra.gonzalez-beltran@ukaea.uk>  
 (@agbeltran) 
 
