@@ -2671,8 +2671,10 @@ mod:curatedOn       rdf:type                owl:DatatypeProperty ;
 mod:metrics         rdf:type                owl:DatatypeProperty ;
                     rdfs:label              "metrics"@en ,
                                             "métriques"@fr ;
-                    rdfs:domain             mod:SemanticArtefactDistribution ;
-                    dcterms:description     "MOD: A generic property to store any metrics related to the ontology."@en ;
+                    rdfs:domain             mod:SemanticArtefact ,
+                                            mod:SemanticArtefactDistribution ;
+                    rdfs:range              xsd:nonNegativeInteger ;
+                    dcterms:description     "MOD: A generic property to store any metrics (number) related to the ontology."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
@@ -2689,6 +2691,7 @@ mod:numberOfClasses rdf:type                owl:DatatypeProperty ;
                     rdfs:subPropertyOf      mod:metrics ;
                     rdfs:label              "number of classes"@en ,
                                             "nombre de classes"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              xsd:nonNegativeInteger ;
                     dcterms:description     "MOD: The total number of classes in an ontology. OMV: Number of classes in the ontology. VOAF: The number of classes defined in the vocabulary namespace. Classes imported from other namespaces are not taken into account. VOID: The total number of distinct classes in a void:Dataset. In other words, the number of distinct resources occuring as objects of rdf:type."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
@@ -2713,6 +2716,7 @@ mod:numberOfIndividuals
                     rdfs:subPropertyOf      mod:metrics ;
                     rdfs:label              "number of individuals"@en ,
                                             "nombre d'individus"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              xsd:nonNegativeInteger ;
                     dcterms:description     "MOD: The total number of individuals in an ontology. OMV: Number of individuals in the ontology. VOID: The total number of entities that are described in a void:Dataset."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
@@ -2736,6 +2740,7 @@ mod:numberOfProperties
                     rdfs:subPropertyOf      mod:metrics ;
                     rdfs:label              "number of properties"@en ,
                                             "nombre de propriétés"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              xsd:nonNegativeInteger ;
                     dcterms:description     "MOD: The total number of properties in an ontology. OMV: Number of properties in the ontology. VOAF: The number of properties defined in the vocabulary namespace. Properties imported from other namespaces are not taken into account. VOID: The total number of distinct properties in a void:Dataset. In other words, the number of distinct resources that occur in the predicate position of triples in the dataset."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
@@ -2760,6 +2765,7 @@ mod:numberOfObjectProperties
                     rdfs:subPropertyOf      mod:numberOfProperties ;
                     rdfs:label              "number of object properties"@en ,
                                             "nombre de propriétés d'objet"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              xsd:nonNegativeInteger ;
                     dcterms:description     "MOD: The total number of object properties in an ontology."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
@@ -2779,6 +2785,7 @@ mod:numberOfDataProperties
                     rdfs:subPropertyOf      mod:numberOfProperties ;
                     rdfs:label              "number of data properties"@en ,
                                             "nombre de propriétés de données"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              xsd:nonNegativeInteger ;
                     dcterms:description     "MOD: The total number of data properties in an ontology."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
@@ -2798,6 +2805,7 @@ mod:numberOfAxioms
                     rdfs:subPropertyOf      mod:metrics ;
                     rdfs:label              "number of axioms or triples"@en ,
                                             "nombre d'axiomes ou de triples"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              xsd:nonNegativeInteger ;
                     dcterms:description     "MOD: The total number of axioms in an ontology. OMV: Number of axioms in the ontology."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
@@ -2820,6 +2828,7 @@ mod:numberOfLabels
                     rdfs:subPropertyOf      mod:metrics ;
                     rdfs:label              "number of data properties"@en ,
                                             "nombre de propriétés de données"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              xsd:nonNegativeInteger ;
                     dcterms:description     "MOD: Number of defined labels for any resources in an ontology (classes, properties, etc)."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
@@ -2861,6 +2870,7 @@ mod:maxDepth        rdf:type                owl:DatatypeProperty ;
                     rdfs:subPropertyOf      mod:metrics ;
                     rdfs:label              "maximum depth of the hierachy"@en ,
                                             "profondeur maximum de la hierachie"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              xsd:nonNegativeInteger ;
                     dcterms:description     "MOD: Maximum depth of the hierarchy tree (BioPortal definition)."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
@@ -2877,6 +2887,7 @@ mod:maxDepth        rdf:type                owl:DatatypeProperty ;
                     rdfs:subPropertyOf      mod:metrics ;
                     rdfs:label              "maximum number of children per class"@en ,
                                             "nombre maximum d'enfant par classe"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              xsd:nonNegativeInteger ;
                     dcterms:description     "MOD: Maximum number of children per class (BioPortal definition)."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
@@ -2894,6 +2905,7 @@ mod:maxDepth        rdf:type                owl:DatatypeProperty ;
                     rdfs:subPropertyOf      mod:metrics ;
                     rdfs:label              "average number of children per class"@en ,
                                             "nombre moyen d'enfant par classe"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              xsd:nonNegativeInteger ;
                     dcterms:description     "MOD: Average number of children per class (BioPortal definition)."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
@@ -2911,6 +2923,7 @@ mod:maxDepth        rdf:type                owl:DatatypeProperty ;
                     rdfs:subPropertyOf      mod:metrics ;
                     rdfs:label              "number of classes with a single child"@en ,
                                             "nombre de classes avec un seul enfant"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              xsd:nonNegativeInteger ;
                     dcterms:description     "MOD: Number of classes that have only one subclass in the is-a hierarchy (BioPortal definition)."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
@@ -2928,6 +2941,7 @@ mod:maxDepth        rdf:type                owl:DatatypeProperty ;
                     rdfs:subPropertyOf      mod:metrics ;
                     rdfs:label              "number of classes with more than 25 children"@en ,
                                             "nombre de classes avec plus de 25 enfants"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              xsd:nonNegativeInteger ;
                     dcterms:description     "MOD: Number of classes that have more than 25 direct subclasses (BioPortal definition)."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
@@ -2945,6 +2959,7 @@ mod:maxDepth        rdf:type                owl:DatatypeProperty ;
                     rdfs:subPropertyOf      mod:metrics ;
                     rdfs:label              "number of classes with no definition"@en ,
                                             "nombre de classes sans définition"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              xsd:nonNegativeInteger ;
                     dcterms:description     "MOD: Number of classes that have no value for the definition property (BioPortal definition). For ontologies in OBO and RRF formats, the property for definition is part of the language. For OWL ontologies, the authors specify this property as part of the ontology metadata (the default is skos:definition)."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
