@@ -1474,6 +1474,25 @@ schema:includedInDataCatalog
 ########################################################
 ########## People and organization properties ##########
 ########################################################
+
+
+https://www.w3.org/ns/dcat#contactPoint
+dcat:contactPoint   rdf:type                rdf:Property ,
+                                            owl:ObjectProperty ;
+                    rdfs:label              "contact point"@en ,
+                                            "contact"@fr ;
+                    rdfs:range              vcard:Kind ;
+                    dcterms:description     "DCAT: Relevant contact information for the cataloged resource. Use of vCard is recommended" ;
+                    rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
+                    dcterms:issued          "2014-01-16"^^xsd:date ;
+                    pav:derivedFrom          <http://www.isibang.ac.in/ns/mod/3.1> ;
+                    pav:importedOn          "2014-05-30"^^xsd:date ;
+                     
+             #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "MIRO guidelines: A.2" ,
+                                            "FAIR principle: F2" ,
+                                            "FAIRsFAIR profile: MANDATORY" .
+
     
 ### http://purl.org/dc/terms/creator
 dcterms:creator     rdf:type                rdf:Property ;
@@ -2273,7 +2292,7 @@ dcat:downloadURL    rdf:type                rdf:Property , owl:ObjectProperty ;
                     owl:equivalentProperty  void:dataDump ,
                                             doap:download-mirror ,
                                             schema:distribution ;
-                   pav:derivedFrom          <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom          <http://www.isibang.ac.in/ns/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
