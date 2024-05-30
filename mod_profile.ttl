@@ -1403,7 +1403,7 @@ schema:includedInDataCatalog
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F4, A1.1, A1.2" ,
-                                            "FAIRsFAIR profile: OPTIONAL" .
+                                            "FAIRsFAIR profile: OPTIONAL" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
                     schema:domainIncludes   schema:Dataset ;
