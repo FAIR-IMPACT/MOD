@@ -1476,7 +1476,7 @@ schema:includedInDataCatalog
 ########################################################
 
 
-https://www.w3.org/ns/dcat#contactPoint
+### https://www.w3.org/ns/dcat#contactPoint
 dcat:contactPoint   rdf:type                rdf:Property ,
                                             owl:ObjectProperty ;
                     rdfs:label              "contact point"@en ,
@@ -3025,7 +3025,25 @@ prov:wasinvalidatedBy
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
                     prov:inverse            prov:invalidated .
-                  
+
+
+
+### https://w3id.org/mod#FairAssessment
+mod:FairAssessment  rdf:type                owl:DatatypeProperty ;
+                    rdfs:subPropertyOf      rdfs:label ;
+                    rdfs:label              "FAIR assessment score"@en ,
+                                            "FAIR score"@fr ;
+                    rdfs:domain             mod:SemanticArtefact ;
+                    rdfs:range              xsd:string ;
+                    dcterms:description     "MOD: A FAIRness assessment result produced by a known or identified FAIRness assessment method or tool. It can be either a simple number or a structured result document explaining the assessment."@en ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod> ;
+                    dcterms:issued          "2024-05-30"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.1> ;
+                    pav:importedOn          "2024-05-30"^^xsd:date ;
+            
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "MIRO guidelines: G.2" ,
+                                            "FAIR principle: F2,I2" .           
 
 
 ### http://purl.org/dc/terms/accrualMethod
