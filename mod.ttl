@@ -3001,6 +3001,131 @@ mod:classesWithNoFormalDefinition
                     prov:wasInfluencedBy    "FAIR principle: R1" .
 
 
+###  https://w3id.org/mod#classesWithNoLabel
+mod:classesWithNoLabel
+                    rdf:type                owl:DatatypeProperty ;
+                    rdfs:subPropertyOf      mod:metrics ;
+                    rdfs:label              "number of classes with no label"@en ,
+                                            "nombre de classes sans label"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
+                    rdfs:range              xsd:nonNegativeInteger ;
+                    dcterms:description     "MOD: Number of classes with no labels."@en ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod> ;
+                    dcterms:issued          "2024-05-30"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.1> ;
+                    pav:importedOn          "2024-05-30"^^xsd:date ;
+            
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: R1" .
+
+
+###  https://w3id.org/mod#classesWithNoAuthorMetadata
+mod:classesWithNoAuthorMetadata
+                    rdf:type                owl:DatatypeProperty ;
+                    rdfs:subPropertyOf      mod:metrics ;
+                    rdfs:label              "number of classes with no author metadata"@en ,
+                                            "nombre de classes sans métadonnées d'auteur"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
+                    rdfs:range              xsd:nonNegativeInteger ;
+                    dcterms:description     "MOD: Number of classes with author metadata."@en ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod> ;
+                    dcterms:issued          "2024-05-30"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.1> ;
+                    pav:importedOn          "2024-05-30"^^xsd:date ;
+            
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: R1" .
+
+
+###  https://w3id.org/mod#classesWithNoDateMetadata
+mod:classesWithNoDateMetadata
+                    rdf:type                owl:DatatypeProperty ;
+                    rdfs:subPropertyOf      mod:metrics ;
+                    rdfs:label              "number of classes with no date metadata"@en ,
+                                            "nombre de classes sans métadonnées de date"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
+                    rdfs:range              xsd:nonNegativeInteger ;
+                    dcterms:description     "MOD: Number of classes with no date metadata."@en ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod> ;
+                    dcterms:issued          "2024-05-30"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.1> ;
+                    pav:importedOn          "2024-05-30"^^xsd:date ;
+            
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: R1" .
+
+
+###  https://w3id.org/mod#numberOfNotes
+mod:numberOfNotes   rdf:type                owl:DatatypeProperty ;
+                    rdfs:subPropertyOf      mod:metrics ;
+                    rdfs:label              "number of notes or comments"@en ,
+                                            "nombre de notes ou de commentaires"@fr ;
+                    rdfs:domain             mod:SemanticArtefact ;
+                    rdfs:range              xsd:nonNegativeInteger ;
+                    dcterms:description     "MOD: Number of notes or comments (maybe represented with schema:comment) related to the ontologies."@en ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod> ;
+                    dcterms:issued          "2024-05-30"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.1> ;
+                    pav:importedOn          "2024-05-30"^^xsd:date ;
+            
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: R1" .
+
+
+###  https://w3id.org/mod#numberOfUsingProjects
+mod:numberOfUsingProjects
+                    rdf:type                owl:DatatypeProperty ;
+                    rdfs:subPropertyOf      mod:metrics ;
+                    rdfs:label              "number of using projects"@en ,
+                                            "nombre de projets qui utilise"@fr ;
+                    rdfs:domain             mod:SemanticArtefact ;
+                    rdfs:range              xsd:nonNegativeInteger ;
+                    dcterms:description     "MOD: Number of projects (maybe represented with mod:usedInProject) using an ontology."@en ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod> ;
+                    dcterms:issued          "2024-05-30"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.1> ;
+                    pav:importedOn          "2024-05-30"^^xsd:date ;
+            
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: R1" .
+
+
+###  https://w3id.org/mod#numberOfEnsorments
+mod:numberOfEnsorments
+                    rdf:type                owl:DatatypeProperty ;
+                    rdfs:subPropertyOf      mod:metrics ;
+                    rdfs:label              "number of endorsmements"@en ,
+                                            "nombre d'approbation"@fr ;
+                    rdfs:domain             mod:SemanticArtefact ;
+                    rdfs:range              xsd:nonNegativeInteger ;
+                    dcterms:description     "MOD: Number of endorsing organizations (maybe represented with mod:endorsedBy)."@en ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod> ;
+                    dcterms:issued          "2024-05-30"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.1> ;
+                    pav:importedOn          "2024-05-30"^^xsd:date ;
+            
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: R1" .
+
+
+###  https://w3id.org/mod#numberOfEvaluations
+mod:numberOfEvaluations
+                    rdf:type                owl:DatatypeProperty ;
+                    rdfs:subPropertyOf      mod:metrics ;
+                    rdfs:label              "number of evaluations"@en ,
+                                            "nombre d'évaluations"@fr ;
+                    rdfs:domain             mod:SemanticArtefact ;
+                    rdfs:range              xsd:nonNegativeInteger ;
+                    dcterms:description     "MOD: Number of evaluations (maybe represented with mod:hasEvaluation)."@en ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod> ;
+                    dcterms:issued          "2024-05-30"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.1> ;
+                    pav:importedOn          "2024-05-30"^^xsd:date ;
+            
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: R1" .
+
+
 ###  https://w3id.org/mod#fairScore
 mod:fairScore       rdf:type                owl:DatatypeProperty ;
                     rdfs:subPropertyOf      mod:metrics ;
