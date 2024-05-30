@@ -586,7 +586,7 @@ owl:deprecated     rdf:type                owl:AnnotationProperty ;
                    owl:equivalentProperty  idot:obsolete ,
                                            <http://www.isibang.ac.in/ns/mod/1.1/deprecated> ;                                         
                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.1> ;
-                   pav:importedOn          "2016-09-02"^^xsd:dateTime ; 
+                   pav:importedOn          "2016-09-02"^^xsd:date ; 
                                        
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy   "FAIR principle: A2" .
@@ -1411,7 +1411,7 @@ schema:associatedMedia
                     rdfs:isDefinedBy        <http://schema.org/> ;
                     dcterms:issued          "2012-04-21"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2014-07-28"^^xsd:dateTime ;
+                    pav:importedOn          "2014-07-28"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F2" ;
@@ -1431,7 +1431,7 @@ schema:includedInDataCatalog
                     rdfs:isDefinedBy        <http://schema.org/> ;
                     dcterms:issued          "2016-05-04"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
-                    pav:importedOn          "2014-07-28"^^xsd:dateTime ;
+                    pav:importedOn          "2014-07-28"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F4, A1.1, A1.2" ;
@@ -1842,7 +1842,7 @@ mod:semanticArtefactRelation
                     dcterms:issued          "2021-12-06"^^xsd:date ;
                     owl:equivalentProperty  door:ontologyRelatedTo ; 
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
-                    pav:importedOn          "2021-12-06"^^xsd:dateTime ;
+                    pav:importedOn          "2021-12-06"^^xsd:date ;
 
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: I2" .
@@ -1861,7 +1861,7 @@ mod:reliesOn        rdf:type                owl:ObjectProperty ;
                     owl:equivalentProperty  voaf:reliesOn ,
                                             void:vocabulary  ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
-                    pav:importedOn          "2021-12-06"^^xsd:dateTime ;
+                    pav:importedOn          "2021-12-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property had been originally defined by VOAF metadata vocabulary. Now, it has been adopted and redefined in the MOD namespace."@en ;
@@ -2601,7 +2601,7 @@ mod:curatedOn       rdf:type                owl:DatatypeProperty ;
                     rdfs:subPropertyOf      pav:contributedOn ;
                     rdfs:label              "curation date"@en ,
                                             "date de contrôle de qualité"@fr ;
-                    rdfs:range              xsd:dateTime ;
+                    rdfs:range              xsd:date ;
                     dcterms:description     ""@en ;
                     rdfs:isDefinedBy        <http://purl.org/pav/> ;
                     dcterms:issued          "2014-08-28"^^xsd:date ;
