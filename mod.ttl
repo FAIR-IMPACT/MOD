@@ -2609,7 +2609,7 @@ dcterms:valid       rdf:type                rdf:Property ;
 dcterms:dateSubmitted
                     rdf:type                rdf:Property ; 
                     rdfs:subPropertyOf      dc:date , dcterms:date ;
-                    rdfs:label              "date submitted"@en ,
+                    rdfs:label              "submission date"@en ,
                                             "date de soumission"@fr ;
                     rdfs:range              rdfs:Literal ; 
                     dcterms:description     "DCTERMS: Date of submission of the resource. SCHEMA: Date of first broadcast/publication."@en ;
