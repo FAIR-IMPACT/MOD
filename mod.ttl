@@ -3031,8 +3031,8 @@ prov:wasinvalidatedBy
 ### https://w3id.org/mod#FairAssessment
 mod:FairAssessment  rdf:type                owl:DatatypeProperty ;
                     rdfs:subPropertyOf      rdfs:label ;
-                    rdfs:label              "FAIR assessment score"@en ,
-                                            "FAIR score"@fr ;
+                    rdfs:label              "FAIR assessment"@en ,
+                                            "Evaluation du niveau de FAIRness"@fr ;
                     rdfs:domain             mod:SemanticArtefact ;
                     rdfs:range              xsd:string ;
                     dcterms:description     "MOD: A FAIRness assessment result produced by a known or identified FAIRness assessment method or tool. It can be either a simple number or a structured result document explaining the assessment."@en ;
