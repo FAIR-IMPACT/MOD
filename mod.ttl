@@ -435,8 +435,8 @@ mod:acronym         rdf:type                owl:DatatypeProperty ;
 ### http://purl.org/dc/terms/title
 dcterms:title       rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:title ;
-                    rdfs:label              "title"@en ,
-                                            "titre"@fr ;
+                    rdfs:label              "name"@en ,
+                                            "nom"@fr ;
                     rdfs:range              rdfs:Literal ;
                     dcterms:description     "DCTERMS: A name given to the resource. OMV: The name by which an ontology is formally known. RDFS: A human-readable name for the subject. FOAF:  A name for some thing. SKOS: The preferred and alternative labels are useful when generating or creating human-readable representations of a knowledge organization system. SCHEMA: The name of the item."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
