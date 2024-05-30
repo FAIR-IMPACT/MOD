@@ -2957,6 +2957,23 @@ mod:maxDepth        rdf:type                owl:DatatypeProperty ;
 
 
 
+###  https://w3id.org/mod#fairScore
+mod:fairScore       rdf:type                owl:DatatypeProperty ;
+                    rdfs:subPropertyOf      mod:metrics ;
+                    rdfs:label              "FAIR score"@en ,
+                                            "score FAIR"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
+                    rdfs:range              xsd:nonNegativeInteger ;
+                    dcterms:description     "MOD: Latest FAIR score obtained by the ontology with a known or identified FAIRness assessment tool."@en ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod> ;
+                    dcterms:issued          "2024-05-30"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.1> ;
+                    pav:importedOn          "2024-05-30"^^xsd:date ;
+            
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: R1" .
+
+
 ##########################################
 ########## Provenance properties ##########
 ##########################################
@@ -3028,8 +3045,8 @@ prov:wasinvalidatedBy
 
 
 
-### https://w3id.org/mod#FairAssessment
-mod:FairAssessment  rdf:type                owl:DatatypeProperty ;
+### https://w3id.org/mod#fairAssessment
+mod:fairAssessment  rdf:type                owl:DatatypeProperty ;
                     rdfs:subPropertyOf      rdfs:label ;
                     rdfs:label              "FAIR assessment"@en ,
                                             "Evaluation du niveau de FAIRness"@fr ;
