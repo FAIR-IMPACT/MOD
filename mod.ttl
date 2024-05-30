@@ -399,7 +399,7 @@ mod:Thesaurus rdf:type owl:Class ;
 #            #OPTIONAL STATEMENTS
 #                   prov:wasInfluencedBy    "MIRO guidelines: ...." ,
 #                                           "FAIR principle: F2" ,
-#                                           "FAIRsFAIR profile: MANDATORY / RECOMMENDED" .
+#                                           "FAIRsFAIR profile: MANDATORY / RECOMMENDED / OPTIONAL" .
 #            #OTHER ORIGINAL STATEMENTS IF ANY 
 #            
 #################################################################
@@ -2871,7 +2871,8 @@ dcat:byteSize       rdf:type                rdf:Property , owl:DatatypeProperty 
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: E.3" ,
-                                            "FAIR principle: F2" ;
+                                            "FAIR principle: F2" ,
+                                            "FAIRsFAIR profile: OPTIONAL" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
                     skos:scopeNote          "The size in bytes can be approximated when the precise size is not known. The literal value of dcat:byteSize should by typed as xsd:decimal."@en .
