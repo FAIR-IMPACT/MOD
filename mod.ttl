@@ -2667,13 +2667,15 @@ mod:curatedOn       rdf:type                owl:DatatypeProperty ;
 ########## Metrics properties ##########
 ##########################################
 
+
 ### https://w3id.org/mod#metrics
 mod:metrics         rdf:type                owl:DatatypeProperty ;
                     rdfs:label              "metrics"@en ,
                                             "métriques"@fr ;
                     rdfs:domain             mod:SemanticArtefact ,
                                             mod:SemanticArtefactDistribution ;
-                    rdfs:range              xsd:nonNegativeInteger ;
+                    rdfs:range              xsd:nonNegativeInteger ,
+                                            xsd:decimal ;
                     dcterms:description     "MOD: A generic property to store any metrics (number) related to the ontology."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
@@ -2683,7 +2685,6 @@ mod:metrics         rdf:type                owl:DatatypeProperty ;
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: E.3" ,
                                             "FAIR principle: F2" .
-
 
 
 ###  https://w3id.org/mod#numberOfClasses
@@ -2707,7 +2708,6 @@ mod:numberOfClasses rdf:type                owl:DatatypeProperty ;
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
                     prov:wasInfluencedBy    "MIRO guidelines:  E.3" ,
                                             "FAIR principle: F2" .
-        
 
 
 ###  https://w3id.org/mod#numberOfIndividuals
@@ -2731,7 +2731,6 @@ mod:numberOfIndividuals
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
                     prov:wasInfluencedBy    "MIRO guidelines:  E.3" ,
                                             "FAIR principle: F2" .
-
 
 
 ###  https://w3id.org/mod#numberOfProperties
@@ -2758,7 +2757,6 @@ mod:numberOfProperties
                                             "FAIR principle: F2" .
 
 
-
 ###  https://w3id.org/mod#numberOfObjectProperties
 mod:numberOfObjectProperties
                     rdf:type                owl:DatatypeProperty ;
@@ -2778,7 +2776,6 @@ mod:numberOfObjectProperties
                                             "FAIR principle: F2" .
 
 
-
 ###  https://w3id.org/mod#numberOfDataProperties
 mod:numberOfDataProperties
                     rdf:type                owl:DatatypeProperty ;
@@ -2796,7 +2793,6 @@ mod:numberOfDataProperties
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines:  E.3" ,
                                             "FAIR principle: F2" .
-
 
 
 ###  https://w3id.org/mod#numberOfAxioms
@@ -2821,7 +2817,6 @@ mod:numberOfAxioms
                                             "FAIR principle: F2" .
 
 
-
 ###  https://w3id.org/mod#numberOfLabels
 mod:numberOfLabels
                     rdf:type                owl:DatatypeProperty ;
@@ -2839,7 +2834,6 @@ mod:numberOfLabels
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines:  E.3" ,
                                             "FAIR principle: F2" .
-
 
 
 ### http://www.w3.org/ns/dcat#byteSize
@@ -2898,7 +2892,6 @@ mod:maxChildCount   rdf:type                owl:DatatypeProperty ;
                     prov:wasInfluencedBy    "FAIR principle: R1" .
 
 
-
 ###  https://w3id.org/mod#averageChildCount
 mod:averageChildCount
                     rdf:type                owl:DatatypeProperty ;
@@ -2906,7 +2899,7 @@ mod:averageChildCount
                     rdfs:label              "average number of children per class"@en ,
                                             "nombre moyen d'enfant par classe"@fr ;
                     rdfs:domain             mod:SemanticArtefactDistribution ;
-                    rdfs:range              xsd:nonNegativeInteger ;
+                    rdfs:range              xsd:decimal ;
                     dcterms:description     "MOD: Average number of children per class (BioPortal definition)."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2017-07-06"^^xsd:date ;
@@ -2915,7 +2908,6 @@ mod:averageChildCount
             
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: R1" .
-
 
 
 ###  https://w3id.org/mod#classesWithOneChild
@@ -2936,7 +2928,6 @@ mod:classesWithOneChild
                     prov:wasInfluencedBy    "FAIR principle: R1" .
 
 
-
 ###  https://w3id.org/mod#classesWithMoreThan25Children
 mod:classesWithMoreThan25Children
                     rdf:type                owl:DatatypeProperty ;
@@ -2953,7 +2944,6 @@ mod:classesWithMoreThan25Children
             
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: R1" .
-
 
 
 ###  https://w3id.org/mod#classesWithNoDefinition
@@ -2973,6 +2963,23 @@ mod:classesWithNoDefinition
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: R1" .
 
+
+###  https://w3id.org/mod#classesWithNoFormalDefinition
+mod:classesWithNoFormalDefinition
+                    rdf:type                owl:DatatypeProperty ;
+                    rdfs:subPropertyOf      mod:metrics ;
+                    rdfs:label              "number of classes with no formal or logical definition"@en ,
+                                            "nombre de classes sans définition formelle ou logique"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
+                    rdfs:range              xsd:nonNegativeInteger ;
+                    dcterms:description     "MOD: Number of classes with no formal or logical definition (e.g., an OWL restriction)."@en ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod> ;
+                    dcterms:issued          "2024-05-30"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.1> ;
+                    pav:importedOn          "2024-05-30"^^xsd:date ;
+            
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: R1" .
 
 
 ###  https://w3id.org/mod#fairScore
