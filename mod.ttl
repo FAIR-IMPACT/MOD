@@ -343,6 +343,7 @@
 #                   dcterms:issued          "DATE OF THE FIRST CREATION OF THE CLASS BY ORIGINAL RESOURCE"^^xsd:date ;
 #                   pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/X.X> ;
 #                   pav:importedOn          "DATE OF FIRST MOD VERSION INCLUDING"^^xsd:date ;
+#                   dcterms:modified        "DATE OF LAST MODIIFCATION WITHIN MOD"^^xsd:date ;
 #                    
 #            #OPTIONAL STATEMENTS
 #                   prov:wasInfluencedBy    <http://www.w3.org/ns/dcat> ;
@@ -369,20 +370,32 @@ mod:SemanticArtefact
                     dcterms:issued          "2021-12-01"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
                     pav:importedOn          "2021-12-01"^^xsd:date ;
+                    dcterms:modified        "2024-05-31"^^xsd:date ;
                     
 #            #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    <http://www.w3.org/ns/dcat> .
 
-                     
 
 ### https://w3id.org/mod#SemanticArtefactDistribution
-mod:SemanticArtefactDistribution    rdf:type owl:Class ;
-                                    rdfs:subClassOf adms:AssetDistribution ,
-                                                    dcat:Distribution ;
-                                 rdfs:label "Semantic Artefact Distribution"@en ;
-                                 rdfs:label "Distribución de un Artefacto Semántico"@es ;
-                                 dcterms:description "A specific representation of a semantic artefact"@en ;
-                                 dcterms:description "Una representación específica de un artefacto semántico"@es .
+mod:SemanticArtefactDistribution
+                    rdf:type                owl:Class ; 
+                    rdfs:subClassOf         adms:AssetDistribution ,
+                                            dcat:Distribution ;
+                    rdfs:label              "Semantic Artefact Distribution"@en ,
+                                            "Distribution d'un Artéfact Sémantique"@fr ,
+                                            "Distribución de un Artefacto Semántico"@es ;
+                    dcterms:description     "A specific representation and/or serialization of a semantic artefact."@en ,
+                                            "Une représentation et/ou une sérialisation spécifique d'un artefact sémantique."@fr ,
+                                            "Una representación y/o serialización específica de un artefacto semántico."@es ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod#> ;
+                    dcterms:issued          "2021-12-01"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
+                    pav:importedOn          "2021-12-01"^^xsd:date ;
+                    dcterms:modified        "2024-05-31"^^xsd:date ;
+                    
+#            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    <http://www.w3.org/ns/dcat> .
+
 
 ### https://w3id.org/mod#SemanticArtefactCatalogRecord
 mod:SemanticArtefactCatalogRecord   rdf:type owl:Class ;
