@@ -478,7 +478,8 @@ mod:acronym         rdf:type                owl:DatatypeProperty ;
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
                     prov:wasInfluencedBy    "MIRO guidelines: A.1" ,
-                                            "FAIR principle: F2" .
+                                            "FAIR principle: F2" ,
+                                            "FAIRsFAIR profile: MANDATORY" .
 
 
 ### http://purl.org/dc/terms/title
@@ -500,7 +501,8 @@ dcterms:title       rdf:type                rdf:Property ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: A.1" ,
-                                            "FAIR principle: F2" .
+                                            "FAIR principle: F2" ,
+                                            "FAIRsFAIR profile: MANDATORY" .
      
 
 ### https://w3id.org/mod#URI
@@ -519,7 +521,8 @@ mod:URI             rdf:type                owl:DatatypeProperty ;
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
                     prov:wasInfluencedBy    "MIRO guidelines: A.4" ,
-                                            "FAIR principle: F1" .   
+                                            "FAIR principle: F1" ,
+                                            "FAIRsFAIR profile: OPTIONAL" .   
 
 
 ### http://www.w3.org/2002/07/owl#versionIRI
@@ -536,14 +539,15 @@ owl:versionIRI      rdf:type                owl:OntologyProperty ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: A.4" ,
-                                            "FAIR principle: F1" .
+                                            "FAIR principle: F1" ,
+                                            "FAIRsFAIR profile: MANDATORY" .
             
 
 ### http://purl.org/dc/terms/identifier
 dcterms:identifier  rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:identifier  ;
-                    rdfs:label              "Other identifier"@en ,
-                                            "Autre identifiant"@fr ;
+                    rdfs:label              "other identifier"@en ,
+                                            "autre identifiant"@fr ;
                     rdfs:range              rdfs:Literal ;
                     dcterms:description     "DCTERMS: An unambiguous reference to the resource within a given context. Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN).  Persistent identifiers should be provided as HTTP URIs. SKOS: A notation is a string of characters such as 'T58.5 or '303.4833' used to uniquely identify a concept within the scope of a given concept scheme. ADMS: adms:identifier is used to link any resource to an instance of adms:Identifier which is its range. N.B. it is not appropriate to use dcterms:identifer to link to the Identifier class as its range is rdfs:Literal. ADMS uses this to provide any identifier for the Asset."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
@@ -555,7 +559,8 @@ dcterms:identifier  rdf:type                rdf:Property ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
-                    prov:wasInfluencedBy    "FAIR principle: F1,A1" .
+                    prov:wasInfluencedBy    "FAIR principle: F1,A1" ,
+                                            "FAIRsFAIR profile: MANDATORY" .
             
 
 ### http://www.w3.org/2002/07/owl#versionInfo
@@ -598,7 +603,8 @@ mod:status          rdf:type                owl:DatatypeProperty ;
             
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
-                    prov:wasInfluencedBy    "FAIR principle: A2" .
+                    prov:wasInfluencedBy    "FAIR principle: A2" ,
+                                            "FAIRsFAIR profile: RECOMMENDED" .
 
 
 ### http://www.w3.org/2002/07/owl#deprecated
@@ -638,7 +644,8 @@ mod:hasRepresentationLanguage
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
                     prov:wasInfluencedBy    "MIRO guidelines: E.1" ,
-                                            "FAIR principle: I1" .
+                                            "FAIR principle: I1" ,
+                                            "FAIRsFAIR profile: MANDATORY" .
                 
 
 ### https://w3id.org/mod#hasFormalityLevel
@@ -681,7 +688,8 @@ mod:hasSyntax       rdf:type                owl:DatatypeProperty ;
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
                     prov:wasInfluencedBy    "MIRO guidelines: E.1" ,
-                                            "FAIR principle: I1" .
+                                            "FAIR principle: I1" ,
+                                            "FAIRsFAIR profile: MANDATORY" .
     
 
 ### http://purl.org/dc/terms/language
@@ -700,6 +708,7 @@ dcterms:language    rdf:type                rdf:Property ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F2" ;
+                                            "FAIRsFAIR profile: RECOMMENDED" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
                     <http://purl.org/dc/dcam/rangeIncludes>     dcterms:LinguisticSystem .
@@ -718,7 +727,8 @@ dcterms:type        rdf:type                rdf:Property ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
-                    prov:wasInfluencedBy    "FAIR principle: F2" .
+                    prov:wasInfluencedBy    "FAIR principle: F2" ,
+                                            "FAIRsFAIR profile: MANDATORY" .
 
                         
 ##########################################
@@ -740,7 +750,8 @@ dcterms:accessRights
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
-                    prov:wasInfluencedBy    "FAIR principle: R1.1" ;
+                    prov:wasInfluencedBy    "FAIR principle: R1.1" ,
+                                            "FAIRsFAIR profile: MANDATORY" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
                     <http://purl.org/dc/dcam/rangeIncludes>     dcterms:RightsStatement .
@@ -762,7 +773,8 @@ dcterms:license     rdf:type                rdf:Property ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: A.3" ,
-                                            "FAIR principle: A2" ;
+                                            "FAIR principle: A2" ,
+                                            "FAIRsFAIR profile: MANDATORY" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
                     <http://purl.org/dc/dcam/rangeIncludes>     dcterms:LicenseDocument .
@@ -817,7 +829,8 @@ dcterms:rightsHolder
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: A.2" , 
-                                            "FAIR principle: R1.1" ;
+                                            "FAIR principle: R1.1" ,
+                                            "FAIRsFAIR profile: MANDATORY" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
                     <http://purl.org/dc/dcam/rangeIncludes>     dcterms:Agent .
@@ -844,7 +857,8 @@ dcterms:description rdf:type                rdf:Property ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: C.3" ,
-                                            "FAIR principle: F2" .
+                                            "FAIR principle: F2" ,
+                                            "FAIRsFAIR profile: MANDATORY" .
             
 
 ### http://xmlns.com/foaf/0.1/homepage
@@ -888,7 +902,8 @@ dcat:landingPage    rdf:type                rdf:Property , owl:ObjectProperty ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: C.3, F.1" ,
-                                            "FAIR principle: F2" ;
+                                            "FAIR principle: F2" ,
+                                            "FAIRsFAIR profile: MANDATORY" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
                     skos:scopeNote          "If the distribution(s) are accessible only through a landing page (i.e. direct download URLs are not known), then the landing page link should be duplicated as accessURL on a distribution."@en .
@@ -931,7 +946,8 @@ dcat:keyword        rdf:type                rdf:Property , owl:DatatypeProperty 
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: C.1" ,
-                                            "FAIR principle: F2" .
+                                            "FAIR principle: F2" ,
+                                            "FAIRsFAIR profile: MANDATORY" .
 
 
 ### http://purl.org/dc/terms/alternative
@@ -1008,7 +1024,8 @@ dcterms:bibliographicCitation
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
-                    prov:wasInfluencedBy    "FAIR principle: F2" .
+                    prov:wasInfluencedBy    "FAIR principle: F2" ,
+                                            "FAIRsFAIR profile: OPTIONAL" .
 
 
 ##########################################
@@ -1040,7 +1057,8 @@ dcterms:created     rdf:type                rdf:Property ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
-                    prov:wasInfluencedBy    "FAIR principle: F2" .
+                    prov:wasInfluencedBy    "FAIR principle: F2" ,
+                                            "FAIRsFAIR profile: MANDATORY" .
             
 
 ### http://purl.org/dc/terms/modified
@@ -1060,7 +1078,8 @@ dcterms:modified    rdf:type                rdf:Property ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
-                    prov:wasInfluencedBy    "FAIR principle: F2" .
+                    prov:wasInfluencedBy    "FAIR principle: F2" ,
+                                            "FAIRsFAIR profile: MANDATORY" .
             
 
 ### http://purl.org/dc/terms/valid
@@ -1161,7 +1180,8 @@ dcterms:creator     rdf:type                rdf:Property ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: C.2" , 
-                                            "FAIR principle: F2" ;
+                                            "FAIR principle: F2" ,
+                                            "FAIRsFAIR profile: MANDATORY" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
                     <http://purl.org/dc/dcam/rangeIncludes>     dcterms:Agent .
@@ -1187,7 +1207,8 @@ dcterms:contributor rdf:type                rdf:Property ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: C.2" , 
-                                            "FAIR principle: F2" ;
+                                            "FAIR principle: F2" ,
+                                            "FAIRsFAIR profile: RECOMMENDED" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
                     <http://purl.org/dc/dcam/rangeIncludes>     dcterms:Agent .
@@ -1247,7 +1268,8 @@ dcterms:publisher   rdf:type                rdf:Property ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: A.2" , 
-                                            "FAIR principle: F2" ;
+                                            "FAIR principle: F2" ,
+                                            "FAIRsFAIR profile: RECOMMENDED" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
                     <http://purl.org/dc/dcam/rangeIncludes>     dcterms:Agent .
@@ -1544,7 +1566,8 @@ dcterms:subject     rdf:type                rdf:Property ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: C.1" , 
-                                            "FAIR principle: F2" .
+                                            "FAIR principle: F2" ,
+                                            "FAIRsFAIR profile: MANDATORY" .
 
 
 ### http://purl.org/dc/terms/coverage
@@ -1560,7 +1583,8 @@ dcterms:coverage    rdf:type                rdf:Property ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: C.1" ,
-                                            "FAIR principle: F2" ;
+                                            "FAIR principle: F2" ,
+                                            "FAIRsFAIR profile: RECOMMENDED" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
                     <http://purl.org/dc/dcam/rangeIncludes>     dcterms:Jurisdiction, dcterms:Location, dcterms:Period  .
@@ -1608,7 +1632,8 @@ mod:conformsToKnowledgeRepresentationParadigm
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
                     prov:wasInfluencedBy    "MIRO guidelines: E.1" ,
-                                            "FAIR principle: R1.2" .
+                                            "FAIR principle: R1.2" ,
+                                            "FAIRsFAIR profile: RECOMMENDED" .
         
 
 ### https://w3id.org/mod#usedEngineeringMethodology
@@ -1630,7 +1655,8 @@ mod:usedEngineeringMethodology
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
                     prov:wasInfluencedBy    "MIRO guidelines: A.6" ,
-                                            "FAIR principle: R1.2" .
+                                            "FAIR principle: R1.2" ,
+                                            "FAIRsFAIR profile: RECOMMENDED" .
 
 
 ### http://purl.org/pav/createdWith
@@ -1649,7 +1675,8 @@ mod:createdWith     rdf:type                owl:ObjectProperty ;
             
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: E.2" ,
-                                            "FAIR principle: R1.2" .
+                                            "FAIR principle: R1.2" ,
+                                            "FAIRsFAIR profile: OPTIONAL" .
         
 
 ### http://purl.org/dc/terms/accrualMethod
@@ -1666,7 +1693,8 @@ dcterms:accrualMethod
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: D.3, F.2" ,
-                                            "FAIR principle: R1.2" ;
+                                            "FAIR principle: R1.2" ,
+                                            "FAIRsFAIR profile: RECOMMENDED" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
                     <http://purl.org/dc/dcam/rangeIncludes>     dcterms:MethodOfAccrual .
@@ -1686,7 +1714,8 @@ dcterms:accrualPeriodicity
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: F.2" ,
-                                            "FAIR principle: R1.2" ;
+                                            "FAIR principle: R1.2" ,
+                                            "FAIRsFAIR profile: OPTIONAL" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
                     <http://purl.org/dc/dcam/rangeIncludes>     dcterms:Frequency .
@@ -1727,7 +1756,8 @@ mod:competencyQuestion
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: A.6, D.3" ,
-                                            "FAIR principle: R1.2" .
+                                            "FAIR principle: R1.2" ,
+                                            "FAIRsFAIR profile: OPTIONAL" .
 
 
 ### https://w3id.org/mod#sampleQueries
@@ -1761,7 +1791,8 @@ prov:wasGeneratedBy rdf:type                owl:ObjectProperty ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: D.1" ,
-                                            "FAIR principle: R1.2" ;
+                                            "FAIR principle: R1.2" ,
+                                            "FAIRsFAIR profile: OPTIONAL" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
                     prov:inverse            prov:generated .
@@ -1792,7 +1823,7 @@ prov:wasinvalidatedBy
 mod:fairAssessment  rdf:type                owl:DatatypeProperty ;
                     rdfs:subPropertyOf      rdfs:label ;
                     rdfs:label              "FAIR assessment"@en ,
-                                            "Evaluation du niveau de FAIRness"@fr ;
+                                            "evaluation du niveau de FAIRness"@fr ;
                     rdfs:domain             mod:SemanticArtefact ;
                     rdfs:range              xsd:string ;
                     dcterms:description     "MOD: A FAIRness assessment result produced by a known or identified FAIRness assessment method or tool. It can be either a simple number or a structured result document explaining the assessment."@en ;
@@ -1825,7 +1856,8 @@ mod:prefLabelProperty
 
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: E.7" ,
-                                            "FAIR principle: R1" .
+                                            "FAIR principle: R1" ,
+                                            "FAIRsFAIR profile: RECOMMENDED" .
                         
 
 ### https://w3id.org/mod#synonymProperty
@@ -1844,8 +1876,8 @@ mod:synonymProperty rdf:type                owl:DatatypeProperty ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: E.7" ,
-                                            "FAIR principle: R1" .
-
+                                            "FAIR principle: R1" ,
+                                            "FAIRsFAIR profile: RECOMMENDED" .
 
 ### https://w3id.org/mod#definitionProperty
 mod:definitionProperty 
@@ -1862,7 +1894,8 @@ mod:definitionProperty
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: E.7" ,
-                                            "FAIR principle: R1" .
+                                            "FAIR principle: R1" ,
+                                            "FAIRsFAIR profile: RECOMMENDED" .
                     
 
 ### https://w3id.org/mod#authorProperty
@@ -1974,7 +2007,8 @@ dcat:accessURL      rdf:type                rdf:Property , owl:ObjectProperty ;
                     
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "MIRO guidelines: A.4" ,
-                                            "FAIR principle: F2" ;
+                                            "FAIR principle: F2" ,
+                                            "FAIRsFAIR profile: MANDATORY" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
                      skos:scopeNote         "If the distribution(s) are accessible only through a landing page (i.e. direct download URLs are not known), then the landing page link should be duplicated as accessURL on a distribution."@en .
@@ -2001,7 +2035,7 @@ dcterms:isFormatOf  rdf:type                rdf:Property ;
 dcterms:hasFormat   rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:relation , dcterms:relatio ;
                     rdfs:label              "has format"@en ,
-                                            " pour format"@fr ;
+                                            "a pour format"@fr ;
                     dcterms:description     "DCTERMS: A related resource that is substantially the same as the pre-existing described resource, but in another format."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2000-07-11"^^xsd:date ;
@@ -2011,7 +2045,8 @@ dcterms:hasFormat   rdf:type                rdf:Property ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
-                    prov:wasInfluencedBy    "FAIR principle: I1" .
+                    prov:wasInfluencedBy    "FAIR principle: I1" ,
+                                            "FAIRsFAIR profile: RECOMMENDED" .
 
 
 ### http://www.w3.org/ns/dcat#downloadURL
@@ -2030,7 +2065,8 @@ dcat:downloadURL    rdf:type                rdf:Property , owl:ObjectProperty ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
-                    prov:wasInfluencedBy    "FAIR principle: F2" ;
+                    prov:wasInfluencedBy    "FAIR principle: F2" ,
+                                            "FAIRsFAIR profile: RECOMMENDED" ;
 
             #OTHER ORIGINAL STATEMENTS IF ANY 
                     skos:scopeNote "dcat:downloadURL SHOULD be used for the address at which this distribution is available directly, typically through a HTTP Get request."@en .
@@ -2089,7 +2125,7 @@ mod:browsingUI      rdf:type                owl:DatatypeProperty ;
 ## http://purl.org/dc/terms/source
 dcterms:source      rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:source , dcterms:relation ;
-                    rdfs:label             "source"@en ,
+                    rdfs:label              "source"@en ,
                                             "source"@fr ;
                     dcterms:description     "DCTERMS: A related resource from which the described resource is derived. MOD: The ontology(ies) referred to while creating the present ontology. PROV: Influence is the capacity of an entity, activity, or agent to have an effect on the character, development, or behavior of another by means of usage, start, end, generation, invalidation, communication, derivation, attribution, association, or delegation. PROV: A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity. PAV: Derived from a different resource. NKOS: A resource used as the source for a derivative resource."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
@@ -2111,7 +2147,7 @@ dcterms:source      rdf:type                rdf:Property ;
 ### http://www.w3.org/ns/sparql-service-description#endpoint
 sd:endpoint         rdf:type                rdf:Property , owl:InverseFunctionalProperty ; 
                     rdfs:label              "SPARQL endpoint"@en ,
-                                           "point de requêtage SPARQL"@fr ;
+                                            "point de requêtage SPARQL"@fr ;
                     rdfs:domain             sd:Service ;
                     dcterms:description     "SD: Relates an instance of sd:Service to a SPARQL endpoint that implements the SPARQL Protocol service for the service. The object of the sd:endpoint property is an IRI. VOID: A SPARQL protocol endpoint that allows SPARQL query access to a void:Dataset."@en ;
                     rdfs:isDefinedBy        <ttp://www.w3.org/ns/sparql-service-description> ;
@@ -2127,7 +2163,7 @@ sd:endpoint         rdf:type                rdf:Property , owl:InverseFunctional
 ### http://schema.org/includedInDataCatalog
 schema:includedInDataCatalog
                     rdf:type                rdf:Property ;
-                    rdfs:label              "Indexed or included in catalog or repository"@en ,
+                    rdfs:label              "indexed or included in catalog or repository"@en ,
                                             "indexé ou inclus dans un catalogue ou un entrepôt"@fr ;
                     dcterms:description     "SCHEMA: A data catalog which contains this dataset."@en ;
                     rdfs:isDefinedBy        <http://schema.org/> ;
@@ -2136,7 +2172,8 @@ schema:includedInDataCatalog
                     pav:importedOn          "2014-07-28"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
-                    prov:wasInfluencedBy    "FAIR principle: F4, A1.1, A1.2" ;
+                    prov:wasInfluencedBy    "FAIR principle: F4, A1.1, A1.2" ,
+                                            "FAIRsFAIR profile: OPTIONAL" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
                     schema:domainIncludes   schema:Dataset ;
@@ -2335,7 +2372,8 @@ mod:semanticArtefactRelation
                     pav:importedOn          "2021-12-06"^^xsd:date ;
 
             #OPTIONAL STATEMENTS
-                    prov:wasInfluencedBy    "FAIR principle: I2" .
+                    prov:wasInfluencedBy    "FAIR principle: I2" ,
+                                            "FAIRsFAIR profile: OPTIONAL" .
 
 
 ### https://w3id.org/mod#similar
