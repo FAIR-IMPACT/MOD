@@ -11,7 +11,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix adms: <http://www.w3.org/ns/adms#> .
-@prefix dcat: <http://www.w3.org/ns/dca#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcmi: <http://purl.org/dc/dcmitype/> .
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -43,232 +43,280 @@
 <https://w3id.org/mod#>
     rdf:type mod:SemanticArtefact ;
 
-    ########## General properties ##########
+    ########## General ##########
     mod:acronym                     "MOD" ;
-    dcterms:title                   "MOD: Metadata for Ontology Description and publication"@en,
-                                    "MOD: Metadonnées pour la Description et la publication d'Ontologies"@fr ,
-                                    "MOD: Metadatos para la Descripción y Publicación de Ontologías"@es;
+    dcterms:title                   "Metadata for Ontology Description and publication"@en,
+                                    "Metadonnées pour la Description et la publication d'Ontologies"@fr ,
+                                    "Metadatos para la Descripción y Publicación de Ontologías"@es;
     owl:ontologyIRI                 <https://w3id.org/mod> ;
-    mod:uriSpace                    <https://w3id.org/mod> ;
+    mod:URI                         <https://w3id.org/mod> ;
     owl:versionIRI                  <https://w3id.org/mod/3.1> ;
+##  dcterms:identifier              ; 
     owl:versionInfo                 "3.1" ;
     mod:status                      "alpha" ;
     owl:deprecated                  false ;
-    dcterms:license                 <https://creativecommons.org/licenses/by/4.0> ; 
     mod:hasRepresentationLanguage   omv:OWL ;
     mod:hasFormalityLevel           omv:Vocabulary ;
     mod:hasSyntax                   <http://www.w3.org/ns/formats/Turtle> ;
-    dcterms:language                <http://lexvo.org/id/iso639-3/eng> ,
-                                    <http://lexvo.org/id/iso639-3/fra> ,
-                                    <http://lexvo.org/id/iso639-3/spa> ;
+    dcterms:language                <http://lexvo.org/id/iso639-1/en> ,
+                                    <http://lexvo.org/id/iso639-1/fr> ,
+                                    <http://lexvo.org/id/iso639-1/es> ;
+    dcterms:type                    omv:TaskOntology ;
 
-  ########## Description properties ##########
-    dcterms:description        
-                    "MOD (Metadata for Ontology Description and publication) is a project to define a standard way to capture metadata descriptions for ontologies or semantic resources/artefacts in general (thesaurus, terminologies, vocabularies, etc.). The MOD OWL file can be used to create knowledge bases consisting of metadata records of ontologies/vocabularies as instances. The MOD vocabulary can also be used to define specific profiles for recommended metadata properties (e.g., H2020 project FAIRsFAIR semantic artefact minimum metadata profile). Users can go through MOD and pickup the required properties to describe their ontology."@en, 
-                    "MOD (Metadonnées pour la Description et la publication d'Ontologie) est un projet visant à définir un moyen standard pour capturer des descriptions de métadonnées pour les ontologies ou les ressources/artefacts sémantiques en général (thésaurus, terminologies, vocabulaires, etc.). Le fichier MOD OWL peut être utilisé pour créer des bases de connaissances composées d’instances d’ontologies / vocabulaires décrites avec MOD. Le vocabulaire MOD peut également être utilisé pour définir des profils de métadonnées (e.g., le profil de métadonnées minimale pour les artefacts sémanttique du projet H2020 FAIRsFAIR). Les utilisateurs peuvent consulter la spécification et récupérer les propriétés requises pour décrire leur ontologie."@fr ,
-                    "MOD (Metadatos para la Descripción y Publicación de Ontologías) es un proyecto para definir un manera estándar de capturar las descripciones de metadatos para ontologías o recursos/artefactos semánticos en general (tesauros, terminologías, vocabularios, etc.). El archivo MOD se puede usar para crear bases de conocimiento consistentes en registros de metadatos de ontologías/vocabularios como instancias. El vocabulario MOD puede utilizarse también para definir perfiles específicos para las propiedades de metadatos recomendadas (e.g. el perfil de metadatos mínimo del projecto H2020 FAIRsFAIR). Los usuarios pueden recorrer MOD y elegir las propiedades requeridas para describir su ontología."@es;
-    dcterms:abstract
-                    "MOD provides a set of properties which can be used by ontology developers, ontology libraries (e.g., ontology registry, ontology repository, ontology portal), to describe and publish ontologies. The enriched description of ontologies, in turn, will help users to search, discover, identify and select ontologies."@en ,
-                    "MOD provee un conjunto de propiedades que pueden usarse por desarroladores de ontologías, librerías de ontologías (e.g., registros de ontologías, repositorios de ontologías, portales de ontologías), para describir to describe and publish ontologies. The enriched description of ontologies, in turn, will help users to search, discover, identify and select ontologies."@en ,
-                    "MOD fournit un ensemble de propriétés pouvant être utilisées par les développeurs d’ontologies ou les portails d’ontologies (registre, bibliothèques), pour décrire et publier des ontologies. La description enrichie des ontologies aidera les utilisateurs à rechercher, découvrir, identifier et sélectionner des ontologies."@fr ;
-    cc:morePermissions              "https://github.com/sifrproject/MOD-Ontology/blob/master/LICENSE" ;
+    ########## Licensing ##########
+    dcterms:accessRights            "MOD is licensed under the Creative Commons Attribution 4.0. For details, see here: https://github.com/sifrproject/MOD-Ontology/blob/master/LICENSE"@en ,
+                                    "MOD est disponible sous Licence Creative Commons Attribution 4.0. pour plus de details voir https://github.com/sifrproject/MOD-Ontology/blob/master/LICENSE"@fr ,
+                                    "MOD está disponible bajo la licencia Creative Commons Attribution 4.0. para obtener más detalles, consulte https://github.com/sifrproject/MOD-Ontology/blob/master/LICENSE"@es ;
+    dcterms:license                 <https://creativecommons.org/licenses/by/4.0> ; 
     cc:useGuidelines                "MOD is free of use; feedback is welcome."@en ,
                                     "MOD peut être utilisée de manière libre; les retours sont appréciés"@fr ,
                                     "MOD se puede utilizar de libremente; los comentarios y las devoluciones son bienvenidas"@es ;
-    dcterms:bibliographicCitation   <https://dx.doi.org/10.1007/978-3-319-70863-8_17> ;
-    foaf:page                       <https://www.isibang.ac.in/ns/mod/index.html> ;
-    dcat:accessURL                  <https://www.isibang.ac.in/ns/mod/ontology.ttl> ;
+    cc:morePermissions              "https://github.com/sifrproject/MOD-Ontology/blob/master/LICENSE" ;
+    dcterms:rightsHolder            "Indian Statistical Institute and University of Montpellier"@en ,
+                                    "Institut Indien de la Statistique et Université de Montpellier"@fr;
+
+    ########## Description ##########
+    dcterms:description             "MOD (Metadata for Ontology Description and publication) is a project to define a standard way to capture metadata descriptions for ontologies or semantic resources/artefacts in general (thesaurus, terminologies, vocabularies, etc.). The MOD OWL file can be used to create knowledge bases consisting of metadata records of semantic artefacts as instances. MOD can also be used to define specific profiles for recommended metadata properties (e.g., H2020 project FAIRsFAIR semantic artefact minimum metadata profile). Users can go through MOD and pickup the required properties to describe their semantic artefacts."@en, 
+                                    "MOD (Metadonnées pour la Description et la publication d'Ontologie) est un projet visant à définir un moyen standard pour capturer des descriptions de métadonnées pour les ontologies ou les ressources/artefacts sémantiques en général (thésaurus, terminologies, vocabulaires, etc.). Le fichier MOD OWL peut être utilisé pour créer des bases de connaissances composées d’instances d’artefacts sémantiques décrits avec MOD. Le vocabulaire MOD peut également être utilisé pour définir des profils de métadonnées (e.g., le profil de métadonnées minimale pour les artefacts sémantiques du projet H2020 FAIRsFAIR). Les utilisateurs peuvent consulter la spécification et récupérer les propriétés requises pour décrire leur artefacts sémantiques."@fr ,
+                                    "MOD (Metadatos para la Descripción y Publicación de Ontologías) es un proyecto para definir un manera estándar de capturar las descripciones de metadatos para ontologías o recursos/artefactos semánticos en general (tesauros, terminologías, vocabularios, etc.). El archivo MOD se puede usar para crear bases de conocimiento consistentes en registros de metadatos de artefactos semánticos como instancias. El vocabulario MOD puede utilizarse también para definir perfiles específicos para las propiedades de metadatos recomendadas (e.g. el perfil de metadatos mínimo del projecto H2020 FAIRsFAIR). Los usuarios pueden recorrer MOD y elegir las propiedades requeridas para describir su artefactos semánticos."@es;
+    foaf:homepage                   <https://github.com/sifrproject/MOD-Ontology> ;
+#   dcat:landingPage                ;
+    rdfs:comment                    "This project is connected to the work done within AgroPortal (since MOD1.4). MOD 3.0 is work in progress now within the FAIR-IMPACT Horizon Europe project."@en ,
+                                    "Ce projet est lié au travail mis en œuvre dans AgroPortal (depuis MOD1.4). MOD 3.0 est actuellement en cours de développement au sein du projet Horizon Europe FAIR-IMPACT."@fr ,
+                                    "Este proyecto está relacionado con el trabajo realizado en AgroPortal (desde MOD1.4). MOD 3.0 es un trabajo en curso en el marco del proyecto Horizonte Europa FAIR-IMPACT."@es ;
+    dcat:keyword                    "metadata description, metadata vocabularies, ontology description, ontology profile"@en ,
+                                    "description de métadonnées, vocabulaires de métadonnées, description d'ontologie, profil d'ontologie"@fr ,
+                                    "descripción de metadatatos, vocabularies de metadatos, descripción de ontologías, perfil de ontologías"@es ;
     dcterms:alternative             "MOD Vocabulary"@en ,
                                     "Vocabulaire MOD"@fr ,
                                     "MOD Ontology Metadata model"@en ,
                                     "Modèle de métadonnées d'ontologie MOD"@fr ;
     skos:hiddenLabel                "MOD-Ontology"@en;
-    rdfs:comment            
-                                    "This project is connected to the work done within AgroPortal (with MOD1.4). MOD 2.0 is work in progress."@en ,
-                                    "Ce projet est lié au travail mis en œuvre dans AgroPortal (avec MOD1.4). MOD2.0 est en cours de développement."@fr ;
-    omv:keywords                    "metadata description, metadata vocabularies, ontology description, ontology profile"@en ,
-                                    "descripción de metadatatos, vocabularies de metadatos, descripción de ontologías, perfil de ontologías"@es ,
-                                    "description de métadonnées, vocabulaires de métadonnées, description d'ontologie, profil d'ontologie"@fr ;
-    dcterms:type                    omv:TaskOntology ;
-    mod:designedForTask             omv:ConfigurationTask ;
-    pav:createdWith                 <https://protege.stanford.edu> ;
-    mod:usedEngineeringMethodology  
-                                    "MOD 1 has been designed by reviewing in total 23 standard existing metadata vocabularies (e.g., Dublin Core, OMV, DCAT, VoID) and selecting relevant properties for describing ontologies. Then, we studied metadata usage analytics within ontologies and ontology repositories. MOD 2 abandon the integration approach of MOD 1 but re-incorporates properties of several obsolete metadata vocabularies inside its own namespace (DOOR, OMV, VOAF). MOD 2 is designed as an extension of the DCAT 2 metadata vocabulary."@en ,
-                                    "MOD 1 a été conçue en examinant au total 23 vocabulaires de métadonnées standard existants (e.g., Dublin Core, OMV, DCAT, VoID) et en sélectionnant des propriétés pertinentes pour la description des ontologies. Nous avons ensuite étudié l’analyse de l’utilisation des métadonnées au sein d’ontologies et de portail d’ontologies. MOD 2 abandonne l'approche d'intégration de MOD 1 mais réincorpore les propriétés de plusieurs vocabulaires de métadonnées obsolètes dans son propre espace de nolmage (DOOR, OMV, VOAF). MOD 2 est conçue comme une extension du vocabulaire des métadonnées DCAT 2."@fr ;
-    mod:conformsToKnowledgeRepresentationParadigm "OWL Ontology" ;
-    dcterms:coverage    
-                                    "Ontologies or semantic resources/artefacts in general (thesaurus, terminologies, vocabularies, etc.)"@en ,
-                                    "Les ontologies ou les ressources/artefacts sémantiques en général (thésaurus, terminologies, vocabulaires, etc.)"@fr ;
-    mod:competencyQuestion
-                                    "How to standardly and semantically capture the description of an ontology while relying on other existing metadata vocabularies?"@en ,
-                                    "Comment capturer de manière standard et sémantique la description d'une ontologie en s'appuyant sur d'autres vocabulaires de métadonnées existants?"@fr ;
-    foaf:depiction                  <https://github.com/sifrproject/MOD-Ontology/raw/master/figures/MOD2.0_summary.png> ;
- ## foaf:logo                        ;
-    foaf:homepage                   <https://github.com/sifrproject/MOD-Ontology> ;
-    dcterms:accessRights        
-                                    "MOD is licensed under the Creative Commons Attribution 4.0 ; For details, see here: https://github.com/sifrproject/MOD-Ontology/blob/master/LICENSE"@en ,
-                                    "MOD est disponible sous Licence Creative Commons Attribution 4.0 ; pour plus de details voir https://github.com/sifrproject/MOD-Ontology/blob/master/LICENSE"@fr ;
-    vann:changes                    
-                                    "From MOD 1.2: (i) added description of properties, (ii) extended number of properties (from 88 to 128), (iii) separation of profile and ontology files, (iv) new URIs scheme. From MOD2.0: (i) use of w3id URIs, (ii) integration of DOOR, OMV, VOAF properties within MOD namespace, (iii) compliant with DCAT2."@en ,
-                                    "Depuis MOD 1.2 : (i) ajout de la description des propriétés, (ii) nombre étendu de propriétés (de 88 à 128), (iii) séparation des fichiers de profil et d’ontologie, (iv) nouveaux URI. Depuis MOD2.O : (i) utilisation de w3id pour les URIs, (ii) intégration des propriétés de DOOR, OMV et VOAF dans l'espace de nommage de MOD, (iii) compatible avec DCAT2. "@fr ;
-    vann:example                    
-                                    "An adaptation of MOD1.4 is used within AgroPortal, since 2017. MOD2 is the baseline for H2020 project FAIRsFAIR semantic artefact minimum metadata profile."@en ,
-                                    "Une adaptation de MOD est utilisée dans AgroPortal, depuis 2017. MOD2 est réutilisée par le profil de métadonnées minimale pour les artefacts sémanttique du projet H2020 FAIRsFAIR."@fr ;
-    vann:preferredNamespaceUri      <https://w3id.org/mod> ;
-    vann:preferredNamespacePrefix   "mod" ;
-    mod:prefLabelProperty           rdfs:label ;
-    mod:synonymProperty             skos:altLabel ;
-    mod:definitionProperty          dcterms:description ;
-    mod:authorProperty              pav:importedBy ;
-    mod:obsoleteProperty            owl:deprecated ;
-    mod:hierarchyProperty           rdfs:subClassOf ;
-##  mod:obsoleteParent              ;
-    void:uriRegexPattern            "OriginalURI | BaseURI+ShortName" ;
-    mod:toDoList                   "https://github.com/sifrproject/MOD-Ontology/raw/master/mod-v2.0_todos.txt" ;
-    idot:exampleIdentifier          <https://w3id.org/mod#analytics> ;
-    schema:award                    "Published at MTSR 2017"@en ,
-                                    "Publiée a MTSR 2017"@fr ;
-    schema:associatedMedia          <https://drive.google.com/drive/folders/1kSF0XuSr9mwBk-daR6RYut_1Dzzko33v> ;
-##  schema:includedInDataCatalog    ;
+    dcterms:abstract                "MOD provides a set of properties which can be used by ontology or semantic artefact developers, or by semantic artefact catalogues (e.g., library, registry, repository, portal), to describe and publish semantic artefacts. The enriched description of semantic artefacts, in turn, will help users to search, discover, identify and select semantic artefacts."@en ,
+                                    "MOD fournit un ensemble de propriétés pouvant être utilisées par les développeurs d’ontologies, d'artefact sémantique ou les catalogues d'artéfact sémantiques (portails, registre, bibliothèque), pour décrire et publier des artefacts sémantiques. La description enrichie des artefacts sémantiques aidera les utilisateurs à rechercher, découvrir, identifier et sélectionner des artefacts sémantiques."@fr ,
+                                    "MOD provee un conjunto de propiedades que pueden usarse por desarroladores de ontologías, o artefactos semánticos, o catálogos de artefactos semánticos (e.g., registros, repositorios, portales), para describir y publicar artefactos semánticos. La descripción enriquecida de artefactos semánticos, a su vez, ayudará a los usuarios a buscar, descubrir, identificar y seleccionar los artefactos semánticos."@es ;
+    dcterms:bibliographicCitation   <https://dx.doi.org/10.1007/978-3-319-70863-8_17> ;
+    
+    ########## Dates ##########
 
-  ########## People properties ##########
+    dcterms:created                 "2015-08-05" ;
+    dcterms:modified                "2024-05-31" ;
+#   dcterms:valid                   ;
+#   pav:curatedOn                   ;
+#   dcterms:dateSubmitted           ;
+
+    ########## Persons and organizations ##########
   
+    dcat:contactPoint               "Biswanath Dutta (bisu@drtc.isibang.ac.in)" ,
+                                    "Clement Jonquet (jonquet@lirmm.fr)" ;
     dcterms:creator                 "Biswanath Dutta (https://orcid.org/0000-0003-3059-8202)" ,
                                     "Clement Jonquet (https://orcid.org/0000-0002-2404-1582)" ; 
     dcterms:contributor             "Anne Toulet (https://orcid.org/0000-0003-0463-0854)" ,
                                     "Luiz Bonino (https://orcid.org/0000-0002-1164-1351)" ,
                                     "Yann Le Franc (https://orcid.org/0000-0003-4631-418X)" ,
-                                    "Udaya Varadarajan (https://orcid.org/0000-0002-4936-0272)" ; 
+                                    "Udaya Varadarajan (https://orcid.org/0000-0002-4936-0272)" ,
+                                    "Alejandra Gonzalez-Beltran (https://orcid.org/0000-0003-3499-8262)" ,
+                                    "Antony Wilson (https://orcid.org/0000-0001-7336-4823)" ; 
+    pav:curatedBy                   "Anne Toulet (https://orcid.org/0000-0003-0463-0854)" ,
+                                    "Alejandra Gonzalez-Beltran (https://orcid.org/0000-0003-3499-8262)" ,
+                                    "Clement Jonquet (https://orcid.org/0000-0002-2404-1582)" ; 
+    schema:translator               "Alejandra Gonzalez-Beltran (https://orcid.org/0000-0003-3499-8262)" ,
+                                    "Clement Jonquet (https://orcid.org/0000-0002-2404-1582)" ; 
     dcterms:publisher               "Indian Statistical Institute, Bangalore Centre, India (https://www.isibang.ac.in)" ,
                                     "LIRMM, University of Montpellier, France (http://www.lirmm.fr)" ;
-    pav:curatedBy                   "Anne Toulet" ;
-    schema:translator               "Clement Jonquet" ;
-    dcterms:rightsHolder            "Indian Statistical Institute and University of Montpellier"@en ,
-                                    "Institut Indien de la Statistique et Université de Montpellier"@fr;
+    foaf:fundedBy                   "Indian Statistical Institute, University of Montpellier, French National Research Agency (under grant ANR-10-LABX-20, ANR-11-BINF-0002, ANR-19-DATA-0019), European Union’s Horizon 2020 research and innovation programme under the Marie Sklodowska-Curie grant agreement No 701771 and H2020 FAIRsFAIR project No 831558 and FAIR-IMPACT project No 101057344."@en ;
+    mod:endorsedBy                  "OntoPortal Alliance"@en ,
+                                    "Alliance OntoPortal"@fr ,
+                                    "Alianza OntoPortal"@es ;
+    
+    ########## Community ##########
 
-  ########## Grouping properties ##########
+#   schema:comment                  ;
+#   mod:hasEvaluation               ;
+    mod:group                       "Semantic Web metadata vocabularies"@en ;
+    mod:usedInProject               "Following OntoPortal-based catalogues: AgroPortal, EcoPortal, EarthPortal, BiodivPortal, IndustryPortal; projects SIFR, D2KAB, FAIRsFAIR, FAIR-IMPACT."@en ,
+                                    "Catalogues basés sur OntoPortal suivants : AgroPortal, EcoPortal, EarthPortal, BiodivPortal, IndustryPortal; projets SIFR, D2KAB, FAIRsFAIR, FAIR-IMPACT."@fr ,
+                                    "Siguiendo los catálogos basados en OntoPortal: AgroPortal, EcoPortal, EarthPortal, BiodivPortal, IndustryPortal; proyectos SIFR, D2KAB, FAIRsFAIR, FAIR-IMPACT."@es ;
+    dcterms:audience                "MOD primary targets ontology (or semantic resource/artefact) developers and semantic artefact catalogue providers."@en ,
+                                    "MOD s'adresse en priorité aux dévelopeurs d'ontologies (ou de ressource/artefact sémantiques) ainsi qu'au dévelopeurs de catalogues d'artéfacts sémantiques."@fr ,
+                                    "MOD se dirige principalmente a desarrolladores de ontologías (o recursos/artefactos semánticos) y a proveedores de catálogos de artefactos semánticos."@es ;
+#   mod:analytics                   ;
+    doap:repository                 <https://github.com/FAIR-IMPACT/MOD> ;
+    doap:bugDatabase                <https://github.com/FAIR-IMPACT/MOD/issues> ;
+#   doap:mailing-list               ;
+    mod:toDoList                    <https://github.com/FAIR-IMPACT/MOD/issues> ;
+    schema:award                    "Published at MTSR 2017"@en ,
+                                    "Publiée a MTSR 2017"@fr ;
 
+    ########## Usage ##########                      
+    mod:knownUsage                  "MOD is used for instance in AgroPortal (http://agroportal.lirmm.fr) to provide equivalences in AgroPortal's ontology metadata model."@en ,
+                                    "MOD est utilisée par exemple dans AgroPortal (http://agroportal.lirmm.fr) pour fournir des equivalences au sein du modèle de métadonnées d'ontologies."@fr ,
+                                    "MOD se utiliza, por ejemplo, en AgroPortal (http://agroportal.lirmm.fr) para proporcionar equivalencias en el modelo de metadatos de ontología de AgroPortal."@es  ;
+    mod:designedForTask             omv:ConfigurationTask ;
     dcterms:subject                 "Metadata descriptions"@en ;
-    mod:group                       "Metadata vocabularies"@en ;
+    dcterms:coverage                "Ontologies or semantic resources/artefacts in general (thesaurus, terminologies, vocabularies, etc.)"@en ,
+                                    "Les ontologies ou les ressources/artefacts sémantiques en général (thésaurus, terminologies, vocabulaires, etc.)"@fr ,
+                                    "Ontologías o recursos/artefactos semánticos en general (tesauro, terminologías, vocabularios, etc.)"@es ;
+    vann:example                    "MOD1.4 is used within AgroPortal, since 2017. MOD2 is the baseline for H2020 project FAIRsFAIR semantic artefact minimum metadata profile."@en ,
+                                    "MOD1.4 est utilisée dans AgroPortal, depuis 2017. MOD2 est réutilisée par le profil de métadonnées minimale pour les artefacts sémanttique du projet H2020 FAIRsFAIR."@fr ,
+                                    "MOD1.4 se utiliza en AgroPortal desde 2017. MOD2 es la base para el perfil mínimo de metadatos del artefacto semántico FAIRsFAIR del proyecto H2020."@es ;
+    mod:conformsToKnowledgeRepresentationParadigm "OWL Ontology" ;
+    mod:usedEngineeringMethodology  "MOD 1 has been designed by reviewing in total 23 standard existing metadata vocabularies (e.g., Dublin Core, OMV, DCAT, VoID) and selecting relevant properties for describing ontologies. Then, we studied metadata usage analytics within ontologies and ontology repositories. MOD 2 abandon the integration approach of MOD 1 but re-incorporates properties of several obsolete metadata vocabularies inside its own namespace (DOOR, OMV, VOAF). MOD 2 is designed as an extension of the DCAT 2 metadata vocabulary. MOD3 was built as a consolidaiton of the DCAT 2 profile and include multiple other properties for different objects (not only mod:SemanticArtefact and mod:SemanticArtefactDistribution)."@en ,
+                                    "MOD 1 a été conçu en examinant au total 23 vocabulaires de métadonnées standard existants (par exemple, Dublin Core, OMV, DCAT, VoID) et en sélectionnant les propriétés pertinentes pour décrire les ontologies. Ensuite, nous avons étudié l'analyse de l'utilisation des métadonnées au sein des ontologies et des référentiels d'ontologies. MOD 2 abandonne l'approche d'intégration de MOD 1 mais réintègre les propriétés de plusieurs vocabulaires de métadonnées obsolètes dans son propre espace de noms (DOOR, OMV, VOAF). MOD 2 est conçu comme une extension du vocabulaire de métadonnées DCAT 2. MOD3 a été construit comme une consolidation du profil DCAT 2 et inclut plusieurs autres propriétés pour différents objets (pas seulement mod:SemanticArtefact et mod:SemanticArtefactDistribution)."@fr ,
+                                    "MOD 1 ha sido diseñado revisando un total de 23 vocabularios de metadatos estándar existentes (por ejemplo, Dublin Core, OMV, DCAT, VoID) y seleccionando propiedades relevantes para describir ontologías. Luego, estudiamos el análisis del uso de metadatos dentro de las ontologías y los repositorios de ontologías. MOD 2 abandona el enfoque de integración de MOD 1, pero reincorpora propiedades de varios vocabularios de metadatos obsoletos dentro de su propio espacio de nombres (DOOR, OMV, VOAF). MOD 2 está diseñado como una extensión del vocabulario de metadatos DCAT 2. MOD3 se construyó como una consolidación del perfil DCAT 2 e incluye múltiples otras propiedades para diferentes objetos (no solo mod:SemanticArtefact y mod:SemanticArtefactDistribution)."@es ;
+    pav:createdWith                 "Protégé" ,
+                                    "Text editor" ;
+    dcterms:accrualMethod           "When a need of a new property is identified by the developer team, we review classic/standards metadata vocabularies to identifiy if the desire property already exists. If it exists in several metadata vocabularies we give priorities to consitency with previous MOD choices, then W3C Recommendations, then community standards."@en ,
+                                    "Lorsqu'un besoin d'une nouvelle propriété est identifié par l'équipe de développeurs, nous passons en revue les vocabulaires de métadonnées classiques / standards pour identifier si la propriété désirée existe déjà. Si elle existe dans plusieurs vocabulaires de métadonnées, nous donnons la priorité à la cohérence avec les choix précédents dans MOD, puis aux recommandations du W3C, puis aux normes de la communauté."@fr ,
+                                    "Cuando el equipo de desarrolladores identifica la necesidad de una nueva propiedad, revisamos los vocabularios de metadatos clásicos/estándares para identificar si la propiedad deseada ya existe. Si existe en varios vocabularios de metadatos, damos prioridad a la coherencia con las opciones anteriores del MOD, luego a las recomendaciones del W3C y luego a los estándares de la comunidad."@es ;
+    dcterms:accrualPeriodicity      "New properties are added on demand with no specific periodicity."@en ,
+                                    "Les nouvelles propriétés sont ajoutées à la demande sans périodicité particulière."@fr ,
+                                    "Se añaden nuevas propiedades a demanda sin una periodicidad específica."@es ;
+    dcterms:accrualPolicy           "Editorial choice of the developer team."@en ,
+                                    "Choix éditorial de l'équipe de développeurs."@fr ,
+                                    "Elección editorial del equipo desarrollador."@es ;
+    mod:competencyQuestion          "How to standardly and semantically capture the description of an ontology while relying on other existing metadata vocabularies?"@en ,
+                                    "Comment capturer de manière standard et sémantique la description d'une ontologie en s'appuyant sur d'autres vocabulaires de métadonnées existants?"@fr ,
+                                    "¿Cómo capturar de forma estandarizada y semántica la descripción de una ontología apoyándose en otros vocabularios de metadatos existentes?"@es ;
+    mod:sampleQueries               "For sample SPARQL queries to query MOD OWL knowledge base, see here: https://github.com/FAIR-IMPACT/MOD/blob/main/resources/SPARQL_Queries_on_MOD_1.2.3-with-instances.txt"@en ,
+                                    "Pour des examples de requêtes SPARQL sur la base de connaissances MOD, voir ici : https://github.com/sifrproject/MOD-Ontology/blob/master/SPARQL_Queries_on_MOD_1.2.3-with-instances.txt"@fr ,
+                                    "Para ver ejemplos de consultas SPARQL para consultar la base de conocimiento MOD OWL, consulte aquí: https://github.com/FAIR-IMPACT/MOD/blob/main/resources/SPARQL_Queries_on_MOD_1.2.3-with-instances.txt"@es ;
+    prov:wasGeneratedBy             "MOD is the result of a manual process of identifying, reviewing, and selecting candidate properties from standards metadata vocabularies if relevant to describe an ontology or any kind of semantic resource. When a property cannot be identified, it could be created in the MOD namespace. Since MOD2, it has been created as an extension of DCAT2."@en ,
+                                    "MOD est le résultat d'un processus manuel d'identification, de révision et de sélection des propriétés candidates à partir de vocabulaires de métadonnées standards, pour décrire une ontologie ou tout type de ressource sémantique. Lorsqu'une propriété ne peut pas être identifiée, elle peut être créée dans l'espace de noms MOD. Depuis MOD2, MOD est construote comme une extension de DCAT2"@fr ,
+                                    "MOD es el resultado de un proceso manual de identificación, revisión y selección de propiedades candidatas de los vocabularios de metadatos de estándares, si son relevantes para describir una ontología o cualquier tipo de recurso semántico. Cuando no se puede identificar una propiedad, se la puede crear en el espacio de nombres MOD. Desde MOD2, se ha creado como una extensión de DCAT2."@es ; 
+#   prov:wasInvalidatedBy           ;
+#   mod:FairAssessment              ;
 
-  ########## Relation properties ##########
+    ########## Object description properties ##########
+    mod:prefLabelProperty           rdfs:label ;
+    mod:synonymProperty             skos:altLabel ;
+    mod:definitionProperty          dcterms:description ;
+    mod:authorProperty              pav:importedBy ;
+    mod:obsoleteProperty            owl:deprecated ;
+    mod:createdProperty             dcterms:issued ;
+    mod:modifiedProperty            pav:importedOn ;
+    mod:hierarchyProperty           rdfs:subClassOf ;
 
-##  owl:imports                     ;  
-    owl:priorVersion                <https://www.isibang.ac.in/ns/mod/1.4/> ,
-                                    <https://www.isibang.ac.in/ns/mod/1.2/> ,
-                                    <https://www.isibang.ac.in/ns/mod/1.1/> ,
-                                    <https://www.isibang.ac.in/ns/mod/1.0/> ;
-    owl:backwardCompatibleWith      <http://omv.ontoware.org/2005/05/ontology> ;
-    owl:incompatibleWith            <http://kannel.open.ac.uk/ontology> ;
-##  dcterms:isPartOf                ;
-##  dcterms:hasPart                 ;  
-##  dcterms:hasVersion              ;
-##  dcterms:isFormatOf              ;
-##  dcterms:hasFormat               ;
-    dcterms:relation              
-                                    "MOD uses or relates to each of these vocabularies: ADMS,CC,DCAT,DC,DCT,DOAP,DOOR,FOAF,IDOT,OBOINOWL,OMV,OWL,NKOS,PAV,PROV,RDFS,SCHEMA,SD,SKOS,VANN,VOAF,VOID."@en ,
-                                    "MOD utilise ou se repose sur chacun des vocabulaires suivants : ADMS,CC,DCAT,DC,DCT,DOAP,DOOR,FOAF,IDOT,OBOINOWL,OMV,OWL,NKOS,PAV,PROV,RDFS,SCHEMA,SD,SKOS,VANN,VOAF,VOID."@fr ;
-    mod:specializes                 <http://omv.ontoware.org/2005/05/ontology>;
-##  schema:workTranslation          ;
-##  schema:translationOfWork        ;
-    mod:comesFromTheSameDomain      "OBOINOWL,OMV,OWL,NKOS,RDFS,SKOS,VANN,VOAF,VOID" ;
+    ########## Links ##########
+    dcat:accessURL                  <https://github.com/FAIR-IMPACT/MOD/blob/main/mod.ttl> ;
+#   dcterms:isFormatOf              ;
+#   dcterms:hasFormat               ;
+    dcat:downloadURL                 <https://raw.githubusercontent.com/FAIR-IMPACT/MOD/main/mod.ttl> ;
+#                                    "https://www.isibang.ac.in/ns/mod/ontology.ttl" ,
+#                                    "https://www.isibang.ac.in/ns/mod/ontology.json" ,
+#                                    "https://www.isibang.ac.in/ns/mod/ontology.xml" ,
+#                                    "https://www.isibang.ac.in/ns/mod/ontology.nt" ,
+#                                    "https://www.isibang.ac.in/ns/mod/ontology.ttl" ;
+#   void:uriLookupEndpoint          ;
+#   void:openSearchDescription      ;
+#   mod:browsingUI                  ;
+    dcterms:source                  "MOD source is described in https://dx.doi.org/10.1007/978-3-319-70863-8_17 and https://doi.org/10.1007/s13740-018-0091-5"@en ,
+                                    "L'origine de MOD est décrite dans https://dx.doi.org/10.1007/978-3-319-70863-8_17 et https://doi.org/10.1007/s13740-018-0091-5"@fr ,
+                                    "La descripción del origen de MOD está disponible en  https://dx.doi.org/10.1007/978-3-319-70863-8_17 y https://doi.org/10.1007/s13740-018-0091-5"@es ;
+#   sd:sparqlEndpoint               ;
+#   schema:includedInDataCatalog    ;
+
+    ########## Relations ##########
+#   owl:imports                     ;  
+    owl:priorVersion                <https://w3id.org/mod/3.0> ,
+                                    <https://w3id.org/mod/2.0> ,
+                                    <https://w3id.org/mod/1.4> ,
+                                    <https://w3id.org/mod/1.2> ,
+                                    <https://w3id.org/mod/1.1> ,
+                                    <https://w3id.org/mod/1.0> ;
+#   dcterms:isPartOf                ;
+#   dcterms:hasPart                 ;
+    mod:specializes                 <http://www.w3.org/ns/dcat#>;
+    mod:generalizes                 <http://omv.ontoware.org/2005/05/ontology> ,
+                                    <http://purl.org/vocommons/voaf#> ,
+                                    <http://kannel.open.ac.uk/ontology#> ;
+#   mod:usedBy
+    dcterms:relation                "MOD uses or relates to each of these vocabularies: ADMS,CC,DCAT,DC,DCT,DOAP,DOOR,FOAF,IDOT,OBOINOWL,OMV,OWL,NKOS,PAV,PROV,RDFS,SCHEMA,SD,SKOS,VANN,VOAF,VOID."@en ,
+                                    "MOD utilise ou se repose sur chacun des vocabulaires suivants : ADMS,CC,DCAT,DC,DCT,DOAP,DOOR,FOAF,IDOT,OBOINOWL,OMV,OWL,NKOS,PAV,PROV,RDFS,SCHEMA,SD,SKOS,VANN,VOAF,VOID."@fr ,
+                                    "MOD utiliza o se relaciona con cada uno de estos vocabularios: ADMS, CC, DCAT, DC, DCT, DOAP, DOOR, FOAF, IDOT, OBOINOWL, OMV, OWL, NKOS, PAV, PROV, RDFS, SCHEMA, SD, SKOS, VANN, VOAF, VOID."@es ;
+    mod:reliesOn                    <http://www.w3.org/ns/dcat#>;
+    dcterms:relation                <http://www.w3.org/ns/dcat#>;
     mod:similar                     "OMV,VANN,VOAF,VOID" ;
-    mod:hasEquivalencesWith      
-                                    "MOD properties are 'reused' from properties in each these vocabularies: ADMS,CC,DCAT,DC,DCT,DOAP,FOAF,IDOT,OBOINOWL,OWL,NKOS,PAV,PROV,RDFS,SCHEMA,SD,SKOS,VANN,VOID. Reuses are formalized by a dcterms:relation. MOD2 redefines properties from DOOR, OMV, VOAF."@en ,  
-                                    "Les propriétés de MOD sont 'importées' à partir des vocabulaires suivants : ADMS,CC,DCAT,DC,DCT,DOAP,FOAF,IDOT,OBOINOWL,OWL,NKOS,PAV,PROV,RDFS,SCHEMA,SD,SKOS,VANN,VOID. Les réutilisations soont formalisées par une propriété dcterms:relation. MOD2 re-définie les propriétés dans DOOR, OMV, VOAF."@fr ;
-    mod:hasDisparateModelling  
-                                    "DOAP (MOD reuses properties from both objects doap:Project and foaf:Document that are disjoincts.)"@en ,
-                                    "DOAP (MOD réutilise des propriétés de des objets doap:Project et foaf:Document qui sont disjointes.)"@fr ;
-##  mod:usedBy                      ;
-    mod:generalizes                 "DOOR,OMV,VOAF"  ;
-##  mod:hasDisjunctionsWith    ;
+    mod:comesFromTheSameDomain      "OBOINOWL,OMV,OWL,NKOS,RDFS,SKOS,VANN,VOAF,VOID" ;
+    mod:hasEquivalencesWith         "MOD properties are 'reused' from properties in each these vocabularies: ADMS,CC,DCAT,DC,DCT,DOAP,FOAF,IDOT,OBOINOWL,OWL,NKOS,PAV,PROV,RDFS,SCHEMA,SD,SKOS,VANN,VOID. Reuses are formalized by a dcterms:relation. MOD2 redefines properties from DOOR, OMV, VOAF."@en ,  
+                                    "Les propriétés de MOD sont 'importées' à partir des vocabulaires suivants : ADMS,CC,DCAT,DC,DCT,DOAP,FOAF,IDOT,OBOINOWL,OWL,NKOS,PAV,PROV,RDFS,SCHEMA,SD,SKOS,VANN,VOID. Les réutilisations soont formalisées par une propriété dcterms:relation. MOD2 re-définie les propriétés dans DOOR, OMV, VOAF."@fr ,
+                                    "Las propiedades MOD se 'reutilizan' a partir de las propiedades de cada uno de estos vocabularios: ADMS, CC, DCAT, DC, DCT, DOAP, FOAF, IDOT, OBOINOWL, OWL, NKOS, PAV, PROV, RDFS, SCHEMA, SD, SKOS, VANN, VOID. Las reutilizaciones se formalizan mediante una relación dcterms:. MOD2 redefine las propiedades de DOOR, OMV, VOAF."@es ;
+    owl:backwardCompatibleWith      <http://omv.ontoware.org/2005/05/ontology> ;
+    owl:incompatibleWith            <http://purl.org/vocommons/voaf#> ,
+                                    <http://kannel.open.ac.uk/ontology> ;
+    mod:hasDisparateModelling       "DOAP (MOD reuses properties from both objects doap:Project and foaf:Document that are disjoincts.)"@en ,
+                                    "DOAP (MOD réutilise des propriétés de des objets doap:Project et foaf:Document qui sont disjointes.)"@fr ,
+                                    "DOAP (MOD reutiliza las propiedades de ambos objetos doap:Project y foaf:Document que son disjuntos)."@es ;
+#   mod:hasDisjunctionsWith    ;
+#   schema:workTranslation          ;
+#   schema:translationOfWork        ;
+    
+    ########## Content ##########
+    void:uriRegexPattern            "OriginalURI | BaseURI+ShortName" ;
+    vann:preferredNamespaceUri      <https://w3id.org/mod> ;
+    vann:preferredNamespacePrefix   "mod" ;
+#   mod:obsoleteParent              ;
+    void:exampleResource            <https://w3id.org/mod#acronym> ;
+    foaf:primaryTopic               "semantic artefact, ontology, vocabulary, terminology, thesaurus"@en ,
+                                    "artefact sémantique, ontologie, vocabulaire, terminologie, thésaurus"@fr ,
+                                    "artefacto semántico, ontología, vocabulario, terminología, tesauro"@es ;
+    mod:vocabularyUsed              <http://creativecommons.org/ns#> ,
+                                    <http://www.w3.org/ns/sparql-service-description#> ,
+                                    <http://purl.org/dc/terms/> ,
+                                    <http://omv.ontoware.org/2005/05/ontology#> ,
+                                    <http://www.w3.org/2002/07/owl#> ,
+                                    <http://purl.org/pav/> ,
+                                    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ,
+                                    <http://www.w3.org/XML/1998/namespace> ,
+                                    <http://www.w3.org/2001/XMLSchema#> ,
+                                    <http://usefulinc.com/ns/doap/> ,
+                                    <http://xmlns.com/foaf/0.1/> ,
+                                    <http://identifiers.org/idot/> ,
+                                    <http://www.w3.org/ns/prov#> ,
+                                    <http://www.w3.org/2000/01/rdf-schema#> ,
+                                    <http://www.w3.org/2004/02/skos/core#> ,
+                                    <http://purl.org/vocab/vann/> ,
+                                    <http://rdfs.org/ns/void#> ,
+                                    <https://schema.org/> ;
+#   void:rootResource               ;
+#   void:classPartition             ;
+#   void:propertyPartition          ;
+#   dcterms:hasVersion              ;
+    vann:changes                    "From MOD 1.2: (i) added description of properties, (ii) extended number of properties (from 88 to 128), (iii) separation of profile and ontology files, (iv) new URIs scheme. From MOD2.0: (i) use of w3id URIs, (ii) integration of DOOR, OMV, VOAF properties within MOD namespace, (iii) compliant with DCAT2. After, visit: https://github.com/FAIR-IMPACT/MOD/commits/main/mod.ttl"@en ,
+                                    "Depuis MOD 1.2 : (i) ajout de la description des propriétés, (ii) nombre étendu de propriétés (de 88 à 128), (iii) séparation des fichiers de profil et d’ontologie, (iv) nouveaux URI. Depuis MOD2.O : (i) utilisation de w3id pour les URIs, (ii) intégration des propriétés de DOOR, OMV et VOAF dans l'espace de nommage de MOD, (iii) compatible avec DCAT2. Après, visitez : https://github.com/FAIR-IMPACT/MOD/commits/main/mod.ttl"@fr ,
+                                    "De MOD 1.2: (i) descripción de propiedades añadida, (ii) número extendido de propiedades (de 88 a 128), (iii) separación de archivos de perfil y ontología, (iv) nuevo esquema de URI. De MOD2.0: (i) uso de URI w3id, (ii) integración de propiedades DOOR, OMV, VOAF dentro del espacio de nombres MOD, (iii) cumplimiento con DCAT2. Después, visite: https://github.com/FAIR-IMPACT/MOD/commits/main/mod.ttl"@es ;
 
- ########## Content properties ##########
+    ########## Media ##########
+    schema:associatedMedia          <https://drive.google.com/drive/folders/1kSF0XuSr9mwBk-daR6RYut_1Dzzko33v> ;
+    foaf:depiction                  <https://github.com/FAIR-IMPACT/MOD/blob/main/figures/MOD2.0_summary.png> ;
+#   foaf:logo                        ;
 
-    foaf:primaryTopic       <https://w3id.org/mod> ;
-    void:rootResource       <https://w3id.org/mod> ;
-    mod:browsingUI          "https://www.isibang.ac.in/ns/mod/index.html" ;
-##  sd:endpoint             ;
-    mod:vocabularyUsed      <http://creativecommons.org/ns#> ,
-                            <http://www.w3.org/ns/sparql-service-description#> ,
-                            <http://purl.org/dc/terms/> ,
-                            <http://omv.ontoware.org/2005/05/ontology#> ,
-                            <http://www.w3.org/2002/07/owl#> ,
-                            <http://purl.org/pav/> ,
-                            <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ,
-                            <http://www.w3.org/XML/1998/namespace> ,
-                            <http://www.w3.org/2001/XMLSchema#> ,
-                            <http://usefulinc.com/ns/doap/> ,
-                            <http://xmlns.com/foaf/0.1/> ,
-                            <http://identifiers.org/idot/> ,
-                            <http://www.w3.org/ns/prov#> ,
-                            <http://www.w3.org/2000/01/rdf-schema#> ,
-                            <http://www.w3.org/2004/02/skos/core#> ,
-                            <http://purl.org/vocab/vann/> ,
-                            <http://rdfs.org/ns/void#> ,
-                            <https://schema.org/> ;
-    mod:sampleQueries       
-                            "For sample SPARQL queries to query MOD OWL knowledge base, see here: https://github.com/sifrproject/MOD-Ontology/blob/master/SPARQL_Queries_on_MOD_1.2.3-with-instances.txt"@en ,
-                            "Pour des examples de requêtes SPARQL sur la base de connaissances MOD, voir ici : https://github.com/sifrproject/MOD-Ontology/blob/master/SPARQL_Queries_on_MOD_1.2.3-with-instances.txt"@fr ;
-##  void:propertyPartition  ;
-##  void:classPartition     ;
-    void:dataDump           "https://www.isibang.ac.in/ns/mod/ontology.ttl" ,
-                            "https://www.isibang.ac.in/ns/mod/ontology.json" ,
-                            "https://www.isibang.ac.in/ns/mod/ontology.xml" ,
-                            "https://www.isibang.ac.in/ns/mod/ontology.nt" ,
-                            "https://www.isibang.ac.in/ns/mod/ontology.ttl" ;
-##  void:openSearchDescription    ;
-##  void:uriLookupEndpoint        ;
+    ########## Metrics ##########
 
-  ########## Community properties ##########
-
-    mod:knownUsage          
-                            "MOD is used for instance in AgroPortal (http://agroportal.lirmm.fr) to provide equivalences in AgroPortal's ontology metadata model. Other uses will be documented here in the future."@en ,
-                            "MOD est utilisée par exemple dans AgroPortal (http://agroportal.lirmm.fr) pour fournir des equivalences au sein du modèle de métadonnées d'ontologies. D'autres usages seront documentés ici dans le futur."@fr ;
-    mod:endorsedBy          "No organization is currenlty officially endorsing MOD."@en ,
-                            "MOD n'est encore officiellement recommandée par aucune organization."@fr ;
-    mod:usedInProject       "AgroPortal (http://agroportal.lirmm.fr)" ;
-    dcterms:audience            
-                            "MOD primary targets ontology (or semantic resource/artefact) developers and ontology library, repository or service providers."@en ,
-                            "MOD s'adresse en priorité aux dévelopeurs d'ontologies (ou de ressource/artefact sémantiques) ainsi qu'au dévelopeurs de bibliothèque, de portail ou de service pour des ontologies."@fr ;
-    foaf:fundedBy           
-                            "Indian Statistical Institute, University of Montpellier, European French National Research Agency (under grant ANR-10-LABX-20, ANR-11-BINF-0002, ANR-19-DATA-0019), European Union’s Horizon 2020 research and innovation programme under the Marie Sklodowska-Curie grant agreement No 701771 and H2020 FAIRsFAIR project No 831558."@en ;
-    doap:repository         <https://github.com/sifrproject/MOD-Ontology> ;
-    doap:bugDatabase        <https://github.com/sifrproject/MOD-Ontology/issues> ;
-
-  ########## Date properties ##########
-
-    dcterms:created         "2021-12-01" ;
-    dcterms:modified        "2024-02-29" ;
-
-  ########## Metrics properties ##########
-
-    mod:numberOfClasses               79 ;
-    mod:numberOfIndividuals           9 ;
-    mod:numberOfProperties            260 ;
-    mod:numberOfObjectProperties      149 ;
-    mod:numberOfDataProperties        111 ;
-    mod:numberOfAxioms                1507 ;   
-
-  ########## Provenance properties ##########
-
-    dcterms:source            
-                            "MOD source is described in https://dx.doi.org/10.1007/978-3-319-70863-8_17 and https://doi.org/10.1007/s13740-018-0091-5"@en ,
-                            "La descripción del origen de MOD está disponible en  https://dx.doi.org/10.1007/978-3-319-70863-8_17 y https://doi.org/10.1007/s13740-018-0091-5"@es ,
-                            "L'origine de MOD est décrite dans https://dx.doi.org/10.1007/978-3-319-70863-8_17 et https://doi.org/10.1007/s13740-018-0091-5"@fr ;
-    prov:wasGeneratedBy     
-                            "MOD is the result of a manual process of identifying, reviewing, and selecting candidate properties from standards metadata vocabularies if relevant to describe an ontology or any kind of semantic resource. When a property cannot be identified, it could be created in the MOD namespace. Since MCD2, it has been created as an extension of DCAT2."@en ,
-                            "MOD est le résultat d'un processus manuel d'identification, de révision et de sélection des propriétés candidates à partir de vocabulaires de métadonnées standards, pour décrire une ontologie ou tout type de ressource sémantique. Lorsqu'une propriété ne peut pas être identifiée, elle peut être créée dans l'espace de noms MOD. Depuis MOD2, MOD est construote comme une extension de DCAT2"@fr ;
-    dcterms:accrualMethod       
-                            "When a need of a new property is identified by the developer team, we review classic/standards metadata vocabularies to identifiy if the desire property already exists. If it exists in several metadata vocabularies we give priorities to consitency with previous MOD choices, then W3C Recommendations, then community standards."@en ,
-                            "Lorsqu'un besoin d'une nouvelle propriété est identifié par l'équipe de développeurs, nous passons en revue les vocabulaires de métadonnées classiques / standards pour identifier si la propriété désirée existe déjà. Si elle existe dans plusieurs vocabulaires de métadonnées, nous donnons la priorité à la cohérence avec les choix précédents dans MOD, puis aux recommandations du W3C, puis aux normes de la communauté."@fr ;
-    dcterms:accrualPeriodicity  
-                            "New properties are added on demand with no specific periodicity."@en ,
-                            "Les nouvelles propriétés sont ajoutées à la demande sans périodicité particulière."@fr ;
-    dcterms:accrualPolicy       
-                            "Editorial choice of the developer team."@en ,
-                            "Choix éditorial de l'équipe de développeurs."@fr .
-
+    mod:numberOfClasses              79 ;
+    mod:numberOfIndividuals          9 ;
+    mod:numberOfProperties           260 ;
+    mod:numberOfObjectProperties     149 ;
+    mod:numberOfDataProperties       111 ;
+    mod:numberOfAxioms               1507 ;   
+#   mod:numberOfLabels
+    mod:numberOfDeprecated           0 ;   
+    dcat:byteSize                    "227Ko" ;   
+#   mod:maxDepth
+#   mod:maxChildCount
+#   mod:averageChildCount
+#   mod:classesWithOneChild
+    mod:classesWithMoreThan25Children 0 ;
+#   mod:classesWithNoDefinition
+#   mod:classesWithNoFormalDefinition
+    mod:classesWithNoLabel            0 ;
+#   mod:classesWithNoAuthorMetadata
+#   mod:classesWithNoDateMetadata       
+#   mod:numberOfNotes
+    mod:numberOfUsingProjects         5 ;
+#   mod:numberOfEnsorments
+    mod:numberOfEvaluations           0 .
+#   mod:FairScore  
 
 
 ##############################################################################
@@ -3247,10 +3295,4 @@ mod:fairScore       rdf:type                owl:DatatypeProperty ;
 #################################################################
 ############################################################################################# 
 ############################################################################################# 
-
-
-### Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
-
-
-
 
