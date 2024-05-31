@@ -333,7 +333,7 @@
 #################################################################
 #
 #### ClassURI
-#originalns:xx      rdf:type                owl:Class ; ;
+#originalns:xx      rdf:type                owl:Class ;
 #                   rdfs:subClassOf         SUPER CLASS IF ANY
 #                   rdfs:label              ""@en ,
 #                                           ""@fr ,
@@ -341,26 +341,39 @@
 #                   dcterms:description     DESCCRIPTION FROM ORIGINAL SOURCE OR MOD;
 #                   rdfs:isDefinedBy        URI OF ORIGINAL SOURCE ;
 #                   dcterms:issued          "DATE OF THE FIRST CREATION OF THE CLASS BY ORIGINAL RESOURCE"^^xsd:date ;
-#                   pav:derivedFrom         URI OF FIRST MOD VERSION INCLUDING" ;
+#                   pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/X.X> ;
 #                   pav:importedOn          "DATE OF FIRST MOD VERSION INCLUDING"^^xsd:date ;
 #                    
 #            #OPTIONAL STATEMENTS
-#                   prov:wasInfluencedBy    "" ;
+#                   prov:wasInfluencedBy    <http://www.w3.org/ns/dcat> ;
 
 #            #OTHER ORIGINAL STATEMENTS IF ANY 
 #            
 #################################################################
 
+
 ### https://w3id.org/mod#SemanticArtefact
-mod:SemanticArtefact rdf:type owl:Class ;
-                     rdf:type rdfs:Class ;
-                     rdfs:subClassOf dcat:Resource ;
-                     dcterms:description "Semantic Artefact is defined here as a machine-actionable and -readable formalisation of a conceptualisation enabling sharing and reuse by humans and machines. These artefacts may have a broad range of formalisation, from loose set of terms, taxonomies, thesauri to higher-order logics, and include the concepts/terms/classes constituting these. Moreover, semantic artefacts are serialised using a variety of digital representation formats, e.g., RDF Turtle, OWL-RDF, XML, JSON-LD."@en ;
-                     rdfs:isDefinedBy <https://w3id.org/mod#> ;
-                     dcterms:description "A specification of a conceptualization that may be represented by different levels of formalization (including controlled lists, thesauri and ontologies - either lightweight or heavyweight."@en ;
-                     dcterms:description "Una especificación de una conceptualización que puede ser representada a distintos niveles de formalización (incluyendo listas controladas, tesaurus y ontologías."@es ;
-                     rdfs:label "Semantic Artefact"@en ;
-                     rdfs:label "Artefacto Semántico"@es .
+mod:SemanticArtefact
+                    rdf:type                owl:Class ; 
+                    rdfs:subClassOf         dcat:Resource ;
+                    rdfs:label              "Semantic Artefact"@en ,
+                                            "Artéfact Sémantique"@fr ,
+                                            "Artefacto Semántico"@es ;
+                    dcterms:description     "Semantic Artefact is defined here as a machine-actionable and -readable formalisation of a conceptualisation enabling sharing and reuse by humans and machines. These artefacts may have a broad range of formalisation, from loose set of terms, taxonomies, thesauri to higher-order logics such as ontologies, and include the concepts/terms/classes/properties/individuals constituting these. Moreover, semantic artefacts are encoded with a variety of representation language (e.g., RDF-S, OWL, SKOS) and serialised using a variety of syntaxes (e.g., RDF/XML, Turtle, JSON-LD)."@en ,
+                                            "Un artefact sémantique est défini ici comme une formalisation exploitable et lisible par machine d'une conceptualisation permettant le partage et la réutilisation par les humains et les machines. Ces artefacts peuvent avoir une large gamme de formalisation, allant d'un ensemble de termes, de taxonomies, de thésaurus à des logiques d'ordre supérieur, telle que des ontologies, et inclure les concepts/termes/classes/propriétés/individus qui les constituent. De plus, les artefacts sémantiques sont enccodés avec une variété de langages de représentation (e.g., RDF-S, OWL, SKOS) et sérialisés à l'aide d'une variété de syntaxes (e.g., RDF/XML, Turtle, JSON-LD)."@fr ,
+                                            "Aquí, se define artefacto semántico como una formalización de una conceptualización que puede ser procesada y leída por máquinas y que permite que humanos y máquinas la compartan y la reutilicen. Estos artefactos pueden tener una amplia gama de formalizaciones, desde conjuntos de términos sueltos, taxonomías y tesauros hasta lógicas de orden superior como las ontologías, e incluyen los conceptos, términos, clases, propiedades e individuos que los constituyen. Además, los artefactos semánticos se codifican con una variedad de lenguajes de representación (por ejemplo, RDF-S, OWL, SKOS) y se serializan utilizando una variedad de sintaxis (por ejemplo, RDF/XML, Turtle, JSON-LD)."@es ;
+                    dcterms:description     "A specification of a conceptualization that may be represented by different levels of formalization (including controlled lists, thesauri and ontologies - either lightweight or heavyweight."@en ,
+                                            "Une spécification d'une conceptualisation qui peut être représentée par différents niveaux de formalisation (y compris des listes contrôlées, des thésaurus et des ontologies - soit légères, soit lourdes)."@fr ,
+                                            "Una especificación de una conceptualización que puede ser representada a distintos niveles de formalización (incluyendo listas controladas, tesaurus y ontologías."@es ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod#> ;
+                    dcterms:issued          "2021-12-01"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
+                    pav:importedOn          "2021-12-01"^^xsd:date ;
+                    
+#            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    <http://www.w3.org/ns/dcat> .
+
+                     
 
 ### https://w3id.org/mod#SemanticArtefactDistribution
 mod:SemanticArtefactDistribution    rdf:type owl:Class ;
@@ -472,7 +485,7 @@ mod:Thesaurus rdf:type owl:Class ;
 #                   rdfs:isDefinedBy        URI OF ORIGINAL SOURCE ;
 #                   dcterms:issued          "DATE OF THE FIRST CREATION OF THE PROPERTY BY ORIGINAL RESOURCE"^^xsd:date ;
 #                   owl:equivalentProperty  RELATED PROPERTY IN ANOTHER METADATA (not owl:equivalentProperty); 
-#                   pav:derivedFrom         URI OF FIRST MOD VERSION INCLUDING" ;
+#                   pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/X.X> ;
 #                   pav:importedOn          "DATE OF FIRST MOD VERSION INCLUDING"^^xsd:date ;
 #                    
 #            #OPTIONAL STATEMENTS
