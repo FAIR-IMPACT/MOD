@@ -831,7 +831,7 @@ mod:hasRepresentationLanguage
                     rdfs:label              "representation language"@en ,
                                             "language de représentation"@fr ;
                     rdfs:domain             mod:SemanticArtefactDistribution ;
-                    rdfs:range              xsd:anyURI ;
+                    rdfs:range              xsd:string ;
                     dcterms:description     "MOD: A language that is used to create an ontology. OMV: The ontology language."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
@@ -1019,7 +1019,6 @@ dcterms:rightsHolder
                     rdf:type                rdf:Property ;
                     rdfs:label              "rights holder"@en ,
                                             "détenteur des droits"@fr ;
-                    rdfs:range              dcterms:Agent ;
                     dcterms:description     "DCTERMS: A person or organization owning or managing rights over the resource. MOD: The person who can be contacted to enquire about an ontology. SCHEMA: The party holding the legal copyright to the CreativeWork. DCAT: Relevant contact information for the cataloged resource. Use of vCard is recommended."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2004-06-14"^^xsd:date ;
@@ -1067,7 +1066,7 @@ foaf:homepage       rdf:type                rdf:Property , owl:InverseFunctional
                     rdfs:label              "homepage"@en ,
                                             "page web"@fr ;
                     rdfs:domain             owl:Thing ;
-                    rdfs:range              owl:Document ;
+                    rdfs:range              foaf:Document ;
                     dcterms:description     "FOAF: A homepage for some thing. MOD: An unambiguous reference to the resource within a given context. DOAP: URI of a blog related to a project. CC: The URL the creator of a Work would like used when attributing re-use. SCHEMA: Indicates a page (or other CreativeWork) for which this thing is the main entity being described."@en ;
                     rdfs:isDefinedBy        <http://xmlns.com/foaf/0.1/> ;
                     dcterms:issued          "2014-01-14"^^xsd:date ;
@@ -1176,7 +1175,6 @@ skos:hiddenLabel    rdf:type                rdfs:Property ,
                     rdfs:subPropertyOf      rdfs:label ;
                     rdfs:label              "hidden label"@en ,
                                             "nom caché"@fr ;
-
                     rdfs:range              rdfs:Literal ;
                     dcterms:description     "MOD: Hidden or past name. SKOS: A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations."@en;
                     rdfs:isDefinedBy        <http://www.w3.org/2004/02/skos/core> ;
@@ -1498,7 +1496,7 @@ mod:endorsedBy      rdf:type                owl:ObjectProperty ;
                     rdfs:label              "endorsed by"@en ,
                                             "approuvé par"@fr ;
                     rdfs:domain             mod:SemanticArtefact ;
-                    rdfs:range              dcterms:Agent ;
+                    rdfs:range              rdfs:Literal ;
                     dcterms:description     "MOD: An ontology endorsed by an agent. OMV: The parties that have expressed support or approval to this ontology."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
@@ -1818,7 +1816,7 @@ mod:conformsToKnowledgeRepresentationParadigm
                     rdf:type                owl:ObjectProperty ;
                     rdfs:label              "knowledge representation paradigm"@en ,
                                             "paradigme de représentation des connaissances"@fr ;
-                    rdfs:domain             mod:SemanticArtefact ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              mod:KnowledgeRepresentationParadigm ;
                     dcterms:description     "MOD: A representation formalism that is followed to describe knowledge in an ontology. Example includes description logics, first order logic, etc. dcterms: An established standard to which the described resource conforms. OMV: Information about the paradigm model used to create the ontology. DCTERMS: An established standard to which the described resource conforms."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
@@ -1841,7 +1839,7 @@ mod:usedEngineeringMethodology
                     rdf:type                owl:ObjectProperty ;
                     rdfs:label              "engineering methodology"@en ,
                                             "méthodologie de développement"@fr ;
-                    rdfs:domain             mod:SemanticArtefact ;
+                    rdfs:domain             mod:SemanticArtefactDistribution;
                     rdfs:range              mod:EngineeringMethodology ;
                     dcterms:description     "MOD: A methodolgy follwoing which an ontology is created. OMV: Information about the method model used to create the ontology."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
@@ -2024,7 +2022,7 @@ mod:fairAssessment  rdf:type                owl:DatatypeProperty ;
                     rdfs:subPropertyOf      rdfs:label ;
                     rdfs:label              "FAIR assessment"@en ,
                                             "evaluation du niveau de FAIRness"@fr ;
-                    rdfs:domain             mod:SemanticArtefact ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              xsd:string ;
                     dcterms:description     "MOD: A FAIRness assessment result produced by a known or identified FAIRness assessment method or tool. It can be either a simple number or a structured result document explaining the assessment."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
@@ -2310,7 +2308,7 @@ void:openSearchDescription
 mod:browsingUI      rdf:type                owl:DatatypeProperty ;
                     rdfs:label              "browsing user interface"@en ,
                                             "interface de navigation"@fr ;
-                    rdfs:domain             mod:SemanticArtefact ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              xsd:anyURI ;
                     dcterms:description     "MOD: The user interface (URL) where the ontology may be browsed or searched."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
@@ -2464,6 +2462,40 @@ dcterms:hasPart     rdf:type                rdf:Property ;
                     prov:wasInfluencedBy    "FAIR principle: F2" .
 
 
+### http://purl.org/dc/terms/relation
+dcterms:relation    rdf:type                rdf:Property ;
+                    rdfs:subPropertyOf      dc:relation ;
+                    rdfs:label              "relation"@en ,
+                                            "relation"@fr ;
+                    dcterms:description     "DCTERMS: A related resource."@en ;
+                    rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
+                    dcterms:issued          "2008-01-14"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:importedOn          "2015-08-05"^^xsd:date ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: I2" .
+
+
+### https://w3id.org/mod#semanticArtefactRelation
+mod:semanticArtefactRelation 
+                    rdf:type                owl:ObjectProperty ;
+                    rdfs:subPropertyOf      dcterms:relation ;
+                    rdfs:label              "generally related to"@en ,
+                                            "relation générale avec"@fr ;
+                    rdfs:domain             mod:SemanticArtefact ;
+                    rdfs:range              mod:SemanticArtefact ;
+                    dcterms:description     "MOD: A general property for semantic artefact relations. DOOR: An ontology is related to another if one of the DOOR relations is satisfied."@en ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod/2.0> ;
+                    dcterms:issued          "2021-12-06"^^xsd:date ;
+                    owl:equivalentProperty  door:ontologyRelatedTo ; 
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
+                    pav:importedOn          "2021-12-06"^^xsd:date ;
+
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: I2" ,
+                                            "FAIRsFAIR profile: OPTIONAL" .
+
 ### https://w3id.org/mod#specializes
 mod:specializes     rdf:type                owl:ObjectProperty ;
                     rdfs:subPropertyOf      mod:semanticArtefactRelation ;
@@ -2539,41 +2571,6 @@ mod:reliesOn        rdf:type                owl:ObjectProperty ;
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property had been originally defined by VOAF metadata vocabulary. Now, it has been adopted and redefined in the MOD namespace."@en ;
                     prov:wasInfluencedBy    "FAIR principle: I2" .
-
-
-### http://purl.org/dc/terms/relation
-dcterms:relation    rdf:type                rdf:Property ;
-                    rdfs:subPropertyOf      dc:relation ;
-                    rdfs:label              "relation"@en ,
-                                            "relation"@fr ;
-                    dcterms:description     "DCTERMS: A related resource."@en ;
-                    rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
-                    dcterms:issued          "2008-01-14"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
-                    pav:importedOn          "2015-08-05"^^xsd:date ;
-                    
-            #OPTIONAL STATEMENTS
-                    prov:wasInfluencedBy    "FAIR principle: I2" .
-
-
-### https://w3id.org/mod#semanticArtefactRelation
-mod:semanticArtefactRelation 
-                    rdf:type                owl:ObjectProperty ;
-                    rdfs:subPropertyOf      dcterms:relation ;
-                    rdfs:label              "generally related to"@en ,
-                                            "relation générale avec"@fr ;
-                    rdfs:domain             mod:SemanticArtefact ;
-                    rdfs:range              mod:SemanticArtefact ;
-                    dcterms:description     "MOD: A general property for semantic artefact relations. DOOR: An ontology is related to another if one of the DOOR relations is satisfied."@en ;
-                    rdfs:isDefinedBy        <https://w3id.org/mod/2.0> ;
-                    dcterms:issued          "2021-12-06"^^xsd:date ;
-                    owl:equivalentProperty  door:ontologyRelatedTo ; 
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
-                    pav:importedOn          "2021-12-06"^^xsd:date ;
-
-            #OPTIONAL STATEMENTS
-                    prov:wasInfluencedBy    "FAIR principle: I2" ,
-                                            "FAIRsFAIR profile: OPTIONAL" .
 
 
 ### https://w3id.org/mod#similar
@@ -2815,8 +2812,8 @@ vann:preferredNamespacePrefix
 ### https://w3id.org/mod#obsoleteParent
 mod:obsoleteParent
                     rdf:type                owl:DatatypeProperty ;
-                    rdfs:label              "transitive hierarchy property"@en ,
-                                            "propriété de hiérarchie transitive"@fr ;
+                    rdfs:label              "root of obsolete branch"@en ,
+                                            "racine de la branche des obsolètes"@fr ;
                     rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              xsd:anyURI ;
                     dcterms:description     "MOD: Property used to specify the root of an obsolete branch in the ontology."@en ;
@@ -2871,9 +2868,10 @@ foaf:primaryTopic   rdf:type                owl:ObjectProperty , owl:FunctionalP
 
 ### https://w3id.org/mod#metadataVoc
 mod:metadataVoc     rdf:type                owl:ObjectProperty ;
-                    rdfs:subPropertyOf      mod:reliesOn ;
                     rdfs:label              "metadata vocabulary used"@en ,
                                             "vocabulaires de métadonnées utilisés"@fr;
+                    rdfs:domain             mod:SemanticArtefactDistribution ;
+                    rdfs:range              xsd:anyURI  ;
                     dcterms:description     "VOAF: Indicates that the subject vocabulary uses the object vocabulary in metadata at vocabulary or element level. SCHEMA: Indicates (by URL or string) a particular version of a schema used in some CreativeWork. ADMS: A schema according to which the Asset Repository can provide data about its content, e.g. ADMS. MOD: A vocabulary(ies) that is used and/or referred to create the current ontology."@en ;    
                     rdfs:isDefinedBy        <http://purl.org/vocommons/voaf> ;
                     dcterms:issued          "2013-05-23"^^xsd:date ;
