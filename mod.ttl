@@ -347,7 +347,8 @@
 #                    
 #            #OPTIONAL STATEMENTS
 #                   prov:wasInfluencedBy    <http://www.w3.org/ns/dcat> ;
-
+#                   skos:historyNote        "This class has been adopted from ... and renamed and redefined in the MOD namespace."@en .       
+#
 #            #OTHER ORIGINAL STATEMENTS IF ANY 
 #            
 #################################################################
@@ -457,69 +458,163 @@ mod:SemanticArtefactService
                     prov:wasInfluencedBy    <http://www.w3.org/ns/dcat> .
 
 
-### https://w3id.org/mod#Analytics
-mod:Analytics rdf:type owl:Class ;
-           dcterms:description "Number of visits an ontology received."@en ;
-           rdfs:isDefinedBy "https://www.isibang.ac.in/ns/mod/1.4/"@en ;
-           rdfs:label "Analytics"@en .
-
-
-### https://w3id.org/mod#EngineeringMethodology
-mod:EngineeringMethodology rdf:type owl:Class ;
-                        dcterms:description "Information about the engineering methodology."@en ;
-                        rdfs:label "Engineering Methodology"@en ;
-                        skos:historyNote "This class has been adopted from OMV Ontology Metadata Vocabulary, and renamed and redefined in the MOD namespace."@en .
-
-
-### https://w3id.org/mod#Evaluation
-mod:Evaluation rdf:type owl:Class ;
-            dcterms:description "The results of evaluating an ontology. An ontology can have more than one evaluations."@en ;
-            rdfs:label "Evaluation"@en .
-
-
-### https://w3id.org/mod#Group
-mod:Group rdf:type owl:Class ;
-       dcterms:description "A group of ontologies that the ontology is usually considered into."@en ;
-       rdfs:label "Group"@en .
-
-
-### https://w3id.org/mod#KnowledgeRepresentationParadigm
-mod:KnowledgeRepresentationParadigm rdf:type owl:Class ;
-                                 rdfs:label "Knowledge Representation Paradigm"@en .
-
-
-### https://w3id.org/mod#SemanticArtefactEvaluation
-mod:SemanticArtefactEvaluation rdf:type owl:Class ;
-                            rdfs:label "Semantic Artefact Evaluation"@en .
-
-
-
-
-
-### https://w3id.org/mod#SemanticArtefactTask
-mod:SemanticArtefactTask rdf:type owl:Class ;
-                      rdfs:label "Semantic Artefact Task"@en .
-
-
-
-
-
 ### https://w3id.org/mod#Taxonomy
-mod:Taxonomy rdf:type owl:Class ;
-          rdfs:subClassOf mod:SemanticArtefact ;
-        rdfs:label "Taxonomy"@en .
-
+mod:Taxonomy
+                    rdf:type                owl:Class ; 
+                    rdfs:subClassOf         mod:SemanticArtefact ;
+                    rdfs:label              "Taxonomy"@en ,
+                                            "Taxonomie"@fr ,
+                                            "Taxonomía"@es ;
+                    dcterms:description     "(to come)"@en ,
+                                            "(to come)"@fr ,
+                                            "(to come)"@es ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod#> ;
+                    dcterms:issued          "2021-12-01"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
+                    pav:importedOn          "2021-12-01"^^xsd:date ;
+                    dcterms:modified        "2024-05-31"^^xsd:date .
+                    
 
 ### https://w3id.org/mod#Terminology
-mod:Terminology rdf:type owl:Class ;
-             rdfs:subClassOf mod:SemanticArtefact ;
-             rdfs:label "Terminology"@en .
+mod:Terminology
+                    rdf:type                owl:Class ; 
+                    rdfs:subClassOf         mod:SemanticArtefact ;
+                    rdfs:label              "Terminology"@en ,
+                                            "Terminologie"@fr ,
+                                            "Terminología"@es ;
+                    dcterms:description     "(to come)"@en ,
+                                            "(to come)"@fr ,
+                                            "(to come)"@es ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod#> ;
+                    dcterms:issued          "2021-12-01"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
+                    pav:importedOn          "2021-12-01"^^xsd:date ;
+                    dcterms:modified        "2024-05-31"^^xsd:date .
 
 
 ### https://w3id.org/mod#Thesaurus
-mod:Thesaurus rdf:type owl:Class ;
-           rdfs:subClassOf mod:SemanticArtefact ;
-             rdfs:label "Thesaurus"@en .
+mod:Thesaurus
+                    rdf:type                owl:Class ; 
+                    rdfs:subClassOf         mod:SemanticArtefact ;
+                    rdfs:label              "Thesaurus"@en ,
+                                            "Thésaurus"@fr ,
+                                            "Tesauro"@es ;
+                    dcterms:description     "(to come)"@en ,
+                                            "(to come)"@fr ,
+                                            "(to come)"@es ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod#> ;
+                    dcterms:issued          "2021-12-01"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
+                    pav:importedOn          "2021-12-01"^^xsd:date ;
+                    dcterms:modified        "2024-05-31"^^xsd:date .
+
+
+### https://w3id.org/mod#Analytics
+mod:Analytics
+                    rdf:type                owl:Class ; 
+                    rdfs:label              "Analytics"@en ,
+                                            "Analytique"@fr ,
+                                            "Analítica"@es ;
+                    dcterms:description     "(to come)"@en ,
+                                            "(to come)"@fr ,
+                                            "(to come)"@es ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod#> ;
+                    dcterms:issued          "2018-08-02"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:importedOn          "2018-08-02"^^xsd:date ;
+                    dcterms:modified        "2024-05-31"^^xsd:date .
+
+
+### https://w3id.org/mod#EngineeringMethodology
+mod:EngineeringMethodology
+                    rdf:type                owl:Class ; 
+                    rdfs:label              "Semantic Artefact Engineering Methodology"@en ,
+                                            "Méthodologie d’ingénierie des artefacts sémantiques"@fr ,
+                                            "Metodología de ingeniería de artefactos semánticos"@es ;
+                    dcterms:description     "(to come)"@en ,
+                                            "(to come)"@fr ,
+                                            "(to come)"@es ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod#> ;
+                    dcterms:issued          "2021-12-01"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
+                    pav:importedOn          "2021-12-01"^^xsd:date ;
+                    dcterms:modified        "2024-05-31"^^xsd:date ;
+
+#            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    <http://omv.ontoware.org/2005/05/ontology> ;
+                    skos:historyNote        "This class has been adopted from OMV Ontology Metadata Vocabulary, and renamed and redefined in the MOD namespace."@en .
+
+
+### https://w3id.org/mod#Evaluation
+mod:Evaluation
+                    rdf:type                owl:Class ; 
+                    rdfs:label              "Semantic Artefact Evaluation"@en ,
+                                            "Évaluation d'un artefact sémantique"@fr ,
+                                            "Evaluación de un artefacto semántico."@es ;
+                    dcterms:description     "The results of evaluating a semantic artefact. An artefact can have more than one evaluations."@en ,
+                                            "Résultats de l'évaluation d'un artefact sémantique. Un artefact peut avoir plusieurs évaluations."@fr ,
+                                            "Los resultados de la evaluación de un artefacto semántico. Un artefacto puede tener más de una evaluación."@es ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod#> ;
+                    dcterms:issued          "2015-08-05"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:importedOn          "2015-08-05"^^xsd:dateTime ;
+                    dcterms:modified        "2024-05-31"^^xsd:date .
+
+
+### https://w3id.org/mod#Group
+mod:Group
+                    rdf:type                owl:Class ; 
+                    rdfs:label              "Semantic Artefact Group"@en ,
+                                            "Groupe d'artefacts sémantiques"@fr ,
+                                            "Grupo de artefactos semánticos"@es ;
+                    dcterms:description     "A group of multiple semantic artefacts (e.g., coming from the same source or project)."@en ,
+                                            "Un groupe de multiples artefacts sémantiques (par exemple, provenant de la même source ou du même projet)."@fr ,
+                                            "Un grupo de artefactos semánticos múltiples (por ejemplo, que provienen de la misma fuente o proyecto)."@es ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod#> ;
+                    dcterms:issued          "2018-08-02"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:importedOn          "2018-08-02"^^xsd:dateTime ;
+                    dcterms:modified        "2024-05-31"^^xsd:date .
+                    
+
+### https://w3id.org/mod#KnowledgeRepresentationParadigm
+mod:KnowledgeRepresentationParadigm
+                    rdf:type                owl:Class ; 
+                    rdfs:label              "Knowledge Representation Paradigm"@en ,
+                                            "Paradigme de la représentation des connaissances"@fr ,
+                                            "Paradigma de representación del conocimiento"@es ;
+                    dcterms:description     "(to come)"@en ,
+                                            "(to come)"@fr ,
+                                            "(to come)"@es ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod#> ;
+                    dcterms:issued          "2021-12-01"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
+                    pav:importedOn          "2021-12-01"^^xsd:date ;
+                    dcterms:modified        "2024-05-31"^^xsd:date ;
+
+#            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    <http://omv.ontoware.org/2005/05/ontology> ;
+                    skos:historyNote        "This class has been adopted from OMV Ontology Metadata Vocabulary, and renamed and redefined in the MOD namespace."@en .
+
+
+### https://w3id.org/mod#SemanticArtefactTask
+mod:SemanticArtefactTask
+                    rdf:type                owl:Class ; 
+                    rdfs:label              "Semantic Artefact Task"@en ,
+                                            "Tâche d'artefact sémantique"@fr ,
+                                            "Tarea de artefacto semántico"@es ;
+                    dcterms:description     "(to come)"@en ,
+                                            "(to come)"@fr ,
+                                            "(to come)"@es ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod#> ;
+                    dcterms:issued          "2021-12-01"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
+                    pav:importedOn          "2021-12-01"^^xsd:date ;
+                    dcterms:modified        "2024-05-31"^^xsd:date ;
+
+#            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    <http://omv.ontoware.org/2005/05/ontology> ;
+                    skos:historyNote        "This class has been adopted from OMV Ontology Metadata Vocabulary, and renamed and redefined in the MOD namespace."@en .
 
 
 #################################################################
