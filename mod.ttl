@@ -497,7 +497,8 @@ dcterms:title       rdf:type                rdf:Property ;
                     dcterms:description     "DCTERMS: A name given to the resource. OMV: The name by which an ontology is formally known. RDFS: A human-readable name for the subject. FOAF:  A name for some thing. SKOS: The preferred and alternative labels are useful when generating or creating human-readable representations of a knowledge organization system. SCHEMA: The name of the item."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
-                    owl:equivalentProperty  cc:attributionName ,
+                    owl:equivalentProperty  rdfs:label ,
+                                            cc:attributionName ,
                                             omv:name ,
                                             schema:name ,
                                             skos:prefLabel ,
@@ -599,11 +600,12 @@ mod:status          rdf:type                owl:DatatypeProperty ;
                                             "statut"@fr ;
                     rdfs:domain             mod:SemanticArtefact ;
                     rdfs:range              xsd:string ;
-                    dcterms:description     "OMV: It specifies the tracking information for the contents of the ontology. Pre-defined values. IDOT: State of a resource (physical location providing access to data or information about the identified entity). This is should be based on a recent manual or automatic check of the resource. Possible values are: 'up', 'down', 'probably up', 'obsolete resource', 'restricted access' and 'unknown'."@en ;
+                    dcterms:description     "OMV: It specifies the tracking information for the contents of the ontology. Pre-defined values. IDOT: State of a resource (physical location providing access to data or information about the identified entity). This is should be based on a recent manual or automatic check of the resource. Possible values are: 'up', 'down', 'probably up', 'obsolete resource', 'restricted access' and 'unknown'. SCHEMA: The status of a creative work in terms of its stage in a lifecycle. Example terms include Incomplete, Draft, Published, Obsolete. Some organizations define a set of terms for the stages of their publication lifecycle."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
                     owl:equivalentProperty  idot:state ,
-                                            adms:adms-status ;
+                                            adms:adms-status ,
+                                            schema:creativeWorkStatus ; 
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
             
