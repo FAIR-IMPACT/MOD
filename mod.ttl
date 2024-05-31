@@ -435,7 +435,27 @@ mod:SemanticArtefactCatalog
                     
 #            #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    <http://www.w3.org/ns/dcat> .
+
+
+### https://w3id.org/mod#SemanticArtefactService
+mod:SemanticArtefactService
+                    rdf:type                owl:Class ; 
+                    rdfs:subClassOf         dcat:DataService ;
+                    rdfs:label              "Semantic Artefact Service"@en ,
+                                            "Service d'Artéfacts Sémantiques"@fr ,
+                                            "Servicio de Artefactos Semánticos"@es ;
+                    dcterms:description     "A collection of operations that provides access to one or more semantic artefacts processing functions."@en ,
+                                            "Un ensemble d’opérations qui donne accès à une ou plusieurs fonctions de traitement d’artefacts sémantiques."@fr ,
+                                            "Una colección de operaciones que proporciona acceso a una o más funciones de procesamiento de artefactos semánticos."@es ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod#> ;
+                    dcterms:issued          "2021-12-01"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
+                    pav:importedOn          "2021-12-01"^^xsd:date ;
+                    dcterms:modified        "2024-05-31"^^xsd:date ;
                     
+#            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    <http://www.w3.org/ns/dcat> .
+
 
 ### https://w3id.org/mod#Analytics
 mod:Analytics rdf:type owl:Class ;
@@ -473,10 +493,7 @@ mod:SemanticArtefactEvaluation rdf:type owl:Class ;
                             rdfs:label "Semantic Artefact Evaluation"@en .
 
 
-### https://w3id.org/mod#SemanticArtefactService
-mod:SemanticArtefactService rdf:type owl:Class ;
-                         rdfs:subClassOf dcat:DataService ;
-                         rdfs:label "Semantic Artefact Service"@en .
+
 
 
 ### https://w3id.org/mod#SemanticArtefactTask
