@@ -417,6 +417,26 @@ mod:SemanticArtefactCatalogRecord
                     prov:wasInfluencedBy    <http://www.w3.org/ns/dcat> .
 
 
+### https://w3id.org/mod#SemanticArtefactCatalog
+mod:SemanticArtefactCatalog
+                    rdf:type                owl:Class ; 
+                    rdfs:subClassOf         dcat:Catalog ;
+                    rdfs:label              "Semantic Artefact Catalog"@en ,
+                                            "Catalogue d'Artéfacts Sémantiques"@fr ,
+                                            "Catálogo de Artefactos Semánticos"@es ;
+                    dcterms:description     "A dedicated web-based system that fosters the availability, discoverability and long-term preservation and maintenance of semantic artefacts."@en ,
+                                            "Un système Web dédié qui favorise la disponibilité, la découvrabilité et la préservation et la maintenance à long terme des artefacts sémantiques."@fr ,
+                                            "Un sistema web dedicado que fomenta la disponibilidad, la capacidad de descubrimiento y la preservación y el mantenimiento a largo plazo de artefactos semánticos."@es ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod#> ;
+                    dcterms:issued          "2021-12-01"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
+                    pav:importedOn          "2021-12-01"^^xsd:date ;
+                    dcterms:modified        "2024-05-31"^^xsd:date ;
+                    
+#            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    <http://www.w3.org/ns/dcat> .
+                    
+
 ### https://w3id.org/mod#Analytics
 mod:Analytics rdf:type owl:Class ;
            dcterms:description "Number of visits an ontology received."@en ;
@@ -464,10 +484,7 @@ mod:SemanticArtefactTask rdf:type owl:Class ;
                       rdfs:label "Semantic Artefact Task"@en .
 
 
-### https://w3id.org/mod#SemanticArtefactCatalog
-mod:SemanticArtefactCatalog rdf:type owl:Class ;
-                         rdfs:subClassOf dcat:Catalog ;
-                         rdfs:label "Semantic Artefact Catalog"@en .
+
 
 
 ### https://w3id.org/mod#Taxonomy
