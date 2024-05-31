@@ -51,7 +51,7 @@
     owl:ontologyIRI                 <https://w3id.org/mod> ;
     mod:URI                         <https://w3id.org/mod> ;
     owl:versionIRI                  <https://w3id.org/mod/3.1> ;
-##  dcterms:identifier              ; 
+#   dcterms:identifier              ; 
     owl:versionInfo                 "3.1" ;
     mod:status                      "alpha" ;
     owl:deprecated                  false ;
@@ -326,6 +326,29 @@
 
 #################################################################
 #    MOD Classes
+#################################################################
+
+#################################################################
+# Pattern to respect for each MOD classes
+#################################################################
+#
+#### ClassURI
+#originalns:xx      rdf:type                owl:Class ; ;
+#                   rdfs:subClassOf         SUPER CLASS IF ANY
+#                   rdfs:label              ""@en ,
+#                                           ""@fr ,
+#                                           ""@es ;
+#                   dcterms:description     DESCCRIPTION FROM ORIGINAL SOURCE OR MOD;
+#                   rdfs:isDefinedBy        URI OF ORIGINAL SOURCE ;
+#                   dcterms:issued          "DATE OF THE FIRST CREATION OF THE CLASS BY ORIGINAL RESOURCE"^^xsd:date ;
+#                   pav:derivedFrom         URI OF FIRST MOD VERSION INCLUDING" ;
+#                   pav:importedOn          "DATE OF FIRST MOD VERSION INCLUDING"^^xsd:date ;
+#                    
+#            #OPTIONAL STATEMENTS
+#                   prov:wasInfluencedBy    "" ;
+
+#            #OTHER ORIGINAL STATEMENTS IF ANY 
+#            
 #################################################################
 
 ### https://w3id.org/mod#SemanticArtefact
