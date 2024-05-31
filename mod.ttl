@@ -385,7 +385,7 @@ mod:SemanticArtefactDistribution
                                             "Distribution d'un Artéfact Sémantique"@fr ,
                                             "Distribución de un Artefacto Semántico"@es ;
                     dcterms:description     "A specific representation and/or serialization of a semantic artefact."@en ,
-                                            "Une représentation et/ou une sérialisation spécifique d'un artefact sémantique."@fr ,
+                                            "Une représentation et/ou une sérialisation spécifique d'un artéfact sémantique."@fr ,
                                             "Una representación y/o serialización específica de un artefacto semántico."@es ;
                     rdfs:isDefinedBy        <https://w3id.org/mod#> ;
                     dcterms:issued          "2021-12-01"^^xsd:date ;
@@ -398,9 +398,23 @@ mod:SemanticArtefactDistribution
 
 
 ### https://w3id.org/mod#SemanticArtefactCatalogRecord
-mod:SemanticArtefactCatalogRecord   rdf:type owl:Class ;
-                                    rdfs:subClassOf dcat:CatalogRecord ;
-                                    rdfs:label "Semantic Artefact Catalog Record"@en .
+mod:SemanticArtefactCatalogRecord
+                    rdf:type                owl:Class ; 
+                    rdfs:subClassOf         dcat:CatalogRecord  ;
+                    rdfs:label              "Semantic Artefact Catalog Record"@en ,
+                                            "Enregistrement d'un Artéfact Sémantique dans un Catalogue"@fr ,
+                                            "Registro de un Artefacto Semántico en un Catálogo"@es ;
+                    dcterms:description     "A record in a catalog, describing the registration of a single semantic artefact"@en ,
+                                            "Un enregistrement dans un catalogue, décrivant l'enregistrement d'un seul artéfact sémantique"@fr ,
+                                            "Un registro en un catálogo, que describe el registro de un único artefacto semántico."@es ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod#> ;
+                    dcterms:issued          "2021-12-01"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
+                    pav:importedOn          "2021-12-01"^^xsd:date ;
+                    dcterms:modified        "2024-05-31"^^xsd:date ;
+                    
+#            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    <http://www.w3.org/ns/dcat> .
 
 
 ### https://w3id.org/mod#Analytics
