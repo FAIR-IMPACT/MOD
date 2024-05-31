@@ -355,10 +355,10 @@
 mod:SemanticArtefact rdf:type owl:Class ;
                      rdf:type rdfs:Class ;
                      rdfs:subClassOf dcat:Resource ;
-                     rdfs:comment "Semantic Artefact is defined here as a machine-actionable and -readable formalisation of a conceptualisation enabling sharing and reuse by humans and machines. These artefacts may have a broad range of formalisation, from loose set of terms, taxonomies, thesauri to higher-order logics, and include the concepts/terms/classes constituting these. Moreover, semantic artefacts are serialised using a variety of digital representation formats, e.g., RDF Turtle, OWL-RDF, XML, JSON-LD."@en ;
+                     dcterms:description "Semantic Artefact is defined here as a machine-actionable and -readable formalisation of a conceptualisation enabling sharing and reuse by humans and machines. These artefacts may have a broad range of formalisation, from loose set of terms, taxonomies, thesauri to higher-order logics, and include the concepts/terms/classes constituting these. Moreover, semantic artefacts are serialised using a variety of digital representation formats, e.g., RDF Turtle, OWL-RDF, XML, JSON-LD."@en ;
                      rdfs:isDefinedBy <https://w3id.org/mod#> ;
-                     rdfs:comment "A specification of a conceptualization that may be represented by different levels of formalization (including controlled lists, thesauri and ontologies - either lightweight or heavyweight."@en ;
-                     rdfs:comment "Una especificación de una conceptualización que puede ser representada a distintos niveles de formalización (incluyendo listas controladas, tesaurus y ontologías."@es ;
+                     dcterms:description "A specification of a conceptualization that may be represented by different levels of formalization (including controlled lists, thesauri and ontologies - either lightweight or heavyweight."@en ;
+                     dcterms:description "Una especificación de una conceptualización que puede ser representada a distintos niveles de formalización (incluyendo listas controladas, tesaurus y ontologías."@es ;
                      rdfs:label "Semantic Artefact"@en ;
                      rdfs:label "Artefacto Semántico"@es .
 
@@ -368,8 +368,8 @@ mod:SemanticArtefactDistribution    rdf:type owl:Class ;
                                                     dcat:Distribution ;
                                  rdfs:label "Semantic Artefact Distribution"@en ;
                                  rdfs:label "Distribución de un Artefacto Semántico"@es ;
-                                 rdfs:comment "A specific representation of a semantic artefact"@en ;
-                                 rdfs:comment "Una representación específica de un artefacto semántico"@es .
+                                 dcterms:description "A specific representation of a semantic artefact"@en ;
+                                 dcterms:description "Una representación específica de un artefacto semántico"@es .
 
 ### https://w3id.org/mod#SemanticArtefactCatalogRecord
 mod:SemanticArtefactCatalogRecord   rdf:type owl:Class ;
@@ -379,27 +379,27 @@ mod:SemanticArtefactCatalogRecord   rdf:type owl:Class ;
 
 ### https://w3id.org/mod#Analytics
 mod:Analytics rdf:type owl:Class ;
-           rdfs:comment "Number of visits an ontology received."@en ;
+           dcterms:description "Number of visits an ontology received."@en ;
            rdfs:isDefinedBy "https://www.isibang.ac.in/ns/mod/1.4/"@en ;
            rdfs:label "Analytics"@en .
 
 
 ### https://w3id.org/mod#EngineeringMethodology
 mod:EngineeringMethodology rdf:type owl:Class ;
-                        rdfs:comment "Information about the engineering methodology."@en ;
+                        dcterms:description "Information about the engineering methodology."@en ;
                         rdfs:label "Engineering Methodology"@en ;
                         skos:historyNote "This class has been adopted from OMV Ontology Metadata Vocabulary, and renamed and redefined in the MOD namespace."@en .
 
 
 ### https://w3id.org/mod#Evaluation
 mod:Evaluation rdf:type owl:Class ;
-            rdfs:comment "The results of evaluating an ontology. An ontology can have more than one evaluations."@en ;
+            dcterms:description "The results of evaluating an ontology. An ontology can have more than one evaluations."@en ;
             rdfs:label "Evaluation"@en .
 
 
 ### https://w3id.org/mod#Group
 mod:Group rdf:type owl:Class ;
-       rdfs:comment "A group of ontologies that the ontology is usually considered into."@en ;
+       dcterms:description "A group of ontologies that the ontology is usually considered into."@en ;
        rdfs:label "Group"@en .
 
 
