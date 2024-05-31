@@ -561,6 +561,21 @@ mod:Evaluation
                     dcterms:modified        "2024-05-31"^^xsd:date .
 
 
+### https://w3id.org/mod#FairAssessment
+mod:FairAssessment
+                    rdf:type                owl:Class ; 
+                    rdfs:subClassOf         mod:Evaluation ;
+                    rdfs:label              "FAIRness assessment"@en ,
+                                            "Évaluation du niveau de FAIRness"@fr ,
+                                            "Evaluación del nivel de FAIRness"@es ;
+                    dcterms:description     "(to come)"@en ,
+                                            "(to come)"@fr ,
+                                            "(to come)"@es ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod#> ;
+                    dcterms:issued          "2024-05-31"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:importedOn          "2024-05-31"^^xsd:dateTime .
+
 ### https://w3id.org/mod#Group
 mod:Group
                     rdf:type                owl:Class ; 
@@ -2019,11 +2034,10 @@ prov:wasinvalidatedBy
 
 ### https://w3id.org/mod#fairAssessment
 mod:fairAssessment  rdf:type                owl:DatatypeProperty ;
-                    rdfs:subPropertyOf      rdfs:label ;
                     rdfs:label              "FAIR assessment"@en ,
                                             "evaluation du niveau de FAIRness"@fr ;
                     rdfs:domain             mod:SemanticArtefactDistribution ;
-                    rdfs:range              xsd:string ;
+                    rdfs:range              mod:FairAssessment ;
                     dcterms:description     "MOD: A FAIRness assessment result produced by a known or identified FAIRness assessment method or tool. It can be either a simple number or a structured result document explaining the assessment."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2024-05-30"^^xsd:date ;
@@ -2231,7 +2245,7 @@ dcterms:isFormatOf  rdf:type                rdf:Property ;
 
 ### http://purl.org/dc/terms/hasFormat
 dcterms:hasFormat   rdf:type                rdf:Property ;
-                    rdfs:subPropertyOf      dc:relation , dcterms:relatio ;
+                    rdfs:subPropertyOf      dc:relation , dcterms:relation ;
                     rdfs:label              "has format"@en ,
                                             "a pour format"@fr ;
                     dcterms:description     "DCTERMS: A related resource that is substantially the same as the pre-existing described resource, but in another format."@en ;
