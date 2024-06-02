@@ -1471,10 +1471,10 @@ dcterms:publisher   rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:publisher ;
                     rdfs:label              "publisher"@en ,
                                             "éditeur"@fr ;
-                    dcterms:description     "DDCTERMS: An entity responsible for making the resource available."@en ;
-                    rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
+                    dcterms:description     "DCTERMS: An entity responsible for making the resource available. SCHEMA: The publisher of creative work. SCHEMA: The Organization on whose behalf the creator was working. ADMS: The name of the agency that issued the identifier. DCAT: The entity responsible for making the item available."@en ;                    rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
                     owl:equivalentProperty  schema:publisher ,
+                                            schema:sourceOrganization ,
                                             adms:schemaAgency ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
