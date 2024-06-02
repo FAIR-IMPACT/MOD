@@ -2403,12 +2403,13 @@ owl:imports         rdf:type                owl:OntologyProperty  ;
                                             "importe"@fr ;
                     rdfs:domain             owl:Ontology ;
                     rdfs:range              owl:Ontology ;
-                    dcterms:description     "OWL: References another OWL ontology containing definitions, whose meaning is considered to be part of the meaning of the importing ontology. OMV: References another ontology metadata instance that describes an ontology containing definitions, whose meaning is considered to be part of the meaning of the ontology described by this ontology metadata instance. DCTERMS: A related resource that is required by the described resource to support its function, delivery, or coherence. VOAF: Indicates that the subject vocabulary extends the expressivity of the object vocabulary by declaring subsumption relationships, using object vocabulary class as domain or range of a subject vocabulary property, defining local restrictions etc ...."@en ;  
+                    dcterms:description     "OWL: References another OWL ontology containing definitions, whose meaning is considered to be part of the meaning of the importing ontology. OMV: References another ontology metadata instance that describes an ontology containing definitions, whose meaning is considered to be part of the meaning of the ontology described by this ontology metadata instance. DCTERMS: A related resource that is required by the described resource to support its function, delivery, or coherence. VOAF: Indicates that the subject vocabulary extends the expressivity of the object vocabulary by declaring subsumption relationships, using object vocabulary class as domain or range of a subject vocabulary property, defining local restrictions etc . ADMS: An Asset that is contained in the Asset being described, e.g. when there are several vocabularies defined in a single document."@en ;  
                     rdfs:isDefinedBy        <http://www.w3.org/2002/07/owl#> ;
                     dcterms:issued          "2004-02-10"^^xsd:date ;
                     owl:equivalentProperty  omv:useImports ,
                                             dcterms:requires ,
-                                            voaf:extends ;
+                                            voaf:extends ,
+                                            adms:includedAsset ;    
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
         
