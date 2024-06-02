@@ -100,7 +100,7 @@
     ########## Dates ##########
 
     dcterms:created                 "2015-08-05" ;
-    dcterms:modified                "2024-05-31" ;
+    dcterms:modified                "2024-06-02" ;
 #   dcterms:valid                   ;
 #   pav:curatedOn                   ;
 #   dcterms:dateSubmitted           ;
@@ -124,7 +124,8 @@
                                     "Clement Jonquet (https://orcid.org/0000-0002-2404-1582)" ; 
     dcterms:publisher               "Indian Statistical Institute, Bangalore Centre, India (https://www.isibang.ac.in)" ,
                                     "LIRMM, University of Montpellier, France (http://www.lirmm.fr)" ;
-    foaf:fundedBy                   "Indian Statistical Institute, University of Montpellier, French National Research Agency (under grant ANR-10-LABX-20, ANR-11-BINF-0002, ANR-19-DATA-0019), European Union’s Horizon 2020 research and innovation programme under the Marie Sklodowska-Curie grant agreement No 701771 and H2020 FAIRsFAIR project No 831558 and FAIR-IMPACT project No 101057344."@en ;
+    foaf:fundedBy                   "Indian Statistical Institute, University of Montpellier, French National Research Agency, European Union’s Horizon 2020 research and innovation programme under the Marie Sklodowska-Curie and Horizon Europe INFRAEOSC program."@en ;
+    schema:funding                  "French ANR: ANR-10-LABX-20, ANR-11-BINF-0002, ANR-19-DATA-0019, European Union: No 701771, No 831558, No 101057344."@en ;
     mod:endorsedBy                  "OntoPortal Alliance"@en ,
                                     "Alliance OntoPortal"@fr ,
                                     "Alianza OntoPortal"@es ;
@@ -1494,10 +1495,10 @@ foaf:fundedBy       rdf:type                rdf:Property , owl:ObjectProperty ;
                                             "financé ou sponsorisé par"@fr ;
                     rdfs:domain             owl:Thing ;
                     rdfs:range              owl:Thing ;
-                    dcterms:description     "MOD: An ontology that is sponsored by and developed under a project. FOAF: An organization funding a project or person. SCHEMA: The Organization on whose behalf the creator was working."@en ;
+                    dcterms:description     "MOD: An ontology that is sponsored by and developed under a project. FOAF: An organization funding a project or person. SCHEMA: A person or organization that supports (sponsors) something through some kind of financial contribution."@en ;
                     rdfs:isDefinedBy        <http://xmlns.com/foaf/0.1/> ;
                     dcterms:issued          "2014-01-14"^^xsd:date ;
-                    owl:equivalentProperty  schema:sourceOrganization ,
+                    owl:equivalentProperty  schema:funder , 
                                             <http://www.isibang.ac.in/ns/mod/1.0/sponsoredBy> ;
                     pav:derivedFrom          <http://www.isibang.ac.in/ns/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
@@ -1505,6 +1506,21 @@ foaf:fundedBy       rdf:type                rdf:Property , owl:ObjectProperty ;
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: R1.2" .
 
+
+### http://schema.org/funding
+schema:funding      rdf:type                rdf:Property ;
+                    rdfs:label              "funding"@en ,
+                                            "financement"@fr ;
+                    dcterms:description     "SCHEMA: A Grant that directly or indirectly provide funding or sponsorship for this item."@en ;
+                    rdfs:isDefinedBy        <http://schema.org/> ;
+                    dcterms:issued          "2022-03-17"^^xsd:date ;
+                    owl:equivalentProperty  schema:funder , 
+                                            <http://www.isibang.ac.in/ns/mod/1.0/sponsoredBy> ;
+                    pav:derivedFrom          <http://www.isibang.ac.in/ns/mod/3.1> ;
+                    pav:importedOn          "2024-06-2"^^xsd:date ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: R1.2" .
 
 ###  https://w3id.org/mod#endorsedBy
 mod:endorsedBy      rdf:type                owl:ObjectProperty ;
