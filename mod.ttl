@@ -1362,9 +1362,10 @@ dcat:contactPoint   rdf:type                rdf:Property ,
                     rdfs:label              "contact point"@en ,
                                             "contact"@fr ;
                     rdfs:range              vcard:Kind ;
-                    dcterms:description     "DCAT: Relevant contact information for the cataloged resource. Use of vCard is recommended" ;
+                    dcterms:description     "DCAT: Relevant contact information for the cataloged resource. Use of vCard is recommended. SCHEMA: A maintainer of a Dataset, software package (SoftwareApplication), or other Project. A maintainer is a Person or Organization that manages contributions to, and/or publication of, some (typically complex) artifact. It is common for distributions of software and data to be based on 'upstream' sources." ;
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
                     dcterms:issued          "2014-01-16"^^xsd:date ;
+                    owl:equivalentProperty  schema:maintainer ;
                     pav:derivedFrom          <https://w3id.org/mod/3.1> ;
                     pav:importedOn          "2014-05-30"^^xsd:date ;
                      
