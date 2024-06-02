@@ -1378,7 +1378,7 @@ dcterms:creator     rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:creator , dcterms:contributor ;
                     rdfs:label              "creator"@en ,
                                             "créateur"@fr ;
-                    dcterms:description     "DCTERMS: An entity responsible for making the resource. Recommended practice is to identify the creator with a URI.  If this is not possible or feasible, a literal value that identifies the creator may be provided."@en ;
+                    dcterms:description     "OMV: Main responsible for the creation of the ontology. DCTERMS: An entity primarily responsible for making the resource. FOAF: An agent that made this thing. PROV: Attribution is the ascribing of an entity to an agent. PAV:authoredBy: An agent that originated or gave existence to the work that is expressed by the digital resource.PAV:createdBy: An agent primary responsible for making the digital artifact or resource representation. DOAP: Maintainer of a project, a project leader. SCHEMA:author: The author of this content or rating. SCHEMA:creator: The creator/author of this CreativeWork. DCAT: The entity responsible for producing the resource."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
                     owl:equivalentProperty  omv:creator ,
