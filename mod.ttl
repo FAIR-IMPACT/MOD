@@ -1996,7 +1996,7 @@ prov:wasGeneratedBy rdf:type                owl:ObjectProperty ;
                                             "a été généré par"@fr ;
                     rdfs:domain             prov:Entity ;
                     rdfs:range              prov:Activity ;
-                    dcterms:description     "PROV: Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation."@en ;
+                    dcterms:description     "PROV: Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation. DCAT: An activity that generated, or provides the business context for, the creation of the dataset."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/ns/prov-o#> ;
                     dcterms:issued          "2013-04-30"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
