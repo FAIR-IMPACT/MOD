@@ -1101,16 +1101,17 @@ foaf:homepage       rdf:type                rdf:Property , owl:InverseFunctional
 ### http://www.w3.org/ns/dcat#landingPage
 dcat:landingPage    rdf:type                rdf:Property , owl:ObjectProperty ;
                     rdfs:subPropertyOf      foaf:page ; 
-                    rdfs:label              "landing page"@en ,
-                                            "page d'atterrissage"@fr ;
+                    rdfs:label              "documentation"@en ,
+                                            "documentation"@fr ;
                     rdfs:range              foaf:Document ;
-                    dcterms:description     "DCAT: A Web page that can be navigated to in a Web browser to gain access to the dataset, its distributions and/or additional information. MOD: A link to the documentation page on a thing. OMV: URL for further documentation. RDFS: Further information about the subject resource. DOAP: URL of Wiki for collaborative discussion of project. VANN: A reference to a resource that provides information on how this resource is to be used."@en ;
+                    dcterms:description     "DCAT: A Web page that can be navigated to in a Web browser to gain access to the dataset, its distributions and/or additional information. MOD: A link to the documentation page on a thing. OMV: URL for further documentation. RDFS: Further information about the subject resource. DOAP: URL of Wiki for collaborative discussion of project. VANN: A reference to a resource that provides information on how this resource is to be used. SCHEMA: Further documentation describing the Web API in more detail."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
                     dcterms:issued          "2014-01-16"^^xsd:date ;
                     owl:equivalentProperty  omv:documentation ,
                                             vann:usageNote ,
                                             doap:wiki ,
                                             rdfs:seeAlso ,
+                                            schema:documentation ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/document> ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
