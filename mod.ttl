@@ -2089,7 +2089,24 @@ mod:conformsToKnowledgeRepresentationParadigm
                     prov:wasInfluencedBy    "MIRO guidelines: E.1" ,
                                             "FAIR principle: R1.2" ,
                                             "FAIRsFAIR profile: RECOMMENDED" .
-        
+
+
+### http://purl.org/dc/terms/conformsTo
+dcterms:conformsTo  rdf:type                rdf:Property ;
+                    rdfs:subPropertyOf      dc:relation, dcterms:relation ;
+                    rdfs:label              "conforms to"@en ,
+                                            "conforme à"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefactCatalog ;
+                    dcterms:description     "DCTERMS: An established standard to which the described resource conforms."@en ;
+                    rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
+                    dcterms:issued          "2001-05-21"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:importedOn          "2017-07-06"^^xsd:date ;
+            
+            #OTHER ORIGINAL STATEMENTS IF ANY 
+                    <http://purl.org/dc/dcam/rangeIncludes>     dcterms:Standard  .      
+
+
 
 ### https://w3id.org/mod#usedEngineeringMethodology
 mod:usedEngineeringMethodology
