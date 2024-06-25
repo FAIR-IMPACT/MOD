@@ -98,6 +98,11 @@
                                     "MOD fournit un ensemble de propriétés pouvant être utilisées par les développeurs d’ontologies, d'artefact sémantique ou les catalogues d'artéfact sémantiques (portails, registre, bibliothèque), pour décrire et publier des artefacts sémantiques. La description enrichie des artefacts sémantiques aidera les utilisateurs à rechercher, découvrir, identifier et sélectionner des artefacts sémantiques."@fr ,
                                     "MOD provee un conjunto de propiedades que pueden usarse por desarroladores de ontologías, o artefactos semánticos, o catálogos de artefactos semánticos (e.g., registros, repositorios, portales), para describir y publicar artefactos semánticos. La descripción enriquecida de artefactos semánticos, a su vez, ayudará a los usuarios a buscar, descubrir, identificar y seleccionar los artefactos semánticos."@es ;
     dcterms:bibliographicCitation   <https://dx.doi.org/10.1007/978-3-319-70863-8_17> ;
+    dcterms:isReferencedBy          <https://doi.org/10.1371/journal.pcbi.1009041> ,
+                                    <https://doi.org/10.1007/978-3-031-47243-5_3> ,
+                                    <https://doi.org/10.1007/978-3-031-11609-4_17> ,
+                                    <https://doi.org/10.5771/0943-7444-2020-2-138> ,
+                                    <https://doi.org/10.1007/s13740-018-0091-5> ;
     
     ########## Dates ##########
 
@@ -1294,7 +1299,7 @@ dcterms:abstract    rdf:type                rdf:Property ;
 ### http://purl.org/dc/terms/bibliographicCitation
 dcterms:bibliographicCitation
                     rdf:type                rdf:Property ;
-                    rdfs:subPropertyOf      dc:identifier , dcterms:identifier;
+                    rdfs:subPropertyOf      dc:identifier , dcterms:identifier ;
                     rdfs:label              "bibliographic reference"@en ,
                                             "référence bibliographique";
                     rdfs:range              rdfs:Literal ;
@@ -1310,6 +1315,25 @@ dcterms:bibliographicCitation
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: F2" ,
                                             "FAIRsFAIR profile: OPTIONAL" .
+
+
+### http://purl.org/dc/terms/isReferencedBy
+dcterms:isReferencedBy
+                    rdf:type                rdf:Property ;
+                    rdfs:subPropertyOf      dc:relation , dcterms:relation ;
+                    rdfs:label              "is referenced by"@en ,
+                                            "est référencé par";
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
+                    dcterms:description     "DCTERMS: A related resource that references, cites, or otherwise points to the described resource. DCAT: A related resource, such as a publication, that references, cites, or otherwise points to the cataloged resource."@en ;
+                    rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
+                    dcterms:issued          "2000-07-11"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.2> ;
+                    pav:importedOn          "2024-06-25"^^xsd:date ;
+                    
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: F2" .
+                                            
 
 
 ##########################################
