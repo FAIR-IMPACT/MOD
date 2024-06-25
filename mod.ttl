@@ -3369,8 +3369,8 @@ dcat:service        rdf:type                rdf:Property , owl:ObjectProperty ;
 ### http://www.w3.org/ns/dcat#record
 dcat:record        rdf:type                rdf:Property , owl:ObjectProperty ;
                     rdfs:subPropertyOf      dcterms:hasPart , rdfs:member ;
-                    rdfs:label              "record"@en ,
-                                            "registre"@fr ;
+                    rdfs:label              "catalog record"@en ,
+                                            "enregistrement dans le catalogue"@fr ;
                     rdfs:domain             dcat:Catalog ;
                     dcterms:domainIncludes  mod:SemanticArtefactCatalog ;
                     rdfs:range              dcat:CatalogRecord ;
