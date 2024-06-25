@@ -2802,6 +2802,24 @@ dcterms:relation    rdf:type                rdf:Property ;
                     prov:wasInfluencedBy    "FAIR principle: I2" .
 
 
+### http://www.w3.org/ns/dcat#qualifiedRelation
+dcat:qualifiedRelation
+                    rdf:type                rdf:Property , owl:ObjectProperty ;
+                    rdfs:subPropertyOf      prov:qualifiedInfluence ;
+                    rdfs:label              "qualified relation"@en ,
+                                            "relation qualifiée"@fr ;
+                    rdfs:domain             dcat:Resource ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
+                    rdfs:range              dcat:Relationship ;
+                    dcterms:description     "DCAT: Link to a description of a relationship with another resource. PROV: Influence is the capacity of an entity, activity, or agent to have an effect on the character, development, or behavior of another by means of usage, start, end, generation, invalidation, communication, derivation, attribution, association, or delegation."@en ;
+                    rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
+                    dcterms:issued          "2020-02-20"^^xsd:date ;
+                    owl:equivalentProperty  schema:hasPart ;                                           
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.2> ;
+                    pav:importedOn          "2024-06-25"^^xsd:date .
+      
+   
 ### https://w3id.org/mod#semanticArtefactRelation
 mod:semanticArtefactRelation 
                     rdf:type                owl:ObjectProperty ;
@@ -2820,6 +2838,7 @@ mod:semanticArtefactRelation
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: I2" ,
                                             "FAIRsFAIR profile: OPTIONAL" .
+
 
 ### https://w3id.org/mod#specializes
 mod:specializes     rdf:type                owl:ObjectProperty ;
