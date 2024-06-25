@@ -53,7 +53,7 @@
     mod:URI                         <https://w3id.org/mod> ;
     owl:versionIRI                  <https://w3id.org/mod/3.1> ;
 #   dcterms:identifier              ; 
-    owl:versionInfo                 "3.1" ;
+    owl:versionInfo                 "3.2" ;
     mod:status                      "alpha" ;
     owl:deprecated                  false ;
     mod:hasRepresentationLanguage   omv:OWL ;
@@ -1177,6 +1177,23 @@ dcat:landingPage    rdf:type                rdf:Property , owl:ObjectProperty ;
                     skos:scopeNote          "If the distribution(s) are accessible only through a landing page (i.e. direct download URLs are not known), then the landing page link should be duplicated as accessURL on a distribution."@en .
 
             
+### http://schema.org/featureList
+schema:featureList  rdf:type                rdf:Property ;
+                    rdfs:label              "feature list"@en ,
+                                            "liste des fonctionalités"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefactCatalog ;
+                    dcterms:description     "SCHEMA: Features or modules provided by this application (and possibly required by other applications)."@en ;
+                    rdfs:isDefinedBy        <http://schema.org/> ;
+                    dcterms:issued          "2012-04-21"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.2> ;
+                    pav:importedOn          "2024-06-25"^^xsd:date ;
+                    
+            
+            #OTHER ORIGINAL STATEMENTS IF ANY 
+                    schema:domainIncludes   schema:SoftwareApplication ;
+                    schema:rangeIncludes    schema:Text ,
+                                            schema:URL .       
+
 
 ### http://www.w3.org/2000/01/rdf-schema#comment
 rdfs:comment        rdf:type                rdf:Property ;
