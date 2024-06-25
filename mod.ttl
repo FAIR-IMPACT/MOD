@@ -3366,6 +3366,20 @@ dcat:service        rdf:type                rdf:Property , owl:ObjectProperty ;
                     pav:importedOn          "2024-06-25"^^xsd:date .
 
 
+### http://www.w3.org/ns/dcat#record
+dcat:record        rdf:type                rdf:Property , owl:ObjectProperty ;
+                    rdfs:subPropertyOf      dcterms:hasPart , rdfs:member ;
+                    rdfs:label              "record"@en ,
+                                            "registre"@fr ;
+                    rdfs:domain             dcat:Catalog ;
+                    dcterms:domainIncludes  mod:SemanticArtefactCatalog ;
+                    rdfs:range              dcat:CatalogRecord ;
+                    dcterms:description     "DCAT: A record describing the registration of a single dataset or data service that is part of the catalog."@en ;
+                    rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
+                    dcterms:issued          "2014-01-16"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.2> ;
+                    pav:importedOn          "2024-06-25"^^xsd:date .
+
 
 ##########################################
 ########## Media properties ##########
