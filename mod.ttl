@@ -378,7 +378,7 @@ mod:SemanticArtefact
                                             "Una especificación de una conceptualización que puede ser representada a distintos niveles de formalización (incluyendo listas controladas, tesaurus y ontologías."@es ;
                     rdfs:isDefinedBy        <https://w3id.org/mod#> ;
                     dcterms:issued          "2021-12-01"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/2.0> ;
                     pav:importedOn          "2021-12-01"^^xsd:date ;
                     dcterms:modified        "2024-05-31"^^xsd:date ;
                     
@@ -399,7 +399,7 @@ mod:SemanticArtefactDistribution
                                             "Una representación y/o serialización específica de un artefacto semántico."@es ;
                     rdfs:isDefinedBy        <https://w3id.org/mod#> ;
                     dcterms:issued          "2021-12-01"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/2.0> ;
                     pav:importedOn          "2021-12-01"^^xsd:date ;
                     dcterms:modified        "2024-05-31"^^xsd:date ;
                     
@@ -419,7 +419,7 @@ mod:SemanticArtefactCatalogRecord
                                             "Un registro en un catálogo, que describe el registro de un único artefacto semántico."@es ;
                     rdfs:isDefinedBy        <https://w3id.org/mod#> ;
                     dcterms:issued          "2021-12-01"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/2.0> ;
                     pav:importedOn          "2021-12-01"^^xsd:date ;
                     dcterms:modified        "2024-05-31"^^xsd:date ;
                     
@@ -439,7 +439,7 @@ mod:SemanticArtefactCatalog
                                             "Un sistema web dedicado que fomenta la disponibilidad, la capacidad de descubrimiento y la preservación y el mantenimiento a largo plazo de artefactos semánticos."@es ;
                     rdfs:isDefinedBy        <https://w3id.org/mod#> ;
                     dcterms:issued          "2021-12-01"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/2.0> ;
                     pav:importedOn          "2021-12-01"^^xsd:date ;
                     dcterms:modified        "2024-05-31"^^xsd:date ;
                     
@@ -459,7 +459,7 @@ mod:SemanticArtefactService
                                             "Una colección de operaciones que proporciona acceso a una o más funciones de procesamiento de artefactos semánticos."@es ;
                     rdfs:isDefinedBy        <https://w3id.org/mod#> ;
                     dcterms:issued          "2021-12-01"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/2.0> ;
                     pav:importedOn          "2021-12-01"^^xsd:date ;
                     dcterms:modified        "2024-05-31"^^xsd:date ;
                     
@@ -479,7 +479,7 @@ mod:Taxonomy
                                             "(to come)"@es ;
                     rdfs:isDefinedBy        <https://w3id.org/mod#> ;
                     dcterms:issued          "2021-12-01"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/2.0> ;
                     pav:importedOn          "2021-12-01"^^xsd:date ;
                     dcterms:modified        "2024-05-31"^^xsd:date .
                     
@@ -496,7 +496,7 @@ mod:Terminology
                                             "(to come)"@es ;
                     rdfs:isDefinedBy        <https://w3id.org/mod#> ;
                     dcterms:issued          "2021-12-01"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/2.0> ;
                     pav:importedOn          "2021-12-01"^^xsd:date ;
                     dcterms:modified        "2024-05-31"^^xsd:date .
 
@@ -513,7 +513,7 @@ mod:Thesaurus
                                             "(to come)"@es ;
                     rdfs:isDefinedBy        <https://w3id.org/mod#> ;
                     dcterms:issued          "2021-12-01"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/2.0> ;
                     pav:importedOn          "2021-12-01"^^xsd:date ;
                     dcterms:modified        "2024-05-31"^^xsd:date .
 
@@ -529,7 +529,7 @@ mod:Analytics
                                             "(to come)"@es ;
                     rdfs:isDefinedBy        <https://w3id.org/mod#> ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
                     dcterms:modified        "2024-05-31"^^xsd:date .
 
@@ -545,7 +545,7 @@ mod:EngineeringMethodology
                                             "(to come)"@es ;
                     rdfs:isDefinedBy        <https://w3id.org/mod#> ;
                     dcterms:issued          "2021-12-01"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/2.0> ;
                     pav:importedOn          "2021-12-01"^^xsd:date ;
                     dcterms:modified        "2024-05-31"^^xsd:date ;
 
@@ -565,7 +565,7 @@ mod:Evaluation
                                             "Los resultados de la evaluación de un artefacto semántico. Un artefacto puede tener más de una evaluación."@es ;
                     rdfs:isDefinedBy        <https://w3id.org/mod#> ;
                     dcterms:issued          "2015-08-05"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:dateTime ;
                     dcterms:modified        "2024-05-31"^^xsd:date .
 
@@ -582,7 +582,7 @@ mod:FairAssessment
                                             "(to come)"@es ;
                     rdfs:isDefinedBy        <https://w3id.org/mod#> ;
                     dcterms:issued          "2024-05-31"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2024-05-31"^^xsd:dateTime .
 
 ### https://w3id.org/mod#Group
@@ -596,7 +596,7 @@ mod:Group
                                             "Un grupo de artefactos semánticos múltiples (por ejemplo, que provienen de la misma fuente o proyecto)."@es ;
                     rdfs:isDefinedBy        <https://w3id.org/mod#> ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:dateTime ;
                     dcterms:modified        "2024-05-31"^^xsd:date .
                     
@@ -612,7 +612,7 @@ mod:KnowledgeRepresentationParadigm
                                             "(to come)"@es ;
                     rdfs:isDefinedBy        <https://w3id.org/mod#> ;
                     dcterms:issued          "2021-12-01"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/2.0> ;
                     pav:importedOn          "2021-12-01"^^xsd:date ;
                     dcterms:modified        "2024-05-31"^^xsd:date ;
 
@@ -632,7 +632,7 @@ mod:SemanticArtefactTask
                                             "(to come)"@es ;
                     rdfs:isDefinedBy        <https://w3id.org/mod#> ;
                     dcterms:issued          "2021-12-01"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/2.0> ;
                     pav:importedOn          "2021-12-01"^^xsd:date ;
                     dcterms:modified        "2024-05-31"^^xsd:date ;
 
@@ -696,7 +696,7 @@ mod:acronym         rdf:type                owl:DatatypeProperty ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
                     owl:equivalentProperty  <http://www.isibang.ac.in/ns/mod/1.0/acronym> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -724,7 +724,7 @@ dcterms:title       rdf:type                rdf:Property ;
                                             schema:name ,
                                             skos:prefLabel ,
                                             foaf:name ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -743,7 +743,7 @@ mod:URI             rdf:type                owl:DatatypeProperty ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
                     owl:equivalentProperty  omv:URI ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -764,7 +764,7 @@ owl:versionIRI      rdf:type                owl:OntologyProperty ;
                     dcterms:description     "OWL: The property that identifies the version IRI of an ontology."@en ;  
                     rdfs:isDefinedBy        <http://www.w3.org/2002/07/owl#> ;
                     dcterms:issued          "2004-02-10"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -787,7 +787,7 @@ dcterms:identifier  rdf:type                rdf:Property ;
                     owl:equivalentProperty  skos:notation ,
                                             adms:identifier ,
                                             schema:identifier ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -813,7 +813,7 @@ owl:versionInfo     rdf:type                owl:AnnotationProperty  ;
                                             oboinowl:hasVersion ,
                                             schema:version ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/version> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
         
             #OPTIONAL STATEMENTS
@@ -834,7 +834,7 @@ mod:status          rdf:type                owl:DatatypeProperty ;
                     owl:equivalentProperty  idot:state ,
                                             adms:adms-status ,
                                             schema:creativeWorkStatus ; 
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -857,7 +857,7 @@ owl:deprecated     rdf:type                owl:AnnotationProperty ;
                    dcterms:issued          "2004-02-10"^^xsd:date ;
                    owl:equivalentProperty  idot:obsolete ,
                                            <http://www.isibang.ac.in/ns/mod/1.1/deprecated> ;                                         
-                   pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.1> ;
+                   pav:derivedFrom         <https://w3id.org/mod/1.1> ;
                    pav:importedOn          "2016-09-02"^^xsd:date ; 
                                        
             #OPTIONAL STATEMENTS
@@ -877,7 +877,7 @@ mod:hasRepresentationLanguage
                     owl:equivalentProperty  omv:hasOntologyLanguage ,
                                             schema:fileFormat ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/ontologyDesignLanguage> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -900,7 +900,7 @@ mod:hasFormalityLevel
                     owl:equivalentProperty  omv:hasFormalityLevel ,
                                             schema:fileFormat ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/formalityLevel> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -921,7 +921,7 @@ mod:hasSyntax       rdf:type                owl:DatatypeProperty ;
                     owl:equivalentProperty  omv:hasOntologySyntax ,
                                             dcterms:format ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/syntax> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -944,7 +944,7 @@ dcterms:language    rdf:type                rdf:Property ;
                     owl:equivalentProperty  omv:naturalLanguage ,
                                             schema:inLanguage ,
                                             doap:language ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -966,7 +966,7 @@ dcterms:type        rdf:type                rdf:Property ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
                     owl:equivalentProperty  omv:isOfType ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -991,7 +991,7 @@ dcterms:accessRights
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2003-02-15"^^xsd:date ;
                     owl:equivalentProperty  <http://www.isibang.ac.in/ns/mod/1.0/accessibility> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1015,7 +1015,7 @@ dcterms:license     rdf:type                rdf:Property ;
                     owl:equivalentProperty  cc:license ,
                                             omv:license ,
                                             schema:license ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1040,7 +1040,7 @@ cc:useGuidelines    rdf:type                rdf:Property ;
                     dcterms:description     "CC: A related resource which defines non-binding use guidelines for the work."@en ;     
                     rdfs:isDefinedBy        <http://creativecommons.org/ns#> ;
                     dcterms:issued          "2008-03-03"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1059,7 +1059,7 @@ cc:morePermissions  rdf:type                rdf:Property ;
                     dcterms:description     "CC: A related resource which describes additional permissions or alternative licenses for a Work which may be available."@en ;     
                     rdfs:isDefinedBy        <http://creativecommons.org/ns#> ;
                     dcterms:issued          "2008-03-03"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1077,7 +1077,7 @@ dcterms:rightsHolder
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2004-06-14"^^xsd:date ;
                     owl:equivalentProperty  schema:copyrightHolder ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1102,7 +1102,7 @@ odrl:hasPolicy     rdf:type                 rdf:Property ,
                    dcterms:description      "ORDL: Identifies an ODRL Policy for which the identified Asset is the target Asset to all the Rules. DCAT: An ODRL conformant policy expressing the rights associated with the resource."@en ;
                    rdfs:isDefinedBy         <http://www.w3.org/ns/odrl/2/> ;
                    dcterms:issued           "2018-02-15"^^xsd:date ;
-                   pav:derivedFrom          <http://www.isibang.ac.in/ns/mod/3.2> ;
+                   pav:derivedFrom          <https://w3id.org/mod/3.2> ;
                    pav:importedOn           "2024-06-25"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1128,7 +1128,7 @@ dcterms:description rdf:type                rdf:Property ;
                     owl:equivalentProperty  omv:description ,
                                             schema:description ,
                                             doap:description ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1154,7 +1154,7 @@ foaf:homepage       rdf:type                rdf:Property , owl:InverseFunctional
                                             cc:attributionURL ,
                                             doap:blog ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/homepage> ;
-                    pav:derivedFrom          <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom          <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1179,7 +1179,7 @@ dcat:landingPage    rdf:type                rdf:Property , owl:ObjectProperty ;
                                             rdfs:seeAlso ,
                                             schema:documentation ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/document> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1199,7 +1199,7 @@ schema:featureList  rdf:type                rdf:Property ;
                     dcterms:description     "SCHEMA: Features or modules provided by this application (and possibly required by other applications)."@en ;
                     rdfs:isDefinedBy        <http://schema.org/> ;
                     dcterms:issued          "2012-04-21"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/3.2> ;
                     pav:importedOn          "2024-06-25"^^xsd:date ;
                     
             
@@ -1223,7 +1223,7 @@ rdfs:comment        rdf:type                rdf:Property ;
                     owl:equivalentProperty  omv:notes ,
                                             dcterms:description ,
                                             adms:versionNotes ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1244,7 +1244,7 @@ dcat:keyword        rdf:type                rdf:Property , owl:DatatypeProperty 
                     owl:equivalentProperty   omv:keywords ,
                                              schema:keywords ,
                                              <http://www.isibang.ac.in/ns/mod/1.1/keyword> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1267,7 +1267,7 @@ dcterms:alternative rdf:type                rdf:Property ;
                     owl:equivalentProperty  idot:alternatePrefix ,
                                             schema:alternateName ,
                                             skos:altLabel ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1287,7 +1287,7 @@ skos:hiddenLabel    rdf:type                rdfs:Property ,
                     dcterms:description     "MOD: Hidden or past name. SKOS: A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations."@en;
                     rdfs:isDefinedBy        <http://www.w3.org/2004/02/skos/core> ;
                     dcterms:issued          "2009-08-18"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1308,7 +1308,7 @@ dcterms:abstract    rdf:type                rdf:Property ;
                     dcterms:description     "DCTERMS: A summary of the resource."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2000-07-11"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1330,7 +1330,7 @@ dcterms:bibliographicCitation
                     owl:equivalentProperty  omv:reference ,
                                             foaf:isPrimaryTopicOf ,
                                             schema:citation ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1349,7 +1349,7 @@ dcterms:isReferencedBy
                     dcterms:description     "DCTERMS: A related resource that references, cites, or otherwise points to the described resource. DCAT: A related resource, such as a publication, that references, cites, or otherwise points to the cataloged resource."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2000-07-11"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/3.2> ;
                     pav:importedOn          "2024-06-25"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1385,7 +1385,7 @@ dcterms:created     rdf:type                rdf:Property ;
                                             oboinowl:hasDate ,
                                             prov:generatedAtTime ,
                                             <http://www.isibang.ac.in/ns/mod/1.1/creationDate> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1409,7 +1409,7 @@ dcterms:modified    rdf:type                rdf:Property ;
                                             schema:dateModified ,
                                             pav:lastUpdateOn ,
                                             <http://www.isibang.ac.in/ns/mod/1.1/creationDate> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1429,7 +1429,7 @@ dcterms:valid       rdf:type                rdf:Property ;
                     dcterms:issued          "2000-07-11"^^xsd:date ; 
                     owl:equivalentProperty  schema:endDate ,
                                             prov:invalidatedAtTime ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1448,7 +1448,7 @@ mod:curatedOn       rdf:type                owl:DatatypeProperty ;
                     dcterms:description     ""@en ;
                     rdfs:isDefinedBy        <http://purl.org/pav/> ;
                     dcterms:issued          "2014-08-28"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -1471,7 +1471,7 @@ dcterms:dateSubmitted
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2002-07-13"^^xsd:date ; 
                     owl:equivalentProperty  schema:datePublished ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1521,7 +1521,7 @@ dcterms:creator     rdf:type                rdf:Property ;
                                             doap:maintainer ,
                                             prov:wasAttributedTo ,
                                             foaf:maker ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1550,7 +1550,7 @@ dcterms:contributor rdf:type                rdf:Property ;
                                             doap:helper ,
                                             oboinowl:saved-by ,
                                             oboinowl:savedBy  ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1572,7 +1572,7 @@ mod:curatedBy       rdf:type                owl:ObjectProperty ;
                     dcterms:description     "PAV: Specifies an agent specialist responsible for shaping the expression in an appropriate format. Often the primary agent responsible for ensuring the quality of the representation. MOD: A curator who restructure the previously authored content and shape it to be appropriate for the intended representation (e.g. by normalizing the fields for being represented in a spreadsheet). "@en ;
                     rdfs:isDefinedBy        <http://purl.org/pav/> ;
                     dcterms:issued          "2014-08-28"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -1594,7 +1594,7 @@ schema:translator   rdf:type                rdf:Property ;
                     dcterms:description     "SCHEMA: Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event."@en ;
                     rdfs:isDefinedBy        <http://schema.org/> ;
                     dcterms:issued          "2012-04-21"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1618,7 +1618,7 @@ dcterms:publisher   rdf:type                rdf:Property ;
                                             schema:sourceOrganization ,
                                             schema:provider ,
                                             adms:schemaAgency ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1643,7 +1643,7 @@ foaf:fundedBy       rdf:type                rdf:Property , owl:ObjectProperty ;
                     dcterms:issued          "2014-01-14"^^xsd:date ;
                     owl:equivalentProperty  schema:funder , 
                                             <http://www.isibang.ac.in/ns/mod/1.0/sponsoredBy> ;
-                    pav:derivedFrom          <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom          <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1661,7 +1661,7 @@ schema:funding      rdf:type                rdf:Property ;
                     dcterms:issued          "2022-03-17"^^xsd:date ;
                     owl:equivalentProperty  schema:funder , 
                                             <http://www.isibang.ac.in/ns/mod/1.0/sponsoredBy> ;
-                    pav:derivedFrom          <http://www.isibang.ac.in/ns/mod/3.1> ;
+                    pav:derivedFrom          <https://w3id.org/mod/3.1> ;
                     pav:importedOn          "2024-06-2"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1679,7 +1679,7 @@ mod:endorsedBy      rdf:type                owl:ObjectProperty ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
                     owl:equivalentProperty  omv:endorsedBy ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -1701,7 +1701,7 @@ prov:qualifiedAttribution
                     dcterms:description     "PROV: Attribution is the ascribing of an entity to an agent. When an entity e is attributed to agent ag, entity e was generated by some unspecified activity that in turn was associated to agent ag. Thus, this relation is useful when the activity is not known, or irrelevant. DCAT: Link to an Agent having some form of responsibility for the resource."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/ns/prov-o#> ;
                     dcterms:issued          "2013-04-30"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/3.2> ;
                     pav:importedOn          "2024-06-25"^^xsd:date ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
@@ -1722,7 +1722,7 @@ schema:comment      rdf:type                rdf:Property ;
                     dcterms:description     "SCHEMA: Comments, typically from users."@en ;
                     rdfs:isDefinedBy        <http://schema.org/> ;
                     dcterms:issued          "2012-04-21"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1744,7 +1744,7 @@ mod:hasEvaluation   rdf:type                owl:ObjectProperty ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2015-08-05"^^xsd:date ;
                     owl:equivalentProperty  schema:review ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1762,7 +1762,7 @@ mod:group           rdf:type                owl:ObjectProperty ;
                     dcterms:description     "MOD: A group of semantic artefact that the given semantic artefact is usually considered into or a group hosted/served/represented by the given semantic artefact catalogue."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2017-07-06"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -1780,7 +1780,7 @@ mod:usedInProject   rdf:type                owl:ObjectProperty ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2015-08-05"^^xsd:date ;
                     owl:equivalentProperty  <http://www.isibang.ac.in/ns/mod/1.0/ontologyInUse> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1800,7 +1800,7 @@ dcterms:audience    rdf:type                rdf:Property ;
                     dcterms:issued          "2001-05-21"^^xsd:date ; 
                     owl:equivalentProperty  doap:audience ,
                                             schema:audience ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1820,7 +1820,7 @@ schema:publishingPrinciples
                     dcterms:description     "SCHEMA: The publishingPrinciples property indicates (typically via URL) a document describing the editorial principles of an Organization (or individual, e.g. a Person writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies."@en ;
                     rdfs:isDefinedBy        <http://schema.org/> ;
                     dcterms:issued          "2012-04-21"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/3.2> ;
                     pav:importedOn          "2024-06-25"^^xsd:date ;
                     
             
@@ -1839,7 +1839,7 @@ mod:analytics       rdf:type                owl:ObjectProperty ;
                     dcterms:description     "MOD: This property shall be used to store any analytics for an ontology. E.g., number of visits an ontology received in a portal, number of downloads, etc."@en ; 
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1858,7 +1858,7 @@ doap:repository     rdf:type                rdf:Property ;
                     dcterms:description     "DOAP: Source code repository."@en ;
                     rdfs:isDefinedBy        <http://usefulinc.com/ns/doap#> ;
                     dcterms:issued          "2004"^^xsd:date ;
-                    pav:derivedFrom          <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom          <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1876,7 +1876,7 @@ doap:bug-database    rdf:type                rdf:Property ;
                     dcterms:description     "DOAP: Bug tracker for a project."@en ;
                     rdfs:isDefinedBy        <http://usefulinc.com/ns/doap#> ;
                     dcterms:issued          "2004"^^xsd:date ;
-                    pav:derivedFrom          <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom          <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1894,7 +1894,7 @@ doap:mailing-list   rdf:type                rdf:Property ;
                     dcterms:description     "DOAP: Mailing list home page or email address."@en ;
                     rdfs:isDefinedBy        <http://usefulinc.com/ns/doap#> ;
                     dcterms:issued          "2004"^^xsd:date ;
-                    pav:derivedFrom          <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom          <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1913,7 +1913,7 @@ mod:toDoList        rdf:type                owl:ObjectProperty ;
                     rdfs:isDefinedBy        <http://purl.org/vocommons/voaf> ;
                     dcterms:issued          "2013-05-23"^^xsd:date ;
                     owl:equivalentProperty  voaf:toDoList ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1930,7 +1930,7 @@ schema:award        rdf:type                rdf:Property ;
                     dcterms:description     "SCHEMA: An award won by or for this item."@en ;
                     rdfs:isDefinedBy        <http://schema.org/> ;
                     dcterms:issued          "2012-04-21"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1957,7 +1957,7 @@ mod:knownUsage      rdf:type                owl:DatatypeProperty ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
                     owl:equivalentProperty  omv:knownUsage ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -1975,7 +1975,7 @@ mod:designedForTask rdf:type                owl:ObjectProperty ;
                     dcterms:description     "OMV: The purpose for which the ontology was originally designed."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -1997,7 +1997,7 @@ dcterms:subject     rdf:type                rdf:Property ;
                                             schema:about ,
                                             dcat:theme ,
                                             foaf:topic ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -2016,7 +2016,7 @@ dcterms:coverage    rdf:type                rdf:Property ;
                     dcterms:description     "DCTERMS: The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant. Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names [[TGN](https://www.getty.edu/research/tools/vocabulary/tgn/index.html)]. Where appropriate, named places or time periods may be used in preference to numeric identifiers such as sets of coordinates or date ranges.  Because coverage is so broadly defined, it is preferable to use the more specific subproperties Temporal Coverage and Spatial Coverage."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -2039,7 +2039,7 @@ adms:supportedSchema
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-adms> ;
                     dcterms:issued          "2013-08-01"^^xsd:date ;
                     owl:equivalentProperty  schema:fileFormat ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/3.2> ;
                     pav:importedOn          "2024-06-25"^^xsd:date .
                      
 
@@ -2055,7 +2055,7 @@ vann:example        rdf:type                owl:AnnotationProperty ;
                     dcterms:issued          "2005-04-01"^^xsd:date ;
                     owl:equivalentProperty  schema:workExample ;
          
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -2081,7 +2081,7 @@ mod:conformsToKnowledgeRepresentationParadigm
                     owl:equivalentProperty  omv:conformsToKnowledgeRepresentationParadigm , 
                                             dcterms:conformsTo ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/knowledgeRepresentationFormalism> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -2100,7 +2100,7 @@ dcterms:conformsTo  rdf:type                rdf:Property ;
                     dcterms:description     "DCTERMS: An established standard to which the described resource conforms."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2001-05-21"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
@@ -2121,7 +2121,7 @@ mod:usedEngineeringMethodology
                     owl:equivalentProperty  adms:representationTechnique ,
                                             schema:publishingPrinciples ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/methodologyUsed> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -2144,7 +2144,7 @@ mod:createdWith     rdf:type                owl:ObjectProperty ;
                     owl:equivalentProperty  omv:usedOntologyEngineeringTool ,
                                             oboinowl:auto-generated-by , 
                                             <http://www.isibang.ac.in/ns/mod/1.0/toolUsed> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -2164,7 +2164,7 @@ dcterms:accrualMethod
                     dcterms:description     "DCTERMS: The method by which items are added to a collection. Recommended practice is to use a value from the Collection Description Accrual Method Vocabulary."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2005-06-13"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -2187,7 +2187,7 @@ dcterms:accrualPeriodicity
                     dcterms:description     "DCTERMS: The frequency with which items are added to a collection. Recommended practice is to use a value from the Collection Description Frequency Vocabulary."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2005-06-13"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -2210,7 +2210,7 @@ dcterms:accrualPolicy
                     dcterms:description     "DCTERMS: The policy governing the addition of items to a collection. Recommended practice is to use a value from the Collection Description Accrual Policy Vocabulary."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2005-06-13"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -2231,7 +2231,7 @@ mod:competencyQuestion
                     dcterms:description     "A set of questions made to build an ontology at the design time."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2015-08-05"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -2249,7 +2249,7 @@ mod:sampleQueries   rdf:type                owl:DatatypeProperty ;
                     dcterms:description     "MOD: A set of queries (may be SPARQL, DL Queries) that are provided along with an ontology."@en ;    
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2015-08-05"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -2268,7 +2268,7 @@ prov:wasGeneratedBy rdf:type                owl:ObjectProperty ;
                     dcterms:description     "PROV: Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation. DCAT: An activity that generated, or provides the business context for, the creation of the dataset."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/ns/prov-o#> ;
                     dcterms:issued          "2013-04-30"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -2292,7 +2292,7 @@ prov:wasinvalidatedBy
                     dcterms:description     "PROV: Invalidation is the start of the destruction, cessation, or expiry of an existing entity by an activity. The entity is no longer available for use (or further invalidation) after invalidation. Any generation or usage of an entity precedes its invalidation."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/ns/prov-o#> ;
                     dcterms:issued          "2013-04-30"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -2333,7 +2333,7 @@ mod:prefLabelProperty
                     dcterms:description     "MOD: Property used to specify objects' preferred label."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
 
             #OPTIONAL STATEMENTS
@@ -2353,7 +2353,7 @@ mod:synonymProperty rdf:type                owl:DatatypeProperty ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
                     owl:equivalentProperty  oboinowl:hasSynonymType ,
                                             oboinowl:synonymtypedef ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -2371,7 +2371,7 @@ mod:definitionProperty
                     dcterms:description     "MOD: Property used to specify objects' definition."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -2389,7 +2389,7 @@ mod:authorProperty  rdf:type                owl:DatatypeProperty ;
                     dcterms:description     "MOD: Property used to specify objects's author."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
                    
             #OPTIONAL STATEMENTS
@@ -2407,7 +2407,7 @@ mod:obsoleteProperty
                     dcterms:description     "MOD: Property used to specify obsolete objects."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -2460,7 +2460,7 @@ mod:hierarchyProperty
                     dcterms:description     "MOD: Property used to specify the hierarchy (e.g. rdfs:subClassOf or skos:broader)."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
 
             #OPTIONAL STATEMENTS
@@ -2486,7 +2486,7 @@ dcat:accessURL      rdf:type                rdf:Property , owl:ObjectProperty ;
                     dcterms:issued          "2014-01-16"^^xsd:date ;
                     owl:equivalentProperty  omv:resourceLocator ,
                                             doap:download-page ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -2509,7 +2509,7 @@ dcterms:isFormatOf  rdf:type                rdf:Property ;
                     dcterms:issued          "2000-07-11"^^xsd:date ;
                     owl:equivalentProperty  schema:hasPart ,
                                             <http://www.isibang.ac.in/ns/mod/1.2/syntax> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -2527,7 +2527,7 @@ dcterms:hasFormat   rdf:type                rdf:Property ;
                     dcterms:issued          "2000-07-11"^^xsd:date ;
                     owl:equivalentProperty  schema:hasPart ,
                                             <http://www.isibang.ac.in/ns/mod/1.2/syntax> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -2548,7 +2548,7 @@ dcat:downloadURL    rdf:type                rdf:Property , owl:ObjectProperty ;
                     owl:equivalentProperty  void:dataDump ,
                                             doap:download-mirror ,
                                             schema:distribution ;
-                    pav:derivedFrom          <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom          <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -2571,7 +2571,7 @@ void:uriLookupEndpoint
                     dcterms:description     "VOID: A protocol endpoint for simple URI lookups for a void:Dataset."@en ;
                     rdfs:isDefinedBy        <http://vocab.deri.ie/void> ;
                     dcterms:issued          "2010-01-26"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -2590,7 +2590,7 @@ void:openSearchDescription
                     dcterms:description     "VOID: An OpenSearch description document for a free-text search service over a void:Dataset. DOAP: The URI of a web service endpoint where software as a service may be accessed."@en ;
                     rdfs:isDefinedBy        <http://vocab.deri.ie/void> ;
                     dcterms:issued          "2010-01-26"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -2606,7 +2606,7 @@ mod:browsingUI      rdf:type                owl:DatatypeProperty ;
                     dcterms:description     "MOD: The user interface (URL) where the ontology may be browsed or searched."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2017-07-06"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -2629,7 +2629,7 @@ dcterms:source      rdf:type                rdf:Property ;
                                             prov:wasInfluencedBy ,
                                             pav:derivedFrom ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/sourceOntology> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -2648,7 +2648,7 @@ sd:endpoint         rdf:type                rdf:Property , owl:InverseFunctional
                     rdfs:isDefinedBy        <ttp://www.w3.org/ns/sparql-service-description> ;
                     dcterms:issued          "2013-03-21"^^xsd:date ;
                     owl:equivalentProperty  void:sparqlEndpoint ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -2664,7 +2664,7 @@ schema:includedInDataCatalog
                     dcterms:description     "SCHEMA: A data catalog which contains this dataset."@en ;
                     rdfs:isDefinedBy        <http://schema.org/> ;
                     dcterms:issued          "2016-05-04"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2014-07-28"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -2695,7 +2695,7 @@ owl:imports         rdf:type                owl:OntologyProperty  ;
                                             dcterms:requires ,
                                             voaf:extends ,
                                             adms:includedAsset ;    
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
         
             #OPTIONAL STATEMENTS
@@ -2718,7 +2718,7 @@ owl:PriorVersion    rdf:type                owl:AnnotationProperty, owl:Ontology
                                             prov:wasRevisionOf ,
                                             door:priorVersion ,
                                             adms:prev ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
         
             #OPTIONAL STATEMENTS
@@ -2740,7 +2740,7 @@ dcterms:isPartOf    rdf:type                rdf:Property ;
                                             void:subset , 
                                             schema:isPartOf ,
                                             <http://www.isibang.ac.in/ns/mod/1.1/module> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -2760,7 +2760,7 @@ dcterms:hasPart     rdf:type                rdf:Property ;
                     owl:equivalentProperty  schema:hasPart ,
                                             adms:sample , 
                                             oboinowl:hasSubset ;
-                    pav:derivedFrom        <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom        <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -2781,7 +2781,7 @@ dcat:catalog        rdf:type                rdf:Property , owl:ObjectProperty ;
                     owl:equivalentProperty  dcterms:hasPart ,
                                             schema:hasPart ,
                                             adms:sample ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/3.2> ;
                     pav:importedOn          "2024-06-25"^^xsd:date .
             
  
@@ -2795,7 +2795,7 @@ dcterms:relation    rdf:type                rdf:Property ;
                     dcterms:description     "DCTERMS: A related resource."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -2816,7 +2816,7 @@ dcat:qualifiedRelation
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
                     dcterms:issued          "2020-02-20"^^xsd:date ;
                     owl:equivalentProperty  schema:hasPart ;                                           
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/3.2> ;
                     pav:importedOn          "2024-06-25"^^xsd:date .
       
    
@@ -2832,7 +2832,7 @@ mod:semanticArtefactRelation
                     rdfs:isDefinedBy        <https://w3id.org/mod/2.0> ;
                     dcterms:issued          "2021-12-06"^^xsd:date ;
                     owl:equivalentProperty  door:ontologyRelatedTo ; 
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/2.0> ;
                     pav:importedOn          "2021-12-06"^^xsd:date ;
 
             #OPTIONAL STATEMENTS
@@ -2852,7 +2852,7 @@ mod:specializes     rdf:type                owl:ObjectProperty ;
                     owl:equivalentProperty  door:explanationEvolution ,
                                             voaf:specializes ,
                                             prov:specializationOf ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -2871,7 +2871,7 @@ mod:generalizes     rdf:type                owl:ObjectProperty ;
                     dcterms:issued          "2013-05-23"^^xsd:date ;
                     owl:equivalentProperty  voaf:generalizes ,
                                             prov:generalizationOf ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -2890,7 +2890,7 @@ mod:usedBy          rdf:type                owl:ObjectProperty ;
                     dcterms:issued          "2013-05-23"^^xsd:date ;
                     owl:equivalentProperty  voaf:usedBy ,
                                             nkos:usedBy ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -2909,7 +2909,7 @@ mod:reliesOn        rdf:type                owl:ObjectProperty ;
                     dcterms:issued          "2013-05-24"^^xsd:date ;
                     owl:equivalentProperty  voaf:reliesOn ,
                                             void:vocabulary  ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/2.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/2.0> ;
                     pav:importedOn          "2021-12-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -2927,7 +2927,7 @@ mod:similar     rdf:type                    owl:ObjectProperty ;
                     dcterms:issued          "2013-05-23"^^xsd:date ;
                     owl:equivalentProperty  <http://kannel.open.ac.uk/ontology/similarTo> ,
                                             voaf:similar ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -2946,7 +2946,7 @@ mod:comesFromTheSameDomain
                     rdfs:isDefinedBy        <http://kannel.open.ac.uk/ontology> ;
                     dcterms:issued          "2009-10-06"^^xsd:date ;
                     owl:equivalentProperty  <http://kannel.open.ac.uk/ontology/comesFromTheSameDomain> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -2967,7 +2967,7 @@ mod:hasEquivalencesWith
                     owl:equivalentProperty  door:isAlignedTo ,
                                             voaf:hasEquivalencesWith ,
                                             nkos:alignedWith ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -2988,7 +2988,7 @@ owl:backwardCompatibleWith
                     dcterms:issued          "2004-02-10"^^xsd:date ;
                     owl:equivalentProperty  omv:isBackwardCompatibleWith ,
                                             door:backwardCompatibleWith ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
         
             #OPTIONAL STATEMENTS
@@ -3008,7 +3008,7 @@ owl:incompatibleWith
                     dcterms:issued          "2004-02-10"^^xsd:date ;
                     owl:equivalentProperty  omv:isIncompatibleWith ,
                                             door:owlIncompatibleWith ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
         
             #OPTIONAL STATEMENTS
@@ -3025,7 +3025,7 @@ mod:hasDisparateModelling
                     rdfs:isDefinedBy        <http://kannel.open.ac.uk/ontology> ;
                     dcterms:issued          "2009-10-06"^^xsd:date ;
                     owl:equivalentProperty  <http://kannel.open.ac.uk/ontology/hasDisparateModelling> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -3046,7 +3046,7 @@ mod:hasDisjunctionsWith
                     rdfs:isDefinedBy        <http://purl.org/vocommons/voaf> ;
                     dcterms:issued          "2013-05-23"^^xsd:date ;
                     owl:equivalentProperty  voaf:hasDisjunctionsWith ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -3065,7 +3065,7 @@ schema:workTranslation
                     dcterms:issued          "2012-04-21"^^xsd:date ;
                     owl:equivalentProperty  adms:translation ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/translation> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
@@ -3084,7 +3084,7 @@ schema:translationOfWork
                     rdfs:isDefinedBy        <http://schema.org/> ;
                     dcterms:issued          "2012-04-21"^^xsd:date ;
                     owl:equivalentProperty  adms:translation  ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
 
             #OTHER ORIGINAL STATEMENTS IF ANY 
@@ -3111,7 +3111,7 @@ void:uriRegexPattern
                     rdfs:isDefinedBy        <http://vocab.deri.ie/void> ;
                     dcterms:issued          "2010-01-26"^^xsd:date ;
                     owl:equivalentProperty  idot:identifierPattern ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -3130,7 +3130,7 @@ vann:preferredNamespaceUri
                     rdfs:isDefinedBy        <http://purl.org/vocab/vann/> ;
                     dcterms:issued          "2005-04-01"^^xsd:date ;
                     owl:equivalentProperty  void:uriSpace ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -3151,7 +3151,7 @@ vann:preferredNamespacePrefix
                     owl:equivalentProperty  idot:preferredPrefix ,
                                             oboinowl:default-namespace ,
                                             oboinowl:hasDefaultNamespace ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -3169,7 +3169,7 @@ mod:obsoleteParent
                     dcterms:description     "MOD: Property used to specify the root of an obsolete branch in the ontology."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
 
             #OPTIONAL STATEMENTS
@@ -3188,7 +3188,7 @@ void:exampleResource
                     rdfs:isDefinedBy        <http://vocab.deri.ie/void> ;
                     dcterms:issued          "2010-01-26"^^xsd:date ;
                     owl:equivalentProperty  idot:exampleIdentifier ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -3208,7 +3208,7 @@ foaf:primaryTopic   rdf:type                owl:ObjectProperty , owl:FunctionalP
                     dcterms:issued          "2014-01-14"^^xsd:date ;
                     owl:equivalentProperty  omv:keyClasses ,
                                             schema:mainEntity ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -3232,7 +3232,7 @@ mod:metadataVoc     rdf:type                owl:ObjectProperty ;
                                             schema:schemaVersion ,
                                             adms:supportedSchema ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/vocabularyUsed> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -3253,7 +3253,7 @@ void:rootResource   rdf:type                rdf:Property ;
                     dcterms:issued          "2010-01-26"^^xsd:date ;
                     owl:equivalentProperty  skos:hasTopConcept ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/rootClasses> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -3271,7 +3271,7 @@ void:classPartition
                     dcterms:description     "VOID: A subset of a void:Dataset that contains only the entities of a certain rdfs:Class."@en ;
                     rdfs:isDefinedBy        <http://vocab.deri.ie/void> ;
                     dcterms:issued          "2010-01-26"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -3292,7 +3292,7 @@ void:propertyPartition
                     dcterms:description     "VOID: A subset of a void:Dataset that contains only the triples of a certain rdf:Property."@en ;
                     rdfs:isDefinedBy        <http://vocab.deri.ie/void> ;
                     dcterms:issued          "2010-01-26"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -3312,7 +3312,7 @@ dcterms:hasVersion  rdf:type                rdf:Property ;
                     dcterms:issued          "2000-07-11"^^xsd:date ;
                     owl:equivalentProperty  pav:hasVersion , 
                                             <http://www.isibang.ac.in/ns/mod/1.2/version> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -3329,7 +3329,7 @@ vann:changes        rdf:type                owl:AnnotationProperty ;
                     dcterms:description     "VANN: A reference to a resource that describes changes between this version of a vocabulary and the previous."@en ;
                     rdfs:isDefinedBy        <http://purl.org/vocab/vann/> ;
                     dcterms:issued          "2005-04-01"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -3347,7 +3347,7 @@ dcat:dataset        rdf:type                rdf:Property , owl:ObjectProperty ;
                     dcterms:description     "DCAT: A collection of data that is listed in the catalog."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
                     dcterms:issued          "2014-01-16"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/3.2> ;
                     pav:importedOn          "2024-06-25"^^xsd:date .
 
 
@@ -3362,7 +3362,7 @@ dcat:service        rdf:type                rdf:Property , owl:ObjectProperty ;
                     dcterms:description     "DCAT: A site or end-point that is listed in the catalog."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
                     dcterms:issued          "2020-02-04"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/3.2> ;
                     pav:importedOn          "2024-06-25"^^xsd:date .
 
 
@@ -3376,7 +3376,7 @@ dcat:record        rdf:type                rdf:Property , owl:ObjectProperty ;
                     dcterms:description     "DCAT: A record describing the registration of a single dataset or data service that is part of the catalog."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
                     dcterms:issued          "2014-01-16"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/3.2> ;
                     pav:importedOn          "2024-06-25"^^xsd:date .
 
 
@@ -3390,7 +3390,7 @@ dcat:themeTaxonomy  rdf:type                rdf:Property , owl:ObjectProperty ;
                     dcterms:description     "DCAT: A knowledge organization system (KOS) used to classify catalog's datasets and services."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
                     dcterms:issued          "2014-01-16"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/3.2> ;
                     pav:importedOn          "2024-06-25"^^xsd:date ;
 
             #OTHER ORIGINAL STATEMENTS IF ANY 
@@ -3408,7 +3408,7 @@ dcat:distribution   rdf:type                rdf:Property , owl:ObjectProperty ;
                     dcterms:description     "DCAT: An available distribution of the dataset."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
                     dcterms:issued          "2014-01-16"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/3.2> ;
                     pav:importedOn          "2024-06-25"^^xsd:date .
   
                      
@@ -3427,7 +3427,7 @@ schema:associatedMedia
                     dcterms:description     "SCHEMA: A media object that encodes this CreativeWork. This property is a synonym for encoding."@en ;
                     rdfs:isDefinedBy        <http://schema.org/> ;
                     dcterms:issued          "2012-04-21"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2014-07-28"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -3451,7 +3451,7 @@ foaf:depiction      rdf:type                rdf:Property , owl:ObjectProperty ;
                     dcterms:issued          "2014-01-14"^^xsd:date ;
                     owl:equivalentProperty  schema:image ,
                                             doap:screenshots ;
-                    pav:derivedFrom          <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom          <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -3473,7 +3473,7 @@ foaf:logo           rdf:type                rdf:Property , owl:InverseFunctional
                     rdfs:isDefinedBy        <http://xmlns.com/foaf/0.1/> ;
                     dcterms:issued          "2014-01-14"^^xsd:date ;
                     owl:equivalentProperty  schema:logo ;
-                    pav:derivedFrom          <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom          <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -3500,7 +3500,7 @@ mod:metrics         rdf:type                owl:DatatypeProperty ;
                     dcterms:description     "MOD: A generic property to store any metrics (number) related to the ontology."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -3523,7 +3523,7 @@ mod:numberOfClasses rdf:type                owl:DatatypeProperty ;
                                             voaf:classNumber ,
                                             void:classes ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/noOfClasses> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -3547,7 +3547,7 @@ mod:numberOfIndividuals
                     owl:equivalentProperty  omv:numberOfIndividuals ,
                                             void:entities ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/noOfIndividuals> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -3572,7 +3572,7 @@ mod:numberOfProperties
                                             voaf:propertyNumber ,
                                             void:properties ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/noOfProperties> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -3593,7 +3593,7 @@ mod:numberOfObjectProperties
                     dcterms:description     "MOD: The total number of object properties in an ontology."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2017-07-06"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -3613,7 +3613,7 @@ mod:numberOfDataProperties
                     dcterms:description     "MOD: The total number of data properties in an ontology."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2017-07-06"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -3635,7 +3635,7 @@ mod:numberOfAxioms
                     dcterms:issued          "2009-12-24"^^xsd:date ;
                     owl:equivalentProperty  omv:numberOfAxioms ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/noOfAxioms> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -3656,7 +3656,7 @@ mod:numberOfLabels
                     dcterms:description     "MOD: Number of defined labels for any resources in an ontology (classes, properties, etc)."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2017-07-06"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -3695,7 +3695,7 @@ dcat:byteSize       rdf:type                rdf:Property , owl:DatatypeProperty 
                     dcterms:issued          "2014-01-16"^^xsd:date ;
                     owl:equivalentProperty  <http://www.isibang.ac.in/ns/mod/1.0/size> ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/byteSize> ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.0> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
             #OPTIONAL STATEMENTS
@@ -3717,7 +3717,7 @@ mod:maxDepth        rdf:type                owl:DatatypeProperty ;
                     dcterms:description     "MOD: Maximum depth of the hierarchy tree (BioPortal definition)."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2017-07-06"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -3734,7 +3734,7 @@ mod:maxChildCount   rdf:type                owl:DatatypeProperty ;
                     dcterms:description     "MOD: Maximum number of children per class (BioPortal definition)."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2017-07-06"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -3752,7 +3752,7 @@ mod:averageChildCount
                     dcterms:description     "MOD: Average number of children per class (BioPortal definition)."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2017-07-06"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -3770,7 +3770,7 @@ mod:classesWithOneChild
                     dcterms:description     "MOD: Number of classes that have only one subclass in the is-a hierarchy (BioPortal definition)."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2017-07-06"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -3788,7 +3788,7 @@ mod:classesWithMoreThan25Children
                     dcterms:description     "MOD: Number of classes that have more than 25 direct subclasses (BioPortal definition)."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2017-07-06"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
@@ -3806,7 +3806,7 @@ mod:classesWithNoDefinition
                     dcterms:description     "MOD: Number of classes that have no value for the definition property (BioPortal definition). For ontologies in OBO and RRF formats, the property for definition is part of the language. For OWL ontologies, the authors specify this property as part of the ontology metadata (the default is skos:definition)."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2017-07-06"^^xsd:date ;
-                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.4> ;
+                    pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
