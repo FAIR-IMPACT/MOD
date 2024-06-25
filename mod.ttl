@@ -1811,6 +1811,24 @@ dcterms:audience    rdf:type                rdf:Property ;
                     <http://purl.org/dc/dcam/rangeIncludes>      dcterms:AgentClass .
 
 
+### http://schema.org/publishingPrinciples
+schema:publishingPrinciples
+                    rdf:type                rdf:Property ;
+                    rdfs:label              "publishing principles"@en ,
+                                            "principes de publication"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefactCatalog ;
+                    dcterms:description     "SCHEMA: The publishingPrinciples property indicates (typically via URL) a document describing the editorial principles of an Organization (or individual, e.g. a Person writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies."@en ;
+                    rdfs:isDefinedBy        <http://schema.org/> ;
+                    dcterms:issued          "2012-04-21"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.2> ;
+                    pav:importedOn          "2024-06-25"^^xsd:date ;
+                    
+            
+            #OTHER ORIGINAL STATEMENTS IF ANY 
+                    schema:domainIncludes   schema:CreativeWork, schema:Organization, schema:Person ;
+                    schema:rangeIncludes    schema:CreativeWork, schema:URL .
+
+
 ### https://w3id.org/mod#analytics
 mod:analytics       rdf:type                owl:ObjectProperty ;
                     rdfs:label              "analytics"@en ,
