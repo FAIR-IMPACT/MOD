@@ -1118,6 +1118,9 @@ dcterms:description rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:description ;
                     rdfs:label              "description"@en ,
                                             "description"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactDistribution ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "DCTERMS: An account of the resource. Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. OMV: Free text description of an ontology. SCHEMA: A description of the item. DOAP: Plain text description of a project, of 2-4 sentences in length. DCAT: A free-text account of the item."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
@@ -1139,6 +1142,9 @@ foaf:homepage       rdf:type                rdf:Property , owl:InverseFunctional
                     rdfs:label              "homepage"@en ,
                                             "page web"@fr ;
                     rdfs:domain             owl:Thing ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalogRecord  ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              foaf:Document ;
                     dcterms:description     "FOAF: A homepage for some thing. MOD: An unambiguous reference to the resource within a given context. DOAP: URI of a blog related to a project. CC: The URL the creator of a Work would like used when attributing re-use. SCHEMA: Indicates a page (or other CreativeWork) for which this thing is the main entity being described."@en ;
                     rdfs:isDefinedBy        <http://xmlns.com/foaf/0.1/> ;
@@ -1160,6 +1166,8 @@ dcat:landingPage    rdf:type                rdf:Property , owl:ObjectProperty ;
                     rdfs:subPropertyOf      foaf:page ; 
                     rdfs:label              "documentation"@en ,
                                             "documentation"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              foaf:Document ;
                     dcterms:description     "DCAT: A Web page that can be navigated to in a Web browser to gain access to the dataset, its distributions and/or additional information. MOD: A link to the documentation page on a thing. OMV: URL for further documentation. RDFS: Further information about the subject resource. DOAP: URL of Wiki for collaborative discussion of project. VANN: A reference to a resource that provides information on how this resource is to be used. SCHEMA: Further documentation describing the Web API in more detail."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
@@ -1205,6 +1213,8 @@ rdfs:comment        rdf:type                rdf:Property ;
                     rdfs:label              "notes or comments"@en ,
                                             "notes ou commentaires"@fr ;
                     rdfs:domain             rdfs:Resource ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              rdfs:Literal ;           
                     dcterms:description     "RDFS: A description of the subject resource. OMV: Additional information about the ontology that is not included somewhere else (e.g. information that you do not want to include in the documentation)."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/2000/01/rdf-schema#> ;
@@ -1224,6 +1234,8 @@ dcat:keyword        rdf:type                rdf:Property , owl:DatatypeProperty 
                     rdfs:subPropertyOf      dcterms:subject ; 
                     rdfs:label              "keyword"@en ,
                                             "motclé"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              rdfs:Literal ;
                     dcterms:description     "DCAT: A keyword or tag describing a resource. MOD: A keyword(s) is used to describe the content of an ontology. OMV: List of keywords related to an ontology. SCHEMA: Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
@@ -1245,6 +1257,8 @@ dcterms:alternative rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:title , dcterms:title ;
                     rdfs:label              "alternative name"@en ,
                                             "nom alternatif"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              rdfs:Literal ;
                     dcterms:description     "DCTERMS: An alternative name for the resource. The distinction between titles and alternative titles is application-specific. SKOS: The preferred and alternative labels are useful when generating or creating human-readable representations of a knowledge organization system. SCHEMA: An alias for the item. A short label that is used by some communities to refer to a dataset (see 'preferredPrefix')."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
@@ -1266,6 +1280,8 @@ skos:hiddenLabel    rdf:type                rdfs:Property ,
                     rdfs:subPropertyOf      rdfs:label ;
                     rdfs:label              "hidden label"@en ,
                                             "nom caché"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              rdfs:Literal ;
                     dcterms:description     "MOD: Hidden or past name. SKOS: A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations."@en;
                     rdfs:isDefinedBy        <http://www.w3.org/2004/02/skos/core> ;
@@ -1286,6 +1302,8 @@ dcterms:abstract    rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:description , dcterms:description ;
                     rdfs:label              "abstract"@en ,
                                             "résumé"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "DCTERMS: A summary of the resource."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2000-07-11"^^xsd:date ;
@@ -1302,6 +1320,8 @@ dcterms:bibliographicCitation
                     rdfs:subPropertyOf      dc:identifier , dcterms:identifier ;
                     rdfs:label              "bibliographic reference"@en ,
                                             "référence bibliographique";
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              rdfs:Literal ;
                     dcterms:description     "DCTERMS: A bibliographic reference for the resource. Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible. OMV: List of bibliographic references describing the ontology and its applications. FOAF: A document that this thing is the primary topic of"@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
@@ -1346,6 +1366,9 @@ dcterms:created     rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:date , dcterms:date ;
                     rdfs:label              "creation date"@en ,
                                             "date de création"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefactDistribution ,
+                                            mod:SemanticArtefactCatalogRecord ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              rdfs:Literal ; 
                     dcterms:description     "DCTERMS:date : A point or period of time associated with an event in the lifecycle of the resource. DCTERMS:created : Date of creation of the resource. DCTERMS:issued Date of formal issuance (e.g., publication) of the resource. PROV: Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation. PAV: The date this resource was authored. PAV: The date this resource was contributed to. PAV: The date of creation of the resource representation. DOAP: Date when something was created, in YYYY-MM-DD form. e.g. 2004-04-05. SCHEMA: The date on which the CreativeWork was created or the item was added to a DataFeed. DOAP: Date when something was created, in YYYY-MM-DD form. e.g. 2004-04-05."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
@@ -1374,6 +1397,9 @@ dcterms:modified    rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:date , dcterms:date ;
                     rdfs:label              "modification date"@en ,
                                             "date de modification"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefactDistribution ,
+                                            mod:SemanticArtefactCatalogRecord ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              rdfs:Literal ; 
                     dcterms:description     "OMV: Date of the last modification made to the ontology. DCTERMS:Date on which the resource was changed. PAV: The date of the last update of the resource. An update is a change which did not warrant making a new resource related using pav:previousVersion, for instance correcting a spelling mistake. SCHEMA: The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
@@ -1395,6 +1421,7 @@ dcterms:valid       rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:date , dcterms:date ;
                     rdfs:label              "validity date"@en ,
                                             "date de validité"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefactDistribution ;
                     rdfs:range              rdfs:Literal ; 
                     dcterms:description     "DCTERMS: Date (often a range) of validity of a resource. PROV: Invalidation is the start of the destruction, cessation, or expiry of an existing entity by an activity. The entity is no longer available for use (or further invalidation) after invalidation. Any generation or usage of an entity precedes its invalidation. SCHEMA: The end date and time of the item (in ISO 8601 date format)."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
@@ -1413,6 +1440,9 @@ mod:curatedOn       rdf:type                owl:DatatypeProperty ;
                     rdfs:subPropertyOf      pav:contributedOn ;
                     rdfs:label              "curation date"@en ,
                                             "date de contrôle de qualité"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefactDistribution ,
+                                            mod:SemanticArtefactCatalogRecord ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              xsd:date ;
                     dcterms:description     ""@en ;
                     rdfs:isDefinedBy        <http://purl.org/pav/> ;
@@ -1433,6 +1463,8 @@ dcterms:dateSubmitted
                     rdfs:subPropertyOf      dc:date , dcterms:date ;
                     rdfs:label              "submission date"@en ,
                                             "date de soumission"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefactDistribution ,
+                                            mod:SemanticArtefactCatalogRecord ;
                     rdfs:range              rdfs:Literal ; 
                     dcterms:description     "DCTERMS: Date of submission of the resource. SCHEMA: Date of first broadcast/publication."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
@@ -1455,6 +1487,8 @@ dcat:contactPoint   rdf:type                rdf:Property ,
                                             owl:ObjectProperty ;
                     rdfs:label              "contact point"@en ,
                                             "contact"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              vcard:Kind ;
                     dcterms:description     "DCAT: Relevant contact information for the cataloged resource. Use of vCard is recommended. SCHEMA: A maintainer of a Dataset, software package (SoftwareApplication), or other Project. A maintainer is a Person or Organization that manages contributions to, and/or publication of, some (typically complex) artifact. It is common for distributions of software and data to be based on 'upstream' sources." ;
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
@@ -1474,6 +1508,8 @@ dcterms:creator     rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:creator , dcterms:contributor ;
                     rdfs:label              "creator"@en ,
                                             "créateur"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "OMV: Main responsible for the creation of the ontology. DCTERMS: An entity primarily responsible for making the resource. FOAF: An agent that made this thing. PROV: Attribution is the ascribing of an entity to an agent. PAV:authoredBy: An agent that originated or gave existence to the work that is expressed by the digital resource.PAV:createdBy: An agent primary responsible for making the digital artifact or resource representation. DOAP: Maintainer of a project, a project leader. SCHEMA:author: The author of this content or rating. SCHEMA:creator: The creator/author of this CreativeWork. DCAT: The entity responsible for producing the resource."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
@@ -1501,6 +1537,8 @@ dcterms:contributor rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:contributor ;
                     rdfs:label              "contributor"@en ,
                                             "contributeur"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "DCTERMS: An entity responsible for making contributions to the resource. OMV: Contributors to the creation of the ontology. PAV: The resource was contributed to by the given agent. SCHEMA: A secondary contributor to the CreativeWork or Event. DOAP: Project contributor."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
@@ -1528,6 +1566,8 @@ mod:curatedBy       rdf:type                owl:ObjectProperty ;
                     rdfs:subPropertyOf      pav:contributedBy ;
                     rdfs:label              "curator"@en ,
                                             "curateur"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "PAV: Specifies an agent specialist responsible for shaping the expression in an appropriate format. Often the primary agent responsible for ensuring the quality of the representation. MOD: A curator who restructure the previously authored content and shape it to be appropriate for the intended representation (e.g. by normalizing the fields for being represented in a spreadsheet). "@en ;
                     rdfs:isDefinedBy        <http://purl.org/pav/> ;
                     dcterms:issued          "2014-08-28"^^xsd:date ;
@@ -1548,6 +1588,8 @@ mod:curatedBy       rdf:type                owl:ObjectProperty ;
 schema:translator   rdf:type                rdf:Property ;
                     rdfs:label              "translator"@en ,
                                             "traducteur"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "SCHEMA: Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event."@en ;
                     rdfs:isDefinedBy        <http://schema.org/> ;
                     dcterms:issued          "2012-04-21"^^xsd:date ;
@@ -1567,6 +1609,8 @@ dcterms:publisher   rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:publisher ;
                     rdfs:label              "publisher"@en ,
                                             "éditeur"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "DCTERMS: An entity responsible for making the resource available. SCHEMA: The publisher of creative work. SCHEMA: The Organization on whose behalf the creator was working. SCHEMA: The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. ADMS: The name of the agency that issued the identifier. DCAT: The entity responsible for making the item available."@en ;                    rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
                     owl:equivalentProperty  schema:publisher ,
@@ -1590,6 +1634,8 @@ foaf:fundedBy       rdf:type                rdf:Property , owl:ObjectProperty ;
                     rdfs:label              "funded or sponsored by"@en ,
                                             "financé ou sponsorisé par"@fr ;
                     rdfs:domain             owl:Thing ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              owl:Thing ;
                     dcterms:description     "MOD: An ontology that is sponsored by and developed under a project. FOAF: An organization funding a project or person. SCHEMA: A person or organization that supports (sponsors) something through some kind of financial contribution."@en ;
                     rdfs:isDefinedBy        <http://xmlns.com/foaf/0.1/> ;
@@ -1607,6 +1653,8 @@ foaf:fundedBy       rdf:type                rdf:Property , owl:ObjectProperty ;
 schema:funding      rdf:type                rdf:Property ;
                     rdfs:label              "funding"@en ,
                                             "financement"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "SCHEMA: A Grant that directly or indirectly provide funding or sponsorship for this item."@en ;
                     rdfs:isDefinedBy        <http://schema.org/> ;
                     dcterms:issued          "2022-03-17"^^xsd:date ;
@@ -1618,11 +1666,13 @@ schema:funding      rdf:type                rdf:Property ;
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: R1.2" .
 
+
 ###  https://w3id.org/mod#endorsedBy
 mod:endorsedBy      rdf:type                owl:ObjectProperty ;
                     rdfs:label              "endorsed by"@en ,
                                             "approuvé par"@fr ;
-                    rdfs:domain             mod:SemanticArtefact ;
+                    rdfs:domain             mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              rdfs:Literal ;
                     dcterms:description     "MOD: An ontology endorsed by an agent. OMV: The parties that have expressed support or approval to this ontology."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
@@ -1645,6 +1695,8 @@ mod:endorsedBy      rdf:type                owl:ObjectProperty ;
 schema:comment      rdf:type                rdf:Property ;
                     rdfs:label              "user notes or reviews"@en ,
                                             "commentaires ou avis d'utilisateurs"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "SCHEMA: Comments, typically from users."@en ;
                     rdfs:isDefinedBy        <http://schema.org/> ;
                     dcterms:issued          "2012-04-21"^^xsd:date ;
@@ -1663,7 +1715,8 @@ schema:comment      rdf:type                rdf:Property ;
 mod:hasEvaluation   rdf:type                owl:ObjectProperty ;
                     rdfs:label              "evaluation"@en ,
                                             "évaluation"@fr ;
-                    rdfs:domain             mod:SemanticArtefact ;
+                    rdfs:domain             mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              mod:Evaluation ;
                     dcterms:description     "MOD: This property makes a relationship between an ontology and its evaluation result."@en ; 
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
@@ -1681,9 +1734,10 @@ mod:hasEvaluation   rdf:type                owl:ObjectProperty ;
 mod:group           rdf:type                owl:ObjectProperty ;
                     rdfs:label              "group"@en ,
                                             "groupe"@fr ;
-                    rdfs:domain             mod:SemanticArtefact ;
+                    rdfs:domain             mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              mod:Group ;
-                    dcterms:description     "MOD: A group of ontologies that the ontology is usually considered into."@en ;
+                    dcterms:description     "MOD: A group of semantic artefact that the given semantic artefact is usually considered into or a group hosted/served/represented by the given semantic artefact catalogue."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2017-07-06"^^xsd:date ;
                     pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/1.2> ;
@@ -1697,7 +1751,8 @@ mod:group           rdf:type                owl:ObjectProperty ;
 mod:usedInProject   rdf:type                owl:ObjectProperty ;
                     rdfs:label              "used in project"@en ,
                                             "utilisé dans le projet"@fr ;
-                    rdfs:domain             mod:SemanticArtefact ;
+                    rdfs:domain             mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              foaf:Project ;
                     dcterms:description     "MOD: An ontology that is used in a project."@en ; 
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
@@ -1716,6 +1771,8 @@ dcterms:audience    rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:audience ;
                     rdfs:label              "target audience"@en ,
                                             "audience cible"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "DCTERMS: a class of entity for whom the resource is intended or useful (public visé ou recommandé pour la ressource). DOAP: Description of target user base. SCHEMA: An intended audience, i.e. a group for whom something was created."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2001-05-21"^^xsd:date ; 
@@ -1736,7 +1793,8 @@ dcterms:audience    rdf:type                rdf:Property ;
 mod:analytics       rdf:type                owl:ObjectProperty ;
                     rdfs:label              "analytics"@en ,
                                             "analytique"@fr ;
-                    rdfs:domain             mod:SemanticArtefact ;
+                    rdfs:domain             mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              mod:Analytics ;
                     dcterms:description     "MOD: This property shall be used to store any analytics for an ontology. E.g., number of visits an ontology received in a portal, number of downloads, etc."@en ; 
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
@@ -1754,6 +1812,8 @@ doap:repository     rdf:type                rdf:Property ;
                     rdfs:label              "repository"@en ,
                                             "entrepôt"@fr ;
                     rdfs:domain             doap:Project ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              doap:Repository ;
                     dcterms:description     "DOAP: Source code repository."@en ;
                     rdfs:isDefinedBy        <http://usefulinc.com/ns/doap#> ;
@@ -1771,6 +1831,8 @@ doap:bug-database    rdf:type                rdf:Property ;
                     rdfs:label              "bug database"@en ,
                                             "repertoire de bogues"@fr ;
                     rdfs:domain             doap:Project ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "DOAP: Bug tracker for a project."@en ;
                     rdfs:isDefinedBy        <http://usefulinc.com/ns/doap#> ;
                     dcterms:issued          "2004"^^xsd:date ;
@@ -1787,6 +1849,8 @@ doap:mailing-list   rdf:type                rdf:Property ;
                     rdfs:label              "mailing list"@en ,
                                             "liste de diffusion"@fr ;
                     rdfs:domain             doap:Project ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "DOAP: Mailing list home page or email address."@en ;
                     rdfs:isDefinedBy        <http://usefulinc.com/ns/doap#> ;
                     dcterms:issued          "2004"^^xsd:date ;
@@ -1802,6 +1866,8 @@ doap:mailing-list   rdf:type                rdf:Property ;
 mod:toDoList        rdf:type                owl:ObjectProperty ;
                     rdfs:label              "to-do list"@en ,
                                             "liste des choses à faire"@fr;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              <http://www.w3.org/2002/12/cal/ical#Vtodo> ;
                     dcterms:description     "VOID: Describes future tasks planned by a resource curator. This property is primarily intended to be used for vocabularies or datasets, but the domain is left open, it can be used for any resource. Use iCalendar Vtodo class and its properties to further describe the task calendar, priorities etc."@en ;    
                     rdfs:isDefinedBy        <http://purl.org/vocommons/voaf> ;
@@ -1819,6 +1885,8 @@ mod:toDoList        rdf:type                owl:ObjectProperty ;
 schema:award        rdf:type                rdf:Property ;
                     rdfs:label              "award"@en ,
                                             "prix"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "SCHEMA: An award won by or for this item."@en ;
                     rdfs:isDefinedBy        <http://schema.org/> ;
                     dcterms:issued          "2012-04-21"^^xsd:date ;
@@ -1842,7 +1910,8 @@ schema:award        rdf:type                rdf:Property ;
 mod:knownUsage      rdf:type                owl:DatatypeProperty ;
                     rdfs:label              "known usage"@en ,
                                             "usage connu"@fr ;
-                    rdfs:domain             mod:SemanticArtefact ;
+                    rdfs:domain             mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              xsd:string ;
                     dcterms:description     "OMV: The applications where the ontology is being used."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
@@ -1879,6 +1948,8 @@ dcterms:subject     rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:subject ;
                     rdfs:label              "subject"@en ,
                                             "sujet"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "DCTERMS: The topic of the resource. OMV: Typically, the domain can refer to established topic hierarchies such as the general purpose topic hierarchy DMOZ or the domain specific topic hierarchy ACM for the computer science domain. SCHEMA: The subject matter of the content. DCAT: A main category of the resource. A resource can have multiple themes. FOAF: A topic of some page or document."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
@@ -1900,6 +1971,8 @@ dcterms:coverage    rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:coverage ;
                     rdfs:label              "coverage"@en ,
                                             "couverture"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "DCTERMS: The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant. Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names [[TGN](https://www.getty.edu/research/tools/vocabulary/tgn/index.html)]. Where appropriate, named places or time periods may be used in preference to numeric identifiers such as sets of coordinates or date ranges.  Because coverage is so broadly defined, it is preferable to use the more specific subproperties Temporal Coverage and Spatial Coverage."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
@@ -1920,6 +1993,8 @@ vann:example        rdf:type                owl:AnnotationProperty ;
                     rdfs:subPropertyOf      rdfs:seeAlso ;
                     rdfs:label              "example"@en ,
                                             "exemple"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "VANN: A reference to a resource that provides an example of how this resource can be used. SCHEMA: Example/instance/realization/derivation of the concept of this creative work. eg. The paperback edition, first edition, or eBook."@en ;
                     rdfs:isDefinedBy        <http://purl.org/vocab/vann/> ;
                     dcterms:issued          "2005-04-01"^^xsd:date ;
@@ -1989,6 +2064,8 @@ mod:createdWith     rdf:type                owl:ObjectProperty ;
                     rdfs:subPropertyOf      prov:wasAttributedTo ;
                     rdfs:label              "created with"@en ,
                                             "crée avec"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "PAV: The software/tool used by the creator (pav:createdBy) when making the digital resource, for instance a word processor or an annotation tool. MOD: The tool used for the creation of an ontology. OMV: Information about the tool used to create the ontology."@en ;
                     rdfs:isDefinedBy        <http://purl.org/pav/> ;
                     dcterms:issued          "2014-08-28"^^xsd:date ;
@@ -2010,6 +2087,8 @@ dcterms:accrualMethod
                     rdfs:label              "accrual method"@en ,
                                             "méthode d'ajout"@fr ;
                     rdfs:domain             <http://purl.org/dc/dcmitype/Collection> ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "DCTERMS: The method by which items are added to a collection. Recommended practice is to use a value from the Collection Description Accrual Method Vocabulary."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2005-06-13"^^xsd:date ;
@@ -2031,6 +2110,8 @@ dcterms:accrualPeriodicity
                     rdfs:label              "accrual periodicity"@en ,
                                             "fréquence des ajouts"@fr ;
                     rdfs:domain             <http://purl.org/dc/dcmitype/Collection> ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "DCTERMS: The frequency with which items are added to a collection. Recommended practice is to use a value from the Collection Description Frequency Vocabulary."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2005-06-13"^^xsd:date ;
@@ -2052,6 +2133,8 @@ dcterms:accrualPolicy
                     rdfs:label              "accrual policy"@en ,
                                             "politique des ajouts"@fr ;
                     rdfs:domain             <http://purl.org/dc/dcmitype/Collection> ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "DCTERMS: The policy governing the addition of items to a collection. Recommended practice is to use a value from the Collection Description Accrual Policy Vocabulary."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2005-06-13"^^xsd:date ;
@@ -2107,6 +2190,8 @@ prov:wasGeneratedBy rdf:type                owl:ObjectProperty ;
                     rdfs:label              "was generated by"@en ,
                                             "a été généré par"@fr ;
                     rdfs:domain             prov:Entity ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              prov:Activity ;
                     dcterms:description     "PROV: Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation. DCAT: An activity that generated, or provides the business context for, the creation of the dataset."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/ns/prov-o#> ;
@@ -2130,6 +2215,7 @@ prov:wasinvalidatedBy
                     rdfs:label              "was invalidated by"@en ,
                                             "a été invalidé par"@fr ;
                     rdfs:domain             prov:Entity ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ;
                     rdfs:range              prov:Activity ;
                     dcterms:description     "PROV: Invalidation is the start of the destruction, cessation, or expiry of an existing entity by an activity. The entity is no longer available for use (or further invalidation) after invalidation. Any generation or usage of an entity precedes its invalidation."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/ns/prov-o#> ;
@@ -2320,6 +2406,8 @@ dcat:accessURL      rdf:type                rdf:Property , owl:ObjectProperty ;
                     rdfs:label              "access URL"@en ,
                                             "URL d'accès"@fr ;
                     rdfs:domain             dcat:Distribution ;
+                    dcterms:domainIncludes  mod:SemanticArtefactDistribution ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              rdfs:Resource ;
                     dcterms:description     "DCAT: A URL of a resource that gives access to a distribution of the dataset. E.g. landing page, feed, SPARQL endpoint. Use for all cases except a simple download link, in which case downloadURL is preferred. OMV: The location where the ontology can be found. It should be accessible via a URL. It can be the same as the value for URI property. DOAP:  Web page from which the project software can be downloaded."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
@@ -2343,6 +2431,7 @@ dcterms:isFormatOf  rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:relation , dcterms:relation ;
                     rdfs:label              "is format of"@en ,
                                             "est le format de"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ;
                     dcterms:description     "DCTERMS: A related resource that is substantially the same as the described resource, but in another format."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2000-07-11"^^xsd:date ;
@@ -2360,6 +2449,7 @@ dcterms:hasFormat   rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:relation , dcterms:relation ;
                     rdfs:label              "has format"@en ,
                                             "a pour format"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ;
                     dcterms:description     "DCTERMS: A related resource that is substantially the same as the pre-existing described resource, but in another format."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2000-07-11"^^xsd:date ;
@@ -2378,6 +2468,7 @@ dcat:downloadURL    rdf:type                rdf:Property , owl:ObjectProperty ;
                     rdfs:label              "download URL"@en ,
                                             "URL de téléchargement"@fr ;
                     rdfs:domain             dcat:Distribution ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ;
                     rdfs:range              rdfs:Resource ;
                     dcterms:description     "DCAT: The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution's dct:format and/or dcat:mediaType. VOID: An RDF dump, partial or complete, of a void:Dataset. DOAP: Mirror of software download web page. SCHEMA: A downloadable form of this dataset, at a specific location, in a specific format."@en ; 
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
@@ -2402,6 +2493,8 @@ void:uriLookupEndpoint
                     rdfs:label              "URI lookup endpoint"@en ,
                                             "service de requêtage des URI"@fr ;
                     rdfs:domain             void:Dataset ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              xsd:anyURI ;
                     dcterms:description     "VOID: A protocol endpoint for simple URI lookups for a void:Dataset."@en ;
                     rdfs:isDefinedBy        <http://vocab.deri.ie/void> ;
@@ -2419,6 +2512,8 @@ void:openSearchDescription
                     rdfs:label              "free-text search endpoint"@en ,
                                             "service de requêtage en texte libre"@fr ;
                     rdfs:domain             void:Dataset ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              foaf:Document ;
                     dcterms:description     "VOID: An OpenSearch description document for a free-text search service over a void:Dataset. DOAP: The URI of a web service endpoint where software as a service may be accessed."@en ;
                     rdfs:isDefinedBy        <http://vocab.deri.ie/void> ;
@@ -2451,6 +2546,8 @@ dcterms:source      rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:source , dcterms:relation ;
                     rdfs:label              "source"@en ,
                                             "source"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "DCTERMS: A related resource from which the described resource is derived. MOD: The ontology(ies) referred to while creating the present ontology. PROV: Influence is the capacity of an entity, activity, or agent to have an effect on the character, development, or behavior of another by means of usage, start, end, generation, invalidation, communication, derivation, attribution, association, or delegation. PROV: A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity. PAV: Derived from a different resource. NKOS: A resource used as the source for a derivative resource."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
@@ -2473,6 +2570,8 @@ sd:endpoint         rdf:type                rdf:Property , owl:InverseFunctional
                     rdfs:label              "SPARQL endpoint"@en ,
                                             "point de requêtage SPARQL"@fr ;
                     rdfs:domain             sd:Service ;
+                    dcterms:domainIncludes  mod:SemanticArtefactDistribution ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "SD: Relates an instance of sd:Service to a SPARQL endpoint that implements the SPARQL Protocol service for the service. The object of the sd:endpoint property is an IRI. VOID: A SPARQL protocol endpoint that allows SPARQL query access to a void:Dataset."@en ;
                     rdfs:isDefinedBy        <ttp://www.w3.org/ns/sparql-service-description> ;
                     dcterms:issued          "2013-03-21"^^xsd:date ;
@@ -2489,6 +2588,7 @@ schema:includedInDataCatalog
                     rdf:type                rdf:Property ;
                     rdfs:label              "indexed or included in catalog or repository"@en ,
                                             "indexé ou inclus dans un catalogue ou un entrepôt"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ;
                     dcterms:description     "SCHEMA: A data catalog which contains this dataset."@en ;
                     rdfs:isDefinedBy        <http://schema.org/> ;
                     dcterms:issued          "2016-05-04"^^xsd:date ;
@@ -2514,6 +2614,7 @@ owl:imports         rdf:type                owl:OntologyProperty  ;
                     rdfs:label              "imports"@en ,
                                             "importe"@fr ;
                     rdfs:domain             owl:Ontology ;
+                    dcterms:domainIncludes  mod:SemanticArtefactDistribution ;
                     rdfs:range              owl:Ontology ;
                     dcterms:description     "OWL: References another OWL ontology containing definitions, whose meaning is considered to be part of the meaning of the importing ontology. OMV: References another ontology metadata instance that describes an ontology containing definitions, whose meaning is considered to be part of the meaning of the ontology described by this ontology metadata instance. DCTERMS: A related resource that is required by the described resource to support its function, delivery, or coherence. VOAF: Indicates that the subject vocabulary extends the expressivity of the object vocabulary by declaring subsumption relationships, using object vocabulary class as domain or range of a subject vocabulary property, defining local restrictions etc . ADMS: An Asset that is contained in the Asset being described, e.g. when there are several vocabularies defined in a single document."@en ;  
                     rdfs:isDefinedBy        <http://www.w3.org/2002/07/owl#> ;
@@ -2535,6 +2636,7 @@ owl:PriorVersion    rdf:type                owl:AnnotationProperty, owl:Ontology
                     rdfs:label              "prior version"@en ,
                                             "version précédente"@fr ;
                     rdfs:domain             owl:Ontology ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ;
                     rdfs:range              owl:Ontology ; 
                     dcterms:description     "OWL:  This identifies the specified ontology as a prior version of the containing ontology. OMV: Contains a reference to another ontology metadata instance. DCTERMS: A related resource of which the described resource is a version, edition, or adaptation. PROV: A revision is a derivation for which the resulting entity is a revised version of some original. The implication here is that the resulting entity contains substantial content from the original. DOOR: Prior version relation from OWL. ADMS: A link to the previous version of the Asset."@en ;  
                     rdfs:isDefinedBy        <http://www.w3.org/2002/07/owl#> ;
@@ -2557,6 +2659,8 @@ dcterms:isPartOf    rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:relation , dcterms:relation ;
                     rdfs:label              "is part of (view of)"@en ,
                                             "est partie (une vue) de"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "DCTERMS: A related resource in which the described resource is physically or logically included. MOD: Shall be used to identify a subset or a view of an ontology. DOOR: An ontology is included in another if its model is contained in the one of the other ontology. SCHEMA: Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2000-07-11"^^xsd:date ;
@@ -2576,6 +2680,8 @@ dcterms:hasPart     rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:relation , dcterms:relation ;
                     rdfs:label              "has part (has view)"@en ,
                                             "a pour partie (vue)"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "DCTERMS: A related resource that is included either physically or logically in the described resource. SCHEMA: Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense). ADMS: Links to a sample of an Asset (which is itself an Asset)."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2000-07-11"^^xsd:date ;
@@ -2594,6 +2700,8 @@ dcterms:relation    rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:relation ;
                     rdfs:label              "relation"@en ,
                                             "relation"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "DCTERMS: A related resource."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
@@ -2888,6 +2996,8 @@ void:uriRegexPattern
                     rdfs:label              "identifier pattern"@en ,
                                             "patron d'identifiant"@fr ;
                     rdfs:domain             void:Dataset ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "VOID: A regular expression that matches the URIs of a void:Dataset's entities. IDOT: Regular expression describing alphanumeric strings used to identify items (or records) in a dataset."@en ;
                     rdfs:isDefinedBy        <http://vocab.deri.ie/void> ;
                     dcterms:issued          "2010-01-26"^^xsd:date ;
@@ -2905,6 +3015,8 @@ vann:preferredNamespaceUri
                     rdf:type                owl:AnnotationProperty ;
                     rdfs:label              "preferred namespace URI"@en ,
                                             "URI préféré d'espace de nom"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "VANN: The preferred namespace URI to use when using terms from this vocabulary in an XML document. VOID: A URI that is a common string prefix of all the entity URIs in a void:Dataset."@en ;
                     rdfs:isDefinedBy        <http://purl.org/vocab/vann/> ;
                     dcterms:issued          "2005-04-01"^^xsd:date ;
@@ -2922,6 +3034,8 @@ vann:preferredNamespacePrefix
                     rdf:type                owl:AnnotationProperty ;
                     rdfs:label              "preferred namespace prefix"@en ,
                                             "préfixe d'espace de nom préféré"@fr  ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "VANN: The preferred namespace prefix to use when using terms from this vocabulary in an XML document. IDOT: Short label that is commonly used to refer to the dataset. Often utilised to identify the dataset in IRIs for specific items (or records). This may also stand in place of the base IRI of the dataset (e.g. see http://prefix.cc)."@en ; 
                     rdfs:isDefinedBy        <http://purl.org/vocab/vann/> ;
                     dcterms:issued          "2005-04-01"^^xsd:date ;
@@ -2959,6 +3073,7 @@ void:exampleResource
                     rdfs:label              "example de resource"@en ,
                                             "exemple de resource"@fr;
                     rdfs:domain             void:Dataset ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ;
                     rdfs:range              rdfs:Resource ;
                     dcterms:description     "VOID: Example resource of dataset. IDOT: An example identifier used by one item (or record) from a dataset."@en ;
                     rdfs:isDefinedBy        <http://vocab.deri.ie/void> ;
@@ -2974,9 +3089,10 @@ void:exampleResource
 
 ### http://xmlns.com/foaf/0.1/primaryTopic
 foaf:primaryTopic   rdf:type                owl:ObjectProperty , owl:FunctionalProperty ;
-                    rdfs:label              "primary topic"@en ,
-                                            "sujet principal"@fr ;
+                    rdfs:label              "key classes"@en ,
+                                            "classes principales"@fr ;
                     rdfs:domain             foaf:Document ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ;
                     rdfs:range              owl:Thing ;
                     dcterms:description     ""@en ;
                     rdfs:isDefinedBy        <http://xmlns.com/foaf/0.1/> ;
@@ -2997,7 +3113,8 @@ foaf:primaryTopic   rdf:type                owl:ObjectProperty , owl:FunctionalP
 mod:metadataVoc     rdf:type                owl:ObjectProperty ;
                     rdfs:label              "metadata vocabulary used"@en ,
                                             "vocabulaires de métadonnées utilisés"@fr;
-                    rdfs:domain             mod:SemanticArtefactDistribution ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              xsd:anyURI  ;
                     dcterms:description     "VOAF: Indicates that the subject vocabulary uses the object vocabulary in metadata at vocabulary or element level. SCHEMA: Indicates (by URL or string) a particular version of a schema used in some CreativeWork. ADMS: A schema according to which the Asset Repository can provide data about its content, e.g. ADMS. MOD: A vocabulary(ies) that is used and/or referred to create the current ontology."@en ;    
                     rdfs:isDefinedBy        <http://purl.org/vocommons/voaf> ;
@@ -3020,6 +3137,7 @@ void:rootResource   rdf:type                rdf:Property ;
                     rdfs:label              "root resource"@en ,
                                             "ressource racine"@fr ;
                     rdfs:domain             void:Dataset ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ;
                     rdfs:range              rdfs:Resource ;
                     dcterms:description     "VOID: A top concept or entry point for a void:Dataset that is structured in a tree-like fashion. All resources in a dataset can be reached by following links from its root resources in a small number of steps. MOD: This property is to provide the root class(es) of an ontology. This is automatically populated by taking the direct subclasses of owl:Thing. If the ontology is also defined as a unique skos:ConceptScheme, then this property should become equivalent of skos:hasTopConcept. SKOS: The property skos:hasTopConcept is, by convention, used to link a concept scheme to the SKOS concept(s) which are topmost in the hierarchical relations for that scheme."@en ;
                     rdfs:isDefinedBy        <http://vocab.deri.ie/void> ;
@@ -3039,6 +3157,7 @@ void:classPartition
                     rdfs:label              "class partition"@en ,
                                             "partition des classes"@fr ;
                     rdfs:domain             void:Dataset ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ;
                     rdfs:range              void:Dataset ;
                     dcterms:description     "VOID: A subset of a void:Dataset that contains only the entities of a certain rdfs:Class."@en ;
                     rdfs:isDefinedBy        <http://vocab.deri.ie/void> ;
@@ -3059,6 +3178,7 @@ void:propertyPartition
                     rdfs:label              "property partition"@en ,
                                             "partition des propriétés"@fr ;
                     rdfs:domain             void:Dataset ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ;
                     rdfs:range              void:Dataset ;
                     dcterms:description     "VOID: A subset of a void:Dataset that contains only the triples of a certain rdf:Property."@en ;
                     rdfs:isDefinedBy        <http://vocab.deri.ie/void> ;
@@ -3077,6 +3197,7 @@ void:propertyPartition
 dcterms:hasVersion  rdf:type                rdf:Property ;
                     rdfs:label              "has version"@en ,
                                             "a pour version"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ;
                     dcterms:description     "DCTERMS: a related resource that is a version, edition, or adaptation of the described resource. MOD: A related ontology that is a version, edition, or adtapation of the described ontology. PAV: This resource has a more specific, versioned resource."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2000-07-11"^^xsd:date ;
@@ -3094,6 +3215,8 @@ vann:changes        rdf:type                owl:AnnotationProperty ;
                     rdfs:subPropertyOf      rdfs:seeAlso ;
                     rdfs:label              "changes"@en ,
                                             "changements"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "VANN: A reference to a resource that describes changes between this version of a vocabulary and the previous."@en ;
                     rdfs:isDefinedBy        <http://purl.org/vocab/vann/> ;
                     dcterms:issued          "2005-04-01"^^xsd:date ;
@@ -3114,6 +3237,8 @@ schema:associatedMedia
                     rdf:type                rdf:Property ;
                     rdfs:label              "associated media"@en ,
                                             "média associé"@fr  ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "SCHEMA: A media object that encodes this CreativeWork. This property is a synonym for encoding."@en ;
                     rdfs:isDefinedBy        <http://schema.org/> ;
                     dcterms:issued          "2012-04-21"^^xsd:date ;
@@ -3133,6 +3258,8 @@ foaf:depiction      rdf:type                rdf:Property , owl:ObjectProperty ;
                     rdfs:label              "depiction"@en ,
                                             "représentation"@fr ;
                     rdfs:domain             owl:Thing ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              foaf:Image ;
                     dcterms:description     "FOAF: A depiction of some thing. DOAP: Web page with screenshots of project. An image of the item. This can be a URL or a fully described ImageObject."@en ;
                     rdfs:isDefinedBy        <http://xmlns.com/foaf/0.1/> ;
@@ -3154,6 +3281,8 @@ foaf:logo           rdf:type                rdf:Property , owl:InverseFunctional
                     rdfs:label              "logo"@en ,
                                             "logo"@fr ;
                     rdfs:domain             owl:Thing ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              owl:Thing ;
                     dcterms:description     "FOAF: A logo representing some thing. SCHEMA: An associated logo."@en ;
                     rdfs:isDefinedBy        <http://xmlns.com/foaf/0.1/> ;
@@ -3179,7 +3308,8 @@ mod:metrics         rdf:type                owl:DatatypeProperty ;
                     rdfs:label              "metrics"@en ,
                                             "métriques"@fr ;
                     rdfs:domain             mod:SemanticArtefact ,
-                                            mod:SemanticArtefactDistribution ;
+                                            mod:SemanticArtefactDistribution , 
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              xsd:nonNegativeInteger ,
                                             xsd:decimal ;
                     dcterms:description     "MOD: A generic property to store any metrics (number) related to the ontology."@en ;
@@ -3198,7 +3328,8 @@ mod:numberOfClasses rdf:type                owl:DatatypeProperty ;
                     rdfs:subPropertyOf      mod:metrics ;
                     rdfs:label              "number of classes"@en ,
                                             "nombre de classes"@fr ;
-                    rdfs:domain             mod:SemanticArtefactDistribution ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              xsd:nonNegativeInteger ;
                     dcterms:description     "MOD: The total number of classes in an ontology. OMV: Number of classes in the ontology. VOAF: The number of classes defined in the vocabulary namespace. Classes imported from other namespaces are not taken into account. VOID: The total number of distinct classes in a void:Dataset. In other words, the number of distinct resources occuring as objects of rdf:type."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
@@ -3222,7 +3353,8 @@ mod:numberOfIndividuals
                     rdfs:subPropertyOf      mod:metrics ;
                     rdfs:label              "number of individuals"@en ,
                                             "nombre d'individus"@fr ;
-                    rdfs:domain             mod:SemanticArtefactDistribution ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              xsd:nonNegativeInteger ;
                     dcterms:description     "MOD: The total number of individuals in an ontology. OMV: Number of individuals in the ontology. VOID: The total number of entities that are described in a void:Dataset."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
@@ -3245,7 +3377,8 @@ mod:numberOfProperties
                     rdfs:subPropertyOf      mod:metrics ;
                     rdfs:label              "number of properties"@en ,
                                             "nombre de propriétés"@fr ;
-                    rdfs:domain             mod:SemanticArtefactDistribution ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              xsd:nonNegativeInteger ;
                     dcterms:description     "MOD: The total number of properties in an ontology. OMV: Number of properties in the ontology. VOAF: The number of properties defined in the vocabulary namespace. Properties imported from other namespaces are not taken into account. VOID: The total number of distinct properties in a void:Dataset. In other words, the number of distinct resources that occur in the predicate position of triples in the dataset."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
@@ -3269,7 +3402,8 @@ mod:numberOfObjectProperties
                     rdfs:subPropertyOf      mod:numberOfProperties ;
                     rdfs:label              "number of object properties"@en ,
                                             "nombre de propriétés d'objet"@fr ;
-                    rdfs:domain             mod:SemanticArtefactDistribution ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              xsd:nonNegativeInteger ;
                     dcterms:description     "MOD: The total number of object properties in an ontology."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
@@ -3288,7 +3422,8 @@ mod:numberOfDataProperties
                     rdfs:subPropertyOf      mod:numberOfProperties ;
                     rdfs:label              "number of data properties"@en ,
                                             "nombre de propriétés de données"@fr ;
-                    rdfs:domain             mod:SemanticArtefactDistribution ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              xsd:nonNegativeInteger ;
                     dcterms:description     "MOD: The total number of data properties in an ontology."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
@@ -3307,7 +3442,8 @@ mod:numberOfAxioms
                     rdfs:subPropertyOf      mod:metrics ;
                     rdfs:label              "number of axioms or triples"@en ,
                                             "nombre d'axiomes ou de triples"@fr ;
-                    rdfs:domain             mod:SemanticArtefactDistribution ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              xsd:nonNegativeInteger ;
                     dcterms:description     "MOD: The total number of axioms in an ontology. OMV: Number of axioms in the ontology."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
@@ -3329,7 +3465,8 @@ mod:numberOfLabels
                     rdfs:subPropertyOf      mod:metrics ;
                     rdfs:label              "number of data properties"@en ,
                                             "nombre de propriétés de données"@fr ;
-                    rdfs:domain             mod:SemanticArtefactDistribution ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              xsd:nonNegativeInteger ;
                     dcterms:description     "MOD: Number of defined labels for any resources in an ontology (classes, properties, etc)."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
@@ -3348,7 +3485,8 @@ mod:numberOfDeprecated
                     rdfs:subPropertyOf      mod:metrics ;
                     rdfs:label              "number of deprecated objects"@en ,
                                             "nombre de d'objets dépréciés"@fr ;
-                    rdfs:domain             mod:SemanticArtefactDistribution ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              xsd:nonNegativeInteger ;
                     dcterms:description     "MOD: Number of objects (classes, properties, etc) declared as owl:deprecated=true in an ontology."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
@@ -3585,7 +3723,8 @@ mod:numberOfUsingProjects
                     rdfs:subPropertyOf      mod:metrics ;
                     rdfs:label              "number of using projects"@en ,
                                             "nombre de projets qui utilise"@fr ;
-                    rdfs:domain             mod:SemanticArtefact ;
+                    rdfs:domain             mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              xsd:nonNegativeInteger ;
                     dcterms:description     "MOD: Number of projects (maybe represented with mod:usedInProject) using an ontology."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
@@ -3603,7 +3742,8 @@ mod:numberOfEnsorments
                     rdfs:subPropertyOf      mod:metrics ;
                     rdfs:label              "number of endorsmements"@en ,
                                             "nombre d'approbation"@fr ;
-                    rdfs:domain             mod:SemanticArtefact ;
+                    rdfs:domain             mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              xsd:nonNegativeInteger ;
                     dcterms:description     "MOD: Number of endorsing organizations (maybe represented with mod:endorsedBy)."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
