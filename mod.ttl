@@ -651,8 +651,10 @@ mod:SemanticArtefactTask
 #                   rdfs:subPropertyOf      SUPER PROPERTY IF ANY
 #                   rdfs:label              ""@en ,
 #                                           ""@fr ;
-#                   rdfs:domain             DOMAIN INFO IF ANY
-#                   rdfs:range              RANGE INFO IF ANY
+#                   rdfs:domain             DOMAIN INFO IF ANY (if property is in mod namespace)
+#                   dcterms:domainIncludes  SUGGESTED DOMAIN INFO (if property is in another namespace)
+#                   rdfs:range              RANGE INFO IF ANY (if property is in mod namespace)
+#                   dcterms:rangeIncludes   SUGGESTED RANGE INFO (if property is in another namespace)
 #                   dcterms:description     DESCCRIPTION FROM ORIGINAL SOURCE ;
 #                   rdfs:isDefinedBy        URI OF ORIGINAL SOURCE ;
 #                   dcterms:issued          "DATE OF THE FIRST CREATION OF THE PROPERTY BY ORIGINAL RESOURCE"^^xsd:date ;
