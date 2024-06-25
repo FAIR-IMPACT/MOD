@@ -3381,6 +3381,24 @@ dcat:record        rdf:type                rdf:Property , owl:ObjectProperty ;
                     pav:importedOn          "2024-06-25"^^xsd:date .
 
 
+### http://www.w3.org/ns/dcat#themeTaxonomy
+dcat:themeTaxonomy  rdf:type                rdf:Property , owl:ObjectProperty ;
+                    rdfs:subPropertyOf      dcterms:hasPart , rdfs:member ;
+                    rdfs:label              "theme taxonomy"@en ,
+                                            "taxonomie de thèmes"@fr ;
+                    rdfs:domain             dcat:Catalog ;
+                    dcterms:domainIncludes  mod:SemanticArtefactCatalog ;
+                    rdfs:range              rfds:Resource ;
+                    dcterms:description     "DCAT: A knowledge organization system (KOS) used to classify catalog's datasets and services."@en ;
+                    rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
+                    dcterms:issued          "2014-01-16"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.2> ;
+                    pav:importedOn          "2024-06-25"^^xsd:date .
+
+            #OTHER ORIGINAL STATEMENTS IF ANY 
+                    schema:rangeIncludes owl:Ontology , skos:Collection , skos:ConceptScheme ;
+  
+
 ##########################################
 ########## Media properties ##########
 ##########################################
