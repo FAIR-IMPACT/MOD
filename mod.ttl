@@ -3975,6 +3975,59 @@ mod:fairScore       rdf:type                owl:DatatypeProperty ;
                     prov:wasInfluencedBy    "FAIR principle: R1" .
 
 
+###  https://w3id.org/mod#numberOfMappings
+mod:numberOfMappings
+                    rdf:type                owl:DatatypeProperty ;
+                    rdfs:subPropertyOf      mod:metrics ;
+                    rdfs:label              "number of mappings"@en ,
+                                            "nombre d'alignements"@fr ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ,
+                                            mod:SemanticArtefactCatalog;
+                    rdfs:range              xsd:nonNegativeInteger ;
+                    dcterms:description     "MOD: Number of mappings within a given semantic artefact or semantic artefact catalogue."@en ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod> ;
+                    dcterms:issued          "2024-06-25"^^xsd:date ;
+                    pav:derivedFrom         <https://w3id.org/mod/3.2> ;
+                    pav:importedOn          "2024-06-25"^^xsd:date ;
+            
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: R1" .
+
+
+###  https://w3id.org/mod#numberOfUsers
+mod:numberOfUsers   rdf:type                owl:DatatypeProperty ;
+                    rdfs:subPropertyOf      mod:metrics ;
+                    rdfs:label              "number of users"@en ,
+                                            "nombre d'utilisateurs"@fr ;
+                    rdfs:domain             mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog;
+                    rdfs:range              xsd:nonNegativeInteger ;
+                    dcterms:description     "MOD: Total number of users in a semantic artefact catalogue or number of users watching/following/using a given semantic artefact."@en ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod> ;
+                    dcterms:issued          "2024-06-25"^^xsd:date ;
+                    pav:derivedFrom         <https://w3id.org/mod/3.2> ;
+                    pav:importedOn          "2024-06-25"^^xsd:date ;
+            
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: R1" .
+
+
+###  https://w3id.org/mod#numberOfAgents
+mod:numberOfAgents  rdf:type                owl:DatatypeProperty ;
+                    rdfs:subPropertyOf      mod:metrics ;
+                    rdfs:label              "number of agents"@en ,
+                                            "nombre d'agents"@fr ;
+                    rdfs:domain             mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog;
+                    rdfs:range              xsd:nonNegativeInteger ;
+                    dcterms:description     "MOD: Total number of agents in a semantic artefact catalogue or number of agents related a given semantic artefact."@en ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod> ;
+                    dcterms:issued          "2024-06-25"^^xsd:date ;
+                    pav:derivedFrom         <https://w3id.org/mod/3.2> ;
+                    pav:importedOn          "2024-06-25"^^xsd:date ;
+            
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: R1" .
 
 ############################################################################################# 
 ############################################################################################# 
