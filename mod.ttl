@@ -3351,6 +3351,22 @@ dcat:dataset        rdf:type                rdf:Property , owl:ObjectProperty ;
                     pav:importedOn          "2024-06-25"^^xsd:date .
 
 
+### http://www.w3.org/ns/dcat#service
+dcat:service        rdf:type                rdf:Property , owl:ObjectProperty ;
+                    rdfs:subPropertyOf      dcterms:hasPart , rdfs:member ;
+                    rdfs:label              "service"@en ,
+                                            "service"@fr ;
+                    rdfs:domain             dcat:Catalog ;
+                    dcterms:domainIncludes  mod:SemanticArtefactCatalog ;
+                    rdfs:range              dcat:DataService ;
+                    dcterms:description     "DCAT: A site or end-point that is listed in the catalog."@en ;
+                    rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
+                    dcterms:issued          "2020-02-04"^^xsd:date ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.2> ;
+                    pav:importedOn          "2024-06-25"^^xsd:date .
+
+
+
 ##########################################
 ########## Media properties ##########
 ##########################################
