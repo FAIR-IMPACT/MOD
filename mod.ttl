@@ -51,7 +51,7 @@
                                     "Metadatos para la Descripción y Publicación de Ontologías"@es;
     owl:ontologyIRI                 <https://w3id.org/mod> ;
     mod:URI                         <https://w3id.org/mod> ;
-    owl:versionIRI                  <https://w3id.org/mod/3.1> ;
+    owl:versionIRI                  <https://w3id.org/mod/3.2> ;
 #   dcterms:identifier              ; 
     owl:versionInfo                 "3.2" ;
     mod:status                      "alpha" ;
@@ -107,7 +107,7 @@
     ########## Dates ##########
 
     dcterms:created                 "2015-08-05" ;
-    dcterms:modified                "2024-06-02" ;
+    dcterms:modified                "2024-06-25" ;
 #   dcterms:valid                   ;
 #   pav:curatedOn                   ;
 #   dcterms:dateSubmitted           ;
@@ -302,15 +302,15 @@
 
     ########## Metrics ##########
 
-    mod:numberOfClasses              79 ;
-    mod:numberOfIndividuals          9 ;
-    mod:numberOfProperties           260 ;
-    mod:numberOfObjectProperties     149 ;
-    mod:numberOfDataProperties       111 ;
-    mod:numberOfAxioms               1507 ;   
+    mod:numberOfClasses              42 ;
+    mod:numberOfIndividuals          28 ;
+    mod:numberOfProperties           140 ;
+    mod:numberOfObjectProperties     70 ;
+    mod:numberOfDataProperties       70 ;
+    mod:numberOfAxioms               2522 ;   
 #   mod:numberOfLabels
     mod:numberOfDeprecated           0 ;   
-    dcat:byteSize                    "227Ko" ;   
+    dcat:byteSize                    "282Ko" ;   
 #   mod:maxDepth
 #   mod:maxChildCount
 #   mod:averageChildCount
@@ -324,9 +324,10 @@
 #   mod:numberOfNotes
     mod:numberOfUsingProjects         5 ;
 #   mod:numberOfEnsorments
-    mod:numberOfEvaluations           0 .
-#   mod:FairScore  
-
+    mod:numberOfEvaluations           0 ;
+#   mod:FairScore
+#   mod:numberOfUsers                   
+    mod:numberOfAgents                15 .     
 
 ##############################################################################
 # End of MOD description using MOD
