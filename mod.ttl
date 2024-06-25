@@ -28,6 +28,7 @@
 @prefix frbr: <http://purl.org/vocab/frbr/core#> .
 @prefix schema: <https://schema.org/> .
 @prefix oboinowl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
 @base <https://w3id.org/mod> .
 
 <https://w3id.org/mod> rdf:type owl:Ontology .
@@ -74,6 +75,7 @@
     cc:morePermissions              "https://github.com/sifrproject/MOD-Ontology/blob/master/LICENSE" ;
     dcterms:rightsHolder            "Indian Statistical Institute and University of Montpellier"@en ,
                                     "Institut Indien de la Statistique et Université de Montpellier"@fr;
+#    odrl:hasPolicy                 ;
 
     ########## Description ##########
     dcterms:description             "MOD (Metadata for Ontology Description and publication) is a project to define a standard way to capture metadata descriptions for ontologies or semantic resources/artefacts in general (thesaurus, terminologies, vocabularies, etc.). The MOD OWL file can be used to create knowledge bases consisting of metadata records of semantic artefacts as instances. MOD can also be used to define specific profiles for recommended metadata properties (e.g., H2020 project FAIRsFAIR semantic artefact minimum metadata profile). Users can go through MOD and pickup the required properties to describe their semantic artefacts."@en, 
@@ -818,7 +820,7 @@ mod:status          rdf:type                owl:DatatypeProperty ;
                     rdfs:label              "status"@en ,
                                             "statut"@fr ;
                     rdfs:domain             mod:SemanticArtefact ,
-                                            mod:SemanticArtefactCatalog
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              xsd:string ;
                     dcterms:description     "OMV: It specifies the tracking information for the contents of the ontology. Pre-defined values. IDOT: State of a resource (physical location providing access to data or information about the identified entity). This is should be based on a recent manual or automatic check of the resource. Possible values are: 'up', 'down', 'probably up', 'obsolete resource', 'restricted access' and 'unknown'. SCHEMA: The status of a creative work in terms of its stage in a lifecycle. Example terms include Incomplete, Draft, Published, Obsolete. Some organizations define a set of terms for the stages of their publication lifecycle."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
@@ -1079,6 +1081,26 @@ dcterms:rightsHolder
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
                     <http://purl.org/dc/dcam/rangeIncludes>     dcterms:Agent .
+
+
+
+#### http://www.w3.org/ns/odrl/2/hasPolicy
+odrl:hasPolicy     rdf:type                 rdf:Property ,
+                                            owl:ObjectProperty ;
+                   rdfs:label               "target policy"@en ,
+                                            "politique de la cible"@fr ;
+                   rdfs:domain              odrl:Asset ;
+                   dcterms:domainIncludes   mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
+                   rdfs:range               odrl:Policy ;
+                   dcterms:description      "ORDL: Identifies an ODRL Policy for which the identified Asset is the target Asset to all the Rules. DCAT: An ODRL conformant policy expressing the rights associated with the resource."@en ;
+                   rdfs:isDefinedBy         <http://www.w3.org/ns/odrl/2/> ;
+                   dcterms:issued           "2018-02-15"^^xsd:date ;
+                   pav:derivedFrom          <http://www.isibang.ac.in/ns/mod/3.2> ;
+                   pav:importedOn           "2024-06-25"^^xsd:date ;
+                    
+            #OPTIONAL STATEMENTS
+                   prov:wasInfluencedBy    "FAIR principle: R1.1" .
 
 
 ##########################################
