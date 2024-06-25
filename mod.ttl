@@ -703,6 +703,9 @@ dcterms:title       rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:title ;
                     rdfs:label              "name"@en ,
                                             "nom"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactDistribution ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              rdfs:Literal ;
                     dcterms:description     "DCTERMS: A name given to the resource. OMV: The name by which an ontology is formally known. RDFS: A human-readable name for the subject. FOAF:  A name for some thing. SKOS: The preferred and alternative labels are useful when generating or creating human-readable representations of a knowledge organization system. SCHEMA: The name of the item."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
@@ -747,7 +750,9 @@ owl:versionIRI      rdf:type                owl:OntologyProperty ;
                     rdfs:label              "version IRI"@en ,
                                             "IRI de la version"@fr ;
                     rdfs:domain             owl:Ontology ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ;
                     rdfs:range              owl:Ontology ;
+                    dcterms:rangeIncludes   mod:SemanticArtefact ;
                     dcterms:description     "OWL: The property that identifies the version IRI of an ontology."@en ;  
                     rdfs:isDefinedBy        <http://www.w3.org/2002/07/owl#> ;
                     dcterms:issued          "2004-02-10"^^xsd:date ;
@@ -765,6 +770,8 @@ dcterms:identifier  rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:identifier  ;
                     rdfs:label              "other identifier"@en ,
                                             "autre identifiant"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              rdfs:Literal ;
                     dcterms:description     "DCTERMS: An unambiguous reference to the resource within a given context. Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN).  Persistent identifiers should be provided as HTTP URIs. SKOS: A notation is a string of characters such as 'T58.5' or '303.4833' used to uniquely identify a concept within the scope of a given concept scheme. ADMS: adms:identifier is used to link any resource to an instance of adms:Identifier which is its range. N.B. it is not appropriate to use dcterms:identifer to link to the Identifier class as its range is rdfs:Literal. ADMS uses this to provide any identifier for the Asset. SCHEMA: The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. DCAT: A unique identifier of the item."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
@@ -785,7 +792,9 @@ owl:versionInfo     rdf:type                owl:AnnotationProperty  ;
                     rdfs:label              "version information"@en ,
                                             "information de version"@fr ;
                     rdfs:domain             rdfs:Resource ;
-                    rdfs:range              rdfs:Resource ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
+                    rdfs:range              xsd:string ;
                     dcterms:description     "MOD: The version of the released ontology. OMV: The version information of the ontology. OWL: The annotation property that provides version information for an ontology or another OWL construct. PAV: The version number of a resource. This is a freetext string, typical values are '1.5' or '21'. DOAP: A project release."@en ;  
                     rdfs:isDefinedBy        <http://www.w3.org/2002/07/owl#> ;
                     dcterms:issued          "2004-02-10"^^xsd:date ;
@@ -808,7 +817,8 @@ owl:versionInfo     rdf:type                owl:AnnotationProperty  ;
 mod:status          rdf:type                owl:DatatypeProperty ;
                     rdfs:label              "status"@en ,
                                             "statut"@fr ;
-                    rdfs:domain             mod:SemanticArtefact ;
+                    rdfs:domain             mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog
                     rdfs:range              xsd:string ;
                     dcterms:description     "OMV: It specifies the tracking information for the contents of the ontology. Pre-defined values. IDOT: State of a resource (physical location providing access to data or information about the identified entity). This is should be based on a recent manual or automatic check of the resource. Possible values are: 'up', 'down', 'probably up', 'obsolete resource', 'restricted access' and 'unknown'. SCHEMA: The status of a creative work in terms of its stage in a lifecycle. Example terms include Incomplete, Draft, Published, Obsolete. Some organizations define a set of terms for the stages of their publication lifecycle."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
@@ -830,6 +840,9 @@ owl:deprecated     rdf:type                owl:AnnotationProperty ;
                    rdfs:label              "deprecated"@en ,
                                            "obsolète"@fr ;
                    rdfs:domain             rdfs:Resource ;
+                   dcterms:domainIncludes  mod:SemanticArtefact ,
+                                           mod:SemanticArtefactDistribution ,
+                                           mod:SemanticArtefactCatalog ;
                    rdfs:range              rdfs:Resource ;
                    dcterms:description     "OWL: The annotation property that indicates that a given entity has been deprecated. IDOT: Indicates if the current dataset is obsolete (not provided any more to the public community). Value can either be 'true' or 'false' (xsd:boolean). The statement is usually omitted if 'false'."@en ;
                    rdfs:isDefinedBy        <http://www.w3.org/2002/07/owl#> ;
@@ -915,6 +928,8 @@ dcterms:language    rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:language ;
                     rdfs:label              "natural language"@en ,
                                             "langage naturel"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "DCTERMS: A language of the resource. Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [[IETF-BCP47](https://tools.ietf.org/html/bcp47)] language tag. OMV: The language of the content of the ontology, i.e. English, French, etc. DOAP: ISO language code a project has been translated into."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
@@ -937,6 +952,8 @@ dcterms:type        rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:type ;
                     rdfs:label              "generic type"@en ,
                                             "type générique"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "DCTERMS: The nature or genre of the resource. Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [[DCMI-TYPE](http://dublincore.org/documents/dcmi-type-vocabulary/)]. To describe the file format, physical medium, or dimensions of the resource, use the property Format. OMV: The nature of the content of the ontology."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
@@ -960,6 +977,8 @@ dcterms:accessRights
                     rdfs:subPropertyOf      dc:rights , dcterms:rights ;
                     rdfs:label              "access rights"@en ,
                                             "droits d'accès"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "DCTERMS: Information about who access the resource or an indication of its security status. Access Rights may include information regarding access or restrictions based on privacy, security, or other policies. MOD: Information on access (i.e., read, download) to an ontology."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2003-02-15"^^xsd:date ;
@@ -980,6 +999,8 @@ dcterms:license     rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:rights , dcterms:rights ;
                     rdfs:label              "license"@en ,
                                             "licence"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "DCTERMS: A legal document giving official permission to do something with the resource. Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided. DCTERMS:rights Information about rights held in and over the resource. OMV: Underlying license model. SCHEMA: A license document that applies to this content, typically indicated by URL."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2004-06-14"^^xsd:date ;
@@ -1004,6 +1025,9 @@ cc:useGuidelines    rdf:type                rdf:Property ;
                     rdfs:label              "use guidelines"@en ,
                                             "guide d'utilisation"@fr ;
                     rdfs:domain             cc:Work ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactDistribution ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              rdfs:Resource ;
                     dcterms:description     "CC: A related resource which defines non-binding use guidelines for the work."@en ;     
                     rdfs:isDefinedBy        <http://creativecommons.org/ns#> ;
@@ -1021,6 +1045,8 @@ cc:morePermissions  rdf:type                rdf:Property ;
                     rdfs:label              "more permissions"@en ,
                                             "droits d'accès détaillés"@fr ;
                     rdfs:domain             cc:Work ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              rdfs:Resource ;
                     dcterms:description     "CC: A related resource which describes additional permissions or alternative licenses for a Work which may be available."@en ;     
                     rdfs:isDefinedBy        <http://creativecommons.org/ns#> ;
@@ -1037,6 +1063,8 @@ dcterms:rightsHolder
                     rdf:type                rdf:Property ;
                     rdfs:label              "rights holder"@en ,
                                             "détenteur des droits"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ,
+                                            mod:SemanticArtefactCatalog ;
                     dcterms:description     "DCTERMS: A person or organization owning or managing rights over the resource. MOD: The person who can be contacted to enquire about an ontology. SCHEMA: The party holding the legal copyright to the CreativeWork. DCAT: Relevant contact information for the cataloged resource. Use of vCard is recommended."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2004-06-14"^^xsd:date ;
