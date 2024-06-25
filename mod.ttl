@@ -2767,6 +2767,24 @@ dcterms:hasPart     rdf:type                rdf:Property ;
                     prov:wasInfluencedBy    "FAIR principle: F2" .
 
 
+### http://www.w3.org/ns/dcat#catalog
+dcat:catalog        rdf:type                rdf:Property , owl:ObjectProperty ;
+                    rdfs:subPropertyOf      dcterms:hasPart , rdfs:member ;
+                    rdfs:label              "catalog"@en ,
+                                            "catalogue"@fr ;
+                    rdfs:domain             dcat:Catalog ;
+                    dcterms:domainIncludes  mod:SemanticArtefactCatalog ;
+                    rdfs:range              dcat:Catalog ;
+                    dcterms:description     "DCAT:A catalog whose contents are of interest in the context of this catalog. DCTERMS: A related resource that is included either physically or logically in the described resource. SCHEMA: Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense). ADMS: Links to a sample of an Asset (which is itself an Asset)."@en ;
+                    rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
+                    dcterms:issued          "2020-02-20"^^xsd:date ;
+                    owl:equivalentProperty  dcterms:hasPart ,
+                                            schema:hasPart ,
+                                            adms:sample ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.2> ;
+                    pav:importedOn          "2024-06-25"^^xsd:date .
+            
+ 
 ### http://purl.org/dc/terms/relation
 dcterms:relation    rdf:type                rdf:Property ;
                     rdfs:subPropertyOf      dc:relation ;
