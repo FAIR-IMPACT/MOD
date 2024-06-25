@@ -2028,6 +2028,21 @@ dcterms:coverage    rdf:type                rdf:Property ;
                     <http://purl.org/dc/dcam/rangeIncludes>     dcterms:Jurisdiction, dcterms:Location, dcterms:Period  .
 
 
+#### http://www.w3.org/ns/adms#supportedSchema
+adms:supportedSchema
+                    rdf:type                rdf:Property , owl:ObjectProperty ;
+                    rdfs:label              "supported schema/format"@en ,
+                                            "schema/format supporté"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefactCatalog ;
+                    rdfs:range              adms:Asset ;
+                    dcterms:description     "ADMS: A schema according to which the Asset Repository can provide data about its content. SCHEMA: Media type, typically MIME format (see IANA site) of the content."@en ;
+                    rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-adms> ;
+                    dcterms:issued          "2013-08-01"^^xsd:date ;
+                    owl:equivalentProperty  schema:fileFormat ;
+                    pav:derivedFrom         <http://www.isibang.ac.in/ns/mod/3.2> ;
+                    pav:importedOn          "2024-06-25"^^xsd:date .
+                     
+
 ### https://vocab.org/vann/example
 vann:example        rdf:type                owl:AnnotationProperty ;
                     rdfs:subPropertyOf      rdfs:seeAlso ;
