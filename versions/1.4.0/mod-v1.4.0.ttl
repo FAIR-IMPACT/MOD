@@ -1,0 +1,2121 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ns0: <http://purl.org/pav/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+
+<http://www.isibang.ac.in/ns/mod/ontology>
+  a owl:Ontology ;
+  owl:versionIRI <http://www.isibang.ac.in/ns/mod/1.4/mod-v1.4_ontology.owl> ;
+  dc:Contributor "Anne Toulet (https://orcid.org/0000-0003-0463-0854)"@en, "Udaya Varadarajan (https://orcid.org/0000-0002-4936-0272)"@en ;
+  dc:Coverage "Les ontologies ou les ressources sémantiques en général (thésaurus, terminologies, vocabulaires, etc.)."@fr, "Ontologies or semantic resources in general (thesaurus, terminologies, vocabularies, etc.)"^^xsd:string, "Ontologies or semantic resources in general (thesaurus, terminologies, vocabularies, etc.)."@en ;
+  dc:Creator "Biswanath Dutta (https://orcid.org/0000-0003-3059-8202)"@en, "Clement Jonquet (https://orcid.org/0000-0002-2404-1582)"@en ;
+  dc:Title "MOD: Metadonnées pour la Description et la publication d'Ontologies"@fr, "Metadata for Ontology Description and Publication Ontology"@en .
+
+dc:Contributor a owl:AnnotationProperty .
+dc:Coverage a owl:AnnotationProperty .
+dc:Creator a owl:AnnotationProperty .
+dc:Description a owl:AnnotationProperty .
+dc:Relation a owl:AnnotationProperty .
+dc:Title a owl:AnnotationProperty .
+<http://purl.org/pav/derivedFrom> a owl:AnnotationProperty .
+<http://purl.org/pav/importedOn> a owl:AnnotationProperty .
+owl:priorVersion a owl:AnnotationProperty .
+owl:versionInfo a owl:AnnotationProperty .
+prov:wasInfluencedBy a owl:AnnotationProperty .
+<http://kannel.open.ac.uk/ontology#comesFromTheSameDomain>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  dc:Description "If the two ontologies come from the same domain (without any other details)."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "comes from the same domain"@en, "vient du même domaine"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: B.2"@en .
+
+<http://kannel.open.ac.uk/ontology#hasDisparateModelling>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  dc:Description "Disagreements related  to  the  conceptualization  of  the  ontologies. Two ontologies are considered to have disparate modeling if they represent corresponding entities in different ways, e.g.  as an instance in one case and a class in the other."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "différences de modélisation avec"@fr, "has disparate modelling"@en .
+
+<http://omv.ontoware.org/2005/05/ontology#conformsToKnowledgeRepresentationParadigm>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://omv.ontoware.org/2005/05/ontology#KnowledgeRepresentationParadigm> ;
+  dc:Description "A representation formalism that is followed to describe knowledge in an ontology. Example includes description logics, first order logic, etc. dct: An established standard to which the described resource conforms."@en ;
+  dc:Relation "dc:relation"@en, "http://www.isibang.ac.in/ns/mod/1.1/KnowledgeRepresentationFormalism"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "conforms to knowledge representation paradigm"@en, "paradigme de représentation des connaissnces"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: E.1"@en .
+
+<http://omv.ontoware.org/2005/05/ontology#endorsedBy>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range foaf:Agent ;
+  dc:Description "The parties that have expressed support or approval to this ontology."@en ;
+  dc:Relation "http://www.isibang.ac.in/ns/mod/1.1/endorsedBy"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "approuvé par"@fr, "endorsed by"@en ;
+  prov:wasInfluencedBy "MIRO guidelines: G.4"@en .
+
+<http://omv.ontoware.org/2005/05/ontology#hasFormalityLevel>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://omv.ontoware.org/2005/05/ontology#FormalityLevel> ;
+  dc:Description "The level of formality of an ontology."@en ;
+  dc:Relation ""^^xsd:anyURI, "http://www.isibang.ac.in/ns/mod/1.0/formalityLevel"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "has formality level"@en, "niveau de formalisme"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: E.1"@en .
+
+<http://omv.ontoware.org/2005/05/ontology#hasOntologyLanguage>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://omv.ontoware.org/2005/05/ontology#OntologyLanguage> ;
+  dc:Description "A language that is used to create an ontology."@en ;
+  dc:Relation "http://schema.org/fileFormat"^^xsd:anyURI, "http://www.isibang.ac.in/ns/mod/1.1/ontologyDesignLanguage"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "has ontology language"@en, "langage"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: E.1"@en .
+
+<http://omv.ontoware.org/2005/05/ontology#hasOntologySyntax>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://omv.ontoware.org/2005/05/ontology#OntologySyntax> ;
+  dc:Description "The syntax followed in the creation of an ontology."@en ;
+  dc:Relation "http://purl.org/dc/elements/1.1/format"^^xsd:anyURI, "http://purl.org/dc/terms/format"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "has ontology syntax"@en, "syntaxe"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: E.1"@en .
+
+<http://omv.ontoware.org/2005/05/ontology#isOfType>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://omv.ontoware.org/2005/05/ontology#OntologyType> ;
+  dc:Description "The nature of the content of the ontology."@en ;
+  dc:Relation "http://purl.org/dc/elements/1.1/type"^^xsd:anyURI, "http://www.w3.org/ns/dcat#type"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "is of type"@en, "type générique"@fr .
+
+<http://omv.ontoware.org/2005/05/ontology#usedOntologyEngineeringMethodology>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology> ;
+  dc:Description "A methodolgy follwoing which an ontology is created."@en ;
+  dc:Relation "http://schema.org/publishingPrinciples"^^xsd:anyURI, "http://www.isibang.ac.in/ns/mod/1.1/methodologyUsed"^^xsd:anyURI, "http://www.w3.org/ns/adms#representationTechnique"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "méthodologie de développement"@fr, "used ontology engineering methodology"@en ;
+  prov:wasInfluencedBy "MIRO guidelines: A.6"@en .
+
+<http://omv.ontoware.org/2005/05/ontology#usedOntologyEngineeringTool>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringTool> ;
+  dc:Description "The tool used for the creation of an ontology."@en ;
+  dc:Relation "http://purl.org/pav/createdWith"^^xsd:anyURI, "http://www.geneontology.org/formats/oboInOwl#auto-generated-by"^^xsd:anyURI, "http://www.isibang.ac.in/ns/mod/1.1/toolUsed"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "outil de développement"@fr, "used ontology engineering tool"@en ;
+  prov:wasInfluencedBy "MIRO guidelines: E.2"@en .
+
+dc:License
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range dc:LicenseDocument ;
+  dc:Description "A legal document giving official permission to do something with the resource."@en ;
+  dc:Relation "http://creativecommons.org/ns#license"^^xsd:anyURI, "http://omv.ontoware.org/2005/05/ontology#hasLicense"^^xsd:anyURI, "http://purl.org/dc/elements/1.1/rights"^^xsd:anyURI, "http://purl.org/dc/terms/license"^^xsd:anyURI, "http://purl.org/dc/terms/rights"^^xsd:anyURI, "http://schema.org/license"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2015-08-05T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "licence"@fr, "license"@en ;
+  prov:wasInfluencedBy "MIRO guidelines: A.3"@en .
+
+dc:accessRights
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range dc:RightsStatement ;
+  dc:Description "Information about who can access the resource or an indication of its security status."@en ;
+  dc:Relation "http://www.isibang.ac.in/ns/mod/1.1/accessibility"^^xsd:anyURI, "mod:accessibility (defined in mod1.0)"@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "access rights"@en, "droits d'accès"@fr .
+
+dc:accrualMethod
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range dc:MethodOfAccrual ;
+  dc:Description "The method by which items are added to a collection."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "accrual method"@en, "méthode d'ajout"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: D.3,F.2"@en .
+
+dc:accrualPeriodicity
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range dc:Frequency ;
+  dc:Description "The frequency with which items are added to a collection."@en ;
+  dc:Relation "http://w3id.org/nkos#updateFrequency"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "accrual periodicity"@en, "fréquence des ajouts"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: F.2"@en .
+
+dc:accrualPolicy
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range dc:Policy ;
+  dc:Description "The policy governing the addition of items to a collection."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "MIRO guidelines: F.2,F.3"@en, "accrual policy"@en, "politique des ajouts"@fr .
+
+dc:audience
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range foaf:Agent ;
+  dc:Description "A class of entity for whom the resource is intended or useful."@en ;
+  dc:Relation "http://schema.org/audience"^^xsd:anyURI, "http://usefulinc.com/ns/doap#audience"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "audience cible"@fr, "target audience"@en ;
+  prov:wasInfluencedBy "MIRO guidelines: B.3"@en .
+
+dc:contributor
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range foaf:Agent ;
+  dc:Description "An entity responsible for making contributions to the resource."@en ;
+  dc:Relation "http://omv.ontoware.org/2005/05/ontology#hasContributor"^^xsd:anyURI, "http://purl.org/pav/contributedBy"^^xsd:anyURI, "http://schema.org/contributor"^^xsd:anyURI, "http://usefulinc.com/ns/doap#developer"^^xsd:anyURI, "http://usefulinc.com/ns/doap#helper"^^xsd:anyURI, "http://www.geneontology.org/formats/oboInOwl#saved-by"^^xsd:anyURI, "http://www.geneontology.org/formats/oboInOwl#savedBy"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2015-08-05T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "contributeur"@fr, "contributor"@en ;
+  prov:wasInfluencedBy "MIRO guidelines: C.2"@en .
+
+dc:creator
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  dc:Description "An entity primarily responsible for making the resource."@en ;
+  dc:Relation "http://omv.ontoware.org/2005/05/ontology#hasCreator"^^xsd:anyURI, "http://purl.org/pav/authoredBy"^^xsd:anyURI, "http://purl.org/pav/createdBy"^^xsd:anyURI, "http://schema.org/author"^^xsd:anyURI, "http://usefulinc.com/ns/doap#maintainer"^^xsd:anyURI, "http://www.w3.org/ns/prov#wasAttributedTo"^^xsd:anyURI, "http://xmlns.com/foaf/0.1/maker"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2015-08-05T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "creator"@en, "créateur"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: C.2"@en .
+
+dc:hasPart
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf dc:relation ;
+  owl:inverseOf dc:isPartOf ;
+  dc:Description "A related resource that is included either physically or logically in the described resource."@en ;
+  dc:Relation "http://purl.org/dc/terms/hasPart"^^xsd:anyURI, "http://schema.org/hasPart"^^xsd:anyURI, "http://www.geneontology.org/formats/oboInOwl#hasSubset"^^xsd:anyURI, "http://www.w3.org/ns/adms#sample"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2015-08-05T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "a pour partie (vue)"@fr, "has part"@en .
+
+dc:isPartOf
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf dc:relation ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  dc:Description "A related resource in which the described resource is physically or logically included."@en ;
+  dc:Relation "http://kannel.open.ac.uk/ontology#semanticallyIncludedIn"^^xsd:anyURI, "http://purl.org/dc/terms/isPartOf"^^xsd:anyURI, "http://rdfs.org/ns/void#subset"^^xsd:anyURI, "http://schema.org/isPartOf"^^xsd:anyURI, "http://www.isibang.ac.in/ns/mod/1.1/module"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2015-08-05T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "est partie (une vue) de"@fr, "is part of"@en .
+
+dc:publisher
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range foaf:Organization ;
+  dc:Description "An entity responsible for making the resource available."@en ;
+  dc:Relation "http://purl.org/dc/elements/1.1/publisher"^^xsd:anyURI, "http://schema.org/publisher"^^xsd:anyURI, "http://www.w3.org/ns/adms#schemaAgency"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2015-08-05T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "publisher"@en, "éditeur"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: A.2"@en .
+
+dc:relation
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  dc:Description "A related resource."@en ;
+  dc:Relation "http://kannel.open.ac.uk/ontology#ontologyRelatedTo"^^xsd:anyURI, "http://purl.org/dc/elements/1.1/relation"^^xsd:anyURI, "http://purl.org/dc/terms/relation"^^xsd:anyURI, "http://purl.org/vocommons/voaf#reliesOn"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2015-08-05T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "relation"@en, "relation générale avec"@fr .
+
+dc:rightsHolder
+  a owl:ObjectProperty ;
+  rdfs:domain owl:Thing ;
+  rdfs:range foaf:Agent ;
+  dc:Description "A person or organization owning or managing rights over the resource."@en ;
+  dc:Relation "http://schema.org/copyrightHolder"^^xsd:anyURI, "http://www.w3.org/ns/dcat#contactPoint"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "détenteur des droits"@fr, "rights holder"@en ;
+  prov:wasInfluencedBy "MIRO guidelines: A.2"@en .
+
+ns0:curatedBy
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range foaf:Person ;
+  dc:Description "A curator who restructure the previously authored content and shape it to be appropriate for the intended representation (e.g. by normalizing the fields for being represented in a spreadsheet)."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "contrôleur de qualité"@fr, "curated by"@en ;
+  prov:wasInfluencedBy "MIRO guidelines: C.2"@en .
+
+<http://purl.org/vocommons/voaf#generalizes>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://purl.org/vocommons/voaf#specializes> ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  dc:Description "Indicates that the subject vocabulary generalizes by some superclasses or superproperties the object vocabulary."@en ;
+  dc:Relation "http://www.w3.org/ns/prov#generalizationOf"@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "generalizes"@en, "généralise"@fr .
+
+<http://purl.org/vocommons/voaf#hasDisjunctionsWith>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  dc:Description "Indicates that the subject vocabulary declares some disjunct classes with the object vocabulary."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "a des disjopnctions avec"@fr, "has disjunctions with"@en .
+
+<http://purl.org/vocommons/voaf#hasEquivalencesWith>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  dc:Description "Indicates that the subject vocabulary declares some equivalent classes or properties with the object vocabulary."@en ;
+  dc:Relation "http://kannel.open.ac.uk/ontology#isAlignedTo"^^xsd:anyURI, "http://w3id.org/nkos#alignedWith"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "alignée à"@fr, "has equivalences with"@en ;
+  prov:wasInfluencedBy "MIRO guidelines: E.4"@en .
+
+<http://purl.org/vocommons/voaf#similar>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  dc:Description "Used to assert that two vocabularies are similar in scope and objectives, independently of the fact that they otherwise refer to each other."@en ;
+  dc:Relation "http://kannel.open.ac.uk/ontology#similarTo"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "similar to"@en ;
+  prov:wasInfluencedBy "MIRO guidelines: B.2"@en .
+
+<http://purl.org/vocommons/voaf#specializes>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  dc:Description "An entity that is a specialization of another shares all aspects of the latter, and additionally presents more specific aspects of the same thing as the latter."@en ;
+  dc:Relation "http://kannel.open.ac.uk/ontology#explanationEvolution"^^xsd:anyURI, "http://www.w3.org/ns/prov#specializationOf"@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "specializes"@en, "spécialise"@fr .
+
+<http://purl.org/vocommons/voaf#usedBy>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  dc:Description "Indicates that the subject vocabulary is used by the object vocabulary."@en ;
+  dc:Relation "http://w3id.org/nkos#usedBy"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "used by"@en, "utilisé par"@fr .
+
+schema:comment
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range schema:Comment ;
+  dc:Description "Comments, typically from users."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "comment"@en, "commentaires ou avis d'utilisateurs"@fr .
+
+schema:translationOfWork
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  dc:Description "A work that is a translation of the content of this work."@en ;
+  dc:Relation "http://www.w3.org/ns/adms#translation"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "traduction de"@fr, "translation of work"@en .
+
+schema:translator
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range foaf:Agent ;
+  dc:Description "Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "traducteur"@fr, "translator"@en .
+
+<http://www.isibang.ac.in/ns/mod#analytics>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://www.isibang.ac.in/ns/mod#Analytics> ;
+  dc:Description "This property shall be used to store any analytics for an ontology. E.g., number of visits an ontology received in a portal, number of downloads, etc."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "analytics"@en, "analytique"@fr .
+
+<http://www.isibang.ac.in/ns/mod#evaluationAuthor>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Evaluation> ;
+  rdfs:range foaf:Agent ;
+  dc:Description "An agent that have participated in an evaluation."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.1"^^xsd:anyURI ;
+  ns0:importedOn "2016-09-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "auteur de l'évaluation"@fr, "evaluation author"@en .
+
+<http://www.isibang.ac.in/ns/mod#evaluationBasedOnCriteria>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Evaluation> ;
+  rdfs:range <http://www.isibang.ac.in/ns/mod#EvaluationCriteria> ;
+  dc:Description "This property makes a relationship between an evaluation and the evaluation criteria(s)/aspect(s) considered to judge the quality of an ontology (e.g., accuracy, adaptability, clarity, completeness, computation efficiency, conciseness, organizational fitness)."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.1"^^xsd:anyURI ;
+  ns0:importedOn "2016-09-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "evaluation based on criteria"@en, "évaluation basée sur les critères"@fr .
+
+<http://www.isibang.ac.in/ns/mod#evaluationMethod>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Evaluation> ;
+  rdfs:range <http://www.isibang.ac.in/ns/mod#EvaluationMethod> ;
+  dc:Description "The method that is followed in evaluating an ontology (e.g., application based approach, assessment by human, data driven approach and golden standard). This property makes a relationship between an ontology and the methodology followed in evaluating the ontology."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.1"^^xsd:anyURI ;
+  ns0:importedOn "2016-09-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "evaluation method"@en, "méthode de l'évaluation"@fr .
+
+<http://www.isibang.ac.in/ns/mod#group>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://www.isibang.ac.in/ns/mod#Group> ;
+  dc:Description "A group of ontologies that the ontology is usually considered into."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "group"@en, "groupe"@fr .
+
+<http://www.isibang.ac.in/ns/mod#hasEvaluation>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://www.isibang.ac.in/ns/mod#Evaluation> ;
+  dc:Description "An ontology that has been evaluated by an agent."@en ;
+  dc:Relation "http://schema.org/review"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2015-08-05T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "has evaluation"@en, "évaluation"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: G.2"@en .
+
+<http://www.isibang.ac.in/ns/mod#ontologyInUse>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range foaf:Project ;
+  dc:Description "An ontology that is used in a project."@en ;
+  dc:Relation "http://www.isibang.ac.in/ns/mod/1.1/ontologyInUse"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2015-08-05T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "ontology in use"@en, "projets qui utilisent"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: B.3,G.5"@en .
+
+owl:BackwardCompatibleWith
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  dc:Description "This identifies the specified ontology as a prior version of the containing ontology, and further indicates that it is backward compatible with it."@en ;
+  dc:Relation "http://kannel.open.ac.uk/ontology#backwardCompatibleWith"^^xsd:anyURI, "http://omv.ontoware.org/2005/05/ontology#isBackwardCompatibleWith"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "backward compatible with"@en, "rétrocompatible"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: E.8,E.10"@en .
+
+owl:IncompatibleWith
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  dc:Description "This indicates that the containing ontology is a later version of the referenced ontology, but is not backward compatible with it."@en ;
+  dc:Relation "http://kannel.open.ac.uk/ontology#owlIncompatibleWith"^^xsd:anyURI, "http://omv.ontoware.org/2005/05/ontology#isIncompatibleWith"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "incomaptible"@fr, "incompatible with"@en .
+
+prov:wasGeneratedBy
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range prov:Activity ;
+  dc:Description "Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "a été généré par"@fr, "was generated by"@en ;
+  prov:wasInfluencedBy "MIRO guidelines: D.1"@en .
+
+prov:wasinvalidatedBy
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range prov:Activity ;
+  dc:Description "Invalidation is the start of the destruction, cessation, or expiry of an existing entity by an activity. The entity is no longer available for use (or further invalidation) after invalidation. Any generation or usage of an entity precedes its invalidation."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "a été invalidé par"@fr, "was invalidated by"@en .
+
+foaf:fundedBy
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range foaf:Agent ;
+  dc:Description "An ontology that is sponsored by and developed under a project."@en ;
+  dc:Relation "http://schema.org/sourceOrganization"^^xsd:anyURI, "http://www.isibang.ac.in/ns/mod/1.0/sponsoredBy"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2015-08-05T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "financé ou sponsorisé par"@fr, "funded by"@en .
+
+cc:morePermissions
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string ;
+  dc:Description "A related resource which describes additional permissions or alternative licenses for a Work which may be available."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "droits d'accès détaillés"@fr, "more permissions"@en .
+
+cc:useGuidelines
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string ;
+  dc:Description "A related resource which defines non-binding use guidelines for the work."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "guide d'utilisation"@fr, "use guidelines"@en .
+
+<http://identifiers.org/idot/exampleIdentifier>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string ;
+  dc:Description "An example identifier used by one item (or record) from a dataset."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "example identifier"@en, "exemple d'identifiant"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: E.6"@en .
+
+<http://omv.ontoware.org/2005/05/ontology#acronym>
+  a owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+  dc:Description "A short name by which an ontology is formally known."@en ;
+  dc:Relation "http://www.isibang.ac.in/ns/mod/1.1/acronym"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "acronym"@en, "acronyme"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: A.1"@en .
+
+<http://omv.ontoware.org/2005/05/ontology#designedForOntologyTask>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string ;
+  dc:Description "The purpose for which the ontology was originally designed."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "designed for ontology task"@en, "tâche ontologique"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: B.1"@en .
+
+<http://omv.ontoware.org/2005/05/ontology#keyClasses>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string ;
+  dc:Description "Representative classes in the ontology."@en ;
+  dc:Relation "http://rdfs.org/ns/void#exampleResource"^^xsd:anyURI, "http://schema.org/mainEntity"^^xsd:anyURI, "http://xmlns.com/foaf/0.1/primaryTopic"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "classes clés"@fr, "key classes"@en .
+
+<http://omv.ontoware.org/2005/05/ontology#keywords>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string ;
+  dc:Description "A keyword(s) is used to describe the content of an ontology."@en ;
+  dc:Relation "http://schema.org/keywords"^^xsd:anyURI, "http://www.isibang.ac.in/ns/mod/1.1/keyword"^^xsd:anyURI, "http://www.w3.org/ns/dcat#keyword"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "keywords"@en, "motclés"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: C.1"@en .
+
+<http://omv.ontoware.org/2005/05/ontology#knownUsage>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string ;
+  dc:Description "The applications where the ontology is being used."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "known usage"@en, "usage connu"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: B.3"@en .
+
+<http://omv.ontoware.org/2005/05/ontology#numberOfAxioms>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf <http://www.isibang.ac.in/ns/mod#metrics> ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:nonNegativeInteger ;
+  dc:Description "The total number of axioms in an ontology."@en ;
+  dc:Relation "http://rdfs.org/ns/void#triples"^^xsd:anyURI, "http://www.isibang.ac.in/ns/mod/1.1/noOfAxioms"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "nombre d'axiomes ou de triples"@fr, "number of axioms"@en ;
+  prov:wasInfluencedBy "MIRO guidelines: E.3"@en .
+
+<http://omv.ontoware.org/2005/05/ontology#numberOfClasses>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf <http://www.isibang.ac.in/ns/mod#metrics> ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:nonNegativeInteger ;
+  dc:Description "The total number of classes in an ontology."@en ;
+  dc:Relation "http://purl.org/vocommons/voaf#classNumber"^^xsd:anyURI, "http://rdfs.org/ns/void#classes"^^xsd:anyURI, "http://www.isibang.ac.in/ns/mod/1.1/noOfClasses"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "nombre de classes"@fr, "number of classes"@en ;
+  prov:wasInfluencedBy "MIRO guidelines: E.3"@en .
+
+<http://omv.ontoware.org/2005/05/ontology#numberOfIndividuals>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf <http://www.isibang.ac.in/ns/mod#metrics> ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:nonNegativeInteger ;
+  dc:Description "The total number of individuals in an ontology."@en ;
+  dc:Relation "http://rdfs.org/ns/void#entities"^^xsd:anyURI, "http://www.isibang.ac.in/ns/mod/1.1/noOfIndividuals"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "nombre d'individus"@fr, "number of individuals"@en ;
+  prov:wasInfluencedBy "MIRO guidelines: E.3"@en .
+
+<http://omv.ontoware.org/2005/05/ontology#numberOfProperties>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf <http://www.isibang.ac.in/ns/mod#metrics> ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:nonNegativeInteger ;
+  dc:Description "The total number of properties in an ontology."@en ;
+  dc:Relation "http://purl.org/vocommons/voaf#propertyNumber"^^xsd:anyURI, "http://rdfs.org/ns/void#properties"^^xsd:anyURI, "http://www.isibang.ac.in/ns/mod/1.1/noOfProperties"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "nombre de propriétés"@fr, "number of properties"@en ;
+  prov:wasInfluencedBy "MIRO guidelines: E.3"@en .
+
+<http://omv.ontoware.org/2005/05/ontology#resourceLocator>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "The location where the ontology can be found. It should be accessible via a URL. It can be the same as the value for URI property."@en ;
+  dc:Relation "http://usefulinc.com/ns/doap/download-page"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "URL de téléchargement"@fr, "resource locator"@en ;
+  prov:wasInfluencedBy "MIRO guidelines: A.4"@en .
+
+<http://omv.ontoware.org/2005/05/ontology#status>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string ;
+  dc:Description "The tracking information for the contents of the ontology."@en ;
+  dc:Relation "http://identifiers.org/idot/state"^^xsd:anyURI, "http://www.isibang.ac.in/ns/mod/1.1/status"^^xsd:anyURI, "https://www.w3.org/TR/vocab-adms/#adms-status"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "status"@en, "statut"@fr .
+
+dc:abstract
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string ;
+  dc:Description "A summary of the resource."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "abstract"@en, "résumé"@fr .
+
+dc:alternative
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string ;
+  dc:Description "An alternative name for the resource."@en ;
+  dc:Relation "http://identifiers.org/idot/alternatePrefix"^^xsd:anyURI, "http://schema.org/alternateName"^^xsd:anyURI, "http://www.w3.org/2004/02/skos/core#altLabel"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "alternative title"@en, "nom alternatif titre"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: A.1"@en .
+
+dc:bibliographicCitation
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string ;
+  dc:Description "A bibliographic reference for the resource."@en ;
+  dc:Relation "http://omv.ontoware.org/2005/05/ontology#reference"^^xsd:anyURI, "http://xmlns.com/foaf/0.1/isPrimaryTopicOf"^^xsd:anyURI, "https://schema.org/citation"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "bibliographic citation"@en, "référence bibliographique"@fr .
+
+dc:coverage
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string ;
+  dc:Description "The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant."@en ;
+  dc:Relation "http://purl.org/dc/elements/1.1/coverage"^^xsd:anyURI, "http://schema.org/spatial"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "couverture"@fr, "coverage"@en ;
+  prov:wasInfluencedBy "MIRO guidelines: C.1"@en .
+
+dc:created
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf dc:date ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:dateTime ;
+  dc:Description "Date of creation of the resource."@en ;
+  dc:Relation "http://omv.ontoware.org/2005/05/ontology#creationDate"^^xsd:anyURI, "http://purl.org/dc/elements/1.1/date"^^xsd:anyURI, "http://purl.org/dc/terms/date"^^xsd:anyURI, "http://purl.org/pav/authoredOn"^^xsd:anyURI, "http://purl.org/pav/contributedOn"^^xsd:anyURI, "http://purl.org/pav/createdOn"^^xsd:anyURI, "http://schema.org/dateCreated"^^xsd:anyURI, "http://www.geneontology.org/formats/oboInOwl#date"^^xsd:anyURI, "http://www.geneontology.org/formats/oboInOwl#hasDate"^^xsd:anyURI, "http://www.isibang.ac.in/ns/mod/1.1/creationDate"^^xsd:anyURI, "http://www.w3.org/ns/prov#generatedAtTime"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "date created"@en, "date de création"@fr .
+
+dc:date
+  a owl:DatatypeProperty ;
+  dc:Description "A point or period of time associated with an event in the lifecycle of the resource."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "date"@en .
+
+dc:dateSubmitted
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf dc:date ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:dateTime ;
+  dc:Description "Date of submission of the resource."@en ;
+  dc:Relation "http://schema.org/datePublished"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "date de soumission"@fr, "date submitted"@en .
+
+dc:description
+  a owl:DatatypeProperty ;
+  rdfs:domain owl:Thing ;
+  rdfs:range xsd:string ;
+  dc:Description "An account of the resource."@en ;
+  dc:Relation "http://omv.ontoware.org/2005/05/ontology#description"^^xsd:anyURI, "http://schema.org/description"^^xsd:anyURI, "http://usefulinc.com/ns/doap/description"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2015-08-05T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "description"@en, "description"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: C.3"@en .
+
+dc:hasFormat
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "A related resource that is substantially the same as the pre-existing described resource, but in another format."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "a pour format"@fr, "has format"@en .
+
+dc:hasVersion
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "A related resource that is a version, edition, or adaptation of the described resource."@en ;
+  dc:Relation "http://purl.org/pav/hasVersion"^^xsd:anyURI, "http://www.isibang.ac.in/ns/mod/1.1/version"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "has version"@en .
+
+dc:identifier
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string ;
+  dc:Description "An unambiguous reference to the resource within a given context."@en ;
+  dc:Relation "http://purl.org/dc/elements/1.1/identifier"^^xsd:anyURI, "https://www.w3.org/2009/08/skos-reference/skos.html#notation"^^xsd:anyURI, "https://www.w3.org/TR/vocab-adms/#adms-identifier"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2015-08-05T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "Autre identifiant"@fr, "identifier"@en .
+
+dc:isFormatOf
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "A related resource that is substantially the same as the described resource, but in another format."@en ;
+  dc:Relation "http://www.isibang.ac.in/ns/mod/1.1/syntax"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "est le format de"@fr, "is format of"@en .
+
+dc:language
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "A language of the resource."@en ;
+  dc:Relation "http://omv.ontoware.org/2005/05/ontology#naturalLanguage"^^xsd:anyURI, "http://purl.org/dc/elements/1.1/language"^^xsd:anyURI, "http://schema.org/inLanguage"^^xsd:anyURI, "http://usefulinc.com/ns/doap/language"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2015-08-05T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "langage naturel"@fr, "language"@en .
+
+dc:modified
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf dc:date ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:dateTime ;
+  dc:Description "Date on which the resource was changed."@en ;
+  dc:Relation "http://omv.ontoware.org/2005/05/ontology#modificationDate"^^xsd:anyURI, "http://schema.org/dateModified"^^xsd:anyURI, "http://usefulinc.com/ns/doap#created"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "date de modification"@fr, "date modified"@en .
+
+dc:source
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string ;
+  dc:Description "A related resource from which the described resource is derived."@en ;
+  dc:Relation "http://purl.org/dc/elements/1.1/source"^^xsd:anyURI, "http://schema.org/isBasedOn"^^xsd:anyURI, "http://w3id.org/nkos#basedOn"^^xsd:anyURI, "http://www.isibang.ac.in/ns/mod/1.1/sourceOntology"^^xsd:anyURI, "http://www.w3.org/ns/prov#wasDerivedFrom"^^xsd:anyURI, "http://www.w3.org/ns/prov#wasInfluencedBy"^^xsd:anyURI, "mod:sourceOntology"@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "source"@en, "source"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: D.2"@en .
+
+dc:subject
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string ;
+  dc:Description "The topic of the resource."@en ;
+  dc:Relation "http://omv.ontoware.org/2005/05/ontology#hasDomain"^^xsd:anyURI, "http://purl.org/dc/elements/1.1/subject"^^xsd:anyURI, "http://schema.org/about"^^xsd:anyURI, "http://www.w3.org/ns/dcat#theme"^^xsd:anyURI, "http://xmlns.com/foaf/0.1/topic"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2015-08-05T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "subject"@en, "sujet"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: C.1"@en .
+
+dc:title
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string .
+
+dc:valid
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf dc:date ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:dateTime ;
+  dc:Description "Date (often a range) of validity of a resource."@en ;
+  dc:Relation "http://purl.org/pav/lastUpdateOn"^^xsd:anyURI, "http://schema.org/endDate"^^xsd:anyURI, "http://www.w3.org/ns/prov#invalidatedAtTime"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "date de validité"@fr, "date valid"@en .
+
+ns0:curatedOn
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf dc:date ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:dateTime ;
+  dc:Description "Specifies the date this resource was curated. pav:curatedBy gives the agents that performed the curation."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "curated on"@en, "date de contrôle de qualité"@fr .
+
+<http://purl.org/vocab/vann/changes>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "A reference to a resource that describes changes between this version of a vocabulary and the previous."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "changements"@fr, "changes"@en .
+
+<http://purl.org/vocab/vann/example>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "A reference to a resource that provides an example of how this resource can be used."@en ;
+  dc:Relation "http://schema.org/workExample"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "example of use"@en, "exemple d'utilisation"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: G.3MIRO guidelines: G.3"@en .
+
+<http://purl.org/vocab/vann/preferredNamespacePrefix>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string ;
+  dc:Description "The preferred namespace prefix to use when using terms from this vocabulary in an XML document."@en ;
+  dc:Relation "http://identifiers.org/idot/preferredPrefix"^^xsd:anyURI, "http://www.geneontology.org/formats/oboInOwl#default-namespace"^^xsd:anyURI, "http://www.geneontology.org/formats/oboInOwl#hasDefaultNamespace"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "preferred namespace prefix"@en, "préfixe d'espace de nom préféré"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: E.11"@en .
+
+<http://purl.org/vocab/vann/preferredNamespaceUri>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "The preferred namespace URI to use when using terms from this vocabulary in an XML document."@en ;
+  dc:Relation "http://rdfs.org/ns/void#uriSpace"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "URI préféré d'espace de nom"@fr, "preferred namespace URI"@en ;
+  prov:wasInfluencedBy "MIRO guidelines: E.5"@en .
+
+<http://purl.org/vocommons/voaf#metadataVoc>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "A vocabulary(ies) that is used and/or referred to create the current ontology."@en ;
+  dc:Relation "http://purl.org/vocommons/voaf#metadataVoc"^^xsd:anyURI, "http://schema.org/schemaVersion"^^xsd:anyURI, "http://www.w3.org/ns/adms#supportedSchema"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2015-08-05T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "metadata vocabulary used"@en ;
+  prov:wasInfluencedBy "MIRO guidelines: E.4,E9"@en .
+
+void:classPartition
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "A subset of a void:Dataset that contains only the entities of a certain rdfs:Class."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "class partition"@en, "partition des classes"@fr .
+
+void:dataDump
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "An RDF dump, partial or complete, of a void:Dataset."@en ;
+  dc:Relation "http://schema.org/distribution"@en, "http://schema.org/distribution"^^xsd:anyURI, "http://usefulinc.com/ns/doap#download-mirror"@en, "http://usefulinc.com/ns/doap#download-mirror"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "data dump"@en, "lien de récupération des données"@fr .
+
+void:openSearchDescription
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "An OpenSearch description document for a free-text search service over a void:Dataset."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "open search description"@en, "point de requêtage en texte libre"@fr .
+
+void:propertyPartition
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "A subset of a void:Dataset that contains only the triples of a certain rdf:Property."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "partition des propriétés"@fr, "property partition"@en .
+
+void:rootResource
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description """This property is to provide the root class(es) of an ontology. This is automatically populated by taking the direct subclasses of owl:Thing 
+If the ontology is also defined as a unique skos:ConceptScheme, then this property should become equivalent of skos:hasTopConcept"""@en ;
+  dc:Relation "http://www.isibang.ac.in/ns/mod/1.0/rootClasses"^^xsd:anyURI, "http://www.w3.org/2004/02/skos/core#hasTopConcept"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2015-08-05T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "ressources racines"@fr, "root resource"@en .
+
+void:uriLookupEndpoint
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "A protocol endpoint for simple URI lookups for a void:Dataset."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "URI lookup endpoint"@en, "point de recherche des URI"@fr .
+
+void:uriRegexPattern
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "A regular expression that matches the URIs of a void:Dataset's entities."@en ;
+  dc:Relation "http://identifiers.org/idot/identifierPattern"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "URI regex pattern"@en, "patron d'identifiant"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: E.6"@en .
+
+schema:associatedMedia
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "A media object that encodes this CreativeWork. This property is a synonym for encoding."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "associated media"@en, "média associé"@fr .
+
+schema:award
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string ;
+  dc:Description "An award won by or for this item."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "award"@en, "prix"@fr .
+
+schema:includedInDataCatalog
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "A data catalog which contains this dataset."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "included in data catalog"@en, "indexé ou inclus dans un catalogue ou un entrepôt"@fr .
+
+schema:workTranslation
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "A pointer to the translated ontology(ies) for an existing ontology."@en ;
+  dc:Relation "http://www.isibang.ac.in/ns/mod/1.2/translation"^^xsd:anyURI, "http://www.w3.org/ns/adms#translation"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "traduction"@fr, "work translation"@en .
+
+<http://usefulinc.com/ns/doap/bugDatabase>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "Bug tracker for a project."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "base de données de bogues"@fr, "bug database"@en ;
+  prov:wasInfluencedBy "MIRO guidelines: C.3"@en .
+
+<http://usefulinc.com/ns/doap/mailingList>
+  a owl:DatatypeProperty ;
+  rdfs:domain owl:Thing ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "Mailing list home page or email address."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "liste de diffusion"@fr, "mailing list"@en ;
+  prov:wasInfluencedBy "MIRO guidelines: C.3"@en .
+
+<http://usefulinc.com/ns/doap/repository>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "Source code repository."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "entrepôt"@fr, "repository"@en ;
+  prov:wasInfluencedBy "MIRO guidelines: A.5"@en .
+
+<http://www.isibang.ac.in/ns/mod#address>
+  a owl:DatatypeProperty ;
+  rdfs:domain foaf:Agent ;
+  rdfs:range xsd:string ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "address"@en .
+
+<http://www.isibang.ac.in/ns/mod#authorProperty>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "property used to specify the author of a class (BioPortal definition)"@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "author property"@en, "propriété d'auteur des objets"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: E.7"@en .
+
+<http://www.isibang.ac.in/ns/mod#averageChildCount>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf <http://www.isibang.ac.in/ns/mod#metrics> ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:nonNegativeInteger ;
+  dc:Description "Average number of children per class (BioPortal definition)"@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "average child count"@en, "nombre moyen d'enfant par classe"@fr .
+
+<http://www.isibang.ac.in/ns/mod#browsingUI>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "The user interface (URL) where the ontology may be browsed or searched."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "browsing ui"@en, "interface de navigation"@fr .
+
+<http://www.isibang.ac.in/ns/mod#byteSize>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf <http://www.isibang.ac.in/ns/mod#metrics> ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:nonNegativeInteger ;
+  dc:Description "The byte size of an ontology."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.1"^^xsd:anyURI ;
+  ns0:importedOn "2016-09-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "byte size"@en, "taille en octets"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: E.3"@en .
+
+<http://www.isibang.ac.in/ns/mod#city>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf <http://www.isibang.ac.in/ns/mod#address> ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "city"@en .
+
+<http://www.isibang.ac.in/ns/mod#classesWithMoreThan25Children>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf <http://www.isibang.ac.in/ns/mod#metrics> ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:nonNegativeInteger ;
+  dc:Description "Number of classes that have more than 25 direct subclasses (BioPortal definition)"@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "classes with more than 25 children"@en, "nombre de classes avec plus de 25 enfants"@fr .
+
+<http://www.isibang.ac.in/ns/mod#classesWithNoDefinition>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf <http://www.isibang.ac.in/ns/mod#metrics> ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:nonNegativeInteger ;
+  dc:Description "List of classes that have no value for the definition property (BioPortal definition). For ontologies in OBO and RRF formats, the property for definition is part of the language. For OWL ontologies, the authors specify this property as part of the ontology metadata (the default is skos:definition)."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "classes with no definition"@en, "nombre de classes sans définition"@fr .
+
+<http://www.isibang.ac.in/ns/mod#classesWithOneChild>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf <http://www.isibang.ac.in/ns/mod#metrics> ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:nonNegativeInteger ;
+  dc:Description "Number of classes that have only one subclass in the is-a hierarchy (BioPortal definition)"@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "classes with one child"@en, "nombre de classes avec un seul enfant"@fr .
+
+<http://www.isibang.ac.in/ns/mod#competencyQuestion>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string ;
+  dc:Description "A set of questions made to build an ontology at the design time."@en ;
+  dc:Relation "http://www.isibang.ac.in/ns/mod/1.1/competencyQuestion"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2015-08-05T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "competency question"@en, "question de compétence"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: A.6, D.3"@en .
+
+<http://www.isibang.ac.in/ns/mod#definitionProperty>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "property used to specify the definition of a class (BioPortal definition)"@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "definition property"@en, "propriété de définition des objets"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: E.7"@en .
+
+<http://www.isibang.ac.in/ns/mod#hierarchyProperty>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "A property that is used to specify the hierarchy  (e.g. rdfs:subClassOf or skos:broader)"@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "hierarchy property"@en, "propriété de hiérarchie transitive"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: E.9"@en .
+
+<http://www.isibang.ac.in/ns/mod#maxChildCount>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf <http://www.isibang.ac.in/ns/mod#metrics> ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:nonNegativeInteger ;
+  dc:Description "Maximum number of children per class (BioPortal definition)"@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "max child count"@en, "nombre maximum d'enfant par classe"@fr .
+
+<http://www.isibang.ac.in/ns/mod#maxDepth>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf <http://www.isibang.ac.in/ns/mod#metrics> ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:nonNegativeInteger ;
+  dc:Description "Maximum depth of the hierarchy tree (BioPortal definition)"@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "max depth"@en, "profondeur maximum de la hierachie"@fr .
+
+<http://www.isibang.ac.in/ns/mod#metrics>
+  a owl:DatatypeProperty ;
+  dc:Description "A generic property to store any metrics related to the ontology."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "metrics"@en, "métriques"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: E.3"@en .
+
+<http://www.isibang.ac.in/ns/mod#numberOfDataProperties>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf <http://omv.ontoware.org/2005/05/ontology#numberOfProperties> ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:nonNegativeInteger ;
+  dc:Description "The total number of data properties in an ontology."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "Number Of Data Properties"@en, "nombre de propriétés de données"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: E.3"@en .
+
+<http://www.isibang.ac.in/ns/mod#numberOfLabels>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf <http://omv.ontoware.org/2005/05/ontology#numberOfProperties> ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:nonNegativeInteger ;
+  dc:Description "Number of defined labels for any resources in an ontology (classes, properties, etc)."@en ;
+  dc:Relation "http://www.isibang.ac.in/ns/mod/1.1/numberOfLabels"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2015-08-05T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "nombdre de noms"@fr, "number of labels"@en ;
+  prov:wasInfluencedBy "MIRO guidelines: E.3"@en .
+
+<http://www.isibang.ac.in/ns/mod#numberOfObjectProperties>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf <http://omv.ontoware.org/2005/05/ontology#numberOfProperties> ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:nonNegativeInteger ;
+  dc:Description "The total number of object properties in an ontology."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "Number Of Object Properties"@en, "nombre de propriétés d'objet"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: E.3"@en .
+
+<http://www.isibang.ac.in/ns/mod#obsoleteParent>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "property used to specify the root of an obsolete branch in the ontology"@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "racine de la branche obsolète"@fr, "root of obsolete branch"@en .
+
+<http://www.isibang.ac.in/ns/mod#obsoleteProperty>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "property used to specify an obsolete class"@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "obsolete property"@en, "propriété d'obsolescence des objets"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: E.7"@en .
+
+<http://www.isibang.ac.in/ns/mod#postalCode>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf <http://www.isibang.ac.in/ns/mod#address> ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "postal code"@en .
+
+<http://www.isibang.ac.in/ns/mod#prefLabelProperty>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "property used to specify preferred name (BioPortal definition)"@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "pref label property"@en, "propriété de nom préféré des objets"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: E.7"@en .
+
+<http://www.isibang.ac.in/ns/mod#sampleQueries>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string ;
+  dc:Description "A set of queries (may be SPARQL, DL Queries) that are provided along with an ontology."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2015-08-05T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "exemples de requêtes"@fr, "sample queries"@en .
+
+<http://www.isibang.ac.in/ns/mod#state>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf <http://www.isibang.ac.in/ns/mod#address> ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "state"@en .
+
+<http://www.isibang.ac.in/ns/mod#streetAddress>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf <http://www.isibang.ac.in/ns/mod#address> ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "street address"@en .
+
+<http://www.isibang.ac.in/ns/mod#synonymProperty>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "property used to specify synonyms (BioPortal definition)"@en ;
+  dc:Relation "http://www.geneontology.org/formats/oboInOwl#hasSynonymType"^^xsd:anyURI, "http://www.geneontology.org/formats/oboInOwl#synonymtypedef"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "propriété de synonyme des objets"@fr, "synonym property"@en ;
+  prov:wasInfluencedBy "MIRO guidelines: E.7"@en .
+
+rdfs:Comment
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string ;
+  dc:Description "Is used to provide a human-readable description of a resource."@en ;
+  dc:Relation "http://omv.ontoware.org/2005/05/ontology#notes"^^xsd:anyURI, "http://purl.org/dc/terms/description"^^xsd:anyURI, "http://www.w3.org/ns/adms#versionNotes"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "comment"@en, "notes ou commentaires"@fr .
+
+owl:Deprecated
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:boolean ;
+  dc:Description "An annotation with the owl:deprecated annotation property and the value equal to \"true\"^^xsd:boolean can be used to specify that an IRI is deprecated."@en ;
+  dc:Relation "http://identifiers.org/idot/obsolete"^^xsd:anyURI, "http://www.isibang.ac.in/ns/mod/1.1/obsolete"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "deprecated"@en, "obsolète"@fr .
+
+owl:PriorVersion
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "This identifies the specified ontology as a prior version of the containing ontology."@en ;
+  dc:Relation "http://kannel.open.ac.uk/ontology#priorVersion"^^xsd:anyURI, "http://omv.ontoware.org/2005/05/ontology#hasPriorVersion"^^xsd:anyURI, "http://purl.org/dc/terms/isVersionOf"^^xsd:anyURI, "http://www.w3.org/ns/adms#prev"^^xsd:anyURI, "https://www.w3.org/ns/prov#wasRevisionOf"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "prior version"@en, "version précédente"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: A.5"@en .
+
+owl:VersionIRI
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "The property that identifies the version IRI of an ontology."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "IRI de la version"@fr, "version iri"@en ;
+  prov:wasInfluencedBy "MIRO guidelines: A.4"@en .
+
+owl:VersionInfo
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string ;
+  dc:Description "The version of the released ontology."@en ;
+  dc:Relation "http://omv.ontoware.org/2005/05/ontology#version"^^xsd:anyURI, "http://purl.org/pav/version"^^xsd:anyURI, "http://usefulinc.com/ns/doap/release"^^xsd:anyURI, "http://www.geneontology.org/formats/oboInOwl#data-version"^^xsd:anyURI, "http://www.geneontology.org/formats/oboInOwl#hasVersion"^^xsd:anyURI, "http://www.isibang.ac.in/ns/mod/1.1/version"^^xsd:anyURI, "https://schema.org/version"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "information de version"@fr, "version info"@en ;
+  prov:wasInfluencedBy "MIRO guidelines: A.1"@en .
+
+owl:imports
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "References to another OWL ontology containing definitions, whose meaning is considered to be part of the meaning of the importing ontology."@en ;
+  dc:Relation "http://omv.ontoware.org/2005/05/ontology#useImports"^^xsd:anyURI, "http://purl.org/dc/terms/requires"^^xsd:anyURI, "http://purl.org/vocommons/voaf#extends"^^xsd:anyURI, "http://rdfs.org/ns/void#vocabulary"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "importe"@fr, "imports"@en ;
+  prov:wasInfluencedBy "MIRO guidelines: E.4"@en .
+
+skos:hiddenLabel
+  a owl:DatatypeProperty ;
+  rdfs:domain owl:Thing ;
+  rdfs:range xsd:string ;
+  dc:Description "Hidden or past name"@en, "The hidden labels are useful when a user is interacting with a knowledge organization system via a text-based search function. The user may, for example, enter mis-spelled words when trying to find a relevant concept. If the mis-spelled query can be matched against a hidden label, the user will be able to find the relevant concept, but the hidden label won't otherwise be visible to the user (so further mistakes aren't encouraged)."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "hidden label"@en, "nom caché ou ancien"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: A.1"@en .
+
+sd:endpoint
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "Relates an instance of sd:Service to a SPARQL endpoint that implements the SPARQL Protocol service for the service. The object of the sd:endpoint property is an IRI."@en ;
+  dc:Relation "http://rdfs.org/ns/void#sparqlEndpoint"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "endpoint SPARQL"@en, "point de requêtage SPARQL"@fr .
+
+foaf:depiction
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "A depiction of some thing."@en ;
+  dc:Relation "http://schema.org/image"^^xsd:anyURI, "http://usefulinc.com/ns/doap#screenshots"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "depiction"@en, "représentation"@fr .
+
+foaf:firstName
+  a owl:DatatypeProperty ;
+  rdfs:domain foaf:Person ;
+  rdfs:range xsd:string ;
+  dc:Description "The first name of a person."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "first name"@en .
+
+foaf:homepage
+  a owl:DatatypeProperty ;
+  rdfs:domain owl:Thing ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "An unambiguous reference to the resource within a given context."@en ;
+  dc:Relation "http://creativecommons.org/ns#attributionURL"^^xsd:anyURI, "http://schema.org/mainEntityOfPage"^^xsd:anyURI, "http://usefulinc.com/ns/doap#blog"^^xsd:anyURI, "http://www.isibang.ac.in/ns/mod/1.1/homepage"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2015-08-05T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "homepage"@en, "page web"@fr ;
+  prov:wasInfluencedBy "MIRO guidelines: C.3"@en .
+
+foaf:lastName
+  a owl:DatatypeProperty ;
+  rdfs:domain foaf:Agent ;
+  rdfs:range xsd:string ;
+  dc:Description "The last name of a person."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "last name"@en .
+
+foaf:logo
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "A logo representing some thing."@en ;
+  dc:Relation "http://schema.org/logo"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "logo"@en, "logo"@fr .
+
+foaf:mbox
+  a owl:DatatypeProperty ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "A personal mailbox, ie. an Internet mailbox associated with exactly one owner, the first owner of this mailbox. This is a 'static inverse functional property', in that there is (across time and change) at most one individual that ever has any particular value for foaf:mbox."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "personal mailbox"@en .
+
+foaf:name
+  a owl:DatatypeProperty ;
+  rdfs:domain owl:Thing ;
+  rdfs:range xsd:string ;
+  dc:Description "A name for some thing."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "name"@en .
+
+foaf:page
+  a owl:DatatypeProperty ;
+  rdfs:domain owl:Thing ;
+  rdfs:range xsd:anyURI ;
+  dc:Description "A link to the documentation page on a thing."@en ;
+  dc:Relation "http://omv.ontoware.org/2005/05/ontology#documentation"^^xsd:anyURI, "http://purl.org/vocab/vann/usageNote"^^xsd:anyURI, "http://usefulinc.com/ns/doap/wiki"^^xsd:anyURI, "http://www.isibang.ac.in/ns/mod/1.1/document"^^xsd:anyURI, "http://www.w3.org/2000/01/rdf-schema#seeAlso"^^xsd:anyURI, "http://www.w3.org/ns/dcat#llandingPage"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "documentation"@fr, "page"@en ;
+  prov:wasInfluencedBy "MIRO guidelines: C.3,F.1"@en .
+
+foaf:phone
+  a owl:DatatypeProperty ;
+  rdfs:domain foaf:Agent ;
+  rdfs:range xsd:string ;
+  dc:Description "A phone, specified using fully qualified telelephone number."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "phone"@en .
+
+<voaf:toDoList>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string ;
+  dc:Description "Describes future tasks planned by a resource curator. This property is primarily intended to be used for vocabularies or datasets, but the domain is left open, it can be used for any resource. Use iCalendar Vtodo class and its properties to further describe the task calendar, priorities etc."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "liste des choses à faire"@fr, "to do list"@en .
+
+<http://omv.ontoware.org/2005/05/ontology#FormalityLevel>
+  a owl:Class ;
+  dc:Description "The level of formality of an ontology."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "Formality level"@en .
+
+<http://omv.ontoware.org/2005/05/ontology#KnowledgeRepresentationParadigm>
+  a owl:Class ;
+  dc:Description "Information about a knowledge representation paradigm a particular language adheres to."@en ;
+  dc:Relation "http://purl.org/dc/terms/conformsTo"^^xsd:anyURI ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "Knowledge representation paradigm"@en .
+
+<http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology>
+  a owl:Class ;
+  dc:Description "Information about the ontology engineering methodology."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "Ontology engineering methodology" .
+
+<http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringTool>
+  a owl:Class ;
+  dc:Description "A tool used to create the ontology."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "Ontology engineering tool" .
+
+<http://omv.ontoware.org/2005/05/ontology#OntologyLanguage>
+  a owl:Class ;
+  dc:Description "Information about the language in which the ontology is implemented."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "Ontology language" .
+
+<http://omv.ontoware.org/2005/05/ontology#OntologySyntax>
+  a owl:Class ;
+  dc:Description "A syntax that is used to implement an ontology. Example includes RDF/XML, Notation3, n-triples, RDFa and Turtle."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "Ontology syntax" .
+
+<http://omv.ontoware.org/2005/05/ontology#OntologyType>
+  a owl:Class ;
+  dc:Description "This class subsumes types of ontologies according to well-known classifications in the Ontology Engineering literature."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "Ontology type" .
+
+dc:Frequency
+  a owl:Class ;
+  dc:Description "A rate at which something recurs."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "Frequency"@en .
+
+dc:LicenseDocument
+  a owl:Class ;
+  rdfs:subClassOf dc:RightsStatement ;
+  dc:Description "A legal document giving official permission to do something with a Resource."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"@en ;
+  rdfs:label "License document" .
+
+dc:MethodOfAccrual
+  a owl:Class ;
+  dc:Description "A method by which resources are added to a collection."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "Method of accrual"@en .
+
+dc:Policy
+  a owl:Class ;
+  dc:Description "A plan or course of action by an authority, intended to influence and determine decisions, actions, and other matters."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "Policy"@en .
+
+dc:RightsStatement
+  a owl:Class ;
+  dc:Description "A statement about the intellectual property rights (IPR) held in or over a Resource, a legal document giving official permission to do something with a resource, or a statement about access rights."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "Rights Statement"@en .
+
+schema:Comment
+  a owl:Class ;
+  dc:Description "Comments, typically from users."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"@en ;
+  rdfs:label "Comment"@en .
+
+<http://www.isibang.ac.in/ns/mod#Analytics>
+  a owl:Class ;
+  dc:Description "This property shall be used to store any analytics for an ontology. E.g., number of visits an ontology received in a portal, number of downloads, etc."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.4"^^xsd:anyURI ;
+  ns0:importedOn "2018-08-02T00:00:00+00:00"@en ;
+  rdfs:label "Analytics"@en .
+
+<http://www.isibang.ac.in/ns/mod#Evaluation>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#evaluationAuthor> ;
+    owl:allValuesFrom foaf:Agent
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#evaluationBasedOnCriteria> ;
+    owl:allValuesFrom <http://www.isibang.ac.in/ns/mod#EvaluationCriteria>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#evaluationMethod> ;
+    owl:allValuesFrom <http://www.isibang.ac.in/ns/mod#EvaluationMethod>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#evaluationAuthor> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#evaluationBasedOnCriteria> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#evaluationMethod> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ] ;
+  dc:Description "The results of evaluating an ontology. An ontology can have more than one evaluations."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.1"^^xsd:anyURI ;
+  ns0:importedOn "2016-09-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "Evaluation"@en .
+
+<http://www.isibang.ac.in/ns/mod#EvaluationCriteria>
+  a owl:Class ;
+  dc:Description "The evaluation criterias, essentially the various aspects that are used in validating the quality of an ontology. These aspects may include for example, accuracy, adaptability, accessibility, clarity, completeness, computational efficiency, conciseness, informativeness, uniqueness, relevancy, reliability, usefulness and organizational fitness."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.1"^^xsd:anyURI ;
+  ns0:importedOn "2016-09-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "Evaluation criteria"@en .
+
+<http://www.isibang.ac.in/ns/mod#EvaluationMethod>
+  a owl:Class ;
+  dc:Description "The methodology that is followed in evaluating an ontology, e.g., application based approach, assessment by human, data driven approach and golden standard."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.1"^^xsd:anyURI ;
+  ns0:importedOn "2016-09-02T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "Evaluation method"@en .
+
+<http://www.isibang.ac.in/ns/mod#Group>
+  a owl:Class ;
+  dc:Description "A group of ontologies that the ontology is usually considered into."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2017-07-06T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "Group" .
+
+<http://www.isibang.ac.in/ns/mod#Ontology>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#conformsToKnowledgeRepresentationParadigm> ;
+    owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#KnowledgeRepresentationParadigm>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#hasFormalityLevel> ;
+    owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#FormalityLevel>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#hasOntologyLanguage> ;
+    owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#OntologyLanguage>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#hasOntologySyntax> ;
+    owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#OntologySyntax>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#isOfType> ;
+    owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#OntologyType>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#usedOntologyEngineeringMethodology> ;
+    owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#usedOntologyEngineeringTool> ;
+    owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringTool>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty dc:accrualPeriodicity ;
+    owl:allValuesFrom dc:Frequency
+  ], [
+    a owl:Restriction ;
+    owl:onProperty dc:creator ;
+    owl:allValuesFrom foaf:Agent
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://purl.org/vocommons/voaf#specializes> ;
+    owl:allValuesFrom <http://www.isibang.ac.in/ns/mod#Ontology>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty schema:translationOfWork ;
+    owl:allValuesFrom <http://www.isibang.ac.in/ns/mod#Ontology>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#hasEvaluation> ;
+    owl:allValuesFrom <http://www.isibang.ac.in/ns/mod#Evaluation>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#usedOntologyEngineeringMethodology> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#usedOntologyEngineeringTool> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty dc:creator ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#conformsToKnowledgeRepresentationParadigm> ;
+    owl:cardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#hasFormalityLevel> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#hasOntologySyntax> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#isOfType> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty dc:accrualPeriodicity ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://purl.org/vocommons/voaf#specializes> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty schema:translationOfWork ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://identifiers.org/idot/exampleIdentifier> ;
+    owl:allValuesFrom xsd:string
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#acronym> ;
+    owl:allValuesFrom xsd:string
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#designedForOntologyTask> ;
+    owl:allValuesFrom xsd:string
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#keyClasses> ;
+    owl:allValuesFrom xsd:string
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#keywords> ;
+    owl:allValuesFrom xsd:string
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#numberOfAxioms> ;
+    owl:allValuesFrom xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#numberOfClasses> ;
+    owl:allValuesFrom xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#numberOfIndividuals> ;
+    owl:allValuesFrom xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#resourceLocator> ;
+    owl:allValuesFrom xsd:anyURI
+  ], [
+    a owl:Restriction ;
+    owl:onProperty dc:abstract ;
+    owl:allValuesFrom xsd:string
+  ], [
+    a owl:Restriction ;
+    owl:onProperty dc:bibliographicCitation ;
+    owl:allValuesFrom xsd:string
+  ], [
+    a owl:Restriction ;
+    owl:onProperty dc:created ;
+    owl:allValuesFrom xsd:dateTime
+  ], [
+    a owl:Restriction ;
+    owl:onProperty dc:dateSubmitted ;
+    owl:allValuesFrom xsd:dateTime
+  ], [
+    a owl:Restriction ;
+    owl:onProperty dc:isFormatOf ;
+    owl:allValuesFrom xsd:anyURI
+  ], [
+    a owl:Restriction ;
+    owl:onProperty dc:language ;
+    owl:allValuesFrom xsd:anyURI
+  ], [
+    a owl:Restriction ;
+    owl:onProperty dc:title ;
+    owl:allValuesFrom xsd:string
+  ], [
+    a owl:Restriction ;
+    owl:onProperty dc:valid ;
+    owl:allValuesFrom xsd:dateTime
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://purl.org/vocab/vann/preferredNamespacePrefix> ;
+    owl:allValuesFrom xsd:string
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://purl.org/vocab/vann/preferredNamespaceUri> ;
+    owl:allValuesFrom xsd:anyURI
+  ], [
+    a owl:Restriction ;
+    owl:onProperty void:classPartition ;
+    owl:allValuesFrom xsd:anyURI
+  ], [
+    a owl:Restriction ;
+    owl:onProperty void:propertyPartition ;
+    owl:allValuesFrom xsd:anyURI
+  ], [
+    a owl:Restriction ;
+    owl:onProperty void:rootResource ;
+    owl:allValuesFrom xsd:anyURI
+  ], [
+    a owl:Restriction ;
+    owl:onProperty void:uriRegexPattern ;
+    owl:allValuesFrom xsd:anyURI
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#authorProperty> ;
+    owl:allValuesFrom xsd:anyURI
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#averageChildCount> ;
+    owl:allValuesFrom xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#byteSize> ;
+    owl:allValuesFrom xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#classesWithMoreThan25Children> ;
+    owl:allValuesFrom xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#classesWithNoDefinition> ;
+    owl:allValuesFrom xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#classesWithOneChild> ;
+    owl:allValuesFrom xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#definitionProperty> ;
+    owl:allValuesFrom xsd:anyURI
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#hierarchyProperty> ;
+    owl:allValuesFrom xsd:anyURI
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#maxChildCount> ;
+    owl:allValuesFrom xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#maxDepth> ;
+    owl:allValuesFrom xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#numberOfDataProperties> ;
+    owl:allValuesFrom xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#numberOfLabels> ;
+    owl:allValuesFrom xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#numberOfObjectProperties> ;
+    owl:allValuesFrom xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#obsoleteProperty> ;
+    owl:allValuesFrom xsd:anyURI
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#prefLabelProperty> ;
+    owl:allValuesFrom xsd:anyURI
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#synonymProperty> ;
+    owl:allValuesFrom xsd:anyURI
+  ], [
+    a owl:Restriction ;
+    owl:onProperty foaf:homepage ;
+    owl:allValuesFrom xsd:anyURI
+  ], [
+    a owl:Restriction ;
+    owl:onProperty foaf:logo ;
+    owl:allValuesFrom xsd:anyURI
+  ], [
+    a owl:Restriction ;
+    owl:onProperty owl:ontologyIRI ;
+    owl:allValuesFrom xsd:anyURI
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#designedForOntologyTask> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#keyClasses> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#keywords> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty dc:language ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty dc:title ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty void:rootResource ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#resourceLocator> ;
+    owl:cardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty dc:created ;
+    owl:cardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty dc:dateSubmitted ;
+    owl:cardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://identifiers.org/idot/exampleIdentifier> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#acronym> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#numberOfAxioms> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#numberOfClasses> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#numberOfIndividuals> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty dc:abstract ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty dc:bibliographicCitation ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty dc:isFormatOf ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty dc:valid ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://purl.org/vocab/vann/preferredNamespacePrefix> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://purl.org/vocab/vann/preferredNamespaceUri> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty void:classPartition ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty void:propertyPartition ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty void:uriRegexPattern ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#authorProperty> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#averageChildCount> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#byteSize> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#classesWithMoreThan25Children> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#classesWithNoDefinition> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#classesWithOneChild> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#definitionProperty> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#hierarchyProperty> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#maxChildCount> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#maxDepth> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#numberOfDataProperties> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#numberOfLabels> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#numberOfObjectProperties> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#obsoleteProperty> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#prefLabelProperty> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.isibang.ac.in/ns/mod#synonymProperty> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty foaf:homepage ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty foaf:logo ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty owl:ontologyIRI ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ] ;
+  dc:Description "By ontology, we not only refers the OWL structure that respects all the conditions to be referred as a fully formalized ontology but also every ontology like structure that formalizes some knowledge (e.g., thesaurus, taxonomy, metadata vocabulary)."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "Ontology" .
+
+prov:Activity
+  a owl:Class ;
+  dc:Description "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.2"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "Activity" .
+
+foaf:Agent
+  a owl:Class ;
+  dc:Description "An agent (eg. person, group, software or physical artifact)."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "Agent"@en .
+
+foaf:Organization
+  a owl:Class ;
+  rdfs:subClassOf foaf:Agent ;
+  dc:Description "An organization."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "Organization"@en .
+
+foaf:Person
+  a owl:Class ;
+  rdfs:subClassOf foaf:Agent ;
+  dc:Description "A person."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "Person"@en .
+
+foaf:Project
+  a owl:Class ;
+  dc:Description "A project (a collective endeavour of some kind)."@en ;
+  ns0:derivedFrom "http://www.isibang.ac.in/ns/mod/1.0"^^xsd:anyURI ;
+  ns0:importedOn "2018-04-25T00:00:00+00:00"^^xsd:dateTime ;
+  rdfs:label "Project"@en .
+
+<http://www.isibang.ac.in/ns/mod#Accuracy> a owl:NamedIndividual, <http://www.isibang.ac.in/ns/mod#EvaluationCriteria> .
+<http://www.isibang.ac.in/ns/mod#Adaptability> a owl:NamedIndividual, <http://www.isibang.ac.in/ns/mod#EvaluationCriteria> .
+<http://www.isibang.ac.in/ns/mod#Apache> a owl:NamedIndividual, dc:LicenseDocument .
+<http://www.isibang.ac.in/ns/mod#ApplicationOntology> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#OntologyType> .
+<http://www.isibang.ac.in/ns/mod#Automatic> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology> .
+<http://www.isibang.ac.in/ns/mod#Consuming> a owl:NamedIndividual, prov:Activity .
+<http://www.isibang.ac.in/ns/mod#CoreOntology> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#OntologyType> .
+<http://www.isibang.ac.in/ns/mod#CreativeCommonsAttribution3.0>
+  a owl:NamedIndividual, dc:LicenseDocument ;
+  foaf:homepage "https://creativecommons.org/licenses/by/3.0/"^^xsd:anyURI .
+
+<http://www.isibang.ac.in/ns/mod#CreativeCommonsAttribution4.0> a owl:NamedIndividual, dc:LicenseDocument .
+<http://www.isibang.ac.in/ns/mod#Cyc> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology> .
+<http://www.isibang.ac.in/ns/mod#DescriptionLogics> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#KnowledgeRepresentationParadigm> .
+<http://www.isibang.ac.in/ns/mod#DomainOntology> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#OntologyType> .
+<http://www.isibang.ac.in/ns/mod#FirstOrderLogic> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#KnowledgeRepresentationParadigm> .
+<http://www.isibang.ac.in/ns/mod#Formal> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#FormalityLevel> .
+<http://www.isibang.ac.in/ns/mod#Frame> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#KnowledgeRepresentationParadigm> .
+<http://www.isibang.ac.in/ns/mod#GNUGeneralPublicLicense> a owl:NamedIndividual, dc:LicenseDocument .
+<http://www.isibang.ac.in/ns/mod#GeneralOntology> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#OntologyType> .
+<http://www.isibang.ac.in/ns/mod#Informal> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#FormalityLevel> .
+<http://www.isibang.ac.in/ns/mod#MODApproach> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology> .
+<http://www.isibang.ac.in/ns/mod#MethOntology> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology> .
+<http://www.isibang.ac.in/ns/mod#Modifying> a owl:NamedIndividual, prov:Activity .
+<http://www.isibang.ac.in/ns/mod#N-Triples> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#OntologySyntax> .
+<http://www.isibang.ac.in/ns/mod#Notation3> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#OntologySyntax> .
+<http://www.isibang.ac.in/ns/mod#OBO> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#OntologyLanguage> .
+<http://www.isibang.ac.in/ns/mod#OBOEdit>
+  a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringTool> ;
+  foaf:homepage "http://oboedit.org/"^^xsd:anyURI .
+
+<http://www.isibang.ac.in/ns/mod#OWL> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#OntologyLanguage> .
+<http://www.isibang.ac.in/ns/mod#OWL-DL> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#OntologyLanguage> .
+<http://www.isibang.ac.in/ns/mod#OWL-Full> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#OntologyLanguage> .
+<http://www.isibang.ac.in/ns/mod#OWL-Lite> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#OntologyLanguage> .
+<http://www.isibang.ac.in/ns/mod#ProcessOntology> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#OntologyType> .
+<http://www.isibang.ac.in/ns/mod#Processing> a owl:NamedIndividual, prov:Activity .
+<http://www.isibang.ac.in/ns/mod#PropositionalLogic> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#KnowledgeRepresentationParadigm> .
+<http://www.isibang.ac.in/ns/mod#Protege> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringTool> .
+<http://www.isibang.ac.in/ns/mod#Relocating> a owl:NamedIndividual, prov:Activity .
+<http://www.isibang.ac.in/ns/mod#SKOS> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#OntologyLanguage> .
+<http://www.isibang.ac.in/ns/mod#Schema> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#FormalityLevel> .
+<http://www.isibang.ac.in/ns/mod#Semi-formal> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#FormalityLevel> .
+<http://www.isibang.ac.in/ns/mod#Semi-informal> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#FormalityLevel> .
+<http://www.isibang.ac.in/ns/mod#ServiceOntology> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#OntologyType> .
+<http://www.isibang.ac.in/ns/mod#TaskOntology> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#OntologyType> .
+<http://www.isibang.ac.in/ns/mod#Taxonomy> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#FormalityLevel> .
+<http://www.isibang.ac.in/ns/mod#TermGenie1.0> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringTool> .
+<http://www.isibang.ac.in/ns/mod#Terminology> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#FormalityLevel> .
+<http://www.isibang.ac.in/ns/mod#Thesaurus> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#FormalityLevel> .
+<http://www.isibang.ac.in/ns/mod#Transforming> a owl:NamedIndividual, prov:Activity .
+<http://www.isibang.ac.in/ns/mod#Turtle> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#OntologySyntax> .
+<http://www.isibang.ac.in/ns/mod#UMLS> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#OntologyLanguage> .
+<http://www.isibang.ac.in/ns/mod#Vocabulary> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#FormalityLevel> .
+<http://www.isibang.ac.in/ns/mod#YAMO> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology> .
+<http://www.isibang.ac.in/ns/mod#OWL/XML> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#OntologySyntax> .
+<http://www.isibang.ac.in/ns/mod#RDF/XML> a owl:NamedIndividual, <http://omv.ontoware.org/2005/05/ontology#OntologySyntax> .

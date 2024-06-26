@@ -1,0 +1,263 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://www.isibang.ac.in/ns/mod>
+  a owl:Ontology ;
+  owl:versionIRI <http://www.isibang.ac.in/ns/mod/2.0> .
+
+<http://omv.ontoware.org/2005/05/ontology#conformsToKnowledgeRepresentationParadigm>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://omv.ontoware.org/2005/05/ontology#KnowledgeRepresentationParadigm> .
+
+<http://omv.ontoware.org/2005/05/ontology#endorsedBy>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range foaf:Agent .
+
+<http://omv.ontoware.org/2005/05/ontology#hasFormalityLevel>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://omv.ontoware.org/2005/05/ontology#FormalityLevel> .
+
+<http://omv.ontoware.org/2005/05/ontology#hasOntologyLanguage>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://omv.ontoware.org/2005/05/ontology#OntologyLanguage> .
+
+<http://omv.ontoware.org/2005/05/ontology#usedOntologyEngineeringMethodology>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology> .
+
+<http://omv.ontoware.org/2005/05/ontology#usedOntologyEngineeringTool>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringTool> .
+
+dc11:contributor
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range foaf:Agent .
+
+dc11:creator
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range foaf:Agent .
+
+dc11:format
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range dc11:FileFormat .
+
+dc11:publisher
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range foaf:Organization .
+
+dc11:type
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://omv.ontoware.org/2005/05/ontology#OntologyType> .
+
+dc:accessRights
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range dc:RightsStatement .
+
+dc:hasPart
+  a owl:ObjectProperty ;
+  owl:inverseOf dc:isPartOf .
+
+dc:isPartOf
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range <http://www.isibang.ac.in/ns/mod#Ontology> .
+
+dc:rightsHolder
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range foaf:Agent .
+
+<http://www.isibang.ac.in/ns/mod#contactPoint>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range foaf:Person .
+
+<http://www.isibang.ac.in/ns/mod#ontologyInUse>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range foaf:Project .
+
+foaf:fundedBy a owl:ObjectProperty .
+<http://omv.ontoware.org/2005/05/ontology#designedForOntologyTask>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string .
+
+<http://omv.ontoware.org/2005/05/ontology#keywords>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string .
+
+<http://omv.ontoware.org/2005/05/ontology#knownUsage> a owl:DatatypeProperty .
+<http://omv.ontoware.org/2005/05/ontology#notes> a owl:DatatypeProperty .
+<http://omv.ontoware.org/2005/05/ontology#numberOfAxioms> a owl:DatatypeProperty .
+<http://omv.ontoware.org/2005/05/ontology#numberOfClasses>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:nonNegativeInteger .
+
+<http://omv.ontoware.org/2005/05/ontology#numberOfIndividuals>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:nonNegativeInteger .
+
+<http://omv.ontoware.org/2005/05/ontology#numberOfProperties>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:nonNegativeInteger .
+
+<http://omv.ontoware.org/2005/05/ontology#status>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string .
+
+<http://omv.ontoware.org/2005/05/ontology#omv:acronym>
+  a owl:DatatypeProperty ;
+  rdfs:domain owl:Thing ;
+  rdfs:range xsd:string .
+
+dc11:coverage
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string .
+
+dc11:date
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string .
+
+dc11:identifier
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI .
+
+dc11:title
+  a owl:DatatypeProperty ;
+  rdfs:domain owl:Thing ;
+  rdfs:range xsd:string .
+
+dc:created
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf dc11:date .
+
+dc:dateSubmitted
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf dc11:date .
+
+dc:description
+  a owl:DatatypeProperty ;
+  rdfs:domain owl:Thing ;
+  rdfs:range xsd:string .
+
+dc:hasVersion
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI .
+
+dc:license
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string .
+
+dc:modified
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf dc11:date .
+
+dc:valid
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf dc11:date .
+
+<http://www.isibang.ac.in/ns/mod#numberOfDataProperties>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf <http://omv.ontoware.org/2005/05/ontology#numberOfProperties> .
+
+<http://www.isibang.ac.in/ns/mod#numberOfObjectProperties>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf <http://omv.ontoware.org/2005/05/ontology#numberOfProperties> .
+
+<http://www.isibang.ac.in/ns/mod#rootClasses>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string .
+
+owl:imports
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:anyURI .
+
+owl:versionInfo
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string .
+
+skos:altLabel
+  a owl:DatatypeProperty ;
+  rdfs:domain owl:Thing ;
+  rdfs:range xsd:string .
+
+foaf:homepage
+  a owl:DatatypeProperty ;
+  rdfs:domain owl:Thing ;
+  rdfs:range xsd:anyURI .
+
+foaf:page
+  a owl:DatatypeProperty ;
+  rdfs:domain owl:Thing ;
+  rdfs:range xsd:anyURI .
+
+foaf:primaryTopic
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.isibang.ac.in/ns/mod#Ontology> ;
+  rdfs:range xsd:string .
+
+<http://omv.ontoware.org/2005/05/ontology#FormalityLevel> a owl:Class .
+<http://omv.ontoware.org/2005/05/ontology#KnowledgeRepresentationParadigm> a owl:Class .
+<http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology> a owl:Class .
+<http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringTool> a owl:Class .
+<http://omv.ontoware.org/2005/05/ontology#OntologyLanguage> a owl:Class .
+<http://omv.ontoware.org/2005/05/ontology#OntologyType> a owl:Class .
+dc11:FileFormat a owl:Class .
+dc:RightsStatement a owl:Class .
+<http://www.isibang.ac.in/ns/mod#Evaluation> a owl:Class .
+<http://www.isibang.ac.in/ns/mod#EvaluationCriteria> a owl:Class .
+<http://www.isibang.ac.in/ns/mod#Ontology>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty dc11:creator ;
+    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:onClass foaf:Agent
+  ], [
+    a owl:Restriction ;
+    owl:onProperty dc11:title ;
+    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:onDataRange owl:rational
+  ] .
+
+foaf:Agent a owl:Class .
+foaf:Organization
+  a owl:Class ;
+  rdfs:subClassOf foaf:Agent .
+
+foaf:Person
+  a owl:Class ;
+  rdfs:subClassOf foaf:Agent .
+
+foaf:Project a owl:Class .
