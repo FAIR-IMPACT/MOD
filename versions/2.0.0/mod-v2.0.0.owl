@@ -1,0 +1,2247 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:ns0="https://w3id.org/mod#"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:cc="http://creativecommons.org/ns#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:ns1="http://www.w3.org/ns/dca#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ns2="http://omv.ontoware.org/2005/05/ontology#"
+         xmlns:ns3="http://purl.org/pav/"
+         xmlns:ns4="https://vocab.org/vann/"
+         xmlns:prov="http://www.w3.org/ns/prov#"
+         xmlns:void="http://rdfs.org/ns/void#"
+         xmlns:ns5="http://identifiers.org/idot/"
+         xmlns:ns6="https://schema.org/"
+         xmlns:doap="http://usefulinc.com/ns/doap#"
+         xmlns:ns7="http://purl.org/dc/dcam/">
+
+  <owl:Ontology rdf:about="https://w3id.org/mod">
+    <ns0:acronym>MOD</ns0:acronym>
+    <dc:title xml:lang="en">MOD: Metadata for Ontology Description and publication</dc:title>
+    <dc:title xml:lang="fr">MOD: Metadonnées pour la Description et la publication d'Ontologies</dc:title>
+    <dc:alternative xml:lang="en">MOD Vocabulary</dc:alternative>
+    <dc:alternative xml:lang="fr">Vocabulaire MOD</dc:alternative>
+    <dc:alternative xml:lang="en">MOD Ontology Metadata model</dc:alternative>
+    <dc:alternative xml:lang="fr">Modèle de métadonnées d'ontologie MOD</dc:alternative>
+    <skos:hiddenLabel xml:lang="en">MOD-Ontology</skos:hiddenLabel>
+    <owl:ontologyIRI rdf:resource="https://w3id.org/mod"/>
+    <owl:versionIRI rdf:resource="https://w3id.org/mod/2.0"/>
+    <owl:versionInfo>2.0.1</owl:versionInfo>
+    <ns0:status>alpha</ns0:status>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:deprecated>
+    <dc:license rdf:resource="https://creativecommons.org/licenses/by/4.0"/>
+    <ns0:hasRepresentationLanguage rdf:resource="http://omv.ontoware.org/2005/05/ontology#OWL"/>
+    <ns0:hasFormalityLevel rdf:resource="http://omv.ontoware.org/2005/05/ontology#Vocabulary"/>
+    <ns0:hasSyntax rdf:resource="http://www.w3.org/ns/formats/Turtle"/>
+    <dc:language rdf:resource="http://lexvo.org/id/iso639-3/eng"/>
+    <dc:language rdf:resource="http://lexvo.org/id/iso639-3/fra"/>
+    <dc:description xml:lang="en">MOD (Metadata for Ontology Description and publication) is a project to define a standard way to capture metadata descriptions for ontologies or semantic resources/artefacts in general (thesaurus, terminologies, vocabularies, etc.). The MOD OWL file can be used to create knowledge bases consisting of metadata records of ontologies/vocabularies as instances. The MOD vocabulary can also be used to define specific profiles for recommended metadata properties (e.g., H2020 project FAIRsFAIR semantic artefact minimum metadata profile). Users can go through MOD and pickup the required properties to describe their ontology.</dc:description>
+    <dc:description xml:lang="fr">MOD (Metadonnées pour la Description et la publication d'Ontologie) est un projet visant à définir un moyen standard pour capturer des descriptions de métadonnées pour les ontologies ou les ressources/artefacts sémantiques en général (thésaurus, terminologies, vocabulaires, etc.). Le fichier MOD OWL peut être utilisé pour créer des bases de connaissances composées d’instances d’ontologies / vocabulaires décrites avec MOD. Le vocabulaire MOD peut également être utilisé pour définir des profils de métadonnées (e.g., le profil de métadonnées minimale pour les artefacts sémanttique du projet H2020 FAIRsFAIR). Les utilisateurs peuvent consulter la spécification et récupérer les propriétés requises pour décrire leur ontologie.</dc:description>
+    <dc:abstract xml:lang="en">MOD provides a set of properties which can be used by ontology developers, ontology libraries (e.g., ontology registry, ontology repository, ontology portal), to describe and publish ontologies. The enriched description of ontologies, in turn, will help users to search, discover, identify and select ontologies.</dc:abstract>
+    <dc:abstract xml:lang="fr">MOD fournit un ensemble de propriétés pouvant être utilisées par les développeurs d’ontologies ou les portails d’ontologies (registre, bibliothèques), pour décrire et publier des ontologies. La description enrichie des ontologies aidera les utilisateurs à rechercher, découvrir, identifier et sélectionner des ontologies.</dc:abstract>
+    <cc:morePermissions>https://github.com/sifrproject/MOD-Ontology/blob/master/LICENSE</cc:morePermissions>
+    <cc:useGuidelines xml:lang="en">MOD is free of use; feedback is welcome.</cc:useGuidelines>
+    <cc:useGuidelines xml:lang="fr">MOD peut être utilisée de manière libre; les retours sont appréciés</cc:useGuidelines>
+    <dc:bibliographicCitation rdf:resource="https://dx.doi.org/10.1007/978-3-319-70863-8_17"/>
+    <foaf:page rdf:resource="https://www.isibang.ac.in/ns/mod/index.html"/>
+    <ns1:accessURL rdf:resource="https://www.isibang.ac.in/ns/mod/ontology.ttl"/>
+    <rdfs:comment xml:lang="en">This project is connected to the work done within AgroPortal (with MOD1.4). MOD 2.0 is work in progress.</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Ce projet est lié au travail mis en œuvre dans AgroPortal (avec MOD1.4). MOD2.0 est en cours de développement.</rdfs:comment>
+    <ns2:keywords xml:lang="en">metadata description, metadata vocabularies, ontology description, ontology profile</ns2:keywords>
+    <ns2:keywords xml:lang="fr">description de métadonnées, vocabulaires de métadonnées, description d'ontologie, profil d'ontologie</ns2:keywords>
+    <dc:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#TaskOntology"/>
+    <ns0:designedForTask rdf:resource="http://omv.ontoware.org/2005/05/ontology#ConfigurationTask"/>
+    <ns3:createdWith rdf:resource="https://protege.stanford.edu"/>
+    <ns0:usedEngineeringMethodology xml:lang="en">MOD 1 has been designed by reviewing in total 23 standard existing metadata vocabularies (e.g., Dublin Core, OMV, DCAT, VoID) and selecting relevant properties for describing ontologies. Then, we studied metadata usage analytics within ontologies and ontology repositories. MOD 2 abandon the integration approach of MOD 1 but re-incorporates properties of several obsolete metadata vocabularies inside its own namespace (DOOR, OMV, VOAF). MOD 2 is designed as an extension of the DCAT 2 metadata vocabulary.</ns0:usedEngineeringMethodology>
+    <ns0:usedEngineeringMethodology xml:lang="fr">MOD 1 a été conçue en examinant au total 23 vocabulaires de métadonnées standard existants (e.g., Dublin Core, OMV, DCAT, VoID) et en sélectionnant des propriétés pertinentes pour la description des ontologies. Nous avons ensuite étudié l’analyse de l’utilisation des métadonnées au sein d’ontologies et de portail d’ontologies. MOD 2 abandonne l'approche d'intégration de MOD 1 mais réincorpore les propriétés de plusieurs vocabulaires de métadonnées obsolètes dans son propre espace de nolmage (DOOR, OMV, VOAF). MOD 2 est conçue comme une extension du vocabulaire des métadonnées DCAT 2.</ns0:usedEngineeringMethodology>
+    <ns0:conformsToKnowledgeRepresentationParadigm>OWL Ontology</ns0:conformsToKnowledgeRepresentationParadigm>
+    <dc:coverage xml:lang="en">Ontologies or semantic resources/artefacts in general (thesaurus, terminologies, vocabularies, etc.)</dc:coverage>
+    <dc:coverage xml:lang="fr">Les ontologies ou les ressources/artefacts sémantiques en général (thésaurus, terminologies, vocabulaires, etc.)</dc:coverage>
+    <ns0:competencyQuestion xml:lang="en">How to standardly and semantically capture the description of an ontology while relying on other existing metadata vocabularies?</ns0:competencyQuestion>
+    <ns0:competencyQuestion xml:lang="fr">Comment capturer de manière standard et sémantique la description d'une ontologie en s'appuyant sur d'autres vocabulaires de métadonnées existants?</ns0:competencyQuestion>
+    <foaf:depiction rdf:resource="https://github.com/sifrproject/MOD-Ontology/raw/master/figures/MOD2.0_summary.png"/>
+    <foaf:homepage rdf:resource="https://github.com/sifrproject/MOD-Ontology"/>
+    <dc:accessRights xml:lang="en">MOD is licensed under the Creative Commons Attribution 4.0 ; For details, see here: https://github.com/sifrproject/MOD-Ontology/blob/master/LICENSE</dc:accessRights>
+    <dc:accessRights xml:lang="fr">MOD est disponible sous Licence Creative Commons Attribution 4.0 ; pour plus de details voir https://github.com/sifrproject/MOD-Ontology/blob/master/LICENSE</dc:accessRights>
+    <ns4:changes xml:lang="en">From MOD 1.2: (i) added description of properties, (ii) extended number of properties (from 88 to 128), (iii) separation of profile and ontology files, (iv) new URIs scheme. From MOD2.0: (i) use of w3id URIs, (ii) integration of DOOR, OMV, VOAF properties within MOD namespace, (iii) compliant with DCAT2.</ns4:changes>
+    <ns4:changes xml:lang="fr">Depuis MOD 1.2 : (i) ajout de la description des propriétés, (ii) nombre étendu de propriétés (de 88 à 128), (iii) séparation des fichiers de profil et d’ontologie, (iv) nouveaux URI. Depuis MOD2.O : (i) utilisation de w3id pour les URIs, (ii) intégration des propriétés de DOOR, OMV et VOAF dans l'espace de nommage de MOD, (iii) compatible avec DCAT2. </ns4:changes>
+    <ns4:example xml:lang="en">An adaptation of MOD1.4 is used within AgroPortal, since 2017. MOD2 is the baseline for H2020 project FAIRsFAIR semantic artefact minimum metadata profile.</ns4:example>
+    <ns4:example xml:lang="fr">Une adaptation de MOD est utilisée dans AgroPortal, depuis 2017. MOD2 est réutilisée par le profil de métadonnées minimale pour les artefacts sémanttique du projet H2020 FAIRsFAIR.</ns4:example>
+    <ns4:preferredNamespaceUri rdf:resource="https://w3id.org/mod"/>
+    <ns4:preferredNamespacePrefix>mod</ns4:preferredNamespacePrefix>
+    <ns0:prefLabelProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    <ns0:synonymProperty rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    <ns0:definitionProperty rdf:resource="http://purl.org/dc/terms/description"/>
+    <ns0:authorProperty rdf:resource="http://purl.org/pav/importedBy"/>
+    <ns0:obsoleteProperty>
+      <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#deprecated">
+        <rdfs:label xml:lang="en">deprecated</rdfs:label>
+        <rdfs:label xml:lang="fr">obsolète</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <dc:description xml:lang="en">OWL: The annotation property that indicates that a given entity has been deprecated. IDOT: Indicates if the current dataset is obsolete (not provided any more to the public community). Value can either be 'true' or 'false' (xsd:boolean). The statement is usually omitted if 'false'.</dc:description>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2002/07/owl#"/>
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-02-10</dc:issued>
+        <owl:equivalentProperty rdf:resource="http://identifiers.org/idot/obsolete"/>
+        <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.1/deprecated"/>
+        <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.1"/>
+        <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-09-02</ns3:importedOn>
+        <prov:wasInfluencedBy>FAIR principle: A2</prov:wasInfluencedBy>
+      </owl:AnnotationProperty>
+    </ns0:obsoleteProperty>
+
+    <ns0:hierarchyProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+    <void:uriRegexPattern>OriginalURI | BaseURI+ShortName</void:uriRegexPattern>
+    <ns0:toDoList>https://github.com/sifrproject/MOD-Ontology/raw/master/mod-v2.0_todos.txt</ns0:toDoList>
+    <ns5:exampleIdentifier>
+      <owl:ObjectProperty rdf:about="https://w3id.org/mod#analytics">
+        <rdfs:label xml:lang="en">analytics</rdfs:label>
+        <rdfs:label xml:lang="fr">analytique</rdfs:label>
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:range>
+          <owl:Class rdf:about="https://w3id.org/mod#Analytics">
+            <rdfs:comment xml:lang="en">Number of visits an ontology received.</rdfs:comment>
+            <rdfs:isDefinedBy xml:lang="en">https://www.isibang.ac.in/ns/mod/1.4/</rdfs:isDefinedBy>
+            <rdfs:label xml:lang="en">Analytics</rdfs:label>
+          </owl:Class>
+        </rdfs:range>
+
+        <dc:description xml:lang="en">MOD: This property shall be used to store any analytics for an ontology. E.g., number of visits an ontology received in a portal, number of downloads, etc.</dc:description>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/mod"/>
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</dc:issued>
+        <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+        <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+        <prov:wasInfluencedBy>MIRO guidelines: G.2</prov:wasInfluencedBy>
+        <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+      </owl:ObjectProperty>
+    </ns5:exampleIdentifier>
+
+    <ns6:award xml:lang="en">Published at MTSR 2017</ns6:award>
+    <ns6:award xml:lang="fr">Publiée a MTSR 2017</ns6:award>
+    <ns6:associatedMedia rdf:resource="https://drive.google.com/drive/folders/1kSF0XuSr9mwBk-daR6RYut_1Dzzko33v"/>
+    <dc:creator>Biswanath Dutta (https://orcid.org/0000-0003-3059-8202)</dc:creator>
+    <dc:creator>Clement Jonquet (https://orcid.org/0000-0002-2404-1582)</dc:creator>
+    <dc:contributor>Anne Toulet (https://orcid.org/0000-0003-0463-0854)</dc:contributor>
+    <dc:contributor>Luiz Bonino (https://orcid.org/0000-0002-1164-1351)</dc:contributor>
+    <dc:contributor>Yann Le Franc (https://orcid.org/0000-0003-4631-418X)</dc:contributor>
+    <dc:contributor>Udaya Varadarajan (https://orcid.org/0000-0002-4936-0272)</dc:contributor>
+    <dc:publisher>Indian Statistical Institute, Bangalore Centre, India (https://www.isibang.ac.in)</dc:publisher>
+    <dc:publisher>LIRMM, University of Montpellier, France (http://www.lirmm.fr)</dc:publisher>
+    <ns3:curatedBy>Anne Toulet</ns3:curatedBy>
+    <ns6:translator>Clement Jonquet</ns6:translator>
+    <dc:rightsHolder xml:lang="en">Indian Statistical Institute and University of Montpellier</dc:rightsHolder>
+    <dc:rightsHolder xml:lang="fr">Institut Indien de la Statistique et Université de Montpellier</dc:rightsHolder>
+    <dc:subject xml:lang="en">Metadata descriptions</dc:subject>
+    <ns0:group xml:lang="en">Metadata vocabularies</ns0:group>
+    <owl:priorVersion rdf:resource="https://www.isibang.ac.in/ns/mod/1.4/"/>
+    <owl:priorVersion rdf:resource="https://www.isibang.ac.in/ns/mod/1.2/"/>
+    <owl:priorVersion rdf:resource="https://www.isibang.ac.in/ns/mod/1.1/"/>
+    <owl:priorVersion rdf:resource="https://www.isibang.ac.in/ns/mod/1.0/"/>
+    <owl:backwardCompatibleWith rdf:resource="http://omv.ontoware.org/2005/05/ontology"/>
+    <owl:incompatibleWith rdf:resource="http://kannel.open.ac.uk/ontology"/>
+    <dc:relation xml:lang="en">MOD uses or relates to each of these vocabularies: ADMS,CC,DCAT,DC,DCT,DOAP,DOOR,FOAF,IDOT,OBOINOWL,OMV,OWL,NKOS,PAV,PROV,RDFS,SCHEMA,SD,SKOS,VANN,VOAF,VOID.</dc:relation>
+    <dc:relation xml:lang="fr">MOD utilise ou se repose sur chacun des vocabulaires suivants : ADMS,CC,DCAT,DC,DCT,DOAP,DOOR,FOAF,IDOT,OBOINOWL,OMV,OWL,NKOS,PAV,PROV,RDFS,SCHEMA,SD,SKOS,VANN,VOAF,VOID.</dc:relation>
+    <ns0:specializes rdf:resource="http://omv.ontoware.org/2005/05/ontology"/>
+    <ns0:comesFromTheSameDomain>OBOINOWL,OMV,OWL,NKOS,RDFS,SKOS,VANN,VOAF,VOID</ns0:comesFromTheSameDomain>
+    <ns0:similar>OMV,VANN,VOAF,VOID</ns0:similar>
+    <ns0:hasEquivalencesWith xml:lang="en">MOD properties are 'reused' from properties in each these vocabularies: ADMS,CC,DCAT,DC,DCT,DOAP,FOAF,IDOT,OBOINOWL,OWL,NKOS,PAV,PROV,RDFS,SCHEMA,SD,SKOS,VANN,VOID. Reuses are formalized by a dcterms:relation. MOD2 redefines properties from DOOR, OMV, VOAF.</ns0:hasEquivalencesWith>
+    <ns0:hasEquivalencesWith xml:lang="fr">Les propriétés de MOD sont 'importées' à partir des vocabulaires suivants : ADMS,CC,DCAT,DC,DCT,DOAP,FOAF,IDOT,OBOINOWL,OWL,NKOS,PAV,PROV,RDFS,SCHEMA,SD,SKOS,VANN,VOID. Les réutilisations soont formalisées par une propriété dcterms:relation. MOD2 re-définie les propriétés dans DOOR, OMV, VOAF.</ns0:hasEquivalencesWith>
+    <ns0:hasDisparateModelling xml:lang="en">DOAP (MOD reuses properties from both objects doap:Project and foaf:Document that are disjoincts.)</ns0:hasDisparateModelling>
+    <ns0:hasDisparateModelling xml:lang="fr">DOAP (MOD réutilise des propriétés de des objets doap:Project et foaf:Document qui sont disjointes.)</ns0:hasDisparateModelling>
+    <ns0:generalizes>DOOR,OMV,VOAF</ns0:generalizes>
+    <foaf:primaryTopic rdf:resource="https://w3id.org/mod#Ontology"/>
+    <void:rootResource rdf:resource="https://w3id.org/mod#Ontology"/>
+    <ns0:browsingUI>https://www.isibang.ac.in/ns/mod/index.html</ns0:browsingUI>
+    <ns0:vocabularyUsed rdf:resource="http://creativecommons.org/ns#"/>
+    <ns0:vocabularyUsed rdf:resource="http://www.w3.org/ns/sparql-service-description#"/>
+    <ns0:vocabularyUsed rdf:resource="http://purl.org/dc/terms/"/>
+    <ns0:vocabularyUsed rdf:resource="http://omv.ontoware.org/2005/05/ontology#"/>
+    <ns0:vocabularyUsed rdf:resource="http://www.w3.org/2002/07/owl#"/>
+    <ns0:vocabularyUsed rdf:resource="http://purl.org/pav/"/>
+    <ns0:vocabularyUsed rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <ns0:vocabularyUsed rdf:resource="http://www.w3.org/XML/1998/namespace"/>
+    <ns0:vocabularyUsed rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+    <ns0:vocabularyUsed rdf:resource="http://usefulinc.com/ns/doap/"/>
+    <ns0:vocabularyUsed rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    <ns0:vocabularyUsed rdf:resource="http://identifiers.org/idot/"/>
+    <ns0:vocabularyUsed rdf:resource="http://www.w3.org/ns/prov#"/>
+    <ns0:vocabularyUsed rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+    <ns0:vocabularyUsed rdf:resource="http://www.w3.org/2004/02/skos/core#"/>
+    <ns0:vocabularyUsed rdf:resource="http://purl.org/vocab/vann/"/>
+    <ns0:vocabularyUsed rdf:resource="http://rdfs.org/ns/void#"/>
+    <ns0:vocabularyUsed rdf:resource="https://schema.org/"/>
+    <ns0:sampleQueries xml:lang="en">For sample SPARQL queries to query MOD OWL knowledge base, see here: https://github.com/sifrproject/MOD-Ontology/blob/master/SPARQL_Queries_on_MOD_1.2.3-with-instances.txt</ns0:sampleQueries>
+    <ns0:sampleQueries xml:lang="fr">Pour des examples de requêtes SPARQL sur la base de connaissances MOD, voir ici : https://github.com/sifrproject/MOD-Ontology/blob/master/SPARQL_Queries_on_MOD_1.2.3-with-instances.txt</ns0:sampleQueries>
+    <void:dataDump>https://www.isibang.ac.in/ns/mod/ontology.ttl</void:dataDump>
+    <void:dataDump>https://www.isibang.ac.in/ns/mod/ontology.json</void:dataDump>
+    <void:dataDump>https://www.isibang.ac.in/ns/mod/ontology.xml</void:dataDump>
+    <void:dataDump>https://www.isibang.ac.in/ns/mod/ontology.nt</void:dataDump>
+    <ns0:knownUsage xml:lang="en">MOD is used for instance in AgroPortal (http://agroportal.lirmm.fr) to provide equivalences in AgroPortal's ontology metadata model. Other uses will be documented here in the future.</ns0:knownUsage>
+    <ns0:knownUsage xml:lang="fr">MOD est utilisée par exemple dans AgroPortal (http://agroportal.lirmm.fr) pour fournir des equivalences au sein du modèle de métadonnées d'ontologies. D'autres usages seront documentés ici dans le futur.</ns0:knownUsage>
+    <ns0:endorsedBy xml:lang="en">No organization is currenlty officially endorsing MOD.</ns0:endorsedBy>
+    <ns0:endorsedBy xml:lang="fr">MOD n'est encore officiellement recommandée par aucune organization.</ns0:endorsedBy>
+    <ns0:usedInProject>AgroPortal (http://agroportal.lirmm.fr)</ns0:usedInProject>
+    <dc:audience xml:lang="en">MOD primary targets ontology (or semantic resource/artefact) developers and ontology library, repository or service providers.</dc:audience>
+    <dc:audience xml:lang="fr">MOD s'adresse en priorité aux dévelopeurs d'ontologies (ou de ressource/artefact sémantiques) ainsi qu'au dévelopeurs de bibliothèque, de portail ou de service pour des ontologies.</dc:audience>
+    <foaf:fundedBy xml:lang="en">Indian Statistical Institute, University of Montpellier, European French National Research Agency (under grant ANR-10-LABX-20, ANR-11-BINF-0002, ANR-19-DATA-0019), European Union’s Horizon 2020 research and innovation programme under the Marie Sklodowska-Curie grant agreement No 701771 and H2020 FAIRsFAIR project No 831558.</foaf:fundedBy>
+    <doap:repository rdf:resource="https://github.com/sifrproject/MOD-Ontology"/>
+    <doap:bugDatabase rdf:resource="https://github.com/sifrproject/MOD-Ontology/issues"/>
+    <dc:created>2021-12-01</dc:created>
+    <dc:modified>2022-02-14</dc:modified>
+    <ns0:numberOfClasses rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">79</ns0:numberOfClasses>
+    <ns0:numberOfIndividuals rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</ns0:numberOfIndividuals>
+    <ns0:numberOfProperties rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">260</ns0:numberOfProperties>
+    <ns0:numberOfObjectProperties rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">149</ns0:numberOfObjectProperties>
+    <ns0:numberOfDataProperties rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">111</ns0:numberOfDataProperties>
+    <ns0:numberOfAxioms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1507</ns0:numberOfAxioms>
+    <dc:source xml:lang="en">MOD source is described in https://dx.doi.org/10.1007/978-3-319-70863-8_17 and https://doi.org/10.1007/s13740-018-0091-5</dc:source>
+    <dc:source xml:lang="fr">L'origine de MOD est décrite dans https://dx.doi.org/10.1007/978-3-319-70863-8_17 et https://doi.org/10.1007/s13740-018-0091-5</dc:source>
+    <prov:wasGeneratedBy xml:lang="en">MOD is the result of a manual process of identifying, reviewing, and selecting candidate properties from standards metadata vocabularies if relevant to describe an ontology or any kind of semantic resource. When a property cannot be identified, it could be created in the MOD namespace. Since MCD2, it has been created as an extension of DCAT2.</prov:wasGeneratedBy>
+    <prov:wasGeneratedBy xml:lang="fr">MOD est le résultat d'un processus manuel d'identification, de révision et de sélection des propriétés candidates à partir de vocabulaires de métadonnées standards, pour décrire une ontologie ou tout type de ressource sémantique. Lorsqu'une propriété ne peut pas être identifiée, elle peut être créée dans l'espace de noms MOD. Depuis MOD2, MOD est construote comme une extension de DCAT2</prov:wasGeneratedBy>
+    <dc:accrualMethod xml:lang="en">When a need of a new property is identified by the developer team, we review classic/standards metadata vocabularies to identifiy if the desire property already exists. If it exists in several metadata vocabularies we give priorities to consitency with previous MOD choices, then W3C Recommendations, then community standards.</dc:accrualMethod>
+    <dc:accrualMethod xml:lang="fr">Lorsqu'un besoin d'une nouvelle propriété est identifié par l'équipe de développeurs, nous passons en revue les vocabulaires de métadonnées classiques / standards pour identifier si la propriété désirée existe déjà. Si elle existe dans plusieurs vocabulaires de métadonnées, nous donnons la priorité à la cohérence avec les choix précédents dans MOD, puis aux recommandations du W3C, puis aux normes de la communauté.</dc:accrualMethod>
+    <dc:accrualPeriodicity xml:lang="en">New properties are added on demand with no specific periodicity.</dc:accrualPeriodicity>
+    <dc:accrualPeriodicity xml:lang="fr">Les nouvelles propriétés sont ajoutées à la demande sans périodicité particulière.</dc:accrualPeriodicity>
+    <dc:accrualPolicy xml:lang="en">Editorial choice of the developer team.</dc:accrualPolicy>
+    <dc:accrualPolicy xml:lang="fr">Choix éditorial de l'équipe de développeurs.</dc:accrualPolicy>
+  </owl:Ontology>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/mod#acronym">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    <rdfs:label xml:lang="en">acronym</rdfs:label>
+    <rdfs:label xml:lang="fr">acronyme</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dc:description xml:lang="en">MOD: Short acronym label, often used as an identifier within some ontology platforms such as BioPortal or OBO Foundry. OMV: A short name by which an ontology is formally known.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-24</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.0/acronym"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <skos:historyNote xml:lang="en">This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace.</skos:historyNote>
+    <prov:wasInfluencedBy>MIRO guidelines: A.1</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </owl:DatatypeProperty>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/title">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+    <rdfs:label xml:lang="en">title</rdfs:label>
+    <rdfs:label xml:lang="fr">titre</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <dc:description xml:lang="en">DCTERMS: A name given to the resource. OMV: The name by which an ontology is formally known. RDFS: A human-readable name for the subject. FOAF:  A name for some thing. SKOS: The preferred and alternative labels are useful when generating or creating human-readable representations of a knowledge organization system. SCHEMA: The name of the item.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://creativecommons.org/ns#attributionName"/>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#name"/>
+    <owl:equivalentProperty rdf:resource="https://schema.org/name"/>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    <owl:equivalentProperty rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: A.1</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/alternative">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/title"/>
+    <rdfs:label xml:lang="en">alternative name</rdfs:label>
+    <rdfs:label xml:lang="fr">nom alternatif</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <dc:description xml:lang="en">DCTERMS: An alternative name for the resource. The distinction between titles and alternative titles is application-specific. SKOS: The preferred and alternative labels are useful when generating or creating human-readable representations of a knowledge organization system. SCHEMA: An alias for the item. A short label that is used by some communities to refer to a dataset (see 'preferredPrefix').</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://identifiers.org/idot/alternatePrefix"/>
+    <owl:equivalentProperty rdf:resource="https://schema.org/alternateName"/>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: A.1</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <rdfs:Property rdf:about="http://www.w3.org/2004/02/skos/core#hiddenLabel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    <rdfs:label xml:lang="en">hidden label</rdfs:label>
+    <rdfs:label xml:lang="fr">nom caché</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <dc:description xml:lang="en">MOD: Hidden or past name. SKOS: A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-08-18</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: A.1</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+    <rdfs:comment xml:lang="en">S12 (not formally stated): The range of skos:hiddenLabel is the class of RDF plain literals. S13 (not formally stated): skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties.</rdfs:comment>
+  </rdfs:Property>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/mod#URI">
+    <rdfs:label xml:lang="en">URI</rdfs:label>
+    <rdfs:label xml:lang="fr">URI</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <dc:description xml:lang="en">OMV: The URI of the ontology which is described by this metadata.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-24</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#URI"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <skos:historyNote xml:lang="en">This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace.</skos:historyNote>
+    <prov:wasInfluencedBy>MIRO guidelines: A.4</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F1</prov:wasInfluencedBy>
+  </owl:DatatypeProperty>
+
+  <owl:OntologyProperty rdf:about="http://www.w3.org/2002/07/owl#versionIRI">
+    <rdfs:label xml:lang="en">version IRI</rdfs:label>
+    <rdfs:label xml:lang="fr">IRI de la version</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dc:description xml:lang="en">OWL: The property that identifies the version IRI of an ontology.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2002/07/owl#"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-02-10</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: A.4</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F1</prov:wasInfluencedBy>
+  </owl:OntologyProperty>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/identifier">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
+    <rdfs:label xml:lang="en">Other identifier</rdfs:label>
+    <rdfs:label xml:lang="fr">Autre identifiant</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <dc:description xml:lang="en">DCTERMS: An unambiguous reference to the resource within a given context. Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN).  Persistent identifiers should be provided as HTTP URIs. SKOS: A notation is a string of characters such as 'T58.5 or '303.4833' used to uniquely identify a concept within the scope of a given concept scheme. ADMS: adms:identifier is used to link any resource to an instance of adms:Identifier which is its range. N.B. it is not appropriate to use dcterms:identifer to link to the Identifier class as its range is rdfs:Literal. ADMS uses this to provide any identifier for the Asset.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/adms#identifier"/>
+    <owl:equivalentProperty rdf:resource="https://schema.org/identifier"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F1,A1</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+    <rdfs:label xml:lang="en">version information</rdfs:label>
+    <rdfs:label xml:lang="fr">information de version</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <dc:description xml:lang="en">MOD: The version of the released ontology. OMV: The version information of the ontology. OWL: The annotation property that provides version information for an ontology or another OWL construct. PAV: The version number of a resource. This is a freetext string, typical values are '1.5' or '21'. DOAP: A project release.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2002/07/owl#"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-02-10</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#version"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/pav/version"/>
+    <owl:equivalentProperty rdf:resource="http://usefulinc.com/ns/doap#release"/>
+    <owl:equivalentProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#data-version"/>
+    <owl:equivalentProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasVersion"/>
+    <owl:equivalentProperty rdf:resource="https://schema.org/version"/>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.0/version"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: A.1</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: R1.2</prov:wasInfluencedBy>
+  </owl:AnnotationProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/mod#status">
+    <rdfs:label xml:lang="en">status</rdfs:label>
+    <rdfs:label xml:lang="fr">statut</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dc:description xml:lang="en">OMV: It specifies the tracking information for the contents of the ontology. Pre-defined values. IDOT: State of a resource (physical location providing access to data or information about the identified entity). This is should be based on a recent manual or automatic check of the resource. Possible values are: 'up', 'down', 'probably up', 'obsolete resource', 'restricted access' and 'unknown'.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-24</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://identifiers.org/idot/state"/>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/adms#adms-status"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <skos:historyNote xml:lang="en">This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace.</skos:historyNote>
+    <prov:wasInfluencedBy>FAIR principle: A2</prov:wasInfluencedBy>
+  </owl:DatatypeProperty>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/license">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/rights"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/rights"/>
+    <rdfs:label xml:lang="en">license</rdfs:label>
+    <rdfs:label xml:lang="fr">licence</rdfs:label>
+    <dc:description xml:lang="en">DCTERMS: A legal document giving official permission to do something with the resource. Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided. DCTERMS:rights Information about rights held in and over the resource. OMV: Underlying license model. SCHEMA: A license document that applies to this content, typically indicated by URL.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-06-14</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://creativecommons.org/ns#license"/>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#license"/>
+    <owl:equivalentProperty rdf:resource="https://schema.org/license"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: A.3</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: A2</prov:wasInfluencedBy>
+    <ns7:rangeIncludes rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
+  </rdf:Property>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/mod#hasRepresentationLanguage">
+    <rdfs:label xml:lang="en">representation language</rdfs:label>
+    <rdfs:label xml:lang="fr">language de représentation</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefactDistribution"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <dc:description xml:lang="en">MOD: A language that is used to create an ontology. OMV: The ontology language.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-24</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#hasOntologyLanguage"/>
+    <owl:equivalentProperty rdf:resource="https://schema.org/fileFormat"/>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.0/ontologyDesignLanguage"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <skos:historyNote xml:lang="en">This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace.</skos:historyNote>
+    <prov:wasInfluencedBy>MIRO guidelines: E.1</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: I1</prov:wasInfluencedBy>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/mod#hasFormalityLevel">
+    <rdfs:label xml:lang="en">formality level</rdfs:label>
+    <rdfs:label xml:lang="fr">niveau de formalisme</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dc:description xml:lang="en">MOD: The level of formality of an ontology. OMV: Level of formality of the ontology.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-24</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#hasFormalityLevel"/>
+    <owl:equivalentProperty rdf:resource="https://schema.org/fileFormat"/>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.0/formalityLevel"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <skos:historyNote xml:lang="en">This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace.</skos:historyNote>
+    <prov:wasInfluencedBy>MIRO guidelines: E.1</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: I1</prov:wasInfluencedBy>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/mod#hasSyntax">
+    <rdfs:label xml:lang="en">syntax</rdfs:label>
+    <rdfs:label xml:lang="fr">syntaxe</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefactDistribution"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <dc:description xml:lang="en">MOD: The syntax followed in the creation of an ontology. OMV: The presentation syntax for the ontology langage.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-24</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#hasOntologySyntax"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/format"/>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.0/syntax"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <skos:historyNote xml:lang="en">This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace.</skos:historyNote>
+    <prov:wasInfluencedBy>MIRO guidelines: E.1</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: I1</prov:wasInfluencedBy>
+  </owl:DatatypeProperty>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/language">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/language"/>
+    <rdfs:label xml:lang="en">natural language</rdfs:label>
+    <rdfs:label xml:lang="fr">langage naturel</rdfs:label>
+    <dc:description xml:lang="en">DCTERMS: A language of the resource. Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [[IETF-BCP47](https://tools.ietf.org/html/bcp47)] language tag. OMV: The language of the content of the ontology, i.e. English, French, etc. DOAP: ISO language code a project has been translated into.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#naturalLanguage"/>
+    <owl:equivalentProperty rdf:resource="https://schema.org/inLanguage"/>
+    <owl:equivalentProperty rdf:resource="http://usefulinc.com/ns/doap#language"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+    <ns7:rangeIncludes rdf:resource="http://purl.org/dc/terms/LinguisticSystem"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/description">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+    <rdfs:label xml:lang="en">description</rdfs:label>
+    <rdfs:label xml:lang="fr">description</rdfs:label>
+    <dc:description xml:lang="en">DCTERMS: An account of the resource. Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. OMV: Free text description of an ontology. SCHEMA: A description of the item. DOAP: Plain text description of a project, of 2-4 sentences in length.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#description"/>
+    <owl:equivalentProperty rdf:resource="https://schema.org/description"/>
+    <owl:equivalentProperty rdf:resource="http://usefulinc.com/ns/doap#description"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: C.3</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/abstract">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:label xml:lang="en">abstract</rdfs:label>
+    <rdfs:label xml:lang="fr">résumé</rdfs:label>
+    <dc:description xml:lang="en">DCTERMS: A summary of the resource.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://creativecommons.org/ns#morePermissions">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    <rdfs:label xml:lang="en">more permissions</rdfs:label>
+    <rdfs:label xml:lang="fr">droits d'accès détaillés</rdfs:label>
+    <rdfs:domain rdf:resource="http://creativecommons.org/ns#Work"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <dc:description xml:lang="en">CC: A related resource which describes additional permissions or alternative licenses for a Work which may be available.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://creativecommons.org/ns#"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-03-03</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: R1.1</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://creativecommons.org/ns#useGuidelines">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    <rdfs:label xml:lang="en">use guidelines</rdfs:label>
+    <rdfs:label xml:lang="fr">guide d'utilisation</rdfs:label>
+    <rdfs:domain rdf:resource="http://creativecommons.org/ns#Work"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <dc:description xml:lang="en">CC: A related resource which defines non-binding use guidelines for the work.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://creativecommons.org/ns#"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-03-03</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: R1.1</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/bibliographicCitation">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+    <rdfs:label xml:lang="en">bibliographic reference</rdfs:label>
+    <rdfs:label>référence bibliographique</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <dc:description xml:lang="en">DCTERMS: A bibliographic reference for the resource. Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible. OMV: List of bibliographic references describing the ontology and its applications. FOAF: A document that this thing is the primary topic of</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-02-15</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#reference"/>
+    <owl:equivalentProperty rdf:resource="http://xmlns.com/foaf/0.1/isPrimaryTopicOf"/>
+    <owl:equivalentProperty rdf:resource="https://schema.org/citation"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.w3.org/ns/dca#landingPage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/page"/>
+    <rdfs:label xml:lang="en">landing page</rdfs:label>
+    <rdfs:label xml:lang="fr">page d'atterrissage</rdfs:label>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <dc:description xml:lang="en">DCAT: A Web page that can be navigated to in a Web browser to gain access to the dataset, its distributions and/or additional information. MOD: A link to the documentation page on a thing. OMV: URL for further documentation. RDFS: Further information about the subject resource. DOAP: URL of Wiki for collaborative discussion of project. VANN: A reference to a resource that provides information on how this resource is to be used.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-01-16</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#documentation"/>
+    <owl:equivalentProperty rdf:resource="https://vocab.org/vann/usageNote"/>
+    <owl:equivalentProperty rdf:resource="http://usefulinc.com/ns/doap#wiki"/>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.0/document"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: C.3, F.1</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+    <skos:scopeNote xml:lang="en">If the distribution(s) are accessible only through a landing page (i.e. direct download URLs are not known), then the landing page link should be duplicated as accessURL on a distribution.</skos:scopeNote>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.w3.org/ns/dca#accessURL">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">access URL</rdfs:label>
+    <rdfs:label xml:lang="fr">URL d'accès</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/dca#Distribution"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <dc:description xml:lang="en">DCAT: A URL of a resource that gives access to a distribution of the dataset. E.g. landing page, feed, SPARQL endpoint. Use for all cases except a simple download link, in which case downloadURL is preferred. OMV: The location where the ontology can be found. It should be accessible via a URL. It can be the same as the value for URI property. DOAP:  Web page from which the project software can be downloaded.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-01-16</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#resourceLocator"/>
+    <owl:equivalentProperty rdf:resource="http://usefulinc.com/ns/doap#download-page"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: A.4</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+    <skos:scopeNote xml:lang="en">If the distribution(s) are accessible only through a landing page (i.e. direct download URLs are not known), then the landing page link should be duplicated as accessURL on a distribution.</skos:scopeNote>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+    <rdfs:label xml:lang="en">notes or comments</rdfs:label>
+    <rdfs:label xml:lang="fr">notes ou commentaires</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <dc:description xml:lang="en">RDFS: A description of the subject resource. OMV: Additional information about the ontology that is not included somewhere else (e.g. information that you do not want to include in the documentation).</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2002-04-30</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#notes"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/description"/>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/adms#versionNotes"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.w3.org/ns/dca#keyword">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://purl.org/dc/terms/subject">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/subject"/>
+        <rdfs:label xml:lang="en">subject</rdfs:label>
+        <rdfs:label xml:lang="fr">sujet</rdfs:label>
+        <dc:description xml:lang="en">DCTERMS: The topic of the resource. OMV: Typically, the domain can refer to established topic hierarchies such as the general purpose topic hierarchy DMOZ or the domain specific topic hierarchy ACM for the computer science domain. SCHEMA: The subject matter of the content. DCAT: A main category of the resource. A resource can have multiple themes. FOAF: A topic of some page or document.</dc:description>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+        <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#hasDomain"/>
+        <owl:equivalentProperty rdf:resource="https://schema.org/about"/>
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/dca#theme"/>
+        <owl:equivalentProperty rdf:resource="http://xmlns.com/foaf/0.1/topic"/>
+        <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+        <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+        <prov:wasInfluencedBy>MIRO guidelines: C.1</prov:wasInfluencedBy>
+        <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+      </rdf:Property>
+    </rdfs:subPropertyOf>
+
+    <rdfs:label xml:lang="en">keyword</rdfs:label>
+    <rdfs:label xml:lang="fr">motclé</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <dc:description xml:lang="en">DCAT: A keyword or tag describing a resource. MOD: A keyword(s) is used to describe the content of an ontology. OMV: List of keywords related to an ontology. SCHEMA: Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-01-16</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#keywords"/>
+    <owl:equivalentProperty rdf:resource="https://schema.org/keywords"/>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.1/keyword"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: C.1</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/type">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type"/>
+    <rdfs:label xml:lang="en">type</rdfs:label>
+    <rdfs:label xml:lang="fr">type</rdfs:label>
+    <dc:description xml:lang="en">DCTERMS: The nature or genre of the resource. Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [[DCMI-TYPE](http://dublincore.org/documents/dcmi-type-vocabulary/)]. To describe the file format, physical medium, or dimensions of the resource, use the property Format. OMV: The nature of the content of the ontology.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#isOfType"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/mod#designedForTask">
+    <rdfs:label xml:lang="en">designed for task</rdfs:label>
+    <rdfs:label xml:lang="fr">concou pour la tâche</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+    <rdfs:range>
+      <owl:Class rdf:about="https://w3id.org/mod#SemanticArtefactTask">
+        <rdfs:label xml:lang="en">Semantic Artefact Task</rdfs:label>
+      </owl:Class>
+    </rdfs:range>
+
+    <dc:description xml:lang="en">OMV: The purpose for which the ontology was originally designed.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-24</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: B.1</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: R1.2</prov:wasInfluencedBy>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/mod#createdWith">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAttributedTo"/>
+    <rdfs:label xml:lang="en">created with</rdfs:label>
+    <rdfs:label xml:lang="fr">crée avec</rdfs:label>
+    <dc:description xml:lang="en">PAV: The software/tool used by the creator (pav:createdBy) when making the digital resource, for instance a word processor or an annotation tool. MOD: The tool used for the creation of an ontology. OMV: Information about the tool used to create the ontology.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-08-28</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#usedOntologyEngineeringTool"/>
+    <owl:equivalentProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#auto-generated-by"/>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.0/toolUsed"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: E.2</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: R1.2</prov:wasInfluencedBy>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/mod#usedEngineeringMethodology">
+    <rdfs:label xml:lang="en">engineering methodology</rdfs:label>
+    <rdfs:label xml:lang="fr">méthodologie de développement</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+    <rdfs:range>
+      <owl:Class rdf:about="https://w3id.org/mod#EngineeringMethodology">
+        <rdfs:comment xml:lang="en">Information about the engineering methodology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Engineering Methodology</rdfs:label>
+        <skos:historyNote xml:lang="en">This class has been adopted from OMV Ontology Metadata Vocabulary, and renamed and redefined in the MOD namespace.</skos:historyNote>
+      </owl:Class>
+    </rdfs:range>
+
+    <dc:description xml:lang="en">MOD: A methodolgy follwoing which an ontology is created. OMV: Information about the method model used to create the ontology.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-24</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/adms#representationTechnique"/>
+    <owl:equivalentProperty rdf:resource="https://schema.org/publishingPrinciples"/>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.0/methodologyUsed"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <skos:historyNote xml:lang="en">This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace.</skos:historyNote>
+    <prov:wasInfluencedBy>MIRO guidelines: A.6</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: R1.2</prov:wasInfluencedBy>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/mod#conformsToKnowledgeRepresentationParadigm">
+    <rdfs:label xml:lang="en">knowledge representation paradigm</rdfs:label>
+    <rdfs:label xml:lang="fr">paradigme de représentation des connaissances</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+    <rdfs:range>
+      <owl:Class rdf:about="https://w3id.org/mod#KnowledgeRepresentationParadigm">
+        <rdfs:label xml:lang="en">Knowledge representation paradigm</rdfs:label>
+      </owl:Class>
+    </rdfs:range>
+
+    <dc:description xml:lang="en">MOD: A representation formalism that is followed to describe knowledge in an ontology. Example includes description logics, first order logic, etc. dcterms: An established standard to which the described resource conforms. OMV: Information about the paradigm model used to create the ontology. DCTERMS: An established standard to which the described resource conforms.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-24</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#conformsToKnowledgeRepresentationParadigm"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/conformsTo"/>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.0/knowledgeRepresentationFormalism"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <skos:historyNote xml:lang="en">This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace.</skos:historyNote>
+    <prov:wasInfluencedBy>MIRO guidelines: E.1</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: R1.2</prov:wasInfluencedBy>
+  </owl:ObjectProperty>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/coverage">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/coverage"/>
+    <rdfs:label xml:lang="en">coverage</rdfs:label>
+    <rdfs:label xml:lang="fr">couverture</rdfs:label>
+    <dc:description xml:lang="en">DCTERMS: The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant. Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names [[TGN](https://www.getty.edu/research/tools/vocabulary/tgn/index.html)]. Where appropriate, named places or time periods may be used in preference to numeric identifiers such as sets of coordinates or date ranges.  Because coverage is so broadly defined, it is preferable to use the more specific subproperties Temporal Coverage and Spatial Coverage.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: C.1</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+    <ns7:rangeIncludes rdf:resource="http://purl.org/dc/terms/Jurisdiction"/>
+    <ns7:rangeIncludes rdf:resource="http://purl.org/dc/terms/Location"/>
+    <ns7:rangeIncludes rdf:resource="http://purl.org/dc/terms/Period"/>
+  </rdf:Property>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/mod#competencyQuestion">
+    <rdfs:label xml:lang="en">competency question</rdfs:label>
+    <rdfs:label xml:lang="fr">question de compétence</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dc:description xml:lang="en">A set of questions made to build an ontology at the design time.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/mod"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: A.6, D.3</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: R1.2</prov:wasInfluencedBy>
+  </owl:DatatypeProperty>
+
+  <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/depiction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">depiction</rdfs:label>
+    <rdfs:label xml:lang="fr">représentation</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
+    <dc:description xml:lang="en">FOAF: A depiction of some thing. DOAP: Web page with screenshots of project. An image of the item. This can be a URL or a fully described ImageObject.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-01-14</dc:issued>
+    <owl:equivalentProperty rdf:resource="https://schema.org/image"/>
+    <owl:equivalentProperty rdf:resource="http://usefulinc.com/ns/doap#screenshots"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+    <owl:inverseOf rdf:resource="http://xmlns.com/foaf/0.1/depicts"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/logo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">logo</rdfs:label>
+    <rdfs:label xml:lang="fr">logo</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <dc:description xml:lang="en">FOAF: A logo representing some thing. SCHEMA: An associated logo.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-01-14</dc:issued>
+    <owl:equivalentProperty rdf:resource="https://schema.org/logo"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+    <owl:inverseOf rdf:resource="http://xmlns.com/foaf/0.1/depicts"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/homepage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/page"/>
+    <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/isPrimaryTopicOf"/>
+    <rdfs:label xml:lang="en">homepage</rdfs:label>
+    <rdfs:label xml:lang="fr">page web</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Document"/>
+    <dc:description xml:lang="en">FOAF: A homepage for some thing. MOD: An unambiguous reference to the resource within a given context. DOAP: URI of a blog related to a project. CC: The URL the creator of a Work would like used when attributing re-use. SCHEMA: Indicates a page (or other CreativeWork) for which this thing is the main entity being described.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-01-14</dc:issued>
+    <owl:equivalentProperty rdf:resource="https://schema.org/mainEntityOfPage"/>
+    <owl:equivalentProperty rdf:resource="http://creativecommons.org/ns#attributionURL"/>
+    <owl:equivalentProperty rdf:resource="http://usefulinc.com/ns/doap#blog"/>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.0/homepage"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: C.3</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/accessRights">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/rights"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/rights"/>
+    <rdfs:label xml:lang="en">access rights</rdfs:label>
+    <rdfs:label xml:lang="fr">droits d'accès</rdfs:label>
+    <dc:description xml:lang="en">DCTERMS: Information about who access the resource or an indication of its security status. Access Rights may include information regarding access or restrictions based on privacy, security, or other policies. MOD: Information on access (i.e., read, download) to an ontology.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-02-15</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.0/accessibility"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: R1.1</prov:wasInfluencedBy>
+    <ns7:rangeIncludes rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+  </rdf:Property>
+
+  <owl:AnnotationProperty rdf:about="https://vocab.org/vann/changes">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+    <rdfs:label xml:lang="en">changes</rdfs:label>
+    <rdfs:label xml:lang="fr">changements</rdfs:label>
+    <dc:description xml:lang="en">VANN: A reference to a resource that describes changes between this version of a vocabulary and the previous.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/vann/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-04-01</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: R1.2</prov:wasInfluencedBy>
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="https://vocab.org/vann/example">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+    <rdfs:label xml:lang="en">example</rdfs:label>
+    <rdfs:label xml:lang="fr">exemple</rdfs:label>
+    <dc:description xml:lang="en">VANN: A reference to a resource that provides an example of how this resource can be used. SCHEMA: Example/instance/realization/derivation of the concept of this creative work. eg. The paperback edition, first edition, or eBook.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/vann/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-04-01</dc:issued>
+    <owl:equivalentProperty rdf:resource="https://schema.org/workExample"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: G.3</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="https://vocab.org/vann/preferredNamespaceUri">
+    <rdfs:label xml:lang="en">preferred namespace URI</rdfs:label>
+    <rdfs:label xml:lang="fr">URI préféré d'espace de nom</rdfs:label>
+    <dc:description xml:lang="en">VANN: The preferred namespace URI to use when using terms from this vocabulary in an XML document. VOID: A URI that is a common string prefix of all the entity URIs in a void:Dataset.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/vann/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-04-01</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://rdfs.org/ns/void#uriSpace"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: E.5</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="https://vocab.org/vann/preferredNamespacePrefix">
+    <rdfs:label xml:lang="en">preferred namespace prefix</rdfs:label>
+    <rdfs:label xml:lang="fr">préfixe d'espace de nom préféré</rdfs:label>
+    <dc:description xml:lang="en">VANN: The preferred namespace prefix to use when using terms from this vocabulary in an XML document. IDOT: Short label that is commonly used to refer to the dataset. Often utilised to identify the dataset in IRIs for specific items (or records). This may also stand in place of the base IRI of the dataset (e.g. see http://prefix.cc).</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/vann/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-04-01</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://identifiers.org/idot/preferredPrefix"/>
+    <owl:equivalentProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#default-namespace"/>
+    <owl:equivalentProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDefaultNamespace"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: E.11</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </owl:AnnotationProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/mod#prefLabelProperty">
+    <rdfs:label xml:lang="en">object preferred label property</rdfs:label>
+    <rdfs:label xml:lang="fr">propriété de nom préféré des objets</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefactDistribution"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <dc:description xml:lang="en">MOD: Property used to specify objects' preferred label.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/mod"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: E.7</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: R1</prov:wasInfluencedBy>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/mod#synonymProperty">
+    <rdfs:label xml:lang="en">object synonym property</rdfs:label>
+    <rdfs:label xml:lang="fr">propriété de synonyme des objets</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefactDistribution"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <dc:description xml:lang="en">MOD: Property used to specify objects' synonyms.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/mod"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasSynonymType"/>
+    <owl:equivalentProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#synonymtypedef"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: E.7</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: R1</prov:wasInfluencedBy>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/mod#definitionProperty">
+    <rdfs:label xml:lang="en">object definition property</rdfs:label>
+    <rdfs:label xml:lang="fr">propriété de définition des objets</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefactDistribution"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <dc:description xml:lang="en">MOD: Property used to specify objects' definition.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/mod"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: E.7</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: R1</prov:wasInfluencedBy>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/mod#authorProperty">
+    <rdfs:label xml:lang="en">object author property</rdfs:label>
+    <rdfs:label xml:lang="fr">propriété d'auteur des objets</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefactDistribution"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <dc:description xml:lang="en">MOD: Property used to specify objects's author.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/mod"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: E.7</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: R1</prov:wasInfluencedBy>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/mod#obsoleteProperty">
+    <rdfs:label xml:lang="en">object obsolete property</rdfs:label>
+    <rdfs:label xml:lang="fr">propriété d'obsolescence des objets</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefactDistribution"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <dc:description xml:lang="en">MOD: Property used to specify obsolete objects.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/mod"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: E.7</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: R1</prov:wasInfluencedBy>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/mod#hierarchyProperty">
+    <rdfs:label xml:lang="en">transitive hierarchy property</rdfs:label>
+    <rdfs:label xml:lang="fr">propriété de hiérarchie transitive</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefactDistribution"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <dc:description xml:lang="en">MOD: Property used to specify the hierarchy (e.g. rdfs:subClassOf or skos:broader).</dc:description>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/mod"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: E.9</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: R1</prov:wasInfluencedBy>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/mod#obsoleteParent">
+    <rdfs:label xml:lang="en">transitive hierarchy property</rdfs:label>
+    <rdfs:label xml:lang="fr">propriété de hiérarchie transitive</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefactDistribution"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <dc:description xml:lang="en">MOD: Property used to specify the root of an obsolete branch in the ontology.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/mod"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: R1</prov:wasInfluencedBy>
+  </owl:DatatypeProperty>
+
+  <rdf:Property rdf:about="http://rdfs.org/ns/void#uriRegexPattern">
+    <rdfs:label xml:lang="en">identifier pattern</rdfs:label>
+    <rdfs:label xml:lang="fr">patron d'identifiant</rdfs:label>
+    <rdfs:domain rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+    <dc:description xml:lang="en">VOID: A regular expression that matches the URIs of a void:Dataset's entities. IDOT: Regular expression describing alphanumeric strings used to identify items (or records) in a dataset.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/void"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-01-26</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://identifiers.org/idot/identifierPattern"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: E.6</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/mod#toDoList">
+    <rdfs:label xml:lang="en">to-do list</rdfs:label>
+    <rdfs:label xml:lang="fr">liste des choses à faire</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/12/cal/ical#Vtodo"/>
+    <dc:description xml:lang="en">VOID: Describes future tasks planned by a resource curator. This property is primarily intended to be used for vocabularies or datasets, but the domain is left open, it can be used for any resource. Use iCalendar Vtodo class and its properties to further describe the task calendar, priorities etc.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocommons/voaf"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-05-23</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://purl.org/vocommons/voaf#toDoList"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+    <skos:historyNote xml:lang="en">This property had been originally defined by VOAF metadata vocabulary. Now, it has been adopted and redefined in the MOD namespace.</skos:historyNote>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </owl:ObjectProperty>
+
+  <rdf:Property rdf:about="http://rdfs.org/ns/void#exampleResource">
+    <rdfs:label xml:lang="en">example de resource</rdfs:label>
+    <rdfs:label xml:lang="fr">exemple de resource</rdfs:label>
+    <rdfs:domain rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <dc:description xml:lang="en">VOID: Example resource of dataset. IDOT: An example identifier used by one item (or record) from a dataset.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/void"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-01-26</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://identifiers.org/idot/exampleIdentifier"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: E.6</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="https://schema.org/award">
+    <rdfs:label xml:lang="en">award</rdfs:label>
+    <rdfs:label xml:lang="fr">prix</rdfs:label>
+    <dc:description xml:lang="en">SCHEMA: An award won by or for this item.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-04-21</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+    <ns6:domainIncludes rdf:resource="https://schema.org/CreativeWork"/>
+    <ns6:domainIncludes rdf:resource="https://schema.org/Organization"/>
+    <ns6:domainIncludes rdf:resource="https://schema.org/Person"/>
+    <ns6:domainIncludes rdf:resource="https://schema.org/Product"/>
+    <ns6:domainIncludes rdf:resource="https://schema.org/Service"/>
+    <ns6:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="https://schema.org/associatedMedia">
+    <rdfs:label xml:lang="en">associated media</rdfs:label>
+    <rdfs:label xml:lang="fr">média associé</rdfs:label>
+    <dc:description xml:lang="en">SCHEMA: A media object that encodes this CreativeWork. This property is a synonym for encoding.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-04-21</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-07-28</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+    <ns6:domainIncludes rdf:resource="https://schema.org/CreativeWork"/>
+    <ns6:domainIncludes rdf:resource="https://schema.org/HyperToc"/>
+    <ns6:domainIncludes rdf:resource="https://schema.org/HyperTocEntry"/>
+    <ns6:rangeIncludes rdf:resource="https://schema.org/MediaObject"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="https://schema.org/includedInDataCatalog">
+    <rdfs:label xml:lang="en">Indexed or included in catalog or repository</rdfs:label>
+    <rdfs:label xml:lang="fr">indexé ou inclus dans un catalogue ou un entrepôt</rdfs:label>
+    <dc:description xml:lang="en">SCHEMA: A data catalog which contains this dataset.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-05-04</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-07-28</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F4, A1.1, A1.2</prov:wasInfluencedBy>
+    <ns6:domainIncludes rdf:resource="https://schema.org/Dataset"/>
+    <ns6:inverseOf rdf:resource="https://schema.org/dataset"/>
+    <ns6:rangeIncludes rdf:resource="https://schema.org/DataCatalog"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/creator">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/creator"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://purl.org/dc/terms/contributor">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/contributor"/>
+        <rdfs:label xml:lang="en">contributor</rdfs:label>
+        <rdfs:label xml:lang="fr">contributeur</rdfs:label>
+        <dc:description xml:lang="en">DCTERMS: An entity responsible for making contributions to the resource. OMV: Contributors to the creation of the ontology. PAV: The resource was contributed to by the given agent. SCHEMA: A secondary contributor to the CreativeWork or Event. DOAP: Project contributor.</dc:description>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+        <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#hasContributor"/>
+        <owl:equivalentProperty rdf:resource="http://purl.org/pav/contributedBy"/>
+        <owl:equivalentProperty rdf:resource="https://schema.org/contributor"/>
+        <owl:equivalentProperty rdf:resource="http://usefulinc.com/ns/doap#developer"/>
+        <owl:equivalentProperty rdf:resource="http://usefulinc.com/ns/doap#helper"/>
+        <owl:equivalentProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#saved-by"/>
+        <owl:equivalentProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#savedBy"/>
+        <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+        <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+        <prov:wasInfluencedBy>MIRO guidelines: C.2</prov:wasInfluencedBy>
+        <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+        <ns7:rangeIncludes rdf:resource="http://purl.org/dc/terms/Agent"/>
+      </rdf:Property>
+    </rdfs:subPropertyOf>
+
+    <rdfs:label xml:lang="en">creator</rdfs:label>
+    <rdfs:label xml:lang="fr">créateur</rdfs:label>
+    <dc:description xml:lang="en">DCTERMS: An entity responsible for making the resource. Recommended practice is to identify the creator with a URI.  If this is not possible or feasible, a literal value that identifies the creator may be provided.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#creator"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/pav/authoredBy"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/pav/createdBy"/>
+    <owl:equivalentProperty rdf:resource="https://schema.org/author"/>
+    <owl:equivalentProperty rdf:resource="http://usefulinc.com/ns/doap#maintainer"/>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/prov#wasAttributedTo"/>
+    <owl:equivalentProperty rdf:resource="http://xmlns.com/foaf/0.1/maker"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: C.2</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+    <ns7:rangeIncludes rdf:resource="http://purl.org/dc/terms/Agent"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/publisher">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/publisher"/>
+    <rdfs:label xml:lang="en">publisher</rdfs:label>
+    <rdfs:label xml:lang="fr">éditeur</rdfs:label>
+    <dc:description xml:lang="en">DDCTERMS: An entity responsible for making the resource available.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+    <owl:equivalentProperty rdf:resource="https://schema.org/publisher"/>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/adms#schemaAgency"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: A.2</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+    <ns7:rangeIncludes rdf:resource="http://purl.org/dc/terms/Agent"/>
+  </rdf:Property>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/mod#curatedBy">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/pav/contributedBy"/>
+    <rdfs:label xml:lang="en">curated by</rdfs:label>
+    <rdfs:label xml:lang="fr">contrôlé par</rdfs:label>
+    <dc:description xml:lang="en">PAV: Specifies an agent specialist responsible for shaping the expression in an appropriate format. Often the primary agent responsible for ensuring the quality of the representation. MOD: A curator who restructure the previously authored content and shape it to be appropriate for the intended representation (e.g. by normalizing the fields for being represented in a spreadsheet). </dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-08-28</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: C.2</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+    <owl:inverseOf rdf:resource="http://purl.org/pav/curates"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/pav/createdBy"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/pav/curatedOn"/>
+  </owl:ObjectProperty>
+
+  <rdf:Property rdf:about="https://schema.org/translator">
+    <rdfs:label xml:lang="en">translator</rdfs:label>
+    <rdfs:label xml:lang="fr">traducteur</rdfs:label>
+    <dc:description xml:lang="en">SCHEMA: Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-04-21</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+    <ns6:domainIncludes rdf:resource="https://schema.org/CreativeWork"/>
+    <ns6:domainIncludes rdf:resource="https://schema.org/Event"/>
+    <ns6:rangeIncludes rdf:resource="https://schema.org/Organization"/>
+    <ns6:rangeIncludes rdf:resource="https://schema.org/Person"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/rightsHolder">
+    <rdfs:label xml:lang="en">rights holder</rdfs:label>
+    <rdfs:label xml:lang="fr">détenteur des droits</rdfs:label>
+    <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
+    <dc:description xml:lang="en">DCTERMS: A person or organization owning or managing rights over the resource. MOD: The person who can be contacted to enquire about an ontology. SCHEMA: The party holding the legal copyright to the CreativeWork. DCAT: Relevant contact information for the cataloged resource. Use of vCard is recommended.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-06-14</dc:issued>
+    <owl:equivalentProperty rdf:resource="https://schema.org/copyrightHolder"/>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/dca#contactPoint"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: A.2</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: R1.1</prov:wasInfluencedBy>
+    <ns7:rangeIncludes rdf:resource="http://purl.org/dc/terms/Agent"/>
+  </rdf:Property>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/mod#group">
+    <rdfs:label xml:lang="en">group</rdfs:label>
+    <rdfs:label xml:lang="fr">groupe</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+    <rdfs:range>
+      <owl:Class rdf:about="https://w3id.org/mod#Group">
+        <rdfs:comment xml:lang="en">A group of ontologies that the ontology is usually considered into.</rdfs:comment>
+        <rdfs:label xml:lang="en">Group</rdfs:label>
+      </owl:Class>
+    </rdfs:range>
+
+    <dc:description xml:lang="en">MOD: A group of ontologies that the ontology is usually considered into.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/mod"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: R1.3</prov:wasInfluencedBy>
+  </owl:ObjectProperty>
+
+  <owl:OntologyProperty rdf:about="http://www.w3.org/2002/07/owl#imports">
+    <rdfs:label xml:lang="en">imports</rdfs:label>
+    <rdfs:label xml:lang="fr">importe</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dc:description xml:lang="en">OWL: References another OWL ontology containing definitions, whose meaning is considered to be part of the meaning of the importing ontology. OMV: References another ontology metadata instance that describes an ontology containing definitions, whose meaning is considered to be part of the meaning of the ontology described by this ontology metadata instance. DCTERMS: A related resource that is required by the described resource to support its function, delivery, or coherence. VOAF: Indicates that the subject vocabulary extends the expressivity of the object vocabulary by declaring subsumption relationships, using object vocabulary class as domain or range of a subject vocabulary property, defining local restrictions etc ....</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2002/07/owl#"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-02-10</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#useImports"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/requires"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/vocommons/voaf#extends"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: E.4</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: I2</prov:wasInfluencedBy>
+  </owl:OntologyProperty>
+
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#PriorVersion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#OntologyProperty"/>
+    <rdfs:label xml:lang="en">prior version</rdfs:label>
+    <rdfs:label xml:lang="fr">version précédente</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dc:description xml:lang="en">OWL:  This identifies the specified ontology as a prior version of the containing ontology. OMV: Contains a reference to another ontology metadata instance. DCTERMS: A related resource of which the described resource is a version, edition, or adaptation. PROV: A revision is a derivation for which the resulting entity is a revised version of some original. The implication here is that the resulting entity contains substantial content from the original. DOOR: Prior version relation from OWL. ADMS: A link to the previous version of the Asset.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2002/07/owl#"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-02-10</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#hasPriorVersion"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/isVersionOf"/>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/prov#wasRevisionOf"/>
+    <owl:equivalentProperty rdf:resource="http://kannel.open.ac.uk/ontology#priorVersion"/>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/adms#prev"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: A.5</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: I2</prov:wasInfluencedBy>
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#backwardCompatibleWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#OntologyProperty"/>
+    <rdfs:label xml:lang="en">backward compatible</rdfs:label>
+    <rdfs:label xml:lang="fr">rétrocompatible</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dc:description xml:lang="en">OWL: This identifies the specified ontology as a prior version of the containing ontology, and further indicates that it is backward compatible with it. OMV: The ontology metadata instance which describes an ontology that is a compatible prior version of the ontology described by this ontology metadata Instance. DOOR: The relation of being a compatible new version from owl.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2002/07/owl#"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-02-10</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#isBackwardCompatibleWith"/>
+    <owl:equivalentProperty rdf:resource="http://kannel.open.ac.uk/ontology#backwardCompatibleWith"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: E.8,E.10</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: I2</prov:wasInfluencedBy>
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#incompatibleWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#OntologyProperty"/>
+    <rdfs:label xml:lang="en">incompatible</rdfs:label>
+    <rdfs:label xml:lang="fr">incomaptible</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dc:description xml:lang="en">OWL: This indicates that the containing ontology is a later version of the referenced ontology, but is not backward compatible with it. OMV: The described ontology is a later version of the ontology described by the metadata specified, but is not backward compatible with it. It can be used to explicitly state that ontology cannot upgrade to use the new version without checking whether changes are required. </dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2002/07/owl#"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-02-10</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#isIncompatibleWith"/>
+    <owl:equivalentProperty rdf:resource="http://kannel.open.ac.uk/ontology#owlIncompatibleWith"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: I2</prov:wasInfluencedBy>
+  </owl:AnnotationProperty>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/isPartOf">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    <rdfs:label xml:lang="en">is part of (view of)</rdfs:label>
+    <rdfs:label xml:lang="fr">est partie (une vue) de</rdfs:label>
+    <dc:description xml:lang="en">DCTERMS: A related resource in which the described resource is physically or logically included. MOD: Shall be used to identify a subset or a view of an ontology. DOOR: An ontology is included in another if its model is contained in the one of the other ontology. SCHEMA: Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://kannel.open.ac.uk/ontology#includedIn"/>
+    <owl:equivalentProperty rdf:resource="http://rdfs.org/ns/void#subset"/>
+    <owl:equivalentProperty rdf:resource="https://schema.org/isPartOf"/>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.1/module"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/hasPart">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    <rdfs:label xml:lang="en">has part (has view)</rdfs:label>
+    <rdfs:label xml:lang="fr">a pour partie (vue)</rdfs:label>
+    <dc:description xml:lang="en">DCTERMS: A related resource that is included either physically or logically in the described resource. SCHEMA: Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense). ADMS: Links to a sample of an Asset (which is itself an Asset).</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dc:issued>
+    <owl:equivalentProperty rdf:resource="https://schema.org/hasPart"/>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/adms#sample"/>
+    <owl:equivalentProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasSubset"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/hasVersion">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    <rdfs:label xml:lang="en">has version</rdfs:label>
+    <rdfs:label xml:lang="fr">a pour version</rdfs:label>
+    <dc:description xml:lang="en">DCTERMS: a related resource that is a version, edition, or adaptation of the described resource. MOD: A related ontology that is a version, edition, or adtapation of the described ontology. PAV: This resource has a more specific, versioned resource.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dc:issued>
+    <owl:equivalentProperty rdf:resource="https://schema.org/hasPart"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/pav/hasVersion"/>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.2/version"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: A2,R1.2</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/isFormatOf">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    <rdfs:label xml:lang="en">is format of</rdfs:label>
+    <rdfs:label xml:lang="fr">est le format de</rdfs:label>
+    <dc:description xml:lang="en">DCTERMS: A related resource that is substantially the same as the described resource, but in another format.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dc:issued>
+    <owl:equivalentProperty rdf:resource="https://schema.org/hasPart"/>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.2/syntax"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: I1</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/hasFormat">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relatio"/>
+    <rdfs:label xml:lang="en">has format</rdfs:label>
+    <rdfs:label xml:lang="fr"> pour format</rdfs:label>
+    <dc:description xml:lang="en">DCTERMS: A related resource that is substantially the same as the pre-existing described resource, but in another format.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dc:issued>
+    <owl:equivalentProperty rdf:resource="https://schema.org/hasPart"/>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.2/syntax"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: I1</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/relation">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+    <rdfs:label xml:lang="en">relation</rdfs:label>
+    <rdfs:label xml:lang="fr">relation</rdfs:label>
+    <dc:description xml:lang="en">DCTERMS: A related resource.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: I2</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/mod#semanticArtefactRelation">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    <rdfs:label xml:lang="en">generally related to</rdfs:label>
+    <rdfs:label xml:lang="fr">relation générale avec</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+    <rdfs:range rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+    <dc:description xml:lang="en">MOD: A general property for semantic artefact relations. DOOR: An ontology is related to another if one of the DOOR relations is satisfied.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/mod/2.0"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-12-06</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://kannel.open.ac.uk/ontology#ontologyRelatedTo"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/2.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-12-06</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: I2</prov:wasInfluencedBy>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/mod#reliesOn">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#semanticArtefactRelation"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="https://w3id.org/mod#usedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#semanticArtefactRelation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/mod#reliesOn"/>
+        <rdfs:label xml:lang="en">used by</rdfs:label>
+        <rdfs:label xml:lang="fr">utilisé par</rdfs:label>
+        <dc:description xml:lang="en">VOAF: Indicates that the subject vocabulary is used by the object vocabulary. NKOS: Agent using the described KOS.</dc:description>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocommons/voaf"/>
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-05-23</dc:issued>
+        <owl:equivalentProperty rdf:resource="http://purl.org/vocommons/voaf#usedBy"/>
+        <owl:equivalentProperty rdf:resource="http://w3id.org/nkos#usedBy"/>
+        <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+        <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+        <skos:historyNote xml:lang="en">This property had been originally defined by VOAF metadata vocabulary. Now, it has been adopted and redefined in the MOD namespace.</skos:historyNote>
+        <prov:wasInfluencedBy>FAIR principle: I2</prov:wasInfluencedBy>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+
+    <rdfs:label xml:lang="en">relies on or reuses</rdfs:label>
+    <rdfs:label xml:lang="fr">se repose sur ou réutilise</rdfs:label>
+    <dc:description xml:lang="en">MOD: A general property for different kind of case when a semantic resource relies or reuses another one. VOAF: Indicates that the subject vocabulary uses or extends some class or property of the object vocabulary. VOID: A vocabulary that is used in the dataset.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocommons/voaf"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-05-24</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://purl.org/vocommons/voaf#reliesOn"/>
+    <owl:equivalentProperty rdf:resource="http://rdfs.org/ns/void#vocabulary"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/2.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-12-06</ns3:importedOn>
+    <skos:historyNote xml:lang="en">This property had been originally defined by VOAF metadata vocabulary. Now, it has been adopted and redefined in the MOD namespace.</skos:historyNote>
+    <prov:wasInfluencedBy>FAIR principle: I2</prov:wasInfluencedBy>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/mod#specializes">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#semanticArtefactRelation"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="https://w3id.org/mod#generalizes">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#semanticArtefactRelation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/mod#specializes"/>
+        <rdfs:label xml:lang="en">generalizes</rdfs:label>
+        <rdfs:label xml:lang="fr">généralise</rdfs:label>
+        <dc:description xml:lang="en">VOAF: Indicates that the subject vocabulary generalizes by some superclasses or superproperties the object vocabulary. PROV: Inverse property of specializationOf.</dc:description>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocommons/voaf"/>
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-05-23</dc:issued>
+        <owl:equivalentProperty rdf:resource="http://purl.org/vocommons/voaf#generalizes"/>
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/prov#generalizationOf"/>
+        <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+        <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+        <skos:historyNote xml:lang="en">This property had been originally defined by VOAF metadata vocabulary. Now, it has been adopted and redefined in the MOD namespace.</skos:historyNote>
+        <prov:wasInfluencedBy>FAIR principle: I2</prov:wasInfluencedBy>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+
+    <rdfs:label xml:lang="en">specializes</rdfs:label>
+    <rdfs:label xml:lang="fr">spécialise</rdfs:label>
+    <dc:description xml:lang="en">DOOR: Evolution which involves a only at the syntactic level. PROV: An entity that is a specialization of another shares all aspects of the latter, and additionally presents more specific aspects of the same thing as the latter. VOAF:Indicates that the subject vocabulary defines some subclasses or subproperties of the object vocabulary, or local restrictions on those.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocommons/voaf"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-05-23</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://kannel.open.ac.uk/ontology#explanationEvolution"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/vocommons/voaf#specializes"/>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/prov#specializationOf"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <skos:historyNote xml:lang="en">This property had been originally defined by VOAF metadata vocabulary. Now, it has been adopted and redefined in the MOD namespace.</skos:historyNote>
+    <prov:wasInfluencedBy>FAIR principle: I2</prov:wasInfluencedBy>
+  </owl:ObjectProperty>
+
+  <rdf:Property rdf:about="https://schema.org/workTranslation">
+    <rdfs:label xml:lang="en">work translation</rdfs:label>
+    <rdfs:label xml:lang="fr">a pour traduction</rdfs:label>
+    <dc:description xml:lang="en">MOD: A pointer to the translated ontology(ies) for an existing ontology. SCHEMA: A work that is a translation of the content of this work. ADMS: Links Assets that are translations of each other.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-04-21</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/adms#translation"/>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.0/translation"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <ns6:domainIncludes rdf:resource="https://schema.org/CreativeWork"/>
+    <ns6:rangeIncludes rdf:resource="https://schema.org/CreativeWork"/>
+    <ns6:inverseOf>
+      <rdf:Property rdf:about="https://schema.org/translationOfWork">
+        <rdfs:label xml:lang="en">translation of</rdfs:label>
+        <rdfs:label xml:lang="fr">traduction de</rdfs:label>
+        <dc:description xml:lang="en">SCHEMA: The work that this work has been translated from. ADMS: Links Assets that are translations of each other.</dc:description>
+        <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-04-21</dc:issued>
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/adms#translation"/>
+        <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+        <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+        <ns6:domainIncludes rdf:resource="https://schema.org/CreativeWork"/>
+        <ns6:rangeIncludes rdf:resource="https://schema.org/CreativeWork"/>
+        <ns6:inverseOf rdf:resource="https://schema.org/workTranslation"/>
+        <ns6:isPartOf rdf:resource="https://bib.schema.org"/>
+      </rdf:Property>
+    </ns6:inverseOf>
+
+    <ns6:isPartOf rdf:resource="https://bib.schema.org"/>
+  </rdf:Property>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/mod#comesFromTheSameDomain">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#semanticArtefactRelation"/>
+    <rdfs:label xml:lang="en">comes from the same domain</rdfs:label>
+    <rdfs:label xml:lang="fr">vient du même domaine</rdfs:label>
+    <dc:description xml:lang="en">DOOR: If the two ontologies come from the same domain (without any other details).</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://kannel.open.ac.uk/ontology"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-10-06</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://kannel.open.ac.uk/ontology/comesFromTheSameDomain"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+    <skos:historyNote xml:lang="en">This property had been originally defined by DOOR metadata vocabulary. Now, it has been adopted and redefined in the MOD namespace.</skos:historyNote>
+    <prov:wasInfluencedBy>MIRO guidelines: B.2</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: I2</prov:wasInfluencedBy>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/mod#similar">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#semanticArtefactRelation"/>
+    <rdfs:label xml:lang="en">similar to</rdfs:label>
+    <rdfs:label xml:lang="fr">similaire à</rdfs:label>
+    <dc:description xml:lang="en">VOAF: Used to assert that two vocabularies are similar in scope and objectives, independently of the fact that they otherwise refer to each other. DOOR: Represents the meaning of 'how an ontology overlap/cover parts of the same area of interest of another ontology.'</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocommons/voaf"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-05-23</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://kannel.open.ac.uk/ontology/similarTo"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/vocommons/voaf#similar"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+    <skos:historyNote xml:lang="en">This property had been originally defined by VOAF metadata vocabulary. Now, it has been adopted and redefined in the MOD namespace.</skos:historyNote>
+    <prov:wasInfluencedBy>MIRO guidelines: B.2</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: I2</prov:wasInfluencedBy>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/mod#hasEquivalencesWith">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#reliesOn"/>
+    <rdfs:label xml:lang="en">has equivalences with</rdfs:label>
+    <rdfs:label xml:lang="fr">a des équivalences avec</rdfs:label>
+    <dc:description xml:lang="en">VOAF: Indicates that the subject vocabulary declares some equivalent classes or properties with the object vocabulary. DOOR: Links two ontologies if there exists an alignment which covers a substantial part of the vocabulary (i.e., a proportion greater than a threshold). NKOS: A related resource with which the described resource is aligned.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocommons/voaf"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-05-23</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://kannel.open.ac.uk/ontology#isAlignedTo"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/vocommons/voaf#hasEquivalencesWith"/>
+    <owl:equivalentProperty rdf:resource="http://w3id.org/nkos#alignedWith"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+    <skos:historyNote xml:lang="en">This property had been originally defined by VOAF metadata vocabulary. Now, it has been adopted and redefined in the MOD namespace.</skos:historyNote>
+    <prov:wasInfluencedBy>MIRO guidelines: E.4</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: I2</prov:wasInfluencedBy>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/mod#hasDisparateModelling">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#semanticArtefactRelation"/>
+    <rdfs:subPropertyOf rdf:resource="http://kannel.open.ac.uk/ontology#disagreesWith"/>
+    <rdfs:label xml:lang="en">disparate modelling with</rdfs:label>
+    <rdfs:label xml:lang="fr">différences de modélisation avec</rdfs:label>
+    <dc:description xml:lang="en">DOOR: Disagreements related  to  the  conceptualization  of  the  ontologies. Two ontologies are considered to have disparate modeling if they represent corresponding entities in different ways, e.g.  as an instance in one case and a class in the other.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://kannel.open.ac.uk/ontology"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-10-06</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://kannel.open.ac.uk/ontology/hasDisparateModelling"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+    <skos:historyNote xml:lang="en">This property had been originally defined by DOOR metadata vocabulary. Now, it has been adopted and redefined in the MOD namespace.</skos:historyNote>
+    <prov:wasInfluencedBy>MIRO guidelines: B.2</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: I2</prov:wasInfluencedBy>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/mod#hasDisjunctionsWith">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#semanticArtefactRelation"/>
+    <rdfs:label xml:lang="en">has disjunctions with</rdfs:label>
+    <rdfs:label xml:lang="fr">a des disjopnctions avec</rdfs:label>
+    <dc:description xml:lang="en">VOAF: Indicates that the subject vocabulary declares some disjunct classes with the object vocabulary.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocommons/voaf"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-05-23</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://purl.org/vocommons/voaf#hasDisjunctionsWith"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+    <skos:historyNote xml:lang="en">This property had been originally defined by VOAF metadata vocabulary. Now, it has been adopted and redefined in the MOD namespace.</skos:historyNote>
+    <prov:wasInfluencedBy>MIRO guidelines: E.4</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: I2</prov:wasInfluencedBy>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/primaryTopic">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">primary topic</rdfs:label>
+    <rdfs:label xml:lang="fr">sujet principal</rdfs:label>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <dc:description xml:lang="en"></dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-01-14</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#keyClasses"/>
+    <owl:equivalentProperty rdf:resource="https://schema.org/mainEntity"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+    <owl:inverseOf rdf:resource="http://xmlns.com/foaf/0.1/isPrimaryTopicOf"/>
+  </owl:ObjectProperty>
+
+  <rdf:Property rdf:about="http://rdfs.org/ns/void#rootResource">
+    <rdfs:label xml:lang="en">root resource</rdfs:label>
+    <rdfs:label xml:lang="fr">ressource racine</rdfs:label>
+    <rdfs:domain rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <dc:description xml:lang="en">VOID: A top concept or entry point for a void:Dataset that is structured in a tree-like fashion. All resources in a dataset can be reached by following links from its root resources in a small number of steps. MOD: This property is to provide the root class(es) of an ontology. This is automatically populated by taking the direct subclasses of owl:Thing. If the ontology is also defined as a unique skos:ConceptScheme, then this property should become equivalent of skos:hasTopConcept. SKOS: The property skos:hasTopConcept is, by convention, used to link a concept scheme to the SKOS concept(s) which are topmost in the hierarchical relations for that scheme.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/void"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-01-26</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.0/rootClasses"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/mod#browsingUI">
+    <rdfs:label xml:lang="en">browsing user interface</rdfs:label>
+    <rdfs:label xml:lang="fr">interface de navigation</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <dc:description xml:lang="en">MOD: The user interface (URL) where the ontology may be browsed or searched.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/mod"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </owl:DatatypeProperty>
+
+  <rdf:Property rdf:about="http://www.w3.org/ns/sparql-service-description#endpoint">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:label xml:lang="en">SPARQL endpoint</rdfs:label>
+    <rdfs:label xml:lang="fr">point de requêtage SPARQL</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sparql-service-description#Service"/>
+    <dc:description xml:lang="en">SD: Relates an instance of sd:Service to a SPARQL endpoint that implements the SPARQL Protocol service for the service. The object of the sd:endpoint property is an IRI. VOID: A SPARQL protocol endpoint that allows SPARQL query access to a void:Dataset.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="ttp://www.w3.org/ns/sparql-service-description"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-03-21</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://rdfs.org/ns/void#sparqlEndpoint"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: A1</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/mod#metadataVoc">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#reliesOn"/>
+    <rdfs:label xml:lang="en">metadata vocabulary used</rdfs:label>
+    <rdfs:label xml:lang="fr">vocabulaires de métadonnées utilisés</rdfs:label>
+    <dc:description xml:lang="en">VOAF: Indicates that the subject vocabulary uses the object vocabulary in metadata at vocabulary or element level. SCHEMA: Indicates (by URL or string) a particular version of a schema used in some CreativeWork. ADMS: A schema according to which the Asset Repository can provide data about its content, e.g. ADMS. MOD: A vocabulary(ies) that is used and/or referred to create the current ontology.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocommons/voaf"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-05-23</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://purl.org/vocommons/voaf#metadataVoc"/>
+    <owl:equivalentProperty rdf:resource="https://schema.org/schemaVersion"/>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/adms#supportedSchema"/>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.0/vocabularyUsed"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <skos:historyNote xml:lang="en">This property had been originally defined by VOAF metadata vocabulary. Now, it has been adopted and redefined in the MOD namespace.</skos:historyNote>
+    <prov:wasInfluencedBy>MIRO guidelines: E.4,E9</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: I2</prov:wasInfluencedBy>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/mod#sampleQueries">
+    <rdfs:label xml:lang="en">sample queries</rdfs:label>
+    <rdfs:label xml:lang="fr">exemples de requêtes</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefactDistribution"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dc:description xml:lang="en">MOD: A set of queries (may be SPARQL, DL Queries) that are provided along with an ontology.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/mod"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </owl:DatatypeProperty>
+
+  <rdf:Property rdf:about="http://rdfs.org/ns/void#propertyPartition">
+    <rdfs:label xml:lang="en">property partition</rdfs:label>
+    <rdfs:label xml:lang="fr">partition des propriétés</rdfs:label>
+    <rdfs:domain rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+    <rdfs:range rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+    <dc:description xml:lang="en">VOID: A subset of a void:Dataset that contains only the triples of a certain rdf:Property.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/void"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-01-26</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+    <rdfs:subPropertyOf rdf:resource="http://rdfs.org/ns/void#subset"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://rdfs.org/ns/void#classPartition">
+    <rdfs:label xml:lang="en">class partition</rdfs:label>
+    <rdfs:label xml:lang="fr">partition des classes</rdfs:label>
+    <rdfs:domain rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+    <rdfs:range rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+    <dc:description xml:lang="en">VOID: A subset of a void:Dataset that contains only the entities of a certain rdfs:Class.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/void"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-01-26</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+    <rdfs:subPropertyOf rdf:resource="http://rdfs.org/ns/void#subset"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.w3.org/ns/dca#downloadURL">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">download URL</rdfs:label>
+    <rdfs:label xml:lang="fr">URL de téléchargement</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/dca#Distribution"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <dc:description xml:lang="en">DCAT: The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution's dct:format and/or dcat:mediaType. VOID: An RDF dump, partial or complete, of a void:Dataset. DOAP: Mirror of software download web page. SCHEMA: A downloadable form of this dataset, at a specific location, in a specific format.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-01-16</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://rdfs.org/ns/void#dataDump"/>
+    <owl:equivalentProperty rdf:resource="http://usefulinc.com/ns/doap#download-mirror"/>
+    <owl:equivalentProperty rdf:resource="https://schema.org/distribution"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+    <skos:scopeNote xml:lang="en">dcat:downloadURL SHOULD be used for the address at which this distribution is available directly, typically through a HTTP Get request.</skos:scopeNote>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://rdfs.org/ns/void#openSearchDescription">
+    <rdfs:label xml:lang="en">free-text search endpoint</rdfs:label>
+    <rdfs:label xml:lang="fr">service de requêtage en texte libre</rdfs:label>
+    <rdfs:domain rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <dc:description xml:lang="en">VOID: An OpenSearch description document for a free-text search service over a void:Dataset. DOAP: The URI of a web service endpoint where software as a service may be accessed.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/void"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-01-26</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://rdfs.org/ns/void#uriLookupEndpoint">
+    <rdfs:label xml:lang="en">URI lookup endpoint</rdfs:label>
+    <rdfs:label xml:lang="fr">service de requêtage des URI</rdfs:label>
+    <rdfs:domain rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <dc:description xml:lang="en">VOID: A protocol endpoint for simple URI lookups for a void:Dataset.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/void"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-01-26</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/mod#knownUsage">
+    <rdfs:label xml:lang="en">known usage</rdfs:label>
+    <rdfs:label xml:lang="fr">usage connu</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dc:description xml:lang="en">OMV: The applications where the ontology is being used.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-24</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#knownUsage"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <skos:historyNote xml:lang="en">This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace.</skos:historyNote>
+    <prov:wasInfluencedBy>MIRO guidelines: B.3</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/mod#endorsedBy">
+    <rdfs:label xml:lang="en">endorsed by</rdfs:label>
+    <rdfs:label xml:lang="fr">approuvé par</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+    <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
+    <dc:description xml:lang="en">MOD: An ontology endorsed by an agent. OMV: The parties that have expressed support or approval to this ontology.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-24</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#endorsedBy"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <skos:historyNote xml:lang="en">This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace.</skos:historyNote>
+    <prov:wasInfluencedBy>MIRO guidelines: G.4</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: I3</prov:wasInfluencedBy>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/mod#usedInProject">
+    <rdfs:label xml:lang="en">used in project</rdfs:label>
+    <rdfs:label xml:lang="fr">utilisé dans le projet</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+    <dc:description xml:lang="en">MOD: An ontology that is used in a project.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/mod"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.0/ontologyInUse"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: B.3,G.5</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: I3</prov:wasInfluencedBy>
+  </owl:ObjectProperty>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/audience">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/audience"/>
+    <rdfs:label xml:lang="en">target audience</rdfs:label>
+    <rdfs:label xml:lang="fr">audience cible</rdfs:label>
+    <dc:description xml:lang="en">DCTERMS: a class of entity for whom the resource is intended or useful (public visé ou recommandé pour la ressource). DOAP: Description of target user base. SCHEMA: An intended audience, i.e. a group for whom something was created.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2001-05-21</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://usefulinc.com/ns/doap#audience"/>
+    <owl:equivalentProperty rdf:resource="https://schema.org/audience"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: B.3</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+    <ns7:rangeIncludes rdf:resource="http://purl.org/dc/terms/AgentClass"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/fundedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">funded or sponsored by</rdfs:label>
+    <rdfs:label xml:lang="fr">financé ou sponsorisé par</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <dc:description xml:lang="en">MOD: An ontology that is sponsored by and developed under a project. FOAF: An organization funding a project or person. SCHEMA: The Organization on whose behalf the creator was working.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-01-14</dc:issued>
+    <owl:equivalentProperty rdf:resource="https://schema.org/sourceOrganization"/>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.0/sponsoredBy"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: R1.2</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://usefulinc.com/ns/doap#repository">
+    <rdfs:label xml:lang="en">repository</rdfs:label>
+    <rdfs:label xml:lang="fr">entrepôt</rdfs:label>
+    <rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project"/>
+    <rdfs:range rdf:resource="http://usefulinc.com/ns/doap#Repository"/>
+    <dc:description xml:lang="en">DOAP: Source code repository.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: A.5</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: R1.2</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://usefulinc.com/ns/doap#bug-database">
+    <rdfs:label xml:lang="en">bug database</rdfs:label>
+    <rdfs:label xml:lang="fr">repertoire de bogues</rdfs:label>
+    <rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project"/>
+    <dc:description xml:lang="en">DOAP: Bug tracker for a project.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: C.3</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://usefulinc.com/ns/doap#mailing-list">
+    <rdfs:label xml:lang="en">mailing list</rdfs:label>
+    <rdfs:label xml:lang="fr">liste de diffusion</rdfs:label>
+    <rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project"/>
+    <dc:description xml:lang="en">DOAP: Mailing list home page or email address.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap#"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: C.3</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/mod#hasEvaluation">
+    <rdfs:label xml:lang="en">evaluation</rdfs:label>
+    <rdfs:label xml:lang="fr">évaluation</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+    <rdfs:range>
+      <owl:Class rdf:about="https://w3id.org/mod#Evaluation">
+        <rdfs:comment xml:lang="en">The results of evaluating an ontology. An ontology can have more than one evaluations.</rdfs:comment>
+        <rdfs:label xml:lang="en">Evaluation</rdfs:label>
+      </owl:Class>
+    </rdfs:range>
+
+    <dc:description xml:lang="en">MOD: This property makes a relationship between an ontology and its evaluation result.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/mod"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</dc:issued>
+    <owl:equivalentProperty rdf:resource="https://schema.org/review"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: G.2</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </owl:ObjectProperty>
+
+  <rdf:Property rdf:about="https://schema.org/comment">
+    <rdfs:label xml:lang="en">user notes or reviews</rdfs:label>
+    <rdfs:label xml:lang="fr">commentaires ou avis d'utilisateurs</rdfs:label>
+    <dc:description xml:lang="en">SCHEMA: Comments, typically from users.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-04-21</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F4, A1.1, A1.2</prov:wasInfluencedBy>
+    <ns6:domainIncludes rdf:resource="https://schema.org/CreativeWork"/>
+    <ns6:rangeIncludes rdf:resource="https://schema.org/Comment"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/created">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+    <rdfs:label xml:lang="en">creation date</rdfs:label>
+    <rdfs:label xml:lang="fr">date de création</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <dc:description xml:lang="en">DCTERMS:date : A point or period of time associated with an event in the lifecycle of the resource. DCTERMS:created : Date of creation of the resource. DCTERMS:issued Date of formal issuance (e.g., publication) of the resource. PROV: Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation. PAV: The date this resource was authored. PAV: The date this resource was contributed to. PAV: The date of creation of the resource representation. DOAP: Date when something was created, in YYYY-MM-DD form. e.g. 2004-04-05. SCHEMA: The date on which the CreativeWork was created or the item was added to a DataFeed. DOAP: Date when something was created, in YYYY-MM-DD form. e.g. 2004-04-05.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#creationDate"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/issued"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/pav/authoredOn"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/pav/contributedOn"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/pav/createdOn"/>
+    <owl:equivalentProperty rdf:resource="https://schema.org/dateCreated"/>
+    <owl:equivalentProperty rdf:resource="http://usefulinc.com/ns/doap#created"/>
+    <owl:equivalentProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#date"/>
+    <owl:equivalentProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDate"/>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/prov#generatedAtTime"/>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.1/creationDate"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/modified">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+    <rdfs:label xml:lang="en">modification date</rdfs:label>
+    <rdfs:label xml:lang="fr">date de modification</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <dc:description xml:lang="en">OMV: Date of the last modification made to the ontology. DCTERMS:Date on which the resource was changed. PAV: The date of the last update of the resource. An update is a change which did not warrant making a new resource related using pav:previousVersion, for instance correcting a spelling mistake. SCHEMA: The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#modificationDate"/>
+    <owl:equivalentProperty rdf:resource="https://schema.org/dateModified"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/pav/lastUpdateOn"/>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.1/creationDate"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/valid">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+    <rdfs:label xml:lang="en">validity date</rdfs:label>
+    <rdfs:label xml:lang="fr">date de validité</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <dc:description xml:lang="en">DCTERMS: Date (often a range) of validity of a resource. PROV: Invalidation is the start of the destruction, cessation, or expiry of an existing entity by an activity. The entity is no longer available for use (or further invalidation) after invalidation. Any generation or usage of an entity precedes its invalidation. SCHEMA: The end date and time of the item (in ISO 8601 date format).</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dc:issued>
+    <owl:equivalentProperty rdf:resource="https://schema.org/endDate"/>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/prov#invalidatedAtTime"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/dateSubmitted">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+    <rdfs:label xml:lang="en">date submitted</rdfs:label>
+    <rdfs:label xml:lang="fr">date de soumission</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <dc:description xml:lang="en">DCTERMS: Date of submission of the resource. SCHEMA: Date of first broadcast/publication.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2002-07-13</dc:issued>
+    <owl:equivalentProperty rdf:resource="https://schema.org/datePublished"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/mod#curatedOn">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/pav/contributedOn"/>
+    <rdfs:label xml:lang="en">curation date</rdfs:label>
+    <rdfs:label xml:lang="fr">date de contrôle de qualité</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <dc:description xml:lang="en"></dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-08-28</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+    <rdfs:seeAlso rdf:resource="http://purl.org/pav/curatedBy"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/mod#metrics">
+    <rdfs:label xml:lang="en">metrics</rdfs:label>
+    <rdfs:label xml:lang="fr">métriques</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefactDistribution"/>
+    <dc:description xml:lang="en">MOD: A generic property to store any metrics related to the ontology.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/mod"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: E.3</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/mod#numberOfClasses">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#metrics"/>
+    <rdfs:label xml:lang="en">number of classes</rdfs:label>
+    <rdfs:label xml:lang="fr">nombre de classes</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    <dc:description xml:lang="en">MOD: The total number of classes in an ontology. OMV: Number of classes in the ontology. VOAF: The number of classes defined in the vocabulary namespace. Classes imported from other namespaces are not taken into account. VOID: The total number of distinct classes in a void:Dataset. In other words, the number of distinct resources occuring as objects of rdf:type.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-24</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#numberOfClasses"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/vocommons/voaf#classNumber"/>
+    <owl:equivalentProperty rdf:resource="http://rdfs.org/ns/void#classes"/>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.0/noOfClasses"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <skos:historyNote xml:lang="en">This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace.</skos:historyNote>
+    <prov:wasInfluencedBy>MIRO guidelines:  E.3</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/mod#numberOfIndividuals">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#metrics"/>
+    <rdfs:label xml:lang="en">number of individuals</rdfs:label>
+    <rdfs:label xml:lang="fr">nombre d'individus</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    <dc:description xml:lang="en">MOD: The total number of individuals in an ontology. OMV: Number of individuals in the ontology. VOID: The total number of entities that are described in a void:Dataset.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-24</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#numberOfIndividuals"/>
+    <owl:equivalentProperty rdf:resource="http://rdfs.org/ns/void#entities"/>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.0/noOfIndividuals"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <skos:historyNote xml:lang="en">This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace.</skos:historyNote>
+    <prov:wasInfluencedBy>MIRO guidelines:  E.3</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/mod#numberOfProperties">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#metrics"/>
+    <rdfs:label xml:lang="en">number of properties</rdfs:label>
+    <rdfs:label xml:lang="fr">nombre de propriétés</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    <dc:description xml:lang="en">MOD: The total number of properties in an ontology. OMV: Number of properties in the ontology. VOAF: The number of properties defined in the vocabulary namespace. Properties imported from other namespaces are not taken into account. VOID: The total number of distinct properties in a void:Dataset. In other words, the number of distinct resources that occur in the predicate position of triples in the dataset.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-24</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#numberOfProperties"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/vocommons/voaf#propertyNumber"/>
+    <owl:equivalentProperty rdf:resource="http://rdfs.org/ns/void#properties"/>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.0/noOfProperties"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <skos:historyNote xml:lang="en">This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace.</skos:historyNote>
+    <prov:wasInfluencedBy>MIRO guidelines:  E.3</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/mod#numberOfObjectProperties">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#numberOfProperties"/>
+    <rdfs:label xml:lang="en">number of object properties</rdfs:label>
+    <rdfs:label xml:lang="fr">nombre de propriétés d'objet</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    <dc:description xml:lang="en">MOD: The total number of object properties in an ontology.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/mod"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines:  E.3</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/mod#numberOfDataProperties">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#numberOfProperties"/>
+    <rdfs:label xml:lang="en">number of data properties</rdfs:label>
+    <rdfs:label xml:lang="fr">nombre de propriétés de données</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    <dc:description xml:lang="en">MOD: The total number of data properties in an ontology.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/mod"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines:  E.3</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/mod#numberOfAxioms">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#metrics"/>
+    <rdfs:label xml:lang="en">number of axioms or triples</rdfs:label>
+    <rdfs:label xml:lang="fr">nombre d'axiomes ou de triples</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    <dc:description xml:lang="en">MOD: The total number of axioms in an ontology. OMV: Number of axioms in the ontology.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-24</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#numberOfAxioms"/>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.0/noOfAxioms"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <skos:historyNote xml:lang="en">This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace.</skos:historyNote>
+    <prov:wasInfluencedBy>MIRO guidelines:  E.3</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/mod#numberOfLabels">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#metrics"/>
+    <rdfs:label xml:lang="en">number of data properties</rdfs:label>
+    <rdfs:label xml:lang="fr">nombre de propriétés de données</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    <dc:description xml:lang="en">MOD: Number of defined labels for any resources in an ontology (classes, properties, etc).</dc:description>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/mod"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines:  E.3</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+  </owl:DatatypeProperty>
+
+  <rdf:Property rdf:about="http://www.w3.org/ns/dca#byteSize">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">byte size</rdfs:label>
+    <rdfs:label xml:lang="fr">taille en octets</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/dca#Distribution"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <dc:description xml:lang="en">DCAT: The size of a distribution in bytes. MOD: The byte size of an ontology.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-01-16</dc:issued>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.0/size"/>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.0/byteSize"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: E.3</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: F2</prov:wasInfluencedBy>
+    <skos:scopeNote xml:lang="en">The size in bytes can be approximated when the precise size is not known. The literal value of dcat:byteSize should by typed as xsd:decimal.</skos:scopeNote>
+  </rdf:Property>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/mod#maxDepth">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#metrics"/>
+    <rdfs:label xml:lang="en">maximum depth of the hierachy</rdfs:label>
+    <rdfs:label xml:lang="fr">profondeur maximum de la hierachie</rdfs:label>
+    <rdfs:label xml:lang="en">maximum number of children per class</rdfs:label>
+    <rdfs:label xml:lang="fr">nombre maximum d'enfant par classe</rdfs:label>
+    <rdfs:label xml:lang="en">average number of children per class</rdfs:label>
+    <rdfs:label xml:lang="fr">nombre moyen d'enfant par classe</rdfs:label>
+    <rdfs:label xml:lang="en">number of classes with a single child</rdfs:label>
+    <rdfs:label xml:lang="fr">nombre de classes avec un seul enfant</rdfs:label>
+    <rdfs:label xml:lang="en">number of classes with more than 25 children</rdfs:label>
+    <rdfs:label xml:lang="fr">nombre de classes avec plus de 25 enfants</rdfs:label>
+    <rdfs:label xml:lang="en">number of classes with no definition</rdfs:label>
+    <rdfs:label xml:lang="fr">nombre de classes sans définition</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    <dc:description xml:lang="en">MOD: Maximum depth of the hierarchy tree (BioPortal definition).</dc:description>
+    <dc:description xml:lang="en">MOD: Maximum number of children per class (BioPortal definition).</dc:description>
+    <dc:description xml:lang="en">MOD: Average number of children per class (BioPortal definition).</dc:description>
+    <dc:description xml:lang="en">MOD: Number of classes that have only one subclass in the is-a hierarchy (BioPortal definition).</dc:description>
+    <dc:description xml:lang="en">MOD: Number of classes that have more than 25 direct subclasses (BioPortal definition).</dc:description>
+    <dc:description xml:lang="en">MOD: Number of classes that have no value for the definition property (BioPortal definition). For ontologies in OBO and RRF formats, the property for definition is part of the language. For OWL ontologies, the authors specify this property as part of the ontology metadata (the default is skos:definition).</dc:description>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/mod"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.4"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-02</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: R1</prov:wasInfluencedBy>
+  </owl:DatatypeProperty>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/source">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/source"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    <rdfs:label xml:lang="en">source</rdfs:label>
+    <rdfs:label xml:lang="fr">source</rdfs:label>
+    <dc:description xml:lang="en">DCTERMS: A related resource from which the described resource is derived. MOD: The ontology(ies) referred to while creating the present ontology. PROV: Influence is the capacity of an entity, activity, or agent to have an effect on the character, development, or behavior of another by means of usage, start, end, generation, invalidation, communication, derivation, attribution, association, or delegation. PROV: A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity. PAV: Derived from a different resource. NKOS: A resource used as the source for a derivative resource.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+    <owl:equivalentProperty rdf:resource="https://schema.org/isBasedOn"/>
+    <owl:equivalentProperty rdf:resource="http://w3id.org/nkos#basedOn"/>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/prov#wasInfluencedBy"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/pav/derivedFrom"/>
+    <owl:equivalentProperty rdf:resource="http://www.isibang.ac.in/ns/mod/1.0/sourceOntology"/>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.0"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-05</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: D.2</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: R1.2</prov:wasInfluencedBy>
+  </rdf:Property>
+
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasGeneratedBy">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasInfluencedBy"/>
+    <rdfs:label xml:lang="en">was generated by</rdfs:label>
+    <rdfs:label xml:lang="fr">a été généré par</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    <dc:description xml:lang="en">PROV: Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-04-30</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: D.1</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: R1.2</prov:wasInfluencedBy>
+    <prov:inverse rdf:resource="http://www.w3.org/ns/prov#generated"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasinvalidatedBy">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasInfluencedBy"/>
+    <rdfs:label xml:lang="en">was invalidated by</rdfs:label>
+    <rdfs:label xml:lang="fr">a été invalidé par</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    <dc:description xml:lang="en">PROV: Invalidation is the start of the destruction, cessation, or expiry of an existing entity by an activity. The entity is no longer available for use (or further invalidation) after invalidation. Any generation or usage of an entity precedes its invalidation.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-04-30</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>FAIR principle: R1.2</prov:wasInfluencedBy>
+    <prov:inverse rdf:resource="http://www.w3.org/ns/prov#invalidated"/>
+  </owl:ObjectProperty>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/accrualMethod">
+    <rdfs:label xml:lang="en">accrual method</rdfs:label>
+    <rdfs:label xml:lang="fr">méthode d'ajout</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/dc/dcmitype/Collection"/>
+    <dc:description xml:lang="en">DCTERMS: The method by which items are added to a collection. Recommended practice is to use a value from the Collection Description Accrual Method Vocabulary.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-06-13</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: D.3, F.2</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: R1.2</prov:wasInfluencedBy>
+    <ns7:rangeIncludes rdf:resource="http://purl.org/dc/terms/MethodOfAccrual"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/accrualPeriodicity">
+    <rdfs:label xml:lang="en">accrual periodicity</rdfs:label>
+    <rdfs:label xml:lang="fr">fréquence des ajouts</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/dc/dcmitype/Collection"/>
+    <dc:description xml:lang="en">DCTERMS: The frequency with which items are added to a collection. Recommended practice is to use a value from the Collection Description Frequency Vocabulary.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-06-13</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: F.2</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: R1.2</prov:wasInfluencedBy>
+    <ns7:rangeIncludes rdf:resource="http://purl.org/dc/terms/Frequency"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/dc/terms/accrualPolicy">
+    <rdfs:label xml:lang="en">accrual policy</rdfs:label>
+    <rdfs:label xml:lang="fr">politique des ajouts</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/dc/dcmitype/Collection"/>
+    <dc:description xml:lang="en">DCTERMS: The policy governing the addition of items to a collection. Recommended practice is to use a value from the Collection Description Accrual Policy Vocabulary.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-06-13</dc:issued>
+    <ns3:derivedFrom rdf:resource="http://www.isibang.ac.in/ns/mod/1.2"/>
+    <ns3:importedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-06</ns3:importedOn>
+    <prov:wasInfluencedBy>MIRO guidelines: F.2, F.3</prov:wasInfluencedBy>
+    <prov:wasInfluencedBy>FAIR principle: R1.2</prov:wasInfluencedBy>
+    <ns7:rangeIncludes rdf:resource="http://purl.org/dc/terms/Policy"/>
+  </rdf:Property>
+
+  <owl:Class rdf:about="https://w3id.org/mod#SemanticArtefact">
+    <rdfs:label xml:lang="en">Semantic Artefact</rdfs:label>
+    <rdfs:comment xml:lang="en">A specification of a conceptualization that may be represented by different levels of formalization (including controlled lists, thesauri and ontologies - either lightweight or heavyweight.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/mod#SemanticArtefactCatalogRecord">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dca#CatalogRecord"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/mod#SemanticArtefactDistribution">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/adms#AssetDistribution"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dca#Distribution"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/mod#SemanticArtefactEvaluation">
+    <rdfs:label xml:lang="en">Semantic Artefact Evaluation</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/mod#SemanticArtefactService">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dca#DataService"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/mod#SemanticArtfeactCatalog">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dca#Catalog"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/mod#Taxonomy">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/mod#Terminology">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/mod#Thesaurus">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+  </owl:Class>
+
+</rdf:RDF>
