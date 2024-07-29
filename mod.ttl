@@ -4032,6 +4032,23 @@ mod:numberOfAgents  rdf:type                owl:DatatypeProperty ;
             #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    "FAIR principle: R1" .
 
+
+###  https://w3id.org/mod#numberOfArtefacts
+mod:numberOfAgents  rdf:type                owl:DatatypeProperty ;
+                    rdfs:subPropertyOf      mod:metrics ;
+                    rdfs:label              "number of semantic artefacts"@en ,
+                                            "nombre d'artefacts sémantiques"@fr ;
+                    rdfs:domain             mod:SemanticArtefactCatalog ;
+                    rdfs:range              xsd:nonNegativeInteger ;
+                    dcterms:description     "MOD: Total number of semantic artefacts within a catalog."@en ;
+                    rdfs:isDefinedBy        <https://w3id.org/mod> ;
+                    dcterms:issued          "2024-06-25"^^xsd:date ;
+                    pav:derivedFrom         <https://w3id.org/mod/3.2> ;
+                    pav:importedOn          "2024-07-29"^^xsd:date ;
+            
+            #OPTIONAL STATEMENTS
+                    prov:wasInfluencedBy    "FAIR principle: R1" .
+
 ############################################################################################# 
 ############################################################################################# 
 #################################################################
