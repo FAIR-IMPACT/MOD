@@ -3896,6 +3896,7 @@ mod:numberOfNotes   rdf:type                owl:DatatypeProperty ;
                     dcterms:description     "MOD: Number of notes or comments (maybe represented with schema:comment) related to the ontologies."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2024-05-30"^^xsd:date ;
+                    owl:equivalentProperty  schema:commentCount ;
                     pav:derivedFrom         <https://w3id.org/mod/3.1> ;
                     pav:importedOn          "2024-05-30"^^xsd:date ;
             
