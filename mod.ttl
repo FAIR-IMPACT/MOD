@@ -3964,9 +3964,10 @@ mod:fairScore       rdf:type                owl:DatatypeProperty ;
                     rdfs:subPropertyOf      mod:metrics ;
                     rdfs:label              "FAIR score"@en ,
                                             "score FAIR"@fr ;
-                    rdfs:domain             mod:SemanticArtefactDistribution ;
+                    rdfs:domain             mod:SemanticArtefactDistribution ,
+                                            mod:SemanticArtefactCatalog ;
                     rdfs:range              xsd:nonNegativeInteger ;
-                    dcterms:description     "MOD: Latest FAIR score obtained by the ontology with a known or identified FAIRness assessment tool."@en ;
+                    dcterms:description     "MOD: MOD: Latest FAIR score the semantic artefact or average FAIR score of all resources in the catalogue, obtained with a known or identified FAIRness assessment tool."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2024-05-30"^^xsd:date ;
                     pav:derivedFrom         <https://w3id.org/mod/3.1> ;
