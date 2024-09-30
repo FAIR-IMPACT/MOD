@@ -382,6 +382,7 @@ mod:SemanticArtefact
                     pav:derivedFrom         <https://w3id.org/mod/2.0> ;
                     pav:importedOn          "2021-12-01"^^xsd:date ;
                     dcterms:modified        "2024-05-31"^^xsd:date ;
+                    rdfs:seeAlso            owl:Ontology, skos:ConceptScheme ;
                     
 #            #OPTIONAL STATEMENTS
                     prov:wasInfluencedBy    <http://www.w3.org/ns/dcat> .
