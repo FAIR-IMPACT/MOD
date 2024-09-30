@@ -29,6 +29,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix oboinowl: <http://www.geneontology.org/formats/oboInOwl#> .
 @prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @base <https://w3id.org/mod> .
 
 <https://w3id.org/mod> rdf:type owl:Ontology .
