@@ -1571,7 +1571,8 @@ mod:curatedBy       rdf:type                owl:ObjectProperty ;
                     rdfs:label              "curator"@en ,
                                             "curateur"@fr ;
                     dcterms:domainIncludes  mod:SemanticArtefact ,
-                                            mod:SemanticArtefactCatalog ;
+                                            mod:SemanticArtefactCatalog 
+                                            mod:SemanticArtefactCatalogRecord ;
                     dcterms:description     "PAV: Specifies an agent specialist responsible for shaping the expression in an appropriate format. Often the primary agent responsible for ensuring the quality of the representation. MOD: A curator who restructure the previously authored content and shape it to be appropriate for the intended representation (e.g. by normalizing the fields for being represented in a spreadsheet). "@en ;
                     rdfs:isDefinedBy        <http://purl.org/pav/> ;
                     dcterms:issued          "2014-08-28"^^xsd:date ;
