@@ -2986,6 +2986,7 @@ owl:backwardCompatibleWith
                     rdfs:label              "backward compatible"@en ,
                                             "rétrocompatible"@fr ;
                     rdfs:domain             owl:Ontology ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ;
                     rdfs:range              owl:Ontology ; 
                     dcterms:description     "OWL: This identifies the specified ontology as a prior version of the containing ontology, and further indicates that it is backward compatible with it. OMV: The ontology metadata instance which describes an ontology that is a compatible prior version of the ontology described by this ontology metadata Instance. DOOR: The relation of being a compatible new version from owl."@en ;  
                     rdfs:isDefinedBy        <http://www.w3.org/2002/07/owl#> ;
@@ -3006,6 +3007,7 @@ owl:incompatibleWith
                     rdfs:label              "incompatible"@en ,
                                             "incomaptible"@fr ;
                     rdfs:domain             owl:Ontology ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ;
                     rdfs:range              owl:Ontology ; 
                     dcterms:description     "OWL: This indicates that the containing ontology is a later version of the referenced ontology, but is not backward compatible with it. OMV: The described ontology is a later version of the ontology described by the metadata specified, but is not backward compatible with it. It can be used to explicitly state that ontology cannot upgrade to use the new version without checking whether changes are required. "@en ;  
                     rdfs:isDefinedBy        <http://www.w3.org/2002/07/owl#> ;
@@ -3064,6 +3066,8 @@ schema:workTranslation
                     rdf:type                rdf:Property ;
                     rdfs:label              "work translation"@en ,
                                             "a pour traduction"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ;
+                    dcterms:rangeIncludes   mod:SemanticArtefact ;
                     dcterms:description     "MOD: A pointer to the translated ontology(ies) for an existing ontology. SCHEMA: A work that is a translation of the content of this work. ADMS: Links Assets that are translations of each other."@en ;
                     rdfs:isDefinedBy        <http://schema.org/> ;
                     dcterms:issued          "2012-04-21"^^xsd:date ;
@@ -3084,6 +3088,8 @@ schema:translationOfWork
                     rdf:type                rdf:Property ;
                     rdfs:label              "translation of"@en ,
                                             "traduction de"@fr ;
+                    dcterms:domainIncludes  mod:SemanticArtefact ;
+                    dcterms:rangeIncludes   mod:SemanticArtefact ;
                     dcterms:description     "SCHEMA: The work that this work has been translated from. ADMS: Links Assets that are translations of each other."@en ;
                     rdfs:isDefinedBy        <http://schema.org/> ;
                     dcterms:issued          "2012-04-21"^^xsd:date ;
