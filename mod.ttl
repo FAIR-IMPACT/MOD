@@ -955,7 +955,7 @@ dcterms:language    rdf:type                rdf:Property ;
                                             "FAIRsFAIR profile: RECOMMENDED" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
-                    <http://purl.org/dc/dcam/rangeIncludes>     dcterms:LinguisticSystem .
+                    dcterms:rangeIncludes     dcterms:LinguisticSystem .
 
 
 ### http://purl.org/dc/terms/type
@@ -1002,7 +1002,7 @@ dcterms:accessRights
                                             "FAIRsFAIR profile: MANDATORY" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
-                    <http://purl.org/dc/dcam/rangeIncludes>     dcterms:RightsStatement .
+                    dcterms:rangeIncludes     dcterms:RightsStatement .
 
 
 ### http://purl.org/dc/terms/license
@@ -1027,7 +1027,7 @@ dcterms:license     rdf:type                rdf:Property ;
                                             "FAIRsFAIR profile: MANDATORY" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
-                    <http://purl.org/dc/dcam/rangeIncludes>     dcterms:LicenseDocument .
+                    dcterms:rangeIncludes     dcterms:LicenseDocument .
 
 
 ### http://creativecommons.org/ns#useGuidelines
@@ -1089,7 +1089,7 @@ dcterms:rightsHolder
                                             "FAIRsFAIR profile: MANDATORY" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
-                    <http://purl.org/dc/dcam/rangeIncludes>     dcterms:Agent .
+                    dcterms:rangeIncludes     dcterms:Agent .
 
 
 
@@ -1533,7 +1533,7 @@ dcterms:creator     rdf:type                rdf:Property ;
                                             "FAIRsFAIR profile: MANDATORY" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
-                    <http://purl.org/dc/dcam/rangeIncludes>     dcterms:Agent .
+                    dcterms:rangeIncludes     dcterms:Agent .
 
 
 ### http://purl.org/dc/terms/contributor
@@ -1562,7 +1562,7 @@ dcterms:contributor rdf:type                rdf:Property ;
                                             "FAIRsFAIR profile: RECOMMENDED" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
-                    <http://purl.org/dc/dcam/rangeIncludes>     dcterms:Agent .
+                    dcterms:rangeIncludes     dcterms:Agent .
 
 
 ### http://purl.org/pav/curatedBy
@@ -1631,7 +1631,7 @@ dcterms:publisher   rdf:type                rdf:Property ;
                                             "FAIRsFAIR profile: RECOMMENDED" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
-                    <http://purl.org/dc/dcam/rangeIncludes>     dcterms:Agent .
+                    dcterms:rangeIncludes     dcterms:Agent .
 
 
 ### http://xmlns.com/foaf/0.1/fundedBy
@@ -1812,7 +1812,7 @@ dcterms:audience    rdf:type                rdf:Property ;
                                             "FAIR principle: F2" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
-                    <http://purl.org/dc/dcam/rangeIncludes>      dcterms:AgentClass .
+                    dcterms:rangeIncludes      dcterms:AgentClass .
 
 
 ### http://schema.org/publishingPrinciples
@@ -2029,7 +2029,7 @@ dcterms:coverage    rdf:type                rdf:Property ;
                                             "FAIRsFAIR profile: RECOMMENDED" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
-                    <http://purl.org/dc/dcam/rangeIncludes>     dcterms:Jurisdiction, dcterms:Location, dcterms:Period  .
+                    dcterms:rangeIncludes     dcterms:Jurisdiction, dcterms:Location, dcterms:Period  .
 
 
 #### http://www.w3.org/ns/adms#supportedSchema
@@ -2108,7 +2108,7 @@ dcterms:conformsTo  rdf:type                rdf:Property ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
-                    <http://purl.org/dc/dcam/rangeIncludes>     dcterms:Standard  .      
+                    dcterms:rangeIncludes     dcterms:Standard  .      
 
 
 
@@ -2177,7 +2177,7 @@ dcterms:accrualMethod
                                             "FAIRsFAIR profile: RECOMMENDED" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
-                    <http://purl.org/dc/dcam/rangeIncludes>     dcterms:MethodOfAccrual .
+                    dcterms:rangeIncludes     dcterms:MethodOfAccrual .
 
 
 ### http://purl.org/dc/terms/accrualPeriodicity
@@ -2200,7 +2200,7 @@ dcterms:accrualPeriodicity
                                             "FAIRsFAIR profile: OPTIONAL" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
-                    <http://purl.org/dc/dcam/rangeIncludes>     dcterms:Frequency .
+                    dcterms:rangeIncludes     dcterms:Frequency .
                   
     
 ### http://purl.org/dc/terms/accrualPolicy
@@ -2222,7 +2222,7 @@ dcterms:accrualPolicy
                                             "FAIR principle: R1.2" ;
             
             #OTHER ORIGINAL STATEMENTS IF ANY 
-                    <http://purl.org/dc/dcam/rangeIncludes>     dcterms:Policy .
+                    dcterms:rangeIncludes     dcterms:Policy .
         
 
 ### https://w3id.org/mod#competencyQuestion
