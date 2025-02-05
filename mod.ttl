@@ -1440,7 +1440,7 @@ dcterms:valid       rdf:type                rdf:Property ;
 
          
 ### http://purl.org/pav/curatedOn
-mod:curatedOn       rdf:type                owl:DatatypeProperty ;
+pav:curatedOn       rdf:type                owl:DatatypeProperty ;
                     rdfs:subPropertyOf      pav:contributedOn ;
                     rdfs:label              "curation date"@en ,
                                             "date de contrôle de qualité"@fr ;
@@ -1566,7 +1566,7 @@ dcterms:contributor rdf:type                rdf:Property ;
 
 
 ### http://purl.org/pav/curatedBy
-mod:curatedBy       rdf:type                owl:ObjectProperty ;
+pav:curatedBy       rdf:type                owl:ObjectProperty ;
                     rdfs:subPropertyOf      pav:contributedBy ;
                     rdfs:label              "curator"@en ,
                                             "curateur"@fr ;
@@ -2136,7 +2136,7 @@ mod:usedEngineeringMethodology
 
 
 ### http://purl.org/pav/createdWith
-mod:createdWith     rdf:type                owl:ObjectProperty ;
+pav:createdWith     rdf:type                owl:ObjectProperty ;
                     rdfs:subPropertyOf      prov:wasAttributedTo ;
                     rdfs:label              "created with"@en ,
                                             "crée avec"@fr ;
@@ -4037,7 +4037,8 @@ mod:numberOfAgents  rdf:type                owl:DatatypeProperty ;
 
 
 ###  https://w3id.org/mod#numberOfArtefacts
-mod:numberOfAgents  rdf:type                owl:DatatypeProperty ;
+mod:numberOfArtefacts
+                    rdf:type                owl:DatatypeProperty ;
                     rdfs:subPropertyOf      mod:metrics ;
                     rdfs:label              "number of semantic artefacts"@en ,
                                             "nombre d'artefacts sémantiques"@fr ;
