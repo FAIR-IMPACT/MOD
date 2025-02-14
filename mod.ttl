@@ -1741,8 +1741,7 @@ schema:comment      rdf:type                rdf:Property ;
 mod:hasEvaluation   rdf:type                owl:ObjectProperty ;
                     rdfs:label              "evaluation"@en ,
                                             "évaluation"@fr ;
-                    rdfs:domain             mod:SemanticArtefact ,
-                                            mod:SemanticArtefactCatalog ;
+                    rdfs:domain             mod:SemanticArtefact ;
                     rdfs:range              mod:Evaluation ;
                     dcterms:description     "MOD: This property makes a relationship between an ontology and its evaluation result."@en ; 
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
@@ -2544,7 +2543,7 @@ dcat:downloadURL    rdf:type                rdf:Property , owl:ObjectProperty ;
                     rdfs:label              "download URL"@en ,
                                             "URL de téléchargement"@fr ;
                     rdfs:domain             dcat:Distribution ;
-                    dcterms:domainIncludes  mod:SemanticArtefact ;
+                    dcterms:domainIncludes  mod:SemanticArtefactDistribution ;
                     rdfs:range              rdfs:Resource ;
                     dcterms:description     "DCAT: The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution's dct:format and/or dcat:mediaType. VOID: An RDF dump, partial or complete, of a void:Dataset. DOAP: Mirror of software download web page. SCHEMA: A downloadable form of this dataset, at a specific location, in a specific format."@en ; 
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
