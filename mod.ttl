@@ -54,7 +54,7 @@
     mod:URI                         <https://w3id.org/mod> ;
     owl:versionIRI                  <https://w3id.org/mod/3.2> ;
 #   dcterms:identifier              ; 
-    owl:versionInfo                 "3.2" ;
+    owl:versionInfo                 "3.2.1" ;
     mod:status                      "alpha" ;
     owl:deprecated                  false ;
     mod:hasRepresentationLanguage   omv:OWL ;
@@ -70,7 +70,7 @@
                                     "MOD est disponible sous Licence Creative Commons Attribution 4.0. pour plus de details voir https://github.com/sifrproject/MOD-Ontology/blob/master/LICENSE"@fr ,
                                     "MOD está disponible bajo la licencia Creative Commons Attribution 4.0. para obtener más detalles, consulte https://github.com/sifrproject/MOD-Ontology/blob/master/LICENSE"@es ;
     dcterms:license                 <https://creativecommons.org/licenses/by/4.0> ; 
-    cc:useGuidelines                "MOD is free of use; feedback is welcome."@en ,
+    cc:useGuidelines                "MOD is free to use; feedback is welcome."@en ,
                                     "MOD peut être utilisée de manière libre; les retours sont appréciés"@fr ,
                                     "MOD se puede utilizar de libremente; los comentarios y las devoluciones son bienvenidas"@es ;
     cc:morePermissions              "https://github.com/sifrproject/MOD-Ontology/blob/master/LICENSE" ;
@@ -79,7 +79,7 @@
 #    odrl:hasPolicy                 ;
 
     ########## Description ##########
-    dcterms:description             "MOD (Metadata for Ontology Description and publication) is a project to define a standard way to capture metadata descriptions for ontologies or semantic resources/artefacts in general (thesaurus, terminologies, vocabularies, etc.). The MOD OWL file can be used to create knowledge bases consisting of metadata records of semantic artefacts as instances. MOD can also be used to define specific profiles for recommended metadata properties (e.g., H2020 project FAIRsFAIR semantic artefact minimum metadata profile). Users can go through MOD and pickup the required properties to describe their semantic artefacts."@en, 
+    dcterms:description             "MOD (Metadata for Ontology Description and publication) is a project to define a standard way to capture metadata descriptions for ontologies or semantic resources/artefacts in general (thesaurus, terminologies, vocabularies, etc.). The MOD OWL file can be used to create knowledge bases consisting of metadata records of semantic artefacts as instances. MOD can also be used to define specific profiles for recommended metadata properties (e.g., H2020 project FAIRsFAIR semantic artefact minimum metadata profile). Users can go through MOD and pick the required properties to describe their semantic artefacts."@en, 
                                     "MOD (Metadonnées pour la Description et la publication d'Ontologie) est un projet visant à définir un moyen standard pour capturer des descriptions de métadonnées pour les ontologies ou les ressources/artefacts sémantiques en général (thésaurus, terminologies, vocabulaires, etc.). Le fichier MOD OWL peut être utilisé pour créer des bases de connaissances composées d’instances d’artefacts sémantiques décrits avec MOD. Le vocabulaire MOD peut également être utilisé pour définir des profils de métadonnées (e.g., le profil de métadonnées minimale pour les artefacts sémantiques du projet H2020 FAIRsFAIR). Les utilisateurs peuvent consulter la spécification et récupérer les propriétés requises pour décrire leur artefacts sémantiques."@fr ,
                                     "MOD (Metadatos para la Descripción y Publicación de Ontologías) es un proyecto para definir un manera estándar de capturar las descripciones de metadatos para ontologías o recursos/artefactos semánticos en general (tesauros, terminologías, vocabularios, etc.). El archivo MOD se puede usar para crear bases de conocimiento consistentes en registros de metadatos de artefactos semánticos como instancias. El vocabulario MOD puede utilizarse también para definir perfiles específicos para las propiedades de metadatos recomendadas (e.g. el perfil de metadatos mínimo del projecto H2020 FAIRsFAIR). Los usuarios pueden recorrer MOD y elegir las propiedades requeridas para describir su artefactos semánticos."@es;
     foaf:homepage                   <https://github.com/sifrproject/MOD-Ontology> ;
@@ -108,7 +108,7 @@
     ########## Dates ##########
 
     dcterms:created                 "2015-08-05" ;
-    dcterms:modified                "2024-06-25" ;
+    dcterms:modified                "2025-07-15" ;
 #   dcterms:valid                   ;
 #   pav:curatedOn                   ;
 #   dcterms:dateSubmitted           ;
@@ -171,12 +171,12 @@
                                     "MOD1.4 est utilisée dans AgroPortal, depuis 2017. MOD2 est réutilisée par le profil de métadonnées minimale pour les artefacts sémanttique du projet H2020 FAIRsFAIR."@fr ,
                                     "MOD1.4 se utiliza en AgroPortal desde 2017. MOD2 es la base para el perfil mínimo de metadatos del artefacto semántico FAIRsFAIR del proyecto H2020."@es ;
     mod:conformsToKnowledgeRepresentationParadigm "OWL Ontology" ;
-    mod:usedEngineeringMethodology  "MOD 1 has been designed by reviewing in total 23 standard existing metadata vocabularies (e.g., Dublin Core, OMV, DCAT, VoID) and selecting relevant properties for describing ontologies. Then, we studied metadata usage analytics within ontologies and ontology repositories. MOD 2 abandon the integration approach of MOD 1 but re-incorporates properties of several obsolete metadata vocabularies inside its own namespace (DOOR, OMV, VOAF). MOD 2 is designed as an extension of the DCAT 2 metadata vocabulary. MOD3 was built as a consolidaiton of the DCAT 2 profile and include multiple other properties for different objects (not only mod:SemanticArtefact and mod:SemanticArtefactDistribution)."@en ,
+    mod:usedEngineeringMethodology  "MOD 1 has been designed by reviewing in total 23 standard existing metadata vocabularies (e.g., Dublin Core, OMV, DCAT, VoID) and selecting relevant properties for describing ontologies. Then, we studied metadata usage analytics within ontologies and ontology repositories. MOD 2 abandons the integration approach of MOD 1 but re-incorporates properties of several obsolete metadata vocabularies inside its own namespace (DOOR, OMV, VOAF). MOD 2 is designed as an extension of the DCAT 2 metadata vocabulary. MOD3 was built as a consolidation of the DCAT 2 profile and includes multiple other properties for different objects (not only mod:SemanticArtefact and mod:SemanticArtefactDistribution)."@en ,
                                     "MOD 1 a été conçu en examinant au total 23 vocabulaires de métadonnées standard existants (par exemple, Dublin Core, OMV, DCAT, VoID) et en sélectionnant les propriétés pertinentes pour décrire les ontologies. Ensuite, nous avons étudié l'analyse de l'utilisation des métadonnées au sein des ontologies et des référentiels d'ontologies. MOD 2 abandonne l'approche d'intégration de MOD 1 mais réintègre les propriétés de plusieurs vocabulaires de métadonnées obsolètes dans son propre espace de noms (DOOR, OMV, VOAF). MOD 2 est conçu comme une extension du vocabulaire de métadonnées DCAT 2. MOD3 a été construit comme une consolidation du profil DCAT 2 et inclut plusieurs autres propriétés pour différents objets (pas seulement mod:SemanticArtefact et mod:SemanticArtefactDistribution)."@fr ,
                                     "MOD 1 ha sido diseñado revisando un total de 23 vocabularios de metadatos estándar existentes (por ejemplo, Dublin Core, OMV, DCAT, VoID) y seleccionando propiedades relevantes para describir ontologías. Luego, estudiamos el análisis del uso de metadatos dentro de las ontologías y los repositorios de ontologías. MOD 2 abandona el enfoque de integración de MOD 1, pero reincorpora propiedades de varios vocabularios de metadatos obsoletos dentro de su propio espacio de nombres (DOOR, OMV, VOAF). MOD 2 está diseñado como una extensión del vocabulario de metadatos DCAT 2. MOD3 se construyó como una consolidación del perfil DCAT 2 e incluye múltiples otras propiedades para diferentes objetos (no solo mod:SemanticArtefact y mod:SemanticArtefactDistribution)."@es ;
     pav:createdWith                 "Protégé" ,
                                     "Text editor" ;
-    dcterms:accrualMethod           "When a need of a new property is identified by the developer team, we review classic/standards metadata vocabularies to identifiy if the desire property already exists. If it exists in several metadata vocabularies we give priorities to consitency with previous MOD choices, then W3C Recommendations, then community standards."@en ,
+    dcterms:accrualMethod           "When the need for a new property is identified by the developer team, we review classic/standard metadata vocabularies to identify if the desire property already exists. If it exists in several metadata vocabularies we give priority to consistency with previous MOD choices, then W3C Recommendations, then community standards."@en ,
                                     "Lorsqu'un besoin d'une nouvelle propriété est identifié par l'équipe de développeurs, nous passons en revue les vocabulaires de métadonnées classiques / standards pour identifier si la propriété désirée existe déjà. Si elle existe dans plusieurs vocabulaires de métadonnées, nous donnons la priorité à la cohérence avec les choix précédents dans MOD, puis aux recommandations du W3C, puis aux normes de la communauté."@fr ,
                                     "Cuando el equipo de desarrolladores identifica la necesidad de una nueva propiedad, revisamos los vocabularios de metadatos clásicos/estándares para identificar si la propiedad deseada ya existe. Si existe en varios vocabularios de metadatos, damos prioridad a la coherencia con las opciones anteriores del MOD, luego a las recomendaciones del W3C y luego a los estándares de la comunidad."@es ;
     dcterms:accrualPeriodicity      "New properties are added on demand with no specific periodicity."@en ,
@@ -185,13 +185,13 @@
     dcterms:accrualPolicy           "Editorial choice of the developer team."@en ,
                                     "Choix éditorial de l'équipe de développeurs."@fr ,
                                     "Elección editorial del equipo desarrollador."@es ;
-    mod:competencyQuestion          "How to standardly and semantically capture the description of an ontology while relying on other existing metadata vocabularies?"@en ,
+    mod:competencyQuestion          "How can one systematically and semantically capture the description of an ontology while relying on other existing metadata vocabularies?"@en ,
                                     "Comment capturer de manière standard et sémantique la description d'une ontologie en s'appuyant sur d'autres vocabulaires de métadonnées existants?"@fr ,
                                     "¿Cómo capturar de forma estandarizada y semántica la descripción de una ontología apoyándose en otros vocabularios de metadatos existentes?"@es ;
     mod:sampleQueries               "For sample SPARQL queries to query MOD OWL knowledge base, see here: https://github.com/FAIR-IMPACT/MOD/blob/main/resources/SPARQL_Queries_on_MOD_1.2.3-with-instances.txt"@en ,
                                     "Pour des examples de requêtes SPARQL sur la base de connaissances MOD, voir ici : https://github.com/sifrproject/MOD-Ontology/blob/master/SPARQL_Queries_on_MOD_1.2.3-with-instances.txt"@fr ,
                                     "Para ver ejemplos de consultas SPARQL para consultar la base de conocimiento MOD OWL, consulte aquí: https://github.com/FAIR-IMPACT/MOD/blob/main/resources/SPARQL_Queries_on_MOD_1.2.3-with-instances.txt"@es ;
-    prov:wasGeneratedBy             "MOD is the result of a manual process of identifying, reviewing, and selecting candidate properties from standards metadata vocabularies if relevant to describe an ontology or any kind of semantic resource. When a property cannot be identified, it could be created in the MOD namespace. Since MOD2, it has been created as an extension of DCAT2."@en ,
+    prov:wasGeneratedBy             "MOD is the result of a manual process of identifying, reviewing, and selecting candidate properties from standard metadata vocabularies if relevant to describe an ontology or any kind of semantic resource. When a property cannot be identified, it is created in the MOD namespace. Since MOD2, the ontology has been created as an extension of DCAT2."@en ,
                                     "MOD est le résultat d'un processus manuel d'identification, de révision et de sélection des propriétés candidates à partir de vocabulaires de métadonnées standards, pour décrire une ontologie ou tout type de ressource sémantique. Lorsqu'une propriété ne peut pas être identifiée, elle peut être créée dans l'espace de noms MOD. Depuis MOD2, MOD est construote comme une extension de DCAT2"@fr ,
                                     "MOD es el resultado de un proceso manual de identificación, revisión y selección de propiedades candidatas de los vocabularios de metadatos de estándares, si son relevantes para describir una ontología o cualquier tipo de recurso semántico. Cuando no se puede identificar una propiedad, se la puede crear en el espacio de nombres MOD. Desde MOD2, se ha creado como una extensión de DCAT2."@es ; 
 #   prov:wasInvalidatedBy           ;
@@ -372,7 +372,7 @@ mod:SemanticArtefact
                     rdfs:label              "Semantic Artefact"@en ,
                                             "Artéfact Sémantique"@fr ,
                                             "Artefacto Semántico"@es ;
-                    dcterms:description     "Semantic Artefact is defined here as a machine-actionable and -readable formalisation of a conceptualisation enabling sharing and reuse by humans and machines. These artefacts may have a broad range of formalisation, from loose set of terms, taxonomies, thesauri to higher-order logics such as ontologies, and include the concepts/terms/classes/properties/individuals constituting these. Moreover, semantic artefacts are encoded with a variety of representation language (e.g., RDF-S, OWL, SKOS) and serialised using a variety of syntaxes (e.g., RDF/XML, Turtle, JSON-LD)."@en ,
+                    dcterms:description     "Semantic Artefact is defined here as a machine-actionable and -readable formalisation of a conceptualisation enabling sharing and reuse by humans and machines. These artefacts may have a broad range of formalisation, from loose set of terms, taxonomies, or thesauri to higher-order logics such as ontologies, and include the concepts/terms/classes/properties/individuals constituting these. Moreover, semantic artefacts are encoded with a variety of representation language (e.g., RDF-S, OWL, SKOS) and serialised using a variety of syntaxes (e.g., RDF/XML, Turtle, JSON-LD)."@en ,
                                             "Un artefact sémantique est défini ici comme une formalisation exploitable et lisible par machine d'une conceptualisation permettant le partage et la réutilisation par les humains et les machines. Ces artefacts peuvent avoir une large gamme de formalisation, allant d'un ensemble de termes, de taxonomies, de thésaurus à des logiques d'ordre supérieur, telle que des ontologies, et inclure les concepts/termes/classes/propriétés/individus qui les constituent. De plus, les artefacts sémantiques sont enccodés avec une variété de langages de représentation (e.g., RDF-S, OWL, SKOS) et sérialisés à l'aide d'une variété de syntaxes (e.g., RDF/XML, Turtle, JSON-LD)."@fr ,
                                             "Aquí, se define artefacto semántico como una formalización de una conceptualización que puede ser procesada y leída por máquinas y que permite que humanos y máquinas la compartan y la reutilicen. Estos artefactos pueden tener una amplia gama de formalizaciones, desde conjuntos de términos sueltos, taxonomías y tesauros hasta lógicas de orden superior como las ontologías, e incluyen los conceptos, términos, clases, propiedades e individuos que los constituyen. Además, los artefactos semánticos se codifican con una variedad de lenguajes de representación (por ejemplo, RDF-S, OWL, SKOS) y se serializan utilizando una variedad de sintaxis (por ejemplo, RDF/XML, Turtle, JSON-LD)."@es ;
                     dcterms:description     "A specification of a conceptualization that may be represented by different levels of formalization (including controlled lists, thesauri and ontologies - either lightweight or heavyweight."@en ,
@@ -457,7 +457,7 @@ mod:SemanticArtefactService
                     rdfs:label              "Semantic Artefact Service"@en ,
                                             "Service d'Artéfacts Sémantiques"@fr ,
                                             "Servicio de Artefactos Semánticos"@es ;
-                    dcterms:description     "A collection of operations that provides access to one or more semantic artefacts processing functions."@en ,
+                    dcterms:description     "A collection of operations that provides access to one or more semantic artefact processing functions."@en ,
                                             "Un ensemble d’opérations qui donne accès à une ou plusieurs fonctions de traitement d’artefacts sémantiques."@fr ,
                                             "Una colección de operaciones que proporciona acceso a una o más funciones de procesamiento de artefactos semánticos."@es ;
                     rdfs:isDefinedBy        <https://w3id.org/mod#> ;
@@ -563,7 +563,7 @@ mod:Evaluation
                     rdfs:label              "Semantic Artefact Evaluation"@en ,
                                             "Évaluation d'un artefact sémantique"@fr ,
                                             "Evaluación de un artefacto semántico."@es ;
-                    dcterms:description     "The results of evaluating a semantic artefact. An artefact can have more than one evaluations."@en ,
+                    dcterms:description     "The results of evaluating a semantic artefact. An artefact can have more than one evaluation."@en ,
                                             "Résultats de l'évaluation d'un artefact sémantique. Un artefact peut avoir plusieurs évaluations."@fr ,
                                             "Los resultados de la evaluación de un artefacto semántico. Un artefacto puede tener más de una evaluación."@es ;
                     rdfs:isDefinedBy        <https://w3id.org/mod#> ;
@@ -1448,7 +1448,9 @@ pav:curatedOn       rdf:type                owl:DatatypeProperty ;
                                             mod:SemanticArtefactCatalogRecord ,
                                             mod:SemanticArtefactCatalog ;
                     rdfs:range              xsd:date ;
-                    dcterms:description     ""@en ;
+                    dcterms:description     "(to come)"@en ,
+                                            "(to come)"@fr ,
+                                            "(to come)"@es ;
                     rdfs:isDefinedBy        <http://purl.org/pav/> ;
                     dcterms:issued          "2014-08-28"^^xsd:date ;
                     pav:derivedFrom         <https://w3id.org/mod/1.2> ;
@@ -1573,7 +1575,7 @@ pav:curatedBy       rdf:type                owl:ObjectProperty ;
                     dcterms:domainIncludes  mod:SemanticArtefact ,
                                             mod:SemanticArtefactCatalog ,
                                             mod:SemanticArtefactCatalogRecord ;
-                    dcterms:description     "PAV: Specifies an agent specialist responsible for shaping the expression in an appropriate format. Often the primary agent responsible for ensuring the quality of the representation. MOD: A curator who restructure the previously authored content and shape it to be appropriate for the intended representation (e.g. by normalizing the fields for being represented in a spreadsheet). "@en ;
+                    dcterms:description     "PAV: Specifies an agent specialist responsible for shaping the expression in an appropriate format. Often the primary agent responsible for ensuring the quality of the representation. MOD: A curator who restructures the previously authored content and shapes it to be appropriate for the intended representation (e.g. by normalizing the fields for being represented in a spreadsheet). "@en ;
                     rdfs:isDefinedBy        <http://purl.org/pav/> ;
                     dcterms:issued          "2014-08-28"^^xsd:date ;
                     pav:derivedFrom         <https://w3id.org/mod/1.2> ;
@@ -1660,7 +1662,7 @@ schema:funding      rdf:type                rdf:Property ;
                                             "financement"@fr ;
                     dcterms:domainIncludes  mod:SemanticArtefact ,
                                             mod:SemanticArtefactCatalog ;
-                    dcterms:description     "SCHEMA: A Grant that directly or indirectly provide funding or sponsorship for this item."@en ;
+                    dcterms:description     "SCHEMA: A Grant that directly or indirectly provides funding or sponsorship for this item."@en ;
                     rdfs:isDefinedBy        <http://schema.org/> ;
                     dcterms:issued          "2022-03-17"^^xsd:date ;
                     owl:equivalentProperty  schema:funder , 
@@ -1762,7 +1764,7 @@ mod:group           rdf:type                owl:ObjectProperty ;
                     rdfs:domain             mod:SemanticArtefact ,
                                             mod:SemanticArtefactCatalog ;
                     rdfs:range              mod:Group ;
-                    dcterms:description     "MOD: A group of semantic artefact that the given semantic artefact is usually considered into or a group hosted/served/represented by the given semantic artefact catalogue."@en ;
+                    dcterms:description     "MOD: A group of semantic artefacts that the given semantic artefact is usually considered within or a group hosted/served/represented by the given semantic artefact catalogue."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2017-07-06"^^xsd:date ;
                     pav:derivedFrom         <https://w3id.org/mod/1.2> ;
@@ -2078,7 +2080,7 @@ mod:conformsToKnowledgeRepresentationParadigm
                                             "paradigme de représentation des connaissances"@fr ;
                     rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              mod:KnowledgeRepresentationParadigm ;
-                    dcterms:description     "MOD: A representation formalism that is followed to describe knowledge in an ontology. Example includes description logics, first order logic, etc. dcterms: An established standard to which the described resource conforms. OMV: Information about the paradigm model used to create the ontology. DCTERMS: An established standard to which the described resource conforms."@en ;
+                    dcterms:description     "MOD: A representation formalism that is followed to describe knowledge in an ontology. Examples include description logics, first order logic, etc. OMV: Information about the paradigm model used to create the ontology. DCTERMS: An established standard to which the described resource conforms."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
                     owl:equivalentProperty  omv:conformsToKnowledgeRepresentationParadigm , 
@@ -2118,7 +2120,7 @@ mod:usedEngineeringMethodology
                                             "méthodologie de développement"@fr ;
                     rdfs:domain             mod:SemanticArtefactDistribution;
                     rdfs:range              mod:EngineeringMethodology ;
-                    dcterms:description     "MOD: A methodolgy follwoing which an ontology is created. OMV: Information about the method model used to create the ontology."@en ;
+                    dcterms:description     "MOD: A methodology following which an ontology is created. OMV: Information about the method model used to create the ontology."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
                     owl:equivalentProperty  adms:representationTechnique ,
@@ -2231,7 +2233,7 @@ mod:competencyQuestion
                                             "question de compétence"@fr ;
                     rdfs:domain             mod:SemanticArtefact ;
                     rdfs:range              xsd:string ;
-                    dcterms:description     "A set of questions made to build an ontology at the design time."@en ;
+                    dcterms:description     "MOD: A set of questions made to build an ontology at the design time."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2015-08-05"^^xsd:date ;
                     pav:derivedFrom         <https://w3id.org/mod/1.0> ;
@@ -2333,7 +2335,7 @@ mod:prefLabelProperty
                                             "propriété de nom préféré des objets"@fr ;
                     rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              xsd:anyURI ;
-                    dcterms:description     "MOD: Property used to specify objects' preferred label."@en ;
+                    dcterms:description     "MOD: Property used to specify object's preferred label."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
                     pav:derivedFrom         <https://w3id.org/mod/1.4> ;
@@ -2351,7 +2353,7 @@ mod:synonymProperty rdf:type                owl:DatatypeProperty ;
                                             "propriété de synonyme des objets"@fr ;
                     rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              xsd:anyURI ;
-                    dcterms:description     "MOD: Property used to specify objects' synonyms."@en ;
+                    dcterms:description     "MOD: Property used to specify object's synonym."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
                     owl:equivalentProperty  oboinowl:hasSynonymType ,
@@ -2371,7 +2373,7 @@ mod:definitionProperty
                                             "propriété de définition des objets"@fr ;
                     rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              xsd:anyURI ;
-                    dcterms:description     "MOD: Property used to specify objects' definition."@en ;
+                    dcterms:description     "MOD: Property used to specify object's definition."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
                     pav:derivedFrom         <https://w3id.org/mod/1.4> ;
@@ -2389,7 +2391,7 @@ mod:authorProperty  rdf:type                owl:DatatypeProperty ;
                                             "propriété d'auteur des objets"@fr ;
                     rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              xsd:anyURI ;
-                    dcterms:description     "MOD: Property used to specify objects's author."@en ;
+                    dcterms:description     "MOD: Property used to specify object's author."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
                     pav:derivedFrom         <https://w3id.org/mod/1.4> ;
@@ -2407,7 +2409,7 @@ mod:obsoleteProperty
                                             "propriété d'obsolescence des objets"@fr ;
                     rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              xsd:anyURI ;
-                    dcterms:description     "MOD: Property used to specify obsolete objects."@en ;
+                    dcterms:description     "MOD: Property used to specify obsolete object."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
                     pav:derivedFrom         <https://w3id.org/mod/1.4> ;
@@ -2849,7 +2851,7 @@ mod:specializes     rdf:type                owl:ObjectProperty ;
                     owl:inverseOf           mod:generalizes ;
                     rdfs:label              "specializes"@en ,
                                             "spécialise"@fr ;
-                    dcterms:description     "DOOR: Evolution which involves a only at the syntactic level. PROV: An entity that is a specialization of another shares all aspects of the latter, and additionally presents more specific aspects of the same thing as the latter. VOAF:Indicates that the subject vocabulary defines some subclasses or subproperties of the object vocabulary, or local restrictions on those."@en ;
+                    dcterms:description     "DOOR: Evolution which involves a change only at the syntactic level. PROV: An entity that is a specialization of another shares all aspects of the latter, and additionally presents more specific aspects of the same thing as the latter. VOAF:Indicates that the subject vocabulary defines some subclasses or subproperties of the object vocabulary, or local restrictions on those."@en ;
                     rdfs:isDefinedBy        <http://purl.org/vocommons/voaf> ;
                     dcterms:issued          "2013-05-23"^^xsd:date ;
                     owl:equivalentProperty  door:explanationEvolution ,
@@ -3026,7 +3028,7 @@ mod:hasDisparateModelling
                     rdfs:subPropertyOf      mod:semanticArtefactRelation ;
                     rdfs:label              "disparate modelling with"@en ,
                                             "différences de modélisation avec"@fr ;
-                    dcterms:description     "DOOR: Disagreements related  to  the  conceptualization  of  the  ontologies. Two ontologies are considered to have disparate modeling if they represent corresponding entities in different ways, e.g.  as an instance in one case and a class in the other."@en ;
+                    dcterms:description     "DOOR: Disagreements related to the conceptualization of the ontologies. Two ontologies are considered to have disparate modeling if they represent corresponding entities in different ways, e.g.  as an instance in one case and a class in the other."@en ;
                     rdfs:isDefinedBy        <http://kannel.open.ac.uk/ontology> ;
                     dcterms:issued          "2009-10-06"^^xsd:date ;
                     owl:equivalentProperty  <http://kannel.open.ac.uk/ontology/hasDisparateModelling> ;
@@ -3316,7 +3318,7 @@ dcterms:hasVersion  rdf:type                rdf:Property ;
                     rdfs:label              "has version"@en ,
                                             "a pour version"@fr ;
                     dcterms:domainIncludes  mod:SemanticArtefact ;
-                    dcterms:description     "DCTERMS: a related resource that is a version, edition, or adaptation of the described resource. MOD: A related ontology that is a version, edition, or adtapation of the described ontology. PAV: This resource has a more specific, versioned resource."@en ;
+                    dcterms:description     "DCTERMS: a related resource that is a version, edition, or adaptation of the described resource. MOD: A related ontology that is a version, edition, or adaptation of the described ontology. PAV: This resource has a more specific, versioned resource."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2000-07-11"^^xsd:date ;
                     owl:equivalentProperty  pav:hasVersion , 
@@ -3976,7 +3978,7 @@ mod:fairScore       rdf:type                owl:DatatypeProperty ;
                     rdfs:domain             mod:SemanticArtefactDistribution ,
                                             mod:SemanticArtefactCatalog ;
                     rdfs:range              xsd:nonNegativeInteger ;
-                    dcterms:description     "MOD: MOD: Latest FAIR score the semantic artefact or average FAIR score of all resources in the catalogue, obtained with a known or identified FAIRness assessment tool."@en ;
+                    dcterms:description     "MOD: Latest FAIR score the semantic artefact or average FAIR score of all resources in the catalogue, obtained with a known or identified FAIRness assessment tool."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2024-05-30"^^xsd:date ;
                     pav:derivedFrom         <https://w3id.org/mod/3.1> ;
@@ -4065,4 +4067,3 @@ mod:numberOfArtefacts
 #################################################################
 ############################################################################################# 
 ############################################################################################# 
-
