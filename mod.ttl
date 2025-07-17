@@ -1955,7 +1955,7 @@ mod:knownUsage      rdf:type                owl:DatatypeProperty ;
                                             "usage connu"@fr ;
                     rdfs:domain             mod:SemanticArtefact ,
                                             mod:SemanticArtefactCatalog ;
-                    rdfs:range              xsd:string ;
+                    rdfs:range              rdf:langString ;
                     dcterms:description     "OMV: The applications where the ontology is being used."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
@@ -2230,7 +2230,7 @@ mod:competencyQuestion
                     rdfs:label              "competency question"@en ,
                                             "question de compétence"@fr ;
                     rdfs:domain             mod:SemanticArtefact ;
-                    rdfs:range              xsd:string ;
+                    rdfs:range              rdf:langString ;
                     dcterms:description     "A set of questions made to build an ontology at the design time."@en ;
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2015-08-05"^^xsd:date ;
@@ -2248,7 +2248,7 @@ mod:sampleQueries   rdf:type                owl:DatatypeProperty ;
                     rdfs:label              "sample queries"@en ,
                                             "exemples de requêtes"@fr;
                     rdfs:domain             mod:SemanticArtefactDistribution ;
-                    rdfs:range              xsd:string ;
+                    rdfs:range              rdf:langString ;
                     dcterms:description     "MOD: A set of queries (may be SPARQL, DL Queries) that are provided along with an ontology."@en ;    
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2015-08-05"^^xsd:date ;
@@ -4065,4 +4065,3 @@ mod:numberOfArtefacts
 #################################################################
 ############################################################################################# 
 ############################################################################################# 
-
