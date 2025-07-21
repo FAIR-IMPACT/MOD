@@ -54,7 +54,7 @@
     mod:URI                         <https://w3id.org/mod> ;
     owl:versionIRI                  <https://w3id.org/mod/3.2> ;
 #   dcterms:identifier              ; 
-    owl:versionInfo                 "3.2" ;
+    owl:versionInfo                 "3.2.1" ;
     mod:status                      "alpha" ;
     owl:deprecated                  false ;
     mod:hasRepresentationLanguage   omv:OWL ;
@@ -108,7 +108,7 @@
     ########## Dates ##########
 
     dcterms:created                 "2015-08-05" ;
-    dcterms:modified                "2024-06-25" ;
+    dcterms:modified                "2025-07-21" ;
 #   dcterms:valid                   ;
 #   pav:curatedOn                   ;
 #   dcterms:dateSubmitted           ;
