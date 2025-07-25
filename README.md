@@ -33,7 +33,7 @@ MOD1.4 is available on GitHub since 2018. MOD1.4 is considered stable (but surel
 * [https://www.isibang.ac.in/ns/mod/1.4/](https://w3id.org/mod/2.0) (2018-08-02)
 
 MOD 1.2 was presented at MTSR'17. 
-[See article.](https://w3id.org/mod/2.0)
+[See article.](https://hal.science/lirmm-01605783)
 
 * [https://www.isibang.ac.in/ns/mod/1.2/](https://w3id.org/mod/2.0) (2017-07-06)
 
