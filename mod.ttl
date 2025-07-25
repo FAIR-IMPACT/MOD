@@ -486,57 +486,6 @@ mod:SemanticArtefactService
                     prov:wasInfluencedBy    <http://www.w3.org/ns/dcat> .
 
 
-### https://w3id.org/mod#Taxonomy
-mod:Taxonomy
-                    rdf:type                owl:Class ; 
-                    rdfs:subClassOf         mod:SemanticArtefact ;
-                    rdfs:label              "Taxonomy"@en ,
-                                            "Taxonomie"@fr ,
-                                            "Taxonomía"@es ;
-                    dcterms:description     "(to come)"@en ,
-                                            "(to come)"@fr ,
-                                            "(to come)"@es ;
-                    rdfs:isDefinedBy        <https://w3id.org/mod#> ;
-                    dcterms:issued          "2021-12-01"^^xsd:date ;
-                    pav:derivedFrom         <https://w3id.org/mod/2.0> ;
-                    pav:importedOn          "2021-12-01"^^xsd:date ;
-                    dcterms:modified        "2024-05-31"^^xsd:date .
-                    
-
-### https://w3id.org/mod#Terminology
-mod:Terminology
-                    rdf:type                owl:Class ; 
-                    rdfs:subClassOf         mod:SemanticArtefact ;
-                    rdfs:label              "Terminology"@en ,
-                                            "Terminologie"@fr ,
-                                            "Terminología"@es ;
-                    dcterms:description     "(to come)"@en ,
-                                            "(to come)"@fr ,
-                                            "(to come)"@es ;
-                    rdfs:isDefinedBy        <https://w3id.org/mod#> ;
-                    dcterms:issued          "2021-12-01"^^xsd:date ;
-                    pav:derivedFrom         <https://w3id.org/mod/2.0> ;
-                    pav:importedOn          "2021-12-01"^^xsd:date ;
-                    dcterms:modified        "2024-05-31"^^xsd:date .
-
-
-### https://w3id.org/mod#Thesaurus
-mod:Thesaurus
-                    rdf:type                owl:Class ; 
-                    rdfs:subClassOf         mod:SemanticArtefact ;
-                    rdfs:label              "Thesaurus"@en ,
-                                            "Thésaurus"@fr ,
-                                            "Tesauro"@es ;
-                    dcterms:description     "(to come)"@en ,
-                                            "(to come)"@fr ,
-                                            "(to come)"@es ;
-                    rdfs:isDefinedBy        <https://w3id.org/mod#> ;
-                    dcterms:issued          "2021-12-01"^^xsd:date ;
-                    pav:derivedFrom         <https://w3id.org/mod/2.0> ;
-                    pav:importedOn          "2021-12-01"^^xsd:date ;
-                    dcterms:modified        "2024-05-31"^^xsd:date .
-
-
 ### https://w3id.org/mod#Analytics
 mod:Analytics
                     rdf:type                owl:Class ; 
