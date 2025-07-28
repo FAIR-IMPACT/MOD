@@ -2263,8 +2263,14 @@ mod:competencyQuestion
 mod:sampleQueries   rdf:type                owl:DatatypeProperty ;
                     rdfs:label              "sample queries"@en ,
                                             "exemples de requêtes"@fr;
+<<<<<<< Updated upstream
                     rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              mod:string ;
+=======
+                    rdfs:domain             mod:SemanticArtefactDistribution ,
+                                            mod:SemanticArtefactCatalog ; 
+                    rdfs:range              xsd:string ;
+>>>>>>> Stashed changes
                     dcterms:description     "MOD: A set of queries (may be SPARQL, DL Queries) that are provided along with an ontology."@en ;    
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2015-08-05"^^xsd:date ;
