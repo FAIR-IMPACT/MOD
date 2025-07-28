@@ -108,7 +108,7 @@
     ########## Dates ##########
 
     dcterms:created                 "2015-08-05" ;
-    dcterms:modified                "2025-07-15" ;
+    dcterms:modified                "2025-07-21" ;
 #   dcterms:valid                   ;
 #   pav:curatedOn                   ;
 #   dcterms:dateSubmitted           ;
@@ -332,6 +332,22 @@
 
 ##############################################################################
 # End of MOD description using MOD
+##############################################################################
+
+#################################################################
+#    MOD Datatypes
+#################################################################
+
+mod:string rdf:type rdfs:Datatype ;
+              rdfs:label "MODString"@en ;
+              owl:equivalentClass [ rdf:type rdfs:Datatype ;
+                                    owl:unionOf ( rdf:langString
+                                                  xsd:string
+                                                )
+                                  ] .
+
+##############################################################################
+# End of MOD Datatypes
 ##############################################################################
 
 
@@ -1957,7 +1973,7 @@ mod:knownUsage      rdf:type                owl:DatatypeProperty ;
                                             "usage connu"@fr ;
                     rdfs:domain             mod:SemanticArtefact ,
                                             mod:SemanticArtefactCatalog ;
-                    rdfs:range              xsd:string ;
+                    rdfs:range              mod:string ;
                     dcterms:description     "OMV: The applications where the ontology is being used."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
@@ -2250,7 +2266,7 @@ mod:sampleQueries   rdf:type                owl:DatatypeProperty ;
                     rdfs:label              "sample queries"@en ,
                                             "exemples de requêtes"@fr;
                     rdfs:domain             mod:SemanticArtefactDistribution ;
-                    rdfs:range              xsd:string ;
+                    rdfs:range              mod:string ;
                     dcterms:description     "MOD: A set of queries (may be SPARQL, DL Queries) that are provided along with an ontology."@en ;    
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2015-08-05"^^xsd:date ;
