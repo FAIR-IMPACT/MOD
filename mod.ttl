@@ -326,7 +326,7 @@
     mod:numberOfUsingProjects         5 ;
 #   mod:numberOfEnsorments
     mod:numberOfEvaluations           0 ;
-#   mod:FairScore
+#   mod:fairScore
 #   mod:numberOfUsers                   
     mod:numberOfAgents                15 .     
 
