@@ -3253,12 +3253,11 @@ mod:metadataVoc     rdf:type                owl:ObjectProperty ;
                     rdfs:domain             mod:SemanticArtefactDistribution ,
                                             mod:SemanticArtefactCatalog ;
                     rdfs:range              xsd:anyURI  ;
-                    dcterms:description     "VOAF: Indicates that the subject vocabulary uses the object vocabulary in metadata at vocabulary or element level. SCHEMA: Indicates (by URL or string) a particular version of a schema used in some CreativeWork. ADMS: A schema according to which the Asset Repository can provide data about its content, e.g. ADMS. MOD: A vocabulary(ies) that is used and/or referred to create the current ontology."@en ;    
+                    dcterms:description     "VOAF: Indicates that the subject vocabulary uses the object vocabulary in metadata at vocabulary or element level. SCHEMA: Indicates (by URL or string) a particular version of a schema used in some CreativeWork. MOD: A vocabulary(ies) that is used and/or referred to create the current ontology."@en ;    
                     rdfs:isDefinedBy        <http://purl.org/vocommons/voaf> ;
                     dcterms:issued          "2013-05-23"^^xsd:date ;
                     owl:equivalentProperty  voaf:metadataVoc ,
                                             schema:schemaVersion ,
-                                            adms:supportedSchema ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/vocabularyUsed> ;
                     pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
