@@ -831,6 +831,7 @@ owl:versionInfo     rdf:type                owl:AnnotationProperty  ;
                                             oboinowl:data-version ,
                                             oboinowl:hasVersion ,
                                             schema:version ,
+                                            dcat:version ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/version> ;
                     pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
