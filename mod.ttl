@@ -984,7 +984,8 @@ dcterms:type        rdf:type                rdf:Property ;
                     dcterms:description     "DCTERMS: The nature or genre of the resource. Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [[DCMI-TYPE](http://dublincore.org/documents/dcmi-type-vocabulary/)]. To describe the file format, physical medium, or dimensions of the resource, use the property Format. OMV: The nature of the content of the ontology."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
-                    owl:equivalentProperty  omv:isOfType ;
+                    owl:equivalentProperty  omv:isOfType ,
+                                            schema:additionalType ;
                     pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
@@ -2817,6 +2818,7 @@ dcterms:relation    rdf:type                rdf:Property ;
                     dcterms:description     "DCTERMS: A related resource."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
+                    owl:equivalentProperty  schema:isRelatedTo ;
                     pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
