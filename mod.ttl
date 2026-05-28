@@ -1865,9 +1865,10 @@ mod:analytics       rdf:type                owl:ObjectProperty ;
                     rdfs:domain             mod:SemanticArtefact ,
                                             mod:SemanticArtefactCatalog ;
                     rdfs:range              mod:Analytics ;
-                    dcterms:description     "MOD: This property shall be used to store any analytics for an ontology. E.g., number of visits an ontology received in a portal, number of downloads, etc."@en ; 
+                    dcterms:description     "MOD: This property shall be used to store any analytics for an ontology. E.g., number of visits an ontology received in a portal, number of downloads, etc. The number of interactions for the CreativeWork using the WebSite or SoftwareApplication. The most specific child type of InteractionCounter should be used."@en ; 
                     rdfs:isDefinedBy        <https://w3id.org/mod> ;
                     dcterms:issued          "2018-08-02"^^xsd:date ;
+                    owl:equivalentProperty  schema:interactionStatistic ;
                     pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
                     
@@ -1884,9 +1885,10 @@ doap:repository     rdf:type                rdf:Property ;
                     dcterms:domainIncludes  mod:SemanticArtefact ,
                                             mod:SemanticArtefactCatalog ;
                     rdfs:range              doap:Repository ;
-                    dcterms:description     "DOAP: Source code repository."@en ;
+                    dcterms:description     "DOAP: Source code repository. SCHEMA: Link to the repository where the un-compiled, human readable code and related code is located (SVN, GitHub, CodePlex)."@en ;
                     rdfs:isDefinedBy        <http://usefulinc.com/ns/doap#> ;
                     dcterms:issued          "2004"^^xsd:date ;
+                    owl:equivalentProperty  schema:codeRepository ;
                     pav:derivedFrom          <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
@@ -1938,10 +1940,11 @@ mod:toDoList        rdf:type                owl:ObjectProperty ;
                     dcterms:domainIncludes  mod:SemanticArtefact ,
                                             mod:SemanticArtefactCatalog ;
                     rdfs:range              <http://www.w3.org/2002/12/cal/ical#Vtodo> ;
-                    dcterms:description     "VOID: Describes future tasks planned by a resource curator. This property is primarily intended to be used for vocabularies or datasets, but the domain is left open, it can be used for any resource. Use iCalendar Vtodo class and its properties to further describe the task calendar, priorities etc."@en ;    
+                    dcterms:description     "VOID: Describes future tasks planned by a resource curator. This property is primarily intended to be used for vocabularies or datasets, but the domain is left open, it can be used for any resource. Use iCalendar Vtodo class and its properties to further describe the task calendar, priorities etc. MOD: List of things to do (in the future) on the Semantic Artefact or Catalogue. SCHEMA: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role."@en ;    
                     rdfs:isDefinedBy        <http://purl.org/vocommons/voaf> ;
                     dcterms:issued          "2013-05-23"^^xsd:date ;
-                    owl:equivalentProperty  voaf:toDoList ;
+                    owl:equivalentProperty  voaf:toDoList ,
+                                            schema:potentialAction ;
                     pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
                     
@@ -2169,11 +2172,12 @@ pav:createdWith     rdf:type                owl:ObjectProperty ;
                                             "crée avec"@fr ;
                     dcterms:domainIncludes  mod:SemanticArtefact ,
                                             mod:SemanticArtefactCatalog ;
-                    dcterms:description     "PAV: The software/tool used by the creator (pav:createdBy) when making the digital resource, for instance a word processor or an annotation tool. MOD: The tool used for the creation of an ontology. OMV: Information about the tool used to create the ontology."@en ;
+                    dcterms:description     "PAV: The software/tool used by the creator (pav:createdBy) when making the digital resource, for instance a word processor or an annotation tool. MOD: The tool used for the creation of an ontology. OMV: Information about the tool used to create the ontology. SCHEMA: The object that helped the agent perform the action. E.g. John wrote a book with a pen."@en ;
                     rdfs:isDefinedBy        <http://purl.org/pav/> ;
                     dcterms:issued          "2014-08-28"^^xsd:date ;
                     owl:equivalentProperty  omv:usedOntologyEngineeringTool ,
                                             oboinowl:auto-generated-by , 
+                                            schema:instrument ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/toolUsed> ;
                     pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
@@ -3366,9 +3370,10 @@ vann:changes        rdf:type                owl:AnnotationProperty ;
                                             "changements"@fr ;
                     dcterms:domainIncludes  mod:SemanticArtefact ,
                                             mod:SemanticArtefactCatalog ;
-                    dcterms:description     "VANN: A reference to a resource that describes changes between this version of a vocabulary and the previous."@en ;
+                    dcterms:description     "VANN: A reference to a resource that describes changes between this version of a vocabulary and the previous. SCHEMA: Description of what changed in this version."@en ;
                     rdfs:isDefinedBy        <http://purl.org/vocab/vann/> ;
                     dcterms:issued          "2005-04-01"^^xsd:date ;
+                    owl:equivalentProperty  schema:releaseNotes ;
                     pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
