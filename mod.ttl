@@ -1330,9 +1330,10 @@ dcterms:abstract    rdf:type                rdf:Property ;
                                             "résumé"@fr ;
                     dcterms:domainIncludes  mod:SemanticArtefact ,
                                             mod:SemanticArtefactCatalog ;
-                    dcterms:description     "DCTERMS: A summary of the resource."@en ;
+                    dcterms:description     "DCTERMS: A summary of the resource. SCHEMA: An abstract is a short description that summarizes a CreativeWork."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2000-07-11"^^xsd:date ;
+                    owl:equivalentProperty  schema:abstract ;
                     pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
