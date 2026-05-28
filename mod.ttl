@@ -734,7 +734,7 @@ dcterms:title       rdf:type                rdf:Property ;
                                             mod:SemanticArtefactDistribution ,
                                             mod:SemanticArtefactCatalog ;
                     rdfs:range              rdfs:Literal ;
-                    dcterms:description     "DCTERMS: A name given to the resource. OMV: The name by which an ontology is formally known. RDFS: A human-readable name for the subject. FOAF:  A name for some thing. SKOS: The preferred and alternative labels are useful when generating or creating human-readable representations of a knowledge organization system. SCHEMA: The name of the item."@en ;
+                    dcterms:description     "DCTERMS: A name given to the resource. OMV: The name by which an ontology is formally known. RDFS: A human-readable name for the subject. FOAF: A name for some thing. SKOS: The preferred and alternative labels are useful when generating or creating human-readable representations of a knowledge organization system. SCHEMA: The name of the item."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
                     owl:equivalentProperty  rdfs:label ,
@@ -2740,7 +2740,7 @@ owl:PriorVersion    rdf:type                owl:AnnotationProperty, owl:Ontology
                     rdfs:domain             owl:Ontology ;
                     dcterms:domainIncludes  mod:SemanticArtefact ;
                     rdfs:range              owl:Ontology ; 
-                    dcterms:description     "OWL:  This identifies the specified ontology as a prior version of the containing ontology. OMV: Contains a reference to another ontology metadata instance. DCTERMS: A related resource of which the described resource is a version, edition, or adaptation. PROV: A revision is a derivation for which the resulting entity is a revised version of some original. The implication here is that the resulting entity contains substantial content from the original. DOOR: Prior version relation from OWL. ADMS: A link to the previous version of the Asset."@en ;  
+                    dcterms:description     "OWL: This identifies the specified ontology as a prior version of the containing ontology. OMV: Contains a reference to another ontology metadata instance. DCTERMS: A related resource of which the described resource is a version, edition, or adaptation. PROV: A revision is a derivation for which the resulting entity is a revised version of some original. The implication here is that the resulting entity contains substantial content from the original. DOOR: Prior version relation from OWL. ADMS: A link to the previous version of the Asset."@en ;  
                     rdfs:isDefinedBy        <http://www.w3.org/2002/07/owl#> ;
                     dcterms:issued          "2004-02-10"^^xsd:date ;
                     owl:equivalentProperty  omv:hasPriorVersion ,
@@ -3566,7 +3566,7 @@ mod:numberOfClasses rdf:type                owl:DatatypeProperty ;
             
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
-                    prov:wasInfluencedBy    "MIRO guidelines:  E.3" ,
+                    prov:wasInfluencedBy    "MIRO guidelines: E.3" ,
                                             "FAIR principle: F2" .
 
 
@@ -3590,7 +3590,7 @@ mod:numberOfIndividuals
             
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
-                    prov:wasInfluencedBy    "MIRO guidelines:  E.3" ,
+                    prov:wasInfluencedBy    "MIRO guidelines: E.3" ,
                                             "FAIR principle: F2" .
 
 
@@ -3615,7 +3615,7 @@ mod:numberOfProperties
             
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
-                    prov:wasInfluencedBy    "MIRO guidelines:  E.3" ,
+                    prov:wasInfluencedBy    "MIRO guidelines: E.3" ,
                                             "FAIR principle: F2" .
 
 
@@ -3635,7 +3635,7 @@ mod:numberOfObjectProperties
                     pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
-                    prov:wasInfluencedBy    "MIRO guidelines:  E.3" ,
+                    prov:wasInfluencedBy    "MIRO guidelines: E.3" ,
                                             "FAIR principle: F2" .
 
 
@@ -3655,7 +3655,7 @@ mod:numberOfDataProperties
                     pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
-                    prov:wasInfluencedBy    "MIRO guidelines:  E.3" ,
+                    prov:wasInfluencedBy    "MIRO guidelines: E.3" ,
                                             "FAIR principle: F2" .
 
 
@@ -3678,7 +3678,7 @@ mod:numberOfAxioms
             
             #OPTIONAL STATEMENTS
                     skos:historyNote        "This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace."@en ;
-                    prov:wasInfluencedBy    "MIRO guidelines:  E.3" ,
+                    prov:wasInfluencedBy    "MIRO guidelines: E.3" ,
                                             "FAIR principle: F2" .
 
 
@@ -3698,7 +3698,7 @@ mod:numberOfLabels
                     pav:importedOn          "2017-07-06"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
-                    prov:wasInfluencedBy    "MIRO guidelines:  E.3" ,
+                    prov:wasInfluencedBy    "MIRO guidelines: E.3" ,
                                             "FAIR principle: F2" .
 
 
@@ -3718,7 +3718,7 @@ mod:numberOfDeprecated
                     pav:importedOn          "2024-05-30"^^xsd:date ;
             
             #OPTIONAL STATEMENTS
-                    prov:wasInfluencedBy    "MIRO guidelines:  E.3" ,
+                    prov:wasInfluencedBy    "MIRO guidelines: E.3" ,
                                             "FAIR principle: F2" .
 
 
