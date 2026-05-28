@@ -2814,12 +2814,9 @@ dcat:catalog        rdf:type                rdf:Property , owl:ObjectProperty ;
                     rdfs:domain             dcat:Catalog ;
                     dcterms:domainIncludes  mod:SemanticArtefactCatalog ;
                     rdfs:range              dcat:Catalog ;
-                    dcterms:description     "DCAT:A catalog whose contents are of interest in the context of this catalog. DCTERMS: A related resource that is included either physically or logically in the described resource. SCHEMA: Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense). ADMS: Links to a sample of an Asset (which is itself an Asset)."@en ;
+                    dcterms:description     "DCAT:A catalog whose contents are of interest in the context of this catalog."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
                     dcterms:issued          "2020-02-20"^^xsd:date ;
-                    owl:equivalentProperty  dcterms:hasPart ,
-                                            schema:hasPart ,
-                                            adms:sample ;
                     pav:derivedFrom         <https://w3id.org/mod/3.2> ;
                     pav:importedOn          "2024-06-25"^^xsd:date .
             
