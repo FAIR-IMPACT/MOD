@@ -1009,7 +1009,7 @@ dcterms:accessRights
                                             "droits d'accès"@fr ;
                     dcterms:domainIncludes  mod:SemanticArtefact ,
                                             mod:SemanticArtefactCatalog ;
-                    dcterms:description     "DCTERMS: Information about who access the resource or an indication of its security status. Access Rights may include information regarding access or restrictions based on privacy, security, or other policies. MOD: Information on access (i.e., read, download) to an ontology. SCHEMA:Conditions that affect the availability of, or method(s) of access to, an item. Typically used for real world items such as an ArchiveComponent held by an ArchiveOrganization. This property is not suitable for use as a general Web access control mechanism. It is expressed only in natural language."@en ;
+                    dcterms:description     "DCTERMS: Information about who access the resource or an indication of its security status. Access Rights may include information regarding access or restrictions based on privacy, security, or other policies. MOD: Information on access (i.e., read, download) to an ontology. SCHEMA: Conditions that affect the availability of, or method(s) of access to, an item. Typically used for real world items such as an ArchiveComponent held by an ArchiveOrganization. This property is not suitable for use as a general Web access control mechanism. It is expressed only in natural language."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2003-02-15"^^xsd:date ;
                     owl:equivalentProperty  schema:conditionsOfAccess ,
@@ -1521,7 +1521,7 @@ dcat:contactPoint   rdf:type                rdf:Property ,
                     dcterms:description     "DCAT: Relevant contact information for the cataloged resource. Use of vCard is recommended. SCHEMA: A maintainer of a Dataset, software package (SoftwareApplication), or other Project. A maintainer is a Person or Organization that manages contributions to, and/or publication of, some (typically complex) artifact. It is common for distributions of software and data to be based on 'upstream' sources." ;
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
                     dcterms:issued          "2014-01-16"^^xsd:date ;
-                    owl:equivalentProperty  schema:maintainer ;
+                    owl:equivalentProperty  schema:contactPoint ;
                     pav:derivedFrom          <https://w3id.org/mod/3.1> ;
                     pav:importedOn          "2014-05-30"^^xsd:date ;
                      
@@ -1538,13 +1538,14 @@ dcterms:creator     rdf:type                rdf:Property ;
                                             "créateur"@fr ;
                     dcterms:domainIncludes  mod:SemanticArtefact ,
                                             mod:SemanticArtefactCatalog ;
-                    dcterms:description     "OMV: Main responsible for the creation of the ontology. DCTERMS: An entity primarily responsible for making the resource. FOAF: An agent that made this thing. PROV: Attribution is the ascribing of an entity to an agent. PAV:authoredBy: An agent that originated or gave existence to the work that is expressed by the digital resource.PAV:createdBy: An agent primary responsible for making the digital artifact or resource representation. DOAP: Maintainer of a project, a project leader. SCHEMA:author: The author of this content or rating. SCHEMA:creator: The creator/author of this CreativeWork. DCAT: The entity responsible for producing the resource."@en ;
+                    dcterms:description     "OMV: Main responsible for the creation of the ontology. DCTERMS: An entity primarily responsible for making the resource. FOAF: An agent that made this thing. PROV: Attribution is the ascribing of an entity to an agent. PAV:authoredBy: An agent that originated or gave existence to the work that is expressed by the digital resource. PAV:createdBy: An agent primary responsible for making the digital artifact or resource representation. DOAP: Maintainer of a project, a project leader. SCHEMA:author: The author of this content or rating. SCHEMA:creator: The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork. DCAT: The entity responsible for producing the resource."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
                     owl:equivalentProperty  omv:creator ,
                                             pav:authoredBy ,
                                             pav:createdBy ,
                                             schema:author ,
+                                            schema:creator ,
                                             doap:maintainer ,
                                             prov:wasAttributedTo ,
                                             foaf:maker ;
@@ -1597,8 +1598,9 @@ pav:curatedBy       rdf:type                owl:ObjectProperty ;
                     dcterms:domainIncludes  mod:SemanticArtefact ,
                                             mod:SemanticArtefactCatalog ,
                                             mod:SemanticArtefactCatalogRecord ;
-                    dcterms:description     "PAV: Specifies an agent specialist responsible for shaping the expression in an appropriate format. Often the primary agent responsible for ensuring the quality of the representation. MOD: A curator who restructures the previously authored content and shapes it to be appropriate for the intended representation (e.g. by normalizing the fields for being represented in a spreadsheet). "@en ;
+                    dcterms:description     "PAV: Specifies an agent specialist responsible for shaping the expression in an appropriate format. Often the primary agent responsible for ensuring the quality of the representation. MOD: A curator who restructures the previously authored content and shapes it to be appropriate for the intended representation (e.g. by normalizing the fields for being represented in a spreadsheet). SCHEMA: A maintainer of a Dataset, software package (SoftwareApplication), or other Project. A maintainer is a Person or Organization that manages contributions to, and/or publication of, some (typically complex) artifact. It is common for distributions of software and data to be based on 'upstream' sources."@en ;
                     rdfs:isDefinedBy        <http://purl.org/pav/> ;
+                    owl:equivalentProperty  schema:maintainer ;
                     dcterms:issued          "2014-08-28"^^xsd:date ;
                     pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
@@ -1640,7 +1642,7 @@ dcterms:publisher   rdf:type                rdf:Property ;
                                             "éditeur"@fr ;
                     dcterms:domainIncludes  mod:SemanticArtefact ,
                                             mod:SemanticArtefactCatalog ;
-                    dcterms:description     "DCTERMS: An entity responsible for making the resource available. SCHEMA: The publisher of creative work. SCHEMA: The Organization on whose behalf the creator was working. SCHEMA: The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. ADMS: The name of the agency that issued the identifier. DCAT: The entity responsible for making the item available."@en ;                    rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
+                    dcterms:description     "DCTERMS: An entity responsible for making the resource available. SCHEMA:publisher: The publisher of creative work. SCHEMA:sourceOrganization: The Organization on whose behalf the creator was working. SCHEMA:provider The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. ADMS: The name of the agency that issued the identifier. DCAT: The entity responsible for making the item available."@en ;                    rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
                     owl:equivalentProperty  schema:publisher ,
                                             schema:sourceOrganization ,
