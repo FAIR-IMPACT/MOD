@@ -940,6 +940,7 @@ mod:hasSyntax       rdf:type                owl:DatatypeProperty ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
                     owl:equivalentProperty  omv:hasOntologySyntax ,
                                             dcterms:format ,
+                                            schema:encodingFormat ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/syntax> ;
                     pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
@@ -1199,6 +1200,7 @@ dcat:landingPage    rdf:type                rdf:Property , owl:ObjectProperty ;
                                             doap:wiki ,
                                             rdfs:seeAlso ,
                                             schema:documentation ,
+                                            schema:url ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/document> ;
                     pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
@@ -1396,7 +1398,6 @@ dcterms:created     rdf:type                rdf:Property ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2000-07-11"^^xsd:date ; 
                     owl:equivalentProperty  omv:creationDate ,
-                                            dcterms:issued ,
                                             pav:authoredOn ,
                                             pav:contributedOn ,
                                             pav:createdOn ,
@@ -1493,7 +1494,8 @@ dcterms:dateSubmitted
                     dcterms:description     "DCTERMS: Date of submission of the resource. SCHEMA: Date of first broadcast/publication."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2002-07-13"^^xsd:date ; 
-                    owl:equivalentProperty  schema:datePublished ;
+                    owl:equivalentProperty  schema:datePublished ,
+                                            dcterms:issued ;
                     pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
@@ -2039,6 +2041,8 @@ dcterms:coverage    rdf:type                rdf:Property ;
                     dcterms:description     "DCTERMS: The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant. Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names [[TGN](https://www.getty.edu/research/tools/vocabulary/tgn/index.html)]. Where appropriate, named places or time periods may be used in preference to numeric identifiers such as sets of coordinates or date ranges.  Because coverage is so broadly defined, it is preferable to use the more specific subproperties Temporal Coverage and Spatial Coverage."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
+                    owl:equivalentProperty  schema:spatialCoverage ,
+                                            schema:temporalCoverage ;
                     pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
@@ -2210,6 +2214,7 @@ dcterms:accrualPeriodicity
                     dcterms:description     "DCTERMS: The frequency with which items are added to a collection. Recommended practice is to use a value from the Collection Description Frequency Vocabulary."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2005-06-13"^^xsd:date ;
+                    owl:equivalentProperty  schema:repeatFrequency ;
                     pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
                     
@@ -2509,6 +2514,7 @@ dcat:accessURL      rdf:type                rdf:Property , owl:ObjectProperty ;
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
                     dcterms:issued          "2014-01-16"^^xsd:date ;
                     owl:equivalentProperty  omv:resourceLocator ,
+                                            schema:contentUrl ,
                                             doap:download-page ;
                     pav:derivedFrom         <https://w3id.org/mod/1.2> ;
                     pav:importedOn          "2017-07-06"^^xsd:date ;
@@ -2571,7 +2577,7 @@ dcat:downloadURL    rdf:type                rdf:Property , owl:ObjectProperty ;
                     dcterms:issued          "2014-01-16"^^xsd:date ;
                     owl:equivalentProperty  void:dataDump ,
                                             doap:download-mirror ,
-                                            schema:distribution ;
+                                            schema:contentUrl ;
                     pav:derivedFrom          <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
             
@@ -3725,7 +3731,8 @@ dcat:byteSize       rdf:type                rdf:Property , owl:DatatypeProperty 
                     dcterms:description     "DCAT: The size of a distribution in bytes. MOD: The byte size of an ontology."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
                     dcterms:issued          "2014-01-16"^^xsd:date ;
-                    owl:equivalentProperty  <http://www.isibang.ac.in/ns/mod/1.0/size> ,
+                    owl:equivalentProperty  schema:contentSize ,
+                                            <http://www.isibang.ac.in/ns/mod/1.0/size> ,
                                             <http://www.isibang.ac.in/ns/mod/1.0/byteSize> ;
                     pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
