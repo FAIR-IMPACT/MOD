@@ -822,7 +822,7 @@ owl:versionInfo     rdf:type                owl:AnnotationProperty  ;
                     dcterms:domainIncludes  mod:SemanticArtefact ,
                                             mod:SemanticArtefactCatalog ;
                     rdfs:range              xsd:string ;
-                    dcterms:description     "MOD: The version of the released ontology. OMV: The version information of the ontology. OWL: The annotation property that provides version information for an ontology or another OWL construct. PAV: The version number of a resource. This is a freetext string, typical values are '1.5' or '21'. DOAP: A project release."@en ;  
+                    dcterms:description     "MOD: The version of the released ontology. OMV: The version information of the ontology. OWL: The annotation property that provides version information for an ontology or another OWL construct. PAV: The version number of a resource. This is a freetext string, typical values are '1.5' or '21'. DOAP: A project release. DCAT: The version indicator (name or identifier) of a resource."@en ;  
                     rdfs:isDefinedBy        <http://www.w3.org/2002/07/owl#> ;
                     dcterms:issued          "2004-02-10"^^xsd:date ;
                     owl:equivalentProperty  omv:version ,
@@ -935,7 +935,7 @@ mod:hasSyntax       rdf:type                owl:DatatypeProperty ;
                                             "syntaxe"@fr ;
                     rdfs:domain             mod:SemanticArtefactDistribution ;
                     rdfs:range              xsd:anyURI ;
-                    dcterms:description     "MOD: The syntax followed in the creation of an ontology. OMV: The presentation syntax for the ontology langage."@en ;
+                    dcterms:description     "MOD: The syntax followed in the creation of an ontology. OMV: The presentation syntax for the ontology langage. SCHEMA: Media type typically expressed using a MIME format (see IANA site and MDN reference), e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc."@en ;
                     rdfs:isDefinedBy        <http://omv.ontoware.org/2005/05/ontology> ;
                     dcterms:issued          "2009-12-24"^^xsd:date ;
                     owl:equivalentProperty  omv:hasOntologySyntax ,
@@ -983,7 +983,7 @@ dcterms:type        rdf:type                rdf:Property ;
                                             "type générique"@fr ;
                     dcterms:domainIncludes  mod:SemanticArtefact ,
                                             mod:SemanticArtefactCatalog ;
-                    dcterms:description     "DCTERMS: The nature or genre of the resource. Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [[DCMI-TYPE](http://dublincore.org/documents/dcmi-type-vocabulary/)]. To describe the file format, physical medium, or dimensions of the resource, use the property Format. OMV: The nature of the content of the ontology."@en ;
+                    dcterms:description     "DCTERMS: The nature or genre of the resource. Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [[DCMI-TYPE](http://dublincore.org/documents/dcmi-type-vocabulary/)]. To describe the file format, physical medium, or dimensions of the resource, use the property Format. OMV: The nature of the content of the ontology. SCHEMA: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
                     owl:equivalentProperty  omv:isOfType ,
@@ -1192,7 +1192,7 @@ dcat:landingPage    rdf:type                rdf:Property , owl:ObjectProperty ;
                     dcterms:domainIncludes  mod:SemanticArtefact ,
                                             mod:SemanticArtefactCatalog ;
                     rdfs:range              foaf:Document ;
-                    dcterms:description     "DCAT: A Web page that can be navigated to in a Web browser to gain access to the dataset, its distributions and/or additional information. MOD: A link to the documentation page on a thing. OMV: URL for further documentation. RDFS: Further information about the subject resource. DOAP: URL of Wiki for collaborative discussion of project. VANN: A reference to a resource that provides information on how this resource is to be used. SCHEMA: Further documentation describing the Web API in more detail."@en ;
+                    dcterms:description     "DCAT: A Web page that can be navigated to in a Web browser to gain access to the dataset, its distributions and/or additional information. MOD: A link to the documentation page on a thing. OMV: URL for further documentation. RDFS: Further information about the subject resource. DOAP: URL of Wiki for collaborative discussion of project. VANN: A reference to a resource that provides information on how this resource is to be used. SCHEMA: Further documentation describing the Web API in more detail. SCHEMA: URL of the item."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
                     dcterms:issued          "2014-01-16"^^xsd:date ;
                     owl:equivalentProperty  omv:documentation ,
@@ -1394,7 +1394,7 @@ dcterms:created     rdf:type                rdf:Property ;
                                             mod:SemanticArtefactCatalogRecord ,
                                             mod:SemanticArtefactCatalog ;
                     rdfs:range              rdfs:Literal ; 
-                    dcterms:description     "DCTERMS:date : A point or period of time associated with an event in the lifecycle of the resource. DCTERMS:created : Date of creation of the resource. DCTERMS:issued Date of formal issuance (e.g., publication) of the resource. PROV: Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation. PAV: The date this resource was authored. PAV: The date this resource was contributed to. PAV: The date of creation of the resource representation. DOAP: Date when something was created, in YYYY-MM-DD form. e.g. 2004-04-05. SCHEMA: The date on which the CreativeWork was created or the item was added to a DataFeed. DOAP: Date when something was created, in YYYY-MM-DD form. e.g. 2004-04-05."@en ;
+                    dcterms:description     "DCTERMS:date: A point or period of time associated with an event in the lifecycle of the resource. DCTERMS:created: Date of creation of the resource. PROV: Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation. PAV: The date this resource was authored. PAV: The date this resource was contributed to. PAV: The date of creation of the resource representation. DOAP: Date when something was created, in YYYY-MM-DD form. e.g. 2004-04-05. SCHEMA: The date on which the CreativeWork was created or the item was added to a DataFeed. DOAP: Date when something was created, in YYYY-MM-DD form. e.g. 2004-04-05."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2000-07-11"^^xsd:date ; 
                     owl:equivalentProperty  omv:creationDate ,
@@ -1491,7 +1491,7 @@ dcterms:dateSubmitted
                     dcterms:domainIncludes  mod:SemanticArtefactDistribution ,
                                             mod:SemanticArtefactCatalogRecord ;
                     rdfs:range              rdfs:Literal ; 
-                    dcterms:description     "DCTERMS: Date of submission of the resource. SCHEMA: Date of first broadcast/publication."@en ;
+                    dcterms:description     "DCTERMS:submitted: Date of submission of the resource. DCTERMS:issued: Date of formal issuance (e.g., publication) of the resource. SCHEMA: Date of first broadcast/publication. "@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2002-07-13"^^xsd:date ; 
                     owl:equivalentProperty  schema:datePublished ,
@@ -2038,7 +2038,7 @@ dcterms:coverage    rdf:type                rdf:Property ;
                                             "couverture"@fr ;
                     dcterms:domainIncludes  mod:SemanticArtefact ,
                                             mod:SemanticArtefactCatalog ;
-                    dcterms:description     "DCTERMS: The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant. Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names [[TGN](https://www.getty.edu/research/tools/vocabulary/tgn/index.html)]. Where appropriate, named places or time periods may be used in preference to numeric identifiers such as sets of coordinates or date ranges.  Because coverage is so broadly defined, it is preferable to use the more specific subproperties Temporal Coverage and Spatial Coverage."@en ;
+                    dcterms:description     "DCTERMS: The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant. Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. SCHEMA: The spatialCoverage of a CreativeWork indicates the place(s) which are the focus of the content. SCHEMA: The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in ISO 8601 time interval format."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
                     owl:equivalentProperty  schema:spatialCoverage ,
@@ -2211,7 +2211,7 @@ dcterms:accrualPeriodicity
                     rdfs:domain             <http://purl.org/dc/dcmitype/Collection> ;
                     dcterms:domainIncludes  mod:SemanticArtefact ,
                                             mod:SemanticArtefactCatalog ;
-                    dcterms:description     "DCTERMS: The frequency with which items are added to a collection. Recommended practice is to use a value from the Collection Description Frequency Vocabulary."@en ;
+                    dcterms:description     "DCTERMS: The frequency with which items are added to a collection. Recommended practice is to use a value from the Collection Description Frequency Vocabulary. SCHEMA: Defines the frequency at which Events will occur according to a schedule Schedule. The intervals between events should be defined as a Duration of time."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2005-06-13"^^xsd:date ;
                     owl:equivalentProperty  schema:repeatFrequency ;
@@ -2510,7 +2510,7 @@ dcat:accessURL      rdf:type                rdf:Property , owl:ObjectProperty ;
                     dcterms:domainIncludes  mod:SemanticArtefactDistribution ,
                                             mod:SemanticArtefactCatalog ;
                     rdfs:range              rdfs:Resource ;
-                    dcterms:description     "DCAT: A URL of a resource that gives access to a distribution of the dataset. E.g. landing page, feed, SPARQL endpoint. Use for all cases except a simple download link, in which case downloadURL is preferred. OMV: The location where the ontology can be found. It should be accessible via a URL. It can be the same as the value for URI property. DOAP:  Web page from which the project software can be downloaded."@en ;
+                    dcterms:description     "DCAT: A URL of a resource that gives access to a distribution of the dataset. E.g. landing page, feed, SPARQL endpoint. Use for all cases except a simple download link, in which case downloadURL is preferred. OMV: The location where the ontology can be found. It should be accessible via a URL. It can be the same as the value for URI property. DOAP: Web page from which the project software can be downloaded. SCHEMA: Actual bytes of the media object, for example the image file or video file."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
                     dcterms:issued          "2014-01-16"^^xsd:date ;
                     owl:equivalentProperty  omv:resourceLocator ,
@@ -2572,7 +2572,7 @@ dcat:downloadURL    rdf:type                rdf:Property , owl:ObjectProperty ;
                     rdfs:domain             dcat:Distribution ;
                     dcterms:domainIncludes  mod:SemanticArtefactDistribution ;
                     rdfs:range              rdfs:Resource ;
-                    dcterms:description     "DCAT: The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution's dct:format and/or dcat:mediaType. VOID: An RDF dump, partial or complete, of a void:Dataset. DOAP: Mirror of software download web page. SCHEMA: A downloadable form of this dataset, at a specific location, in a specific format."@en ; 
+                    dcterms:description     "DCAT: The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution's dct:format and/or dcat:mediaType. VOID: An RDF dump, partial or complete, of a void:Dataset. DOAP: Mirror of software download web page. SCHEMA: Actual bytes of the media object, for example the image file or video file."@en ; 
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
                     dcterms:issued          "2014-01-16"^^xsd:date ;
                     owl:equivalentProperty  void:dataDump ,
@@ -2822,7 +2822,7 @@ dcterms:relation    rdf:type                rdf:Property ;
                                             "relation"@fr ;
                     dcterms:domainIncludes  mod:SemanticArtefact ,
                                             mod:SemanticArtefactCatalog ;
-                    dcterms:description     "DCTERMS: A related resource."@en ;
+                    dcterms:description     "DCTERMS: A related resource. SCHEMA: A pointer to another, somehow related product (or multiple products)."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2008-01-14"^^xsd:date ;
                     owl:equivalentProperty  schema:isRelatedTo ;
@@ -3380,7 +3380,7 @@ dcat:dataset        rdf:type                rdf:Property , owl:ObjectProperty ;
                     rdfs:domain             dcat:Catalog ;
                     dcterms:domainIncludes  mod:SemanticArtefactCatalog ;
                     rdfs:range              dcat:Dataset ;
-                    dcterms:description     "DCAT: A collection of data that is listed in the catalog."@en ;
+                    dcterms:description     "DCAT: A collection of data that is listed in the catalog. SCHEMA: A dataset contained in this catalog."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
                     dcterms:issued          "2014-01-16"^^xsd:date ;
                     owl:equivalentProperty  schema:dataset ; 
@@ -3442,7 +3442,7 @@ dcat:distribution   rdf:type                rdf:Property , owl:ObjectProperty ;
                     rdfs:domain             dcat:Dataset ;
                     dcterms:domainIncludes  mod:SemanticArtefactCatalog ;
                     rdfs:range              dcat:Distribution ;
-                    dcterms:description     "DCAT: An available distribution of the dataset."@en ;
+                    dcterms:description     "DCAT: An available distribution of the dataset. SCHEMA: A downloadable form of this dataset, at a specific location, in a specific format."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
                     dcterms:issued          "2014-01-16"^^xsd:date ;
                     owl:equivalentProperty  schema:distribution ; 
@@ -3728,7 +3728,7 @@ dcat:byteSize       rdf:type                rdf:Property , owl:DatatypeProperty 
                                             "taille en octets"@fr ;
                     rdfs:domain             dcat:Distribution ;
                     rdfs:range              rdfs:Literal ;
-                    dcterms:description     "DCAT: The size of a distribution in bytes. MOD: The byte size of an ontology."@en ;
+                    dcterms:description     "DCAT: The size of a distribution in bytes. MOD: The byte size of an ontology. SCHEMA: File size in (mega/kilo)bytes."@en ;
                     rdfs:isDefinedBy        <http://www.w3.org/TR/vocab-dcat/> ;
                     dcterms:issued          "2014-01-16"^^xsd:date ;
                     owl:equivalentProperty  schema:contentSize ,
