@@ -1009,10 +1009,11 @@ dcterms:accessRights
                                             "droits d'accès"@fr ;
                     dcterms:domainIncludes  mod:SemanticArtefact ,
                                             mod:SemanticArtefactCatalog ;
-                    dcterms:description     "DCTERMS: Information about who access the resource or an indication of its security status. Access Rights may include information regarding access or restrictions based on privacy, security, or other policies. MOD: Information on access (i.e., read, download) to an ontology."@en ;
+                    dcterms:description     "DCTERMS: Information about who access the resource or an indication of its security status. Access Rights may include information regarding access or restrictions based on privacy, security, or other policies. MOD: Information on access (i.e., read, download) to an ontology. SCHEMA:Conditions that affect the availability of, or method(s) of access to, an item. Typically used for real world items such as an ArchiveComponent held by an ArchiveOrganization. This property is not suitable for use as a general Web access control mechanism. It is expressed only in natural language."@en ;
                     rdfs:isDefinedBy        <http://purl.org/dc/terms/> ;
                     dcterms:issued          "2003-02-15"^^xsd:date ;
-                    owl:equivalentProperty  <http://www.isibang.ac.in/ns/mod/1.0/accessibility> ;
+                    owl:equivalentProperty  schema:conditionsOfAccess ,
+                                            <http://www.isibang.ac.in/ns/mod/1.0/accessibility> ;
                     pav:derivedFrom         <https://w3id.org/mod/1.0> ;
                     pav:importedOn          "2015-08-05"^^xsd:date ;
                     
@@ -1059,9 +1060,10 @@ cc:useGuidelines    rdf:type                rdf:Property ;
                                             mod:SemanticArtefactDistribution ,
                                             mod:SemanticArtefactCatalog ;
                     rdfs:range              rdfs:Resource ;
-                    dcterms:description     "CC: A related resource which defines non-binding use guidelines for the work."@en ;     
+                    dcterms:description     "CC: A related resource which defines non-binding use guidelines for the work. SCHEMA: The schema.org usageInfo property indicates further information about a CreativeWork. This property is applicable both to works that are freely available and to those that require payment or other transactions. It can reference additional information, e.g. community expectations on preferred linking and citation conventions, as well as purchasing details. For something that can be commercially licensed, usageInfo can provide detailed, resource-specific information about licensing options."@en ;     
                     rdfs:isDefinedBy        <http://creativecommons.org/ns#> ;
                     dcterms:issued          "2008-03-03"^^xsd:date ;
+                    owl:equivalentProperty  schema:usageInfo ; 
                     pav:derivedFrom         <https://w3id.org/mod/1.4> ;
                     pav:importedOn          "2018-08-02"^^xsd:date ;
                     
